@@ -1,0 +1,29 @@
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+hint:
+hint: Disable this message with "git config set advice.defaultBranchName false"
+Initialized empty Git repository in /a0/usr/.git/
+total 107
+drwxr-x---+ 10 3000  950   14 Feb 22 07:54 .
+drwxr-xr-x.  1 root root 4096 Feb 22 07:47 ..
+drwxr-x---+  3 3000  950    4 Feb 22 07:43 agents
+drwxr-x---+  4 3000  950    4 Feb 22 07:54 chats
+-rw-r-----+  1 3000  950  893 Feb 22 07:48 .env
+drwxrwx---+  6 3000  950    9 Feb 22 07:54 .git
+-rw-r-----+  1 3000  950    0 Feb 22 07:43 .gitkeep
+drwxr-x---+  5 3000  950    6 Feb 22 07:43 knowledge
+drwxr-x---+  3 3000  950    3 Feb 22 07:43 memory
+drwxr-x---+  2 3000  950    3 Feb 22 07:43 scheduler
+-rw-r-----+  1 3000  950    0 Feb 22 07:43 secrets.env
+-rw-r-----+  1 3000  950 3204 Feb 22 07:43 settings.json
+drwxr-x---+  3 3000  950    4 Feb 22 07:43 skills
+drwxr-x---+  2 3000  950    6 Feb 22 07:43 workdir
+(venv) root@a6d3caa9a0d8:/a0/usr#
