@@ -1,6 +1,0 @@
-{
-    "agent_profile": "work-assistant",
-    "chat_model_name": "openai/gpt-oss-120b",
-    "util_model_name": "qwen/qwen3-vl-30b-a3b-thinking",
-    "browser_model_name": "qwen/qwen3-vl-30b-a3b-thinking",
-}
