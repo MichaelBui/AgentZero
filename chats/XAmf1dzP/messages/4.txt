@@ -1,0 +1,57 @@
+rm '.env'
+rm '.gitkeep'
+rm 'agents/.gitkeep'
+rm 'agents/work-assistant/agent.json'
+rm 'agents/work-assistant/settings.json'
+rm 'chats/JNf37UmG/chat.json'
+rm 'chats/XAmf1dzP/chat.json'
+rm 'chats/XAmf1dzP/messages/1.txt'
+rm 'knowledge/.gitkeep'
+rm 'knowledge/main/.gitkeep'
+rm 'knowledge/solutions/.gitkeep'
+rm 'memory/default/embedding.json'
+rm 'memory/default/index.faiss'
+rm 'memory/default/index.pkl'
+rm 'memory/default/knowledge_import.json'
+rm 'scheduler/tasks.json'
+rm 'secrets.env'
+rm 'settings.json'
+rm 'skills/.gitkeep'
+rm 'skills/notify-user/SKILL.md'
+rm 'skills/notify-user/scripts/notify.py'
+rm 'workdir/.gitkeep'
+rm 'workdir/agentic_ai_2026_report.md'
+rm 'workdir/research_rubric.md'
+rm 'workdir/search_queries.json'
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   .gitignore
+	new file:   .gitkeep
+	new file:   agents/.gitkeep
+	new file:   agents/work-assistant/agent.json
+	new file:   agents/work-assistant/settings.json
+	new file:   chats/JNf37UmG/chat.json
+	new file:   chats/XAmf1dzP/chat.json
+	new file:   chats/XAmf1dzP/messages/1.txt
+	new file:   chats/XAmf1dzP/messages/2.txt
+	new file:   chats/XAmf1dzP/messages/3.txt
+	new file:   knowledge/.gitkeep
+	new file:   knowledge/main/.gitkeep
+	new file:   knowledge/solutions/.gitkeep
+	new file:   memory/default/embedding.json
+	new file:   memory/default/knowledge_import.json
+	new file:   scheduler/tasks.json
+	new file:   settings.json
+	new file:   skills/.gitkeep
+	new file:   skills/notify-user/SKILL.md
+	new file:   skills/notify-user/scripts/notify.py
+	new file:   workdir/.gitkeep
+	new file:   workdir/agentic_ai_2026_report.md
+	new file:   workdir/research_rubric.md
+	new file:   workdir/search_queries.json
+
+(venv) root@a6d3caa9a0d8:/a0/usr#
