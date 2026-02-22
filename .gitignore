@@ -68,13 +68,3 @@ logs/
 *.temp
 .cache/
 
-# Database files
-*.db
-*.sqlite
-*.sqlite3
-
-# FAISS index files (generated)
-*.faiss
-
-# Pickle files (generated)
-*.pkl
