@@ -1,0 +1,32 @@
+[
+    {
+        "uuid": "C1OvYfy9",
+        "name": "Git Backup Hourly",
+        "state": "running",
+        "system_prompt": "You are an automation agent responsible for performing git backups and notifying the user of results. Execute tasks reliably and report outcomes clearly.",
+        "prompt": "Execute the git-backup skill by running the backup script at /a0/usr/skills/git-backup/scripts/backup.py, then use the notify-user skill to send a notification with the backup result.\n\nSteps:\n1. Run: python /a0/usr/skills/git-backup/scripts/backup.py\n2. Capture the output/result\n3. Send notification using: python /a0/usr/skills/notify-user/scripts/notify.py \"<backup result message>\" --title \"Git Backup Result\" --priority 3\n\nAlways report whether the backup succeeded or failed in the notification.",
+        "attachments": [],
+        "project_name": null,
+        "project_color": null,
+        "created_at": "2026-02-22T16:55:10.248938+08:00",
+        "updated_at": "2026-02-23T22:00:07.882112+08:00",
+        "last_run": "2026-02-23T21:01:22.627575+08:00",
+        "next_run": "2026-02-23T23:00:00+08:00",
+        "last_result": "## \u2705 Scheduled Git Backup Completed\n\n**Execution Time:** 2026-02-23 13:00:37\n\n### Backup Result\n| Status | Path | Branch | Commit |\n|--------|------|--------|--------|\n| \u2705 Success | /a0/usr | main | Backup [2026-02-23 13:00:37] |\n\n**Summary:** 1 successful, 0 failed\n\n### Notification\n\u2705 Sent via ntfy.sh with title \"Git Backup Result\" (priority 3)",
+        "context_id": "C1OvYfy9",
+        "dedicated_context": true,
+        "project": {
+            "name": null,
+            "color": null
+        },
+        "type": "scheduled",
+        "schedule": {
+            "minute": "0",
+            "hour": "*",
+            "day": "*",
+            "month": "*",
+            "weekday": "*",
+            "timezone": "Asia/Singapore"
+        }
+    }
+]
