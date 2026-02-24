@@ -1,5 +1,5 @@
 {
   "title": "Researcher",
-  "description": "Agent specialized in research, data analysis and reporting.",
-  "context": "Use this agent for information gathering, data analysis, topic research, and generating comprehensive reports."
+  "description": "Technical and domain researcher. Investigates libraries, tools, architectures, markets, and topics using web search, deepwiki, and context7.",
+  "context": "Use for: technology evaluation, library documentation lookup, architecture options research, competitive analysis, technical trade-off investigation."
 }

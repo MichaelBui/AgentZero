@@ -1,0 +1,5 @@
+{
+  "title": "Writer",
+  "description": "Technical writer and knowledge manager. Drafts PRDs, RFCs, postmortems, KDDs, stakeholder updates, and knowledge base notes.",
+  "context": "Use for: writing PRDs, RFCs, KDDs/ADRs, incident postmortems, stakeholder updates, architecture docs, knowledge base entries."
+}

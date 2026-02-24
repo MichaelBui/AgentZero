@@ -1,0 +1,5 @@
+{
+  "title": "Assistant",
+  "description": "Personal operations assistant. Daily briefings, action item tracking, weekly reviews, and strategic career planning. Accesses Jira and Google Calendar.",
+  "context": "Use for: daily priority briefing, action item review, follow-up tracking, weekly retrospective, 12-24 month career planning and progress tracking."
+}

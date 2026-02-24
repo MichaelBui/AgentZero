@@ -1,7 +1,7 @@
 {
     "version": "v0.9.8.1",
     "chat_model_provider": "other",
-    "chat_model_name": "nn/z-ai/glm5",
+    "chat_model_name": "oc/minimax-m2.5-free",
     "chat_model_api_base": "https://llm.gigary.com/v1",
     "chat_model_kwargs": {},
     "chat_model_ctx_length": 262144,
