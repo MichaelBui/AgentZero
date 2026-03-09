@@ -396,9 +396,19 @@ def format_issue(issue: dict) -> dict:
     }
 
 
+def output_data(data, fmt: str = "json"):
+    """Output data as JSON (default) or YAML to stdout."""
+    if fmt == "yaml":
+        import yaml
+        print(yaml.dump(data, default_flow_style=False, allow_unicode=True, sort_keys=False))
+    else:
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+
+
 def main():
     parser = argparse.ArgumentParser(description="Fetch Jira tickets from a Polaris View")
     parser.add_argument("--viewId", required=True, help="Numeric Polaris view ID")
+    parser.add_argument("--format", choices=["json", "yaml"], default="json", help="Output format (default: json)")
     parser.add_argument("--limit", type=int, default=50, help="Max tickets (default: 50)")
     parser.add_argument("--offset", type=int, default=0, help="Pagination offset (default: 0)")
     parser.add_argument("--no-cache", action="store_true", help="Bypass JQL cache and re-resolve from GraphQL")
@@ -411,7 +421,7 @@ def main():
     issues = fetch_issues(jql, args.limit, args.offset, auth_headers)
     formatted = [format_issue(issue) for issue in issues]
 
-    print(json.dumps(formatted, indent=2, ensure_ascii=False))
+    output_data(formatted, args.format)
 
 
 if __name__ == "__main__":

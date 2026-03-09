@@ -22,9 +22,12 @@ python /a0/usr/skills/notify-user/scripts/notify.py "Your message here"
 ```
 
 ### Parameters
-- `message` (required): The notification message to send
-- `title` (optional): Title for the notification (default: "Agent Zero Notification")
-- `priority` (optional): Priority level 1-5 (default: 3)
+| Argument | Required | Default | Description |
+|----------|----------|---------|-------------|
+| `message` | Yes | — | The notification message to send |
+| `--title` / `-t` | No | "Agent Zero Notification" | Title for the notification |
+| `--priority` / `-p` | No | 3 | Priority level 1-5 |
+| `--format` | No | `json` | Output format: `json` or `yaml` |
 
 ### Examples
 

@@ -47,6 +47,19 @@ python /a0/usr/skills/git-backup/scripts/backup.py --message "Manual backup befo
 python /a0/usr/skills/git-backup/scripts/backup.py --dry-run
 ```
 
+### YAML output
+```bash
+python /a0/usr/skills/git-backup/scripts/backup.py --format yaml
+```
+
+## Arguments
+| Argument | Required | Default | Description |
+|----------|----------|---------|-------------|
+| `--message` / `-m` | No | — | Custom commit message prefix |
+| `--format` | No | `json` | Output format: `json` or `yaml` |
+| `--dry-run` | No | false | Preview changes without executing |
+| `--paths` | No | BACKUP_PATHS | Override configured backup paths |
+
 ## Git Strategy
 
 The script uses a strategy that **prioritizes local changes** while **preserving remote history**:

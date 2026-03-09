@@ -1,7 +1,7 @@
 ---
 name: jira-view-listing
 description: Fetch Jira tickets from a Polaris View (Jira Product Discovery / Roadmaps). Use when the user asks about team initiatives, backlog items, roadmap tickets, sprint tasks, or anything in a specific Jira view. Resolves the view's dynamic JQL and returns full issue details including hierarchy, links, and comments.
-version: 1.0.0
+version: 1.1.0
 author: Michael
 tags: [jira, polaris, roadmap, initiatives, backlog, tickets, product-discovery, ntuclink]
 ---
@@ -49,9 +49,10 @@ python /a0/usr/skills/jira-view-listing/scripts/jira_view_listing.py --viewId=10
 | `--limit` | No | 50 | Max tickets to return |
 | `--offset` | No | 0 | Pagination offset |
 | `--no-cache` | No | false | Bypass 24h JQL cache, re-resolve from GraphQL |
+| `--format` | No | `json` | Output format: `json` or `yaml` |
 
 ## Output
-- **stdout:** JSON array of issue objects (pipe-friendly)
+- **stdout:** JSON (default) or YAML array of issue objects (pipe-friendly)
 - **stderr:** Progress info, API key validation, errors
 
 ### Output fields per ticket

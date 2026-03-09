@@ -8,6 +8,7 @@ Prioritizes local changes over remote while preserving remote history.
 
 import subprocess
 import argparse
+import json
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -326,6 +327,15 @@ def backup_path(path, custom_message=None, dry_run=False):
     return True
 
 
+def output_data(data, fmt: str = "json"):
+    """Output data as JSON (default) or YAML to stdout."""
+    if fmt == "yaml":
+        import yaml
+        print(yaml.dump(data, default_flow_style=False, allow_unicode=True, sort_keys=False))
+    else:
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Git backup script - backs up paths to git remotes with local priority"
@@ -334,6 +344,10 @@ def main():
         "--message", "-m",
         help="Custom commit message prefix",
         default=None
+    )
+    parser.add_argument(
+        "--format", choices=["json", "yaml"], default="json",
+        help="Output format (default: json)"
     )
     parser.add_argument(
         "--dry-run",
@@ -352,31 +366,31 @@ def main():
     paths = args.paths if args.paths else BACKUP_PATHS
     
     if args.dry_run:
-        print("🔍 DRY RUN MODE - No changes will be made")
+        print("🔍 DRY RUN MODE - No changes will be made", file=sys.stderr)
     
-    print(f"\n📋 Backup paths configured: {len(paths)}")
+    print(f"Backup paths configured: {len(paths)}", file=sys.stderr)
     for p in paths:
-        print(f"   - {p}")
+        print(f"  - {p}", file=sys.stderr)
     
-    success_count = 0
-    fail_count = 0
+    results = []
     
     for path in paths:
-        if backup_path(path, args.message, args.dry_run):
-            success_count += 1
-        else:
-            fail_count += 1
+        success = backup_path(path, args.message, args.dry_run)
+        results.append({"path": path, "success": success})
     
-    print(f"\n{'='*60}")
-    print(f"Backup Summary")
-    print(f"{'='*60}")
-    print(f"  ✅ Successful: {success_count}")
-    print(f"  ❌ Failed: {fail_count}")
-    
+    success_count = sum(1 for r in results if r["success"])
+    fail_count = sum(1 for r in results if not r["success"])
+
+    print(f"\nBackup complete: {success_count} succeeded, {fail_count} failed", file=sys.stderr)
+
+    output_data({
+        "summary": {"successful": success_count, "failed": fail_count},
+        "dry_run": args.dry_run,
+        "results": results,
+    }, args.format)
+
     if fail_count > 0:
         sys.exit(1)
-    
-    print(f"\n🎉 Backup completed successfully!")
 
 
 if __name__ == "__main__":
