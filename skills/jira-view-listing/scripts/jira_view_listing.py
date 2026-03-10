@@ -402,7 +402,7 @@ def output_data(data, fmt: str = "json"):
         import yaml
         print(yaml.dump(data, default_flow_style=False, allow_unicode=True, sort_keys=False))
     else:
-        print(json.dumps(data, indent=2, ensure_ascii=False))
+        print(json.dumps(data, separators=(",", ":"), ensure_ascii=False))
 
 
 def main():

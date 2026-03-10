@@ -408,14 +408,17 @@ def match_priority(labels: list[str], priority_labels: list[str]) -> str | None:
 
 
 def read_threads(page, thread_list: list[dict], max_threads: int,
-                 exclude_labels: list[str], priority_labels: list[str]) -> list[dict]:
-    """Open each non-excluded thread via click and extract its messages."""
+                 exclude_labels: list[str], priority_labels: list[str],
+                 max_scan: int = 100) -> list[dict]:
+    """Open each non-excluded thread via click and extract its messages.
+    max_scan caps the total number of rows examined to avoid runaway loops
+    when many threads are excluded."""
     threads = []
-    total_rows = len(thread_list)
+    total_rows = min(len(thread_list), max_scan)
     row_idx = 0
     skipped = 0
 
-    eprint(f"\nProcessing threads (target: {max_threads}, total rows: {total_rows})...")
+    eprint(f"\nProcessing threads (target: {max_threads}, scan limit: {max_scan}, total rows: {len(thread_list)})...")
     eprint(f"Exclude labels: {exclude_labels}")
     eprint(f"Priority labels: {priority_labels}\n")
 
@@ -480,7 +483,7 @@ def read_threads(page, thread_list: list[dict], max_threads: int,
             updated = get_thread_list(page)
             if len(updated) > 0:
                 thread_list = updated
-                total_rows = len(updated)
+                total_rows = min(len(updated), max_scan)
 
     eprint(f"\nProcessed: {len(threads)} threads, skipped: {skipped} (excluded)")
     return threads
@@ -501,6 +504,10 @@ def main():
     parser.add_argument(
         "--max-threads", type=int, default=20,
         help="Max number of threads to read, excluding filtered threads (default: 20)"
+    )
+    parser.add_argument(
+        "--max-scan", type=int, default=100,
+        help="Max total threads to scan through (including excluded). Safety cap to prevent runaway loops (default: 100)"
     )
     parser.add_argument(
         "--exclude-labels", default=DEFAULT_EXCLUDE,
@@ -538,19 +545,21 @@ def main():
         eprint(f"Found {len(thread_list)} thread(s) in search results")
 
         if not thread_list:
-            eprint("No email threads found.")
-            print("[]")
-            return
+            eprint("FATAL: 0 threads found — this should never happen and indicates a "
+                   "Gmail DOM parsing issue (selectors may have changed). "
+                   "Investigate get_thread_list() selectors against the current Gmail UI.")
+            sys.exit(2)
 
         threads = read_threads(page, thread_list, args.max_threads,
-                               exclude_labels, priority_labels)
+                               exclude_labels, priority_labels,
+                               max_scan=args.max_scan)
 
         eprint(f"\nDone. Extracted {len(threads)} thread(s).")
         if args.format == "yaml":
             import yaml
             print(yaml.dump(threads, default_flow_style=False, allow_unicode=True, sort_keys=False))
         else:
-            print(json.dumps(threads, indent=2, ensure_ascii=False))
+            print(json.dumps(threads, separators=(",", ":"), ensure_ascii=False))
 
     except Exception as e:
         eprint(f"ERROR: {e}")

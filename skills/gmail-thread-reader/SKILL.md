@@ -1,7 +1,7 @@
 ---
 name: gmail-thread-reader
 description: Read Gmail email threads using a remote Chrome DevTools headless instance. Use when the user asks to check emails, read recent email threads, get email conversations, or review inbox messages. Connects to a running Chrome instance via CDP and extracts who said what and when from each thread. Supports label-based exclusion and priority tagging.
-version: 1.2.0
+version: 1.3.0
 author: Michael
 tags: [gmail, email, chrome, cdp, devtools, inbox, threads, conversations]
 ---
@@ -58,6 +58,7 @@ python /a0/usr/skills/gmail-thread-reader/scripts/gmail_thread_reader.py --prior
 | `--cdp-url` | No | `http://192.168.1.11:9223` | Chrome DevTools Protocol endpoint |
 | `--days` | No | 3 | Number of days to look back |
 | `--max-threads` | No | 20 | Max non-excluded threads to read |
+| `--max-scan` | No | 100 | Max total threads to scan (including excluded). Safety cap to prevent runaway loops |
 | `--exclude-labels` | No | `["❌ ai-exclusion"]` | JSON array of labels to skip |
 | `--priority-labels` | No | `["⚠️IMPORTANT", ...]` | JSON array of priority labels (highest first) |
 | `--format` | No | `json` | Output format: `json` or `yaml` |
@@ -123,6 +124,8 @@ Each thread is tagged with its highest-matching priority label (first match from
 - The Chrome instance must already be logged into Gmail
 - CC extraction requires Gmail's "show details" header to be expandable; falls back to empty list
 - ~6-7 seconds per thread (navigation + extraction + back)
+- **Fail-loud:** If 0 threads are found after loading search results, the script exits with code 2 and a FATAL error. This should never happen and indicates Gmail DOM selectors need updating.
+- **Scan safety cap:** `--max-scan` (default 100) limits the total number of threads examined (including excluded), preventing runaway loops when many threads are filtered out.
 - See `scripts/gmail_thread_reader.py` for implementation details
 
 ## Files
