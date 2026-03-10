@@ -27,7 +27,7 @@ from playwright.sync_api import sync_playwright, TimeoutError as PwTimeout
 DEFAULT_CDP = "http://192.168.1.11:9223"
 GMAIL_BASE = "https://mail.google.com"
 
-DEFAULT_EXCLUDE = '["❌ ai-exclusion"]'
+DEFAULT_EXCLUDE = '["❌ ai-exclusion", "🪣 Bitbucket"]'
 DEFAULT_PRIORITY = '["⚠️IMPORTANT", "❗️ ASAP  🏃‍♂️‍➡️", "🔜 Soon 🚶‍♂️‍➡️", "👀 KIV 🧘‍♂️", "📝 Noted"]'
 
 
