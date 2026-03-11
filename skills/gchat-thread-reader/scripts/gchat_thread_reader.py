@@ -103,14 +103,24 @@ def snapshot_feed(page, cutoff_ms):
 
 
 def click_feed_item(page, gid, dts):
-    """Scroll a Home feed item into view and click it. Returns True on success."""
+    """Scroll a Home feed item into view and click it. Returns True on success.
+
+    Tries exact gid+dts match first. Falls back to gid-only match when the
+    item jumped position (e.g., new message arrived, changing its timestamp).
+    """
     found = page.evaluate("""({sel, gid, dts}) => {
+        let fallback = null;
         for (const el of document.querySelectorAll(sel)) {
-            if (el.getAttribute("data-group-id") === gid &&
-                parseInt(el.getAttribute("data-display-timestamp") || "0", 10) === dts) {
+            if (el.getAttribute("data-group-id") !== gid) continue;
+            if (parseInt(el.getAttribute("data-display-timestamp") || "0", 10) === dts) {
                 el.scrollIntoView({block: "center", behavior: "instant"});
                 return true;
             }
+            if (!fallback) fallback = el;
+        }
+        if (fallback) {
+            fallback.scrollIntoView({block: "center", behavior: "instant"});
+            return true;
         }
         return false;
     }""", {"sel": SEL_FEED, "gid": gid, "dts": dts})
