@@ -293,75 +293,97 @@ def expand_collapsed_content(page):
 
     Uses Playwright mouse.click() (not JS .click()) because GChat's framework
     event handlers do not respond to synthetic JS click events.
+
+    Retries expansion because collapsed messages may be lazy-loaded — clicking
+    one collapse bar may reveal additional collapse bars for more hidden content.
     """
     before_count = page.evaluate(
         f'() => document.querySelectorAll("{SEL_MSG}").length'
     )
+    total_clicked = 0
 
-    # 1. Find collapsed message bars and get their click coordinates
-    bars = page.evaluate(f"""() => {{
-        {FIND_PANEL_JS}
-        const panel = findPanel();
-        const results = [];
+    for round_num in range(10):
+        bars = page.evaluate(f"""() => {{
+            {FIND_PANEL_JS}
+            const panel = findPanel();
+            const results = [];
 
-        // Collapsed message bars
-        const collapseBars = document.querySelectorAll(
-            "[role='button'][aria-label*='collapsed message']"
-        );
-        for (const bar of collapseBars) {{
-            const rect = bar.getBoundingClientRect();
-            if (rect.width < 20 || rect.height < 5) continue;
-            bar.scrollIntoView({{block: "center", behavior: "instant"}});
-            const r2 = bar.getBoundingClientRect();
-            results.push({{
-                x: Math.round(r2.left + r2.width / 2),
-                y: Math.round(r2.top + r2.height / 2),
-                label: bar.getAttribute("aria-label") || "",
-                type: "collapse",
-            }});
-        }}
-
-        // 'Show more' / 'See more' buttons
-        if (panel) {{
-            for (const btn of panel.querySelectorAll(
-                "button, [role='button'], span[role='button']"
+            // Collapsed message bars
+            for (const bar of document.querySelectorAll(
+                "[role='button'][aria-label*='collapsed message']"
             )) {{
-                const t = btn.textContent.trim().toLowerCase();
-                if (t === "show more" || t === "see more") {{
+                const rect = bar.getBoundingClientRect();
+                if (rect.width < 20 || rect.height < 5) continue;
+                bar.scrollIntoView({{block: "center", behavior: "instant"}});
+                const r2 = bar.getBoundingClientRect();
+                results.push({{
+                    x: Math.round(r2.left + r2.width / 2),
+                    y: Math.round(r2.top + r2.height / 2),
+                    label: bar.getAttribute("aria-label") || "",
+                    type: "collapse",
+                }});
+            }}
+
+            // 'Show more' / 'See more' buttons (by aria-label)
+            if (panel) {{
+                for (const btn of panel.querySelectorAll(
+                    "button[aria-label*='how more'], [role='button'][aria-label*='how more'],"
+                    + "button[aria-label*='ee more'], [role='button'][aria-label*='ee more']"
+                )) {{
                     btn.scrollIntoView({{block: "center", behavior: "instant"}});
                     const r = btn.getBoundingClientRect();
+                    if (r.width < 10 || r.height < 5) continue;
                     results.push({{
                         x: Math.round(r.left + r.width / 2),
                         y: Math.round(r.top + r.height / 2),
-                        label: t,
+                        label: btn.getAttribute("aria-label") || btn.textContent.trim(),
                         type: "showmore",
                     }});
                 }}
+
+                // Fallback: match by text content for Show more/See more
+                if (results.filter(r => r.type === "showmore").length === 0) {{
+                    for (const btn of panel.querySelectorAll(
+                        "button, [role='button'], span[role='button']"
+                    )) {{
+                        const t = btn.textContent.trim().toLowerCase();
+                        if (t === "show more" || t === "see more") {{
+                            btn.scrollIntoView({{block: "center", behavior: "instant"}});
+                            const r = btn.getBoundingClientRect();
+                            if (r.width < 10 || r.height < 5) continue;
+                            results.push({{
+                                x: Math.round(r.left + r.width / 2),
+                                y: Math.round(r.top + r.height / 2),
+                                label: t,
+                                type: "showmore",
+                            }});
+                        }}
+                    }}
+                }}
             }}
-        }}
 
-        return results;
-    }}""")
+            return results;
+        }}""")
 
-    if not bars:
-        return
+        if not bars:
+            break
 
-    clicked = 0
-    for bar in bars:
-        try:
-            page.mouse.click(bar["x"], bar["y"])
-            clicked += 1
-            time.sleep(2)
-        except Exception:
-            pass
+        for bar in bars:
+            try:
+                page.mouse.click(bar["x"], bar["y"])
+                total_clicked += 1
+                time.sleep(2)
+            except Exception:
+                pass
 
-    if clicked:
         time.sleep(1)
+
+    if total_clicked:
         after_count = page.evaluate(
             f'() => document.querySelectorAll("{SEL_MSG}").length'
         )
         new_msgs = after_count - before_count
-        eprint(f"  Expanded {clicked} bar(s) ({new_msgs} new messages)")
+        eprint(f"  Expanded {total_clicked} bar(s) ({new_msgs} new messages)")
 
 
 # --- Message Extraction ---
@@ -379,15 +401,13 @@ def extract_messages(page, cutoff_ms):
         );
         const out = [];
 
+        // UI chrome classes: timestamp, sender name, quote attribution,
+        // reply/thread indicators, reply metadata sections.
         const NOISE_CLS = [
             "FvYVyf", "njhDLd", "cPjwNc", "GOoeGd", "Lphf0c",
             "nzVtF", "ZTmjQb", "w692Zc", "TmhmK",
             "ne2Ple-oshW8e-V67aGc",
-        ];
-        const NOISE_TXT = [
-            "End Quote", "Quoted", "Sent by",
-            "Add reaction", "Show more", "See more",
-            "Last reply",
+            "qILqnd", "pqeofd", "tTYnif",
         ];
 
         for (const msg of containers) {
@@ -424,37 +444,52 @@ def extract_messages(page, cutoff_ms):
 
                     const cls = p.getAttribute("class") || "";
                     const role = p.getAttribute("role") || "";
+
+                    // Structural filter: skip non-content elements by role
                     if (role === "tooltip" || role === "presentation") continue;
 
+                    // Structural filter: skip text inside buttons/clickable
+                    // elements (reactions, actions, thread indicators).
+                    // These are captured separately in the button loop below.
+                    if (p.closest("button, [role='button']")) continue;
+
+                    // Structural filter: skip text inside reaction lists
+                    const rList = p.closest("[role='list']");
+                    if (rList && /reaction/i.test(
+                        rList.getAttribute("aria-label") || "")) continue;
+
+                    // Skip known UI chrome classes (timestamps, sender names)
                     let skip = false;
                     for (const nc of NOISE_CLS) {
                         if (cls.includes(nc)) { skip = true; break; }
                     }
                     if (skip) continue;
-                    for (const nt of NOISE_TXT) {
-                        if (t === nt || t.startsWith("press L to")) {
-                            skip = true; break;
-                        }
-                    }
-                    if (skip) continue;
 
-                    if (/^\\d{1,4}$/.test(t)) {
-                        const anc = p.closest("[aria-label]");
-                        if (anc && /reaction/i.test(anc.getAttribute("aria-label") || "")) continue;
-                    }
-
-                    if (/^\\d+\\s+repl(y|ies)$/i.test(t)) continue;
+                    // Skip accessibility hints
+                    if (t.startsWith("press L to")) continue;
 
                     cls.includes("J87oZd") ? quoted.push(t) : body.push(t);
                 }
 
+                // Capture meaningful button text (e.g. "Join video meeting")
+                // but skip action/UI buttons by aria-label or CSS class
                 for (const btn of grp.querySelectorAll("button, [role='button']")) {
+                    const label = (btn.getAttribute("aria-label") || "").toLowerCase();
+                    if (label.includes("reaction") || label.includes("reply") ||
+                        label.includes("resolve") || label.includes("collapsed") ||
+                        label.includes("show more") || label.includes("see more")) continue;
+
+                    // Skip thread reply indicators and metadata by class
+                    const bcls = btn.getAttribute("class") || "";
+                    let isNoise = false;
+                    for (const nc of NOISE_CLS) {
+                        if (bcls.includes(nc)) { isNoise = true; break; }
+                    }
+                    if (isNoise) continue;
+
                     const t = btn.textContent.trim();
-                    if (t && t.length > 2 && t.length < 80) {
-                        const lo = t.toLowerCase();
-                        if (["reply", "add reaction", "show more",
-                             "see more", "resolve"].includes(lo)) continue;
-                        if (!body.includes(t)) body.push(t);
+                    if (t && t.length > 2 && t.length < 80 && !body.includes(t)) {
+                        body.push(t);
                     }
                 }
             }
@@ -559,7 +594,6 @@ def main():
             sys.exit(2)
 
         threads = []
-        seen_gids = set()
         skipped = 0
         limit = min(len(feed), args.max_scan)
 
@@ -573,11 +607,6 @@ def main():
             gid = feed[i]["group_id"]
             dts = feed[i]["display_ts"]
             name = feed[i]["name"]
-
-            if gid in seen_gids:
-                eprint(f"  SKIP: {name[:55]} (duplicate group)")
-                continue
-            seen_gids.add(gid)
 
             eprint(f"[{len(threads) + 1}/{args.max_threads}] {name[:55]}...")
 
