@@ -103,24 +103,14 @@ def snapshot_feed(page, cutoff_ms):
 
 
 def click_feed_item(page, gid, dts):
-    """Scroll a Home feed item into view and click it. Returns True on success.
-
-    Tries exact gid+dts match first. Falls back to gid-only match when the
-    item jumped position (e.g., new message arrived, changing its timestamp).
-    """
+    """Scroll a Home feed item into view and click it. Returns True on success."""
     found = page.evaluate("""({sel, gid, dts}) => {
-        let fallback = null;
         for (const el of document.querySelectorAll(sel)) {
-            if (el.getAttribute("data-group-id") !== gid) continue;
-            if (parseInt(el.getAttribute("data-display-timestamp") || "0", 10) === dts) {
+            if (el.getAttribute("data-group-id") === gid &&
+                parseInt(el.getAttribute("data-display-timestamp") || "0", 10) === dts) {
                 el.scrollIntoView({block: "center", behavior: "instant"});
                 return true;
             }
-            if (!fallback) fallback = el;
-        }
-        if (fallback) {
-            fallback.scrollIntoView({block: "center", behavior: "instant"});
-            return true;
         }
         return false;
     }""", {"sel": SEL_FEED, "gid": gid, "dts": dts})
@@ -375,6 +365,8 @@ def expand_collapsed_content(page, max_rounds=5):
         new_msgs = after_count - before_count
         eprint(f"  Expanded {total_clicked} bar(s) ({new_msgs} new messages)")
 
+    return total_clicked
+
 
 # --- Message Extraction ---
 
@@ -625,7 +617,18 @@ def main():
             if args.max_scroll > 0:
                 scroll_up(page, cutoff_ms, args.max_scroll)
 
-            expand_collapsed_content(page, max_rounds=args.max_expansion)
+            expanded = expand_collapsed_content(page, max_rounds=args.max_expansion)
+
+            if expanded:
+                page.evaluate(f"""() => {{
+                    {FIND_PANEL_JS}
+                    const panel = findPanel();
+                    if (panel) panel.scrollTop = 0;
+                }}""")
+                time.sleep(2)
+                scroll_to_bottom(page)
+                if args.max_scroll > 0:
+                    scroll_up(page, cutoff_ms, args.max_scroll)
 
             messages = extract_messages(page, cutoff_ms)
             eprint(f"  -> {len(messages)} message(s) within {args.days} day(s)")
