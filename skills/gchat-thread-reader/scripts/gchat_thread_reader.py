@@ -375,10 +375,8 @@ def extract_messages(page, cutoff_ms):
     Walks all text nodes inside div[role='group']. Captures rich content,
     link URLs, bot/app sender, and quoted text.
     """
-    return page.evaluate("""(cutoff) => {
-        const containers = document.querySelectorAll(
-            'c-wiz[data-topic-id][data-is-user-topic="true"]'
-        );
+    return page.evaluate("""({sel, cutoff}) => {
+        const containers = document.querySelectorAll(sel);
         const out = [];
 
         // UI chrome classes: timestamp, sender name, quote attribution.
@@ -497,7 +495,7 @@ def extract_messages(page, cutoff_ms):
         }
 
         return out;
-    }""", cutoff_ms)
+    }""", {"sel": SEL_MSG, "cutoff": cutoff_ms})
 
 
 # --- Debug ---
