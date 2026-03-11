@@ -217,7 +217,7 @@ def _wait_for_thread(page, topic_id, timeout_s=20):
     while time.time() < deadline:
         time.sleep(2)
         try:
-            count = page.evaluate(f'() => document.querySelectorAll("{sel}").length')
+            count = page.evaluate("(s) => document.querySelectorAll(s).length", sel)
             if count > 0:
                 return count
         except Exception:
@@ -231,14 +231,14 @@ def wait_for_messages(page, old_ids, timeout_s=20, sel=SEL_MSG):
     while time.time() < deadline:
         time.sleep(2)
         try:
-            r = page.evaluate(f"""() => {{
-                const m = document.querySelectorAll("{sel}");
-                return {{
+            r = page.evaluate("""(s) => {
+                const m = document.querySelectorAll(s);
+                return {
                     c: m.length,
                     ids: Array.from(m).slice(0, 5)
                         .map(x => x.getAttribute("data-topic-id")).filter(Boolean),
-                }};
-            }}""")
+                };
+            }""", sel)
         except Exception:
             continue
 
@@ -248,7 +248,7 @@ def wait_for_messages(page, old_ids, timeout_s=20, sel=SEL_MSG):
             return r["c"]
 
     try:
-        return page.evaluate(f'() => document.querySelectorAll("{sel}").length')
+        return page.evaluate("(s) => document.querySelectorAll(s).length", sel)
     except Exception:
         return 0
 
@@ -321,14 +321,14 @@ def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion, topic_id=""):
     _snapshot()
 
     while True:
-        anchor = page.evaluate(f"""() => {{
-            const m = document.querySelectorAll("{msg_sel}");
+        anchor = page.evaluate("""(s) => {
+            const m = document.querySelectorAll(s);
             if (!m.length) return null;
-            return {{
+            return {
                 ts: parseInt(m[0].getAttribute("data-local-sort-time-msec") || "0", 10),
                 tid: m[0].getAttribute("data-topic-id") || "",
-            }};
-        }}""")
+            };
+        }""", msg_sel)
 
         if not anchor:
             break
@@ -341,7 +341,7 @@ def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion, topic_id=""):
             bar = _find_one_expandable(page, topic_id)
             if bar:
                 before = page.evaluate(
-                    f'() => document.querySelectorAll("{msg_sel}").length'
+                    "(s) => document.querySelectorAll(s).length", msg_sel
                 )
                 try:
                     page.mouse.click(bar["x"], bar["y"])
@@ -389,7 +389,7 @@ def _wait_for_dom_change(page, before_count, sel=SEL_MSG, timeout=5):
     while time.time() < deadline:
         time.sleep(0.5)
         after = page.evaluate(
-            f'() => document.querySelectorAll("{sel}").length'
+            "(s) => document.querySelectorAll(s).length", sel
         )
         if after != before_count:
             return
