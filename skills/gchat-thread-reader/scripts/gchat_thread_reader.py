@@ -281,7 +281,7 @@ def scroll_up(page, cutoff_ms, max_scrolls):
     eprint(f"  Hit scroll limit ({max_scrolls})")
 
 
-def expand_collapsed_content(page):
+def expand_collapsed_content(page, max_rounds=5):
     """Expand collapsed messages and 'Show more' buttons in the right panel.
 
     Targets:
@@ -302,7 +302,7 @@ def expand_collapsed_content(page):
     )
     total_clicked = 0
 
-    for round_num in range(10):
+    for round_num in range(max_rounds):
         bars = page.evaluate(f"""() => {{
             {FIND_PANEL_JS}
             const panel = findPanel();
@@ -401,13 +401,11 @@ def extract_messages(page, cutoff_ms):
         );
         const out = [];
 
-        // UI chrome classes: timestamp, sender name, quote attribution,
-        // reply/thread indicators, reply metadata sections.
+        // UI chrome classes: timestamp, sender name, quote attribution.
         const NOISE_CLS = [
             "FvYVyf", "njhDLd", "cPjwNc", "GOoeGd", "Lphf0c",
             "nzVtF", "ZTmjQb", "w692Zc", "TmhmK",
             "ne2Ple-oshW8e-V67aGc",
-            "qILqnd", "pqeofd", "tTYnif",
         ];
 
         for (const msg of containers) {
@@ -567,6 +565,8 @@ def main():
                     help="Max feed items to scan (default: 100)")
     ap.add_argument("--max-scroll", type=int, default=20,
                     help="Max scroll-up iterations per thread (default: 20)")
+    ap.add_argument("--max-expansion", type=int, default=5,
+                    help="Max expansion rounds for collapsed messages (default: 5)")
     ap.add_argument("--format", choices=["json", "yaml"], default="json",
                     help="Output format (default: json)")
     ap.add_argument("--debug-dom", action="store_true",
@@ -643,7 +643,7 @@ def main():
             if args.max_scroll > 0:
                 scroll_up(page, cutoff_ms, args.max_scroll)
 
-            expand_collapsed_content(page)
+            expand_collapsed_content(page, max_rounds=args.max_expansion)
 
             messages = extract_messages(page, cutoff_ms)
             eprint(f"  -> {len(messages)} message(s) within {args.days} day(s)")

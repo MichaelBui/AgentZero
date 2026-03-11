@@ -71,6 +71,7 @@ python /a0/usr/skills/gchat-thread-reader/scripts/gchat_thread_reader.py --debug
 | `--max-threads` | No | 20 | Max conversations to read |
 | `--max-scan` | No | 100 | Max total Home feed items to scan. Safety cap |
 | `--max-scroll` | No | 20 | Max scroll-up iterations per thread to load older messages |
+| `--max-expansion` | No | 5 | Max expansion rounds for collapsed message bars (handles lazy loading) |
 | `--format` | No | `json` | Output format: `json` or `yaml` |
 | `--debug-dom` | No | false | Dump Home feed DOM structure to stderr for selector debugging |
 
