@@ -25,7 +25,6 @@ GCHAT_URL = "https://chat.google.com/app/home"
 
 SEL_FEED = 'span[role="listitem"][data-group-id][data-is-unread]'
 SEL_MSG = "c-wiz[data-topic-id]"
-SEL_USER_MSG = 'c-wiz[data-topic-id][data-is-user-topic="true"]'
 
 # Reusable JS to find the right panel scroll container.
 # GChat separates data layer (c-wiz[data-topic-id] with 0x0 dimensions) from
@@ -324,41 +323,22 @@ def expand_collapsed_content(page, max_rounds=5):
                 }});
             }}
 
-            // 'Show more' / 'See more' buttons (by aria-label)
+            // 'Show more' / 'See more' buttons
             if (panel) {{
                 for (const btn of panel.querySelectorAll(
-                    "button[aria-label*='how more'], [role='button'][aria-label*='how more'],"
-                    + "button[aria-label*='ee more'], [role='button'][aria-label*='ee more']"
+                    "button, [role='button'], span[role='button']"
                 )) {{
+                    const t = btn.textContent.trim().toLowerCase();
+                    if (!t.includes("show more") && !t.includes("see more")) continue;
                     btn.scrollIntoView({{block: "center", behavior: "instant"}});
                     const r = btn.getBoundingClientRect();
                     if (r.width < 10 || r.height < 5) continue;
                     results.push({{
                         x: Math.round(r.left + r.width / 2),
                         y: Math.round(r.top + r.height / 2),
-                        label: btn.getAttribute("aria-label") || btn.textContent.trim(),
+                        label: t,
                         type: "showmore",
                     }});
-                }}
-
-                // Fallback: match by text content for Show more/See more
-                if (results.filter(r => r.type === "showmore").length === 0) {{
-                    for (const btn of panel.querySelectorAll(
-                        "button, [role='button'], span[role='button']"
-                    )) {{
-                        const t = btn.textContent.trim().toLowerCase();
-                        if (t === "show more" || t === "see more") {{
-                            btn.scrollIntoView({{block: "center", behavior: "instant"}});
-                            const r = btn.getBoundingClientRect();
-                            if (r.width < 10 || r.height < 5) continue;
-                            results.push({{
-                                x: Math.round(r.left + r.width / 2),
-                                y: Math.round(r.top + r.height / 2),
-                                label: t,
-                                type: "showmore",
-                            }});
-                        }}
-                    }}
                 }}
             }}
 
@@ -470,20 +450,12 @@ def extract_messages(page, cutoff_ms):
                 }
 
                 // Capture meaningful button text (e.g. "Join video meeting")
-                // but skip action/UI buttons by aria-label or CSS class
+                // but skip action/UI buttons by aria-label
                 for (const btn of grp.querySelectorAll("button, [role='button']")) {
                     const label = (btn.getAttribute("aria-label") || "").toLowerCase();
                     if (label.includes("reaction") || label.includes("reply") ||
                         label.includes("resolve") || label.includes("collapsed") ||
                         label.includes("show more") || label.includes("see more")) continue;
-
-                    // Skip thread reply indicators and metadata by class
-                    const bcls = btn.getAttribute("class") || "";
-                    let isNoise = false;
-                    for (const nc of NOISE_CLS) {
-                        if (bcls.includes(nc)) { isNoise = true; break; }
-                    }
-                    if (isNoise) continue;
 
                     const t = btn.textContent.trim();
                     if (t && t.length > 2 && t.length < 80 && !body.includes(t)) {
