@@ -205,39 +205,14 @@ def get_topic_ids(page):
         return set()
 
 
-def _open_thread(page, topic_id):
-    """Click into a thread from the main conversation to open the thread panel.
-
-    Finds the message container with the matching topic-id, scrolls it into view,
-    then clicks its replies link (or the container itself) to open the thread view.
-    """
-    coords = page.evaluate(f"""() => {{
-        const m = document.querySelector('c-wiz[data-topic-id="{topic_id}"]');
-        if (!m) return null;
-        m.scrollIntoView({{block: "center", behavior: "instant"}});
-
-        // Prefer clicking "N replies" link to open thread
-        const replies = m.querySelector('[data-topic-id="{topic_id}"] [role="link"]');
-        const target = replies || m;
-        const r = target.getBoundingClientRect();
-        if (r.width < 5 || r.height < 5) return null;
-        return {{x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2)}};
-    }}""")
-
-    if not coords:
-        return False
-
-    try:
-        page.mouse.click(coords["x"], coords["y"])
-        time.sleep(2)
-        return True
-    except Exception:
-        return False
-
-
 def _wait_for_thread(page, topic_id, timeout_s=20):
-    """Wait for a thread panel to load with messages matching the topic ID."""
-    sel = f'{SEL_MSG}[data-topic-id="{topic_id}"]'
+    """Wait for thread messages to appear after clicking a thread feed item.
+
+    GChat loads the thread panel directly when clicking a thread-specific
+    feed item (one with data-topic-id). We just wait for the messages
+    to appear in the DOM.
+    """
+    sel = f'c-wiz[data-topic-id="{topic_id}"]'
     deadline = time.time() + timeout_s
     while time.time() < deadline:
         time.sleep(2)
@@ -684,8 +659,12 @@ def main():
                f"feed: {limit})...\n")
 
         for i in range(limit):
-            if len(threads) >= args.max_threads:
-                break
+            if args.focus_title:
+                if attempted >= args.max_threads:
+                    break
+            else:
+                if len(threads) >= args.max_threads:
+                    break
 
             gid = feed[i]["group_id"]
             dts = feed[i]["display_ts"]
@@ -719,12 +698,6 @@ def main():
                 continue
 
             if tid:
-                wait_for_messages(page, old_ids)
-                if not _open_thread(page, tid):
-                    eprint("  SKIP: thread not found in conversation")
-                    go_home(page)
-                    skipped += 1
-                    continue
                 msg_count = _wait_for_thread(page, tid)
             else:
                 msg_count = wait_for_messages(page, old_ids)
