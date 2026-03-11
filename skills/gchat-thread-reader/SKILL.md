@@ -1,7 +1,7 @@
 ---
 name: gchat-thread-reader
 description: Read Google Chat conversations using a remote Chrome DevTools headless instance. Use when the user asks to check chat messages, read recent Google Chat threads, get chat conversations, or review Google Chat activity. Connects to a running Chrome instance via CDP and extracts who said what and when from each conversation. Supports DMs and group chats.
-version: 1.2.0
+version: 1.3.0
 author: Michael
 tags: [gchat, google-chat, chrome, cdp, devtools, conversations, messages, chat]
 ---
@@ -33,9 +33,11 @@ Do NOT use for:
 3. Filter conversations with `data-display-timestamp` within `--days` cutoff
 4. For each conversation (up to `--max-threads`):
    - Click the Home feed item to open in the **right panel** (2-panel view)
+   - **Guardrail check**: verify left panel (Home feed) is still visible — if gone, the click navigated away from 2-panel layout and the item is skipped
    - Wait for message containers to load
    - **Scroll right panel to bottom** first (GChat may jump to first unread, which can be far back)
    - **Scroll right panel up** until the `--days` cutoff is reached
+   - Expand collapsed "Show more"/"See more" sections (does NOT click "N replies" thread navigators)
    - Extract all messages within date range (sender, timestamp, body, quoted text)
 5. Output all conversations as minified JSON to stdout
 
@@ -106,6 +108,8 @@ python /a0/usr/skills/gchat-thread-reader/scripts/gchat_thread_reader.py --debug
 - The Chrome instance must already be logged into Google Chat
 - **2-panel view required**: GChat must be configured for conversations to open in the right panel
 - **Right panel scrolling**: The script scrolls the rightmost scrollable container (the conversation panel), NOT the Home feed panel
+- **Left-panel guardrail**: After clicking a feed item, the script verifies the Home feed panel is still visible. If the click accidentally navigated away from the 2-panel layout (wrong element clicked), it returns to Home and skips the item
+- **No thread navigation**: The script does NOT click "N replies" thread indicators — those navigate to a separate thread view. Only genuine "Show more"/"See more" buttons are expanded
 - Google Chat's DOM is heavily obfuscated; use `--debug-dom` when selectors break after UI updates
 - **Fail-loud:** If 0 feed items are found within date range, exits with code 2 and FATAL error
 - **Scan safety cap:** `--max-scan` (default 100) limits total Home feed items examined
