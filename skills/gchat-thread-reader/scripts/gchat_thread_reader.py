@@ -27,12 +27,33 @@ SEL_FEED = 'span[role="listitem"][data-group-id][data-is-unread]'
 SEL_MSG = "c-wiz[data-topic-id]"
 
 # Reusable JS to find the right panel scroll container.
-# GChat separates data layer (c-wiz[data-topic-id] with 0x0 dimensions) from
-# the visible rendering layer. Walking up from messages hits the hidden layer.
-# Instead, find the largest overflow-y:auto/scroll container in the right half.
+# When topicId is provided, finds the scroll container holding elements with
+# that topic ID (the thread panel, which overlays the main conversation).
+# Otherwise falls back to the largest scrollable container in the right half.
 FIND_PANEL_JS = """
-function findPanel() {
+function findPanel(topicId) {
     const mid = window.innerWidth / 3;
+
+    // If we have a topic ID, find the scroll container holding that thread
+    if (topicId) {
+        const match = document.querySelector(
+            'c-wiz[data-topic-id="' + topicId + '"]'
+        );
+        if (match) {
+            let el = match.parentElement;
+            while (el && el !== document.body) {
+                const s = getComputedStyle(el);
+                if ((s.overflowY === "auto" || s.overflowY === "scroll")
+                    && el.clientHeight > 100) {
+                    const r = el.getBoundingClientRect();
+                    if (r.width > 100 && r.left >= mid) return el;
+                }
+                el = el.parentElement;
+            }
+        }
+    }
+
+    // Fallback: largest scrollable container in the right half
     let best = null, bestArea = 0;
     for (const el of document.getElementsByTagName("div")) {
         const s = getComputedStyle(el);
@@ -96,7 +117,12 @@ def snapshot_feed(page, cutoff_ms):
             let name = "";
             if (ne) for (const n of ne.childNodes) { if (n.nodeType === 3) name += n.textContent; }
             name = name.trim() || el.getAttribute("data-group-id") || "";
-            feed.push({group_id: el.getAttribute("data-group-id") || "", display_ts: ts, name});
+            feed.push({
+                group_id: el.getAttribute("data-group-id") || "",
+                topic_id: el.getAttribute("data-topic-id") || "",
+                display_ts: ts,
+                name,
+            });
         }
         return feed;
     }""", {"sel": SEL_FEED, "cutoff": cutoff_ms})
@@ -179,14 +205,59 @@ def get_topic_ids(page):
         return set()
 
 
-def wait_for_messages(page, old_ids, timeout_s=20):
+def _open_thread(page, topic_id):
+    """Click into a thread from the main conversation to open the thread panel.
+
+    Finds the message container with the matching topic-id, scrolls it into view,
+    then clicks its replies link (or the container itself) to open the thread view.
+    """
+    coords = page.evaluate(f"""() => {{
+        const m = document.querySelector('c-wiz[data-topic-id="{topic_id}"]');
+        if (!m) return null;
+        m.scrollIntoView({{block: "center", behavior: "instant"}});
+
+        // Prefer clicking "N replies" link to open thread
+        const replies = m.querySelector('[data-topic-id="{topic_id}"] [role="link"]');
+        const target = replies || m;
+        const r = target.getBoundingClientRect();
+        if (r.width < 5 || r.height < 5) return null;
+        return {{x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2)}};
+    }}""")
+
+    if not coords:
+        return False
+
+    try:
+        page.mouse.click(coords["x"], coords["y"])
+        time.sleep(2)
+        return True
+    except Exception:
+        return False
+
+
+def _wait_for_thread(page, topic_id, timeout_s=20):
+    """Wait for a thread panel to load with messages matching the topic ID."""
+    sel = f'{SEL_MSG}[data-topic-id="{topic_id}"]'
+    deadline = time.time() + timeout_s
+    while time.time() < deadline:
+        time.sleep(2)
+        try:
+            count = page.evaluate(f'() => document.querySelectorAll("{sel}").length')
+            if count > 0:
+                return count
+        except Exception:
+            continue
+    return 0
+
+
+def wait_for_messages(page, old_ids, timeout_s=20, sel=SEL_MSG):
     """Wait for new messages to appear in the right panel. Returns message count."""
     deadline = time.time() + timeout_s
     while time.time() < deadline:
         time.sleep(2)
         try:
             r = page.evaluate(f"""() => {{
-                const m = document.querySelectorAll("{SEL_MSG}");
+                const m = document.querySelectorAll("{sel}");
                 return {{
                     c: m.length,
                     ids: Array.from(m).slice(0, 5)
@@ -202,17 +273,18 @@ def wait_for_messages(page, old_ids, timeout_s=20):
             return r["c"]
 
     try:
-        return page.evaluate(f'() => document.querySelectorAll("{SEL_MSG}").length')
+        return page.evaluate(f'() => document.querySelectorAll("{sel}").length')
     except Exception:
         return 0
 
 
-def scroll_to_bottom(page):
+def scroll_to_bottom(page, topic_id=""):
     """Scroll right panel to the very bottom, handling 'Jump to bottom' button.
 
     GChat may jump to first unread message (far back in long threads).
     Retries scroll + 'Jump to bottom' clicks until truly at bottom.
     """
+    tid_js = json.dumps(topic_id)
     for attempt in range(8):
         jumped = page.evaluate("""() => {
             const btn = document.querySelector(
@@ -230,7 +302,7 @@ def scroll_to_bottom(page):
 
         at_bottom = page.evaluate(f"""() => {{
             {FIND_PANEL_JS}
-            const panel = findPanel();
+            const panel = findPanel({tid_js});
             if (!panel) return true;
             if (panel.scrollHeight <= panel.clientHeight + 10) return true;
             const wasBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 20;
@@ -248,21 +320,25 @@ def scroll_to_bottom(page):
     time.sleep(1)
 
 
-def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion):
+def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion, topic_id=""):
     """Interleaved scroll-up + expansion with progressive message collection.
 
     GChat uses virtual scrolling — only messages near the viewport exist in the
     DOM. Collecting once at the end would miss messages we scrolled past. So we
     collect at every scroll/expand step and merge by (epoch_ms, sender) key.
 
+    When topic_id is set, scopes extraction to that thread only.
+
     Returns the accumulated list of messages sorted chronologically.
     """
     scroll_count = 0
     expand_count = 0
     collected = {}
+    tid_js = json.dumps(topic_id)
+    msg_sel = f'{SEL_MSG}[data-topic-id="{topic_id}"]' if topic_id else SEL_MSG
 
     def _snapshot():
-        for msg in extract_messages(page, cutoff_ms):
+        for msg in extract_messages(page, cutoff_ms, topic_id):
             key = f"{msg['epoch_ms']}_{msg['sender']}"
             if key not in collected:
                 collected[key] = msg
@@ -271,7 +347,7 @@ def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion):
 
     while True:
         anchor = page.evaluate(f"""() => {{
-            const m = document.querySelectorAll("{SEL_MSG}");
+            const m = document.querySelectorAll("{msg_sel}");
             if (!m.length) return null;
             return {{
                 ts: parseInt(m[0].getAttribute("data-local-sort-time-msec") || "0", 10),
@@ -287,14 +363,18 @@ def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion):
             break
 
         if expand_count < max_expansion:
-            bar = _find_one_expandable(page)
+            bar = _find_one_expandable(page, topic_id)
             if bar:
+                before = page.evaluate(
+                    f'() => document.querySelectorAll("{msg_sel}").length'
+                )
                 try:
                     page.mouse.click(bar["x"], bar["y"])
                     expand_count += 1
-                    time.sleep(2)
                 except Exception:
                     pass
+
+                _wait_for_dom_change(page, before, msg_sel)
 
                 if anchor["tid"]:
                     _scroll_to_anchor(page, anchor["tid"])
@@ -307,7 +387,7 @@ def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion):
 
         moved = page.evaluate(f"""() => {{
             {FIND_PANEL_JS}
-            const panel = findPanel();
+            const panel = findPanel({tid_js});
             if (!panel) return false;
             const before = panel.scrollTop;
             panel.scrollTop = Math.max(0, panel.scrollTop - 800);
@@ -328,6 +408,19 @@ def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion):
     return sorted(collected.values(), key=lambda m: m["epoch_ms"])
 
 
+def _wait_for_dom_change(page, before_count, sel=SEL_MSG, timeout=5):
+    """Poll until DOM container count changes after expansion, or timeout."""
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        time.sleep(0.5)
+        after = page.evaluate(
+            f'() => document.querySelectorAll("{sel}").length'
+        )
+        if after != before_count:
+            return
+    time.sleep(1)
+
+
 def _scroll_to_anchor(page, topic_id):
     """Scroll the anchor message back into view after expansion (free, not counted)."""
     page.evaluate(f"""() => {{
@@ -337,14 +430,17 @@ def _scroll_to_anchor(page, topic_id):
     time.sleep(0.5)
 
 
-def _find_one_expandable(page):
+def _find_one_expandable(page, topic_id=""):
     """Find one collapse bar or 'Show more' button to click. Returns coords or None."""
+    tid_js = json.dumps(topic_id)
     return page.evaluate(f"""() => {{
         {FIND_PANEL_JS}
-        const panel = findPanel();
+        const panel = findPanel({tid_js});
 
-        // Collapsed message bars
-        for (const bar of document.querySelectorAll(
+        if (!panel) return null;
+
+        // Collapsed message bars within the active panel
+        for (const bar of panel.querySelectorAll(
             "[role='button'][aria-label*='collapsed message']"
         )) {{
             const rect = bar.getBoundingClientRect();
@@ -358,22 +454,20 @@ def _find_one_expandable(page):
             }};
         }}
 
-        // 'Show more' / 'See more' buttons
-        if (panel) {{
-            for (const btn of panel.querySelectorAll(
-                "button, [role='button'], span[role='button']"
-            )) {{
-                const t = btn.textContent.trim().toLowerCase();
-                if (!t.includes("show more") && !t.includes("see more")) continue;
-                btn.scrollIntoView({{block: "center", behavior: "instant"}});
-                const r = btn.getBoundingClientRect();
-                if (r.width < 10 || r.height < 5) continue;
-                return {{
-                    x: Math.round(r.left + r.width / 2),
-                    y: Math.round(r.top + r.height / 2),
-                    label: t,
-                }};
-            }}
+        // 'Show more' / 'See more' buttons within the active panel
+        for (const btn of panel.querySelectorAll(
+            "button, [role='button'], span[role='button']"
+        )) {{
+            const t = btn.textContent.trim().toLowerCase();
+            if (!t.includes("show more") && !t.includes("see more")) continue;
+            btn.scrollIntoView({{block: "center", behavior: "instant"}});
+            const r = btn.getBoundingClientRect();
+            if (r.width < 10 || r.height < 5) continue;
+            return {{
+                x: Math.round(r.left + r.width / 2),
+                y: Math.round(r.top + r.height / 2),
+                label: t,
+            }};
         }}
 
         return null;
@@ -383,12 +477,14 @@ def _find_one_expandable(page):
 # --- Message Extraction ---
 
 
-def extract_messages(page, cutoff_ms):
+def extract_messages(page, cutoff_ms, topic_id=""):
     """Extract messages from the right panel within date range.
 
+    When topic_id is set, only extracts from containers matching that topic.
     Walks all text nodes inside div[role='group']. Captures rich content,
     link URLs, bot/app sender, and quoted text.
     """
+    sel = f'{SEL_MSG}[data-topic-id="{topic_id}"]' if topic_id else SEL_MSG
     return page.evaluate("""({sel, cutoff}) => {
         const containers = document.querySelectorAll(sel);
         const out = [];
@@ -509,7 +605,7 @@ def extract_messages(page, cutoff_ms):
         }
 
         return out;
-    }""", {"sel": SEL_MSG, "cutoff": cutoff_ms})
+    }""", {"sel": sel, "cutoff": cutoff_ms})
 
 
 # --- Debug ---
@@ -553,6 +649,8 @@ def main():
                     help="Max expansion rounds for collapsed messages (default: 5)")
     ap.add_argument("--format", choices=["json", "yaml"], default="json",
                     help="Output format (default: json)")
+    ap.add_argument("--focus-title", default="",
+                    help="Only process threads matching this title (others skipped but counted)")
     ap.add_argument("--debug-dom", action="store_true",
                     help="Dump Home feed DOM to stderr and exit")
     args = ap.parse_args()
@@ -591,10 +689,17 @@ def main():
 
             gid = feed[i]["group_id"]
             dts = feed[i]["display_ts"]
+            tid = feed[i].get("topic_id", "")
             name = feed[i]["name"]
             attempted += 1
 
+            is_focused = not args.focus_title or args.focus_title.lower() in name.lower()
             eprint(f"[{attempted}/{limit}] {name[:55]}...")
+
+            if not is_focused:
+                eprint("  SKIP: not matching --focus-title")
+                skipped += 1
+                continue
 
             old_ids = get_topic_ids(page)
 
@@ -606,8 +711,6 @@ def main():
                     skipped += 1
                     continue
 
-            # Guardrail: left panel must still be visible.
-            # If gone, we accidentally navigated away from 2-panel layout.
             time.sleep(1)
             if not left_panel_visible(page):
                 eprint("  WARN: left panel gone — wrong click, returning to Home")
@@ -615,20 +718,38 @@ def main():
                 skipped += 1
                 continue
 
-            msg_count = wait_for_messages(page, old_ids)
+            if tid:
+                wait_for_messages(page, old_ids)
+                if not _open_thread(page, tid):
+                    eprint("  SKIP: thread not found in conversation")
+                    go_home(page)
+                    skipped += 1
+                    continue
+                msg_count = _wait_for_thread(page, tid)
+            else:
+                msg_count = wait_for_messages(page, old_ids)
             if msg_count == 0:
                 eprint("  SKIP: 0 messages loaded")
                 go_home(page)
                 skipped += 1
                 continue
 
-            eprint(f"  {msg_count} message container(s)")
+            eprint(f"  {msg_count} message container(s)"
+                   + (f" (thread: {tid[:15]})" if tid else ""))
 
-            scroll_to_bottom(page)
+            scroll_to_bottom(page, topic_id=tid)
             messages = scroll_and_expand(
-                page, cutoff_ms, args.max_scroll, args.max_expansion
+                page, cutoff_ms, args.max_scroll, args.max_expansion,
+                topic_id=tid,
             )
             eprint(f"  -> {len(messages)} message(s) within {args.days} day(s)")
+
+            if args.focus_title and messages:
+                eprint(f"\n  --- Collected messages for \"{name}\" ---")
+                for idx, m in enumerate(messages, 1):
+                    eprint(f"  [{idx}] {m['timestamp']} | {m['sender']}: "
+                           f"{m['body'][:120]}")
+                eprint(f"  --- End ({len(messages)} total) ---\n")
 
             if messages:
                 threads.append({
