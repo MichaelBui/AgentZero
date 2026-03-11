@@ -295,6 +295,42 @@ def scroll_to_bottom(page, topic_id=""):
     time.sleep(1)
 
 
+PARSE_TIME_JS = """
+function parseDisplayTime(timeStr) {
+    if (!timeStr) return 0;
+    const now = new Date();
+    let d;
+    const abs = timeStr.match(/^(\\w+\\s+\\d+),\\s+(.+)$/);
+    if (abs) {
+        d = new Date(abs[1] + ", " + now.getFullYear() + " " + abs[2]);
+        if (!isNaN(d)) { if (d > now) d.setFullYear(d.getFullYear() - 1); return d.getTime(); }
+    }
+    if (/^yesterday/i.test(timeStr)) {
+        const t = timeStr.replace(/^yesterday\\s*/i, "");
+        const y = new Date(now); y.setDate(y.getDate() - 1);
+        d = new Date(y.toDateString() + " " + t);
+        if (!isNaN(d)) return d.getTime();
+    }
+    const dw = timeStr.match(/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\\w*\\s+(.+)$/i);
+    if (dw) {
+        const dayAbbr = dw[1].substring(0, 3);
+        for (let i = 1; i <= 7; i++) {
+            const dd = new Date(now); dd.setDate(dd.getDate() - i);
+            if (dd.toDateString().startsWith(dayAbbr)) {
+                d = new Date(dd.toDateString() + " " + dw[2]);
+                if (!isNaN(d)) return d.getTime();
+            }
+        }
+    }
+    d = new Date(now.toDateString() + " " + timeStr);
+    if (!isNaN(d)) return d.getTime();
+    d = new Date(timeStr);
+    if (!isNaN(d)) return d.getTime();
+    return 0;
+}
+"""
+
+
 def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion, topic_id=""):
     """Interleaved scroll-up + expansion with progressive message collection.
 
@@ -302,7 +338,8 @@ def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion, topic_id=""):
     DOM. Collecting once at the end would miss messages we scrolled past. So we
     collect at every scroll/expand step and merge by (epoch_ms, sender) key.
 
-    When topic_id is set, scopes extraction to that thread only.
+    Thread view uses div[role='group'] for message boundaries; main
+    conversation uses c-wiz[data-topic-id].
 
     Returns the accumulated list of messages sorted chronologically.
     """
@@ -310,25 +347,37 @@ def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion, topic_id=""):
     expand_count = 0
     collected = {}
     tid_js = json.dumps(topic_id)
-    msg_sel = f'{SEL_MSG}[data-topic-id="{topic_id}"]' if topic_id else SEL_MSG
+    is_thread = bool(topic_id)
 
     def _snapshot():
         for msg in extract_messages(page, cutoff_ms, topic_id):
-            key = f"{msg['epoch_ms']}_{msg['sender']}"
+            key = msg.get("data_id") or f"{msg['epoch_ms']}_{msg['sender']}_{hash(msg['body'][:80])}"
             if key not in collected:
                 collected[key] = msg
 
     _snapshot()
 
     while True:
-        anchor = page.evaluate("""(s) => {
-            const m = document.querySelectorAll(s);
-            if (!m.length) return null;
-            return {
-                ts: parseInt(m[0].getAttribute("data-local-sort-time-msec") || "0", 10),
-                tid: m[0].getAttribute("data-topic-id") || "",
-            };
-        }""", msg_sel)
+        if is_thread:
+            anchor = page.evaluate(f"""() => {{
+                const sel = 'c-wiz[data-topic-id="{topic_id}"][data-is-detailed-thread-view="true"]';
+                const c = document.querySelector(sel);
+                if (!c) return null;
+                const grps = c.querySelectorAll("div[role='group']");
+                if (!grps.length) return null;
+                const absEl = grps[0].querySelector("span[data-absolute-timestamp]");
+                const ts = absEl ? parseInt(absEl.getAttribute("data-absolute-timestamp") || "0", 10) : 0;
+                return {{ts: ts, grpCount: grps.length}};
+            }}""")
+        else:
+            anchor = page.evaluate("""(s) => {
+                const m = document.querySelectorAll(s);
+                if (!m.length) return null;
+                return {
+                    ts: parseInt(m[0].getAttribute("data-local-sort-time-msec") || "0", 10),
+                    tid: m[0].getAttribute("data-topic-id") || "",
+                };
+            }""", SEL_MSG)
 
         if not anchor:
             break
@@ -340,19 +389,25 @@ def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion, topic_id=""):
         if expand_count < max_expansion:
             bar = _find_one_expandable(page, topic_id)
             if bar:
-                before = page.evaluate(
-                    "(s) => document.querySelectorAll(s).length", msg_sel
-                )
+                if is_thread:
+                    before = anchor.get("grpCount", 0)
+                else:
+                    before = page.evaluate(
+                        "(s) => document.querySelectorAll(s).length", SEL_MSG
+                    )
                 try:
                     page.mouse.click(bar["x"], bar["y"])
                     expand_count += 1
                 except Exception:
                     pass
 
-                _wait_for_dom_change(page, before, msg_sel)
-
-                if anchor["tid"]:
-                    _scroll_to_anchor(page, anchor["tid"])
+                if is_thread:
+                    sel_grp = f'c-wiz[data-topic-id="{topic_id}"][data-is-detailed-thread-view="true"] div[role="group"]'
+                    _wait_for_dom_change(page, before, sel_grp)
+                else:
+                    _wait_for_dom_change(page, before, SEL_MSG)
+                    if anchor.get("tid"):
+                        _scroll_to_anchor(page, anchor["tid"])
                 _snapshot()
                 continue
 
@@ -455,132 +510,105 @@ def _find_one_expandable(page, topic_id=""):
 def extract_messages(page, cutoff_ms, topic_id=""):
     """Extract messages from the right panel within date range.
 
-    When topic_id is set, only extracts from containers matching that topic.
-    Walks all text nodes inside div[role='group']. Captures rich content,
-    link URLs, bot/app sender, and quoted text.
-    """
-    sel = f'{SEL_MSG}[data-topic-id="{topic_id}"]' if topic_id else SEL_MSG
-    return page.evaluate("""({sel, cutoff}) => {
-        const containers = document.querySelectorAll(sel);
-        const out = [];
+    Main conversation: each message is a c-wiz[data-topic-id] container.
+    Thread view: all messages are div[role='group'] inside a single
+    c-wiz[data-topic-id][data-is-detailed-thread-view='true'] container.
 
-        // UI chrome classes: timestamp, sender name, quote attribution.
+    Detects thread view automatically when topic_id is set.
+    """
+    sel = f'c-wiz[data-topic-id="{topic_id}"]' if topic_id else SEL_MSG
+    return page.evaluate("""({sel, cutoff, isThread}) => {
         const NOISE_CLS = [
             "FvYVyf", "njhDLd", "cPjwNc", "GOoeGd", "Lphf0c",
             "nzVtF", "ZTmjQb", "w692Zc", "TmhmK",
             "ne2Ple-oshW8e-V67aGc",
         ];
 
-        for (const msg of containers) {
-            const ms = parseInt(
-                msg.getAttribute("data-local-sort-time-msec") || "0", 10
-            );
-            if (cutoff > 0 && ms < cutoff) continue;
-
-            let sender = "";
-            const se = msg.querySelector("span[data-member-id][data-name]");
-            if (se) sender = se.getAttribute("data-name");
-            if (!sender) {
-                const ns = msg.querySelector("span.nzVtF");
-                if (ns) sender = ns.textContent.trim();
-            }
-
-            let displayTime = "";
-            const te = msg.querySelector("span.FvYVyf");
-            if (te) displayTime = te.textContent.trim();
-
-            const grp = msg.querySelector("div[role='group']");
+        function extractBody(grp) {
             const body = [];
             const quoted = [];
-
-            if (grp) {
-                const w = document.createTreeWalker(
-                    grp, NodeFilter.SHOW_TEXT, null, false
-                );
-                while (w.nextNode()) {
-                    const t = w.currentNode.textContent.trim();
-                    if (!t) continue;
-                    const p = w.currentNode.parentElement;
-                    if (!p) continue;
-
-                    const cls = p.getAttribute("class") || "";
-                    const role = p.getAttribute("role") || "";
-
-                    // Structural filter: skip non-content elements by role
-                    if (role === "tooltip" || role === "presentation") continue;
-
-                    // Structural filter: skip text inside buttons/clickable
-                    // elements (reactions, actions, thread indicators).
-                    // These are captured separately in the button loop below.
-                    if (p.closest("button, [role='button']")) continue;
-
-                    // Structural filter: skip text inside reaction lists
-                    const rList = p.closest("[role='list']");
-                    if (rList && /reaction/i.test(
-                        rList.getAttribute("aria-label") || "")) continue;
-
-                    // Skip known UI chrome classes (timestamps, sender names)
-                    let skip = false;
-                    for (const nc of NOISE_CLS) {
-                        if (cls.includes(nc)) { skip = true; break; }
-                    }
-                    if (skip) continue;
-
-                    // Skip accessibility hints
-                    if (t.startsWith("press L to")) continue;
-
-                    cls.includes("J87oZd") ? quoted.push(t) : body.push(t);
-                }
-
-                // Capture meaningful button text (e.g. "Join video meeting")
-                // but skip action/UI buttons by aria-label
-                for (const btn of grp.querySelectorAll("button, [role='button']")) {
-                    const label = (btn.getAttribute("aria-label") || "").toLowerCase();
-                    if (label.includes("reaction") || label.includes("reply") ||
-                        label.includes("resolve") || label.includes("collapsed") ||
-                        label.includes("show more") || label.includes("see more")) continue;
-
-                    const t = btn.textContent.trim();
-                    if (t && t.length > 2 && t.length < 80 && !body.includes(t)) {
-                        body.push(t);
-                    }
-                }
+            const w = document.createTreeWalker(grp, NodeFilter.SHOW_TEXT, null, false);
+            while (w.nextNode()) {
+                const t = w.currentNode.textContent.trim();
+                if (!t) continue;
+                const p = w.currentNode.parentElement;
+                if (!p) continue;
+                const cls = p.getAttribute("class") || "";
+                const role = p.getAttribute("role") || "";
+                if (role === "tooltip" || role === "presentation") continue;
+                if (p.closest("button, [role='button']")) continue;
+                const rList = p.closest("[role='list']");
+                if (rList && /reaction/i.test(rList.getAttribute("aria-label") || "")) continue;
+                let skip = false;
+                for (const nc of NOISE_CLS) { if (cls.includes(nc)) { skip = true; break; } }
+                if (skip) continue;
+                if (t.startsWith("press L to")) continue;
+                cls.includes("J87oZd") ? quoted.push(t) : body.push(t);
             }
-
+            for (const btn of grp.querySelectorAll("button, [role='button']")) {
+                const label = (btn.getAttribute("aria-label") || "").toLowerCase();
+                if (label.includes("reaction") || label.includes("reply") ||
+                    label.includes("resolve") || label.includes("collapsed") ||
+                    label.includes("show more") || label.includes("see more")) continue;
+                const t = btn.textContent.trim();
+                if (t && t.length > 2 && t.length < 80 && !body.includes(t)) body.push(t);
+            }
             let text = body.join("\\n").trim();
             if (quoted.length) text += "\\n[quoted] " + quoted.join("\\n");
-
-            if (grp) {
-                const urls = [];
-                for (const a of grp.querySelectorAll("a[href]")) {
-                    const h = a.getAttribute("href") || "";
-                    if (h && !h.startsWith("mailto:") &&
-                        !h.startsWith("javascript:") && !text.includes(h)) {
-                        urls.push(h);
-                    }
-                }
-                if (urls.length) {
-                    text += "\\n[links] " + [...new Set(urls)].join(" ");
-                }
+            const urls = [];
+            for (const a of grp.querySelectorAll("a[href]")) {
+                const h = a.getAttribute("href") || "";
+                if (h && !h.startsWith("mailto:") && !h.startsWith("javascript:") && !text.includes(h))
+                    urls.push(h);
             }
-
-            if (text.length > 5000) {
-                text = text.substring(0, 5000) + "... [truncated]";
-            }
-            text = text.replace(/\\n{3,}/g, "\\n\\n");
-
-            if (!text && !sender) continue;
-
-            out.push({
-                sender: sender || "Unknown",
-                timestamp: displayTime,
-                epoch_ms: ms,
-                body: text,
-            });
+            if (urls.length) text += "\\n[links] " + [...new Set(urls)].join(" ");
+            if (text.length > 5000) text = text.substring(0, 5000) + "... [truncated]";
+            return text.replace(/\\n{3,}/g, "\\n\\n");
         }
 
+        const out = [];
+
+        if (isThread) {
+            // Thread view: iterate div[role='group'] inside the thread container
+            const containers = document.querySelectorAll(sel);
+            for (const c of containers) {
+                if (c.getAttribute("data-is-detailed-thread-view") !== "true") continue;
+                for (const grp of c.querySelectorAll("div[role='group']")) {
+                    const dataId = grp.getAttribute("data-id") || "";
+                    const absEl = grp.querySelector("span[data-absolute-timestamp]");
+                    const ms = absEl ? parseInt(absEl.getAttribute("data-absolute-timestamp") || "0", 10) : 0;
+                    if (cutoff > 0 && ms > 0 && ms < cutoff) continue;
+                    let sender = "";
+                    const se = grp.querySelector("span[data-member-id][data-name]");
+                    if (se) sender = se.getAttribute("data-name");
+                    if (!sender) { const ns = grp.querySelector("span.nzVtF"); if (ns) sender = ns.textContent.trim(); }
+                    const te = grp.querySelector("span.FvYVyf");
+                    const displayTime = te ? te.textContent.trim() : "";
+                    const text = extractBody(grp);
+                    if (!text && !sender) continue;
+                    out.push({ data_id: dataId, sender: sender || "Unknown", timestamp: displayTime, epoch_ms: ms, body: text });
+                }
+            }
+        } else {
+            // Main conversation: each c-wiz[data-topic-id] = one message
+            for (const msg of document.querySelectorAll(sel)) {
+                const dataId = msg.getAttribute("data-topic-id") || "";
+                const ms = parseInt(msg.getAttribute("data-local-sort-time-msec") || "0", 10);
+                if (cutoff > 0 && ms < cutoff) continue;
+                let sender = "";
+                const se = msg.querySelector("span[data-member-id][data-name]");
+                if (se) sender = se.getAttribute("data-name");
+                if (!sender) { const ns = msg.querySelector("span.nzVtF"); if (ns) sender = ns.textContent.trim(); }
+                const te = msg.querySelector("span.FvYVyf");
+                const displayTime = te ? te.textContent.trim() : "";
+                const grp = msg.querySelector("div[role='group']");
+                const text = grp ? extractBody(grp) : "";
+                if (!text && !sender) continue;
+                out.push({ data_id: dataId, sender: sender || "Unknown", timestamp: displayTime, epoch_ms: ms, body: text });
+            }
+        }
         return out;
-    }""", {"sel": sel, "cutoff": cutoff_ms})
+    }""", {"sel": sel, "cutoff": cutoff_ms, "isThread": bool(topic_id)})
 
 
 # --- Debug ---
@@ -717,7 +745,7 @@ def main():
             )
             eprint(f"  -> {len(messages)} message(s) within {args.days} day(s)")
 
-            if args.focus_title and messages:
+            if messages:
                 eprint(f"\n  --- Collected messages for \"{name}\" ---")
                 for idx, m in enumerate(messages, 1):
                     eprint(f"  [{idx}] {m['timestamp']} | {m['sender']}: "
@@ -725,11 +753,12 @@ def main():
                 eprint(f"  --- End ({len(messages)} total) ---\n")
 
             if messages:
+                clean = [{k: v for k, v in m.items() if k != "data_id"} for m in messages]
                 threads.append({
                     "name": name,
                     "url": f"https://chat.google.com/{gid}",
-                    "message_count": len(messages),
-                    "messages": messages,
+                    "message_count": len(clean),
+                    "messages": clean,
                 })
             else:
                 eprint("  SKIP: no messages in date range")
