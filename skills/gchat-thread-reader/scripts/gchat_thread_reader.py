@@ -27,6 +27,27 @@ SEL_FEED = 'span[role="listitem"][data-group-id][data-is-unread]'
 SEL_MSG = "c-wiz[data-topic-id]"
 SEL_USER_MSG = 'c-wiz[data-topic-id][data-is-user-topic="true"]'
 
+# Reusable JS to find the right panel scroll container.
+# GChat separates data layer (c-wiz[data-topic-id] with 0x0 dimensions) from
+# the visible rendering layer. Walking up from messages hits the hidden layer.
+# Instead, find the largest overflow-y:auto/scroll container in the right half.
+FIND_PANEL_JS = """
+function findPanel() {
+    const mid = window.innerWidth / 3;
+    let best = null, bestArea = 0;
+    for (const el of document.getElementsByTagName("div")) {
+        const s = getComputedStyle(el);
+        if (s.overflowY !== "auto" && s.overflowY !== "scroll") continue;
+        if (el.clientHeight < 100) continue;
+        const r = el.getBoundingClientRect();
+        if (r.left < mid || r.width < 100) continue;
+        const a = r.width * r.height;
+        if (a > bestArea) { bestArea = a; best = el; }
+    }
+    return best;
+}
+"""
+
 
 def eprint(*a, **kw):
     print(*a, file=sys.stderr, **kw)
@@ -187,47 +208,69 @@ def wait_for_messages(page, old_ids, timeout_s=20):
         return 0
 
 
-def scroll_right_panel(page, cutoff_ms, max_scrolls):
-    """Scroll right panel to bottom first, then up until cutoff date is reached."""
-    page.evaluate("""() => {
-        const m = document.querySelector("c-wiz[data-topic-id]");
-        if (!m) return;
-        let el = m.parentElement;
-        while (el && el !== document.body) {
-            if (el.scrollHeight > el.clientHeight + 50 && el.clientHeight > 100) {
-                el.scrollTop = el.scrollHeight; return;
-            }
-            el = el.parentElement;
-        }
-    }""")
-    time.sleep(1.5)
+def scroll_to_bottom(page):
+    """Scroll right panel to the very bottom, handling 'Jump to bottom' button.
 
+    GChat may jump to first unread message (far back in long threads).
+    Retries scroll + 'Jump to bottom' clicks until truly at bottom.
+    """
+    for attempt in range(8):
+        jumped = page.evaluate("""() => {
+            const btn = document.querySelector(
+                "button[aria-label='Jump to bottom'], div[aria-label='Jump to bottom']"
+            );
+            if (btn && btn.getBoundingClientRect().height > 0) {
+                btn.click(); return true;
+            }
+            return false;
+        }""")
+
+        if jumped:
+            time.sleep(2)
+            continue
+
+        at_bottom = page.evaluate(f"""() => {{
+            {FIND_PANEL_JS}
+            const panel = findPanel();
+            if (!panel) return true;
+            if (panel.scrollHeight <= panel.clientHeight + 10) return true;
+            const wasBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 20;
+            if (!wasBottom) {{
+                panel.scrollTop = panel.scrollHeight;
+                return false;
+            }}
+            return true;
+        }}""")
+
+        if at_bottom:
+            break
+        time.sleep(1.5)
+
+    time.sleep(1)
+
+
+def scroll_up(page, cutoff_ms, max_scrolls):
+    """Scroll right panel up until oldest message reaches cutoff date."""
     for i in range(max_scrolls):
-        oldest = page.evaluate("""() => {
-            const m = document.querySelectorAll("c-wiz[data-topic-id]");
+        oldest = page.evaluate(f"""() => {{
+            const m = document.querySelectorAll("{SEL_MSG}");
             return m.length
                 ? parseInt(m[0].getAttribute("data-local-sort-time-msec") || "0", 10)
                 : 0;
-        }""")
+        }}""")
 
         if oldest > 0 and oldest <= cutoff_ms:
             eprint(f"  Reached cutoff after {i} scroll(s)")
             return
 
-        moved = page.evaluate("""() => {
-            const m = document.querySelector("c-wiz[data-topic-id]");
-            if (!m) return false;
-            let el = m.parentElement;
-            while (el && el !== document.body) {
-                if (el.scrollHeight > el.clientHeight + 50 && el.clientHeight > 100) {
-                    const b = el.scrollTop;
-                    el.scrollTop = Math.max(0, el.scrollTop - 800);
-                    return el.scrollTop !== b;
-                }
-                el = el.parentElement;
-            }
-            return false;
-        }""")
+        moved = page.evaluate(f"""() => {{
+            {FIND_PANEL_JS}
+            const panel = findPanel();
+            if (!panel) return false;
+            const before = panel.scrollTop;
+            panel.scrollTop = Math.max(0, panel.scrollTop - 800);
+            return panel.scrollTop !== before;
+        }}""")
 
         if not moved:
             eprint(f"  Reached top after {i} scroll(s)")
@@ -239,35 +282,86 @@ def scroll_right_panel(page, cutoff_ms, max_scrolls):
 
 
 def expand_collapsed_content(page):
-    """Expand 'Show more'/'See more' buttons in the right panel.
+    """Expand collapsed messages and 'Show more' buttons in the right panel.
 
-    Scoped to the scroll parent of message containers.
-    Does NOT click 'N replies' — those are thread navigators that open a
-    separate thread view, not inline expanders.
+    Targets:
+    1. Collapsed message bars (aria-label='N collapsed message(s)') — these
+       hide older replies in thread views and expand in-place when clicked.
+    2. 'Show more'/'See more' buttons — truncated message content.
+
+    Does NOT click 'N replies' headers — those are thread navigators.
+
+    Uses Playwright mouse.click() (not JS .click()) because GChat's framework
+    event handlers do not respond to synthetic JS click events.
     """
-    n = page.evaluate("""() => {
-        const m = document.querySelector("c-wiz[data-topic-id]");
-        if (!m) return 0;
-        let panel = m.parentElement;
-        while (panel && panel !== document.body) {
-            if (panel.scrollHeight > panel.clientHeight + 50 && panel.clientHeight > 100) break;
-            panel = panel.parentElement;
-        }
-        if (!panel || panel === document.body) return 0;
+    before_count = page.evaluate(
+        f'() => document.querySelectorAll("{SEL_MSG}").length'
+    )
 
-        let count = 0;
-        for (const btn of panel.querySelectorAll("button, [role='button'], span[role='button']")) {
-            const t = btn.textContent.trim().toLowerCase();
-            if (t === "show more" || t === "see more") {
-                try { btn.click(); count++; } catch(e) {}
-            }
-        }
-        return count;
-    }""")
+    # 1. Find collapsed message bars and get their click coordinates
+    bars = page.evaluate(f"""() => {{
+        {FIND_PANEL_JS}
+        const panel = findPanel();
+        const results = [];
 
-    if n:
-        eprint(f"  Expanded {n} section(s)")
-        time.sleep(0.5)
+        // Collapsed message bars
+        const collapseBars = document.querySelectorAll(
+            "[role='button'][aria-label*='collapsed message']"
+        );
+        for (const bar of collapseBars) {{
+            const rect = bar.getBoundingClientRect();
+            if (rect.width < 20 || rect.height < 5) continue;
+            bar.scrollIntoView({{block: "center", behavior: "instant"}});
+            const r2 = bar.getBoundingClientRect();
+            results.push({{
+                x: Math.round(r2.left + r2.width / 2),
+                y: Math.round(r2.top + r2.height / 2),
+                label: bar.getAttribute("aria-label") || "",
+                type: "collapse",
+            }});
+        }}
+
+        // 'Show more' / 'See more' buttons
+        if (panel) {{
+            for (const btn of panel.querySelectorAll(
+                "button, [role='button'], span[role='button']"
+            )) {{
+                const t = btn.textContent.trim().toLowerCase();
+                if (t === "show more" || t === "see more") {{
+                    btn.scrollIntoView({{block: "center", behavior: "instant"}});
+                    const r = btn.getBoundingClientRect();
+                    results.push({{
+                        x: Math.round(r.left + r.width / 2),
+                        y: Math.round(r.top + r.height / 2),
+                        label: t,
+                        type: "showmore",
+                    }});
+                }}
+            }}
+        }}
+
+        return results;
+    }}""")
+
+    if not bars:
+        return
+
+    clicked = 0
+    for bar in bars:
+        try:
+            page.mouse.click(bar["x"], bar["y"])
+            clicked += 1
+            time.sleep(2)
+        except Exception:
+            pass
+
+    if clicked:
+        time.sleep(1)
+        after_count = page.evaluate(
+            f'() => document.querySelectorAll("{SEL_MSG}").length'
+        )
+        new_msgs = after_count - before_count
+        eprint(f"  Expanded {clicked} bar(s) ({new_msgs} new messages)")
 
 
 # --- Message Extraction ---
@@ -293,6 +387,7 @@ def extract_messages(page, cutoff_ms):
         const NOISE_TXT = [
             "End Quote", "Quoted", "Sent by",
             "Add reaction", "Show more", "See more",
+            "Last reply",
         ];
 
         for (const msg of containers) {
@@ -344,9 +439,11 @@ def extract_messages(page, cutoff_ms):
                     if (skip) continue;
 
                     if (/^\\d{1,4}$/.test(t)) {
-                        const anc = parent.closest("[aria-label]");
+                        const anc = p.closest("[aria-label]");
                         if (anc && /reaction/i.test(anc.getAttribute("aria-label") || "")) continue;
                     }
+
+                    if (/^\\d+\\s+repl(y|ies)$/i.test(t)) continue;
 
                     cls.includes("J87oZd") ? quoted.push(t) : body.push(t);
                 }
@@ -512,8 +609,10 @@ def main():
 
             eprint(f"  {msg_count} message container(s)")
 
+            scroll_to_bottom(page)
+
             if args.max_scroll > 0:
-                scroll_right_panel(page, cutoff_ms, args.max_scroll)
+                scroll_up(page, cutoff_ms, args.max_scroll)
 
             expand_collapsed_content(page)
 
