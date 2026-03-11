@@ -1,7 +1,7 @@
 ---
 name: gchat-thread-reader
 description: Read Google Chat conversations using a remote Chrome DevTools headless instance. Use when the user asks to check chat messages, read recent Google Chat threads, get chat conversations, or review Google Chat activity. Connects to a running Chrome instance via CDP and extracts who said what and when from each conversation. Supports DMs and group chats.
-version: 1.3.0
+version: 1.4.0
 author: Michael
 tags: [gchat, google-chat, chrome, cdp, devtools, conversations, messages, chat]
 ---
@@ -72,6 +72,7 @@ python /a0/usr/skills/gchat-thread-reader/scripts/gchat_thread_reader.py --debug
 | `--max-scan` | No | 100 | Max total Home feed items to scan. Safety cap |
 | `--max-scroll` | No | 20 | Max scroll-up iterations per thread to load older messages |
 | `--max-expansion` | No | 5 | Max expansion rounds for collapsed message bars (handles lazy loading) |
+| `--focus-title` | No | *(none)* | Substring filter — only process conversations whose title contains this string (case-insensitive) |
 | `--format` | No | `json` | Output format: `json` or `yaml` |
 | `--debug-dom` | No | false | Dump Home feed DOM structure to stderr for selector debugging |
 
@@ -101,7 +102,7 @@ python /a0/usr/skills/gchat-thread-reader/scripts/gchat_thread_reader.py --debug
 |-------|-------------|
 | `sender` | Sender name (person or "App Name, App" for bots) |
 | `timestamp` | Display timestamp as shown in GChat UI |
-| `epoch_ms` | Epoch milliseconds from `data-local-sort-time-msec` |
+| `epoch_ms` | Epoch milliseconds from `data-absolute-timestamp` (threads) or `data-local-sort-time-msec` (main conversations) |
 | `body` | Full text body including rich content, URLs, monitor queries. Quoted text prefixed with `[quoted]`. Truncated at 5KB. |
 
 ## Notes

@@ -295,51 +295,13 @@ def scroll_to_bottom(page, topic_id=""):
     time.sleep(1)
 
 
-PARSE_TIME_JS = """
-function parseDisplayTime(timeStr) {
-    if (!timeStr) return 0;
-    const now = new Date();
-    let d;
-    const abs = timeStr.match(/^(\\w+\\s+\\d+),\\s+(.+)$/);
-    if (abs) {
-        d = new Date(abs[1] + ", " + now.getFullYear() + " " + abs[2]);
-        if (!isNaN(d)) { if (d > now) d.setFullYear(d.getFullYear() - 1); return d.getTime(); }
-    }
-    if (/^yesterday/i.test(timeStr)) {
-        const t = timeStr.replace(/^yesterday\\s*/i, "");
-        const y = new Date(now); y.setDate(y.getDate() - 1);
-        d = new Date(y.toDateString() + " " + t);
-        if (!isNaN(d)) return d.getTime();
-    }
-    const dw = timeStr.match(/^(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\\w*\\s+(.+)$/i);
-    if (dw) {
-        const dayAbbr = dw[1].substring(0, 3);
-        for (let i = 1; i <= 7; i++) {
-            const dd = new Date(now); dd.setDate(dd.getDate() - i);
-            if (dd.toDateString().startsWith(dayAbbr)) {
-                d = new Date(dd.toDateString() + " " + dw[2]);
-                if (!isNaN(d)) return d.getTime();
-            }
-        }
-    }
-    d = new Date(now.toDateString() + " " + timeStr);
-    if (!isNaN(d)) return d.getTime();
-    d = new Date(timeStr);
-    if (!isNaN(d)) return d.getTime();
-    return 0;
-}
-"""
-
-
 def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion, topic_id=""):
     """Interleaved scroll-up + expansion with progressive message collection.
 
     GChat uses virtual scrolling — only messages near the viewport exist in the
     DOM. Collecting once at the end would miss messages we scrolled past. So we
-    collect at every scroll/expand step and merge by (epoch_ms, sender) key.
-
-    Thread view uses div[role='group'] for message boundaries; main
-    conversation uses c-wiz[data-topic-id].
+    collect at every scroll/expand step and dedup by data-id (threads) or
+    data-topic-id (main conversation).
 
     Returns the accumulated list of messages sorted chronologically.
     """
@@ -708,7 +670,7 @@ def main():
                 skipped += 1
                 continue
 
-            old_ids = get_topic_ids(page)
+            old_ids = get_topic_ids(page) if not tid else set()
 
             if not click_feed_item(page, gid, dts):
                 scroll_feed_down(page)
@@ -751,8 +713,6 @@ def main():
                     eprint(f"  [{idx}] {m['timestamp']} | {m['sender']}: "
                            f"{m['body'][:120]}")
                 eprint(f"  --- End ({len(messages)} total) ---\n")
-
-            if messages:
                 clean = [{k: v for k, v in m.items() if k != "data_id"} for m in messages]
                 threads.append({
                     "name": name,
