@@ -567,6 +567,7 @@ def main():
 
         threads = []
         skipped = 0
+        attempted = 0
         limit = min(len(feed), args.max_scan)
 
         eprint(f"\nProcessing (target: {args.max_threads}, "
@@ -579,8 +580,9 @@ def main():
             gid = feed[i]["group_id"]
             dts = feed[i]["display_ts"]
             name = feed[i]["name"]
+            attempted += 1
 
-            eprint(f"[{len(threads) + 1}/{args.max_threads}] {name[:55]}...")
+            eprint(f"[{attempted}/{limit}] {name[:55]}...")
 
             old_ids = get_topic_ids(page)
 
@@ -635,7 +637,8 @@ def main():
                 eprint("  Returning to Home...")
                 go_home(page)
 
-        eprint(f"\nDone: {len(threads)} conversation(s), {skipped} skipped")
+        eprint(f"\nDone: {len(threads)} conversation(s) from {attempted} "
+               f"attempted, {skipped} skipped")
 
         if args.format == "yaml":
             import yaml
