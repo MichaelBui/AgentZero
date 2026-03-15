@@ -325,14 +325,31 @@ def get_thread_subject(page) -> str:
     """) or ""
 
 
-def go_back_to_search(page):
-    page.go_back(wait_until="domcontentloaded", timeout=15000)
+def navigate_to_thread(page, thread_id: str) -> bool:
+    """Navigate directly to a Gmail thread by its legacy thread ID."""
+    url = f"{GMAIL_BASE}/mail/u/0/#all/{thread_id}"
+    page.goto(url, wait_until="domcontentloaded", timeout=20000)
     time.sleep(2)
+    return wait_for_thread_view(page)
+
+
+def navigate_to_page(page, days: int, page_num: int) -> bool:
+    """Navigate to a specific page of Gmail search results using /pN URL parameter.
+    Page 1 has no suffix; page 2+ uses /pN. Returns True if threads loaded."""
+    if page_num <= 1:
+        search_url = f"{GMAIL_BASE}/mail/u/0/#search/newer_than%3A{days}d"
+    else:
+        search_url = f"{GMAIL_BASE}/mail/u/0/#search/newer_than%3A{days}d/p{page_num}"
+    eprint(f"Navigating to Gmail search (page {page_num}, last {days} days)...")
+    page.goto(search_url, wait_until="domcontentloaded", timeout=30000)
+    time.sleep(5)
     try:
-        page.wait_for_selector('div[role="main"] tr[jscontroller]', timeout=10000)
+        page.wait_for_selector('div[role="main"] tr[jscontroller]', timeout=20000)
+        eprint("Gmail search results loaded.")
+        return True
     except PwTimeout:
-        eprint("  WARN: Grid not found after back, waiting more...")
-        time.sleep(3)
+        eprint(f"  WARN: Page {page_num} did not load threads within timeout")
+        return False
 
 
 def match_priority(labels: list[str], priority_labels: list[str]) -> str | None:
@@ -460,16 +477,18 @@ def main():
     )
     parser.add_argument("--cdp-url", default=DEFAULT_CDP,
                         help=f"Chrome DevTools endpoint (default: {DEFAULT_CDP})")
-    parser.add_argument("--days", type=int, default=3,
-                        help="Days to look back (default: 3)")
-    parser.add_argument("--max-threads", type=int, default=20,
-                        help="Max threads to read (default: 20)")
-    parser.add_argument("--max-scan", type=int, default=100,
-                        help="Max total threads to scan (default: 100)")
+    parser.add_argument("--days", type=int, default=7,
+                        help="Days to look back (default: 7)")
+    parser.add_argument("--max-threads", type=int, default=100,
+                        help="Max threads to read (default: 100)")
+    parser.add_argument("--max-scan", type=int, default=200,
+                        help="Max total threads to scan (default: 200)")
     parser.add_argument("--exclude-labels", default=DEFAULT_EXCLUDE,
                         help="JSON array of labels to exclude")
     parser.add_argument("--priority-labels", default=DEFAULT_PRIORITY,
                         help="JSON array of priority labels, highest first")
+    parser.add_argument("--early-stop", type=int, default=5,
+                        help="Stop after N consecutive cached/unchanged threads (default: 5, 0=disabled)")
     parser.add_argument("--force", action="store_true",
                         help="Bypass change detection, re-fetch and re-summarize all")
     args = parser.parse_args()
@@ -490,44 +509,64 @@ def main():
 
     try:
         pw, browser, page = connect_browser(args.cdp_url)
-        navigate_to_search(page, args.days)
 
-        thread_list = get_thread_list(page)
-        eprint(f"Found {len(thread_list)} thread(s) in search results")
-        if not thread_list:
-            eprint("FATAL: 0 threads found - Gmail DOM selectors may need updating.")
-            sys.exit(2)
-
+        # ── Phase 1: Scan listing pages to collect thread metadata ──
         thread_infos = []
-        total_rows = min(len(thread_list), args.max_scan)
-        row_idx = 0
+        threads_to_fetch = []
+        seen_thread_ids = set()
+        scanned = 0
         skipped_excluded = 0
         skipped_unchanged = 0
+        consecutive_cached = 0
+        early_stop_triggered = False
+        page_num = 1
 
-        eprint(f"\nProcessing threads (target: {args.max_threads}, scan limit: {args.max_scan})...")
+        eprint(f"\nPhase 1: Scanning listing (target: {args.max_threads}, "
+               f"scan limit: {args.max_scan}, early-stop: {args.early_stop})...")
 
-        while len(thread_infos) < args.max_threads and row_idx < total_rows:
-            row = thread_list[row_idx]
-            labels = row.get("labels", [])
-            subject = row.get("subject", "(no subject)")
-            thread_id = row.get("legacyThreadId", "")
-            last_msg_id = row.get("legacyLastMsgId", "")
+        while len(thread_infos) < args.max_threads and scanned < args.max_scan:
+            if not navigate_to_page(page, args.days, page_num):
+                if page_num == 1:
+                    eprint("FATAL: 0 threads found - Gmail DOM selectors may need updating.")
+                    sys.exit(2)
+                eprint(f"  Page {page_num}: failed to load, stopping.")
+                break
 
-            should_exclude = any(
-                el.strip() in [l.strip() for l in labels]
-                for el in exclude_labels
-            )
-            if should_exclude:
-                eprint(f"  SKIP [{row_idx+1}] {subject[:50]}... (excluded label)")
-                row_idx += 1
-                skipped_excluded += 1
-                continue
+            thread_list = get_thread_list(page)
+            if not thread_list:
+                eprint(f"  Page {page_num}: no threads found, stopping.")
+                break
 
-            priority = match_priority(labels, priority_labels)
+            eprint(f"  Page {page_num}: {len(thread_list)} thread(s)")
+            new_unique_on_page = 0
 
-            if not args.force and thread_id and not db.thread_needs_fetch(thread_id, last_msg_id):
-                eprint(f"  SKIP [{row_idx+1}] {subject[:50]}... (unchanged, last_msg_id match)")
-                thread_infos.append({
+            for row in thread_list:
+                if len(thread_infos) >= args.max_threads or scanned >= args.max_scan:
+                    break
+
+                thread_id = row.get("legacyThreadId", "")
+                if not thread_id or thread_id in seen_thread_ids:
+                    continue
+                seen_thread_ids.add(thread_id)
+                scanned += 1
+                new_unique_on_page += 1
+
+                labels = row.get("labels", [])
+                subject = row.get("subject", "(no subject)")
+                last_msg_id = row.get("legacyLastMsgId", "")
+
+                should_exclude = any(
+                    el.strip() in [l.strip() for l in labels]
+                    for el in exclude_labels
+                )
+                if should_exclude:
+                    eprint(f"  SKIP [{scanned}] {subject[:50]}... (excluded label)")
+                    skipped_excluded += 1
+                    continue
+
+                priority = match_priority(labels, priority_labels)
+
+                info = {
                     "thread_id": thread_id,
                     "subject": subject,
                     "labels": labels,
@@ -536,64 +575,81 @@ def main():
                     "date": row.get("date", ""),
                     "last_msg_id": last_msg_id,
                     "fetched": False,
-                })
-                row_idx += 1
-                skipped_unchanged += 1
-                continue
+                }
 
-            current_count = len(thread_infos) + 1
-            priority_tag = f" [{priority}]" if priority else ""
-            eprint(f"[{current_count}/{args.max_threads}] {subject[:55]}...{priority_tag}")
+                if not args.force and thread_id and not db.thread_needs_fetch(thread_id, last_msg_id):
+                    eprint(f"  SKIP [{scanned}] {subject[:50]}... (unchanged)")
+                    thread_infos.append(info)
+                    skipped_unchanged += 1
+                    consecutive_cached += 1
+                    if args.early_stop > 0 and consecutive_cached >= args.early_stop:
+                        eprint(f"\n  Early stop: {consecutive_cached} consecutive cached threads.")
+                        early_stop_triggered = True
+                        break
+                    continue
 
-            click_thread_row(page, row["rowIndex"])
-            if not wait_for_thread_view(page):
-                eprint(f"  Retrying thread click...")
-                go_back_to_search(page)
-                time.sleep(1)
-                updated = get_thread_list(page)
-                if row_idx < len(updated):
-                    thread_list = updated
-                    total_rows = min(len(updated), args.max_scan)
-                    click_thread_row(page, updated[row_idx]["rowIndex"])
-                    if not wait_for_thread_view(page):
-                        eprint(f"  WARN: Thread view did not load after retry, skipping...")
-                        go_back_to_search(page)
-                        row_idx += 1
+                consecutive_cached = 0
+                thread_infos.append(info)
+                threads_to_fetch.append(info)
+
+            if early_stop_triggered:
+                break
+            if len(thread_infos) >= args.max_threads or scanned >= args.max_scan:
+                break
+            if new_unique_on_page == 0:
+                eprint(f"  Page {page_num}: all threads already seen, stopping.")
+                break
+
+            page_num += 1
+
+        stop_reason = ""
+        if early_stop_triggered:
+            stop_reason = ", early-stopped"
+        elif len(thread_infos) >= args.max_threads:
+            stop_reason = ", reached max-threads"
+        elif scanned >= args.max_scan:
+            stop_reason = ", reached scan limit"
+
+        eprint(f"\nPhase 1 complete: {len(thread_infos)} threads "
+               f"(excluded: {skipped_excluded}, unchanged: {skipped_unchanged}, "
+               f"to-fetch: {len(threads_to_fetch)}{stop_reason})")
+
+        # ── Phase 2: Fetch thread details by direct URL navigation ──
+        if threads_to_fetch:
+            eprint(f"\nPhase 2: Fetching {len(threads_to_fetch)} thread(s) by direct URL...")
+
+            for idx, info in enumerate(threads_to_fetch, 1):
+                thread_id = info["thread_id"]
+                subject = info["subject"]
+                priority = info.get("priority")
+                labels = info.get("labels", [])
+                priority_tag = f" [{priority}]" if priority else ""
+                eprint(f"[{idx}/{len(threads_to_fetch)}] {subject[:55]}...{priority_tag}")
+
+                if not navigate_to_thread(page, thread_id):
+                    eprint(f"  WARN: Could not load thread {thread_id}, retrying...")
+                    time.sleep(2)
+                    if not navigate_to_thread(page, thread_id):
+                        eprint(f"  WARN: Thread {thread_id} failed to load after retry, skipping.")
                         continue
 
-            thread_subject = get_thread_subject(page) or subject
-            messages = extract_thread_messages(page)
-            eprint(f"  -> {len(messages)} message(s)")
+                thread_subject = get_thread_subject(page) or subject
+                messages = extract_thread_messages(page)
+                eprint(f"  -> {len(messages)} message(s)")
 
-            new_count = cache_thread_messages(db, thread_id, thread_subject, messages, labels, priority)
-            if new_count > 0:
-                eprint(f"  -> {new_count} new message(s) cached")
-            else:
-                eprint(f"  -> all messages already cached")
+                new_count = cache_thread_messages(
+                    db, thread_id, thread_subject, messages, labels, priority
+                )
+                if new_count > 0:
+                    eprint(f"  -> {new_count} new message(s) cached")
+                else:
+                    eprint(f"  -> all messages already cached")
 
-            thread_infos.append({
-                "thread_id": thread_id,
-                "subject": thread_subject,
-                "labels": labels,
-                "priority": priority,
-                "senders": row.get("senders", []),
-                "date": row.get("date", ""),
-                "last_msg_id": last_msg_id,
-                "fetched": True,
-            })
+                info["subject"] = thread_subject
+                info["fetched"] = True
 
-            go_back_to_search(page)
-            row_idx += 1
-            if len(thread_infos) < args.max_threads and row_idx < total_rows:
-                updated = get_thread_list(page)
-                if updated:
-                    thread_list = updated
-                    total_rows = min(len(updated), args.max_scan)
-
-        eprint(f"\nProcessed: {len(thread_infos)} threads "
-               f"(excluded: {skipped_excluded}, unchanged: {skipped_unchanged})")
-
-        eprint(f"\nSummarizing and streaming output for {len(thread_infos)} threads...")
+        # ── Phase 3: Summarize and stream output ──
+        eprint(f"\nPhase 3: Summarizing and streaming output for {len(thread_infos)} threads...")
         for info in thread_infos:
             summarize_and_output(db, info)
 

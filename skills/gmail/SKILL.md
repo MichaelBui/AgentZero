@@ -24,14 +24,14 @@ Do NOT use for: sending emails (read-only), calendar events, non-Gmail providers
 
 ## Usage
 
-### Default - read last 3 days, 20 threads
+### Default - read last 7 days, up to 100 threads
 ```bash
 python /a0/usr/skills/gmail/scripts/gmail_reader.py
 ```
 
-### Read last 7 days, up to 10 threads
+### Custom time window and thread limit
 ```bash
-python /a0/usr/skills/gmail/scripts/gmail_reader.py --days 7 --max-threads 10
+python /a0/usr/skills/gmail/scripts/gmail_reader.py --days 14 --max-threads 50
 ```
 
 ### Force re-fetch and re-summarize everything
@@ -39,18 +39,19 @@ python /a0/usr/skills/gmail/scripts/gmail_reader.py --days 7 --max-threads 10
 python /a0/usr/skills/gmail/scripts/gmail_reader.py --force
 ```
 
-### Custom Chrome endpoint
+### Disable early-stop for full scan
 ```bash
-python /a0/usr/skills/gmail/scripts/gmail_reader.py --cdp-url http://192.168.1.11:9223
+python /a0/usr/skills/gmail/scripts/gmail_reader.py --early-stop 0
 ```
 
 ## Arguments
 | Argument | Required | Default | Description |
 |---|---|---|---|
 | `--cdp-url` | No | `http://192.168.1.11:9223` | Chrome DevTools Protocol endpoint |
-| `--days` | No | 3 | Days to look back |
-| `--max-threads` | No | 20 | Max non-excluded threads to read |
-| `--max-scan` | No | 100 | Max total threads to scan (safety cap) |
+| `--days` | No | 7 | Days to look back |
+| `--max-threads` | No | 100 | Max non-excluded threads to process |
+| `--max-scan` | No | 200 | Max total threads to scan across all pages (safety cap) |
+| `--early-stop` | No | 5 | Stop after N consecutive cached threads (0=disabled) |
 | `--exclude-labels` | No | `["❌ ai-exclusion", ...]` | JSON array of labels to skip |
 | `--priority-labels` | No | `["⚠️IMPORTANT", ...]` | JSON array of priority labels |
 | `--force` | No | false | Bypass change detection, re-fetch and re-summarize all |
@@ -75,10 +76,12 @@ Source: gmail | Thread: 19ceb94ec915103d | Labels: Inbox, IMPORTANT | Priority: 
 Progress and diagnostics go to stderr. Use `PYTHONUNBUFFERED=1 python3 -u` for real-time streaming to file.
 
 ## Architecture
+- **Two-phase extraction**: Phase 1 scans listing pages (URL-based pagination via `/pN`), Phase 2 fetches details by direct thread URL navigation
 - Self-contained: all modules (DB, cleaner, summarizer) embedded in `scripts/`
 - SQLite cache at `data/gmail_cache.db` (per-message caching)
 - Change detection via `data-legacy-last-non-draft-message-id` comparison at listing level
 - Email bodies are immutable; only new messages in threads trigger re-caching
+- Early-stop optimization: halts scanning after N consecutive cached threads
 - AI summarization via LiteLLM proxy (configurable via `MAX_SUMMARY_WORDS` env var, default 500)
 - See `_architecture.md` for detailed design with Mermaid diagrams
 

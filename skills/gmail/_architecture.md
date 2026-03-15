@@ -3,31 +3,56 @@
 > Replaces `gmail-thread-reader`. Self-contained with SQLite caching, incremental fetching, and AI summarization.
 > All dependencies (DB, cleaner, summarizer) are embedded in `scripts/`.
 
-## High-Level Flow
+## High-Level Flow (Two-Phase Architecture)
 
 ```mermaid
 flowchart TD
-    A["1/ Connect to Chrome via CDP\nhttp://192.168.1.11:9223"] --> B["2/ Navigate to Gmail Search\nnewer_than:{days}d"]
-    B --> C["3/ Extract Thread Listing\nAll data available without clicking"]
+    A["1/ Connect to Chrome via CDP\nhttp://192.168.1.11:9223"] --> P1
 
-    C --> D["4/ For Each Non-Excluded Thread"]
-    D --> D1{"Listing-Level Change Detection\nCompare data-legacy-last-non-draft-message-id\nvs cached last_message_id"}
-    D1 -->|"Same ID"| SKIP["Skip thread entirely\nNo new messages"]
-    D1 -->|"Different or new"| D2["Click thread row\nWait for thread view"]
+    subgraph P1["Phase 1: Listing Scan"]
+        B["Navigate to Gmail Search\nnewer_than:{days}d/p{page}"] --> C["Extract Thread Listing\nAll data available without clicking"]
+        C --> D["For each non-excluded thread"]
+        D --> D1{"Listing-Level Change Detection\nCompare data-legacy-last-non-draft-message-id\nvs cached last_message_id"}
+        D1 -->|"Same ID"| SKIP["Mark as unchanged\n(will use cached summary)"]
+        D1 -->|"Different or new"| FETCH["Add to fetch queue"]
+        SKIP --> CHK{"Early stop?\nN consecutive cached"}
+        FETCH --> CHK
+        CHK -->|"No + more threads needed"| NP{"More pages?"}
+        NP -->|"Yes"| B
+    end
 
-    D2 --> D3["Expand all messages\nExtract messages with data-legacy-message-id\nExtract from, to, cc, date, body"]
-    D3 --> D4["Deterministic cleanup\nStrip HTML, signatures, quoted replies\nFull content preserved (no truncation)"]
-    D4 --> D5["Cache in SQLite\nupsert_atomic per message"]
-    D5 --> D6["Go back to search"]
+    subgraph P2["Phase 2: Detail Fetch"]
+        F1["For each thread in fetch queue"] --> F2["Navigate directly to\n#all/{thread_id}"]
+        F2 --> F3["Expand all messages\nExtract messages with data-legacy-message-id"]
+        F3 --> F4["Deterministic cleanup\nStrip HTML, signatures, quoted replies"]
+        F4 --> F5["Cache in SQLite\nupsert_atomic per message"]
+    end
 
-    SKIP --> E["5/ Summarize"]
-    D6 --> E
-    E --> E1{"needs_resummarize?\nNew atomic items since\nlast summarization?"}
-    E1 -->|"No"| E2["Use cached summary\nStream output immediately"]
-    E1 -->|"Yes"| E3["Summarize via LLM\nIncremental: existing summary + new items\nMax 500 words (configurable)"]
-    E3 --> E4["Stream output immediately\n## gmail/{thread_id}: {subject}"]
-    E2 --> E4
+    subgraph P3["Phase 3: Summarize & Output"]
+        S1["For each thread (all)"] --> S2{"needs_resummarize?"}
+        S2 -->|"No"| S3["Use cached summary"]
+        S2 -->|"Yes"| S4["Incremental LLM summarization\nExisting summary + new items\nMax 500 words"]
+        S3 --> S5["Stream output immediately\n## gmail/{thread_id}: {subject}"]
+        S4 --> S5
+    end
+
+    P1 --> P2
+    P2 --> P3
 ```
+
+### Why Two Phases?
+
+1. **Phase 1 (Listing Scan)** collects all thread metadata by paginating through search results via URL (`/pN`). No threads are opened - only DOM attributes from listing rows.
+2. **Phase 2 (Detail Fetch)** navigates directly to each thread URL (`#all/{thread_id}`) for content extraction. This avoids back-navigation issues and pagination state corruption.
+3. **Phase 3 (Summarize)** processes all threads (cached + newly fetched) and streams output.
+
+### Pagination
+
+Gmail search results are paginated using URL hash suffix: `#search/newer_than%3A{days}d/p{page_num}`. Page 1 has no suffix; page 2+ uses `/pN`. Each page shows ~100 threads. The script navigates to successive pages until `max-threads` or `max-scan` is reached.
+
+### Early Stop
+
+Configurable via `--early-stop N` (default: 5, 0=disabled). When N consecutive threads are found unchanged in the DB, scanning stops. This significantly speeds up subsequent runs where only recent threads are new.
 
 ## Data Available at Thread Listing (Without Opening Thread)
 
@@ -101,14 +126,14 @@ erDiagram
 
 ```mermaid
 flowchart TD
-    A["Thread in search results\nExtract data-legacy-thread-id\nand data-legacy-last-non-draft-message-id"] --> B{"Thread exists in DB?"}
-    B -->|"No"| C["NEW THREAD\nMust open and cache all messages"]
+    A["Thread in search listing\nExtract data-legacy-thread-id\nand data-legacy-last-non-draft-message-id"] --> B{"Thread exists in DB?"}
+    B -->|"No"| C["NEW THREAD\nAdd to fetch queue"]
     B -->|"Yes"| D{"Compare listing's\ndata-legacy-last-non-draft-message-id\nvs cached last_message_id"}
 
-    D -->|"Same"| E["LISTING-LEVEL SKIP\nNo new non-draft messages\nDo not open thread (~6-7s saved)"]
-    D -->|"Different"| F["New messages exist\nOpen thread to extract"]
+    D -->|"Same"| E["LISTING-LEVEL SKIP\nNo new non-draft messages\nUse cached data in Phase 3"]
+    D -->|"Different"| F["New messages exist\nAdd to fetch queue"]
 
-    C --> G["Open thread via CDP\nExpand all messages\nExtract each message with data-legacy-message-id"]
+    C --> G["Phase 2: Navigate to\n#all/{thread_id}\nExpand all messages"]
     F --> G
 
     G --> H{"For each message:\ndata-legacy-message-id\nin cached items?"}
@@ -118,7 +143,7 @@ flowchart TD
     J --> K["Update last_message_id\nin resource metadata"]
     I --> K
 
-    E --> L["Check needs_resummarize"]
+    E --> L["Phase 3: Check needs_resummarize"]
     K --> L
 
     L -->|"No changes"| M["Use cached summary\nStream output"]
@@ -196,9 +221,10 @@ flowchart TD
 | Argument | Default | Description |
 |---|---|---|
 | `--cdp-url` | `http://192.168.1.11:9223` | Chrome DevTools Protocol endpoint |
-| `--days` | `3` | Days to look back |
-| `--max-threads` | `20` | Max non-excluded threads to read |
-| `--max-scan` | `100` | Max total threads to scan (safety cap) |
+| `--days` | `7` | Days to look back |
+| `--max-threads` | `100` | Max non-excluded threads to process |
+| `--max-scan` | `200` | Max total threads to scan across all pages (safety cap) |
+| `--early-stop` | `5` | Stop after N consecutive cached/unchanged threads (0=disabled) |
 | `--exclude-labels` | `["❌ ai-exclusion", "🪣 Bitbucket"]` | JSON array of labels to skip |
 | `--priority-labels` | `["⚠️IMPORTANT", ...]` | JSON array of priority labels (highest first) |
 | `--force` | `false` | Bypass change detection, re-fetch and re-summarize all |
@@ -231,12 +257,14 @@ flowchart TD
 
 | Stage | Input | Output | Reduction |
 |---|---|---|---|
-| Raw Gmail extraction (20 threads) | ~217-432KB (54-108K tokens) | - | - |
-| Layer 1: Deterministic cleanup | 54-108K tokens | ~25-50K tokens | ~50% |
-| Layer 2: Skip unchanged threads (re-run) | 25-50K tokens | 0 (cached) | 100% |
-| Layer 3: AI summarization | 25-50K tokens | ~10K tokens (20 x 500 words) | ~80% |
-| **Total (first run)** | **54-108K tokens** | **~10K tokens** | **~90%** |
-| **Total (re-run, no changes)** | **54-108K tokens** | **~0 processing** | **~100%** |
+| Raw Gmail extraction (100 threads, 7 days) | ~500K-1MB (125-250K tokens) | - | - |
+| Layer 1: Deterministic cleanup | 125-250K tokens | ~60-120K tokens | ~50% |
+| Layer 2: Skip unchanged threads (re-run) | 60-120K tokens | 0 (cached) | 100% |
+| Layer 3: AI summarization | 60-120K tokens | ~50K tokens (100 x 500 words) | ~60% |
+| **Total (first run)** | **125-250K tokens** | **~50K tokens** | **~80%** |
+| **Total (re-run, no changes)** | **125-250K tokens** | **~0 processing, ~50K cached output** | **~100%** |
+
+Performance: First run ~37min (102 threads). Re-run with cache: ~2min (3 new threads out of 105).
 
 ## Key Differences from Jira Skill
 
@@ -249,4 +277,6 @@ flowchart TD
 | Listing-level ID | Available (ticket key in API) | Available (`data-legacy-thread-id`) |
 | Change detection | `updated_at` timestamp comparison | `data-legacy-last-non-draft-message-id` comparison |
 | Relationships | parent/child/blocks/linked tickets | None (flat thread structure) |
+| Pagination | API `startAt` parameter | URL-based `/pN` hash suffix |
+| Extraction strategy | Single-pass (API returns all) | Two-phase (listing scan + detail fetch) |
 | Speed bottleneck | API rate limits | Browser navigation (~6-7s/thread) |
