@@ -78,7 +78,11 @@ Streams text blocks per conversation to stdout:
 ```
 ## gchat/dm/abc123: Nikhil Grover
 Source: gchat | Group: dm/abc123 | Messages: 20 | Last Activity: 2026-03-15T12:30:00+00:00
-[AI-generated summary of conversation]
+[AI-generated summary - main conversation, no topic_id]
+
+## gchat/space/AAAALHoAh6U/e2Tne49XGSA: Feature flag management
+Source: gchat | Group: space/AAAALHoAh6U/e2Tne49XGSA | Messages: 5 | Last Activity: 2026-03-15T10:00:00+00:00
+[AI-generated summary - thread-specific, resource_id = group_id/topic_id]
 ```
 
 Progress and diagnostics go to stderr. Use `PYTHONUNBUFFERED=1 python3 -u` for real-time streaming to file.
@@ -86,10 +90,11 @@ Progress and diagnostics go to stderr. Use `PYTHONUNBUFFERED=1 python3 -u` for r
 ## Architecture
 - Self-contained: all modules (DB, cleaner, summarizer) embedded in `scripts/`
 - SQLite cache at `data/gchat_cache.db` (per-message caching)
+- `resource_id`: `{group_id}/{topic_id}` for thread-specific items, `{group_id}` for main conversations
 - 3-panel layout navigation: nav (left), Home feed (middle), conversation (right)
 - Change detection via `data-display-timestamp` comparison at feed level
 - Progressive message collection handles virtual scrolling (dedup by data_id)
-- Early-stop optimization: halts scanning after N consecutive unchanged conversations
+- Early-stop optimization: halts scanning after N consecutive unchanged conversations or cached messages during scroll
 - AI summarization via LiteLLM proxy (configurable via `MAX_SUMMARY_WORDS` env var, default 500)
 - See `_architecture.md` for detailed design with Mermaid diagrams
 
