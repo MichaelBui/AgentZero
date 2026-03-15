@@ -477,11 +477,11 @@ def main():
     )
     parser.add_argument("--cdp-url", default=DEFAULT_CDP,
                         help=f"Chrome DevTools endpoint (default: {DEFAULT_CDP})")
-    parser.add_argument("--days", type=int, default=7,
-                        help="Days to look back (default: 7)")
-    parser.add_argument("--max-threads", type=int, default=100,
-                        help="Max threads to read (default: 100)")
-    parser.add_argument("--max-scan", type=int, default=200,
+    parser.add_argument("--days", type=int, default=3,
+                        help="Days to look back (default: 3)")
+    parser.add_argument("--max-threads", type=int, default=50,
+                        help="Max threads to read (default: 50)")
+    parser.add_argument("--max-scan", type=int, default=100,
                         help="Max total threads to scan (default: 200)")
     parser.add_argument("--exclude-labels", default=DEFAULT_EXCLUDE,
                         help="JSON array of labels to exclude")

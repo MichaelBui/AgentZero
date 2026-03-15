@@ -350,22 +350,36 @@ def extract_messages(page, cutoff_ms, topic_id=""):
     }""", {"sel": sel, "cutoff": cutoff_ms, "isThread": bool(topic_id)})
 
 
-def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion, topic_id=""):
+def scroll_and_expand(page, cutoff_ms, max_scrolls, max_expansion,
+                      topic_id="", cached_ids=None, early_stop_n=0):
     scroll_count = 0
     expand_count = 0
     collected = {}
     tid_js = json.dumps(topic_id)
     is_thread = bool(topic_id)
+    cached_ids = cached_ids or set()
+    consecutive_cached = 0
 
     def _snapshot():
+        nonlocal consecutive_cached
+        new_found = False
         for msg in extract_messages(page, cutoff_ms, topic_id):
             key = msg.get("data_id") or f"{msg['epoch_ms']}_{msg['sender']}_{hash(msg['body'][:80])}"
             if key not in collected:
                 collected[key] = msg
+                if cached_ids and key in cached_ids:
+                    consecutive_cached += 1
+                else:
+                    consecutive_cached = 0
+                    new_found = True
+        return new_found
 
     _snapshot()
 
     while True:
+        if early_stop_n > 0 and consecutive_cached >= early_stop_n:
+            eprint(f"  Scroll early-stop: {consecutive_cached} consecutive cached messages")
+            break
         if is_thread:
             anchor = page.evaluate(f"""() => {{
                 const sel = 'c-wiz[data-topic-id="{topic_id}"][data-is-detailed-thread-view="true"]';
@@ -606,18 +620,18 @@ def main():
     )
     ap.add_argument("--cdp-url", default=DEFAULT_CDP,
                     help=f"CDP endpoint (default: {DEFAULT_CDP})")
-    ap.add_argument("--days", type=int, default=7,
-                    help="Days to look back (default: 7)")
+    ap.add_argument("--days", type=int, default=3,
+                    help="Days to look back (default: 3)")
     ap.add_argument("--max-threads", type=int, default=50,
                     help="Max conversations to process (default: 50)")
     ap.add_argument("--max-scan", type=int, default=100,
                     help="Max feed items to scan (default: 100)")
-    ap.add_argument("--max-scroll", type=int, default=20,
-                    help="Max scroll-up iterations per thread (default: 20)")
+    ap.add_argument("--max-scroll", type=int, default=5,
+                    help="Max scroll-up iterations per thread (default: 5)")
     ap.add_argument("--max-expansion", type=int, default=5,
                     help="Max expansion rounds for collapsed messages (default: 5)")
-    ap.add_argument("--early-stop", type=int, default=5,
-                    help="Stop after N consecutive unchanged conversations (0=disabled, default: 5)")
+    ap.add_argument("--early-stop", type=int, default=3,
+                    help="Stop after N consecutive unchanged conversations (0=disabled, default: 3)")
     ap.add_argument("--focus-title", default="",
                     help="Only process conversations matching this title (case-insensitive)")
     ap.add_argument("--force", action="store_true",
@@ -736,9 +750,11 @@ def main():
                    + (f" (thread: {tid[:15]})" if tid else ""))
 
             scroll_to_bottom(page, topic_id=tid)
+            cached_ids = db.get_cached_message_ids(gid)
             messages = scroll_and_expand(
                 page, cutoff_ms, args.max_scroll, args.max_expansion,
-                topic_id=tid,
+                topic_id=tid, cached_ids=cached_ids,
+                early_stop_n=args.early_stop,
             )
             eprint(f"  -> {len(messages)} message(s) within {args.days} day(s)")
 

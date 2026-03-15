@@ -24,7 +24,7 @@ Do NOT use for: sending emails (read-only), calendar events, non-Gmail providers
 
 ## Usage
 
-### Default - read last 7 days, up to 100 threads
+### Default - read last 3 days, up to 50 threads
 ```bash
 python /a0/usr/skills/gmail/scripts/gmail_reader.py
 ```
@@ -48,9 +48,9 @@ python /a0/usr/skills/gmail/scripts/gmail_reader.py --early-stop 0
 | Argument | Required | Default | Description |
 |---|---|---|---|
 | `--cdp-url` | No | `http://192.168.1.11:9223` | Chrome DevTools Protocol endpoint |
-| `--days` | No | 7 | Days to look back |
-| `--max-threads` | No | 100 | Max non-excluded threads to process |
-| `--max-scan` | No | 200 | Max total threads to scan across all pages (safety cap) |
+| `--days` | No | 3 | Days to look back |
+| `--max-threads` | No | 50 | Max non-excluded threads to process |
+| `--max-scan` | No | 100 | Max total threads to scan across all pages (safety cap) |
 | `--early-stop` | No | 5 | Stop after N consecutive cached threads (0=disabled) |
 | `--exclude-labels` | No | `["❌ ai-exclusion", ...]` | JSON array of labels to skip |
 | `--priority-labels` | No | `["⚠️IMPORTANT", ...]` | JSON array of priority labels |

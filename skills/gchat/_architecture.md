@@ -214,12 +214,12 @@ flowchart TD
 | Argument | Default | Description |
 |---|---|---|
 | `--cdp-url` | `http://192.168.1.11:9223` | Chrome DevTools Protocol endpoint |
-| `--days` | `7` | Days to look back |
+| `--days` | `3` | Days to look back |
 | `--max-threads` | `50` | Max conversations to process |
 | `--max-scan` | `100` | Max feed items to scan (safety cap) |
-| `--max-scroll` | `20` | Max scroll-up iterations per conversation |
+| `--max-scroll` | `5` | Max scroll-up iterations per conversation |
 | `--max-expansion` | `5` | Max expansion rounds for collapsed messages |
-| `--early-stop` | `5` | Stop after N consecutive unchanged conversations (0=disabled) |
+| `--early-stop` | `3` | Stop after N consecutive unchanged convos or cached messages during scroll (0=disabled) |
 | `--focus-title` | *(none)* | Substring filter for conversation titles |
 | `--force` | `false` | Bypass change detection, re-fetch and re-summarize all |
 | `--debug-dom` | `false` | Dump Home feed DOM to stderr and exit |

@@ -221,9 +221,9 @@ flowchart TD
 | Argument | Default | Description |
 |---|---|---|
 | `--cdp-url` | `http://192.168.1.11:9223` | Chrome DevTools Protocol endpoint |
-| `--days` | `7` | Days to look back |
-| `--max-threads` | `100` | Max non-excluded threads to process |
-| `--max-scan` | `200` | Max total threads to scan across all pages (safety cap) |
+| `--days` | `3` | Days to look back |
+| `--max-threads` | `50` | Max non-excluded threads to process |
+| `--max-scan` | `100` | Max total threads to scan across all pages (safety cap) |
 | `--early-stop` | `5` | Stop after N consecutive cached/unchanged threads (0=disabled) |
 | `--exclude-labels` | `["❌ ai-exclusion", "🪣 Bitbucket"]` | JSON array of labels to skip |
 | `--priority-labels` | `["⚠️IMPORTANT", ...]` | JSON array of priority labels (highest first) |
