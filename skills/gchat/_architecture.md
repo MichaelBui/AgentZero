@@ -38,7 +38,7 @@ Configurable via `--early-stop N` (default: 5, 0=disabled). When N consecutive c
 
 | Field | DOM Source | Example | Notes |
 |---|---|---|---|
-| `data-group-id` | `span[role="listitem"][data-group-id]` | `dm/abc123` or `space/xyz789` | **Stable conversation ID** - our `resource_id` |
+| `data-group-id` | `span[role="listitem"][data-group-id]` | `dm/abc123` or `space/xyz789` | **Group/space ID** - combined with `topic_id` for `resource_id` |
 | `data-display-timestamp` | Same element | `1710513600000` (epoch_ms) | **Last activity timestamp** - for change detection |
 | `data-topic-id` | Same element | `topic_id_string` | Thread/topic ID within conversation |
 | `data-is-unread` | Same element | `true`/`false` | Unread indicator |
@@ -59,10 +59,10 @@ Configurable via `--early-stop N` (default: 5, 0=disabled). When N consecutive c
 
 | Concept | Value | Example |
 |---|---|---|
-| `resource_id` | `data-group-id` | `dm/abc123` or `space/xyz789` |
+| `resource_id` | `{group_id}/{topic_id}` if topic_id present, else `{group_id}` | `space/xyz789/kW7nZX6VF3k` (thread) or `dm/abc123` (main convo) |
 | `item_id` | `data-id` or `{epoch_ms}_{sender_hash}` | `message_id_123` or `1710513600000_42` |
 | Change detection key | `data-display-timestamp` (epoch_ms) | `1710513600000` |
-| Composite key | `gchat:{resource_id}:{item_id}` | `gchat:dm/abc123:message_id_123` |
+| Composite key | `gchat:{resource_id}:{item_id}` | `gchat:space/xyz789/kW7nZX6VF3k:message_id_123` |
 
 ## Data Model
 
@@ -71,7 +71,7 @@ erDiagram
     ATOMIC_CONTENT {
         text id PK "gchat:{group_id}:{data_id}"
         text source "gchat"
-        text resource_id "data-group-id (conversation ID)"
+        text resource_id "group_id/topic_id or group_id"
         text item_id "data-id or epoch_sender fallback"
         text author "Nikhil Grover"
         text content "Cleaned message body (full, no truncation)"
@@ -82,7 +82,7 @@ erDiagram
     }
 
     RESOURCE_SUMMARY {
-        text resource_id PK "data-group-id"
+        text resource_id PK "group_id/topic_id or group_id"
         text source "gchat"
         text title "Conversation name"
         text summary "AI-generated summary (max 500 words)"
@@ -228,7 +228,7 @@ flowchart TD
 
 | Field | Source | Stored In |
 |---|---|---|
-| group_id (resource_id) | `data-group-id` from feed | All tables |
+| resource_id | `{group_id}/{topic_id}` or `{group_id}` | All tables - includes topic_id when thread-specific |
 | display_timestamp | `data-display-timestamp` from feed | Change detection |
 | data_id (item_id) | `data-id` from message `div[role="group"]` | atomic_content |
 | sender | `span[data-member-id][data-name]` | atomic_content author |

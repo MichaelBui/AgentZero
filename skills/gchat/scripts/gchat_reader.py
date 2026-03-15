@@ -512,12 +512,19 @@ def _find_one_expandable(page, topic_id=""):
 
 # ── Caching ─────────────────────────────────────────────────────────
 
-def conversation_needs_fetch(db: SkillDB, group_id: str, display_ts: int) -> bool:
+def make_resource_id(group_id: str, topic_id: str = "") -> str:
+    """Build resource_id: {group_id}/{topic_id} if topic_id present, else {group_id}."""
+    if topic_id:
+        return f"{group_id}/{topic_id}"
+    return group_id
+
+
+def conversation_needs_fetch(db: SkillDB, resource_id: str, display_ts: int) -> bool:
     """Check if a conversation needs re-fetching based on display_timestamp."""
-    return db.conversation_needs_fetch(group_id, display_ts)
+    return db.conversation_needs_fetch(resource_id, display_ts)
 
 
-def cache_conversation(db: SkillDB, group_id: str, name: str,
+def cache_conversation(db: SkillDB, resource_id: str, name: str,
                        messages: list[dict]) -> int:
     """Cache each message in the conversation. Returns count of newly cached messages."""
     new_count = 0
@@ -531,7 +538,7 @@ def cache_conversation(db: SkillDB, group_id: str, name: str,
         meta = {"timestamp_display": msg.get("timestamp", "")}
 
         if db.upsert_atomic(
-            "gchat", group_id, data_id,
+            "gchat", resource_id, data_id,
             author=author, content=body,
             created_at=ts_iso, updated_at=ts_iso,
             metadata=meta,
@@ -543,34 +550,34 @@ def cache_conversation(db: SkillDB, group_id: str, name: str,
 
 def summarize_and_output(db: SkillDB, info: dict) -> None:
     """Summarize a single conversation and stream output immediately."""
-    group_id = info["group_id"]
+    resource_id = info["resource_id"]
     name = info["name"]
 
-    if not db.needs_resummarize(group_id):
-        existing = db.get_resource_summary(group_id)
+    if not db.needs_resummarize(resource_id):
+        existing = db.get_resource_summary(resource_id)
         if existing:
             eprint(f"  [{name[:40]}]: using cached summary")
-            _print_output(group_id, name, existing["summary"], info)
+            _print_output(resource_id, name, existing["summary"], info)
             return
         return
 
-    existing_summary = db.get_resource_summary(group_id)
+    existing_summary = db.get_resource_summary(resource_id)
     existing_text = existing_summary["summary"] if existing_summary else None
 
     if existing_text and existing_summary:
-        items = db.get_items_since(group_id, existing_summary.get("summarized_at", ""))
+        items = db.get_items_since(resource_id, existing_summary.get("summarized_at", ""))
         if not items:
-            items = db.get_atomic_for_resource(group_id)
+            items = db.get_atomic_for_resource(resource_id)
     else:
-        items = db.get_atomic_for_resource(group_id)
+        items = db.get_atomic_for_resource(resource_id)
 
     if not items and existing_text:
-        _print_output(group_id, name, existing_text, info)
+        _print_output(resource_id, name, existing_text, info)
         return
     if not items:
         return
 
-    all_items = db.get_atomic_for_resource(group_id)
+    all_items = db.get_atomic_for_resource(resource_id)
     meta = {"message_count": len(all_items), "url": info.get("url", "")}
 
     eprint(f"  [{name[:40]}]: summarizing ({len(items)} messages)...")
@@ -583,13 +590,13 @@ def summarize_and_output(db: SkillDB, info: dict) -> None:
     )
 
     if summary_text:
-        db.upsert_summary(group_id, "gchat", name, summary_text, meta)
-        _print_output(group_id, name, summary_text, info)
+        db.upsert_summary(resource_id, "gchat", name, summary_text, meta)
+        _print_output(resource_id, name, summary_text, info)
     elif existing_text:
-        _print_output(group_id, name, existing_text, info)
+        _print_output(resource_id, name, existing_text, info)
 
 
-def _print_output(group_id: str, name: str, summary: str, info: dict) -> None:
+def _print_output(resource_id: str, name: str, summary: str, info: dict) -> None:
     """Stream a single conversation block to stdout."""
     display_ts = info.get("display_ts", 0)
     ts_str = ""
@@ -599,14 +606,14 @@ def _print_output(group_id: str, name: str, summary: str, info: dict) -> None:
     items_count = info.get("message_count", "")
     meta_parts = [
         f"Source: gchat",
-        f"Group: {group_id}",
+        f"Group: {resource_id}",
     ]
     if items_count:
         meta_parts.append(f"Messages: {items_count}")
     if ts_str:
         meta_parts.append(f"Last Activity: {ts_str}")
 
-    print(f"## gchat/{group_id}: {name}", flush=True)
+    print(f"## gchat/{resource_id}: {name}", flush=True)
     print(" | ".join(meta_parts), flush=True)
     print(summary, flush=True)
     print("", flush=True)
@@ -695,6 +702,7 @@ def main():
             dts = feed[i]["display_ts"]
             tid = feed[i].get("topic_id", "")
             name = feed[i]["name"]
+            rid = make_resource_id(gid, tid)
             attempted += 1
 
             is_focused = not args.focus_title or args.focus_title.lower() in name.lower()
@@ -705,10 +713,10 @@ def main():
                 skipped_focus += 1
                 continue
 
-            if not args.force and not conversation_needs_fetch(db, gid, dts):
+            if not args.force and not conversation_needs_fetch(db, rid, dts):
                 eprint(f"  -> unchanged (timestamp match)")
                 convo_infos.append({
-                    "group_id": gid, "name": name, "display_ts": dts,
+                    "resource_id": rid, "name": name, "display_ts": dts,
                     "url": f"https://chat.google.com/{gid}", "fetched": False,
                 })
                 skipped_unchanged += 1
@@ -750,7 +758,7 @@ def main():
                    + (f" (thread: {tid[:15]})" if tid else ""))
 
             scroll_to_bottom(page, topic_id=tid)
-            cached_ids = db.get_cached_message_ids(gid)
+            cached_ids = db.get_cached_message_ids(rid)
             messages = scroll_and_expand(
                 page, cutoff_ms, args.max_scroll, args.max_expansion,
                 topic_id=tid, cached_ids=cached_ids,
@@ -759,14 +767,14 @@ def main():
             eprint(f"  -> {len(messages)} message(s) within {args.days} day(s)")
 
             if messages:
-                new_count = cache_conversation(db, gid, name, messages)
+                new_count = cache_conversation(db, rid, name, messages)
                 if new_count > 0:
                     eprint(f"  -> {new_count} new message(s) cached")
                 else:
                     eprint(f"  -> all messages already cached")
 
                 convo_infos.append({
-                    "group_id": gid, "name": name, "display_ts": dts,
+                    "resource_id": rid, "name": name, "display_ts": dts,
                     "url": f"https://chat.google.com/{gid}", "fetched": True,
                     "message_count": len(messages),
                 })
