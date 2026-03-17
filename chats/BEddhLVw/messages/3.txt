@@ -1,0 +1,117 @@
+Connecting to Chrome at http://192.168.1.11:9223...
+(node:8886) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Connected. Browser version: 124.0.6367.78
+Found 1 open tab(s)
+No Gmail tab found. Opening new tab...
+Navigating to Gmail (last 2 days)...
+Gmail search results loaded.
+Found 92 thread(s) in search results
+
+Processing threads (target: 30, scan limit: 100, total rows: 92)...
+Exclude labels: ['❌ ai-exclusion', '🪣 Bitbucket']
+Priority labels: ['⚠️IMPORTANT', '❗️ ASAP  🏃\u200d♂️\u200d➡️', '🔜 Soon 🚶\u200d♂️\u200d➡️', '👀 KIV 🧘\u200d♂️', '📝 Noted']
+
+  SKIP [1] POT File - 12/03/2026... (excluded label)
+[1/30] Notes: “BCRS Sales Posting Validation (Finance UAT)” Ma...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+  SKIP [3] [] Bulk Global Attribute Upload status... (excluded label)
+  SKIP [4] Re: [Bitbucket] Pull request #1561: feat: [DPD-648... (excluded label)
+  SKIP [5] [] Bulk Store Attribute Upload status... (excluded label)
+[2/30] Updated invitation: BCRS Sales Posting Validation (Fina...
+  No 'Expand all' button (single-message thread)
+  -> 4 message(s)
+[3/30] Fwd: [## 111251 ##] EUROLINK NUTRITION PTE LTD | Brand ...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+  SKIP [8] [ALERT][PRODUCTION][2026-03-11 1401] Seller stores... (excluded label)
+[4/30] Password Reset for Rahul Jain...
+  Clicked 'Expand all' button, waiting for messages to load...
+  5 message(s) loaded
+  -> 5 message(s)
+  SKIP [10] [ALERT][PRODUCTION][2026-03-11 1301] Seller stores... (excluded label)
+  SKIP [11] 2026-03-11 PFC Consolidated Picklist... (excluded label)
+  SKIP [12] [ALERT][PRODUCTION][2026-03-11 1201] Seller stores... (excluded label)
+  SKIP [13] Urgent Download 11/03/2026... (excluded label)
+[5/30] [JIRA] (DPD-645) Improve event sync to prevent overage...
+  Clicked 'Expand all' button, waiting for messages to load...
+  4 message(s) loaded
+  -> 4 message(s)
+[6/30] [JIRA] Nikhil Grover assigned DPD-644 to you...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+[7/30] [JIRA] (DPD-715) Dynamic ad slot configuration for Home...
+  No 'Expand all' button (single-message thread)
+  -> 3 message(s)
+  SKIP [17] [FP ST MP] Urgent Download 11/03/2026... (excluded label)
+[8/30] [Dashboard Report] Retail Media - DD Dashboard | Wed 11...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+  SKIP [19] The uploaded build for MyApp for Fairmily UAT has ... (excluded label)
+[9/30] Invitation: Sync-up for D&T Q1 All hands @ Wed Mar 11, ...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+[10/30] NTUC Enterprise-2025 Web Service Penetration Testing fo... [⚠️IMPORTANT]
+  Clicked 'Expand all' button, waiting for messages to load...
+  33 message(s) loaded
+  -> 33 message(s)
+[11/30] Updated invitation: Sales Posting Validation @ Wed Mar ...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+  SKIP [23] Re: [Bitbucket] Pull request #270: [DPD-696] Migra... (excluded label)
+[12/30] [RAW Overdue] Expired Risk Acceptance & Waiver Form...
+  No 'Expand all' button (single-message thread)
+  -> 2 message(s)
+[13/30] [Bitbucket]  Pipeline for master failed on b79852a (ntu...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+  SKIP [26] [Infographic] Move from reactive to predictive Dev... (excluded label)
+  SKIP [27] [Alert] POs not generated for 11.03.2026... (excluded label)
+[14/30] Updated invitation: [Placeholder] Sales Posting Validat...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+[15/30] Invitation: Sales Posting Validation @ Wed Mar 11, 2026...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+  SKIP [30] [ERROR] [2026-03-10] Meta Customer Audience... (excluded label)
+[16/30] Daily digest: updates from Dodla Gopi Krishna & Jazz To...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+  SKIP [32] [] Bulk Global Attribute Upload status... (excluded label)
+[17/30] You have no events scheduled today....
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+[18/30] Rovo Dev ships the small stuff in Jira...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+  SKIP [35] The uploaded build for FairPrice Group has one or ... (excluded label)
+  SKIP [36] The uploaded build for Fairprice Group UAT has one... (excluded label)
+[19/30] [Bitbucket]  Pipeline for DPD-715 failed on 18ad66f (nt...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+[20/30] [Bitbucket]  Pipeline for DPD-715 failed on 6367a7c (nt...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+[21/30] [Bitbucket]  Pipeline for DPD-715 failed on d627380 (nt...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+[22/30] [Bitbucket]  Pipeline for DPD-715 failed on 043c590 (nt...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+  SKIP [41] [] Bulk Store Attribute Upload status... (excluded label)
+  SKIP [42] POT File - 11/03/2026... (excluded label)
+  SKIP [43] [ALERT][PRODUCTION][2026-03-10 2001] Seller stores... (excluded label)
+[23/30] Invitation: FPG : Onsite programmatic @ Thu Mar 12, 202...
+  No 'Expand all' button (single-message thread)
+  -> 1 message(s)
+  SKIP [45] Re: [Bitbucket] Pull request #897: Fix: use litera... (excluded label)
+  SKIP [46] Re: [Bitbucket] Pull request #896: [WB-125] Update... (excluded label)
+[24/30] Re: FPG x OSMOS : TTD discussion...
+  Clicked 'Expand all' button, waiting for messages to load...
+  5 message(s) loaded
+  -> 5 message(s)
+[25/30] GCP Service Account Key clean UP...
+
+
+[SYSTEM: Returning control to agent after 180 seconds of execution. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

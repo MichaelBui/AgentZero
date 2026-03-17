@@ -1,0 +1,63 @@
+# Daily Work Report 2026-03-14
+
+## 🔴 My Action Items (Pending My Action)
+
+1.  **[DPD-645] Improve event sync**
+    *   **Source:** Jira
+    *   **What:** Michael needs to drive the improvement of the event synchronization process. This is a recurring priority item flagged in memory.
+    *   **Urgency:** 🟡 Today — Ongoing high-priority engineering task.
+    *   **Suggestion:** Review progress on the sync implementation. If blockers exist, sync with the engineering team to unblock.
+
+2.  **[DPD-644] Streamline event sync from Segment.io to OSMOS**
+    *   **Source:** Jira
+    *   **What:** This is a critical infrastructure task to streamline data flow.
+    *   **Urgency:** 🟡 Today — Required for system reliability.
+    *   **Suggestion:** Ensure documentation matches the implementation plan.
+
+3.  **[GChat] Picker App 10.4.0 Release Confirmation**
+    *   **Source:** GChat (Sampada Shukla)
+    *   **What:** Sampada is releasing Picker App 10.4.0 to a single store. Michael needs to monitor for any critical issues.
+    *   **Key Quote:** "I’m releasing the Picker App 10.4.0 to a single store tomorrow around 1:30 pm. If no issues are reported within 2 days..." — Sampada Shukla, Mon 10:04 AM
+    *   **Urgency:** 🟡 Today — Monitoring phase.
+    *   **Suggestion:** Check with the team if any critical bugs were reported following the 1:30 PM release yesterday.
+
+4.  **[GChat] Marketplace Packlist Confirmation**
+    *   **Source:** GChat (Wai Ching Chan)
+    *   **What:** Multiple requests from Wai Ching to confirm packlists for orders.
+    *   **Key Quote:** "can check on the marketplace packlist for this order?" — Wai Ching Chan, Yesterday 8:49 AM
+    *   **Urgency:** 🟡 Today — Blocking fulfillment operations.
+    *   **Suggestion:** Address the pending order packlist confirmations for the requests received from Wai Ching.
+
+## 🟡 My Follow-Ups (Track Who & What)
+
+1.  **[GChat] FPHUB Digital Screen Content**
+    *   **Source:** GChat
+    *   **Waiting On:** David Anura Cooray
+    *   **What:** Pending resolution on the digital screen content issue.
+    *   **Since:** Thu 1:21 AM
+    *   **Days Waiting:** 1 day
+    *   **Suggestion:** Send a brief follow-up to David to check the status of the screen content updates.
+
+2.  **[GChat] TAMHUB Screen Disconnected**
+    *   **Source:** GChat
+    *   **Waiting On:** David Anura Cooray
+    *   **What:** Screen disconnection issue.
+    *   **Since:** Thu 3:25 AM
+    *   **Days Waiting:** 1 day
+    *   **Suggestion:** Escalate if this issue persists as it affects store operations.
+
+## 📋 Summary of Everything Else
+
+**Jira — Other Active Tickets:**
+- **[DPD-715] Dynamic ad slot configuration** — In Progress — Assigned to Michael. No major updates in last 5 days. Monitor.
+- **[DPD-700] Fix RMN pentest issues** — In Progress. Keep an eye on for security compliance.
+- **[DPD-551] Capture SAP Material Number** — In Progress. Ongoing tracking.
+
+**GChat — Informational Conversations:**
+- **rOOH Phase 1 Sync:** Fiona U scheduled a sync for next Tuesday at 2 PM to finalize pending items.
+- **PDD Gondola End 13 inch:** Issue reported by Rajkumar Romendro. Seems like a routine hardware/display ticket.
+
+**Gmail — Other Threads:**
+- No critical threads requiring immediate action detected in the last 5 days.
+
+**Quick Stats:** 4 action items | 2 follow-ups | 6 other items across 1 memory items, 27 Jira tickets, 5 GChat threads, 0 Gmail emails

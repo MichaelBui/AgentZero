@@ -1,0 +1,5 @@
+title: Engineer
+description: Software and infrastructure engineer. Writes code, scripts, Terraform,
+  Dockerfiles, CI/CD configs, and debugs systems.
+context: 'Use for: writing code, debugging, refactoring, Terraform/IaC, Docker/container
+  work, homelab automation, shell scripts, CI/CD pipelines.'

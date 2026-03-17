@@ -25,7 +25,7 @@ Do NOT use for: sending messages (read-only), Gmail emails (use gmail skill), Sl
 
 ## Usage
 
-### Default - read last 3 days, up to 50 conversations
+### Default - read last 3 days, up to 200 conversations
 ```bash
 python /a0/usr/skills/gchat/scripts/gchat_reader.py
 ```
@@ -50,18 +50,26 @@ python /a0/usr/skills/gchat/scripts/gchat_reader.py --focus-title "DevOps"
 python /a0/usr/skills/gchat/scripts/gchat_reader.py --early-stop 0
 ```
 
+### Fast report from cache (no browser needed)
+```bash
+python /a0/usr/skills/gchat/scripts/gchat_reader.py --cached-only
+```
+
 ## Arguments
 | Argument | Required | Default | Description |
 |---|---|---|---|
 | `--cdp-url` | No | `http://192.168.1.11:9223` | Chrome DevTools Protocol endpoint |
 | `--days` | No | 3 | Days to look back |
-| `--max-threads` | No | 50 | Max conversations to process |
-| `--max-scan` | No | 100 | Max feed items to scan (safety cap) |
+| `--max-threads` | No | 200 | Max conversations to process |
+| `--max-scan` | No | 500 | Max feed items to scan (safety cap) |
 | `--max-scroll` | No | 5 | Max scroll-up iterations per thread |
 | `--max-expansion` | No | 5 | Max expansion rounds for collapsed messages |
-| `--early-stop` | No | 3 | Stop after N consecutive unchanged convos or cached messages (0=disabled) |
+| `--early-stop` | No | 3 | Stop fetching after N consecutive unchanged convos; scan continues, output includes all (0=disabled) |
 | `--focus-title` | No | *(none)* | Substring filter for conversation titles |
+| `--cached-only` | No | false | Output cached summaries from DB without browser (fast, for reports) |
 | `--force` | No | false | Bypass change detection, re-fetch and re-summarize all |
+| `--output` | No | `data/gchat-output.md` | Write results to file (clean markdown for AI agents) |
+| `--debug-log` | No | `data/gchat-debug.log` | Write debug/progress messages to file |
 | `--debug-dom` | No | false | Dump Home feed DOM to stderr and exit |
 
 ## Environment Variables

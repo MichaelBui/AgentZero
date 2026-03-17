@@ -1,0 +1,21 @@
+Report saved to: /a0/usr/workdir/❗ Daily Work Report 2026-03-14.md
+--- PREVIEW ---
+# 📅 Daily Briefing - 2026-03-14
+
+## 🔴 My Action Items (Pending My Action)
+
+| Metadata | Details | Suggestion |
+|----------|---------|------------|
+| **Priority:** 🔴 (Overdue by 2 days)<br>**Source:** Jira<br>**Date:** 2026-03-12 | **What:** [RMN] Streamline event sync from Segment.io to OSMOS to resolve overage. Status: TO BE DEFINED. Due: 2026-03-12.<br>**References:** DPD-644<br>**Related:** None | 1. Address immediate blocker.<br>2. Update status in Jira/CI.
+| **Priority:** 🟡 (Medium Priority)<br>**Source:** Jira<br>**Date:** 2026-04-24 | **What:** Clean up archived proposals after PRD release. Status: TO BE DEFINED. Due: 2026-04-24.<br>**References:** DPD-590<br>**Related:** None | 1. Address immediate blocker.<br>2. Update status in Jira/CI.
+| **Priority:** 🟡 (Medium Priority)<br>**Source:** Jira<br>**Date:** 2026-03-17 | **What:** Dynamic ad slot configuration for Homepage swimlanes. Status: IN DEVELOPMENT. Due: 2026-03-17.<br>**References:** DPD-715<br>**Related:** None | 1. Address immediate blocker.<br>2. Update status in Jira/CI.
+| **Priority:** 🔴 (Build broken)<br>**Source:** CI/CD<br>**Date:** 2026-03-14 | **What:** <br>**References:** DPD-715<br>**Related:** None | 1. Address immediate blocker.<br>2. Update status in Jira/CI.
+| **Priority:** 🟡 (Medium Priority)<br>**Source:** Jira<br>**Date:** 2026-03-14 | **What:** FP VIPs encounter verification after S&G purchase for fewer reasons, vs other customers. Status: In release queue. Due: N/A.<br>**References:** OPCO-1940<br>**Related:** OPCO-1956 | 1. Address immediate blocker.<br>2. Update status in Jira/CI.
+| **Priority:** 🟡 (Medium Priority)<br>**Source:** Jira<br>**Date:** 2026-03-14 | **What:** Web - OG Home - Testhas Offer swimlane - Ad label is missing for the first listed product. Status: To Do. Due: N/A.<br>**References:** RM-697<br>**Related:** None | 1. Address immediate blocker.<br>2. Update status in Jira/CI.
+
+## 🟡 My Follow-Ups (Track Who & What)
+
+None identified in the last 5 days.
+
+## 📋 Summ
+(venv) root@31432beef7ae:/a0/usr/workdir#

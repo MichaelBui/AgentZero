@@ -1,0 +1,360 @@
+area: fragments
+timestamp: 2026-03-14 03:24:48
+consolidation_action: keep_separate
+consolidated_from: ['oZOJ9yDegI']
+historical_notes: The new memory provides a specific assignment update for Michael regarding previously identified active Jira tickets.
+importance_score: 0.85
+consolidation_type: update existing context
+id: MUQg7HrRK2
+_consolidation_similarity: 1.0
+Content: Michael has pending action items on Jira tickets DPD-645, DPD-644, and DPD-715.
+
+area: fragments
+timestamp: 2026-03-14 03:24:53
+consolidation_action: keep_separate
+updated_from: oZOJ9yDegI
+consolidated_from: ['hPXrLjXI7O']
+historical_notes: Merged ticket count summary with specific active ticket details provided in the latest update. ID 8AHpS4Xj5R was kept separate as it refers to a specific view ID configuration, which is distinct from the current ticket list status.
+importance_score: 0.85
+consolidation_type: merge_details_into_summary
+id: REgFmnYn0n
+_consolidation_similarity: 0.9
+updated_at: 2026-03-14 03:24:44
+update_source: fragment_processing
+last_updated: 2026-03-14 03:24:50
+update_type: appended_follow_ups
+Content: Current Jira analysis context: There are 28 Jira tickets available for analysis. Recently identified high-priority/active tickets include: DPD-645 (Improve event sync), DPD-644 (Streamline event sync from Segment.io to OSMOS), DPD-715 (Dynamic ad slot configuration), DPD-700 (Fix RMN pentest issues), DPD-551 (Capture SAP Material Number), DPD-631 (Setup alerts for Advertima platform), DPD-431 (Assignee: None), OMNI-1191 (Assignee: Nikhil Grover), and OMNI-1297 (Assignee: Prajney Sribhashyam).
+
+Michael currently has pending action items specifically assigned for: DPD-645, DPD-644, and DPD-715. Additional follow-up items identified: DPD-431, OMNI-1191, OMNI-1297.
+
+area: fragments
+timestamp: 2026-03-11 08:36:54
+id: PkhLYw1I6L
+Content: Upcoming meetings on schedule: Sales Posting Validation, D&T Q1 All Hands
+
+area: main
+id: zK4PIdtT6H
+timestamp: 2026-02-22 12:48:50
+Content: # Michael - Communication & Decision Making
+
+## Output Preferences
+- **Less text, more visuals** — concise + Mermaid diagrams
+- Visual-first thinker: organizes knowledge through diagrams, architecture maps, structured visual hierarchies
+- Progressive disclosure: simple overview first, details on demand
+
+## Communication Style (How to Talk to Michael)
+- Direct and dense — speak like a peer engineer
+- Don't explain basics (e.g., what a race condition is) — explain WHERE it's happening in specific code
+- Debate is welcome — technical truth beats polite agreement
+- Financially literate — weigh technical decisions against financial impact
+
+## ⚠️ CRITICAL: Decision Making Rule
+**GUESSING IS STRICTLY FORBIDDEN!!!**
+
+When Michael is stuck between options, the tipping factor depends on the situation. 
+- **ALWAYS ask him directly** for detailed nuances and priorities in that specific context.
+- Never assume or guess what matters most in a decision scenario.
+- Ask clarifying questions when trade-offs need to be made.
+
+area: fragments
+timestamp: 2026-02-22 09:03:19
+id: z7qJlmv4XZ
+Content: Script handles empty/no-change scenarios gracefully: no local changes, nothing to commit, nothing to push all return success
+
+source: /a0/knowledge/main/about/github_readme.md
+area: main
+source_file: github_readme.md
+source_path: /a0/knowledge/main/about/github_readme.md
+file_type: md
+knowledge_source: True
+import_timestamp: None
+id: WOZFfroMRA
+timestamp: 2026-02-20 16:06:25
+Content: ## 🎯 Changelog
+
+### v0.9.8 - Skills, UI Redesign & Git projects
+[Release video](https://youtu.be/NV7s78yn6DY)
+
+- Skills
+    - Skills System replacing the legacy Instruments with a new `SKILL.md` standard for structured, portable agent capabilities.
+    - Built-in skills, and UI support for importing and listing skills
+- Real-time WebSocket infrastructure replacing the polling-based approach for UI state synchronization
+- UI Redesign
+    - Process groups to visually group agent actions with expand/collapse support
+    - Timestamps, steps count and execution time with tool-specific badges
+    - Step detail modals with key-value and raw JSON display
+    - Collapsible responses with show more/less and copy buttons on code blocks and tables
+    - Message queue system allowing users to queue messages while the agent is still processing
+    - In-browser file editor for viewing and editing files without leaving the UI
+    - Welcome screen redesign with info and warning banners for connection security, missing API keys, and system resources
+    - Scheduler redesign with standalone modal, separate task list, detail and editor components, and project support
+    - Smooth response rendering and scroll stabilization across chat, terminals, and image viewer
+    - Chat width setting and reworked preferences panel
+    - Image viewer improvements with scroll support and expanded viewer
+    - Redesigned sidebar with reusable dropdown component and streamlined buttons
+    - Inline button confirmations for critical actions
+    - Improved login design and new logout button
+    - File browser enhanced with rename and file actions dropdown
+- Git projects
+    - Git-based projects with clone authentication for public and private repositories
+- Four new LLM providers: CometAPI, Z.AI, Moonshot AI, and AWS Bedrock
+- Microsoft Dev Tunnels integration for secure remote access
+- User data migration to `/usr` directory for cleaner separation of user and system files
+- Subagents system with configurable agent profiles for different roles
+- Memory operations offloaded to deferred tasks for better performance
+- Environment variables can now configure settings via `A0_SET_*` prefix in `.env`
+- Automatic migration with overwrite support for `.env`, scheduler, knowledge, and legacy directories
+- Projects support extended to MCP, A2A, and external API
+- Workdir outside project support for more flexible file organization
+- Agent number tracking in backend and responses for multi-agent identification
+- Many bug fixes and stability improvements across the UI, MCP tools, scheduler, uploads, and WebSocket handling
+
+
+### v0.9.7 - Projects
+[Release video](https://youtu.be/RrTDp_v9V1c)
+- Projects management
+    - Support for custom instructions
+    - Integration with memory, knowledge, files
+    - Project specific secrets 
+- New Welcome screen/Dashboard
+- New Wait tool
+- Subordinate agent configuration override support
+- Support for multiple documents at once in document_query_tool
+- Improved context on interventions
+- Openrouter embedding support
+- Frontend components refactor and polishing
+- SSH metadata output fix
+- Support for windows powershell in local TTY utility
+- More efficient selective streaming for LLMs
+- UI output length limit improvements
+
+### v0.9.6 - Memory Dashboard
+[Release video](https://youtu.be/sizjAq2-d9s)
+- Memory Management Dashboard
+- Kali update
+- Python update + dual installation
+- Browser Use update
+- New login screen
+- LiteLLM retry on temporary errors
+- Github Copilot provider support
+
+area: fragments
+timestamp: 2026-02-22 07:26:26
+id: nUoNbMkqlE
+_consolidation_similarity: 0.9
+Content: The notify-user skill was tested and confirmed working - a test notification was sent successfully
+
+area: main
+id: ZAOtu6Zp5u
+timestamp: 2026-02-22 12:47:42
+Content: # Michael - Core Identity & Thinking Style
+
+## Basic Info
+- **Name:** Michael
+- **Pronouns:** He/Him
+- **Timezone:** Asia/Singapore
+- **Communication:** Prefers concise, high-signal replies with dry wit. Skip intros, filler, and "Great question!" energy.
+
+## Core Personality
+Systems-oriented builder-strategist. Moves from "how does this work?" to "how does this hold up at scale, what does it cost, and does it actually solve the problem?" in a single breath.
+
+## Thinking Traits
+- **Curiosity with urgency** — tinkers to reduce future failure space, not just for fun
+- **Pragmatic perfectionist** — ships working solutions first, refactors aggressively later
+- **Failure anticipator** — proactively stress-tests, monitors health before problems surface
+- **Craft-sensitive ego** — grows from concrete technical challenge, not vague praise
+- **Builder's agency** — needs influence over architecture, budget, long-term technical direction
+- **Quiet relentlessness** — consistently pushing toward correctness, not flashy
+
+## Unchanging Core
+- Systems-thinking view of world as interacting layers
+- Discomfort with brittleness → automation, documentation, repeatable patterns
+- Craft-sensitive honesty that welcomes concrete challenge
+- Builder's need for agency over architecture and direction
+
+source: /a0/knowledge/main/about/github_readme.md
+area: main
+source_file: github_readme.md
+source_path: /a0/knowledge/main/about/github_readme.md
+file_type: md
+knowledge_source: True
+import_timestamp: None
+id: o0FYiuJM12
+timestamp: 2026-02-20 16:06:25
+Content: ### v0.8.3
+[Release video](https://youtu.be/bPIZo0poalY)
+
+- ***Planning and scheduling***
+
+### v0.8.2
+[Release video](https://youtu.be/xMUNynQ9x6Y)
+
+- **Multitasking in terminal**
+- **Chat names**
+
+### v0.8.1
+[Release video](https://youtu.be/quv145buW74)
+
+- **Browser Agent**
+- **UX Improvements**
+
+### v0.8
+[Release video](https://youtu.be/cHDCCSr1YRI)
+
+- **Docker Runtime**
+- **New Messages History and Summarization System**
+- **Agent Behavior Change and Management**
+- **Text-to-Speech (TTS) and Speech-to-Text (STT)**
+- **Settings Page in Web UI**
+- **SearXNG Integration Replacing Perplexity + DuckDuckGo**
+- **File Browser Functionality**
+- **KaTeX Math Visualization Support**
+- **In-chat File Attachments**
+
+### v0.7
+[Release video](https://youtu.be/U_Gl0NPalKA)
+
+- **Automatic Memory**
+- **UI Improvements**
+- **Instruments**
+- **Extensions Framework**
+- **Reflection Prompts**
+- **Bug Fixes**
+
+## 🤝 Community and Support
+
+- [Join our Discord](https://discord.gg/B8KZKNsPpj) for live discussions or [visit our Skool Community](https://www.skool.com/agent-zero).
+- [Follow our YouTube channel](https://www.youtube.com/@AgentZeroFW) for hands-on explanations and tutorials
+- [Report Issues](https://github.com/agent0ai/agent-zero/issues) for bug fixes and features
+
+source: /a0/knowledge/main/about/github_readme.md
+area: main
+source_file: github_readme.md
+source_path: /a0/knowledge/main/about/github_readme.md
+file_type: md
+knowledge_source: True
+import_timestamp: None
+id: DdwFUnnCeX
+timestamp: 2026-02-20 16:06:25
+Content: ### v0.9.5 - Secrets
+[Release video](https://www.youtube.com/watch?v=VqxUdt7pjd8)
+- Secrets management - agent can use credentials without seeing them
+- Agent can copy paste messages and files without rewriting them
+- LiteLLM global configuration field
+- Custom HTTP headers field for browser agent
+- Progressive web app support
+- Extra model params support for JSON
+- Short IDs for files and memories to prevent LLM errors
+- Tunnel component frontend rework
+- Fix for timezone change bug
+- Notifications z-index fix
+
+### v0.9.4 - Connectivity, UI
+[Release video](https://www.youtube.com/watch?v=C2BAdDOduIc)
+- External API endpoints
+- Streamable HTTP MCP A0 server
+- A2A (Agent to Agent) protocol - server+client
+- New notifications system
+- New local terminal interface for stability
+- Rate limiter integration to models
+- Delayed memory recall
+- Smarter autoscrolling in UI
+- Action buttons in messages
+- Multiple API keys support
+- Download streaming
+- Tunnel URL QR code
+- Internal fixes and optimizations
+
+### v0.9.3 - Subordinates, memory, providers Latest
+[Release video](https://www.youtube.com/watch?v=-LfejFWL34k)
+- Faster startup/restart
+- Subordinate agents can have dedicated prompts, tools and system extensions
+- Streamable HTTP MCP server support
+- Memory loading enhanced by AI filter
+- Memory AI consolidation when saving memories
+- Auto memory system configuration in settings
+- LLM providers available are set by providers.yaml configuration file
+- Venice.ai LLM provider supported
+- Initial agent message for user + as example for LLM
+- Docker build support for local images
+- File browser fix
+
+### v0.9.2 - Kokoro TTS, Attachments
+[Release video](https://www.youtube.com/watch?v=sPot_CAX62I)
+
+- Kokoro text-to-speech integration
+- New message attachments system
+- Minor updates: log truncation, hyperlink targets, component examples, api cleanup
+
+### v0.9.1 - LiteLLM, UI improvements
+[Release video](https://youtu.be/crwr0M4Spcg)
+- Langchain replaced with LiteLLM
+    - Support for reasoning models streaming
+    - Support for more providers
+    - Openrouter set as default instead of OpenAI
+- UI improvements
+    - New message grouping system
+    - Communication smoother and more efficient
+    - Collapsible messages by type
+    - Code execution tool output improved
+    - Tables and code blocks scrollable
+    - More space efficient on mobile
+- Streamable HTTP MCP servers support
+- LLM API URL added to models config for Azure, local and custom providers
+
+### v0.9.0 - Agent roles, backup/restore
+[Release video](https://www.youtube.com/watch?v=rMIe-TC6H-k)
+- subordinate agents can use prompt profiles for different roles
+- backup/restore functionality for easier upgrades
+- security and bug fixes
+
+### v0.8.7 - Formatting, Document RAG Latest
+[Release video](https://youtu.be/OQJkfofYbus)
+- markdown rendering in responses
+- live response rendering
+- document Q&A tool
+
+### v0.8.6 - Merge and update
+[Release video](https://youtu.be/l0qpK3Wt65A)
+- Merge with Hacking Edition
+- browser-use upgrade and integration re-work
+- tunnel provider switch
+
+### v0.8.5 - **MCP Server + Client**
+[Release video](https://youtu.be/pM5f4Vz3_IQ)
+
+- Agent Zero can now act as MCP Server
+- Agent Zero can use external MCP servers as tools
+
+### v0.8.4.1 - 2
+Default models set to gpt-4.1
+- Code execution tool improvements
+- Browser agent improvements
+- Memory improvements
+- Various bugfixes related to context management
+- Message formatting improvements
+- Scheduler improvements
+- New model provider
+- Input tool fix
+- Compatibility and stability improvements
+
+### v0.8.4
+[Release video](https://youtu.be/QBh_h_D_E24)
+
+- **Remote access (mobile)**
+
+### v0.8.3.1
+[Release video](https://youtu.be/AGNpQ3_GxFQ)
+
+- **Automatic embedding**
+
+### v0.8.3
+[Release video](https://youtu.be/bPIZo0poalY)
+
+- ***Planning and scheduling***
+
+### v0.8.2
+[Release video](https://youtu.be/xMUNynQ9x6Y)
+
+- **Multitasking in terminal**
+- **Chat names**

@@ -1,0 +1,60 @@
+Error loading /a0/usr/workdir/gchat_data.json: Expecting value: line 1 column 1 (char 0)
+Jira items: 27
+GChat items: 0
+Gmail items: 30
+
+--- Jira Sample ---
+{
+  "key": "DPD-645",
+  "id": "587451",
+  "title": "Improve event sync to prevent overage",
+  "description": "As RMN PM,\nI want the OSMOS PROD destination function in Segment to be optimised for performance\nSo that we can eliminate the significant and recurring monthly cost overage caused by excessively long function execution times.\n\nAcceptance criteria\nScenario 1 - Reduction of execution time\nGiven: transaction and product event data in Segment\nWhen: OSMOS PROD function is syncing events with multiple products to OSMOS\nThen: the function should complete the sync at least 50% faster.",
+  "status": {
+    "name": "IN RELASE QUEUE",
+    "category": "Done"
+  },
+  "assignee": "Michael Bui",
+  "priority": "High",
+  "labels": [],
+  "duedate": "2026-03-12",
+  "parent": {
+    "key": "DPD-644",
+    "summary": "[RMN] Streamline event sync from Segment.io to OSMOS to resolve overage"
+  },
+  "subtasks": [],
+  "links": [
+    {
+      "type": "Blocks",
+      "key": "DPD-273"
+    }
+  ],
+  "cre
+
+--- Gmail Sample ---
+{
+  "subject": "Notes: \u201cBCRS Sales Posting Validation (Finance UAT)\u201d Mar 11, 2026",
+  "thread_url": "https://mail.google.com/mail/u/0/#search/newer_than%3A2d/FMfcgzQfCMrlrVbjgCZHXgmJgDzpwjGh",
+  "labels": [
+    "Inbox"
+  ],
+  "priority": null,
+  "senders": [
+    {
+      "name": "Gemini",
+      "email": "gemini-notes@google.com"
+    }
+  ],
+  "last_date": "Wed, Mar 11, 2026, 8:14\u202fAM",
+  "messages": [
+    {
+      "from": "Gemini <gemini-notes@google.com>",
+      "to": [
+        {
+          "name": "me",
+          "email": "michael.bui@fairpricegroup.sg"
+        }
+      ],
+      "cc": [],
+      "date": "Mar 11, 2026, 8:14\u202fAM",
+      "body": "Notes from \u201cBCRS Sales Posting Validation (Finance UAT)\u201d\nThese notes have been sent to invited guests in your organization.\nOpen meeting notes\nThe content was auto-generated on March 11, 2026, 4:12 PM GMT+08:00 and may contain errors.\nSummary\nFinancial reconciliation initiated with sales figure review and BCRS deposit
+(venv) root@31432beef7ae:/a0/usr/workdir#

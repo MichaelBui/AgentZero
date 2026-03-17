@@ -1,0 +1,33 @@
+usage: gmail_reader.py [-h] [--cdp-url CDP_URL] [--days DAYS]
+                       [--max-threads MAX_THREADS] [--max-scan MAX_SCAN]
+                       [--exclude-labels EXCLUDE_LABELS]
+                       [--priority-labels PRIORITY_LABELS]
+                       [--early-stop EARLY_STOP] [--cached-only] [--force]
+                       [--output OUTPUT] [--debug-log DEBUG_LOG]
+
+Read Gmail email threads via CDP, cache, and summarize
+
+options:
+  -h, --help            show this help message and exit
+  --cdp-url CDP_URL     Chrome DevTools endpoint (default:
+                        http://192.168.1.11:9223)
+  --days DAYS           Days to look back (default: 3)
+  --max-threads MAX_THREADS
+                        Max threads to read (default: 200)
+  --max-scan MAX_SCAN   Max total threads to scan (default: 500)
+  --exclude-labels EXCLUDE_LABELS
+                        JSON array of labels to exclude
+  --priority-labels PRIORITY_LABELS
+                        JSON array of priority labels, highest first
+  --early-stop EARLY_STOP
+                        Stop after N consecutive cached/unchanged threads
+                        (default: 5, 0=disabled)
+  --cached-only         Output cached summaries from DB without browser
+                        fetching (fast, for reports)
+  --force               Bypass change detection, re-fetch and re-summarize all
+  --output OUTPUT       Write results to this file (default: data/gmail-
+                        output.md)
+  --debug-log DEBUG_LOG
+                        Write debug messages to this file (default:
+                        data/gmail-debug.log)
+(venv) root@f956fe612a4b:/a0/usr/workdir#

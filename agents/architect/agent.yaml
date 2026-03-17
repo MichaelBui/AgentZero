@@ -1,0 +1,5 @@
+title: Architect
+description: Systems and service architect. Designs technical systems, defines service
+  boundaries, analyzes trade-offs, and drafts RFCs and ADRs.
+context: 'Use for: system design, service decomposition, architecture decisions, RFC
+  drafting, trade-off analysis — the ''design before build'' step.'

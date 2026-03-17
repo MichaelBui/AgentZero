@@ -1,0 +1,104 @@
+/a0/usr/skills/gmail/scripts/gmail_reader.py 759 lines
+>>>
+500     parser = argparse.ArgumentParser(
+501         description="Read Gmail email threads via CDP, cache, and summarize"
+502     )
+503     parser.add_argument("--cdp-url", default=DEFAULT_CDP,
+504                         help=f"Chrome DevTools endpoint (default: {DEFAULT_CDP})")
+505     parser.add_argument("--days", type=int, default=3,
+506                         help="Days to look back (default: 3)")
+507     parser.add_argument("--max-threads", type=int, default=200,
+508                         help="Max threads to read (default: 200)")
+509     parser.add_argument("--max-scan", type=int, default=500,
+510                         help="Max total threads to scan (default: 500)")
+511     parser.add_argument("--exclude-labels", default=DEFAULT_EXCLUDE,
+512                         help="JSON array of labels to exclude")
+513     parser.add_argument("--priority-labels", default=DEFAULT_PRIORITY,
+514                         help="JSON array of priority labels, highest first")
+515     parser.add_argument("--early-stop", type=int, default=5,
+516                         help="Stop after N consecutive cached/unchanged threads (default: 5, 0=disabled)")
+517     parser.add_argument("--cached-only", action="store_true",
+518                         help="Output cached summaries from DB without browser fetching (fast, for reports)")
+519     parser.add_argument("--force", action="store_true",
+520                         help="Bypass change detection, re-fetch and re-summarize all")
+521     _data_dir = Path(__file__).resolve().parent.parent / "data"
+522     parser.add_argument("--output", default=str(_data_dir / "gmail-output.md"),
+523                         help="Write results to this file (default: data/gmail-output.md)")
+524     parser.add_argument("--debug-log", default=str(_data_dir / "gmail-debug.log"),
+525                         help="Write debug messages to this file (default: data/gmail-debug.log)")
+526     args = parser.parse_args()
+527 
+528     global _output_file, _debug_file
+529     for p in (Path(args.output), Path(args.debug_log)):
+530         p.parent.mkdir(parents=True, exist_ok=True)
+531     _output_file = open(args.output, "w", encoding="utf-8", buffering=1)
+532     _debug_file = open(args.debug_log, "w", encoding="utf-8", buffering=1)
+533     eprint(f"Gmail Reader started (output={args.output}, debug={args.debug_log})")
+534 
+535     try:
+536         exclude_labels = json.loads(args.exclude_labels)
+537     except json.JSONDecodeError:
+538         eprint(f"ERROR: Invalid JSON for --exclude-labels: {args.exclude_labels}")
+539         sys.exit(1)
+540     try:
+541         priority_labels = json.loads(args.priority_labels)
+542     except json.JSONDecodeError:
+543         eprint(f"ERROR: Invalid JSON for --priority-labels: {args.priority_labels}")
+544         sys.exit(1)
+545 
+546     if args.force:
+547         eprint("--force: recreating database from scratch")
+548     db = get_gmail_db(DB_PATH, force=args.force)
+549     pw = browser = None
+550 
+551     if args.cached_only:
+552         try:
+553             summaries = db.get_all_summaries(source="gmail")
+554             eprint(f"Cached-only mode: {len(summaries)} summaries from DB")
+555             for s in summaries:
+556                 meta = json.loads(s.get("metadata", "{}"))
+557                 labels = meta.get("labels", [])
+558                 priority = meta.get("priority")
+559                 senders = []
+560                 _print_output(
+561                     s["resource_id"], s.get("title", "(no subject)"),
+562                     s.get("summary", "(no summary)"),
+563                     labels, priority, senders, "",
+564                 )
+565             eprint(f"Done: {len(summaries)} cached summaries output")
+566         finally:
+567             db.close()
+568             if _output_file and _output_file is not sys.stdout:
+569                 _output_file.close()
+570             if _debug_file and _debug_file is not sys.stderr:
+571                 _debug_file.close()
+572         return
+573 
+574     try:
+575         eprint(f"Connecting to browser at {args.cdp_url}...")
+576         pw, browser, page = connect_browser(args.cdp_url)
+577         eprint("Browser connected.")
+578 
+579         # ── Phase 1: Scan listing pages to collect thread metadata ──
+580         thread_infos = []
+581         threads_to_fetch = []
+582         seen_thread_ids = set()
+583         scanned = 0
+584         skipped_excluded = 0
+585         skipped_unchanged = 0
+586         consecutive_cached = 0
+587         early_stop_triggered = False
+588         page_num = 1
+589 
+590         eprint(f"\nPhase 1: Scanning listing (target: {args.max_threads}, "
+591                f"scan limit: {args.max_scan}, early-stop: {args.early_stop})...")
+592 
+593         while len(thread_infos) < args.max_threads and scanned < args.max_scan:
+594             if not navigate_to_page(page, args.days, page_num):
+595                 if page_num == 1:
+596                     eprint("FATAL: 0 threads found - Gmail DOM selectors may need updating.")
+597                     sys.exit(2)
+598                 eprint(f"  Page {page_num}: failed to load, stopping.")
+599                 break
+600 
+<<<

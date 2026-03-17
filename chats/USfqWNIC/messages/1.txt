@@ -1,0 +1,35 @@
+#### Extract all Jira tickets assigned to Michael or where he is mentioned in the last 2 days.
+
+*   **DPD-645:** Improve event sync to prevent overage (Status: IN RELEASE QUEUE, Assignee: Michael Bui). Michael made updates on March 3rd and has been active in comments regarding reducing function usage.
+*   **DPD-644:** [RMN] Streamline event sync from Segment.io to OSMOS to resolve overage (Status: TO BE DEFINED, Assignee: Michael Bui). This was assigned to Michael by Nikhil Grover on March 11, 2026.
+*   **DPD-590:** Clean up archived proposals after PRD release (Status: TO BE DEFINED, Assignee: Michael Bui). Michael is listed as the assignee.
+
+#### Extract all GChat messages directed to Michael or asking for action in the last 2 days.
+
+*   **Trina Boquiren (Direct Message):** Requested Michael to host the Q1 All Hands this Thursday (9 am to 2 pm). Trina also reminded Michael to drop by her desk for a meeting.
+*   **Nikhil Grover (Direct Message):** Discussed the creation of feature flags for product configuration and requested Michael's input on capturing the swim lane name from the orchestrator.
+*   **Pamela Koh (Marketplace space):** Requested an investigation into a mapping issue for a new SKU in a supplier account (Eurolink) after Osmos requested a separate ticket.
+*   **Lalita Phichagonakasit (Marketplace space):** Asked for assistance checking why a seller (Pets' Station) did not receive a picklist email.
+*   **Charlene Tan (Marketplace space):** Requested investigation into why offer discount prices are not showing for published SKUs and why description/image changes are not pushing to pending verification.
+*   **Milind Badame (Marketplace space):** Requested a fix for E2E failures caused by seeing "Express delivery" instead of "1 hour delivery" and inquired about disabling a recurring pop-up.
+*   **Wai Ching Chan (Marketplace space):** Asked Michael to double-confirm details for two specific orders at Orchid Country Club.
+
+#### Extract all Gmail threads asking Michael for action or review in the last 2 days.
+
+*   **Digital Product Development > SLO version 2 Guidelines:** Jazz Tong commented and asked if the team can move to a Google Doc for easy sign-off.
+*   **NTUC Enterprise-2025 Web Service Penetration Testing for RMN APIs:** Jazz Tong followed up asking for the final report.
+*   **Pipeline for DPD-715 failed:** Multiple notifications regarding pipeline failures for the marketing service, requiring attention.
+*   **Invitation: FPG : Onsite programmatic @ Thu Mar 12, 2026:** Nikhil Grover invited Michael to a meeting.
+*   **Invitation: BCRS Sales Posting Validation @ Wed Mar 11, 2026:** Prajney Sribhashyam sent multiple updates regarding this meeting invitation.
+*   **Risk Acceptance and Waiver (RAW) reminders:** Automated reminders regarding the submission and approval of the RAW form for "Signcloud Saas User access management."
+
+#### Identify any items Michael is waiting on (follow-ups) from all sources.
+
+*   **Meta (via Jira/Chat):** Michael and Nikhil are waiting on Meta to enable configuration updates to unblock development (referenced in RM-556 and previous project status).
+*   **Osmos/Vipul:** Michael is waiting on a Handover document for the "Take over Segment destination functions" task (DPD-273).
+*   **Security Teams (via Gmail):** Michael is waiting for the review of the RAW form for "Signcloud Saas User access management."
+*   **Jira/Development:** The "Improve event sync" (DPD-645) task is scheduled for a production release attempt on March 15th, pending the outcome of the UAT verification.
+
+#### Summarize the remaining items from Jira, GChat, and Gmail.
+
+The remaining items highlight a high volume of operational support, project delivery, and administrative tasks. **Jira** items are focused on streamlining data syncs (Segment.io to OSMOS) and technical cleanup tasks. **GChat** communication is heavy on production support, specifically investigating issues with delivery slots, vendor/SKU mapping, and order status accuracy, alongside event hosting requests. **Gmail** activity consists mostly of meeting coordination for finance/sales validation, automated security compliance reminders for the RAW form, and alerts regarding pipeline failures and Datadog monitoring. Michael is juggling active development for RMN (Media Monetization) and BCRS projects while managing urgent production support requests and team administrative responsibilities.

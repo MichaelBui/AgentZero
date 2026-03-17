@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/a0/usr/skills/jira/scripts/jira_reader.py", line 120, in <module>
+    main()
+    ~~~~^^
+  File "/a0/usr/skills/jira/scripts/jira_reader.py", line 49, in main
+    setup_output_redirection(args)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/a0/usr/skills/jira/scripts/jira_common.py", line 506, in setup_output_redirection
+    _output_file = open(args.output, "w", encoding="utf-8", buffering=1)
+PermissionError: [Errno 13] Permission denied: '/a0/usr/skills/jira/data/jira-output.md'
+(venv) root@f956fe612a4b:/a0/usr/workdir# (venv) root@f956fe612a4b:/a0/usr/workdir# > > > > Notification sent successfully
+{"success":true,"title":"Jira Data Sync","priority":4,"message":"❌ Jira sync failed. Check /a0/usr/skills/jira/data/jira-debug.log for details."}
+(venv) root@f956fe612a4b:/a0/usr/workdir#

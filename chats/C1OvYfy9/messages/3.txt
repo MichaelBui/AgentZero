@@ -1,30 +1,19 @@
-=== STDOUT ===
-
-📋 Backup paths configured: 1
-   - /a0/usr
+Backup paths configured: 1
+  - /a0/usr
 
 ============================================================
 Backing up: /a0/usr
 ============================================================
   📋 Branch: main
   📦 Staging changes...
-  💾 Committing: Backup [2026-03-05 04:02:28]
+  💾 Committing: Backup [2026-03-17 10:02:57]
+  ⚠️  Commit warning: fatal: could not open '.git/COMMIT_EDITMSG': Permission denied
+
   🔄 Fetching remote...
   🔀 Checking remote state...
   ℹ️  No remote commits to merge
-  📤 Pushing to remote...
-  ✅ Successfully pushed to origin/main
+  ℹ️  Nothing to push - already in sync with remote
 
-============================================================
-Backup Summary
-============================================================
-  ✅ Successful: 1
-  ❌ Failed: 0
-
-🎉 Backup completed successfully!
-
-=== STDERR ===
-
-=== RETURN CODE ===
-0
-(venv) root@2bd73a68eeb0:/a0/usr/workdir#
+Backup complete: 1 succeeded, 0 failed
+{"summary":{"successful":1,"failed":0},"dry_run":false,"results":[{"path":"/a0/usr","success":true}]}
+(venv) root@f956fe612a4b:/a0/usr/workdir#

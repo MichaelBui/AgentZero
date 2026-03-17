@@ -1,0 +1,72 @@
+### Daily Briefing: 2026-03-14
+
+#### 🔴 My Action Items (Pending My Action)
+
+1. **Jira DPD-715: Dynamic ad slot configuration for Homepage swimlanes**
+   - **Source:** Jira
+   - **Reference:** DPD-715
+   - **What:** I am currently developing the dynamic ad slot configuration for swimlanes. The requirement is to control ad placement via Split feature flags to optimize homepage layout without code changes. I need to complete the implementation to meet the upcoming due date of 2026-03-17.
+   - **Key Quote:** "As a Product Manager, I want to control product ad placement and count via a Split feature flag, So that I can optimize the homepage layout..." — Product Manager, 2026-03-10
+   - **Who Asked:** Product Manager
+   - **Urgency:** 🟡 Today (Due: 2026-03-17)
+   - **Related:** DPD-710
+   - **Suggestion:** Prioritize the development of the Split configuration logic to ensure the feature is ready for the upcoming release cycle.
+
+2. **Advertima / RMN Alerts & Sync Deployment**
+   - **Source:** Gmail / GChat
+   - **Reference:** Advertima / Open Project Items
+   - **What:** I need to confirm with the network team if the traffic pattern from the sync test deployment in NEX is considered safe. Advertima is waiting on this confirmation before expanding the deployment to all cashier screens in NEX. Also, need to finalize the schedule for the 'heat fix' across remaining stores (AMK, Jurong Point, Parkway, JEM, Hougang, Changi).
+   - **Key Quote:** "The sync test deployment has been running for almost a week in NEX. Did the network team report back on whether the traffic pattern is considered safe?" — Christian Bahrendt, 2026-03-12
+   - **Who Asked:** Christian Bahrendt
+   - **Urgency:** 🟡 Today
+   - **Related:** Advertima sync threads
+   - **Suggestion:** Reach out to the network team immediately regarding the traffic pattern report. Once confirmed, coordinate the Monday deployment for NEX cashier screens with Christian and Avan.
+
+3. **BCRS SAP Posting - Verification**
+   - **Source:** GChat (BCRS ECOMM SAP POSTING)
+   - **What:** There are ongoing BCRS deposit posting validations with finance. Need to monitor for any failed postings or requests for manual intervention, as this is a high-priority financial interface process.
+   - **Key Quote:** "Hi We are validating all sales postings with finance at 2:30. Could you please be available for support, i.e. if any issue" — Prajney Sribhashyam, 2026-03-11
+   - **Who Asked:** Prajney Sribhashyam
+   - **Urgency:** 🟢 This week
+   - **Related:** BCRS Firefighting Group
+   - **Suggestion:** Keep an eye on the `#dpd-dba` and `BCRS ECOMM SAP POSTING` channels for any fallout from the recent deployments.
+
+#### 🟡 My Follow-Ups (Track Who & What)
+
+1. **Wait on: Network Team (regarding traffic pattern)**
+   - **Source:** Gmail
+   - **Reference:** Advertima / Open Project Items
+   - **Waiting On:** Network Team
+   - **What Michael Asked:** Michael requested a report on whether the Advertima content sync traffic pattern is safe after a week of testing.
+   - **Key Quote:** "Did the network team report back on whether the traffic pattern is considered safe?" — Christian Bahrendt, 2026-03-12
+   - **Since:** 2026-03-12
+   - **Days Waiting:** 2
+   - **Suggestion:** Nudge the network team lead if no update by EOD.
+
+2. **Wait on: Advertima/ADE (regarding Heat Fix & Sync Schedule)**
+   - **Source:** Gmail
+   - **Reference:** Advertima / Open Project Items
+   - **Waiting On:** Christian Bahrendt
+   - **What Michael Asked:** Waiting for Christian to finalize the heat fix schedule for remaining stores and confirm ADE availability.
+   - **Key Quote:** "This would be my proposal to finalise the heat fix. Availabilities depend on ADE..." — Christian Bahrendt, 2026-03-05
+   - **Since:** 2026-03-05
+   - **Days Waiting:** 9
+   - **Suggestion:** This is ongoing. Ensure the Monday schedule is communicated by EOD today.
+
+#### 📋 Summary of Everything Else
+
+**Jira — Other Active Tickets:**
+- **[DPD-645] Improve event sync to prevent overage** — IN RELEASE QUEUE — Michael Bui
+  - **Latest update:** Verified UAT data. Tentative plan: Enable in PRD on 15/03 (Sun) for 3 hours, then full enable if stable.
+  - **Suggestion:** Keep as primary focus for weekend monitoring.
+
+**GChat — Informational Conversations:**
+- **Product x RMN x Platform:** Discussion on standardizing banner auto-scroll to 3s (from 5s). Vivian Lim shared findings from Omni home search launch; recommending 100% rollout.
+- **QE <-> All Tribes:** QE requested ETA on DPD-738 fix; Milind confirmed E2E updated.
+
+**Gmail — Other Threads:**
+- **[Cybersecurity Awareness] Privacy in Practice:** Newsletter.
+- **Google Cloud Labs (Mar 25):** Invitation for hands-on autonomous agents workshop.
+
+**Quick Stats:**
+3 action items | 2 follow-ups | 4 other items across 0 memory items, 6 Jira tickets, 96 chats, 57 emails.

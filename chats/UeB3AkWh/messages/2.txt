@@ -1,0 +1,156 @@
+area: fragments
+timestamp: 2026-03-11 08:36:54
+id: PkhLYw1I6L
+_consolidation_similarity: 0.9
+Content: Upcoming meetings on schedule: Sales Posting Validation, D&T Q1 All Hands
+
+source: /a0/knowledge/main/about/github_readme.md
+area: main
+source_file: github_readme.md
+source_path: /a0/knowledge/main/about/github_readme.md
+file_type: md
+knowledge_source: True
+import_timestamp: None
+id: WOZFfroMRA
+timestamp: 2026-02-20 16:06:25
+Content: ## 🎯 Changelog
+
+### v0.9.8 - Skills, UI Redesign & Git projects
+[Release video](https://youtu.be/NV7s78yn6DY)
+
+- Skills
+    - Skills System replacing the legacy Instruments with a new `SKILL.md` standard for structured, portable agent capabilities.
+    - Built-in skills, and UI support for importing and listing skills
+- Real-time WebSocket infrastructure replacing the polling-based approach for UI state synchronization
+- UI Redesign
+    - Process groups to visually group agent actions with expand/collapse support
+    - Timestamps, steps count and execution time with tool-specific badges
+    - Step detail modals with key-value and raw JSON display
+    - Collapsible responses with show more/less and copy buttons on code blocks and tables
+    - Message queue system allowing users to queue messages while the agent is still processing
+    - In-browser file editor for viewing and editing files without leaving the UI
+    - Welcome screen redesign with info and warning banners for connection security, missing API keys, and system resources
+    - Scheduler redesign with standalone modal, separate task list, detail and editor components, and project support
+    - Smooth response rendering and scroll stabilization across chat, terminals, and image viewer
+    - Chat width setting and reworked preferences panel
+    - Image viewer improvements with scroll support and expanded viewer
+    - Redesigned sidebar with reusable dropdown component and streamlined buttons
+    - Inline button confirmations for critical actions
+    - Improved login design and new logout button
+    - File browser enhanced with rename and file actions dropdown
+- Git projects
+    - Git-based projects with clone authentication for public and private repositories
+- Four new LLM providers: CometAPI, Z.AI, Moonshot AI, and AWS Bedrock
+- Microsoft Dev Tunnels integration for secure remote access
+- User data migration to `/usr` directory for cleaner separation of user and system files
+- Subagents system with configurable agent profiles for different roles
+- Memory operations offloaded to deferred tasks for better performance
+- Environment variables can now configure settings via `A0_SET_*` prefix in `.env`
+- Automatic migration with overwrite support for `.env`, scheduler, knowledge, and legacy directories
+- Projects support extended to MCP, A2A, and external API
+- Workdir outside project support for more flexible file organization
+- Agent number tracking in backend and responses for multi-agent identification
+- Many bug fixes and stability improvements across the UI, MCP tools, scheduler, uploads, and WebSocket handling
+
+
+### v0.9.7 - Projects
+[Release video](https://youtu.be/RrTDp_v9V1c)
+- Projects management
+    - Support for custom instructions
+    - Integration with memory, knowledge, files
+    - Project specific secrets 
+- New Welcome screen/Dashboard
+- New Wait tool
+- Subordinate agent configuration override support
+- Support for multiple documents at once in document_query_tool
+- Improved context on interventions
+- Openrouter embedding support
+- Frontend components refactor and polishing
+- SSH metadata output fix
+- Support for windows powershell in local TTY utility
+- More efficient selective streaming for LLMs
+- UI output length limit improvements
+
+### v0.9.6 - Memory Dashboard
+[Release video](https://youtu.be/sizjAq2-d9s)
+- Memory Management Dashboard
+- Kali update
+- Python update + dual installation
+- Browser Use update
+- New login screen
+- LiteLLM retry on temporary errors
+- Github Copilot provider support
+
+area: main
+id: zK4PIdtT6H
+timestamp: 2026-02-22 12:48:50
+Content: # Michael - Communication & Decision Making
+
+## Output Preferences
+- **Less text, more visuals** — concise + Mermaid diagrams
+- Visual-first thinker: organizes knowledge through diagrams, architecture maps, structured visual hierarchies
+- Progressive disclosure: simple overview first, details on demand
+
+## Communication Style (How to Talk to Michael)
+- Direct and dense — speak like a peer engineer
+- Don't explain basics (e.g., what a race condition is) — explain WHERE it's happening in specific code
+- Debate is welcome — technical truth beats polite agreement
+- Financially literate — weigh technical decisions against financial impact
+
+## ⚠️ CRITICAL: Decision Making Rule
+**GUESSING IS STRICTLY FORBIDDEN!!!**
+
+When Michael is stuck between options, the tipping factor depends on the situation. 
+- **ALWAYS ask him directly** for detailed nuances and priorities in that specific context.
+- Never assume or guess what matters most in a decision scenario.
+- Ask clarifying questions when trade-offs need to be made.
+
+area: fragments
+timestamp: 2026-03-14 14:58:11
+consolidation_action: keep_separate
+updated_from: oZOJ9yDegI
+consolidated_from: ['ndZV63Yr3H', 'new_memory']
+historical_notes: The new memory provided specific deployment status which was already present in the existing memory but fragmented. The existing memory contained broader context including Jira ticket details and Michael's task status. The consolidation merges the specific deployment confirmation with the comprehensive operational update and ticket tracking into a single, cohesive record.
+importance_score: 0.95
+consolidation_type: Merged new deployment confirmation with existing detailed operational status and Jira tracking to eliminate redundancy while preserving all critical context.
+id: P1vVAfTXug
+_consolidation_similarity: 1.0
+updated_at: 2026-03-14 04:55:21
+update_source: New memory provided context for OMNI-1191
+last_updated: 2026-03-14 04:55:17
+update_type: appended_follow_ups
+has_deployment_info: True
+timestamp_updated: 2026-03-14 14:57:55
+Content: Advertima sync testing is active in NEX store (awaiting traffic pattern confirmation from network team). Heat fix deployments are live in AMK, Jurong Point, Parkway, JEM, Hougang, and Changi stores.
+
+Critical Jira tickets assigned to Michael: DPD-645 (Improve event sync, overdue), DPD-644 (Streamline event sync for RMN, overdue), DPD-715 (Dynamic ad slot configuration, in development but pipeline broken). Michael's Jira task status (Updated 2026-03-14 03:52:41): Active/Pending Action Items include DPD-645, DPD-644, DPD-715, DPD-700 (Fix RMN pentest issues), and DPD-551 (Capture SAP Material Number). Additional Relevant/Assigned Tickets: DPD-631 (Setup alerts for Advertima platform), DPD-431 (Unassigned), OMNI-1191 (Assigned: Nikhil Grover - blocked pending Meta configuration updates for offsite ads integration with Meta on OSMOS), OMNI-1297 (Assigned: Prajney Sribhashyam).
+
+Note: Filter ID 13811 used for daily briefing.
+
+area: main
+id: ZAOtu6Zp5u
+timestamp: 2026-02-22 12:47:42
+Content: # Michael - Core Identity & Thinking Style
+
+## Basic Info
+- **Name:** Michael
+- **Pronouns:** He/Him
+- **Timezone:** Asia/Singapore
+- **Communication:** Prefers concise, high-signal replies with dry wit. Skip intros, filler, and "Great question!" energy.
+
+## Core Personality
+Systems-oriented builder-strategist. Moves from "how does this work?" to "how does this hold up at scale, what does it cost, and does it actually solve the problem?" in a single breath.
+
+## Thinking Traits
+- **Curiosity with urgency** — tinkers to reduce future failure space, not just for fun
+- **Pragmatic perfectionist** — ships working solutions first, refactors aggressively later
+- **Failure anticipator** — proactively stress-tests, monitors health before problems surface
+- **Craft-sensitive ego** — grows from concrete technical challenge, not vague praise
+- **Builder's agency** — needs influence over architecture, budget, long-term technical direction
+- **Quiet relentlessness** — consistently pushing toward correctness, not flashy
+
+## Unchanging Core
+- Systems-thinking view of world as interacting layers
+- Discomfort with brittleness → automation, documentation, repeatable patterns
+- Craft-sensitive honesty that welcomes concrete challenge
+- Builder's need for agency over architecture and direction

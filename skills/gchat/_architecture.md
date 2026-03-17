@@ -32,7 +32,7 @@ flowchart TD
 
 ### Early Stop
 
-Configurable via `--early-stop N` (default: 5, 0=disabled). When N consecutive conversations are found unchanged (timestamp match), scanning stops early. This significantly speeds up subsequent runs.
+Configurable via `--early-stop N` (default: 3, 0=disabled). When N consecutive conversations are found unchanged (timestamp match), fetching stops but feed scan continues. All remaining conversations are treated as unchanged and included in the output using cached data. This preserves the full response while skipping expensive detail fetches.
 
 ## Data Available in Home Feed (Without Opening Conversation)
 
@@ -219,10 +219,13 @@ flowchart TD
 | `--max-scan` | `100` | Max feed items to scan (safety cap) |
 | `--max-scroll` | `5` | Max scroll-up iterations per conversation |
 | `--max-expansion` | `5` | Max expansion rounds for collapsed messages |
-| `--early-stop` | `3` | Stop after N consecutive unchanged convos or cached messages during scroll (0=disabled) |
+| `--early-stop` | `3` | Stop fetching after N consecutive unchanged convos; scan continues, output includes all (0=disabled) |
 | `--focus-title` | *(none)* | Substring filter for conversation titles |
+| `--cached-only` | `false` | Output cached summaries from DB without browser (fast, for reports) |
 | `--force` | `false` | Bypass change detection, re-fetch and re-summarize all |
 | `--debug-dom` | `false` | Dump Home feed DOM to stderr and exit |
+| `--output` | `data/gchat-output.md` | Write results to file (clean markdown for AI agents) |
+| `--debug-log` | `data/gchat-debug.log` | Write debug/progress messages to file |
 
 ## Metadata Captured
 

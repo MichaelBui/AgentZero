@@ -1,0 +1,5 @@
+{
+    "chat_model_name": "f/gemini-3.1-flash-lite-preview",
+    "util_model_name": "local/qwen3.5-35b-a3b:instruct-reasoning",
+    "browser_model_name": "local/qwen3.5-35b-a3b:instruct-reasoning"
+}

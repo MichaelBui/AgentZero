@@ -1,0 +1,103 @@
+/a0/usr/workdir/gmail_sync/scripts/gmail_summarizer.py 133 lines
+>>>
+  1 """
+  2 AI summarization for Gmail threads via LiteLLM proxy.
+  3 
+  4 Generates concise summaries of email threads using a lightweight model
+  5 to reduce tokens for downstream reasoning.
+  6 """
+  7 
+  8 import json
+  9 import os
+ 10 import sys
+ 11 from typing import Optional
+ 12 
+ 13 import requests
+ 14 
+ 15 LITELLM_BASE = os.environ.get("LITELLM_BASE_URL", "https://llm.gigary.com/v1")
+ 16 SUMMARIZE_MODEL = os.environ.get("SUMMARIZE_MODEL", "local/qwen3.5-35b-a3b:instruct-reasoning")
+ 17 LITELLM_API_KEY = os.environ.get("API_KEY_OTHER", os.environ.get("LLAMA_TOKEN", ""))
+ 18 MAX_SUMMARY_WORDS = int(os.environ.get("MAX_SUMMARY_WORDS", "500"))
+ 19 
+ 20 
+ 21 def eprint(*a, **kw):
+ 22     print(*a, file=sys.stderr, **kw)
+ 23 
+ 24 
+ 25 def summarize_resource(
+ 26     title: str,
+ 27     source_type: str,
+ 28     atomic_items: list[dict],
+ 29     metadata: Optional[dict] = None,
+ 30     existing_summary: Optional[str] = None,
+ 31 ) -> str:
+ 32     """Generate a summary for an email thread from its atomic messages.
+ 33 
+ 34     If existing_summary is provided, uses an anchored update approach
+ 35     to extend the existing summary with new content, preserving historical context.
+ 36     """
+ 37     if not atomic_items:
+ 38         return existing_summary or ""
+ 39 
+ 40     content_parts = []
+ 41     for item in atomic_items:
+ 42         author = item.get("author", "Unknown")
+ 43         ts = item.get("created_at", "")
+ 44         text = item.get("content", "")
+ 45         if text:
+ 46             content_parts.append(f"[{ts}] {author}: {text}")
+ 47 
+ 48     content_block = "\n---\n".join(content_parts)
+ 49     meta_json = json.dumps(metadata or {}, indent=2, ensure_ascii=False)
+ 50 
+ 51     if existing_summary:
+ 52         prompt = _build_update_prompt(title, source_type, meta_json, existing_summary, content_block)
+ 53     else:
+ 54         prompt = _build_full_prompt(title, source_type, meta_json, content_block)
+ 55 
+ 56     return _call_llm(prompt)
+ 57 
+ 58 
+ 59 def _build_full_prompt(title: str, source_type: str, meta_json: str, content: str) -> str:
+ 60     return f"""You are a concise executive assistant. Summarize the following {source_type} content for a daily work briefing.
+ 61 
+ 62 Resource: {title}
+ 63 Metadata: {meta_json}
+ 64 
+ 65 Content (chronological):
+ 66 {content}
+ 67 
+ 68 Instructions:
+ 69 - Identify: Who are the key participants and what are their roles?
+ 70 - Identify: What is the main topic/request?
+ 71 - Identify: What actions are pending and who owns them?
+ 72 - Identify: What decisions were made?
+ 73 - Identify: Key dates, deadlines, follow-ups
+ 74 - Keep all person names, email addresses, dates, and specific references
+ 75 - Be factual and specific - do not generalize
+ 76 - Maximum {MAX_SUMMARY_WORDS} words"""
+ 77 
+ 78 
+ 79 def _build_update_prompt(
+ 80     title: str, source_type: str, meta_json: str, existing: str, new_content: str
+ 81 ) -> str:
+ 82     return f"""You are a concise executive assistant. Update the existing summary with new information.
+ 83 
+ 84 Resource: {title}
+ 85 Metadata: {meta_json}
+ 86 
+ 87 Existing summary:
+ 88 {existing}
+ 89 
+ 90 New content to incorporate:
+ 91 {new_content}
+ 92 
+ 93 Instructions:
+ 94 - Merge the new information into the existing summary
+ 95 - Update status, pending actions, and decisions based on new content
+ 96 - Remove outdated information that is contradicted by new content
+ 97 - Keep all person names, email addresses, dates, and specific references
+ 98 - Preserve historical context from the existing summary that is still relevant
+ 99 - Be factual and specific - do not generalize
+100 - Maximum {MAX_SUMMARY_WORDS} words"""
+<<<

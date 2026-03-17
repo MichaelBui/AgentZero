@@ -1,0 +1,162 @@
+area: fragments
+timestamp: 2026-03-14 03:49:05
+consolidation_action: keep_separate
+consolidated_from: ['MUQg7HrRK2', 'REgFmnYn0n']
+historical_notes: Consolidated multiple overlapping Jira ticket tracking memories for Michael. Retained specific ticket details and status classifications from previous records.
+importance_score: 0.9
+consolidation_type: merge_redundant_lists
+id: XZm7BWG6qr
+_consolidation_similarity: 0.95
+updated_from: oZOJ9yDegI
+updated_at: 2026-03-14 03:24:44
+update_source: fragment_processing
+last_updated: 2026-03-14 03:24:50
+update_type: appended_follow_ups
+Content: Michael's Jira task status: 
+
+Active/Pending Action Items: DPD-645 (Improve event sync), DPD-644 (Streamline event sync from Segment.io to OSMOS), DPD-715 (Dynamic ad slot configuration). 
+
+Additional Relevant/Assigned Tickets: DPD-700 (Fix RMN pentest issues), DPD-551 (Capture SAP Material Number), DPD-631 (Setup alerts for Advertima platform), DPD-431 (Unassigned), OMNI-1191 (Assigned: Nikhil Grover), and OMNI-1297 (Assigned: Prajney Sribhashyam).
+
+area: fragments
+timestamp: 2026-02-22 07:26:26
+id: nUoNbMkqlE
+_consolidation_similarity: 0.9
+Content: The notify-user skill was tested and confirmed working - a test notification was sent successfully
+
+area: fragments
+timestamp: 2026-02-22 09:03:19
+id: z7qJlmv4XZ
+Content: Script handles empty/no-change scenarios gracefully: no local changes, nothing to commit, nothing to push all return success
+
+area: fragments
+timestamp: 2026-03-11 08:36:54
+id: PkhLYw1I6L
+Content: Upcoming meetings on schedule: Sales Posting Validation, D&T Q1 All Hands
+
+area: fragments
+timestamp: 2026-02-22 07:25:42
+consolidation_action: replace
+replaced_memories: ['95c7Xuh8iJ']
+consolidated_from: ['95c7Xuh8iJ']
+historical_notes: Previous memory contained basic info about notify-user skill creation with ntfy.sh endpoint. This consolidated version adds skill location, file structure details, parameter specifications, and testing information.
+importance_score: 0.85
+consolidation_type: supersession_with_enrichment
+id: Qr4Bx2ZBrh
+_consolidation_similarity: 0.9400000000000001
+Content: User created an agent skill "notify-user" to send notifications via ntfy.sh service. The ntfy.sh endpoint URL is https://ntfy.sh/AgentZero-eHqWuKJQWSuKmXBE. The skill is located at /a0/usr/skills/notify-user/ and includes SKILL.md documentation and a Python script (notify.py). The script supports message, title, and priority (1-5) parameters where priority 5 is highest and 1 is lowest. The skill was tested successfully with two test notifications.
+
+area: solutions
+timestamp: 2026-02-22 07:26:04
+consolidation_action: replace
+replaced_memories: ['a7KyDuckmu']
+id: x5w78weHLw
+_consolidation_similarity: 1.0
+consolidated_from: ['a7KyDuckmu']
+historical_notes: Previous version contained same skill creation steps but with less detail on priority choices (1-5 range), default title value, and less comprehensive error handling description. Original timestamp: 2026-02-22 07:24:46
+importance_score: 0.9
+consolidation_type: replace_outdated_detailed
+Content: # Problem
+ Create an agent skill 'notify-user' to notify the user by running a Python script to send an HTTP request to https://ntfy.sh/AgentZero-eHqWuKJQWSuKmXBE
+# Solution
+ 1. Create the skill directory structure: `mkdir -p /a0/usr/skills/notify-user/scripts`
+
+2. Create the SKILL.md documentation file at `/a0/usr/skills/notify-user/SKILL.md` with skill description, usage instructions, and examples.
+
+3. Create the Python notification script at `/a0/usr/skills/notify-user/scripts/notify.py`:
+   - Use the `requests` library to send HTTP POST requests
+   - Set the ntfy.sh endpoint: `NTFY_URL = "https://ntfy.sh/AgentZero-eHqWuKJQWSuKmXBE"`
+   - Implement `send_notification(message, title, priority)` function that sends POST request with headers for Title and Priority
+   - Use argparse for command-line arguments: message (required), --title (default: "Agent Zero Notification"), --priority (default: 3, choices 1-5)
+   - Add error handling for timeouts, connection errors, and general exceptions
+
+4. Make the script executable: `chmod +x /a0/usr/skills/notify-user/scripts/notify.py`
+
+5. Test the skill: `python /a0/usr/skills/notify-user/scripts/notify.py "Test message" --title "Test" --priority 5`
+
+area: fragments
+timestamp: 2026-02-22 07:25:42
+consolidation_action: merge
+consolidated_from: ['1yx6w9EVKl']
+id: DN3VhgXgsj
+_consolidation_similarity: 0.96
+historical_notes: Original memory contained skill location and notification service information. New memory added script parameter details.
+importance_score: 0.8
+consolidation_type: complementary_information_merge
+Content: Agent skill 'notify-user' is located at /a0/usr/skills/notify-user/ with a Python script at /a0/usr/skills/notify-user/scripts/notify.py. The script sends notifications via ntfy.sh service to https://ntfy.sh/AgentZero-eHqWuKJQWSuKmXBE. It accepts parameters: message (required), --title (default: 'Agent Zero Notification'), --priority (1-5, default: 3).
+
+source: /a0/knowledge/main/about/github_readme.md
+area: main
+source_file: github_readme.md
+source_path: /a0/knowledge/main/about/github_readme.md
+file_type: md
+knowledge_source: True
+import_timestamp: None
+id: o0FYiuJM12
+timestamp: 2026-02-20 16:06:25
+Content: ### v0.8.3
+[Release video](https://youtu.be/bPIZo0poalY)
+
+- ***Planning and scheduling***
+
+### v0.8.2
+[Release video](https://youtu.be/xMUNynQ9x6Y)
+
+- **Multitasking in terminal**
+- **Chat names**
+
+### v0.8.1
+[Release video](https://youtu.be/quv145buW74)
+
+- **Browser Agent**
+- **UX Improvements**
+
+### v0.8
+[Release video](https://youtu.be/cHDCCSr1YRI)
+
+- **Docker Runtime**
+- **New Messages History and Summarization System**
+- **Agent Behavior Change and Management**
+- **Text-to-Speech (TTS) and Speech-to-Text (STT)**
+- **Settings Page in Web UI**
+- **SearXNG Integration Replacing Perplexity + DuckDuckGo**
+- **File Browser Functionality**
+- **KaTeX Math Visualization Support**
+- **In-chat File Attachments**
+
+### v0.7
+[Release video](https://youtu.be/U_Gl0NPalKA)
+
+- **Automatic Memory**
+- **UI Improvements**
+- **Instruments**
+- **Extensions Framework**
+- **Reflection Prompts**
+- **Bug Fixes**
+
+## 🤝 Community and Support
+
+- [Join our Discord](https://discord.gg/B8KZKNsPpj) for live discussions or [visit our Skool Community](https://www.skool.com/agent-zero).
+- [Follow our YouTube channel](https://www.youtube.com/@AgentZeroFW) for hands-on explanations and tutorials
+- [Report Issues](https://github.com/agent0ai/agent-zero/issues) for bug fixes and features
+
+area: fragments
+timestamp: 2026-02-22 08:55:49
+consolidation_action: merge
+consolidated_from: ['fngFOhV4bJ', 'eOy8sbto3r', 'DN3VhgXgsj', 'Qr4Bx2ZBrh']
+historical_notes: Consolidated git-backup and notify-user skill details with new scheduled task information. Both skills were previously documented separately; this merge combines the complete skill documentation with the new hourly backup task configuration.
+importance_score: 0.85
+consolidation_type: merge_comprehensive
+id: wVLrLeeAJh
+_consolidation_similarity: 0.9
+Content: Created git-backup skill at /a0/usr/skills/git-backup/ with SKILL.md and scripts/backup.py. The backup.py script has configurable BACKUP_PATHS (default is ["/a0/usr"]), uses git add -A to stage, commits locally, fetches remote, merges with -X ours strategy (prioritizes local changes, preserves remote in history), then pushes. The -X ours merge strategy ensures local changes win conflicts while remote content is preserved in git history for recovery if needed.
+
+Agent skill 'notify-user' is located at /a0/usr/skills/notify-user/ with a Python script at /a0/usr/skills/notify-user/scripts/notify.py. The script sends notifications via ntfy.sh service to https://ntfy.sh/AgentZero-eHqWuKJQWSuKmXBE. It accepts parameters: message (required), --title (default: 'Agent Zero Notification'), --priority (1-5, default: 3).
+
+Scheduled task 'git-backup-hourly' (UUID: C1OvYfy9) was created to run hourly at 0 * * * *, executing git-backup skill then notify-user skill to report results. Git-backup is at /a0/usr/skills/git-backup/scripts/backup.py and notify-user is at /a0/usr/skills/notify-user/scripts/notify.py with parameters --title, --priority, and message.
+
+area: fragments
+timestamp: 2026-03-11 08:32:42
+id: 8AHpS4Xj5R
+_consolidation_similarity: 1.0
+Content: Jira view ID 10489904 was used for ticket fetching task

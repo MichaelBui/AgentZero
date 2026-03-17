@@ -1,0 +1,18 @@
+Loading data files...
+Loaded: 27 Jira, 96 GChat, 57 Gmail items.
+Processing Jira...
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[1], line 143
+    141 if 'blocked' in status_name.lower() or 'urgent' in title.lower():
+    142     p_color = "🔴"
+--> 143 elif 'today' in action_reason.lower() or 'asap' in body.lower():
+    144     p_color = "🟡"
+    146 action_items.append({
+    147     "priority": f"{p_color} {key}",
+    148     "source": "Jira",
+   (...)    154     "suggestion": f"Review ticket {key}, update status, or reply to {requester}."
+    155 })
+
+NameError: name 'body' is not defined
+(venv) root@31432beef7ae:/a0/usr/workdir#

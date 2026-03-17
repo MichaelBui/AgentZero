@@ -1,0 +1,11 @@
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Cell In[1], line 16
+     13 others = []
+     15 for ticket in jira_tickets:
+---> 16     assignee = ticket.get('assignee', {}).get('displayName', '') if ticket.get('assignee') else ''
+     17     status = ticket.get('status', {}).get('name', '')
+     19     # Basic logic for categorization
+
+AttributeError: 'str' object has no attribute 'get'
+(venv) root@c7518fabb1ca:/a0/usr/workdir#

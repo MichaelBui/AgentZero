@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/a0/usr/skills/gchat/scripts/gchat_reader.py", line 909, in <module>
+    main()
+    ~~~~^^
+  File "/a0/usr/skills/gchat/scripts/gchat_reader.py", line 693, in main
+    db = get_db(force=args.force)
+  File "/a0/usr/skills/gchat/scripts/gchat_reader.py", line 83, in get_db
+    return get_gchat_db(DB_PATH, force=force)
+  File "/a0/usr/skills/gchat/scripts/gchat_db.py", line 61, in get_gchat_db
+    raise last_err  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "/a0/usr/skills/gchat/scripts/gchat_db.py", line 50, in get_gchat_db
+    conn.execute("PRAGMA journal_mode=WAL")
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: attempt to write a readonly database
+(venv) root@f956fe612a4b:/a0/usr/workdir#

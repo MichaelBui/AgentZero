@@ -1,0 +1,12 @@
+API Key detected: ATA...612 (Length: 192)
+Email: michael.bui@fairpricegroup.sg
+Resolving filter ID: 13811...
+Filter: ⭐️ [Michael Bui] WIP 🏃‍➡️
+JQL: (assignee = currentUser() OR text ~ currentUser() OR watcher = currentUser()) AND updated >= "-60d" ORDER BY updated DESC
+Fetching issues (limit=100, offset=0)...
+Found 27 total tickets, fetched 27
+Traceback (most recent call last):
+  File "/a0/usr/skills/gchat-thread-reader/scripts/gchat_thread_reader.py", line 20, in <module>
+    from playwright.sync_api import sync_playwright, TimeoutError as PwTimeout
+ModuleNotFoundError: No module named 'playwright'
+(venv) root@31432beef7ae:/a0/usr/workdir#

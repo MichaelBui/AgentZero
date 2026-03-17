@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/a0/usr/skills/jira/scripts/jira_reader.py", line 120, in <module>
+    main()
+    ~~~~^^
+  File "/a0/usr/skills/jira/scripts/jira_reader.py", line 52, in main
+    db = get_jira_db(force=args.force)
+  File "/a0/usr/skills/jira/scripts/jira_common.py", line 267, in get_jira_db
+    return _get_jira_db(DB_PATH, force=force)
+  File "/a0/usr/skills/jira/scripts/jira_db.py", line 60, in get_jira_db
+    raise last_err  # type: ignore[misc]
+    ^^^^^^^^^^^^^^
+  File "/a0/usr/skills/jira/scripts/jira_db.py", line 50, in get_jira_db
+    conn.execute("PRAGMA journal_mode=WAL")
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: attempt to write a readonly database
+(venv) root@f956fe612a4b:/a0/usr/workdir# (venv) root@f956fe612a4b:/a0/usr/workdir# > > > > Notification sent successfully
+{"success":true,"title":"Jira Data Sync","priority":4,"message":"❌ Jira sync failed. Check /a0/usr/workdir/jira-debug.log for details."}
+(venv) root@f956fe612a4b:/a0/usr/workdir#
