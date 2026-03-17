@@ -1,51 +1,5 @@
-#!/usr/bin/env python3
-"""
-GChat Reader - extract Google Chat conversations via CDP, cache, and summarize.
+(node:864) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
 
-Connects to a remote Chrome instance, navigates GChat Home feed, extracts
-conversations with progressive message collection (virtual scrolling aware).
-Caches each message in SQLite, summarizes at conversation level via AI.
-Always outputs compact summaries (group_id + name + AI summary).
 
-Usage:
-  python gchat_reader.py
-  python gchat_reader.py --days 7 --max-threads 10
-  python gchat_reader.py --cdp-url http://192.168.1.11:9223
-"""
-
-import argparse
-import json
-import queue as _queue
-import sys
-import threading
-import time
-from datetime import datetime, timedelta, timezone
-from pathlib import Path
-
-from playwright.sync_api import sync_playwright, TimeoutError as PwTimeout
-
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-from gchat_db import get_gchat_db, SkillDB
-from gchat_cleaner import clean_chat_message
-from gchat_summarizer import summarize_resource
-
-DEFAULT_CDP = "http://192.168.1.11:9223"
-GCHAT_URL = "https://chat.google.com/app/home"
-DB_PATH = Path(__file__).resolve().parent.parent / "data" / "gchat_cache.db"
-
-SEL_FEED = 'span[role="listitem"][data-group-id][data-is-unread]'
-SEL_MSG = "c-wiz[data-topic-id]"
-
-FIND_PANEL_JS = """
-function findPanel(topicId) {
-    const mid = window.innerWidth / 3;
-    if (topicId) {
-        const match = document.querySelector(
-            'c-wiz[data-topic-id="' + topicId + '"]'
-        );
-        if (match) {
-            let el = match.parentElement;
-            while (el && el !== document.body) {
-                const s = getComputedStyle(el);
-                if ((s.overflowY === "auto" || s.overflowY === "scroll")
-(venv) root@f956fe612a4b:/a0/usr/workdir#
+[SYSTEM: Returning control to agent after 15 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

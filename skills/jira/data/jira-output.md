@@ -1,36 +1,5 @@
 
 
-## jira/OMNI-1163: Enable AI Personalisation Search Capability with Algolia
-Source: jira | Key: OMNI-1163 | Status: Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Erica Lee | Reporter: Erica Lee | migration_parent: OMNI-653 | polaris-work-item-link: PRDM-12 | relates: PRDM-12, OMNI-1312
-**Status Update: OMNI-1163 (Enable AI Personalisation Search Capability with Algolia)**
-
-**Current State**
-The initiative remains in the **Ideas** backlog but is marked as **Prioritised** (**High Priority**, Status: **To Do**), assigned to **Erica Lee**. While technically feasible and linked to migration parent **OMNI-653**, immediate implementation hinges on resolving specific technical constraints regarding event completeness. The project faces a critical dependency on confirming whether current "past purchase boosting" logic will be overridden by Algolia's AI if enabled "as-is," which could inadvertently hide previously purchased items.
-
-**Problem & Opportunity**
-Customers currently face generic search results that fail to reflect individual preferences, leading to inefficient discovery. Enabling AI personalization aims to dynamically adjust search and category listings based on browsing behavior and purchase history.
-*   **Projected Impact:** A conservative 2% increase in Search Conversion Rate (CVR) is expected, driving a **$1.6M uplift** in Search GMV against a 2024 baseline of $81.7M. This also targets an increase in Overall Average Order Value (AOV).
-*   **Validation:** Based on Algolia client data showing 4.5% CTR/CVR gains, FairPrice anticipates measurable improvements in search relevance and conversion.
-
-**Key Decisions & Strategic Context**
-1.  **Scope Management:** While this ticket focuses on Algolia AI, Google Search functionality was split into a separate ticket (**OMNI-1312**) to allow immediate A/B testing of that alternative, which showed strong preliminary results (resolving 21.6% zero-result queries).
-2.  **Strategic Continuity:** Despite recent backlog movements, leadership affirmed on **2025-09-22** and again on **2026-01-19** that this is not wasted effort. It requires re-evaluation for low-risk activation once technical blockers are cleared.
-
-**Pending Actions & Ownership**
-*   **Re-validate with Algolia (Owner: Vivian Lim Yu Qian):** A meeting was scheduled for **Tuesday, 2026-03-18** to confirm specific event requirements from Algolia engineers.
-    *   *Critical Technical Question:* Determine if the effort to modify past purchase data flows is "deadly critical" or if AI logic will override existing boosting without significant engineering intervention.
-*   **Event Confirmation:** Verify that all required personalization events are live via CDP/Segment (work completed by Deloitte in Sprints 7 and 9).
-
-**Key Dates & Dependencies**
-*   **2026-03-18:** Re-validation meeting with Algolia.
-*   **Dependencies:** The ticket cannot proceed until the search provider strategy is finalized post-POC and event completeness is confirmed.
-*   **Blockers:** Uncertainty regarding the engineering effort to prevent AI logic from overriding past purchase data; confirmation that no additional tagging work is needed beyond Deloitte's delivery.
-
-**Technical References**
-*   **Provider:** Algolia (via CDP/Segment).
-*   **Related Issues:** PRDM-12, OMNI-653 (migration_parent), OMNI-1312.
-
-
 ## jira/DPD-715: Dynamic ad slot configuration for Homepage swimlanes
 Source: jira | Key: DPD-715 | Status: TESTING IN PREPRODUCTION (In Progress) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | parent: DPD-710
 **Ticket Summary: DPD-715 (Dynamic ad slot configuration for Homepage swimlanes)**
@@ -39,10 +8,10 @@ Source: jira | Key: DPD-715 | Status: TESTING IN PREPRODUCTION (In Progress) | T
 *Priority:* High | *Status:* TESTING IN PREPRODUCTION (In Progress) | *Due Date:* 2026-03-17
 
 **Current Status**
-The story is in **TESTING IN PREPRODUCTION**. The feature allows dynamic control of ad placement and count via Split feature flags, enabling layout optimization for both Omni and OG Homepages without code changes or manual API updates. As of **2026-03-16T18:07:30**, mobile application issues have been resolved, and the ticket is officially ready for UAT.
+The story is in **TESTING IN PREPRODUCTION**. The feature enables dynamic control of ad placement and count via Split feature flags, optimizing layout for Omni and OG Homepages without code changes. As of **2026-03-16T18:07:30**, mobile application issues have been resolved (ref), and the ticket is officially ready for UAT.
 
 **Pending Actions & Ownership**
-*   **UAT Initiation:** Michael Bui has confirmed readiness for UAT; stakeholders should proceed with acceptance testing immediately.
+*   **UAT Initiation:** Michael Bui confirmed readiness; stakeholders should proceed with acceptance testing immediately.
 *   **Omni Home Configuration Discrepancy:** As of **2026-03-16T16:54:01**, SplitIO changes (2, 5) successfully reflected in **OG Home** swimlanes but remain fixed at **(1, 3)** in **Omni Home** swimlanes. Michael Bui is investigating this discrepancy and coordinating with relevant team members to align Omni configurations before final deployment.
 
 **Decisions Made & Acceptance Criteria**
@@ -54,9 +23,9 @@ The story is in **TESTING IN PREPRODUCTION**. The feature allows dynamic control
 *   **Stock Integrity:** The system strictly honors existing stock availability checks before requesting ads to prevent displaying out-of-stock items.
 
 **Key Dates & Blockers**
-*   **2026-03-10T12:29:37:** Ticket created and requirements defined by Nikhil Grover.
-*   **2026-03-16T16:54:01:** Partial deployment observed (OG Home updated to 2,5; Omni Home lagging at 1,3).
-*   **2026-03-16T18:07:30:** Mobile app issues resolved; status shifted to ready for UAT.
+*   **2026-03-10T12:29:37.963+0800:** Ticket created by Nikhil Grover with requirements defined for dynamic ad slot configuration via Split flags.
+*   **2026-03-16T16:54:01.428+0800:** Partial deployment observed; OG Home updated to 2,5 while Omni Home lagged at 1,3. Michael Bui initiated coordination to resolve the Omni discrepancy.
+*   **2026-03-16T18:07:30.485+0800:** Mobile app issues resolved; status updated to ready for UAT.
 *   **2026-03-17:** Hard deadline for completion.
 *   **Blocker/Constraint:** Omni Home swimlanes are not reflecting the latest Split configuration changes (fixed at 1,3), preventing full deployment success until resolved.
 
@@ -69,37 +38,37 @@ Source: jira | Key: DPD-645 | Status: IN RELASE QUEUE (Done) | Type: Story | Pri
 **Parent:** DPD-644 ([RMN] Streamline event sync from Segment.io to OSMOS to resolve overage)
 **Linked Issues:** Blocks DPD-273
 
-### 1. Current Status/State
-*   **Deployment Outcome:** The optimization change was deployed to PROD temporarily on **2026-03-15** between 8:00 PM and 11:00 PM local time.
-*   **Immediate Result:** While no issues were detected after ~30 minutes, the deployment was reverted to version #56 at **23:02 on 2026-03-15**.
-*   **Target Metric:** The acceptance criteria required a **50% reduction** in function execution time for transaction and product events. Michael Bui noted this is a tentative target due to variable computing durations, with the primary aim being minimizing function usage.
+### 1. Current Status & Context
+*   **Objective:** Optimize the OSMOS PROD destination function in Segment to eliminate recurring monthly cost overages caused by excessive execution times.
+*   **Acceptance Criteria:** The function must complete syncing transaction and product events at least **50% faster** than baseline.
+*   **Deployment History:** A temporary optimization was deployed to PROD on **2026-03-15** between 8:00 PM and 11:00 PM local time. Despite no immediate issues detected after ~30 minutes, the deployment was reverted to version #56 at **23:02 on 2026-03-15**.
+*   **Testing Limitations:** It was confirmed by Madhuri Nalamothu (2026-03-16) that E2E testing cannot cover this scenario as it involves backend function execution rather than UI interactions.
 
 ### 2. Pending Actions & Ownership
-*   **Investigation Required:** Root cause analysis is needed regarding why the temporary deployment was reverted despite initial stability.
+*   **Root Cause Analysis:** Investigation is required to determine why the temporary PROD deployment was reverted despite initial stability.
     *   **Owner:** Michael Bui (implied based on recent activity).
-*   **Data Verification Plan:** If a new deployment window is scheduled, the following steps must be executed:
-    *   Enable change in PROD for 3 hours on Sunday (tentative time 8 PM–11 PM).
-    *   Verify data consistency between OSMOS and BigQuery against last 1-2 weeks of baseline data to ensure error rates are within threshold.
-    *   If successful, enable permanently and observe closely for 1–2 days.
-*   **Automation Gap:** A specific limitation was noted regarding E2E testing coverage; since the scenario involves UI interactions, it cannot be automated.
-    *   **Owner:** Madhuri Nalamothu (confirmed in comment on 2026-03-16).
+*   **Data Verification Strategy:** For any future deployment windows, the following must be executed:
+    *   Enable changes in PROD for 3 hours on a Sunday (tentative window: 8 PM–11 PM).
+    *   Verify data consistency between OSMOS and BigQuery against 1–2 weeks of baseline data to ensure error rates remain within threshold.
+    *   If successful, enable permanently and monitor closely for 1–2 days.
+*   **Automation Gap:** No automated E2E tests are available for this specific backend optimization; manual verification is required.
 
 ### 3. Key Decisions Made
-*   **Reversion Decision:** The temporary PROD change enabled on March 15 was rolled back to version #56 by late evening that same day.
-*   **Release Strategy:** A phased approach was agreed upon: UAT observation (2 weeks post-change) followed by a short-term PROD trial, then permanent enablement if stable.
+*   **Reversion Decision:** The PROD change enabled on March 15 was rolled back to version #56 late that evening.
+*   **Release Strategy:** A phased approach was agreed upon: UAT observation (2 weeks), followed by a short-term PROD trial, and permanent enablement only if stable.
 
 ### 4. Key Dates & Blockers
 *   **Critical Dates:**
-    *   **UAT Observation Period:** Started ~05/03/2026; observed for 2 weeks prior to the PROD attempt.
+    *   **Ticket Creation:** 2026-03-03
+    *   **Original Due Date:** 2026-03-12 (Ticket marked "Done" post-deadline).
+    *   **UAT Observation Period:** Started ~05/03/2026; observed for 2 weeks prior to PROD attempt.
     *   **PROD Trial Window:** 15/03/2026 (8:00 PM – 11:00 PM).
-    *   **Original Due Date:** 12/03/2026 (Ticket marked "Done" post-deadline due to deployment status).
-*   **Blockers:** The temporary production failure/reversion prevents the immediate elimination of recurring monthly cost overages. No specific technical blocker was cited for the revert, only the action itself.
+*   **Blockers:** The temporary production failure/reversion prevents the immediate elimination of recurring monthly cost overages. No specific technical reason for the revert was cited in the logs provided, only the action itself.
 
 ### 5. Technical References
-*   **System Components:** Segment.io -> OSMOS PROD destination function -> BigQuery.
-*   **Versions:** Reverted to version #56.
+*   **System Architecture:** Segment.io -> OSMOS PROD destination function -> BigQuery.
+*   **Versions:** Reverted to version #56; original target included optimizing execution time by 50%.
 *   **Platforms Monitored:** IOS UAT, Android UAT (Statuses listed as open/blank in comments).
-*   **Context:** Ticket created 2026-03-03; Automation limitation confirmed 2026-03-16.
 
 
 ## jira/OPCO-1940: FP VIPs encounter verification after S&G purchase for fewer reasons, vs other customers
@@ -775,70 +744,77 @@ Concurrently, engineering feedback confirmed that the current NRTI solution migh
 Source: jira | Key: OMNI-1339 | Status: UAT (In Progress) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Jia Xuan Tan | Labels: gifting | polaris-work-item-link: PRO-2419, DPD-226
 **Jira Ticket Briefing: OMNI-1339**
 **Subject:** Integration of Pine Labs API to replace current e-Voucher platform
-**Current Status:** In Progress (UAT phase; previously marked Technical Live)
+**Current Status:** In Progress (UAT) | **Priority:** High
 **Assignee:** Rajesh Dobariya | **Reporter:** Jia Xuan Tan
 
 ### **Current Status & State**
-The initial development scope from the OMNI side was completed and pushed to production with feature flags off. However, the project reverted to "In-Development" following performance issues identified by the CCO team requiring additional work. While a specific bug reported during UAT was fixed and communicated to the Pine Labs (PL) team on Feb 12, the launch is currently stalled. The ticket remains open awaiting final sign-offs and compliance resolution.
+The project aims to automate gifting fulfillment, fraud control, and scalability for the 12-person Gifting team, replacing manual Google Sheet tracking with a unified system. The initiative targets a $158m business impact. While initial development scope was completed and pushed to production with feature flags off, the launch faced delays due to performance issues identified by the CCO team and deployment failures linked to ticket **DPD-226**.
+
+As of March 17, 2026, the Technical Live date has been reset to **March 18, 2026**, following unresolved deployment issues for DPD-226. The system requires migration of e-Voucher data and updates to at least 7 APIs (including Strudel SDK) to point to the Pine Labs platform, replacing `https://www.gift.fairprice.com.sg/`.
 
 ### **Pending Actions & Ownership**
-*   **DPD Performance/Load Testing Sign-off:** CCO team (James) must secure DPD sign-off. This was originally due Feb 6 but remains pending with no confirmed date as of March 11. Owner: **CCO Team (James)**.
-*   **Data Migration Audit:** Currently in progress. Ownership unspecified, tracked by OMNI/CCO alignment.
-*   **Compliance Items:** CCO team needs to address compliance-related blockers causing the launch delay. Owner: **CCO Team**.
-*   **Follow-up:** Rajesh Dobariya to follow up on the status of DPD sign-off and performance testing results.
+*   **DPD Deployment Resolution:** Immediate focus on resolving deployment issues for ticket **DPD-226** to enable Technical Live. Owner: **Rajesh Dobariya**.
+*   **CCO Compliance & Sign-off:** CCO team (James) must secure DPD performance/load testing sign-off and resolve compliance blockers. Originally targeted Feb 6; status remains pending as of March 17.
+*   **Data Migration Audit:** Currently in progress, tracked by OMNI/CCO alignment.
 
 ### **Decisions Made**
-*   **Scope Change:** Original scope completed; new Epic required for additional CCO-driven work (performance optimization). A new delivery ticket was added with a dev completion ETA of Dec 30.
-*   **Go-Live Timeline Shifts:**
-    *   Initially targeted for end-Sept, then pushed to Jan 2026, then postponed to post-CNY (Feb/March 2026).
-    *   Current target Go-Live date set for **March 30, 2026**.
-*   **Mitigation:** A follow-up discussion was scheduled between James and Sisir on Nov 17 to determine go/no-go status; however, subsequent delays occurred.
+*   **Technical Live Adjustment:** Technical live date shifted to **March 18, 2026**, due to deployment failures on DPD-226.
+*   **Scope Evolution:** Original scope (end-Sept target) was superseded by new Epic requirements for CCO-driven performance optimization and compliance fixes.
+*   **Go-Live Timeline:** Target launch date remains set for **March 30, 2026** (post-CNY), contingent on resolving the current deployment stall.
 
 ### **Key Dates, Deadlines & Blockers**
-*   **Test Completion (UAT):** Scheduled for Jan 30 (per timeline shared by Sisir).
-*   **DPD Sign-off:** Originally targeted Feb 6; currently delayed with no new date.
+*   **Technical Live:** March 18, 2026 (Updated).
 *   **Launch Target:** March 30, 2026.
-*   **Primary Blocker:** Compliance-related work required by the CCO team; delays in DPD performance testing sign-off. No new launch date communicated as of March 11.
+*   **Primary Blocker:** Deployment failures on DPD-226 and pending CCO compliance/DPD sign-off. No new launch date communicated beyond the immediate Technical Live target.
 
 ### **Technical & Business Context**
 *   **Linked Issues:** PRO-2419, DPD-226.
-*   **Integration Scope:** Replacing `https://www.gift.fairprice.com.sg/` with Pine Labs platform. Requires migration of e-Voucher data and 7+ API integrations (Strudel SDK update).
-*   **Business Impact:** $158m value; targets efficiency, fraud control, and scalability for the Gifting team (12 staff).
-*   **Performance Testing:** PL team was instructed to share results by Jan 9; full timeline includes DPD sign-off on Feb 6.
+*   **Integration Scope:** Replaces current e-Voucher platform with Pine Labs. Requires Strudel SDK updates and migration of 7+ APIs.
+*   **Business Impact ($158m):**
+    *   **Sales Volume:** Scalable distribution for wider reach.
+    *   **Operational Efficiency:** Eliminates manual tracking, freeing man-hours.
+    *   **Fraud Control:** Enhanced verification processes.
+    *   **Financial Reporting:** Improved accuracy on breakage rates and redemption values.
 
 
 ## jira/OMNI-1249: B2B Solution: Integration work
 Source: jira | Key: OMNI-1249 | Status: In Development (In Progress) | Type: Idea | Priority: High | Assignee: Erica Lee | Reporter: Fiona U | blocks: OMNI-1362, OMNI-1362 | discovery---connected: DPD-57 | migration_parent: PAY-7080 | polaris-work-item-link: DPD-682, PAY-7080, DPD-57
 **Ticket Summary: OMNI-1249 (B2B Solution: Integration Work)**
-**Assignee:** Erica Lee | **Reporter:** Fiona U | **Status:** RED (In Development) | **Priority:** High
+**Assignee:** Erica Lee | **Reporter:** Fiona U | **Status:** In Development (In Progress) | **Priority:** High | **Type:** Idea
 
-### Current Status & State
-The project is currently **RED**, indicating critical delays. The B2B platform MVP Go-Live has been pushed from the original timeline to **April 2026**. Progress is heavily constrained by the readiness of the WMS Middleware and SAP integration. While SIT (System Integration Testing) concluded between March 2–6, UAT is now scheduled for mid-to-late March (originally planned for March 23).
+### Current Status & Strategic Context
+The project is **In Development**, focusing on integrating new B2B capabilities to scale GMV from $16M (2025) to $100M by 2030. While historical context noted critical delays pushing the MVP Go-Live to April 2026, the primary focus is now enabling **Co-mall** on SAP and Phase 2 of the WMS Middleware go-live.
 
-### Key Decisions & Strategic Direction
-*   **SAP Strategy:** Per Dennis's advice (Dec 9, 2025), the team will proceed with **"Co-mall"** on SAP.
-*   **Technical Architecture:** The launch relies on **Phase 2** of the WMS Middleware go-live to enable B2B fulfillment and sales posting flows to SAP. Phase 1 (mid-March) only routes orders to PFC via SAP but does not support full B2B billing/document flows.
-*   **Scope Adjustment:** Due to increased scope including **BCRS** and Co-mall requirements, a new sprint was tentatively added. No callouts from the Comall end are expected for the April planning immediately.
+### Key Features & Scope
+The initiative addresses gaps in current B2B solutions (limited discounting, no subscription pricing) by introducing:
+*   **Parent-Child Account Structures:** Enforce corporate policies across departments with configurable credit limits and payment modes.
+*   **Donation Drives & Corporate Employee Discounts (CED):** Replace fragmented PCM routing with unified portal campaigns for SKUs/EDMs.
+*   **Advanced Workflows:** Unified management for quotations, bulk orders, credit approvals, and invoicing.
+
+**Business Impact:** Targeting 30% reduction in manual inquiries within 12 months and a 200% increase in new business customers by 24 months.
+
+### Key Decisions & Technical Direction
+*   **SAP Strategy:** Proceed with **"Co-mall"** on SAP pending blueprint sign-off. The launch relies on **Phase 2** of WMS Middleware to enable full B2B billing/document flows (Phase 1 only routes orders to PFC).
+*   **Architecture:** Integration required with SAP, DBP, Segment, and Zendesk for catalogues, pricing, analytics, and support workflows.
 
 ### Pending Actions & Owners
-*   **WMS Middleware Confirmation (Critical):** The WMS team must confirm if the mid-March go-live includes **Phase 2** functionality required for finance and sales posting. Current status is "not confirmed." Owner: **Zi Ying Liow / WMS Team**.
-*   **SAP Blueprint Sign-off:** Pending review session with CC and Finance scheduled for January 16, 2026. Delays here directly impact SAP development. Owner: **CC & Finance**.
-*   **UAT Execution:** UAT test cases to be finalized by Feb 22; inputs gathered Feb 23–25; business socialization Feb 26–27. Comall UAT testing scheduled for March 3 (updated context suggests mid-March). Owner: **Zi Ying Liow / Comall**.
-*   **Usability Refinements:** Feedback on B2B web and Back-Office usability consolidated and shared with Comall for "Project Light." Final requirements to be sent to Comall. Owner: **Internal Alignment Team / Comall**.
-*   **Dependency Resolution (March 11):** Two specific dependencies require immediate attention:
-    1.  **Decoupling First Mile:** Confirmation needed on whether PFC and First Mile training for MP apps can be decoupled from the B2B launch. Owner: **Zi Ying Liow**.
-    2.  **Forecasting & Reporting:** Alignment required on setup for sales order flow forecasting/reporting. Call scheduled March 11. Owner: **Relevant Business Stakeholders**.
+*   **WMS Middleware Confirmation (Critical):** Confirm if mid-March go-live includes **Phase 2** functionality. Status remains "not confirmed." Owner: **Zi Ying Liow / WMS Team**.
+*   **SAP Blueprint Sign-off:** Review session scheduled for January 16, 2026. Owner: **CC & Finance**.
+*   **UAT Execution:** Test cases to be finalized by Feb 22; inputs gathered Feb 23–25; business socialization Feb 26–27. UAT testing scheduled for mid-March (previously noted March 3). Owner: **Zi Ying Liow / Comall**.
+*   **Training & Enablement:** Cross-functional training required for Account Management (onboarding/parent-child), Finance (credit matrix), Operations (bulk orders), and Support (Zendesk workflows).
+*   **Dependency Resolution (March 11):** Resolve status on decoupling First Mile training and Forecasting/Reporting alignment. Owner: **Zi Ying Liow / Stakeholders**.
 
 ### Key Dates & Deadlines
-*   **Mid-March (2026):** Target WMS Middleware Phase 1 Go-Live (and potential re-evaluation of Phase 2 readiness).
-*   **March 3, 2026:** UAT testing with Comall.
-*   **March 11, 2026:** Call to resolve Forecasting/Reporting alignment and First Mile decoupling status.
+*   **January 16, 2026:** SAP Blueprint Sign-off review.
+*   **Mid-March (2026):** Target WMS Middleware Phase 1 Go-Live; re-evaluate Phase 2 readiness.
+*   **March 2026:** UAT execution (dates updated to mid-March).
+*   **March 11, 2026:** Call to resolve Forecasting/Reporting and First Mile decoupling.
 *   **April 2026 (Tentative):** B2B Platform Go-Live.
 
 ### Blockers & Risks
-*   **WMS Middleware Readiness:** No confirmed go-live date for Phase 2; this is the single biggest blocker preventing April launch.
-*   **SAP Blueprint Sign-off:** Any delay in the Jan 16 sign-off (historical context) or subsequent reviews impacts development timelines.
-*   **Scope Creep:** Inclusion of BCRS and Co-mall integration necessitated a new sprint, potentially straining resources for the April deadline.
+*   **WMS Middleware Readiness:** Lack of confirmed Phase 2 go-live remains the single biggest blocker for April launch.
+*   **SAP Blueprint Sign-off:** Delays in Jan 16 review directly impact development timelines.
+*   **Integration Complexity:** Dependencies on SAP/DBP/Zendesk alignment may strain resources given the new scope (BCRS, Co-mall).
 
 **Linked Issues:** DPD-682, OMNI-1362 (Blocks), PAY-7080, DPD-57.
 
@@ -995,104 +971,149 @@ Source: jira | Key: OMNI-1407 | Status: In Development (In Progress) | Type: Ide
 
 **Current Status**
 *   **State:** In Development (In Progress).
-*   **Progress Indicator:** Green (On Track).
-*   **Assignee:** Prajney Sribhashyam.
+*   **Type:** Idea.
+*   **Priority:** High.
+*   **Assignee/Reporter:** Prajney Sribhashyam.
 *   **Linked Issue:** DPD-100.
+*   **Progress Indicator:** Green (On Track).
 
 **Key Decisions & Estimates**
-*   **Scope:** Implementation of mandatory "License Code" and "Expiry Date" fields on Mirakl, automatically triggered by Level 3 (L3) categories (e.g., Safety Mark, Halal).
-*   **Automation Logic:** System to send expiry warnings at 4 weeks and 1 week prior; automatic SKU disabling upon certificate expiry.
-*   **Sizing:** Finalized as **Small** (estimated at **30 people-days**) per Prajney Sribhashyam's update on Dec 3, correcting an earlier "T-shirt sizing" comment by Sathya Murthy Karthik.
-*   **Business Impact:** Addresses high risk of $2.5M annual GMV loss from de-listing; goal is 100% FSQ compliance.
+*   **Scope:** Implementation of mandatory "License Code" and "Expiry Date" fields on the Mirakl SKU creation form, triggered automatically by Level 3 (L3) categories (e.g., Safety Mark, Halal, Organic). Supports single and mass upload templates.
+*   **Automation Logic:** System to send expiry warnings at 4 weeks and 1 week prior; automatic SKU disabling/hiding upon certificate expiry with status consistency between Mirakl and DBP.
+*   **Reapproval Process:** Updated certificates trigger a "pending verification" status for reapproval; successful updates reactivate the label in the catalogue.
+*   **Sizing:** Finalized as **Small** (estimated at **30 people-days**) per Prajney Sribhashyam's update on Dec 3, correcting earlier sizing comments.
+*   **Business Impact:** Addresses high risk of $2.5M annual GMV loss from de-listing (approx. 25% of assortment). Goal is 100% FSQ compliance and transparency for shoppers regarding certified products.
 
 **Upcoming Dates & Deadlines**
-*   **March 16, 2026:** Scheduled start for System Integration Testing (SIT).
+*   **March 16, 2026:** Scheduled start for System Integration Testing (SIT). *Note: Koklin Gan raised concerns regarding BCRS work requirements affecting this date.*
 *   **March 17, 2026:** Scheduled start for User Acceptance Testing (UAT).
-*   **December 31, 2025:** Original deadline to disable non-compliant SKUs (Note: Current timeline extends into March 2026 for SIT/UAT).
+*   **December 31, 2025:** Original deadline to disable non-compliant SKUs.
 
 **Pending Actions & Ownership**
-*   **SIT/UAT Planning:** Sathya Murthy Karthik requested an update to stakeholders regarding the new March schedule and confirmation of test case creation.
-*   **Stakeholder Communication:** Stakeholders must be notified of the revised timeline (March 16/17 start dates) per Sathya's request on March 11, 2026.
-*   **Data Preparation:** Marketplace team to continue sourcing certifications for upload to Mirakl and conduct weekly data extractions for validation.
-*   **Walkthroughs:** MP & Catalog teams conducted a walkthrough on the preceding Monday (referenced in Feb 5 update).
+*   **Stakeholder Communication:** Koklin Gan requested immediate communication to stakeholders regarding the revised March timeline and confirmation of test case creation due to ongoing BCRS work.
+*   **SIT/UAT Planning:** Sathya Murthy Karthik (added GMV context on Mar 17) requires a stakeholder update confirming the new schedule.
+*   **Data Preparation:** Marketplace team to source certifications for Mirakl upload and conduct weekly data extractions for validation.
+*   **Operational Setup:** Teams must finalize the "Source of Truth" working sheet for compliance requirements per L3 category and establish the alert pipeline.
 
 **Technical References**
 *   **Platform:** Mirakl SKU creation form, DBP synchronization.
-*   **Fields:** Mandatory inputs for license code and calendar-based expiry dates; exemption logic with explanation field required.
+*   **Fields:** Mandatory inputs for license code and calendar-based expiry dates; exemption logic with explanation field required for non-required cases.
+*   **Retrofitting:** Expiry functionality must be retrofitted for existing certificates (Halal, Organic) currently lacking this data.
 
 
 ## jira/OMNI-1345: [MP Foundational] Sales Breakdown & Seller Payouts
-Source: jira | Key: OMNI-1345 | Status: In Development (In Progress) | Type: Idea | Priority: High | Assignee: Koklin Gan | Reporter: Prajney Sribhashyam | discovery---connected: OMNI-1178 | polaris-work-item-link: DST-2056, DST-2272, DST-2487, DPD-9
+Source: jira | Key: OMNI-1345 | Status: Paused (To Do) | Type: Idea | Priority: High | Assignee: Koklin Gan | Reporter: Prajney Sribhashyam | discovery---connected: OMNI-1178 | polaris-work-item-link: DST-2056, DST-2272, DST-2487, DPD-9
 **Ticket:** OMNI-1345 [MP Foundational] Sales Breakdown & Seller Payouts
 **Assignee:** Koklin Gan | **Reporter:** Prajney Sribhashyam | **Priority:** High
-**Current Status:** Blocked (Previously Yellow/At Risk; now formally blocked)
+**Current Status:** Paused (To Do). Previously "Blocked" due to BCRS/data mismatches; now formally paused pending foundational business model changes.
 
-### 1. Current State
-The initiative aims to resolve financial data gaps regarding dropoffs, refunds, cancellations, and voucher applications to ensure accurate sales breakdowns and seller payouts. While the "Sales Breakdown Report" was initially validated with business stakeholders (Milestone 2 completed Jan 5), the full rollout is currently **blocked**.
+### 1. Current State & Problem Definition
+The initiative addresses critical gaps in sales order data where dropoffs, refunds, cancellations, and voucher applications were not captured accurately. This caused discrepancies between reported and actual figures, impacting financial accuracy and seller payouts.
+*   **Root Cause:** Manual interventions currently fail to provide 100% accuracy on seller reports.
+*   **Impact:** All MP sellers face improper charging for refunds, cancellations, and returns in downstream financial systems.
+*   **Current Situation:** As of March 17, 2026, MP Business has mandated a foundational change to the consolidated fulfillment business model due to business license limitations (compliance inputs). Consequently, all work on sales breakdown reports and seller payouts is placed on hold until these new requirements are finalized.
 
-Recent investigations by Sneha Parab revealed critical data mismatches between the new BigQuery table (`mp_sales_breakdown`) and existing production reports, specifically affecting the Finance report. The team determined that changes to seller reports must be synchronized with SKU Compliance (BCRS) before proceeding. Consequently, work on MP sales reports has been placed on hold pending BCRS completion.
+### 2. Completed Milestones & Historical Context
+*   **Milestone 1:** Migrate CF sellers to new app & cutover (Done - Nov 30).
+*   **Milestone 2:** Validate enhanced 'Sales Breakdown Report' (Done - Jan 5; Business signed off).
+    *   *Previous Actions:* Sellers migrated to seller app ("picked by seller" → FFS); 'Put-away' Qty fetched from WMS DB for PFC; Finance alignment on 'Sales Order Breakdown' completed.
+*   **Technical Validation:** DA team generated the Sales Breakdown Report based on aligned requirements. Limited set of sellers validated for disputes & NPS.
 
-### 2. Pending Actions & Ownership
-*   **Finance Alignment:** Prajney Sribhashyam is finalizing alignment with Finance and Corporate Control regarding the finance reporting format and discrepancies between DBP vs. SAP data sources. Target closure for this alignment: **Jan 31** (Note: This date appears to have passed; current status indicates the block remains active).
-*   **BCRS Compliance Execution:** The E-commerce team is authorized to proceed with changes required for BCRS compliance (BCRS quantity and value) across three reports: Seller Report, Combined Sales Report, and Finance Concess Report.
-*   **Report Walkthrough/UAT:** Prajney Sribhashyam and Koklin Gan must conduct a runthrough of all reports with Jesslin Lim Bee Leng, Hwee Ping Lim, April Kok, and Wei Fen Ching.
-    *   **UAT Timeline:** Feb 23 – Jan 6 (Note: Date likely typo for Feb 6 or Mar 6; strictly as recorded).
-*   **Data Validation:** Sneha Parab's team continues to investigate discrepancies in the `mp_sales_breakdown` table pending validation from the DA and Product teams.
+### 3. Scope Changes & Decisions
+*   **Out of Scope (Deferred):** "Returns & refunds flow" alignment across RB & MP, and Alignment with finance on SOA seller report are marked out of scope for this phase (deferred to "Project Light").
+*   **Immediate Halt:** Despite previous authorization to proceed with BCRS compliance changes and scheduled UAT (previously noted as Feb 23), the entire initiative is now paused pending the new consolidated fulfillment model requirements.
 
-### 3. Key Decisions Made
-*   **Scope Segmentation:** "Returns & refunds flow" alignment across RB & MP, and Sales Order Account (SOA) seller report alignment with finance were marked **Out of Scope** for this phase. These are deferred to "Project Light."
-*   **Financial Principle:** A new logical flow was established for all financial statements: *Order Statement → Invoice → Sales Posting → Seller Reports → Seller Payouts*. No entries are to be re-calculated at any state; they must flow based on confirmations from previous states.
-*   **Immediate Scope Change:** E-comm team can proceed with BCRS compliance changes immediately, but MP-specific sales breakdown fixes (payout accuracy) are blocked until after BCRS is complete.
+### 4. Pending Actions & Blockers
+*   **Primary Blocker:** Awaiting finalization of requirements for the foundational change in the consolidated fulfillment business model driven by compliance inputs.
+*   **Next Steps:** No technical or rollout actions can proceed until the new business rules are defined. The team must wait for revised specifications before re-initiating data generation or UAT.
 
-### 4. Key Dates, Deadlines & Blockers
-*   **Blocker:** Pending alignment on finance reporting format and data gaps between DBP vs. SAP reports. Full rollout of the enhanced Sales Breakdown Report is stalled.
+### 5. Key Dates & Technical References
+*   **Original Rollout ETA:** Jan 24 (updated to Jan 31).
+*   **Current Status Date:** March 17, 2026 (Pause decision recorded).
 *   **Linked Issues:** OMNI-1178 (Discovery), DST-2056, DST-2272, DST-2487, DPD-9.
-*   **Prior Milestones:**
-    *   Seller app migration: Done (Nov 30).
-    *   Report validation: Done (Jan 5).
-*   **Upcoming/Urgent:** BCRS compliance changes; UAT for all reports is scheduled to commence **Feb 23**.
+*   **Data Sources:** BigQuery table `mp_sales_breakdown`.
+*   **Tools/Reports:** Looker Studio, SAP, DBP; Affected reports include Seller Report, Combined Sales Report, and Finance Concess Report.
 
-### 5. Technical References
-*   **New Data Source:** `mp_sales_breakdown` (BigQuery table).
-*   **Reports Affected:** Seller Report, Combined Sales Report, Finance Concess Report.
-*   **Tools:** Looker Studio (triggering reports), SAP, DBP.
+### 6. Success Criteria
+*   Improved Seller NPS.
+*   Full Compliance alignment.
 
 
 ## jira/OMNI-1296: Enhanced Notification Preference Center for Multi-Channel Communication Management
 Source: jira | Key: OMNI-1296 | Status: In Development (In Progress) | Type: Idea | Priority: High | Assignee: Sip Khoon Tan | Reporter: Sip Khoon Tan | discovery---connected: CORE-304 | polaris-work-item-link: CORE-304
 **Jira Ticket Briefing: OMNI-1296**
 **Topic:** Enhanced Notification Preference Center for Multi-Channel Communication Management
-**Current Status:** In Development (High Priority)
-**Assignee:** Sip Khoon Tan (Lead/Reporter); Implementation leads: Xue Yin, William.
+**Current Status:** In Development (High Priority) | **Type:** Idea
+**Assignee/Reporter:** Sip Khoon Tan; **Links:** CORE-304 (Discovery - Connected / Polaris work item link).
 
 ### 1. Current State & Progress
-The project aims to replace binary unsubscribe mechanisms with a granular preference center controlling EDMs, Push Notification Services (PNS), and WhatsApp across specific business swimlanes (e.g., Grocery, FP Finest, Unity, Cheers).
-*   **Development Status:** Backend development is scheduled for completion by February 20, 2026. UAT is ready starting March 2, 2026.
-*   **Recent Updates:** On March 11, 2026, the ticket status was amended to "In Development" following backend completion requests (Sathya Murthy Karthik).
+The project addresses the limitation of binary unsubscribe mechanisms which cause total communication loss upon opting out from a single channel. The solution replaces this with a granular, centralized preference center for EDMs, Push Notification Services (PNS), and WhatsApp across specific business swimlanes.
+*   **Functional Scope:** Customers can now control subscriptions by business unit, set frequency (daily/weekly/monthly), and manage transactional vs. marketing PNS settings separately.
+*   **Business Swimlanes Supported:** Grocery, FP Super, FP Finest, FP Hyper, FP Online, Unity, Cheers, Kopitiam, FP Partners, FP B2B, and Link Rewards.
+*   **Timeline Context:** While the status is "In Development," historical planning previously indicated backend completion by Feb 20, 2026, and UAT in March 2026. The specific implementation dates from prior drafts conflicting with the current "Idea" type status should be treated as preliminary targets pending final alignment.
 
 ### 2. Pending Actions & Ownership
-*   **Integration Testing:** Martech team must link tickets for integration testing with Salesforce Marketing Cloud (SFMC). Owner: Xue Yin, William.
-*   **UAT Execution:** User Acceptance Testing scheduled for March 12–13, 2026.
-*   **Go-Live Coordination:** Finalize go-live date pending business direction. Target window: Mid-April 2026.
-*   **Timeline Alignment:** Previously noted as pending alignment with CCO and CRM on timelines (Zi Ying Liow).
+*   **Development & Integration:** Finalize development of the centralized interface integrating with Salesforce Marketing Cloud (SFMC) and mobile apps/web notification centers. Primary ownership: Sip Khoon Tan, Xue Yin, William.
+*   **PNS Segmentation:** Complete integration to segment PNS based on type (app features, announcements, transactional, marketing). Owner: Martech team.
+*   **Business Alignment:** Finalize go-live coordination pending business direction and CCO/CRM timeline alignment (Zi Ying Liow).
 
 ### 3. Decisions Made
-*   **Stakeholder Engagement:** Identified Xue Yin and William as the primary contacts for building the SFMC preference center (James Huang, Sept 9).
-*   **Status Tracking:** Confirmed need to link delivery tickets to accurately reflect status vs. Idea stage (Peter Talbot, Aug 27).
+*   **Granular Control Strategy:** Confirmed that customers must be able to select specific content types rather than a global "unsubscribe all" only, reducing churn.
+*   **Financial Targets:** Validated goals to reduce complete unsubscribe rates by 30% initially (EDM: 72k → 50k unsub/year; PNS: device rate -30%).
+*   **Long-term Metric:** Target a 50% reduction in annual preference center unsubscribes (reducing from 50k to 25k annually).
 
-### 4. Key Dates & Blockers
-*   **Backend Completion:** Feb 20, 2026.
-*   **UAT Window:** March 12–13, 2026.
-*   **Target Go-Live:** Mid-April 2026 (contingent on business direction).
-*   **Technical Live (Previous Plan):** Jan 7 (Updated/Deferred to mid-April post-UAT).
-*   **Blocker/Dependency:** Pending Martech link for integration testing and final business approval for the April go-live.
+### 4. Business Impact & Metrics
+*   **Financial Goal:** Prevent total annual GMV loss of **$531.6k**.
+    *   **EDM Impact:** Current loss $192k/year (6,000 unsub/month). Target prevention: **$57.6k**.
+    *   **PNS Impact:** Current loss $1.58M/year. Target prevention: **$474k**.
+*   **Operational Benefits:** Enhanced segmentation for Marketing Operations, improved data analytics for personalization, and reduced campaign waste through precise audience targeting.
+*   **Scalability:** Architecture supports future communication channels and additional business swimlanes.
 
-### 5. Business Impact & Metrics
-*   **Financial Goal:** Prevent $531.6k annual GMV loss ($57.6k from EDM + $474k from PNS unsubscribes) by reducing complete unsubscribe rates by 30% initially, with a long-term target of 50%.
-*   **Scope:** Supports Business Units including Grocery, FP Super/Finest/Hyper/Online, Unity, Cheers, Kopitiam, FP Partners, FP B2B, and Link Rewards.
+### 5. Key Dates & Blockers
+*   **Current Status:** In Development (In Progress).
+*   **Dependency:** Integration with Salesforce Marketing Cloud remains a critical path item for Martech team execution.
+*   **Risk:** Timeline alignment with CCO and CRM is required to confirm the final delivery window, previously targeted around mid-April 2026 but subject to change given the "Idea" classification adjustments.
 
 
-## jira/OMNI-1425: [1HD] - Integration with 3PL vendor to push order details.
+## jira/OMNI-1423: [1HD] Pilot to customer launch readiness
+Source: jira | Key: OMNI-1423 | Status: UAT (In Progress) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Prajney Sribhashyam | polaris-work-item-link: DPD-406
+### Daily Briefing: OMNI-1423 [1HD] Pilot to Customer Launch Readiness
+
+**Current Status**
+*   **Status:** UAT (In Progress).
+*   **Date/Time Reference:** Current update as of **March 17, 2026**.
+*   **Progress:** Following the completion of the first UAT round on March 10, 2026, the team is addressing bugs. On March 17, Rajesh Dobariya confirmed the status update and requested clarification on live dates.
+
+**Pending Actions & Ownership**
+*   **Owner:** Rajesh Dobariya (Assignee).
+*   **Reporter:** Prajney Sribhashyam.
+*   **Action Items:**
+    *   Update technical and business "live" dates as requested by Danielle Lee on March 17, 2026.
+    *   Continue investigation into root causes for defects identified during the March 10 UAT cycle.
+
+**Key Decisions Made**
+*   **Scope Splitting:** On **February 20, 2026**, stakeholders aligned on MVP "must-haves," splitting delivery into two phases (now vs. later).
+*   **Item Movement:** On **February 27, 2026**, Rajesh Dobariya moved non-blocker items to a new epic to streamline focus.
+
+**Key Dates, Deadlines & Blockers**
+*   **Upcoming Deadline:** Definition of technical and business live dates is pending (Requested March 17).
+*   **Completed Milestone:** UAT Round 1 (March 10, 2026).
+*   **Blocker/Dependency:** Active investigation into root causes of UAT bugs continues to impact timeline certainty.
+
+**Technical & Contextual References**
+*   **Linked Issue:** DPD-406 (Polaris work item link).
+*   **Project Goal:** Ensure the FairPrice app and backend are ready for customer launch, enabling:
+    *   **Shoppers:** Seamless discovery, cart, checkout, and receipt of orders with no planning horizon.
+    *   **Pickers:** Task completion within X-minute SLA to prevent delivery delays.
+    *   **Business Managers:** Accurate financial attribution for issues and sales.
+*   **Product Metrics Targets:**
+    *   **Financial:** Increase AOV from $X to $Y within 6 weeks.
+    *   **Customer Experience:** Increase Perfect Order rate from X% to Y% in 3 months.
+*   **Priority:** High.
+*   **Type:** Idea.
+
+
+## jira/OMNI-1425: [1HD] Phase 2 - Integration with 3PL vendor to push order details.
 Source: jira | Key: OMNI-1425 | Status: Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Rajesh Dobariya
 **Jira Briefing: OMNI-1425 – Integration with 3PL vendor to push order details**
 
@@ -1102,55 +1123,30 @@ Source: jira | Key: OMNI-1425 | Status: Prioritised (To Do) | Type: Idea | Prior
 *   **Priority:** High
 *   **Type:** Idea
 *   **Assignee/Reporter:** Rajesh Dobariya
-*   **Current State:** The initiative, originally scoped to integrate order details and live tracking with a 3PL vendor's last-mile app, has been deemed unnecessary for the immediate launch scope.
+*   **Current State:** The ticket remains in "To Do" status. While the original summary indicated a scope removal for launch, the new input confirms the initiative is actively being prepared with full documentation requirements (Problem Definition, Solution Summary, Business Impact) and has not been formally closed or resolved.
 
-**Decisions Made**
-*   **Scope Removal:** Following a discussion (chat room reference: `https://chat.google.com/room/AAAA9x55r9A/kvcr2p7K8Wg/xvwoJWehBTQ?cls=10`), it was confirmed on **2026-02-27** that the 3PL integration is **not required for the launch**.
-*   **Initial Scope Definition:** The original description outlined features including pushing order details (Name, Address, Contact No) to the vendor app at a specific stage (order placement vs. packed status), live tracking visibility outside the FPG app, and Proof of Delivery recording.
+**Decisions Made & Scope**
+*   **Integration Scope:** The feature requires pushing order details (Name, Address, Contact No) to the vendor's last-mile app. It also mandates live tracking visibility outside the FPG app and Proof of Delivery (POD) recording upon delivery completion.
+*   **Timing Logic:** A critical pending decision remains regarding notification timing: whether the vendor is notified at "order placement" or "upon packed status."
+*   **Business Impact Goal:** The initiative aims to eliminate manual order handling, reduce human error, and ensure faster fulfillment as volumes scale. Specific metrics include increasing Average Order Value (AOV) from $X to $Y within 6 weeks and improving Perfect Order rates from X% to Y% in 3 months.
 
 **Pending Actions & Ownership**
-*   **Action:** Update ticket documentation or close the "Idea" given the scope removal for launch.
+*   **Documentation Gap:** The ticket description currently lacks the required "Opportunity/Problem Definition" structure (As a [user]... So I can...). Rajesh Dobariya must draft these user stories and define the affected customer segments and estimated volume.
+*   **Clarification Required:**
+    *   Confirm if data fields are limited to Name, Address, and Contact No only.
+    *   Define the protocol for vendor app notifications to DBP upon order completion.
+    *   Finalize the "Action" status: Update ticket documentation with the full business case or formally close the idea if the launch scope cancellation (referenced in previous context) is still valid.
 *   **Owner:** Rajesh Dobariya (Assignee).
-*   **Context:** While the specific integration is off for launch, the ticket remains in "To Do" status with no formal resolution yet filed to reflect this decision.
 
 **Key Dates & Deadlines**
-*   **Original Plan:** Add delivery ticket in the week starting **2026-03-23**.
-*   **Decision Date:** 2026-02-27 (Integration confirmed as not required for launch).
+*   **Ticket Creation/Update:** 2026-02-11 (Status set to Prioritised, Type: Idea).
+*   **Original Plan:** Add delivery ticket in the week starting 2026-03-23.
+*   **Decision Date (Context):** 2026-02-27 (Previous context noted potential scope removal; however, current metadata indicates active "Prioritised" status).
 
 **Blockers/Notes**
-*   No technical blockers exist; the feature was deprioritized based on business requirements.
-*   Previous planning questions regarding notification timing, data fields, and DBP notifications remain unaddressed due to scope cancellation.
-
-
-## jira/OMNI-1423: [1HD] Pilot to customer launch readiness
-Source: jira | Key: OMNI-1423 | Status: In Development (In Progress) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Prajney Sribhashyam | polaris-work-item-link: DPD-406
-### Daily Briefing: OMNI-1423 [1HD] Pilot to Customer Launch Readiness
-
-**Current Status**
-*   **Status:** In Development (In Progress).
-*   **Date/Time Reference:** Current update as of 2026-03-11.
-*   **Progress:** First round of User Acceptance Testing (UAT) was completed on **March 10, 2026**. The team is currently addressing bugs discovered during this UAT cycle.
-
-**Pending Actions & Ownership**
-*   **Owner:** Rajesh Dobariya.
-*   **Action Items:**
-    *   Investigate root causes for defects identified in the March 10 UAT round.
-    *   Provide updated Estimated Time of Arrival (ETA) for resolving new items by **today, March 11, 2026, EOD**.
-
-**Key Decisions Made**
-*   **Scope Splitting:** On **February 20, 2026**, a decision was made to align with business stakeholders on MVP "must-haves" and split the delivery ticket into two phases (now vs. later).
-*   **Item Movement:** On **February 27, 2026**, Rajesh Dobariya moved non-blocker items to a new epic to streamline the current focus.
-
-**Key Dates, Deadlines & Blockers**
-*   **Upcoming Deadline:** ETA update required by EOD on March 11, 2026.
-*   **Completed Milestone:** UAT Round 1 (March 10, 2026).
-*   **Blocker/Dependency:** Active investigation into the root cause of UAT bugs is currently delaying further progress.
-
-**Technical & Contextual References**
-*   **Linked Issue:** DPD-406 (Polaris work item link).
-*   **Project Goal:** Enable seamless express delivery (discover, add to cart, checkout, receive) for shoppers; ensure picking within SLA for pickers; and ensure accurate financial attribution for business managers.
-*   **Metrics Targets:** Product metrics aim to increase AOV from $X to $Y within 6 weeks and Perfect Order rate from X% to Y% in 3 months.
-*   **Priority:** High.
+*   **Missing Data:** The ticket lacks specific answers to: "Who faces this problem?", "How many users are affected?", and "How do they solve these problems today?"
+*   **Operational Dependencies:** Requires vendor alignment, budget approvals, and internal workflow definition before launch.
+*   **Contradiction Check:** While previous notes suggested the feature was unnecessary for launch, the ticket remains active with a "High" priority and "Prioritised" status as of 2026-02-11. Action must be taken to either finalize the business case or formally resolve the ticket if the decision stands.
 
 
 ## jira/OMNI-1414: Integrate personalized gamification challenge with FP app
@@ -1158,35 +1154,37 @@ Source: jira | Key: OMNI-1414 | Status: In Development (In Progress) | Type: Ide
 **Jira Briefing: OMNI-1414 – Integrate Personalized Gamification Challenge with FP App**
 
 **Current Status**
-*   **Status:** In Development.
-*   **Assignee:** Rajesh Dobariya (confirmed as of March 6).
+*   **Status:** In Development (In Progress).
+*   **Assignee:** Rajesh Dobariya.
 *   **Type:** Idea / High Priority.
 *   **Linked Issue:** DPD-297.
-*   **Progress:** Backend (BE) work commenced as of March 11.
+*   **Progress:** Backend work commenced March 11. UAT is scheduled for **March 23, 2026**. Technical live date set for **March 30, 2026** (allowing a 1-week buffer for post-UAT fixes). Business live date pending confirmation with stakeholders.
 
 **Key Decisions & Requirements**
 *   **Technical Architecture:** Customer UID must be hashed using `sha256 + salt ('s@veValue!')` before passing to the webview URL (Decision by Alvin Choo, Jan 30).
-*   **Data Prerequisite:** The App team requires a mapping file of customer UID to personalized challenge page URLs. Target delivery for this data is the **1st week of February** (per James Huang, Jan 16); however, BE work started March 11 pending final alignment.
-*   **Effort Estimate:** 3 man-weeks total (2 weeks Frontend across platforms + 1 week Backend) confirmed by Rajesh on March 6.
+*   **Platform Integration:** Contracted "UntieNot" platform for personalized gamification targeting 1.8M DCC customers. App team required to build relevant entry points across Split PNW banner, Rewards page, OMNI Popup, Homepage Banner, Voucher Wallet Banner, and Rewards Tile.
+*   **Effort Estimate:** 3 man-weeks total (2 weeks Frontend + 1 week Backend) confirmed by Rajesh on March 6.
+*   **Data Prerequisite:** App team requires a mapping file of customer UID to personalized challenge page URLs. Target delivery was the 1st week of February; BE work commenced March 11 pending alignment.
 
 **Pending Actions & Ownership**
-*   **Technical Alignment:** Finalize technical approach and confirm data mapping readiness by **Feb 20** (Rajesh Dobariya, Jan 19). *Note: Current date is post-January; status update needed on Feb 20 milestone.*
-*   **Uplift Data:** Provide more realistic GMV uplift expectations for a 3-6 month MVP timeline to aid prioritization. Rajesh requested this on Jan 27; James provided the $8M long-term projection on Jan 24 but did not specify the immediate MVP figure (James Huang).
-*   **Stakeholder Communication:** Communicate the final delivery date to the CCO team for launch planning (Rajesh Dobariya, March 6).
+*   **UAT Execution:** Complete User Acceptance Testing by March 23 (Rajesh Dobariya).
+*   **Go-Live Confirmation:** Confirm Business Live date with stakeholders to finalize launch planning (Owner: Rajesh Dobariya/James Huang).
+*   **Data Alignment:** Clarify status of the customer UID mapping file relative to the delayed BE start date and upcoming UAT.
 
 **Key Dates & Timeline**
-*   **Tentative Launch:** March 2026 (James Huang, Jan 16). *Note: Initial comment suggested "after CNY," later refined to March.*
-*   **Data Handover Target:** 1st week of February (James Huang, Jan 16).
-*   **Technical Alignment Deadline:** Feb 20 (Rajesh Dobariya, Jan 19).
-*   **BE Start Date:** March 11 (Rajesh Dobariya).
+*   **UAT Date:** March 23, 2026.
+*   **Technical Live:** March 30, 2026.
+*   **Business Live:** TBD (Pending stakeholder confirmation).
+*   **Historical Context:** Initial tentative launch was projected for March 2026; data handover target was the 1st week of February.
 
 **Business Context & Impact**
-*   **Goal:** Integrate "UntieNot" personalized gamification for 1.8M DCC customers to drive sales and engagement.
-*   **Impact Estimate:** Projected $8M incremental GMV over 8 months (scaled from $395K/month pilot).
-*   **Touchpoints Requiring Changes:** Split PNW banner on OMNI HP, PNW Banner in Rewards page, OMNI Popup, OMNI Homepage Banner, Voucher Wallet Banner, and Rewards Tile.
+*   **Goal:** Integrate "UntieNot" personalized gamification to drive sales and engagement for 1.8M DCC customers. Users participate in challenges relevant to their shopping behavior to earn rewards.
+*   **Impact Estimate:** Based on a 2023 pilot ($395K/month incremental GMV), the initiative projects $8M incremental GMV over 8 months by scaling from the pilot audience to ~1.7M DCC with category/format challenges.
+*   **Metrics:** Primary focus on Challenge participation and completion rates, impacting Financial Impact and Customer Experience dimensions.
 
 **Blockers/Notes**
-*   Discrepancy between the stated "1st week of Feb" data delivery target and the March 11 BE start date requires clarification to ensure no delays occur due to missing mapping files.
+*   The discrepancy between the "1st week of February" data target and the March 11 BE start date requires resolution to ensure mapping files are ready for UAT by March 23.
+*   Business live date remains unconfirmed; final coordination is critical before the March 30 technical go-live.
 
 
 ## jira/OMNI-1418: Overage on transaction sync from Segment to OSMOS
@@ -1201,28 +1199,29 @@ Source: jira | Key: OMNI-1418 | Status: UAT (In Progress) | Type: Idea | Priorit
 *   **Linked Issue:** DPD-644.
 
 **Problem & Impact**
-The current implementation of the transaction sync function from Segment to OSMOS causes usage overage, costing the organization **$4k per month**. Transactions are synced to attribute GMV to OSMOS campaigns; however, the existing logic is inefficient. The goal is to streamline this sync function to eliminate these costs.
+The current implementation of the transaction sync function from Segment to OSMOS causes usage overage, costing the organization **$4k per month**. Transactions are synced to attribute GMV to OSMOS campaigns; however, the existing logic is inefficient. The goal is to streamline this sync function to eliminate these costs. No external users or segments are currently solving this manually (N/A).
 
 **Key Dates & Deadlines**
 *   **Timeline Alignment:** Resource availability and timeline alignment occurred on **2026-02-19**.
-*   **UAT Completion ETA:** **2026-03-11**.
+*   **UAT Completion ETA:** Originally estimated for **2026-03-11**.
+*   **Latest Update (2026-03-17):** UAT data complexity exceeded expectations. Review is ongoing, with completion expected on the same day (**2026-03-17**).
 *   **Deployment:** As this is a backend-only change, no change management or additional workflows are required to deploy to production.
 
 **Actions Pending & Ownership**
 *   **Owner:** Nikhil Grover.
-*   **Pending Action:** Complete UAT testing and deployment by the ETA of March 11.
-*   **Status Check:** Work is currently in the final stage (UAT) following resource alignment.
+*   **Pending Action:** Finalize UAT data review and complete testing by end of day 2026-03-17.
+*   **Status Check:** Work is in the final validation stage. Following the 2026-03-17 update, the team is concluding the complex data review before marking UAT as complete.
 
 **Decisions Made**
 *   Confirmed that the initiative addresses a financial cost avoidance of $4k/month.
-*   Determined that the solution is backend-only, requiring no external vendor alignments, budget approvals for launch, or user communication tactics.
+*   Determined that the solution is backend-only ("No change" required for operational processes or business rules), requiring no external vendor alignments, budget approvals for launch, or user communication tactics.
 
 **Blockers & Dependencies**
-*   No active blockers identified in the latest update (2026-03-11).
-*   The ticket references a "Solution Summary" marked as TBC in the original description; however, progress to UAT implies a technical solution has been defined and is now being validated.
+*   **Active Review:** As of 2026-03-17, the primary focus was on reviewing complex UAT data. No technical blockers were identified, but the timeline shifted from the initial March 11 target to a same-day completion on March 17 due to data complexity.
+*   **Solution Status:** The "Solution Summary" previously marked as TBC has been effectively superseded by the active UAT phase, implying a technical solution is defined and currently being validated against complex datasets.
 
 **Summary for Daily Briefing**
-Nikhil Grover is leading the finalization of OMNI-1418 to resolve a $4k/month cost overage in Segment-to-OSMOS transaction syncing. The work, linked to DPD-644, has moved from resource alignment (Feb 19) into UAT. Testing is scheduled for completion on March 11. Upon successful UAT, the backend change will be deployed immediately with no additional operational overhead required.
+Nikhil Grover is leading the finalization of OMNI-1418 to resolve a $4k/month cost overage in Segment-to-OSMOS transaction syncing. Linked to DPD-644, the project moved from resource alignment on Feb 19 into UAT. While originally targeting completion by March 11, complex UAT data required additional review time. As of March 17, Nikhil is finalizing this data review for immediate completion today. Upon successful validation, the backend-only change will be deployed with no operational overhead or user communication required.
 
 
 ## jira/OMNI-1420: Enable all 3P domain links to open in the in-app browser from banner redirection
@@ -1271,26 +1270,35 @@ Source: jira | Key: OMNI-1429 | Status: In Development (In Progress) | Type: Ide
 *   **State:** In Development (In Progress).
 *   **Priority:** High.
 *   **Type:** Idea.
-*   **Assigned To:** Nikhil Grover (also Reporter).
+*   **Assigned To/Reporter:** Nikhil Grover.
 *   **Related Work Item:** DPD-710 (Polaris work item link).
 
 **Pending Actions & Ownership**
-*   **Implementation:** Nikhil Grover is currently developing the feature to configure product ad slots via Split.
-*   **Technical Scope:** The team must implement logic to set ad slots in Split, fetch ads based on configured slot counts, and sequence products for the frontend. This change requires no new app deployment.
-*   **Target Slots:** Ads will be activated in slots 3, 5, and 7 across all Omni home swimlanes and Vertical Scroll (previously limited to slots 1 and 3 only within the Past Purchase swimlane).
+*   **Implementation:** Nikhil Grover is developing the feature to configure product ad slots via Split.
+*   **Technical Scope:** The solution involves setting ad slots in Split, fetching ads based on configured counts, and sequencing products for the frontend. No new app deployment or code changes are required.
+*   **Business Logic Update (2026-03-17):** Danielle Lee requested updates to "new tech live" and "biz live" dates; these specific dates remain pending confirmation in the ticket.
+*   **Target Slots:** Ads will be activated in slots 3, 5, and 7 across all Omni home swimlanes and Vertical Scroll. Previously, ads were limited to slots 1 and 3 only within the Past Purchase swimlane.
 
 **Key Decisions Made**
-*   **Strategic Shift:** To maximize monetization while keeping highly relevant products in the top two slots (1 & 2), ads will be pushed to lower-visibility positions (3, 5, and 7) across all swimlanes.
-*   **Configurability:** The solution enables the RMN Product Manager to test different placements via Split rather than hard-coding, supporting future planning for Project Light.
+*   **Strategic Shift:** To maximize monetization while preserving highly relevant products in top slots (1 & 2), ads are pushed to lower-visibility positions (3, 5, and 7).
+*   **Configurability:** The RMN Product Manager can now test different placements via Split rather than hard-coding. This supports future planning for Project Light.
+*   **Operational Impact:** No changes required to existing operational processes, business rules, or go-to-market strategies ("No change").
 
 **Key Dates & Deadlines**
-*   **No Hard Deadline:** The ticket currently has no due date set.
-*   **Impact Timeline:** Based on a 5-month rollout window post-launch, expected incremental revenue is projected at $312K (part of a larger $750K p.a. goal).
+*   **Status Date:** Current status reflects updates as of 2026-03-17.
+*   **Launch Timeline:** Pending confirmation of "tech live" and "biz live" dates per recent request.
+*   **Revenue Projections:**
+    *   **Annual Goal:** $750K p.a. incremental revenue (GMV/Income).
+    *   **2026 Projection:** $312K expected based on a 5-month rollout window post-launch.
 
 **Blockers & Dependencies**
-*   **Dependencies:** None identified; operational processes and business rules remain unchanged ("No change").
+*   **Dependencies:** None identified; the initiative relies on existing mechanisms with no external dependencies.
 *   **Effort Estimate:** 3-4 man days.
-*   **Status Check:** No blockers currently reported; work is actively progressing in development.
+*   **Stakeholders:** RMN and Products teams face the current limitation of ads not appearing in non-Past Purchase swimlanes.
+
+**Business Impact & Metrics**
+*   **Goal:** Maximize monetization from the Omni homepage by utilizing available inventory beyond the first two slots.
+*   **Metrics:** Specific targets for ad impressions (x to y) and clicks (x to y) are defined in the problem statement but specific numerical values were not provided in the source text.
 
 
 ## jira/OMNI-1421: Transition from fixed-tenancy to impressions-based banner delivery model
@@ -1327,31 +1335,67 @@ The project to transition from a fixed-tenancy model to an impressions-based ban
 Source: jira | Key: OMNI-1416 | Status: Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Rajesh Dobariya
 **Jira Ticket Summary: OMNI-1416**
 **Title:** FP Pay experience improvements to support new auto apply voucher at IPOS/KPOS
-**Status:** Prioritised (To Do) | **Priority:** High | **Assignee:** Rajesh Dobariya
+**Status:** Prioritised (To Do) | **Priority:** High | **Assignee:** Rajesh Dobariya | **Reporter:** Rajesh Dobariya
 
-**Current State**
-The initiative aims to resolve compliance risks and UX friction by shifting offer redemption authority from the Offer Service to POS systems (IPOS, KPOS). FP Pay will transition from an execution layer to a "discovery surface" only.
-*   **Architecture Shift:** Digital Center becomes the Single Source of Truth for offers. IPOS will fetch eligible offers in real-time and auto-apply them during checkout.
-*   **Progress:** Backend (BE) work to enable voucher selection configuration is complete under an existing Core Product Roadmap epic and is ready for release.
+**Current State & Strategic Shift**
+The initiative addresses compliance risks and UX friction by shifting offer redemption authority from the Offer Service to POS systems (IPOS, KPOS). FP Pay will transition from an execution layer to a "discovery surface" only.
+*   **Problem Statement:** Current compliance issues treat vouchers as payment methods; poor UX forces manual selection or "apply all," causing checkout friction and lower utilisation due to lack of cart context in FP Pay.
+*   **Architecture Shift:** Digital Center becomes the Single Source of Truth for offers (creation, logic, application). IPOS will fetch eligible offers in real-time and auto-apply them during checkout.
+*   **Target UX:** Users scan QR at POS; system identifies user, fetches offers from Digital Center, and auto-applies savings without manual selection.
+
+**Transition & End State**
+*   **Interim Phase (July – Sep 2026):** Offer Service continues handling Bank vouchers and EVs due to existing dependencies not yet supported by POS. IPOS handles other in-store offers. FP Pay acts as browse-only for interim offers. Goal: Minimise disruption while shifting redemption authority.
+*   **End State (Sep 2026+):** Offer Service is decommissioned. POS becomes the single redemption engine for EVs, Bank vouchers, and all promotional offers. Digital Center owns logic; FP Pay acts purely as discovery/engagement.
 
 **Pending Actions & Ownership**
-1.  **FS Team Alignment:** Rajesh Dobariya must follow up with the FS team regarding their timeline to finalize the FP Pay experience and provide final effort estimation (Action: [2026-02-12]).
-2.  **Executive Alignment:** Share and align the new FP Pay experience (RB & Kopitiam) with Koklin and Qiuyan for the App Exco review (Action: [2026-02-19]).
-3.  **Effort Estimation:** Provide specific effort estimates for remaining work, specifically the DSP integration required to fetch vouchers in "browse-only" mode before launch (Action: [2026-02-19], [2026-03-11]).
-4.  **IPOS Coordination:** Align with IPOS on when they will start fetching applicable vouchers based on user profiles from DSP to configure FP Pay accordingly.
+1.  **Scope Confirmation:** Rajesh Dobariya must double-confirm if this ticket requires tracking given that remaining work is performed by the Core Product Team (Tiong Siong's team) and does not consume OMNI capacity ([2026-03-17]).
+2.  **Effort Estimation:** Clarify total effort required for the initiative following Danielle Lee's query regarding resource allocation ([2026-03-17]).
+3.  **FS Team Alignment:** Follow up with FS team on final FP Pay experience timeline and effort estimation (Action: [2026-02-19]).
+4.  **Executive Alignment:** Align FP Pay experience (RB & Kopitiam) with Koklin and Qiuyan for App Exco review (Action: [2026-02-19]).
 
 **Decisions & Technical Constraints**
-*   **Interim Phase (July – Sep 2026):** Offer Service continues handling Bank vouchers and EVs; IPOS handles other in-store offers. FP Pay acts as browse-only for these interim offers.
-*   **End State (Sep 2026+):** Offer Service is decommissioned. POS becomes the single redemption engine for all voucher types (including GC 2.0).
 *   **Dependency:** App adoption depends on BE completion of DSP integration to fetch vouchers, required before the July launch.
+*   **IPOS Coordination:** Align with IPOS on fetching applicable vouchers from DSP based on user profiles.
+*   **Blockers:** Pending confirmation on whether OMNI capacity is needed for this work (Core Product Team handling execution).
 
 **Key Dates & Deadlines**
 *   **Target Launch Window:** July – September 2026.
-*   **Production Go-Live:** Deadline undefined; clarification requested from Sathya Murthy Karthik ([2026-03-11]) regarding specific go-live dates and requirements.
+*   **Production Go-Live:** Deadline undefined; clarification requested from Sathya Murthy Karthik ([2026-03-11]).
 
-**Blockers**
-*   Pending confirmation on production timeline from stakeholders.
-*   Dependent on IPOS integration readiness to fetch vouchers from DSP.
+**Notes**
+*   Alignment deck and Figma links are referenced but not attached in current summary.
+*   Business impact metrics (AOV increase, Perfect Order improvements) remain to be defined.
+
+
+## jira/OMNI-1163: Enable AI Personalisation Search Capability with Algolia
+Source: jira | Key: OMNI-1163 | Status: Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Erica Lee | Reporter: Erica Lee | migration_parent: OMNI-653 | polaris-work-item-link: PRDM-12 | relates: PRDM-12, OMNI-1312
+**Status Update: OMNI-1163 (Enable AI Personalisation Search Capability with Algolia)**
+
+**Current State**
+The initiative remains in the **Ideas** backlog but is marked as **Prioritised** (**High Priority**, Status: **To Do**), assigned to **Erica Lee**. While technically feasible and linked to migration parent **OMNI-653**, immediate implementation hinges on resolving specific technical constraints regarding event completeness. The project faces a critical dependency on confirming whether current "past purchase boosting" logic will be overridden by Algolia's AI if enabled "as-is," which could inadvertently hide previously purchased items.
+
+**Problem & Opportunity**
+Customers currently face generic search results that fail to reflect individual preferences, leading to inefficient discovery. Enabling AI personalization aims to dynamically adjust search and category listings based on browsing behavior and purchase history.
+*   **Projected Impact:** A conservative 2% increase in Search Conversion Rate (CVR) is expected, driving a **$1.6M uplift** in Search GMV against a 2024 baseline of $81.7M. This also targets an increase in Overall Average Order Value (AOV).
+*   **Validation:** Based on Algolia client data showing 4.5% CTR/CVR gains, FairPrice anticipates measurable improvements in search relevance and conversion.
+
+**Key Decisions & Strategic Context**
+1.  **Scope Management:** While this ticket focuses on Algolia AI, Google Search functionality was split into a separate ticket (**OMNI-1312**) to allow immediate A/B testing of that alternative, which showed strong preliminary results (resolving 21.6% zero-result queries).
+2.  **Strategic Continuity:** Despite recent backlog movements, leadership affirmed on **2025-09-22** and again on **2026-01-19** that this is not wasted effort. It requires re-evaluation for low-risk activation once technical blockers are cleared.
+
+**Pending Actions & Ownership**
+*   **Re-validate with Algolia (Owner: Vivian Lim Yu Qian):** A meeting was scheduled for **Tuesday, 2026-03-18** to confirm specific event requirements from Algolia engineers.
+    *   *Critical Technical Question:* Determine if the effort to modify past purchase data flows is "deadly critical" or if AI logic will override existing boosting without significant engineering intervention.
+*   **Event Confirmation:** Verify that all required personalization events are live via CDP/Segment (work completed by Deloitte in Sprints 7 and 9).
+
+**Key Dates & Dependencies**
+*   **2026-03-18:** Re-validation meeting with Algolia.
+*   **Dependencies:** The ticket cannot proceed until the search provider strategy is finalized post-POC and event completeness is confirmed.
+*   **Blockers:** Uncertainty regarding the engineering effort to prevent AI logic from overriding past purchase data; confirmation that no additional tagging work is needed beyond Deloitte's delivery.
+
+**Technical References**
+*   **Provider:** Algolia (via CDP/Segment).
+*   **Related Issues:** PRDM-12, OMNI-653 (migration_parent), OMNI-1312.
 
 
 ## jira/OMNI-1419: [Shopbeyond] - Capture all scan events coming from scanning Shop beyond QR code.
@@ -1596,38 +1640,39 @@ Source: jira | Key: OMNI-1361 | Status: Discovery (To Do) | Type: Idea | Priorit
 Source: jira | Key: OMNI-1227 | Status: Soft Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Aditi Rathi | Reporter: Koklin Gan | discovery---connected: OMNI-1075, OMNI-1134 | polaris-merge-work-item-link: OMNI-1075
 **Jira Briefing Summary: OMNI-1227 (FPG - Fraud detect and prevention)**
 
-**Current Status:** Soft Prioritised / To Do. The initiative is stalled awaiting ownership assignment and business alignment on a new fraud engine solution.
+**Current Status:** Soft Prioritised / To Do. The initiative remains stalled awaiting ownership assignment and business alignment on a real-time fraud engine.
 
 **Key Decisions & Progress:**
-*   **Scope Definition:** Finalized to exclude "Onboarding journey changes" (OMNI-1227). Focus remains strictly on Order Management touchpoints.
-    *   *Note:* Onboarding fixes were addressed via separate releases: Manual Onboarding (5 Nov 2025) and MyInfo Onboarding (24 Nov 2025).
-*   **Mitigation Actions Taken:** E-Voucher redemption for Marketplace items was restricted starting Oct 7, 2025 (phased rollout).
-*   **Proposed Solution:** A real-time Fraud Engine (ML or Rule-based) integrated with the OMS.
+*   **Scope Definition:** Focused strictly on Order Management touchpoints to enable transactional surveillance. Explicitly excludes "Onboarding journey changes" (handled separately in Nov 2025).
+*   **Mitigation Actions Taken:** E-Voucher redemption for Marketplace items was restricted starting Oct 7, 2025 (phased rollout) as an interim compliance measure.
+*   **Proposed Solution:** Implementation of a real-time Fraud Engine (ML/Rule-based) integrated with OMS.
     *   **Logic:** Score transactions as LOW (auto-pass), MEDIUM (flag for review), or HIGH (instant block).
-    *   **Backoffice Portal:** Required for CS/Business to approve/reject flags and whitelist customers.
+    *   **Backoffice Portal:** Required for CS/Business to approve/reject flags, whitelist customers, and generate reports.
 *   **Effort Estimates (High):**
     *   **DS Team:** 8 weeks (building engine/rules).
     *   **DE Team:** TBD (connecting DS-OMS endpoints).
     *   **DPD Fulfilment:** 4 weeks (orchestrating journey & building backoffice; requires 1 BE, 3 FE).
-*   **Critical Constraint:** Routing all transactions through the fraud engine impacts Order Placement SLO (latency).
 
 **Pending Actions & Ownership:**
-*   **Ownership Transfer:** Danielle Lee flagged on Feb 13, 2026: "Who will be the new owner for this ticket?" Currently unassigned.
-*   **Technical Proposal Presentation:** Aditi Rathi targets presenting potential tech options and securing business alignment by **Oct 15** (original target). This remains pending due to lack of active ownership since Dec 2025.
-*   **Brainstorming Session:** Aditi planned meetings with DS and Tech teams to finalize the "To-Be" solution; status is unclear given the recent inactivity.
+*   **Ownership Transfer:** Status remains unassigned. Danielle Lee flagged on Feb 13, 2026: "Who will be the new owner for this ticket?" Aditi Rathi (Assignee) is still targeted to present tech options but lacks active engagement since Dec 2025.
+*   **Strategic Focus Update:** On March 17, 2026, Koklin Gan clarified the scope must focus strictly on **"transactional surveillance."**
+*   **Technical Proposal:** Aditi Rathi targets presenting potential tech options and securing business alignment by Oct 15 (original target); this date is now obsolete due to inactivity.
+*   **Brainstorming Session:** Planned meetings with DS and Tech teams to finalize the "To-Be" solution are pending.
 
 **Key Dates & Blockers:**
-*   **Last Update:** Feb 13, 2026 (Danielle Lee requesting owner).
-*   **Historical Deadlines Missed:** Oct 15, 2025 (Alignment target); Dec 2, 2025 (Qiuyan Tian requested AOP update).
+*   **Last Update:** March 17, 2026 (Scope refinement by Koklin Gan) / Feb 13, 2026 (Ownership query).
+*   **Historical Deadlines Missed:** Oct 15, 2025 (Alignment); Dec 2, 2025 (AOP update request).
 *   **Blockers:**
-    *   Lack of a designated ticket owner since Feb 2026.
-    *   Need for explicit business alignment on the proposed high-effort fraud engine vs. current manual processes.
-    *   Unresolved SLO impact regarding order placement latency.
+    *   Lack of designated ticket owner since Feb 2026.
+    *   Unresolved SLO impact regarding order placement latency from routing all transactions through the engine.
+    *   Need for explicit business alignment on high-effort engine vs. current manual RPA processes.
 
-**Context:**
+**Context & Problem Statement:**
 *   **Linked Issues:** OMNI-1075 (Discovery), OMNI-1134 (Discovery).
-*   **Problem Statement:** High financial/reputational risk from voucher abuse ($100k potential loss) and stolen card usage (~3,200 alerts/year currently processed manually via RPA).
-*   **Goal:** Reduce manual review time (currently 2-3 hrs/week per team) and eliminate chargeback risks.
+*   **Risk Profile:** Driven by the Risk team (Larry Pee). Risks include Voucher Abuse ($100k annual potential loss), Stolen Card usage (~3,200 alerts/year), and Account Takeover.
+    *   *Stats:* 27 incidents with 90 transactions cancelled manually between April-July 2025. $0 financial liability so far due to Liability Shift ($200 threshold), but high reputational risk exists for chargebacks under this threshold.
+*   **Current Process:** Relies on a manual RPA mechanic generating ~1 alert/day and seller notifications. Requires 2-3 hours/week per team (Ecom Business + CS) for investigation, call confirmation, and cancellation.
+*   **Goal:** Automate prevention before fulfillment to reduce operational overhead and eliminate chargeback risks.
 
 
 ## jira/OMNI-1208: Mirakl foundational work for scalability

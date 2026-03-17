@@ -694,6 +694,7 @@ def main():
         for idx, info in enumerate(threads_to_fetch, 1):
             thread_id = info["thread_id"]
             subject = info["subject"]
+            last_msg_id = info.get("last_msg_id", "")
             priority = info.get("priority")
             labels = info.get("labels", [])
             priority_tag = f" [{priority}]" if priority else ""
@@ -717,6 +718,7 @@ def main():
                 eprint(f"  -> {new_count} new message(s) cached")
             else:
                 eprint(f"  -> all messages already cached")
+            db.upsert_thread_meta(thread_id, last_msg_id)
 
             info["subject"] = thread_subject
             info["fetched"] = True

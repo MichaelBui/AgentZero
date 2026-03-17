@@ -1,26 +1,23 @@
-usage: jira_reader.py [-h] [--jql JQL] [--filter-id FILTER_ID]
-                      [--view-id VIEW_ID] [--limit LIMIT] [--offset OFFSET]
-                      [--no-cache] [--force] [--cached-only] [--output OUTPUT]
-                      [--debug-log DEBUG_LOG]
+--- Process Check ---
+--- Last 20 lines of log ---
+  OMNI-1389: using cached summary
+  OMNI-1390: using cached summary
+  OMNI-1353: using cached summary
+  OMNI-1179: using cached summary
+  OMNI-1247: using cached summary
+  OMNI-1391: using cached summary
+  OMNI-1393: using cached summary
+  OMNI-1395: using cached summary
+  OMNI-1398: using cached summary
+  OMNI-1399: using cached summary
+  OMNI-1400: using cached summary
+  OMNI-1402: using cached summary
+  OMNI-1403: using cached summary
+  OMNI-1404: using cached summary
+  OMNI-1405: using cached summary
+  OMNI-1417: using cached summary
+  OMNI-1426: using cached summary
+  OMNI-1428: using cached summary
 
-Fetch Jira tickets from JQL, saved filter, and/or Polaris view
-
-options:
-  -h, --help            show this help message and exit
-  --jql JQL             JQL query string
-  --filter-id FILTER_ID
-                        Jira saved filter ID (numeric)
-  --view-id VIEW_ID     Numeric Polaris view ID
-  --limit LIMIT         Max tickets per source (default: 200)
-  --offset OFFSET       Pagination offset
-  --no-cache            Bypass JQL cache for view resolution
-  --force               Skip timestamp checks, fetch and re-summarize
-                        everything
-  --cached-only         Output cached summaries from DB without API fetching
-                        (fast, for reports)
-  --output OUTPUT       Write results to this file (default: data/jira-
-                        output.md)
-  --debug-log DEBUG_LOG
-                        Write debug messages to this file (default: data/jira-
-                        debug.log)
-(venv) root@f956fe612a4b:/a0/usr/workdir#
+Pipeline complete. 76 unique tickets processed.
+(venv) root@45f2b22ec590:/a0/usr/workdir#

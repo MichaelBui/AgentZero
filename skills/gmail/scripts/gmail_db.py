@@ -161,7 +161,8 @@ class SkillDB:
     def get_atomic_for_resource(self, resource_id: str) -> list[dict]:
         rows = self._conn.execute(
             """SELECT * FROM atomic_content
-               WHERE resource_id=? ORDER BY created_at ASC""",
+               WHERE resource_id=?
+               ORDER BY created_at ASC""",
             (resource_id,),
         ).fetchall()
         return [dict(r) for r in rows]
@@ -212,13 +213,55 @@ class SkillDB:
         meta = json.loads(summary.get("metadata", "{}"))
         return meta.get("last_message_id")
 
+    def upsert_thread_meta(self, thread_id: str, last_message_id: str) -> None:
+        """Store last_message_id in the metadata of the last-fetched message row.
+        Updates the existing row WHERE resource_id=thread_id AND item_id=last_message_id,
+        merging last_message_id into its metadata JSON. No new rows are created.
+        This persists fetch results independently of resource_summary, so change
+        detection works correctly even when summarization fails."""
+        def _do():
+            pk = f"gmail:{thread_id}:{last_message_id}"
+            row = self._conn.execute(
+                "SELECT metadata FROM atomic_content WHERE id = ?", (pk,)
+            ).fetchone()
+            if not row:
+                return
+            existing_meta = json.loads(row["metadata"] or "{}")
+            if existing_meta.get("last_message_id") == last_message_id:
+                return
+            existing_meta["last_message_id"] = last_message_id
+            self._conn.execute(
+                "UPDATE atomic_content SET metadata=? WHERE id=?",
+                (json.dumps(existing_meta, separators=(",", ":")), pk),
+            )
+            self._conn.commit()
+        self._retry(_do)
+
+    def get_thread_meta_last_message_id(self, thread_id: str) -> Optional[str]:
+        """Get last_message_id from the most recently cached message row's metadata."""
+        row = self._conn.execute(
+            "SELECT metadata FROM atomic_content WHERE resource_id=? ORDER BY cached_at DESC LIMIT 1",
+            (thread_id,),
+        ).fetchone()
+        if not row:
+            return None
+        meta = json.loads(row["metadata"] or "{}")
+        return meta.get("last_message_id")
+
     def thread_needs_fetch(self, thread_id: str, listing_last_msg_id: str) -> bool:
         """Check if a thread needs fetching by comparing listing's
-        data-legacy-last-non-draft-message-id against cached value."""
+        data-legacy-last-non-draft-message-id against cached value.
+
+        Checks resource_summary metadata first (fast path), then falls back
+        to last-message row metadata to handle cases where fetch succeeded but
+        summarization failed (no summary written yet)."""
         cached = self.get_cached_last_message_id(thread_id)
-        if cached is None:
-            return True
-        return listing_last_msg_id != cached
+        if cached is not None:
+            return listing_last_msg_id != cached
+        cached_meta = self.get_thread_meta_last_message_id(thread_id)
+        if cached_meta is not None:
+            return listing_last_msg_id != cached_meta
+        return True
 
     # ── Resource Summary ────────────────────────────────────────────
 

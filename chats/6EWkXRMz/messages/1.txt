@@ -1,6 +1,4 @@
---- Process Check ---
---- Last 20 lines of log ---
-  OMNI-1389: using cached summary
+OMNI-1389: using cached summary
   OMNI-1390: using cached summary
   OMNI-1353: using cached summary
   OMNI-1179: using cached summary
