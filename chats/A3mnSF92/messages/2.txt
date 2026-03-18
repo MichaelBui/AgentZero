@@ -1,0 +1,156 @@
+[jira_reader] STARTED - fetching and summarizing Jira tickets. Do NOT interrupt or move on.
+[Start fetching 1/25] DPD-715
+[Completed fetching 1/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 2/25] DPD-645
+[Completed fetching 2/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 3/25] OPCO-1940
+[Completed fetching 3/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 4/25] DPD-644
+[Completed fetching 4/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 5/25] DPD-700
+[Completed fetching 5/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 6/25] DPD-551
+[Completed fetching 6/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 7/25] DPD-631
+[Completed fetching 7/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 8/25] DPD-591
+[Completed fetching 8/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 9/25] DPD-383
+[Completed fetching 9/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 10/25] DPD-273
+[Completed fetching 10/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 11/25] DPD-590
+[Completed fetching 11/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 12/25] QE-1105
+[Completed fetching 12/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 13/25] DPD-519
+[Completed fetching 13/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 14/25] DPD-221
+[Completed fetching 14/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 15/25] NEDMT-2288
+[Completed fetching 15/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 16/25] DPD-431
+[Completed fetching 16/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 17/25] OMNI-1191
+[Completed fetching 17/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 18/25] DPD-220
+[Completed fetching 18/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 19/25] QE-843
+[Completed fetching 19/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 20/25] QE-842
+[Completed fetching 20/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 21/25] DPD-1
+[Completed fetching 21/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 22/25] DPD-7
+[Completed fetching 22/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 23/25] DPD-6
+[Completed fetching 23/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 24/25] DPD-8
+[Completed fetching 24/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 25/25] OMNI-1297
+[Completed fetching 25/25] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 1/52] OMNI-1339
+[Completed fetching 1/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 2/52] OMNI-1249
+[Completed fetching 2/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 3/52] OMNI-1363
+[Completed fetching 3/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 4/52] OMNI-1362
+[Completed fetching 4/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 5/52] OMNI-1294
+[Completed fetching 5/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 6/52] OMNI-1344
+[Completed fetching 6/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 7/52] OMNI-1407
+[Completed fetching 7/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 8/52] OMNI-1345
+[Completed fetching 8/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 9/52] OMNI-1296
+[Completed fetching 9/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 10/52] OMNI-1423
+[Completed fetching 10/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 11/52] OMNI-1425
+[Completed fetching 11/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 12/52] OMNI-1414
+[Completed fetching 12/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 13/52] OMNI-1418
+[Completed fetching 13/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 14/52] OMNI-1420
+[Completed fetching 14/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 15/52] OMNI-1429
+[Completed fetching 15/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 16/52] OMNI-1421
+[Completed fetching 16/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 17/52] OMNI-1416
+[Completed fetching 17/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 18/52] OMNI-1163
+[Completed fetching 18/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 19/52] OMNI-1419
+[Completed fetching 19/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 20/52] OMNI-1300
+[Completed fetching 20/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 21/52] OMNI-1394
+[Completed fetching 21/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 22/52] OMNI-1235
+[Completed fetching 22/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 23/52] OMNI-1153
+[Completed fetching 23/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 24/52] OMNI-1246
+[Completed fetching 24/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 25/52] OMNI-1361
+[Completed fetching 25/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 26/52] OMNI-1227
+[Completed fetching 26/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 27/52] OMNI-1208
+[Completed fetching 27/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 28/52] OMNI-1242
+[Completed fetching 28/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 29/52] OMNI-1282
+[Completed fetching 29/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 30/52] OMNI-1334
+[Completed fetching 30/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 31/52] OMNI-1234
+[Completed fetching 31/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 32/52] OMNI-1250
+[Completed fetching 32/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 33/52] OMNI-1157
+[Completed fetching 33/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 34/52] OMNI-1389
+[Completed fetching 34/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 35/52] OMNI-1390
+[Completed fetching 35/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 36/52] OMNI-1353
+[Completed fetching 36/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 37/52] OMNI-1179
+[Completed fetching 37/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 39/52] OMNI-1247
+[Completed fetching 39/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 40/52] OMNI-1391
+[Completed fetching 40/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 41/52] OMNI-1393
+[Completed fetching 41/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 42/52] OMNI-1395
+[Completed fetching 42/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 43/52] OMNI-1398
+[Completed fetching 43/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 44/52] OMNI-1399
+[Completed fetching 44/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 45/52] OMNI-1400
+[Completed fetching 45/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 46/52] OMNI-1402
+[Completed fetching 46/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 47/52] OMNI-1403
+[Completed fetching 47/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 48/52] OMNI-1404
+[Completed fetching 48/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 49/52] OMNI-1405
+[Completed fetching 49/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 50/52] OMNI-1417
+[Completed fetching 50/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 51/52] OMNI-1426
+[Completed fetching 51/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 52/52] OMNI-1428
+[Completed fetching 52/52] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+
+
+[SYSTEM: Returning control to agent after 15 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

@@ -1,3 +1,4 @@
+-rw-rw-r--+ 1 3000 950 189675 Mar 18 06:49 /a0/usr/skills/jira/data/jira-output.md
 
 
 ## jira/OMNI-1425: [1HD] Phase 2 - Build to enable scaling of 1 hour to 100 stores
@@ -1418,7 +1419,7 @@ The project to transition from a fixed-tenancy model to an impressions-based ban
 *   **Customer Experience:** Perfect Order rate increase within 3 months.
 
 
-## jira/OMNI-1416: FP Pay experience improvements to support new auto apply voucher at IPOS/KPOS 
+## jira/OMNI-1416: FP Pay experience improvements to support new auto apply voucher at IPOS/KPOS
 Source: jira | Key: OMNI-1416 | Status: Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Rajesh Dobariya
 **Jira Ticket Summary: OMNI-1416**
 **Title:** FP Pay experience improvements to support new auto apply voucher at IPOS/KPOS
@@ -1590,8 +1591,8 @@ Source: jira | Key: OMNI-1394 | Status: For Pitching (To Do) | Type: Idea | Prio
 
 ## jira/OMNI-1235: AI shopping assistant: An engaging experience for customers to build their shopping cart within seconds
 Source: jira | Key: OMNI-1235 | Status: Soft Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Koklin Gan | Reporter: Koklin Gan | polaris-merge-work-item-link: OMNI-1237 | polaris-work-item-link: DPD-293
-**Ticket:** OMNI-1235 (AI shopping assistant)  
-**Current Status:** Deprioritised to "Next" (Status Category: To Do). Priority remains High.  
+**Ticket:** OMNI-1235 (AI shopping assistant)
+**Current Status:** Deprioritised to "Next" (Status Category: To Do). Priority remains High.
 **Assignee:** Koklin Gan.
 
 ### Key Decisions & Outcomes
@@ -1687,7 +1688,7 @@ No final decisions were recorded in this ticket; it currently serves as a high-p
 *   Success criteria require sufficient validation before moving to the roadmap.
 
 
-## jira/OMNI-1361: Achieve 100% GST compliance for Ecom orders 
+## jira/OMNI-1361: Achieve 100% GST compliance for Ecom orders
 Source: jira | Key: OMNI-1361 | Status: Discovery (To Do) | Type: Idea | Priority: High | Assignee: Alvin Choo | Reporter: Gopalakrishna Dhulipati | polaris-work-item-link: PAY-6785
 **Jira Ticket Summary: OMNI-1361 (Achieve 100% GST Compliance for Ecom Orders)**
 
@@ -1725,7 +1726,7 @@ Source: jira | Key: OMNI-1361 | Status: Discovery (To Do) | Type: Idea | Priorit
 *   **System Logic Shift:** DBP to carry Price, Promo, and GST logic; SAP restricted from carrying business/financial logic (subject to replatform scope).
 
 
-## jira/OMNI-1227: FPG - Fraud detect and prevention 
+## jira/OMNI-1227: FPG - Fraud detect and prevention
 Source: jira | Key: OMNI-1227 | Status: Soft Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Aditi Rathi | Reporter: Koklin Gan | discovery---connected: OMNI-1075, OMNI-1134 | polaris-merge-work-item-link: OMNI-1075
 **Jira Briefing Summary: OMNI-1227 (FPG - Fraud detect and prevention)**
 
@@ -1896,7 +1897,7 @@ The ticket **OMNI-1334** ("Optimising Airway Bill Generation Experience for Sell
 *   **Components/Labels/Fix Versions:** None specified.
 
 
-## jira/OMNI-1234: [MP Foundational] White label invoice generation for MP 
+## jira/OMNI-1234: [MP Foundational] White label invoice generation for MP
 Source: jira | Key: OMNI-1234 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Koklin Gan | Reporter: Koklin Gan | polaris-work-item-link: DPD-543
 **Daily Briefing Summary: OMNI-1234 (White Label Invoice Generation for MP)**
 
@@ -2031,7 +2032,7 @@ Source: jira | Key: OMNI-1390 | Status: Backlog (To Do) | Type: Idea | Priority:
 The high-priority idea **OMNI-1390** regarding "Project Turbo to support new POS version" is currently inactive. Following an initial entry on 2025-10-13 by Koklin Gan, the ticket was archived by Rajesh Dobariya on 2026-01-29. The rationale was that the requirement is already captured; therefore, no further action is required from assignee Sathya Murthy Karthik.
 
 
-## jira/OMNI-1353: Integrating Tencent's  Biometric Authentication (Palm Pay) solution with FPG App for member verification  
+## jira/OMNI-1353: Integrating Tencent's  Biometric Authentication (Palm Pay) solution with FPG App for member verification
 Source: jira | Key: OMNI-1353 | Status: Soft Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Aditi Rathi | Reporter: Gopal Singh | polaris-work-item-link: ENGM-2474
 **Jira Ticket Summary: OMNI-1353 – Tencent Palm Pay Integration (FPG App)**
 
@@ -2064,7 +2065,7 @@ Source: jira | Key: OMNI-1353 | Status: Soft Prioritised (To Do) | Type: Idea | 
 *   Uncertainty regarding the customer experience flow for account linking/unlinking on external kiosks vs. the FPG app.
 
 
-## jira/OMNI-1179: Compliance - Improving the Cart calculation logic 
+## jira/OMNI-1179: Compliance - Improving the Cart calculation logic
 Source: jira | Key: OMNI-1179 | Status: Paused (To Do) | Type: Idea | Priority: High | Assignee: Alvin Choo | Reporter: Alvin Choo | Labels: Foundation | polaris-work-item-link: CART-54
 **Jira Ticket Briefing: OMNI-1179 – Compliance: Improving Cart Calculation Logic**
 
@@ -2200,7 +2201,7 @@ Source: jira | Key: OMNI-1395 | Status: Backlog (To Do) | Type: Idea | Priority:
     *   2025-10-31T12:51: Correction identified regarding Weekly vs. Monthly active users.
 
 
-## jira/OMNI-1398: Extend offsite ad placement to Google 
+## jira/OMNI-1398: Extend offsite ad placement to Google
 Source: jira | Key: OMNI-1398 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Nikhil Grover | Reporter: Nikhil Grover
 **Daily Briefing Summary: OMNI-1398**
 
@@ -2455,3 +2456,4 @@ No final decisions have been recorded yet. The current consensus identifies the 
 *   **Created/Last Updated:** 2026-02-26T09:49:17.889+0800
 *   **Deadline:** None currently assigned (null).
 *   **Blocker:** The ticket cannot advance to development or implementation until the proposal includes the missing quantitative business and metric data outlined above.
+(venv) root@f93a5675f2a0:/a0/usr/workdir#
