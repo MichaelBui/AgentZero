@@ -1,158 +1,125 @@
 
 
-## jira/OMNI-1425: [1HD] Phase 2 - Build to enable scaling of 1 hour to 100 stores
-Source: jira | Key: OMNI-1425 | Status: Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Rajesh Dobariya
-**Jira Briefing: OMNI-1425 – Phase 2 Build to Scale 1 Hour Delivery (1HD) to 100 Stores**
-
-**Current Status**
-*   **Ticket ID:** OMNI-1425
-*   **Status Category:** To Do (Marked as "Prioritised")
-*   **Priority:** High
-*   **Type:** Idea
-*   **Assignee/Reporter:** Rajesh Dobariya
-*   **Current State:** The ticket remains active. On 2026-03-18, Koklin Gan updated the "Jobs to be Done" (JTBD) section and requested updates to the remaining fields. While previous context suggested a potential scope cancellation, the current metadata confirms the initiative is actively being prepared with full documentation requirements (Problem Definition, Solution Summary, Business Impact). The title has been refined to "[1HD] Phase 2 - Build to enable scaling of 1 hour to 100 stores."
-
-**Decisions Made & Scope**
-*   **Core Objective:** Enable scaling from 1 store to 100 stores by integrating with a 3PL vendor.
-*   **Integration Scope:** Push order details (Name, Address, Contact No) to the vendor's last-mile app; enable live tracking visibility outside the FPG app; record Proof of Delivery (POD).
-*   **Functional Requirements:**
-    *   Picker app enhancement for real-time new order notifications.
-    *   Simplified store creation process (inventory, assortment, time-slot, capacity).
-    *   Handling 1HD in FFS stores and defining financial treatment (accounting entries).
-    *   Pilot trial iteration based on discovered insights.
-*   **Pending Logic Decisions:**
-    *   **Notification Timing:** Must clarify if the vendor is notified at "order placement" or "upon packed status."
-    *   **Data Fields:** Confirmation required if data is limited to Name, Address, and Contact No only.
-    *   **Completion Protocol:** Define how/when the vendor app notifies DBP upon order completion.
-
-**Pending Actions & Ownership**
-*   **Documentation Gaps (Owner: Rajesh Dobariya):**
-    *   Complete "Opportunity/Problem Definition" using the required JTBD format (As a [user]... When... I want... So I can). Specific context: Shopper forgetting items post-order, needing to amend/add items to avoid multiple fees.
-    *   Define affected user segments, estimated volume (% of total users), and current manual workarounds.
-    *   Finalize "Solution Summary" and "Business Impact" sections (Financial GMV, Operational Metrics).
-*   **Metrics Targets:**
-    *   **Financial:** Increase AOV from $X to $Y within 6 weeks.
-    *   **Customer Experience:** Improve Perfect Order rate from X% to Y% in 3 months.
-    *   **Operational:** Track Order Processing Time, Delivery Status Sync Accuracy, and Operational Errors.
-*   **Next Steps:** Koklin Gan's note (2026-03-18) indicates JTBD is updated; the assignee must now populate the remaining "Business Impact," "Product Metrics," and "Operational Processes" sections before pitching.
-
-**Key Dates & Deadlines**
-*   **Status Set to Prioritised:** 2026-02-11
-*   **JTBD Update:** 2026-03-18 (Koklin Gan)
-*   **Original Plan:** Delivery ticket addition in the week starting 2026-03-23.
-
-**Blockers/Notes**
-*   **Missing Data:** Specific answers regarding "Who faces this problem?", "User volume," and "Current solution" are still required in the ticket description.
-*   **Operational Dependencies:** Requires vendor alignment, budget approvals for financial treatment, and internal workflow definition.
-*   **Pilot Strategy:** The build must support iteration based on findings from a Pilot trial.
-
-
-## jira/OMNI-1391: Available to Promise 1.0 [MVP] - Reservations against Future Inventory
-Source: jira | Key: OMNI-1391 | Status: For Pitching (To Do) | Type: Idea | Priority: High | Assignee: Sathya Murthy Karthik | Reporter: Prajney Sribhashyam
-**Ticket:** OMNI-1391 | **Title:** Available to Promise 1.0 [MVP] - Reservations against Future Inventory
-**Status:** For Pitching (To Do) | **Type:** Idea | **Priority:** High
-**Assignee:** Sathya Murthy Karthik | **Reporter:** Prajney Sribhashyam
-
-**Current State & Problem Definition**
-The current FPG application relies on inaccurate inventory logic, causing "false stock outs," premature reservation of future delivery slots, and product wastage. Customers planning ahead for essential items (recipes, baby products) face friction when restockable items appear unavailable, leading to cart abandonment or incomplete baskets.
-*   **Problem Scale:** OOS impacts 2.4% of impressions on average, rising to 5.4% annually (peaking at 8.9% pre-CNY).
-*   **Financial Impact:** Estimated annual GMV loss is ~$5M; the proposed solution targets a recovery of $5.5M annually (conservative estimate excluding fresh penetration gains).
-
-**Proposed Solution & Scope**
-This MVP focuses strictly on PFC items and selected SKUs to establish rudimentary "Available to Promise" (ATP) logic.
-1.  **Replenishment Patterns:** Enable manual presetting of SKU-level replenishment/addition patterns by timeslot.
-2.  **Forward-Looking Logic:** Toggle inventory calculation for specific SKUs using a new formula: *SOH by timeslot = Previous SOH + Preset Replenishment - Variance - Reservation (by Pick time)*. Calculations occur in 2-hour blocks for the next 7 days.
-3.  **Indexer Workaround:** Apply "Unlimited SKU" logic to the Indexer for these SKUs to prevent search/PLP disappearance due to outdated inventory counts.
-4.  **Limitations:** No expiry/writeoff functionality currently included.
-
-**Key Metrics & Goals**
-*   **Goals:** Increase Add-to-Cart (ATC), Average Order Value (AOV), and end-to-end conversion by improving Sales-weighted Availability (SWA) and reducing shrinkage.
-*   **Target Audience:** Customers planning deliveries days in advance who require essential items.
-
-**Pending Actions & Ownership**
-*   **Action:** Confirm effort estimation (S or XS) to validate feasibility.
-*   **Owner:** Sathya Murthy Karthik.
-*   **Context:** Requested by Danielle Lee on 2025-11-04; Prajney Sribhashyam updated ticket metadata on 2025-10-15 to "For Pitching."
-
-**Decisions & Strategy**
-*   **Strategy:** Proceed with a controlled pilot (Strictly PFC, Selected SKUs) rather than full deployment. Focus is on validating GMV improvement and operational overhead before considering store-to-store transfers or T8/T10 slot evolution.
-*   **Reference Materials:** BRD Document, Solution Discussion, Calculation logic Google Sheet available for review.
-
-**Dates & Blockers**
-*   **Last Activity:** 2025-11-04 (Danielle Lee requested effort confirmation).
-*   **Blocker:** Pending "S/XS" effort estimation from the assignee to determine next steps.
-*   **Deadlines:** No due date currently set; timeline dependent on effort confirmation and subsequent planning.
-
-
-## jira/OMNI-1428: [1hd] Phase 2 -  Scaling one hour delivery to more stores (TO REMOVE)
-Source: jira | Key: OMNI-1428 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Rajesh Dobariya | polaris-work-item-link: DPD-627
-**Jira Ticket Summary: OMNI-1428**
-**Subject:** [1hd] Phase 2 - Scaling one hour delivery to more stores (TO REMOVE)
-
-**Current Status & State**
-*   **Status:** Backlog (To Do)
-*   **Type:** Idea
-*   **Priority:** High
-*   **Associated Work Item:** DPD-627 (Polaris work item link)
-*   **Date of Record:** 2026-02-27
-*   **Timestamp:** 12:22:08.201+0800
-
-**Ownership & Pending Actions**
-*   **Owner:** Rajesh Dobariya (Assignee/Reporter).
-*   **Pending Action:** The ticket description requires immediate population with specific sections before pitching or moving to active development. Rajesh must complete the following:
-    *   **Problem Definition:** Must be framed strictly as a user problem ("As a shopper... When I forget items... I want to amend my order... So I can avoid multiple fees"). It must identify affected segments, estimated user volume (%), and current workarounds (e.g., placing separate orders).
-    *   **Goal & Solution Summary:** Define the feature's high-level mechanics using the standard "As a/When/I want/So I can" format.
-    *   **Business Impact:** Provide specific annual GMV, income, or cost avoidance projections.
-    *   **Product Metrics Impact:** Define specific targets (e.g., AOV increase from $X to $Y within 6 weeks; Perfect Order rate increase from X% to Y% in 3 months).
-    *   **Operational Processes & Business Plans:** Outline budget approvals, vendor alignments, internal workflows, and go-to-market/retention strategies.
-    *   **Business Rules/Logic:** Specify required system behaviors, dependencies, and exceptions for the feature.
-
-**Decisions Made**
-*   None recorded. The initiative remains in "Backlog" awaiting the completion of the standardized description template to define the scope of scaling one-hour delivery to additional stores.
-
-**Key Dates & Blockers**
-*   **Deadlines:** No due date assigned (null).
-*   **Blockers:** Execution is blocked until the description fields are fully populated with the required problem definition, metrics, and operational plans as per the new template instructions.
-
-**Technical References**
-*   Ticket ID: OMNI-1428
-*   Linked Issue: DPD-627
-
-
 ## jira/DPD-715: Dynamic ad slot configuration for Homepage swimlanes
-Source: jira | Key: DPD-715 | Status: TESTING IN PREPRODUCTION (In Progress) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | parent: DPD-710
+Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | parent: DPD-710
 **Ticket Summary: DPD-715 (Dynamic ad slot configuration for Homepage swimlanes)**
 *Parent:* DPD-710 ([RMN] Activate product ads in Omni Home swimlanes)
 *Assignee:* Michael Bui | *Reporter:* Nikhil Grover
-*Priority:* High | *Status:* TESTING IN PREPRODUCTION (In Progress) | *Due Date:* 2026-03-17
+*Priority:* High | *Status:* **DONE** (In Release Queue) | *Due Date:* 2026-03-17
 
 **Current Status**
-The story is in **TESTING IN PREPRODUCTION**. The feature enables dynamic control of ad placement and count via Split feature flags, optimizing layout for Omni and OG Homepages without code changes. As of **2026-03-16T18:07:30**, mobile application issues have been resolved (ref), and the ticket is officially ready for UAT.
+The story is officially marked as **DONE** and has been moved to the **Release Queue**. The feature successfully enables dynamic control of ad placement and count via Split feature flags for both Omni and OG Homepages, eliminating the need for code changes. While previous discrepancies regarding Omni Home configurations were noted on 2026-03-16, the resolution is recorded as "Done," implying alignment has been achieved or accepted prior to release.
 
 **Pending Actions & Ownership**
-*   **UAT Initiation:** Michael Bui confirmed readiness; stakeholders should proceed with acceptance testing immediately.
-*   **Omni Home Configuration Discrepancy:** As of **2026-03-16T16:54:01**, SplitIO changes (2, 5) successfully reflected in **OG Home** swimlanes but remain fixed at **(1, 3)** in **Omni Home** swimlanes. Michael Bui is investigating this discrepancy and coordinating with relevant team members to align Omni configurations before final deployment.
+*   **UAT Completion:** Michael Bui conducted a UAT session on **2026-03-19T00:46:38+0800**, confirming the solution meets requirements and marking the ticket as resolved.
+*   **Release Execution:** The ticket is now in the release queue pending final deployment validation. No further development actions are required.
 
 **Decisions Made & Acceptance Criteria**
-*   **Dynamic API Requests:** When the flag is ON with configuration `[3, 5, 7]`, the system requests 3 ads rendering at positions 3, 5, and 7. Updating the Split config to `[2, 4, 6, 8, 10]` automatically triggers a request for 5 ads in new user sessions without deployment.
+The following behaviors were validated against the acceptance criteria:
+*   **Dynamic API Requests:** When the flag is ON with configuration `[3, 5, 7]`, the system requests exactly 3 ads rendering at positions 3, 5, and 7. Updating Split config to `[2, 4, 6, 8, 10]` automatically triggers a request for 5 ads in new user sessions without deployment.
 *   **Fallback Logic:** If the flag is OFF, the system defaults to slots `[1, 3]`, fetching 2 ads.
 *   **Empty Configuration:** An empty Split array `[]` results in 0 ad requests; the page displays only organic products with no gaps.
 *   **Supply Shortage Handling:** If configuration calls for 3 slots (e.g., `[3, 5, 7]`) but only 2 valid ads are returned, slots 3 and 5 fill with ads, while slot 7 renders organic content.
 *   **Out-of-Bounds Handling:** Slot indices exceeding the available content range (e.g., index 20 in a 10-item swimlane) are ignored; only valid indices render.
 *   **Stock Integrity:** The system strictly honors existing stock availability checks before requesting ads to prevent displaying out-of-stock items.
 
+**Key Dates & History**
+*   **2026-03-10T12:29:37+0800:** Ticket created by Nikhil Grover defining requirements for dynamic ad slot configuration via Split flags.
+*   **2026-03-16T16:54:01+0800:** Partial deployment observed; OG Home updated to 2,5 while Omni Home lagged at 1,3. Coordination initiated to resolve the discrepancy.
+*   **2026-03-16T18:07:30+0800:** Mobile application issues resolved; ticket initially marked ready for UAT.
+*   **2026-03-19T00:46:38+0800:** Michael Bui conducted UAT session, confirming readiness and marking resolution as "Done."
+
+**Blockers & Constraints**
+*   *Resolved:* The Omni Home swimlane configuration discrepancy (previously fixed at 1,3) has been addressed to allow full deployment.
+*   *Constraint:* Integration with existing stock logic remains a hard constraint; no out-of-stock products may be displayed as ads.
+
+
+## jira/DPD-733: Dynamic ad slots for vertical scroll on omni homepage
+Source: jira | Key: DPD-733 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | parent: DPD-710
+**Daily Briefing Summary: DPD-733**
+
+**Current Status & State**
+*   **Ticket:** DPD-733 (Dynamic ad slots for vertical scroll on omni homepage)
+*   **Status:** IN RELASE QUEUE (Category: Done, Resolution: Done). The development work is complete and is currently awaiting release.
+*   **Parent Ticket:** DPD-710 ([RMN] Activate product ads in Omni Home swimlanes).
+
+**Ownership & Pending Actions**
+*   **Assignee:** Michael Bui (Development owner).
+*   **Reporter:** Nikhil Grover (Stakeholder/Requester).
+*   **Pending Action:** Release deployment. No further development or testing actions are listed as pending; the item is ready for production rollout.
+
+**Key Decisions & Technical Scope**
+The story implements a Split feature flag to allow dynamic control of ad placement and count on the Omni homepage vertical scroll without code changes or manual API updates. Key logic decisions include:
+*   **Dynamic Configuration:** Ads are requested based on an array (e.g., `[3, 5, 7]`) defined in the dashboard.
+*   **Fallback Logic:** If the feature flag is OFF but ads are enabled, the system defaults to slots `[1, 3]` (2 ads).
+*   **Empty Configuration:** An empty array `[]` results in zero ad requests and displays only organic content.
+*   **Supply Shortage Handling:** If the Ad API returns fewer ads than requested (e.g., requesting 3 but receiving 2), slots are filled sequentially, and remaining slots render organic content rather than gaps.
+*   **Out-of-Bounds Handling:** Invalid indices beyond available content range (e.g., index 20 with only 10 items) are ignored; rendering is capped by actual content length.
+*   **Stock Integrity:** The system strictly honors existing stock availability checks; out-of-stock products will not be shown as ads.
+
+**Key Dates & Deadlines**
+*   **Due Date:** March 17, 2026.
+*   **Last Update:** March 10, 2026 (Status transitioned to "IN RELASE QUEUE").
+
+**Blockers**
+None identified in the current ticket content. The status indicates successful completion pending release execution.
+
+
+## jira/DPD-734: Include swimlane name in the ad request for all Omni Home swimlanes
+Source: jira | Key: DPD-734 | Status: TO BE DEFINED (To Do) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | parent: DPD-710
+**Daily Briefing Summary: DPD-734**
+
+*   **Current Status**: The ticket is in the **"TO BE DEFINED"** state (Status Category: To Do). No development or implementation has commenced.
+*   **Ownership & Action Items**:
+    *   **Assignee**: Michael Bui is responsible for executing the story.
+    *   **Pending Action**: Develop and implement logic to pass the swimlane name as the `Page_name` parameter in all ad requests sent to OSMOS for Omni Home swimlanes where ads are enabled.
+*   **Decisions Made**: None recorded yet; the requirement is currently awaiting definition/implementation details.
+*   **Key Dates & Deadlines**:
+    *   **Due Date**: March 17, 2026 (Note: This date appears to be in the future relative to the log timestamp of March 10, 2026).
+    *   **Parent Epic**: DPD-710 ("[RMN] Activate product ads in Omni Home swimlanes").
+*   **Technical Context & Requirements**:
+    *   **Objective**: Enable performance tracking and optimization at the specific swimlane level.
+    *   **Functional Requirement**: When an ad request is triggered from a swimlane enabled for ads, the system must include the `Page_name` parameter in the OSMOS request containing the name of that specific swimlane.
+*   **Priority**: High.
+
+
+## jira/DPD-644: [RMN] Streamline event sync from Segment.io to OSMOS to resolve overage
+Source: jira | Key: DPD-644 | Status: Done (Done) | Type: Epic | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-12 | Resolution: Done | parent: DPD-645 | polaris-work-item-link: OMNI-1418, OMNI-1418
+### Daily Briefing Summary: DPD-644
+
+**Current Status**
+*   **Ticket:** DPD-644 ([RMN] Streamline event sync from Segment.io to OSMOS to resolve overage)
+*   **Type:** Epic (High Priority)
+*   **State:** `Done` / `Resolution: Done`. The work is completed.
+*   **Owner:** Michael Bui (Assignee).
+
+**Pending Actions & Ownership**
+*   **Status Update:** No further actions are required as the ticket status has transitioned to "Done" with a resolution of "Done."
+*   **Responsibility:** Michael Bui successfully executed the scope, strategy, and execution plan for streamlining event synchronization.
+*   **External Dependency:** The task remains linked to Polaris work item **OMNI-1418**.
+
+**Decisions Made**
+*   The primary objective of resolving "overage" issues through process streamlining has been achieved, as evidenced by the `Done` resolution status.
+*   Technical and strategic decisions were finalized prior to this summary update, replacing the previous `TO BE DEFINED` state.
+
 **Key Dates & Blockers**
-*   **2026-03-10T12:29:37.963+0800:** Ticket created by Nikhil Grover with requirements defined for dynamic ad slot configuration via Split flags.
-*   **2026-03-16T16:54:01.428+0800:** Partial deployment observed; OG Home updated to 2,5 while Omni Home lagged at 1,3. Michael Bui initiated coordination to resolve the Omni discrepancy.
-*   **2026-03-16T18:07:30.485+0800:** Mobile app issues resolved; status updated to ready for UAT.
-*   **2026-03-17:** Hard deadline for completion.
-*   **Blocker/Constraint:** Omni Home swimlanes are not reflecting the latest Split configuration changes (fixed at 1,3), preventing full deployment success until resolved.
+*   **Due Date:** March 12, 2026.
+*   **Latest Activity:** Ticket creation and review recorded on March 3, 2026, at 14:07 UTC+8 by Nikhil Grover (Reporter).
+*   **Blockers:** None; the `Done` status indicates successful completion without open blockers.
+
+**Technical Context**
+*   **Source System:** Segment.io
+*   **Target System:** OSMOS
+*   **Objective:** Optimize data flow to resolve financial overages associated with current sync volumes.
+
+**Historical Note**
+*   Previous tracking indicated the work was in a `TO BE DEFINED` state awaiting initiation. This status has been superseded by the current `Done` resolution, confirming that the definition phase and subsequent execution were successfully concluded between creation and the due date.
 
 
 ## jira/DPD-645: Improve event sync to prevent overage
-Source: jira | Key: DPD-645 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-12 | Resolution: Done | blocks: DPD-273, DPD-273 | parent: DPD-644
+Source: jira | Key: DPD-645 | Status: Done (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-12 | Resolution: Done | blocks: DPD-273, DPD-273 | parent: DPD-644
 **Ticket:** DPD-645: Improve event sync to prevent overage
-**Status:** IN RELEASE QUEUE (Done) | **Priority:** High | **Resolution:** Done
+**Status:** Done | **Priority:** High | **Resolution:** Done
 **Assignee:** Michael Bui | **Reporter:** Nikhil Grover
 **Parent:** DPD-644 ([RMN] Streamline event sync from Segment.io to OSMOS to resolve overage)
 **Linked Issues:** Blocks DPD-273
@@ -160,34 +127,143 @@ Source: jira | Key: DPD-645 | Status: IN RELASE QUEUE (Done) | Type: Story | Pri
 ### 1. Current Status & Context
 *   **Objective:** Optimize the OSMOS PROD destination function in Segment to eliminate recurring monthly cost overages caused by excessive execution times.
 *   **Acceptance Criteria:** The function must complete syncing transaction and product events at least **50% faster** than baseline.
-*   **Deployment History:** A temporary optimization was deployed to PROD on **2026-03-15** between 8:00 PM and 11:00 PM local time. Despite no immediate issues detected after ~30 minutes, the deployment was reverted to version #56 at **23:02 on 2026-03-15**.
-*   **Testing Limitations:** It was confirmed by Madhuri Nalamothu (2026-03-16) that E2E testing cannot cover this scenario as it involves backend function execution rather than UI interactions.
+*   **Outcome Confirmation:** As of March 19, 2026, no abnormality was observed in PROD. The optimization is deemed successful.
+    *   **Performance Gain:** Daily function time reduced from ~25 days to ~8 days.
+    *   **Impact:** This translates to a reduction of approximately **12,200 hours/month** of function time. Actual cost savings will be realized over the coming months.
+*   **Testing Limitations:** Confirmed by Madhuri Nalamothu (2026-03-16) that E2E testing cannot cover this backend scenario; verification relies on monitoring execution logs and daily totals rather than UI interactions.
 
 ### 2. Pending Actions & Ownership
-*   **Root Cause Analysis:** Investigation is required to determine why the temporary PROD deployment was reverted despite initial stability.
-    *   **Owner:** Michael Bui (implied based on recent activity).
-*   **Data Verification Strategy:** For any future deployment windows, the following must be executed:
-    *   Enable changes in PROD for 3 hours on a Sunday (tentative window: 8 PM–11 PM).
-    *   Verify data consistency between OSMOS and BigQuery against 1–2 weeks of baseline data to ensure error rates remain within threshold.
-    *   If successful, enable permanently and monitor closely for 1–2 days.
-*   **Automation Gap:** No automated E2E tests are available for this specific backend optimization; manual verification is required.
+*   **Monitoring:** Continued observation is required to validate the long-term impact of the time reduction on monthly billing cycles.
+    *   **Owner:** Michael Bui.
+*   **Verification Strategy:** No further immediate deployment windows are required as the target optimization has been confirmed stable in PROD since March 19.
 
 ### 3. Key Decisions Made
-*   **Reversion Decision:** The PROD change enabled on March 15 was rolled back to version #56 late that evening.
-*   **Release Strategy:** A phased approach was agreed upon: UAT observation (2 weeks), followed by a short-term PROD trial, and permanent enablement only if stable.
+*   **Reversion Update:** While a temporary reversion to version #56 occurred on March 15, 2026, subsequent monitoring indicates the final deployment was successful and stable. The "reversion" described in prior logs has been superseded by confirmed stability.
+*   **Resolution:** The ticket is marked "Done" as the 50% execution time reduction target has been achieved (approx. 68% reduction: ~25d to ~8d).
 
 ### 4. Key Dates & Blockers
 *   **Critical Dates:**
     *   **Ticket Creation:** 2026-03-03
-    *   **Original Due Date:** 2026-03-12 (Ticket marked "Done" post-deadline).
-    *   **UAT Observation Period:** Started ~05/03/2026; observed for 2 weeks prior to PROD attempt.
+    *   **Original Due Date:** 2026-03-12 (Completed post-deadline).
+    *   **UAT Observation Period:** Started ~05/03/2026.
     *   **PROD Trial Window:** 15/03/2026 (8:00 PM – 11:00 PM).
-*   **Blockers:** The temporary production failure/reversion prevents the immediate elimination of recurring monthly cost overages. No specific technical reason for the revert was cited in the logs provided, only the action itself.
+    *   **Stability Confirmation:** 2026-03-19 (Michael Bui confirmed no abnormalities).
+*   **Blockers:** No current blockers; the temporary failure on March 15 has been resolved.
 
 ### 5. Technical References
 *   **System Architecture:** Segment.io -> OSMOS PROD destination function -> BigQuery.
-*   **Versions:** Reverted to version #56; original target included optimizing execution time by 50%.
-*   **Platforms Monitored:** IOS UAT, Android UAT (Statuses listed as open/blank in comments).
+*   **Versions:** Successfully optimized beyond version #56 (original target included optimizing execution time by 50%).
+*   **Platforms Monitored:** IOS UAT, Android UAT; PROD monitoring confirmed via daily function duration logs.
+
+
+## jira/OMNI-1363: [Decoupling from SAP] Migrate CF apps to DBP to improve MP Consol fulfilment experience
+Source: jira | Key: OMNI-1363 | Status: Paused (To Do) | Type: Idea | Priority: High | Assignee: Prajney Sribhashyam | Reporter: Gopalakrishna Dhulipati | polaris-work-item-link: DST-2272, DPD-326, DPD-332, DPD-341, DST-2531, DPD-348
+**Ticket:** OMNI-1363 | [Decoupling from SAP] Migrate CF apps to DBP to improve MP Consol fulfilment experience
+**Assignee:** Prajney Sribhashyam | **Reporter:** Gopalakrishna Dhulipati | **Priority:** High | **Status:** Paused (To Do) | **Type:** Idea
+**Linked Issues:** DST-2272, DPD-326, DPD-332, DPD-341, DST-2531, DPD-348
+
+### Current Status
+*   **Overall State:** Paused/Delayed. Development scope was refined in March 2026 to exclude "Pricing" components (removing a 70 man-day estimate).
+*   **Business Context:** Problem involves $170K annual Cloud Foundry costs and enhancement dependencies for MP Consolidate Fulfilment Sellers and DPD developers.
+*   **Risk Level:** High risk regarding historical data risk; contingency plan is in development.
+
+### Pending Actions & Ownership
+*   **Data Contingency:** Complete development of the contingency plan for historical data at risk during migration.
+*   **Training:** Product & Tech teams must create training materials prior to rollout.
+*   **Alignment:** Confirm final alignment with PFC & First Mile teams regarding device-managed rollout to ensure zero operational disruption.
+
+### Key Decisions Made
+*   **Scope Definition (2026-03-18):** Ticket scope strictly limited to Fulfilment apps; Pricing component removed from effort estimates.
+*   **Rollout Strategy:** Managed by device to prevent downtime for Operations.
+*   **Technical Go-Live (Original Baseline):**
+    *   UAT & Training: 5–9 Jan.
+    *   Rollout Window: Start date 12–16 Jan.
+    *   *Note:* These dates were superseded by WMS Middleware delays shifting the live to April 2026 in prior updates, but the scope reduction remains valid for the current paused state.
+
+### Key Dates, Deadlines & Blockers
+*   **Blocker:** WMS Middleware dependency previously delayed live from Jan to March/April; current status is Paused pending re-alignment.
+*   **Scope Change:** Pricing component (70 man days) removed from ticket scope as of 2026-03-18.
+
+### Success Criteria & Scope
+*   **Goal:** Reduce annual Cloud Foundry costs by $170K (Baseline: $170K -> $0) and improve DOT% for CF sellers.
+*   **Operational Improvement:** Enable earlier order pushing to CF apps (4PM on D-1).
+*   **Components for Rollout:**
+    *   First Mile Operations App
+    *   First Mile Dashboard
+    *   PFC Receiving App
+
+
+## jira/OMNI-1163: Enable AI Personalisation Search Capability with Algolia
+Source: jira | Key: OMNI-1163 | Status: Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Erica Lee | Reporter: Erica Lee | migration_parent: OMNI-653 | polaris-work-item-link: PRDM-12 | relates: PRDM-12, OMNI-1312
+**Status Update: OMNI-1163 (Enable AI Personalisation Search Capability with Algolia)**
+
+**Current State**
+The initiative remains in the **Ideas** backlog, marked as **Prioritised** (**High Priority**, Status: **To Do**), assigned to and reported by **Erica Lee**. While originally linked to migration parent **OMNI-653**, recent technical assessment has halted progress. The project is currently blocked due to insufficient upstream data integrations and the need for significant engineering refactoring of past purchase logic.
+
+**Problem & Opportunity**
+Customers face generic search results that fail to reflect individual preferences (e.g., dietary restrictions, brand loyalty), leading to inefficient discovery and potential abandonment. Enabling AI personalization will dynamically adjust search, promotion, and category listings based on browsing behavior and purchase history to improve relevance and engagement.
+*   **Projected Impact:** A conservative 2% increase in Search Conversion Rate (CVR) is expected, driving a **$1.6M uplift** in Search GMV against a 2024 baseline of $81.7M, alongside an increase in Overall Average Order Value (AOV).
+*   **Validation:** Assumptions are based on Algolia client data showing a 4.5% CTR/CVR gain; FairPrice anticipates measurable improvements with the conservative 2% CVR estimate.
+
+**Key Decisions & Strategic Context**
+1.  **Scope Management:** Google Search functionality remains in a separate ticket (**OMNI-1312**) to allow immediate A/B testing, while this ticket focuses on Algolia AI.
+2.  **Integration Strategy Shift:** Following a debugging session with the Algolia team (via CDP/Segment), it was confirmed that existing integrations are incomplete. The strategy has shifted from minor tweaks to planning optimal integrations via **Light**.
+
+**Pending Actions & Ownership**
+*   **Platform Migration Planning (Owner: Vivian Lim Yu Qian):** Plan for optimal data integrations via the **Light** platform.
+    *   *Critical Technical Findings:*
+        1.  **Event Tracking Gaps:** Significant issues identified in frontend-to-Segment flows. Web events are frequently missing critical product info, and Android "Product Clicked" events often fail to trigger. AI personalization cannot proceed until these upstream tracking issues are resolved.
+        2.  **Logic Refactoring:** Algolia requires a fundamental change to how past purchase items are returned in search results to ensure compatibility with AI logic. This requires significant engineering effort, contradicting earlier assumptions of low-risk activation.
+*   **Dependency Check:** Confirm no additional tagging work is needed once the Light platform integration is finalized.
+
+**Key Dates & Blockers**
+*   **2026-03-18:** Meeting concluded where technical blockers were confirmed; strategy pivoted to Light integrations.
+*   **Blockers:**
+    *   Incomplete event tracking from frontend (Android/Web) to Segment.
+    *   Requirement for significant engineering effort to refactor past purchase data flows.
+    *   The ticket cannot proceed with current Algolia implementation until upstream tracking is fixed and the migration to Light is executed.
+
+**Technical References**
+*   **Provider:** Algolia (via CDP/Segment) -> Transitioning to **Light**.
+*   **Related Issues:** PRDM-12, OMNI-653 (migration_parent), OMNI-1312.
+
+
+## jira/OMNI-1391: Available to Promise 1.0 [MVP] - Reservations against Future Inventory
+Source: jira | Key: OMNI-1391 | Status: Soft Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Sathya Murthy Karthik | Reporter: Prajney Sribhashyam
+**Ticket:** OMNI-1391 | **Title:** Available to Promise 1.0 [MVP] - Reservations against Future Inventory
+**Status:** Soft Prioritised (To Do) | **Type:** Idea | **Priority:** High
+**Assignee:** Sathya Murthy Karthik | **Reporter:** Prajney Sribhashyam
+
+**Current State & Problem Definition**
+The FPG application relies on inaccurate inventory logic, causing "false stock outs," premature reservation of future delivery slots, and product wastage. Customers planning ahead for essential items (recipes, baby products) face friction when restockable items appear unavailable, leading to cart abandonment or incomplete baskets.
+*   **Problem Scale:** OOS impacts 2.4% of impressions on average, rising to 5.4% annually (peaking at 8.9% pre-CNY).
+*   **Financial Impact:** Estimated annual GMV loss is ~$5M; the proposed solution targets a recovery of $5.5M annually (conservative estimate excluding fresh penetration gains).
+
+**Proposed Solution & Scope**
+This MVP focuses strictly on PFC items and selected SKUs to establish rudimentary "Available to Promise" (ATP) logic.
+1.  **Replenishment Patterns:** Enable manual presetting of SKU-level replenishment/addition patterns by timeslot, factoring in arrival and buffer times for picking readiness.
+2.  **Picking Time Mapping:** Configurable mapping linking delivery slots to specific inventory reference points (e.g., 8am slot uses previous day's 8pm stock).
+3.  **Forward-Looking Logic:** Toggle inventory calculation for specific SKUs using: *SOH by timeslot = Previous SOH + Preset Replenishment - Variance - Reservation*. Calculations occur in 2-hour blocks for the next 7 days.
+4.  **Indexer Workaround:** Apply "Unlimited SKU" logic to the Indexer for these SKUs to prevent search/PLP disappearance due to outdated counts.
+5.  **Limitations:** No expiry/writeoff functionality currently included; no batch-level visibility, risking potential stock shortfalls if unlogged write-offs occur.
+
+**Key Metrics & Goals**
+*   **Goals:** Increase Add-to-Cart (ATC), Average Order Value (AOV), and end-to-end conversion by improving Sales-weighted Availability (SWA) and reducing shrinkage.
+*   **Target Audience:** Customers planning deliveries days in advance requiring essential items; less critical for impulse shoppers.
+
+**Pending Actions & Ownership**
+*   **Action:** Confirm effort estimation (S or XS) to validate feasibility.
+*   **Owner:** Sathya Murthy Karthik.
+*   **Context:** Prajney Sribhashyam updated metadata on 2025-10-15; Danielle Lee requested effort confirmation on 2025-11-04.
+
+**Decisions & Strategy**
+*   **Strategy:** Proceed with a controlled pilot (Strictly PFC, Selected SKUs) to validate GMV improvement and operational overhead. Full deployment depends on successful ATP validation before considering store-to-store transfers or T8/T10 slot evolution.
+*   **Reference Materials:** BRD Document, Solution Discussion, Calculation logic Google Sheet available for review.
+
+**Dates & Blockers**
+*   **Last Activity:** 2025-11-04 (Danielle Lee requested effort confirmation).
+*   **Blocker:** Pending "S/XS" effort estimation from the assignee to determine next steps.
+*   **Deadlines:** No due date currently set; timeline dependent on effort confirmation and subsequent planning.
 
 
 ## jira/OPCO-1940: FP VIPs encounter verification after S&G purchase for fewer reasons, vs other customers
@@ -216,35 +292,6 @@ The ticket is marked **"In release queue"** with a status of "Done" technically,
 **Related Issues**
 *   Blocks: **OPCO-1956**
 *   Reporter: Ravi Goel | Assignee: Michael Bui
-
-
-## jira/DPD-644: [RMN] Streamline event sync from Segment.io to OSMOS to resolve overage
-Source: jira | Key: DPD-644 | Status: TO BE DEFINED (To Do) | Type: Epic | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-12 | parent: DPD-645 | polaris-work-item-link: OMNI-1418, OMNI-1418
-### Daily Briefing Summary: DPD-644
-
-**Current Status**
-*   **Ticket:** DPD-644 ([RMN] Streamline event sync from Segment.io to OSMOS to resolve overage)
-*   **Type:** Epic (High Priority)
-*   **State:** `TO BE DEFINED` / `To Do`. The work has not commenced.
-*   **Owner:** Michael Bui (Assignee).
-
-**Pending Actions & Ownership**
-*   **Action Required:** Define the scope, strategy, and execution plan for streamlining the event synchronization process between Segment.io and OSMOS to eliminate cost overages.
-*   **Responsibility:** Michael Bui is responsible for initiating this definition phase.
-*   **External Dependency:** The task is linked to Polaris work item **OMNI-1418**, which may require coordination or alignment prior to execution.
-
-**Decisions Made**
-*   No technical or strategic decisions have been recorded yet, as the status remains `TO BE DEFINED`. The primary objective identified is resolving "overage" issues through process streamlining.
-
-**Key Dates & Blockers**
-*   **Due Date:** March 12, 2026.
-*   **Latest Activity:** Ticket creation/review noted on March 3, 2026, at 14:07 UTC+8 by Nikhil Grover (Reporter).
-*   **Blockers:** None explicitly listed in the current log; however, the `TO BE DEFINED` status indicates a lack of immediate technical direction or resource allocation plan.
-
-**Technical Context**
-*   **Source System:** Segment.io
-*   **Target System:** OSMOS
-*   **Objective:** Optimize data flow to resolve financial overages associated with current sync volumes.
 
 
 ## jira/DPD-700: Fix RMN pentest Low and optionally Info issues
@@ -938,43 +985,6 @@ The initiative addresses gaps in current B2B solutions (limited discounting, no 
 **Linked Issues:** DPD-682, OMNI-1362 (Blocks), PAY-7080, DPD-57.
 
 
-## jira/OMNI-1363: [Decoupling from SAP] Migrate CF apps to DBP to improve MP Consol fulfilment experience
-Source: jira | Key: OMNI-1363 | Status: Paused (To Do) | Type: Idea | Priority: High | Assignee: Prajney Sribhashyam | Reporter: Gopalakrishna Dhulipati | polaris-work-item-link: DST-2272, DPD-326, DPD-332, DPD-341, DST-2531, DPD-348
-**Ticket:** OMNI-1363 | [Decoupling from SAP] Migrate CF apps to DBP to improve MP Consol fulfilment experience
-**Assignee:** Prajney Sribhashyam | **Reporter:** Gopalakrishna Dhulipati | **Priority:** High | **Status:** Paused (To Do)
-**Linked Issues:** DST-2272, DPD-326, DPD-332, DPD-341, DST-2531, DPD-348
-
-### Current Status
-*   **Overall State:** Delayed (Red).
-*   **Development Progress:** CF app development is complete. SAP de-coupling components are in progress but delayed due to WMS Middleware dependencies.
-*   **WMS Middleware:** Production live scheduled for 14 March; UAT and rollout tentatively scheduled post-CNY.
-*   **Risk Level:** High risk regarding business live date due to WMS Middleware delays.
-
-### Pending Actions & Ownership
-*   **Date Confirmation:** Update ticket with exact timelines post-realignment meeting (Action: Team, referenced by Sathya Murthy Karthik on 2026-03-11).
-*   **Stakeholder Communication:** Confirm and communicate UAT/Rollout timelines to the PFC team following alignment sessions.
-*   **Alignment:** Pending final alignment with PFC & First Mile teams (originally planned for week of 8 Dec, later impacted by WMS delays).
-
-### Key Decisions Made
-*   **Business Live Date:** Confirmed for **1 April 2026** (previously tentative Jan/Feb/March dates).
-*   **Technical Go-Live:**
-    *   WMS Middleware Production: 14 March 2026.
-    *   DBP Order SAP Decoupling Production: 24 March 2026.
-    *   CF App Tech Live: 1 April 2026.
-*   **Rollout Strategy:** Managed by device to ensure no operational disruption; contingency plan for historical data risk is in development.
-
-### Key Dates, Deadlines & Blockers
-*   **Blocker:** WMS Middleware dependency (Delay shifting live from Jan to March/April).
-*   **14 March 2026:** WMS Middleware Production Live.
-*   **24 March 2026:** DBP Order SAP Decoupling Production Live.
-*   **1 April 2026:** CF App Business Live (Confirmed).
-*   **Historical Context:** Original target was Jan 2026; dev on track mid-Nov 2025, but WMS middleware Phase 1 go-live moved to post-CNY.
-
-### Success Criteria & Scope
-*   **Goal:** Eliminate $170K annual Cloud Foundry cost and improve DOT% for CF sellers.
-*   **Components:** First Mile Operations App, First Mile Dashboard, PFC Receiving App.
-
-
 ## jira/OMNI-1362: [Decoupling from SAP] Improve order orchestration with integration to WMS Middleware
 Source: jira | Key: OMNI-1362 | Status: Paused (To Do) | Type: Idea | Priority: High | Assignee: Gopalakrishna Dhulipati | Reporter: Gopalakrishna Dhulipati | blocks: OMNI-1249, OMNI-1249 | polaris-work-item-link: DPD-184 | relates: OE-3209
 **Jira Ticket Summary: OMNI-1362**
@@ -982,7 +992,7 @@ Source: jira | Key: OMNI-1362 | Status: Paused (To Do) | Type: Idea | Priority: 
 **Current Status:** **Paused (To Do)** | Priority: High | Assignee: Gopalakrishna Dhulipati | Reporter: Gopalakrishna Dhulipati | Type: Idea
 
 ### 1. Current State & Context
-As of the latest update, this initiative remains an **Idea** in a **Paused (To Do)** state. The core objective is to decouple from SAP to resolve GST non-compliance risks for the Finance team and reduce dependency on SAP flows that negatively impact customer fulfillment experiences.
+As of **September 11, 2025**, this initiative remains an **Idea** in a **Paused (To Do)** state. The primary objective is to decouple from SAP to resolve GST non-compliance risks for the Finance team and reduce dependency on SAP flows that negatively impact customer fulfillment experiences.
 
 *   **Primary Drivers:**
     *   **Finance Team:** Resolving GST non-compliance.
@@ -990,7 +1000,7 @@ As of the latest update, this initiative remains an **Idea** in a **Paused (To D
 *   **Linked Issues:** Blocks OMNI-1249; Relates to OE-3209 and DPD-184 (Polaris work item link).
 
 ### 2. Implementation Plan & Scope
-The strategic approach involves a two-step integration sequence:
+The strategic approach involves a specific integration sequence:
 1.  **DBP** integrates with **WMS Middleware**.
 2.  Subsequent integration between **WMS Middleware** and **TMS**.
 
@@ -999,16 +1009,15 @@ The strategic approach involves a two-step integration sequence:
 *   DBP - TMS Flows
 
 ### 3. Pending Actions & Ownership
-To transition from "Paused" to active roadmap prioritization, the following steps are required:
-*   **Define Success Criteria:** Specific dimensions and metrics must be established to validate the opportunity. This is a mandatory requirement for prioritization.
+To transition from "Paused" to active roadmap prioritization, the following mandatory steps are required:
+*   **Define Success Criteria:** Specific dimensions and metrics must be established; this is a prerequisite for prioritization. Currently, these fields in the idea template are undefined.
     *   *Required Data:* Definition of specific dimensions/metrics, current baseline vs. expected outcome, and target timeline.
-    *   *Current Status:* Dimension and Metric fields are currently undefined in the idea template.
 *   **Validation:** Sufficient validation must be conducted to justify moving this Idea onto the roadmap.
     *   *Owner:* Gopalakrishna Dhulipati (Reported/Assigned) and Product/Finance Stakeholders.
 
 ### 4. Decisions Made
-*   **Status Classification:** The ticket is formally categorized as an "Idea" rather than a completed development task, overriding any previous execution timelines.
-*   **Problem Definition:** Confirmed that the primary problem is GST non-compliance for Finance and fulfillment dependency on SAP flows.
+*   **Status Classification:** The ticket is formally categorized as an "Idea" rather than a completed development task, overriding previous execution timelines.
+*   **Problem Definition:** Confirmed that the primary problem is GST non-compliance for Finance and fulfillment dependency on SAP flows. Integration with WMS Middleware is identified as the primary prerequisite.
 
 ### 5. Critical Blockers & Dependencies
 *   **Primary Blocker:** The absence of defined success criteria (dimensions/metrics) prevents roadmap prioritization.
@@ -1236,6 +1245,53 @@ Source: jira | Key: OMNI-1423 | Status: UAT (In Progress) | Type: Idea | Priorit
 *   **Type:** Idea.
 
 
+## jira/OMNI-1425: [1HD] Phase 2 - Build to enable scaling of 1 hour to 100 stores
+Source: jira | Key: OMNI-1425 | Status: Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Rajesh Dobariya
+**Jira Briefing: OMNI-1425 – Phase 2 Build to Scale 1 Hour Delivery (1HD) to 100 Stores**
+
+**Current Status**
+*   **Ticket ID:** OMNI-1425
+*   **Status Category:** To Do (Marked "Prioritised")
+*   **Priority:** High
+*   **Type:** Idea
+*   **Assignee/Reporter:** Rajesh Dobariya
+*   **Update Timeline:** Status set to "Prioritised" on 2026-02-11; JTBD updated by Koklin Gan on 2026-03-18.
+
+**Decisions Made & Scope**
+*   **Core Objective:** Scale 1HD from 1 to 100 stores via 3PL integration.
+*   **Integration Scope:** Push order details (Name, Address, Contact No) to vendor's last-mile app for live tracking and Proof of Delivery (POD).
+*   **Functional Requirements:**
+    *   Picker app enhancement for real-time new order notifications.
+    *   Simplified store creation (inventory, assortment, time-slot, capacity).
+    *   Handling 1HD in FFS stores with defined financial treatment (accounting entries).
+    *   Pilot trial iteration based on discovered insights.
+
+**Pending Logic Decisions (Clarification Required)**
+*   **Notification Trigger:** Clarify if vendor is notified at "order placement" or "upon packed status."
+*   **Data Fields:** Confirm if data transfer is limited to Name, Address, and Contact No only.
+*   **Completion Protocol:** Define the mechanism/timing for the vendor app to notify DBP upon order completion.
+
+**Pending Actions & Ownership**
+*   **Documentation Gaps (Owner: Rajesh Dobariya):**
+    *   **Problem Definition:** Must articulate the specific user pain point using JTBD format (As a shopper, when I forget items post-order, I want to amend/add items so I can avoid multiple fees).
+    *   **User Impact Analysis:** Define affected segments (Who?), estimated volume (% or number), and current manual workarounds.
+    *   **Solution Summary & Business Impact:** Finalize these sections before pitching.
+*   **Metrics Targets:**
+    *   **Financial:** Increase AOV from $X to $Y within 6 weeks.
+    *   **Customer Experience:** Improve Perfect Order rate from X% to Y% in 3 months.
+    *   **Operational:** Track Order Processing Time, Delivery Status Sync Accuracy, and Operational Errors (data entry mistakes).
+
+**Key Dates & Deadlines**
+*   **Status Set to Prioritised:** 2026-02-11
+*   **JTBD Update:** 2026-03-18 (Koklin Gan requested updates to remaining fields)
+*   **Original Plan:** Delivery ticket addition in the week starting 2026-03-23.
+
+**Blockers/Notes**
+*   **Missing Data:** Specific answers regarding user segments, volume estimates, and current solutions are required in the description.
+*   **Operational Dependencies:** Requires vendor alignment, budget approvals for financial treatment, and internal workflow definition.
+*   **Execution Requirement:** All components (Problem Definition, Solution Summary, Business Impact) must be completed before pitching to stakeholders.
+
+
 ## jira/OMNI-1414: Integrate personalized gamification challenge with FP app
 Source: jira | Key: OMNI-1414 | Status: In Development (In Progress) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: James Huang | polaris-work-item-link: DPD-297
 **Jira Briefing: OMNI-1414 – Integrate Personalized Gamification Challenge with FP App**
@@ -1272,43 +1328,6 @@ Source: jira | Key: OMNI-1414 | Status: In Development (In Progress) | Type: Ide
 **Blockers/Notes**
 *   The discrepancy between the "1st week of February" data target and the March 11 BE start date requires resolution to ensure mapping files are ready for UAT by March 23.
 *   Business live date remains unconfirmed; final coordination is critical before the March 30 technical go-live.
-
-
-## jira/OMNI-1418: Overage on transaction sync from Segment to OSMOS
-Source: jira | Key: OMNI-1418 | Status: UAT (In Progress) | Type: Idea | Priority: High | Assignee: Nikhil Grover | Reporter: Nikhil Grover | polaris-work-item-link: DPD-644, DPD-644
-**Jira Brief: OMNI-1418 – Overage on Transaction Sync (Segment to OSMOS)**
-
-**Current Status**
-*   **State:** UAT (In Progress).
-*   **Priority:** High.
-*   **Assignee/Reporter:** Nikhil Grover.
-*   **Type:** Idea.
-*   **Linked Issue:** DPD-644.
-
-**Problem & Impact**
-The current implementation of the transaction sync function from Segment to OSMOS causes usage overage, costing the organization **$4k per month**. Transactions are synced to attribute GMV to OSMOS campaigns; however, the existing logic is inefficient. The goal is to streamline this sync function to eliminate these costs. No external users or segments are currently solving this manually (N/A).
-
-**Key Dates & Deadlines**
-*   **Timeline Alignment:** Resource availability and timeline alignment occurred on **2026-02-19**.
-*   **UAT Completion ETA:** Originally estimated for **2026-03-11**.
-*   **Latest Update (2026-03-17):** UAT data complexity exceeded expectations. Review is ongoing, with completion expected on the same day (**2026-03-17**).
-*   **Deployment:** As this is a backend-only change, no change management or additional workflows are required to deploy to production.
-
-**Actions Pending & Ownership**
-*   **Owner:** Nikhil Grover.
-*   **Pending Action:** Finalize UAT data review and complete testing by end of day 2026-03-17.
-*   **Status Check:** Work is in the final validation stage. Following the 2026-03-17 update, the team is concluding the complex data review before marking UAT as complete.
-
-**Decisions Made**
-*   Confirmed that the initiative addresses a financial cost avoidance of $4k/month.
-*   Determined that the solution is backend-only ("No change" required for operational processes or business rules), requiring no external vendor alignments, budget approvals for launch, or user communication tactics.
-
-**Blockers & Dependencies**
-*   **Active Review:** As of 2026-03-17, the primary focus was on reviewing complex UAT data. No technical blockers were identified, but the timeline shifted from the initial March 11 target to a same-day completion on March 17 due to data complexity.
-*   **Solution Status:** The "Solution Summary" previously marked as TBC has been effectively superseded by the active UAT phase, implying a technical solution is defined and currently being validated against complex datasets.
-
-**Summary for Daily Briefing**
-Nikhil Grover is leading the finalization of OMNI-1418 to resolve a $4k/month cost overage in Segment-to-OSMOS transaction syncing. Linked to DPD-644, the project moved from resource alignment on Feb 19 into UAT. While originally targeting completion by March 11, complex UAT data required additional review time. As of March 17, Nikhil is finalizing this data review for immediate completion today. Upon successful validation, the backend-only change will be deployed with no operational overhead or user communication required.
 
 
 ## jira/OMNI-1420: Enable all 3P domain links to open in the in-app browser from banner redirection
@@ -1452,39 +1471,6 @@ The initiative addresses compliance risks and UX friction by shifting offer rede
 **Notes**
 *   Alignment deck and Figma links are referenced but not attached in current summary.
 *   Business impact metrics (AOV increase, Perfect Order improvements) remain to be defined.
-
-
-## jira/OMNI-1163: Enable AI Personalisation Search Capability with Algolia
-Source: jira | Key: OMNI-1163 | Status: Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Erica Lee | Reporter: Erica Lee | migration_parent: OMNI-653 | polaris-work-item-link: PRDM-12 | relates: PRDM-12, OMNI-1312
-**Status Update: OMNI-1163 (Enable AI Personalisation Search Capability with Algolia)**
-
-**Current State**
-The initiative remains in the **Ideas** backlog but is marked as **Prioritised** (**High Priority**, Status: **To Do**), assigned to and reported by **Erica Lee**. The project is technically feasible and links to migration parent **OMNI-653**. Implementation currently hinges on resolving technical constraints regarding event completeness and the interaction between existing "past purchase boosting" logic and Algolia's AI.
-
-**Problem & Opportunity**
-Customers face generic search results that fail to reflect individual preferences (e.g., dietary restrictions, brand loyalty), leading to inefficient discovery and potential abandonment in favor of competitors with more tailored experiences. Enabling AI personalization will dynamically adjust search, promotion, and category listings based on browsing behavior and purchase history to improve relevance and engagement.
-
-*   **Projected Impact:** A conservative 2% increase in Search Conversion Rate (CVR) is expected, driving a **$1.6M uplift** in Search GMV against a 2024 baseline of $81.7M. This also targets an increase in Overall Average Order Value (AOV).
-*   **Validation:** Assumptions are based on Algolia client data showing a 4.5% CTR/CVR gain; FairPrice anticipates measurable improvements with the conservative 2% CVR estimate.
-
-**Key Decisions & Strategic Context**
-1.  **Scope Management:** Google Search functionality was split into a separate ticket (**OMNI-1312**) to allow immediate A/B testing of that alternative, while this ticket focuses specifically on Algolia AI.
-2.  **Strategic Continuity:** Leadership has affirmed the initiative's value despite backlog movements; it requires re-evaluation for low-risk activation once technical blockers are cleared.
-
-**Pending Actions & Ownership**
-*   **Re-validate with Algolia (Owner: Vivian Lim Yu Qian):** A meeting was scheduled for **Tuesday, 2026-03-18** to confirm specific event requirements from Algolia engineers.
-    *   *Critical Technical Question:* Determine if the effort to modify past purchase data flows is "deadly critical" or if AI logic will override existing boosting without significant engineering intervention.
-*   **Event Confirmation:** Verify that all required personalization events are live via CDP/Segment (work completed by Deloitte in Sprints 7 and 9).
-*   **Dependency Check:** Confirm no additional tagging work is needed beyond Deloitte's delivery to prevent AI logic from inadvertently hiding previously purchased items.
-
-**Key Dates & Dependencies**
-*   **2026-03-18:** Re-validation meeting with Algolia.
-*   **Dependencies:** The ticket cannot proceed until the search provider strategy is finalized post-POC and event completeness is confirmed.
-*   **Blockers:** Uncertainty regarding engineering effort to prevent AI override of past purchase data; confirmation that no additional tagging work is needed beyond Deloitte's delivery.
-
-**Technical References**
-*   **Provider:** Algolia (via CDP/Segment).
-*   **Related Issues:** PRDM-12, OMNI-653 (migration_parent), OMNI-1312.
 
 
 ## jira/OMNI-1419: [Shopbeyond] - Capture all scan events coming from scanning Shop beyond QR code.
@@ -2455,3 +2441,38 @@ No final decisions have been recorded yet. The current consensus identifies the 
 *   **Created/Last Updated:** 2026-02-26T09:49:17.889+0800
 *   **Deadline:** None currently assigned (null).
 *   **Blocker:** The ticket cannot advance to development or implementation until the proposal includes the missing quantitative business and metric data outlined above.
+
+
+## jira/OMNI-1428: [1hd] Phase 2 -  Scaling one hour delivery to more stores (TO REMOVE)
+Source: jira | Key: OMNI-1428 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Rajesh Dobariya | polaris-work-item-link: DPD-627
+**Jira Ticket Summary: OMNI-1428**
+**Subject:** [1hd] Phase 2 - Scaling one hour delivery to more stores (TO REMOVE)
+
+**Current Status & State**
+*   **Status:** Backlog (To Do)
+*   **Type:** Idea
+*   **Priority:** High
+*   **Associated Work Item:** DPD-627 (Polaris work item link)
+*   **Date of Record:** 2026-02-27
+*   **Timestamp:** 2026-02-27T12:22:08.201+0800
+
+**Ownership & Pending Actions**
+*   **Owner/Reporter/Assignee:** Rajesh Dobariya.
+*   **Pending Action:** The ticket is currently a placeholder with no actual content beyond the title and metadata. Before pitching or moving to active development, Rajesh must populate the description fields using the following standardized template:
+    *   **Opportunity/Problem Definition:** Must be framed as a user problem ("As a shopper... When I forget items..."). It requires identifying specific affected segments, estimated user volume (%), and current workarounds (e.g., placing multiple orders).
+    *   **Goal & Solution Summary:** Define the feature's high-level mechanics using "As a/When/I want/So I can" format.
+    *   **Business Impact:** Provide specific annual GMV, income, or cost avoidance projections.
+    *   **Product Metrics Impact:** Define targets (e.g., AOV increase from $X to $Y within 6 weeks; Perfect Order rate increase from X% to Y% in 3 months).
+    *   **Operational Processes & Business Plans:** Outline budget approvals, vendor alignments, internal workflows, and go-to-market/retention strategies.
+    *   **Business Rules/Logic:** Specify required system behaviors, dependencies, and exceptions for the feature.
+
+**Decisions Made**
+*   The initiative remains in "Backlog." No decisions have been made regarding scope or implementation as the description is incomplete. Execution is blocked pending the completion of the standardized description template to define the logic for scaling one-hour delivery to additional stores.
+
+**Key Dates & Blockers**
+*   **Deadlines:** No due date assigned (null).
+*   **Blockers:** The primary blocker is the absence of the required description content. The ticket cannot be pitched until Rajesh Dobariya fills in the specific problem definition, metrics, and operational plans as outlined in the new template instructions.
+
+**Technical References**
+*   Ticket ID: OMNI-1428
+*   Linked Issue: DPD-627
