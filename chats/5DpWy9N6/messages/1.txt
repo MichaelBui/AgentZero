@@ -1,0 +1,173 @@
+/a0/usr/workdir/❗ Daily Work Report 2026-03-14.md 170 lines
+>>>
+  1 # 📅 Daily Briefing - 2026-03-14
+  2 
+  3 ## 🔴 My Action Items (Pending My Action)
+  4 
+  5 | Metadata | Details | Suggestion |
+  6 |----------|---------|------------|
+  7 | **Priority:** 🔴 (Overdue by 2 days)<br>**Source:** Jira<br>**Date:** 2026-03-12 | **What:** [RMN] Streamline event sync from Segment.io to OSMOS to resolve overage. Status: TO BE DEFINED. Due: 2026-03-12.<br>**References:** DPD-644<br>**Related:** None | 1. Address immediate blocker.<br>2. Update status in Jira/CI.
+  8 | **Priority:** 🟡 (Medium Priority)<br>**Source:** Jira<br>**Date:** 2026-04-24 | **What:** Clean up archived proposals after PRD release. Status: TO BE DEFINED. Due: 2026-04-24.<br>**References:** DPD-590<br>**Related:** None | 1. Address immediate blocker.<br>2. Update status in Jira/CI.
+  9 | **Priority:** 🟡 (Medium Priority)<br>**Source:** Jira<br>**Date:** 2026-03-17 | **What:** Dynamic ad slot configuration for Homepage swimlanes. Status: IN DEVELOPMENT. Due: 2026-03-17.<br>**References:** DPD-715<br>**Related:** None | 1. Address immediate blocker.<br>2. Update status in Jira/CI.
+ 10 | **Priority:** 🔴 (Build broken)<br>**Source:** CI/CD<br>**Date:** 2026-03-14 | **What:** <br>**References:** DPD-715<br>**Related:** None | 1. Address immediate blocker.<br>2. Update status in Jira/CI.
+ 11 | **Priority:** 🟡 (Medium Priority)<br>**Source:** Jira<br>**Date:** 2026-03-14 | **What:** FP VIPs encounter verification after S&G purchase for fewer reasons, vs other customers. Status: In release queue. Due: N/A.<br>**References:** OPCO-1940<br>**Related:** OPCO-1956 | 1. Address immediate blocker.<br>2. Update status in Jira/CI.
+ 12 | **Priority:** 🟡 (Medium Priority)<br>**Source:** Jira<br>**Date:** 2026-03-14 | **What:** Web - OG Home - Testhas Offer swimlane - Ad label is missing for the first listed product. Status: To Do. Due: N/A.<br>**References:** RM-697<br>**Related:** None | 1. Address immediate blocker.<br>2. Update status in Jira/CI.
+ 13 
+ 14 ## 🟡 My Follow-Ups (Track Who & What)
+ 15 
+ 16 None identified in the last 5 days.
+ 17 
+ 18 ## 📋 Summary of Everything Else
+ 19 
+ 20 - **Gmail:** Updated invitation: BCRS Sales Posting Validation (Finance UAT) @ Wed Mar 11, 2026 2:30pm - 3:30pm (SGT) (Michael Bui) (Wed, Mar 11, 2026, 6:32 AM)
+ 21   - *Details:* Subject: Updated invitation: BCRS Sales Posting Validation (Finance UAT) @ Wed Mar 11, 2026 2:30pm - 3:30pm (SGT) (Michael Bui). Labels: Inbox.
+ 22   - *Takeaway:* Review for action or archive.
+ 23   - *Suggestion:* Note if decision required.
+ 24 
+ 25 - **Gmail:** Fwd: [## 111251 ##] EUROLINK NUTRITION PTE LTD | Brand to Vendor Mapping (Wed, Mar 11, 2026, 6:15 AM)
+ 26   - *Details:* Subject: Fwd: [## 111251 ##] EUROLINK NUTRITION PTE LTD | Brand to Vendor Mapping. Labels: Inbox.
+ 27   - *Takeaway:* Review for action or archive.
+ 28   - *Suggestion:* Note if decision required.
+ 29 
+ 30 - **Gmail:** Password Reset for Rahul Jain (Wed, Mar 11, 2026, 5:11 AM)
+ 31   - *Details:* Subject: Password Reset for Rahul Jain. Labels: Inbox.
+ 32   - *Takeaway:* Review for action or archive.
+ 33   - *Suggestion:* Note if decision required.
+ 34 
+ 35 - **Gmail:** [JIRA] (DPD-645) Improve event sync to prevent overage (Wed, Mar 11, 2026, 3:14 AM)
+ 36   - *Details:* Subject: [JIRA] (DPD-645) Improve event sync to prevent overage. Labels: Inbox, Updates.
+ 37   - *Takeaway:* Review for action or archive.
+ 38   - *Suggestion:* Note if decision required.
+ 39 
+ 40 - **Gmail:** [JIRA] Nikhil Grover assigned DPD-644 to you (Wed, Mar 11, 2026, 3:12 AM)
+ 41   - *Details:* Subject: [JIRA] Nikhil Grover assigned DPD-644 to you. Labels: Inbox, Updates.
+ 42   - *Takeaway:* Review for action or archive.
+ 43   - *Suggestion:* Note if decision required.
+ 44 
+ 45 - **Gmail:** [JIRA] (DPD-715) Dynamic ad slot configuration for Homepage swimlanes (Wed, Mar 11, 2026, 3:11 AM)
+ 46   - *Details:* Subject: [JIRA] (DPD-715) Dynamic ad slot configuration for Homepage swimlanes. Labels: Inbox, Updates.
+ 47   - *Takeaway:* Review for action or archive.
+ 48   - *Suggestion:* Note if decision required.
+ 49 
+ 50 - **Gmail:** [Dashboard Report] Retail Media - DD Dashboard | Wed 11 Mar 11:00AM +08 (Wed, Mar 11, 2026, 3:03 AM)
+ 51   - *Details:* Subject: [Dashboard Report] Retail Media - DD Dashboard | Wed 11 Mar 11:00AM +08. Labels: Inbox, Updates.
+ 52   - *Takeaway:* Review for action or archive.
+ 53   - *Suggestion:* Note if decision required.
+ 54 
+ 55 - **Gmail:** Invitation: Sync-up for D&T Q1 All hands @ Wed Mar 11, 2026 4pm - 4:30pm (SGT) (Michael Bui) (Wed, Mar 11, 2026, 2:28 AM)
+ 56   - *Details:* Subject: Invitation: Sync-up for D&T Q1 All hands @ Wed Mar 11, 2026 4pm - 4:30pm (SGT) (Michael Bui). Labels: Inbox.
+ 57   - *Takeaway:* Review for action or archive.
+ 58   - *Suggestion:* Note if decision required.
+ 59 
+ 60 - **Gmail:** NTUC Enterprise-2025 Web Service Penetration Testing for RMN APIs (Wed, Mar 11, 2026, 2:27 AM)
+ 61   - *Details:* Subject: NTUC Enterprise-2025 Web Service Penetration Testing for RMN APIs. Labels: Inbox, ⚠️IMPORTANT.
+ 62   - *Takeaway:* Review for action or archive.
+ 63   - *Suggestion:* Note if decision required.
+ 64 
+ 65 - **Gmail:** Updated invitation: Sales Posting Validation @ Wed Mar 11, 2026 2:30pm - 3:30pm (SGT) (Michael Bui) (Wed, Mar 11, 2026, 2:09 AM)
+ 66   - *Details:* Subject: Updated invitation: Sales Posting Validation @ Wed Mar 11, 2026 2:30pm - 3:30pm (SGT) (Michael Bui). Labels: Inbox.
+ 67   - *Takeaway:* Review for action or archive.
+ 68   - *Suggestion:* Note if decision required.
+ 69 
+ 70 - **Gmail:** [RAW Overdue] Expired Risk Acceptance & Waiver Form (Wed, Mar 11, 2026, 1:19 AM)
+ 71   - *Details:* Subject: [RAW Overdue] Expired Risk Acceptance & Waiver Form. Labels: Inbox.
+ 72   - *Takeaway:* Review for action or archive.
+ 73   - *Suggestion:* Note if decision required.
+ 74 
+ 75 - **Gmail:** [Bitbucket]  Pipeline for master failed on b79852a (ntuclink/marketing-service) (Wed, Mar 11, 2026, 1:05 AM)
+ 76   - *Details:* Subject: [Bitbucket]  Pipeline for master failed on b79852a (ntuclink/marketing-service). Labels: Inbox, Updates.
+ 77   - *Takeaway:* Review for action or archive.
+ 78   - *Suggestion:* Note if decision required.
+ 79 
+ 80 - **Gmail:** Updated invitation: [Placeholder] Sales Posting Validation @ Wed Mar 11, 2026 2:30pm - 3:30pm (SGT) (Michael Bui) (Wed, Mar 11, 2026, 12:12 AM)
+ 81   - *Details:* Subject: Updated invitation: [Placeholder] Sales Posting Validation @ Wed Mar 11, 2026 2:30pm - 3:30pm (SGT) (Michael Bui). Labels: Inbox.
+ 82   - *Takeaway:* Review for action or archive.
+ 83   - *Suggestion:* Note if decision required.
+ 84 
+ 85 - **Gmail:** Invitation: Sales Posting Validation @ Wed Mar 11, 2026 2:30pm - 3:30pm (SGT) (Michael Bui) (Wed, Mar 11, 2026, 12:11 AM)
+ 86   - *Details:* Subject: Invitation: Sales Posting Validation @ Wed Mar 11, 2026 2:30pm - 3:30pm (SGT) (Michael Bui). Labels: Inbox.
+ 87   - *Takeaway:* Review for action or archive.
+ 88   - *Suggestion:* Note if decision required.
+ 89 
+ 90 - **Gmail:** Daily digest: updates from Dodla Gopi Krishna & Jazz Tong (Tue, Mar 10, 2026, 11:10 PM)
+ 91   - *Details:* Subject: Daily digest: updates from Dodla Gopi Krishna & Jazz Tong. Labels: Inbox, Updates.
+ 92   - *Takeaway:* Review for action or archive.
+ 93   - *Suggestion:* Note if decision required.
+ 94 
+ 95 - **Gmail:** You have no events scheduled today. (Tue, Mar 10, 2026, 9:40 PM)
+ 96   - *Details:* Subject: You have no events scheduled today.. Labels: Inbox, Updates.
+ 97   - *Takeaway:* Review for action or archive.
+ 98   - *Suggestion:* Note if decision required.
+ 99 
+100 - **Gmail:** Rovo Dev ships the small stuff in Jira (Tue, Mar 10, 2026, 9:03 PM)
+101   - *Details:* Subject: Rovo Dev ships the small stuff in Jira. Labels: Inbox, Promotions.
+102   - *Takeaway:* Review for action or archive.
+103   - *Suggestion:* Note if decision required.
+104 
+105 - **Gmail:** [Bitbucket]  Pipeline for DPD-715 failed on 18ad66f (ntuclink/marketing-service) (Tue, Mar 10, 2026, 4:11 PM)
+106   - *Details:* Subject: [Bitbucket]  Pipeline for DPD-715 failed on 18ad66f (ntuclink/marketing-service). Labels: Inbox, Updates.
+107   - *Takeaway:* Review for action or archive.
+108   - *Suggestion:* Note if decision required.
+109 
+110 - **Gmail:** [Bitbucket]  Pipeline for DPD-715 failed on 6367a7c (ntuclink/marketing-service) (Tue, Mar 10, 2026, 4:05 PM)
+111   - *Details:* Subject: [Bitbucket]  Pipeline for DPD-715 failed on 6367a7c (ntuclink/marketing-service). Labels: Inbox, Updates.
+112   - *Takeaway:* Review for action or archive.
+113   - *Suggestion:* Note if decision required.
+114 
+115 - **Gmail:** [Bitbucket]  Pipeline for DPD-715 failed on d627380 (ntuclink/marketing-service) (Tue, Mar 10, 2026, 3:28 PM)
+116   - *Details:* Subject: [Bitbucket]  Pipeline for DPD-715 failed on d627380 (ntuclink/marketing-service). Labels: Inbox, Updates.
+117   - *Takeaway:* Review for action or archive.
+118   - *Suggestion:* Note if decision required.
+119 
+120 - **Gmail:** [Bitbucket]  Pipeline for DPD-715 failed on 043c590 (ntuclink/marketing-service) (Tue, Mar 10, 2026, 3:11 PM)
+121   - *Details:* Subject: [Bitbucket]  Pipeline for DPD-715 failed on 043c590 (ntuclink/marketing-service). Labels: Inbox, Updates.
+122   - *Takeaway:* Review for action or archive.
+123   - *Suggestion:* Note if decision required.
+124 
+125 - **Gmail:** Invitation: FPG : Onsite programmatic @ Thu Mar 12, 2026 4pm - 5pm (SGT) (Michael Bui) (Tue, Mar 10, 2026, 11:53 AM)
+126   - *Details:* Subject: Invitation: FPG : Onsite programmatic @ Thu Mar 12, 2026 4pm - 5pm (SGT) (Michael Bui). Labels: Inbox.
+127   - *Takeaway:* Review for action or archive.
+128   - *Suggestion:* Note if decision required.
+129 
+130 - **Gmail:** Re: FPG x OSMOS : TTD discussion (Tue, Mar 10, 2026, 9:57 AM)
+131   - *Details:* Subject: Re: FPG x OSMOS : TTD discussion. Labels: Inbox.
+132   - *Takeaway:* Review for action or archive.
+133   - *Suggestion:* Note if decision required.
+134 
+135 - **Gmail:** GCP Service Account Key clean UP (Tue, Mar 10, 2026, 9:00 AM)
+136   - *Details:* Subject: GCP Service Account Key clean UP. Labels: Inbox.
+137   - *Takeaway:* Review for action or archive.
+138   - *Suggestion:* Note if decision required.
+139 
+140 - **Gmail:** Presentation shared with you: "D&T Q1 All Hands - 12 Mar 2026" (Tue, Mar 10, 2026, 8:02 AM)
+141   - *Details:* Subject: Presentation shared with you: "D&T Q1 All Hands - 12 Mar 2026". Labels: Inbox, Updates.
+142   - *Takeaway:* Review for action or archive.
+143   - *Suggestion:* Note if decision required.
+144 
+145 - **Gmail:** [Confluence] Digital Product Development > SLO version 2 Guidelines (Tue, Mar 10, 2026, 7:20 AM)
+146   - *Details:* Subject: [Confluence] Digital Product Development > SLO version 2 Guidelines. Labels: Inbox, Updates.
+147   - *Takeaway:* Review for action or archive.
+148   - *Suggestion:* Note if decision required.
+149 
+150 - **Gmail:** Your Weekly Digest from Datadog (Tue, Mar 10, 2026, 7:01 AM)
+151   - *Details:* Subject: Your Weekly Digest from Datadog. Labels: Inbox, Updates.
+152   - *Takeaway:* Review for action or archive.
+153   - *Suggestion:* Note if decision required.
+154 
+155 - **Gmail:** BCRS UAT 2026 - @hendry_tionardi@fairpricegroup.sg @p... (Tue, Mar 10, 2026, 6:06 AM)
+156   - *Details:* Subject: BCRS UAT 2026 - @hendry_tionardi@fairpricegroup.sg @p.... Labels: Inbox, Updates.
+157   - *Takeaway:* Review for action or archive.
+158   - *Suggestion:* Note if decision required.
+159 
+160 - **Gmail:** 240126 - [P2] RMN POV screens in hyper went offline (Tue, Mar 10, 2026, 5:33 AM)
+161   - *Details:* Subject: 240126 - [P2] RMN POV screens in hyper went offline. Labels: Inbox, Updates.
+162   - *Takeaway:* Review for action or archive.
+163   - *Suggestion:* Note if decision required.
+164 
+165 - **Alert:** Critical: engage-my-persona-api-go -  (2026-03-14)
+166   - *Details:* 
+167   - *Takeaway:* High error rate detected.
+168   - *Suggestion:* Investigate immediately.
+169 
+170 **Quick Stats:** 6 action items | 0 follow-ups | 30 other items across 5 memory, 27 Jira, 0 chats, 29 emails
+<<<

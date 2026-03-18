@@ -14,6 +14,7 @@ Usage:
 """
 
 import argparse
+import os
 import sys
 
 from jira_common import (
@@ -24,6 +25,9 @@ from jira_common import (
 )
 from jira_filter import fetch_filter
 from jira_view import resolve_view_to_jql
+
+_HEARTBEAT_INTERVAL = int(os.environ.get("SKILL_HEARTBEAT_INTERVAL", "60"))
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -51,9 +55,17 @@ def main():
         eprint("--force: recreating database from scratch")
     db = get_jira_db(force=args.force)
 
+    print("[jira_reader] STARTED - fetching and summarizing Jira tickets. Do NOT interrupt or move on.", flush=True)
+
     try:
         if args.cached_only:
             run_cached_only(db)
+            print(
+                f"\n{'='*60}\n"
+                f"[jira_reader] ALL DONE - output file is ready for use.\n"
+                f"{'='*60}\n",
+                flush=True,
+            )
             return
 
         email, api_key = validate_env()
@@ -87,23 +99,27 @@ def main():
                 issues, total = fetch_issues(jql, args.limit, args.offset, headers)
                 eprint(f"Processing {len(issues)} issues (total: {total}, force={args.force})...")
 
-                for raw in issues:
+                for idx, raw in enumerate(issues, 1):
                     key = raw.get("key", "")
                     if key in seen_keys:
                         eprint(f"  {key}: duplicate, skipping")
                         continue
                     seen_keys.add(key)
 
+                    print(f"[Start fetching {idx}/{len(issues)}] {key}", flush=True)
+
                     api_updated = raw.get("fields", {}).get("updated", "")
                     if not args.force and not issue_needs_fetch(db, key, api_updated):
                         eprint(f"  {key}: unchanged (timestamp match), skipping")
                         unchanged_keys.append(key)
+                        print(f"[Completed fetching {idx}/{len(issues)}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
                         continue
 
                     issue = format_issue(raw)
                     cache_issue(db, issue)
                     eprint(f"  {key}: fetched and cached")
                     sum_q.put(key)
+                    print(f"[Completed fetching {idx}/{len(issues)}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
 
             for key in unchanged_keys:
                 sum_q.put(key)
@@ -111,6 +127,17 @@ def main():
             finish_summarize_pipeline(sum_q, worker)
 
         eprint(f"\nPipeline complete. {len(seen_keys)} unique tickets processed.")
+        print(
+            f"\n{'='*60}\n"
+            f"[jira_reader] ALL DONE - output file is ready for use.\n"
+            f"Processed: {len(seen_keys)} unique tickets\n"
+            f"{'='*60}\n",
+            flush=True,
+        )
+    except Exception as e:
+        eprint(f"ERROR: {e}")
+        print(f"\n[jira_reader] FAILED with error: {e}\n", flush=True)
+        raise
     finally:
         db.close()
         cleanup_files()

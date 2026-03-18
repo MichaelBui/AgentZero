@@ -1,7 +1,7 @@
 {
     "version": "unknown",
     "chat_model_provider": "other",
-    "chat_model_name": "local/qwen3.5-35b-a3b:thinking-general",
+    "chat_model_name": "f/gemini-3.1-flash-lite-preview",
     "chat_model_api_base": "https://llm.gigary.com/v1",
     "chat_model_kwargs": {},
     "chat_model_ctx_length": 262144,

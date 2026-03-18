@@ -14,6 +14,7 @@ Usage:
 
 import argparse
 import json
+import os
 import queue as _queue
 import sys
 import threading
@@ -39,6 +40,9 @@ _output_file = sys.stdout
 
 def eprint(*a, **kw):
     print(*a, file=_debug_file, flush=True, **kw)
+
+
+_HEARTBEAT_INTERVAL = int(os.environ.get("SKILL_HEARTBEAT_INTERVAL", "60"))
 
 
 # ── Browser & Navigation ───────────────────────────────────────────
@@ -532,6 +536,8 @@ def main():
     _debug_file = open(args.debug_log, "w", encoding="utf-8", buffering=1)
     eprint(f"Gmail Reader started (output={args.output}, debug={args.debug_log})")
 
+    print("[gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.", flush=True)
+
     try:
         exclude_labels = json.loads(args.exclude_labels)
     except json.JSONDecodeError:
@@ -699,12 +705,14 @@ def main():
             labels = info.get("labels", [])
             priority_tag = f" [{priority}]" if priority else ""
             eprint(f"[{idx}/{len(threads_to_fetch)}] {subject[:55]}...{priority_tag}")
+            print(f"[Start fetching {idx}/{len(threads_to_fetch)}] {subject}{priority_tag}", flush=True)
 
             if not navigate_to_thread(page, thread_id):
                 eprint(f"  WARN: Could not load thread {thread_id}, retrying...")
                 time.sleep(2)
                 if not navigate_to_thread(page, thread_id):
                     eprint(f"  WARN: Thread {thread_id} failed to load after retry, skipping.")
+                    print(f"[Completed fetching {idx}/{len(threads_to_fetch)}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
                     continue
 
             thread_subject = get_thread_subject(page) or subject
@@ -724,6 +732,7 @@ def main():
             info["fetched"] = True
             fetched_ids.add(thread_id)
             sum_q.put(info)
+            print(f"[Completed fetching {idx}/{len(threads_to_fetch)}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
 
         eprint(f"\nQueuing {len(thread_infos) - len(fetched_ids)} unchanged threads for summarization...")
         for info in thread_infos:
@@ -733,11 +742,19 @@ def main():
         sum_q.put(None)
         worker.join()
         eprint("Pipeline complete.")
+        print(
+            f"\n{'='*60}\n"
+            f"[gmail_reader] ALL DONE - output file is ready for use.\n"
+            f"Fetched: {len(fetched_ids)} thread(s) | total scanned: {len(thread_infos)}\n"
+            f"{'='*60}\n",
+            flush=True,
+        )
 
     except Exception as e:
         eprint(f"ERROR: {e}")
         import traceback
         traceback.print_exc(file=_debug_file)
+        print(f"\n[gmail_reader] FAILED with error: {e}\n", flush=True)
         sys.exit(1)
     finally:
         db.close()

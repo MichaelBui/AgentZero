@@ -15,6 +15,7 @@ Usage:
 
 import argparse
 import json
+import os
 import queue as _queue
 import sys
 import threading
@@ -77,6 +78,9 @@ _output_file = sys.stdout
 
 def eprint(*a, **kw):
     print(*a, file=_debug_file, flush=True, **kw)
+
+
+_HEARTBEAT_INTERVAL = int(os.environ.get("SKILL_HEARTBEAT_INTERVAL", "60"))
 
 
 def get_db(*, force: bool = False) -> SkillDB:
@@ -684,6 +688,8 @@ def main():
     _debug_file = open(args.debug_log, "w", encoding="utf-8", buffering=1)
     eprint(f"GChat Reader started (output={args.output}, debug={args.debug_log})")
 
+    print("[gchat_reader] STARTED - processing Google Chat conversations. Do NOT interrupt or move on - this takes 5-15 minutes.", flush=True)
+
     cutoff_ms = int(
         (datetime.now(timezone.utc) - timedelta(days=args.days)).timestamp() * 1000
     )
@@ -777,10 +783,12 @@ def main():
 
             is_focused = not args.focus_title or args.focus_title.lower() in name.lower()
             eprint(f"[{attempted}/{limit}] {name[:55]}...")
+            print(f"[Start fetching {attempted}/{limit}] {name}", flush=True)
 
             if not is_focused:
                 eprint("  SKIP: not matching --focus-title")
                 skipped_focus += 1
+                print(f"[Completed fetching {attempted}/{limit}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
                 continue
 
             if early_stop_triggered or (
@@ -798,6 +806,7 @@ def main():
                         eprint(f"\n  Early stop: {consecutive_cached} consecutive cached conversations. "
                                f"Skipping fetches, continuing scan...")
                         early_stop_triggered = True
+                print(f"[Completed fetching {attempted}/{limit}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
                 continue
 
             consecutive_cached = 0
@@ -809,6 +818,7 @@ def main():
                 if not click_feed_item(page, gid, dts):
                     eprint("  SKIP: item not found in DOM")
                     skipped_error += 1
+                    print(f"[Completed fetching {attempted}/{limit}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
                     continue
 
             time.sleep(1)
@@ -816,6 +826,7 @@ def main():
                 eprint("  WARN: mid panel gone - wrong click, returning to Home")
                 go_home(page)
                 skipped_error += 1
+                print(f"[Completed fetching {attempted}/{limit}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
                 continue
 
             if tid:
@@ -826,6 +837,7 @@ def main():
                 eprint("  SKIP: 0 messages loaded")
                 go_home(page)
                 skipped_error += 1
+                print(f"[Completed fetching {attempted}/{limit}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
                 continue
 
             eprint(f"  {msg_count} message container(s)"
@@ -862,6 +874,7 @@ def main():
             if "/app/home" not in page.url:
                 eprint("  Returning to Home...")
                 go_home(page)
+            print(f"[Completed fetching {attempted}/{limit}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
 
         stop_reason = ""
         if early_stop_triggered:
@@ -881,11 +894,19 @@ def main():
         sum_q.put(None)
         worker.join()
         eprint("Pipeline complete.")
+        print(
+            f"\n{'='*60}\n"
+            f"[gchat_reader] ALL DONE - output file is ready for use.\n"
+            f"Fetched: {len(convo_infos)} conversation(s) | attempted: {attempted}\n"
+            f"{'='*60}\n",
+            flush=True,
+        )
 
     except Exception as e:
         eprint(f"ERROR: {e}")
         import traceback
         traceback.print_exc(file=_debug_file)
+        print(f"\n[gchat_reader] FAILED with error: {e}\n", flush=True)
         sys.exit(1)
     finally:
         db.close()

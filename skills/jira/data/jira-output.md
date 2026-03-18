@@ -1,5 +1,44 @@
 
 
+## jira/OMNI-1362: [Decoupling from SAP] Improve order orchestration with integration to WMS Middleware
+Source: jira | Key: OMNI-1362 | Status: Paused (To Do) | Type: Idea | Priority: High | Assignee: Gopalakrishna Dhulipati | Reporter: Gopalakrishna Dhulipati | blocks: OMNI-1249, OMNI-1249 | polaris-work-item-link: DPD-184 | relates: OE-3209
+**Jira Ticket Summary: OMNI-1362**
+**Topic:** Improve order orchestration with integration to WMS Middleware (Decoupling from SAP)
+**Current Status:** **Paused (To Do)** | Priority: High | Assignee: Gopalakrishna Dhulipati | Reporter: Gopalakrishna Dhulipati
+
+### 1. Current State & Context
+This initiative is an **Idea** currently in the **Paused (To Do)** stage, aimed at strategic decoupling from SAP to ensure financial compliance (GST) and improve fulfillment architecture. The primary driver is resolving GST non-compliance risks for the Finance team and reducing dependency on SAP flows that impact customer fulfillment experience.
+
+*   **Core Strategy:** Integrate DBP with WMS Middleware, followed by WMS Middleware <> TMS integration.
+*   **Validation Status:** Sufficient validation has been conducted to prioritize this roadmap item based on identified metrics (dimensions and metrics currently undefined in the idea template).
+*   **Linked Issues:** Blocks OMNI-1249; Relates to OE-3209 and DPD-184.
+
+### 2. Implementation Plan & Scope
+The plan involves specific UAT scopes for:
+*   DBP - WMS Middleware Flows
+*   DBP - TMS Flows
+
+**Note on Historical Data:** Previous status updates referencing "Red (Delayed)," specific SIT completion dates (Dec 29-30), and production timelines (March/April 2026) are **no longer applicable**. The ticket metadata now reflects a **Paused** state, indicating that active development milestones and the previously confirmed rollout strategy have been superseded by this re-platforming of the idea.
+
+### 3. Pending Actions & Ownership
+*   **Roadmap Re-prioritization:** As an Idea in "To Do" status, the focus shifts to defining success criteria and validating dimensions/metrics before re-activation on the roadmap.
+    *   *Owner:* Gopalakrishna Dhulipati (Reported/Assigned).
+*   **Metric Definition:** Finalize specific dimensions and metrics to define the expected outcome of the decoupling initiative.
+    *   *Owner:* Product/Finance Stakeholders.
+
+### 4. Decisions Made
+*   **Status Shift:** The project has transitioned from an active "Red/Delayed" execution phase back to a strategic "Idea/Paused" state pending further validation and prioritization.
+*   **Problem Definition:** Confirmed that the primary problem is GST non-compliance for Finance and fulfillment dependency on SAP flows.
+
+### 5. Critical Blockers & Dependencies
+*   **Primary Dependency:** Validation of success criteria and metric definitions is required to move from "To Do" to active development.
+*   **Linked Issues:**
+    *   Blocks: OMNI-1249
+    *   Relates: OE-3209, DPD-184
+
+*(Summary updated based on new metadata reflecting status change to Paused and reclassification as an Idea. Historical execution dates removed as they contradict the current "To Do" status.)*
+
+
 ## jira/DPD-715: Dynamic ad slot configuration for Homepage swimlanes
 Source: jira | Key: DPD-715 | Status: TESTING IN PREPRODUCTION (In Progress) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | parent: DPD-710
 **Ticket Summary: DPD-715 (Dynamic ad slot configuration for Homepage swimlanes)**
@@ -856,46 +895,6 @@ Source: jira | Key: OMNI-1363 | Status: Paused (To Do) | Type: Idea | Priority: 
 *   **Components:** First Mile Operations App, First Mile Dashboard, PFC Receiving App.
 
 
-## jira/OMNI-1362: [Decoupling from SAP] Improve order orchestration with integration to WMS Middleware
-Source: jira | Key: OMNI-1362 | Status: Paused (To Do) | Type: Idea | Priority: High | Assignee: Gopalakrishna Dhulipati | Reporter: Gopalakrishna Dhulipati | blocks: OMNI-1249, OMNI-1249 | polaris-work-item-link: DPD-184 | relates: OE-3209
-**Jira Ticket Summary: OMNI-1362**
-**Topic:** Improve order orchestration with integration to WMS Middleware (Decoupling from SAP)
-**Current Status:** **Red (Delayed)** | Priority: High | Assignee: Gopalakrishna Dhulipati / Prajney Sribhashyam
-
-### 1. Current State & Context
-The project aims to decouple SAP for financial compliance (GST) and improve fulfillment architecture by integrating DBP with WMS Middleware. While development for specific components (CF apps, SIT completed Dec 29-30) is on track or complete, the overall program status is **Red** due to delays in the upstream WMS Middleware rollout.
-
-*   **WMS Middleware UAT:** Passed validation by WM6 and SAP teams.
-*   **DBP Development:** SIT completed; however, additional scope was identified (special logic for carton items, order type logic, Boys Brigade Donation posting), adding 5 dev days.
-*   **Risk Level:** High risk regarding post-CNY scheduling impacts the entire timeline.
-
-### 2. Key Dates & Deadlines
-*   **WMS Middleware Production Live:** Tentatively scheduled for **14 March 2026**.
-*   **DBP Order SAP Decoupling Production Live:** Targeted for **24 March 2026**.
-*   **CF App Business Live:** Confirmed for **1 April 2026**.
-*   **Previous Milestones Missed:** Original tentative go-live (Nov 17, 2025) and UAT timelines were delayed due to the CNY period and WMS dependency.
-
-### 3. Pending Actions & Ownership
-*   **Timeline Confirmation:** A re-group meeting was scheduled on Jan 8 to finalize exact WMS Middleware launch dates; current target is March 14, 2026.
-    *   *Owner:* Prajney Sribhashyam (Program Management).
-*   **Scope Clarification (B2C vs. Project Light):** Must determine if specific B2C system work needs immediate execution or can be deferred to "Project Light."
-    *   *Action:* Check with Fenny regarding the requirement scope.
-    *   *Owner:* Sathya Murthy Karthik.
-*   **Date Updates:** Tickets requires updated timeline documentation following recent delays.
-    *   *Owner:* Prajney Sribhashyam / Sathya Murthy Karthik.
-
-### 4. Decisions Made
-*   **Rollout Strategy:** WMS Middleware rollout has been broken down into phases (Phase 1 approved).
-*   **Scheduling Shift:** Business live dates have been pushed from late November/December 2025 to March/April 2026 due to CNY constraints and WMS dependency.
-*   **Scope Adjustment:** Additional development work identified during SIT (carton logic, donation posting) is being accepted, necessitating a new ETA for DBP dev completion (pushed from Dec 15 to Dec 19).
-
-### 5. Critical Blockers & Dependencies
-*   **Primary Blocker:** WMS Middleware Production readiness and final rollout schedule post-CNY. Until this is confirmed as "Green," dependent SAP decoupling components cannot proceed to UAT with consumers.
-*   **Linked Issues:**
-    *   Blocks: OMNI-1249
-    *   Relates: OE-3209, DPD-184
-
-
 ## jira/OMNI-1294: [BCRS Compliance] Phase 2: Order Place & Returns/Refunds Processxa
 Source: jira | Key: OMNI-1294 | Status: UAT (In Progress) | Type: Idea | Priority: High | Assignee: Prajney Sribhashyam | Reporter: Winson Lim | Labels: bcrs | discovery---connected: NEDMT-2334 | polaris-work-item-link: DPD-225
 **Ticket:** OMNI-1294 | **Status:** UAT (In Progress) | **Priority:** High | **Assignee:** Prajney Sribhashyam | **Reporter:** Winson Lim
@@ -1372,26 +1371,28 @@ Source: jira | Key: OMNI-1163 | Status: Prioritised (To Do) | Type: Idea | Prior
 **Status Update: OMNI-1163 (Enable AI Personalisation Search Capability with Algolia)**
 
 **Current State**
-The initiative remains in the **Ideas** backlog but is marked as **Prioritised** (**High Priority**, Status: **To Do**), assigned to **Erica Lee**. While technically feasible and linked to migration parent **OMNI-653**, immediate implementation hinges on resolving specific technical constraints regarding event completeness. The project faces a critical dependency on confirming whether current "past purchase boosting" logic will be overridden by Algolia's AI if enabled "as-is," which could inadvertently hide previously purchased items.
+The initiative remains in the **Ideas** backlog but is marked as **Prioritised** (**High Priority**, Status: **To Do**), assigned to and reported by **Erica Lee**. The project is technically feasible and links to migration parent **OMNI-653**. Implementation currently hinges on resolving technical constraints regarding event completeness and the interaction between existing "past purchase boosting" logic and Algolia's AI.
 
 **Problem & Opportunity**
-Customers currently face generic search results that fail to reflect individual preferences, leading to inefficient discovery. Enabling AI personalization aims to dynamically adjust search and category listings based on browsing behavior and purchase history.
+Customers face generic search results that fail to reflect individual preferences (e.g., dietary restrictions, brand loyalty), leading to inefficient discovery and potential abandonment in favor of competitors with more tailored experiences. Enabling AI personalization will dynamically adjust search, promotion, and category listings based on browsing behavior and purchase history to improve relevance and engagement.
+
 *   **Projected Impact:** A conservative 2% increase in Search Conversion Rate (CVR) is expected, driving a **$1.6M uplift** in Search GMV against a 2024 baseline of $81.7M. This also targets an increase in Overall Average Order Value (AOV).
-*   **Validation:** Based on Algolia client data showing 4.5% CTR/CVR gains, FairPrice anticipates measurable improvements in search relevance and conversion.
+*   **Validation:** Assumptions are based on Algolia client data showing a 4.5% CTR/CVR gain; FairPrice anticipates measurable improvements with the conservative 2% CVR estimate.
 
 **Key Decisions & Strategic Context**
-1.  **Scope Management:** While this ticket focuses on Algolia AI, Google Search functionality was split into a separate ticket (**OMNI-1312**) to allow immediate A/B testing of that alternative, which showed strong preliminary results (resolving 21.6% zero-result queries).
-2.  **Strategic Continuity:** Despite recent backlog movements, leadership affirmed on **2025-09-22** and again on **2026-01-19** that this is not wasted effort. It requires re-evaluation for low-risk activation once technical blockers are cleared.
+1.  **Scope Management:** Google Search functionality was split into a separate ticket (**OMNI-1312**) to allow immediate A/B testing of that alternative, while this ticket focuses specifically on Algolia AI.
+2.  **Strategic Continuity:** Leadership has affirmed the initiative's value despite backlog movements; it requires re-evaluation for low-risk activation once technical blockers are cleared.
 
 **Pending Actions & Ownership**
 *   **Re-validate with Algolia (Owner: Vivian Lim Yu Qian):** A meeting was scheduled for **Tuesday, 2026-03-18** to confirm specific event requirements from Algolia engineers.
     *   *Critical Technical Question:* Determine if the effort to modify past purchase data flows is "deadly critical" or if AI logic will override existing boosting without significant engineering intervention.
 *   **Event Confirmation:** Verify that all required personalization events are live via CDP/Segment (work completed by Deloitte in Sprints 7 and 9).
+*   **Dependency Check:** Confirm no additional tagging work is needed beyond Deloitte's delivery to prevent AI logic from inadvertently hiding previously purchased items.
 
 **Key Dates & Dependencies**
 *   **2026-03-18:** Re-validation meeting with Algolia.
 *   **Dependencies:** The ticket cannot proceed until the search provider strategy is finalized post-POC and event completeness is confirmed.
-*   **Blockers:** Uncertainty regarding the engineering effort to prevent AI logic from overriding past purchase data; confirmation that no additional tagging work is needed beyond Deloitte's delivery.
+*   **Blockers:** Uncertainty regarding engineering effort to prevent AI override of past purchase data; confirmation that no additional tagging work is needed beyond Deloitte's delivery.
 
 **Technical References**
 *   **Provider:** Algolia (via CDP/Segment).

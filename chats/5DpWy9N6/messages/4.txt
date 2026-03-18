@@ -1,0 +1,11 @@
+[Completed fetching 2/58] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 3/58] RMN Notification
+[Completed fetching 3/58] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 4/58] BCRS Firefighting Group
+[Completed fetching 4/58] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 5/58] Jacob, Sathya, Daryl, Tiong Siong, ...
+[Completed fetching 5/58] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 6/58] @ecom-ops #standup - Mar 18
+
+
+[SYSTEM: Terminal session 1 might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

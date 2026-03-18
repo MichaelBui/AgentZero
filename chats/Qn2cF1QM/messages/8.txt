@@ -1,0 +1,203 @@
+/a0/usr/skills/gmail/data/gmail-output.md 2980 lines
+>>>
+  1 
+  2 
+  3 ## gmail/19cfda7d9e8ad046: You have no events scheduled today.
+  4 Source: gmail | Thread: 19cfda7d9e8ad046 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Tue, Mar 17, 2026, 9:16 PM
+  5 ### Daily Work Briefing Summary
+  6 
+  7 **Date:** March 18, 2026 (Wed)
+  8 **Recipient:** Michael Bui (michael.bui@fairpricegroup.sg)
+  9 
+ 10 **Key Participants & Roles**
+ 11 *   **Michael Bui:** Primary account holder and recipient of daily agenda notifications. Role involves managing the "Digital Business Tech Release/Changes" calendar subscription.
+ 12 *   **Google Calendar System:** Automated notification sender (`calendar-notification@google.com`).
+ 13 
+ 14 **Main Topic/Request**
+ 15 This is an automated status update confirming that Michael Bui has no scheduled events for today (March 18, 2026) on the subscribed calendars, specifically "Digital Business Tech Release/Changes." The email serves as a compliance notification regarding subscription settings and confidentiality.
+ 16 
+ 17 **Pending Actions & Ownership**
+ 18 *   **Action:** Review calendar notification settings if changes to subscribed calendars are desired.
+ 19     *   **Owner:** Michael Bui.
+ 20     *   **Method:** Log in to `https://calendar.google.com/calendar/` and modify notification settings for specific calendars.
+ 21 *   **Note:** No immediate action is required as there are no events scheduled.
+ 22 
+ 23 **Decisions Made**
+ 24 *   None recorded in this thread. This is a system-generated status report rather than a discussion requiring a decision.
+ 25 
+ 26 **Key Dates, Deadlines, & Follow-ups**
+ 27 *   **Current Date:** Wednesday, March 18, 2026.
+ 28 *   **Notification Time Generated:** Wednesday, March 17, 2026, at 9:16 PM.
+ 29 *   **Follow-up:** None scheduled for today.
+ 30 
+ 31 **Specific References & Metadata**
+ 32 *   **Resource Status:** No events scheduled today.
+ 33 *   **Last Message ID:** `19cfda7d9e8ad046`.
+ 34 *   **Email Labels:** Inbox, Updates.
+ 35 *   **Confidentiality Statement:** The email contains confidential and potentially privileged information regarding the account.
+ 36 
+ 37 
+ 38 ## gmail/19cbcd49e2a0bf4b: Fwd: Advertima - TTD : Lab test and PMP set up questions
+ 39 Source: gmail | Thread: 19cbcd49e2a0bf4b | Labels: Inbox | Priority: None | Senders: Iman, Yian, Ravi | Last Date: Tue, Mar 17, 2026, 8:05 PM
+ 40 **Daily Work Briefing: Advertima TTD Lab Test & PMP Setup (Updated)**
+ 41 
+ 42 **Key Participants**
+ 43 *   **Yian Koh (The Trade Desk):** Lead on reporting, data validation, and cross-deal discrepancy checks.
+ 44 *   **Ravi Singh (Place Exchange):** Technical lead; provided raw BURLs for analysis.
+ 45 *   **Iman Nahvi (Advertima Co-Founder):** Strategic oversight.
+ 46 *   **Michael Bui:** Added for programmatic activation support.
+ 47 *   **Wei Phung & Rajiv Kumar Singh (FairPrice Group):** Clarifying test architecture.
+ 48 
+ 49 **Main Topic/Request**
+ 50 Investigation into CPM clearing discrepancies for the `advertima_ttd-fixed-price-test-1.5` deal and confirmation of PMP-only activation strategy. While Deal `.5` previously showed inconsistent pricing ($1 on 3/5 vs. a range on 6/3–8/3), Yian Koh has now received raw BURLs from Ravi Singh to validate findings internally.
+ 51 
+ 52 **Decisions Made**
+ 53 *   **Activation Mode:** Confirmed by Ravi Singh that all campaign activations utilize **PMP (Private Marketplace)** or PG; the Open Exchange is not supported.
+ 54 *   **Data Collection Strategy:** Both parties agreed to run impressions over the weekend to gather sufficient data for comparison before finalizing results.
+ 55 
+ 56 **Pending Actions & Owners**
+ 57 *   **Ravi Singh:** Await validation of raw BURLs and provide findings on discrepancies for the other two test deals (`advertima_ttd-first-price-test` and `advertima_ttd-fixed-price-test-1`). The original deadline of March 17 for Deal `.5` is now contingent upon this cross-validation.
+ 58 *   **Yian Koh:** Validate received BURLs internally and check for discrepancies across all three test deals (`first-price-test`, `fixed-price-test-1`, and `fixed-price-test-1.5`).
+ 59 
+ 60 **Key Dates & Deadlines**
+ 61 *   **Mar 5:** Test confirmed recording impressions; BURLs requested.
+ 62 *   **Mar 9:** Clarification established that tests are PMP-only.
+ 63 *   **Mar 13:** Ravi Singh provided raw BURLs for `advertima_ttd-fixed-price-test-1.5` (6/3–8/3).
+ 64 *   **Mar 16, 2026:** Yian Koh acknowledged receipt of raw BURLs and requested analysis on the remaining two deals.
+ 65 *   **Pending:** Final confirmation of discrepancies for all three deals following cross-validation.
+ 66 
+ 67 **Specific References**
+ 68 *   **Test Deals:** `advertima_ttd-first-price-test`, `advertima_ttd-fixed-price-test-1`, `advertima_ttd-fixed-price-test-1.5`.
+ 69 *   **Date Range in Question:** March 6–8, 2026 (6/3–8/3).
+ 70 
+ 71 
+ 72 ## gmail/19cfcd7f36e9e1fa: Don't miss the Rovo Dev in Jira webinar
+ 73 Source: gmail | Thread: 19cfcd7f36e9e1fa | Labels: Inbox, Promotions | Priority: None | Senders: Team Atlassian | Last Date: Tue, Mar 17, 2026, 5:28 PM
+ 74 **Daily Work Briefing: Rovo Dev in Jira Webinar**
+ 75 
+ 76 *   **Key Participants & Roles:**
+ 77     *   **Sender/Presenter:** Matt Colman, Senior Engineering Manager at Atlassian. He leads high-impact teams with a background in animation and game development, currently focusing on AI-driven code generation.
+ 78     *   **Organizer:** Team Atlassian (team@eml.atlassian.com).
+ 79 
+ 80 *   **Main Topic/Request:**
+ 81     *   Invitation to the "Rovo Dev ships the small tasks while you tackle the cool stuff" webinar.
+ 82     *   The session demonstrates how **Rovo Dev in Jira** automates busy work (minor bug fixes, refactors) and enables developers to handle real tasks (security vulnerabilities, test coverage gaps) directly within Jira without context switching. It also covers creating custom, shareable prompts.
+ 83 
+ 84 *   **Pending Actions & Ownership:**
+ 85     *   **Action:** Register/Join the webinar.
+ 86     *   **Owner:** Recipient (Implied "You" in email copy).
+ 87     *   **Call to Action Link:** "Join the webinar" (referenced in original content).
+ 88 
+ 89 *   **Decisions Made:**
+ 90     *   None reported; this is an informational invitation with no prior decision-making thread.
+ 91 
+ 92 *   **Key Dates & Deadlines:**
+ 93     *   **Webinar Date:** March 26, 2026.
+ 94     *   **Email Sent:** March 17, 2026, at 5:28 PM.
+ 95     *   **Follow-up:** No specific follow-up date set; immediate attendance is encouraged ("Don't miss it!").
+ 96 
+ 97 *   **Specific References & Metadata:**
+ 98     *   **Last Message ID:** 19cfcd7f36e9e1fa.
+ 99     *   **Labels:** Inbox, Promotions.
+100     *   **Company Address:** 341 George Street, Sydney, NSW, 2000, Australia.
+101     *   **Copyright Year:** 2026 Atlassian Pty Ltd.
+102 
+103 
+104 ## gmail/19cfb209f06866f7: Retail Media OOH Project: 334 Screens Successfully Installed Across ALL FPG Stores
+105 Source: gmail | Thread: 19cfb209f06866f7 | Labels: Inbox | Priority: None | Senders: Fiona, Danielle | Last Date: Tue, Mar 17, 2026, 3:50 PM
+106 **Daily Work Briefing: Retail Media OOH Project (Phase 1) Status**
+107 
+108 **Key Participants & Roles**
+109 *   **Danielle Lee** (Head - Product Governance, Omnichannel COE): Led project closeout and transition planning; called the final meeting.
+110 *   **Fiona U** (Project Manager): Confirmed 100% installation completion; managing invoicing, documentation, and operational handover.
+111 *   **Cheng Joo**: Provided significant contractor support and guidance to ensure quality delivery.
+112 *   **Indirect Procurement**: Led vendor review setup with ADE Group.
+113 *   **Omni-commerce & AdOps Teams**: Receiving access/visibility for network management transition.
+114 *   **New SI Vendor**: Scheduled for onboarding in Apr 2026.
+115 
+116 **Main Topic/Request**
+117 Confirmation of Phase 1 completion (334 screens installed) and the initiation of the formal project closeout, including invoicing reconciliation, documentation finalization, and operational handover from Hypercare to Business As Usual (BAU). A mandatory meeting is requested for all working team members to define next steps before transitioning screen content management to VXT.
+118 
+119 **Pending Actions & Ownership**
+120 *   **Invoice Reconciliation**: Fiona U to process and reconcile invoices against the budget tracker.
+121 *   **As-built Documentation**: Fiona U, in coordination with Omni Commerce, to compile installation registries into a deck by this week (Mar 17, 2026).
+122 *   **Operational Handover**: Fiona U to coordinate access/visibility with Omni-commerce and AdOps teams; includes streamlining escalation channels and store training readiness.
+123 *   **Vendor Review Meeting**: Indirect Procurement to lead a meeting with ADE Group by this month (Mar 2026).
+124 *   **New SI Vendor Onboarding**: Targeted for April 2026.
+125 *   **Screen Relocation**: Approval required from Group Manager for the 1 screen at Super format PGDR pending relocation.
+126 
+127 **Decisions Made**
+128 *   Phase 1 is declared 100% complete as of Feb 2026.
+129 *   Content management for Unity, Cheers, and Kopitiam screens will transition to VXT following the current closeout phase.
+130 *   The project workstream is formally closing under Fiona U's supervision.
+131 
+132 **Key Dates & Deadlines**
+133 *   **Mar 17, 2026 (Today)**: Meeting called by Danielle Lee for team regrouping; As-built documentation due "this week."
+134 *   **Mar 2026**: Vendor review meeting with ADE Group to be led by Indirect Procurement.
+135 *   **Apr 2026**: Onboarding of new SI vendor scheduled.
+136 *   **Feb 2026**: Baseline for installation completion (334 screens).
+137 
+138 **Specific References**
+139 *   **Total Screens**: 334 installed across Hyper, Finest, and Super formats.
+140 *   **Exception**: 1 screen at Super format PGDR pending relocation.
+141 *   **Vendors**: ADE Group (current), VXT (next phase content management).
+142 *   **Formats**: Hyper, Finest, Super.
+143 
+144 
+145 ## gmail/19cfbc918637b476: Build smarter workflows with Terraform and Vault
+146 Source: gmail | Thread: 19cfbc918637b476 | Labels: Inbox, Updates | Priority: None | Senders: HashiCorp | Last Date: Tue, Mar 17, 2026, 12:33 PM
+147 **Subject:** Daily Briefing: HashiCorp Newsletter (Mar 17, 2026) – Product Updates & Event Deadlines
+148 
+149 **Key Participants & Roles**
+150 *   **HashiCorp Communications Team:** Publisher of the monthly newsletter and technical blogs.
+151 *   **Authors/Contributors:**
+152     *   Manu Chandrasekhar (Terraform 1.15 Alpha features).
+153     *   Bryan Krausen (Vault security practices).
+154     *   Birgitta Böckeler (AI "harness engineering").
+155     *   Annem Sabah Shah (Terraform AWS actions demo).
+156     *   Mattias Fjellström (Azure network security).
+157     *   Alexey Grigorev (Production incident case study).
+158     *   Rich Dubose & Dante Okoh (HCP Vault Dedicated regions); Rich Dubose & Nesh Chandarana (Vault WIF).
+159     *   Rama Chaval, Vijay Sharma (Day 2 ops guardrails).
+160     *   Rachana Badekar (Boundary session routing).
+161     *   Rosemary Wang (AI agent authorization/A2A protocol).
+162     *   Saptaparni Nandy (Boundary vendor comparison).
+163 
+164 **Main Topic/Request**
+165 This communication is an informational newsletter highlighting the latest HashiCorp product updates, technical tutorials, and community case studies. It focuses on:
+166 *   **Security:** Stopping credential storage in state via Vault ephemeral resources; securing workloads with WIF; AI agent authorization.
+167 *   **Automation:** Terraform 1.15 Alpha dynamic module sources; AWS CloudFront invalidation actions.
+168 *   **Community Engagement:** Call for session proposals for HashiConf at IBM TechXchange.
+169 
+170 **Pending Actions & Ownership**
+171 *   **Submit Session Proposal (HashiCorp User/Partner):** Propose a speaking session for "HashiConf at IBM TechXchange."
+172     *   *Deadline:* May 22, 11:59 PM EST.
+173     *   *Owner:* Any eligible community member or partner submitting via the provided link.
+174 
+175 **Decisions Made**
+176 *   **Product Availability:** HCP Vault Dedicated is now available in additional AWS and Azure regions (including beta certificates/secrets inventory reporting).
+177 *   **Event Presence:** HashiCorp confirmed participation at KubeCon + CloudNativeCon EU 2026, RSAC 2026, and Google Cloud Next.
+178 
+179 **Key Dates & Deadlines**
+180 *   **Mar 17, 2026:** Newsletter distribution date.
+181 *   **Mar 19, 2026 (12:00 PM GMT):** Webinar: "Virtual cloud tactic: Security Lifecycle Management" (Vault & Boundary).
+182 *   **Mar 23–26, 2026:** KubeCon + CloudNativeCon EU (Amsterdam) and RSAC 2026 (San Francisco). Booths #588 (KubeCon) and #N-5268 (RSAC).
+183 *   **Apr 1, 2026 (09:00 AM PDT):** Webinar: "Introduction to secrets management with Vault."
+184 *   **Apr 22–24, 2026:** Google Cloud Next (Booth #2809).
+185 *   **May 22, 2026 (11:59 PM EST):** Deadline for IBM TechXchange session proposals.
+186 
+187 
+188 ## gmail/19cfb0400c5977a9: Re:[## 112056 ##] TMICC | Brand-to-Manufacturer Mapping
+189 Source: gmail | Thread: 19cfb0400c5977a9 | Labels: Inbox | Priority: None | Senders: Osmos, Trina | Last Date: Tue, Mar 17, 2026, 9:31 AM
+190 **Daily Work Briefing: TMICC Brand-to-Manufacturer Mapping**
+191 
+192 **Key Participants & Roles**
+193 *   **Osmos Support:** Execution team initiating the mapping process.
+194 *   **Trina Esguerra (Ad Ops):** Final decision-maker; currently out of office (25–30 Mar, 2 PM–3 Apr, 21–25 May).
+195 *   **FPG Team Stakeholders (cc'd for visibility):** Michael Bui, Nikhil Grover, Allen Umali.
+196 *   **OSMOS/Internal Stakeholders (cc'd for visibility):** Siddharth Aklujkar, Shubhangi Agrawal.
+197 
+198 **Main Topic/Request**
+199 Osmos Support is proceeding with Brand-to-Manufacturer mapping for **Account: Tmicc - 77307** (Vendor Code: 77307) across ten (10) specific Brand IDs. During validation, the team identified a compliance gap regarding one combination: **77307_6480**.
+200 
+<<<

@@ -1,0 +1,203 @@
+/a0/usr/skills/gmail/data/gmail-debug.log 359 lines
+>>>
+  1 Gmail Reader started (output=/a0/usr/skills/gmail/data/gmail-output.md, debug=/a0/usr/skills/gmail/data/gmail-debug.log)
+  2 Connecting to browser at http://192.168.1.11:9223...
+  3 Connecting to Chrome at http://192.168.1.11:9223...
+  4 Connected. Browser version: 124.0.6367.78
+  5 Found 2 open tab(s)
+  6 Reusing existing Gmail tab
+  7 Browser connected.
+  8 
+  9 Phase 1: Scanning listing (target: 200, scan limit: 500, early-stop: 5)...
+ 10 Navigating to Gmail search (page 1, last 2 days)...
+ 11 Gmail search results loaded.
+ 12   Page 1: 100 thread(s)
+ 13   SKIP [1] [] Bulk Global Attribute Upload status... (excluded label)
+ 14   SKIP [3] [] Bulk Store Attribute Upload status... (excluded label)
+ 15   SKIP [4] Review of your FairPrice Group (iOS) submission is... (excluded label)
+ 16   SKIP [6] The uploaded build for FairPrice Group has one or ... (excluded label)
+ 17   SKIP [7] The uploaded build for Fairprice Group UAT has one... (excluded label)
+ 18   SKIP [10] Re: [Bitbucket] Pull request #908: PRE-1168 Rename... (excluded label)
+ 19   SKIP [11] POT File - 18/03/2026... (excluded label)
+ 20   SKIP [13] [ALERT][PRODUCTION][2026-03-17 2001] Seller stores... (excluded label)
+ 21   SKIP [14] Urgent Download 17/03/2026... (excluded label)
+ 22   SKIP [21] Re: [Bitbucket] Pull request #1538: feature/DPD-37... (excluded label)
+ 23   SKIP [25] [FP ST MP] Urgent Download 17/03/2026... (excluded label)
+ 24   SKIP [26] The uploaded build for MyApp for Fairmily has one ... (excluded label)
+ 25   SKIP [27] Urgent Download 17/03/2026... (excluded label)
+ 26   SKIP [29] [FP ST MP] Urgent Download 17/03/2026... (excluded label)
+ 27   SKIP [30] Re: [Bitbucket] Pull request #907: [PRE-1167] SLO ... (excluded label)
+ 28   SKIP [31] Re: [Bitbucket] Pull request #905: Add high token ... (excluded label)
+ 29   SKIP [34] The uploaded build for FairPrice Group has one or ... (excluded label)
+ 30   SKIP [35] Re: [Bitbucket] Pull request #906: [PRE-1167] Aler... (excluded label)
+ 31   SKIP [36] [ALERT][PRODUCTION][2026-03-17 1401] Seller stores... (excluded label)
+ 32   SKIP [37] Urgent Download 17/03/2026... (excluded label)
+ 33   SKIP [42] [ALERT][PRODUCTION][2026-03-17 1301] Seller stores... (excluded label)
+ 34   SKIP [44] 2026-03-17 PFC Consolidated Picklist... (excluded label)
+ 35   SKIP [46] [ALERT][PRODUCTION][2026-03-17 1201] Seller stores... (excluded label)
+ 36   SKIP [47] [ERROR] [2026-03-17] Meta Customer Audience... (excluded label)
+ 37   SKIP [51] [] Bulk Store Attribute Upload status... (excluded label)
+ 38   SKIP [53] Re: [Bitbucket] Pull request #901: [PRE-1167] Ther... (excluded label)
+ 39   SKIP [54] Re: [Bitbucket] Pull request #903: remove ff chang... (excluded label)
+ 40   SKIP [55] Re: [Bitbucket] Pull request #900: PRE-1178 Split ... (excluded label)
+ 41   SKIP [56] [ERROR] [2026-03-17] Meta Conversion API... (excluded label)
+ 42   SKIP [57] Re: [Bitbucket] Pull request #904: delink ff freez... (excluded label)
+ 43   SKIP [62] [FP ST MP] Urgent Download 17/03/2026... (excluded label)
+ 44   SKIP [63] [ERROR] [2026-03-17] TikTok Conversion API... (excluded label)
+ 45   SKIP [64] [RESOLVED] [2026-03-17] Google Customer Audience... (excluded label)
+ 46   SKIP [69] [Alert] POs not generated for 17.03.2026... (excluded label)
+ 47   SKIP [70] [ERROR] [2026-03-16] Meta Customer Audience... (excluded label)
+ 48   SKIP [75] [] Bulk Global Attribute Upload status... (excluded label)
+ 49   SKIP [76] The uploaded build for Fairprice Group UAT has one... (excluded label)
+ 50   SKIP [80] POT File - 17/03/2026... (excluded label)
+ 51   SKIP [81] Fwd: [## 111251 ##] EUROLINK NUTRITION PTE LTD | B... (unchanged)
+ 52   SKIP [82] for Player [Error] [InternetReceiver] [614]... (unchanged)
+ 53   SKIP [83] for Player [Error] [InternetReceiver] [609]... (unchanged)
+ 54   SKIP [84] for Player [Error] [InternetReceiver] [573]... (unchanged)
+ 55   SKIP [85] for Player [Error] [InternetReceiver] [572]... (unchanged)
+ 56 
+ 57   Early stop: 5 consecutive cached threads. Skipping fetches, continuing scan...
+ 58   SKIP [86] for Player [Error] [InternetReceiver] [608]... (unchanged)
+ 59   SKIP [87] for Player [Error] [InternetReceiver] [613]... (unchanged)
+ 60   SKIP [88] for Player [Error] [InternetReceiver] [576]... (unchanged)
+ 61   SKIP [89] for Player [Error] [InternetReceiver] [640]... (unchanged)
+ 62   SKIP [90] [ALERT][PRODUCTION][2026-03-16 2001] Seller stores... (excluded label)
+ 63   SKIP [91] Re: FPG x OSMOS : TTD discussion... (unchanged)
+ 64   SKIP [92] [ERROR] [2026-03-16] Google Customer Audience... (excluded label)
+ 65   SKIP [93] [JIRA] (DPD-715) Dynamic ad slot configuration for... (unchanged)
+ 66   SKIP [94] for Player [Error] [Player] [5101]... (unchanged)
+ 67   SKIP [95] for Player [Error] [Player] [5099]... (unchanged)
+ 68   SKIP [96] for Player [Error] [Player] [5098]... (unchanged)
+ 69   SKIP [97] for Player [Error] [Player] [5100]... (unchanged)
+ 70   SKIP [98] [Bitbucket]  Pipeline for DPD-715 failed on d7f359... (unchanged)
+ 71   SKIP [99] Re: Hyper stores visual - Advertima... (unchanged)
+ 72   SKIP [100] [Bitbucket]  Pipeline for DPD-715 failed on 509ffc... (unchanged)
+ 73 Navigating to Gmail search (page 2, last 2 days)...
+ 74 Gmail search results loaded.
+ 75   Page 2: 41 thread(s)
+ 76   SKIP [101] Urgent Download 16/03/2026... (excluded label)
+ 77   SKIP [102] Re: [Bitbucket] Pull request #902: OA-273 Add fron... (excluded label)
+ 78   SKIP [103] Recruiting of Chapati (Indian Flat Bread) Consumer... (unchanged)
+ 79   SKIP [104] Re: New: 2026-OC-01806 - 313-BUKIT TIMAH PLAZA... (unchanged)
+ 80   SKIP [105] [JIRA] (DPD-645) Improve event sync to prevent ove... (unchanged)
+ 81   SKIP [106] [JIRA] Madhuri Nalamothu mentioned you on DPD-645... (unchanged)
+ 82   SKIP [107] [ALERT][PRODUCTION][2026-03-16 1401] Seller stores... (excluded label)
+ 83   SKIP [108] Accepted: Integration planning @ Wed Mar 18, 2026 ... (unchanged)
+ 84   SKIP [109] Accepted: UAT - Product ads on Omni swimlanes @ We... (unchanged)
+ 85   SKIP [110] Invitation: UAT - Product ads on Omni swimlanes @ ... (unchanged)
+ 86   SKIP [111] Invitation: [NTUC] Gemini Enterprise Essentials fo... (unchanged)
+ 87   SKIP [112] [##107672##] Your reply has been received.... (unchanged)
+ 88   SKIP [113] New reply received for this ticket on which you ar... (unchanged)
+ 89   SKIP [114] Recurring concerns regarding the quality and effec... (unchanged)
+ 90   SKIP [115] Out of Office Re:  Recurring concerns regarding th... (unchanged)
+ 91   SKIP [116] Re: [Bitbucket] Pull request #1561: feat: [DPD-648... (excluded label)
+ 92   SKIP [117] Invitation: Integration planning @ Wed Mar 18, 202... (unchanged)
+ 93   SKIP [118] [ALERT][PRODUCTION][2026-03-16 1301] Seller stores... (excluded label)
+ 94   SKIP [119] Notes: “ACNxOsmos: Daily Cadence” Mar 16, 2026... (unchanged)
+ 95   SKIP [120] Updated invitation: ACNxOsmos: Daily Cadence @ Mon... (unchanged)
+ 96   SKIP [121] Delivery Status Notification (Failure)... (unchanged)
+ 97   SKIP [122] Updated invitation: ACNxOsmos: Daily Cadence @ Mon... (unchanged)
+ 98   SKIP [123] Updated invitation: ACNxOsmos: Daily Cadence @ Mon... (unchanged)
+ 99   SKIP [124] Updated invitation: ACNxOsmos: Daily Cadence @ Mon... (unchanged)
+100   SKIP [125] Urgent Download 16/03/2026... (excluded label)
+101   SKIP [126] 2026-03-16 PFC Consolidated Picklist... (excluded label)
+102   SKIP [127] [JIRA] (OPCO-1940) FP VIPs encounter verification ... (unchanged)
+103   SKIP [128] for Player [Error] [Player] [5100]... (unchanged)
+104   SKIP [129] [ALERT][PRODUCTION][2026-03-16 1201] Seller stores... (excluded label)
+105   SKIP [130] GCP Service Account Key clean UP... (unchanged)
+106   SKIP [131] [JIRA] Vivian Lim Yu Qian mentioned you on OPCO-19... (unchanged)
+107   SKIP [132] [Dashboard Report] Retail Media - DD Dashboard | M... (unchanged)
+108   SKIP [133] Delivery Status Notification (Failure)... (unchanged)
+109   SKIP [134] Issue with the event segment audience pipeline.... (unchanged)
+110   SKIP [135] [Reminder] FY2025 Final Rating ​Communication... (unchanged)
+111   SKIP [136] Re: [Bitbucket] Pull request #649: DPD-715: Use ta... (unchanged)
+112   SKIP [137] [] Bulk Store Attribute Upload status... (excluded label)
+113   SKIP [138] Michael Bui, you have work due in Jira... (unchanged)
+114   SKIP [139] [Alert] POs not generated for 16.03.2026... (excluded label)
+115   SKIP [140] [ERROR] [2026-03-16] Meta Customer Audience... (excluded label)
+116   SKIP [141] Find out how AI accelerates the SDLC... (excluded label)
+117 Navigating to Gmail search (page 3, last 2 days)...
+118   WARN: Page 3 did not load threads within timeout
+119   Page 3: failed to load, stopping.
+120 
+121 Phase 1 complete: 89 threads (excluded: 52, unchanged: 47, to-fetch: 42, early-stopped)
+122 
+123 Phase 2: Fetching 42 thread(s) (summarization pipelined in background)...
+124 [1/42] You have no events scheduled today....
+125   -> 1 message(s)
+126   -> 1 new message(s) cached
+127 [2/42] Fwd: Advertima - TTD : Lab test and PMP set up question...
+128   [You have no events scheduled today.]: summarizing (1 messages)...
+129   Clicked 'Expand all' button, waiting for messages to load...
+130   19 message(s) loaded
+131   -> 19 message(s)
+132   -> 7 new message(s) cached
+133 [3/42] Don't miss the Rovo Dev in Jira webinar...
+134   -> 1 message(s)
+135   -> 1 new message(s) cached
+136 [4/42] Retail Media OOH Project: 334 Screens Successfully Inst...
+137   Clicked 'Expand all' button, waiting for messages to load...
+138   2 message(s) loaded
+139   -> 2 message(s)
+140   -> 2 new message(s) cached
+141 [5/42] Build smarter workflows with Terraform and Vault...
+142   -> 1 message(s)
+143   -> 1 new message(s) cached
+144 [6/42] Re:[## 112056 ##] TMICC | Brand-to-Manufacturer Mapping...
+145   Clicked 'Expand all' button, waiting for messages to load...
+146   2 message(s) loaded
+147   -> 2 message(s)
+148   -> 2 new message(s) cached
+149 [7/42] DPD (Omni & Ecomm) + CP + Platform (Quality & Reliabili...
+150   -> 1 message(s)
+151   -> 1 new message(s) cached
+152 [8/42] AWARENESS: Microsoft Windows Security Updates (March 20...
+153   -> 1 message(s)
+154   -> 1 new message(s) cached
+155 [9/42] Updated invitation: 1 on 1 with michael feedback on per...
+156   -> 1 message(s)
+157   -> 1 new message(s) cached
+158 [10/42] Invitation: 1 on 1 with michael @ Wed Mar 18, 2026 4pm ...
+159   -> 1 message(s)
+160   -> 1 new message(s) cached
+161 [11/42] [Bitbucket] Your access to ntuclink/idempotency-go has ...
+162   -> 1 message(s)
+163   -> 1 new message(s) cached
+164 [12/42] Declined: ACNxOsmos: Daily Cadence @ Weekly from 12:30p...
+165   -> 1 message(s)
+166   -> 1 new message(s) cached
+167 [13/42] Declined: ACNxOsmos: Daily Cadence @ Weekly from 1:30pm...
+168   -> 1 message(s)
+169   -> 1 new message(s) cached
+170 [14/42] Your Weekly Digest from Datadog...
+171   -> 1 message(s)
+172   -> 1 new message(s) cached
+173 [15/42] Declined: ACNxOsmos: Daily Cadence @ Mon Mar 23, 2026 1...
+174   [Fwd: Advertima - TTD : Lab test and PMP ]: summarizing (7 messages)...
+175   -> 1 message(s)
+176   -> 1 new message(s) cached
+177 [16/42] Accepted: Banner delivery for impressions-based campaig...
+178   -> 1 message(s)
+179   -> 1 new message(s) cached
+180 [17/42] Invitation: Banner delivery for impressions-based campa...
+181   -> 1 message(s)
+182   -> 1 new message(s) cached
+183 [18/42] [Bitbucket] Your access to ntuclink/layout-service has ...
+184   -> 1 message(s)
+185   -> 1 new message(s) cached
+186 [19/42] Notes: Meeting Mar 17, 2026 at 1:25 PM GMT+08:00...
+187   -> 1 message(s)
+188   -> 1 new message(s) cached
+189 [20/42] Re: [Bitbucket] Pull request #362: DPD-715: Use marketi...
+190   Clicked 'Expand all' button, waiting for messages to load...
+191   4 message(s) loaded
+192   -> 4 message(s)
+193   -> 2 new message(s) cached
+194 [21/42] Canceled event with note: rOOH Sync @ Tue Mar 17, 2026 ...
+195   -> 1 message(s)
+196   -> 1 new message(s) cached
+197 [22/42] Re: [Bitbucket] Pull request #901: [PRE-1167] Thereshol...
+198   Clicked 'Expand all' button, waiting for messages to load...
+199   2 message(s) loaded
+200   -> 2 message(s)
+<<<
