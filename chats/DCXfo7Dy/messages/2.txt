@@ -1,0 +1,47 @@
+[Completed fetching 1/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 2/55] #dd-fpg-watchdog-alert
+[Completed fetching 2/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 3/55] Shopping Cart Notification
+[Completed fetching 3/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 4/55] fairnex-datadog-notification
+[Completed fetching 4/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 5/55] Digital Product Development {DPD}
+[Completed fetching 5/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 6/55] FPG Everyone - General
+[Completed fetching 6/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 7/55] BCRS Firefighting Group
+[Completed fetching 7/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 8/55] BCRS ECOMM SAP POSTING
+[Completed fetching 8/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 9/55] BCRS - UAT
+[Completed fetching 9/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 10/55] BCRS Firefighting Group
+[Completed fetching 10/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 11/55] QE <-> All Tribes
+[Completed fetching 11/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 12/55] [Internal] (Ecom/Omni) Digital Product Development
+[Completed fetching 12/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 13/55] Product x RMN x Platform
+[Completed fetching 13/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 14/55] Digital Signage - Network and StoreTech
+[Completed fetching 14/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 15/55] ❗ Important Email
+[Completed fetching 15/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 16/55] [Prod Support] Marketplace
+[Completed fetching 16/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 17/55] Alvin, Winson
+[Completed fetching 17/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 18/55] Google Drive
+[Completed fetching 18/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 19/55] QE <-> All Tribes
+[Completed fetching 19/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 20/55] Yangyu Wang
+[Completed fetching 20/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 21/55] BCRS Firefighting Group
+[Completed fetching 21/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 22/55] Nikhil Grover
+[Completed fetching 22/55] The script is still running, the output file content is still incomplete, please check the progress status in next 60 seconds
+[Start fetching 23/55] #dd-dpd-grocery-alert
+
+
+[SYSTEM: Terminal session 0 might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

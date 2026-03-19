@@ -47,7 +47,15 @@ def get_jira_db(db_path: str | Path, *, force: bool = False) -> "SkillDB":
         try:
             conn = sqlite3.connect(str(db_path), timeout=30, check_same_thread=False)
             conn.row_factory = sqlite3.Row
-            conn.execute("PRAGMA journal_mode=WAL")
+            try:
+                conn.execute("PRAGMA journal_mode=WAL")
+            except sqlite3.OperationalError:
+                # WAL requires shared-memory files — not available on NFS mounts.
+                # Fall back to DELETE journal mode (correct, slightly slower).
+                try:
+                    conn.execute("PRAGMA journal_mode=DELETE")
+                except sqlite3.OperationalError:
+                    pass  # DB already in compatible mode; proceed
             conn.execute("PRAGMA foreign_keys=ON")
             conn.execute("PRAGMA busy_timeout=10000")
             db = SkillDB(conn)

@@ -32,6 +32,7 @@ from gchat_summarizer import summarize_resource
 
 DEFAULT_CDP = "http://192.168.1.11:9223"
 GCHAT_URL = "https://chat.google.com/app/home"
+_WORKDIR = Path(__file__).resolve().parents[3] / "workdir"
 DB_PATH = Path(__file__).resolve().parent.parent / "data" / "gchat_cache.db"
 
 SEL_FEED = 'span[role="listitem"][data-group-id][data-is-unread]'
@@ -76,8 +77,12 @@ _debug_file = sys.stderr
 _output_file = sys.stdout
 
 
+def _ts() -> str:
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
 def eprint(*a, **kw):
-    print(*a, file=_debug_file, flush=True, **kw)
+    print(f"[{_ts()}]", *a, file=_debug_file, flush=True, **kw)
 
 
 _HEARTBEAT_INTERVAL = int(os.environ.get("SKILL_HEARTBEAT_INTERVAL", "60"))
@@ -672,11 +677,10 @@ def main():
                     help="Bypass change detection, re-fetch and re-summarize all")
     ap.add_argument("--cached-only", action="store_true",
                     help="Output cached summaries from DB without browser fetching (fast, for reports)")
-    _data_dir = Path(__file__).resolve().parent.parent / "data"
-    ap.add_argument("--output", default=str(_data_dir / "gchat-output.md"),
-                    help="Write results to this file (default: data/gchat-output.md)")
-    ap.add_argument("--debug-log", default=str(_data_dir / "gchat-debug.log"),
-                    help="Write debug messages to this file (default: data/gchat-debug.log)")
+    ap.add_argument("--output", default=str(_WORKDIR / "gchat-output.md"),
+                    help="Write results to this file (default: workdir/gchat-output.md)")
+    ap.add_argument("--debug-log", default=str(_WORKDIR / "gchat-debug.log"),
+                    help="Write debug messages to this file (default: workdir/gchat-debug.log)")
     ap.add_argument("--debug-dom", action="store_true",
                     help="Dump Home feed DOM to stderr and exit")
     args = ap.parse_args()
@@ -686,7 +690,10 @@ def main():
         p.parent.mkdir(parents=True, exist_ok=True)
     _output_file = open(args.output, "w", encoding="utf-8", buffering=1)
     _debug_file = open(args.debug_log, "w", encoding="utf-8", buffering=1)
-    eprint(f"GChat Reader started (output={args.output}, debug={args.debug_log})")
+    eprint(f"{'='*60}")
+    eprint(f"STATUS: STARTED - GChat Reader")
+    eprint(f"output={args.output}, debug={args.debug_log}")
+    eprint(f"{'='*60}")
 
     print("[gchat_reader] STARTED - processing Google Chat conversations. Do NOT interrupt or move on - this takes 5-15 minutes.", flush=True)
 
@@ -714,7 +721,9 @@ def main():
                     s["resource_id"], s.get("title", "(unknown)"),
                     s.get("summary", "(no summary)"), info,
                 )
-            eprint(f"Done: {len(summaries)} cached summaries output")
+            eprint(f"{'='*60}")
+            eprint(f"STATUS: COMPLETED - GChat Reader (cached-only): {len(summaries)} summaries output")
+            eprint(f"{'='*60}")
         finally:
             db.close()
             if _output_file and _output_file is not sys.stdout:
@@ -893,7 +902,9 @@ def main():
 
         sum_q.put(None)
         worker.join()
-        eprint("Pipeline complete.")
+        eprint(f"{'='*60}")
+        eprint(f"STATUS: COMPLETED - GChat Reader pipeline finished successfully")
+        eprint(f"{'='*60}")
         print(
             f"\n{'='*60}\n"
             f"[gchat_reader] ALL DONE - output file is ready for use.\n"
@@ -903,7 +914,9 @@ def main():
         )
 
     except Exception as e:
-        eprint(f"ERROR: {e}")
+        eprint(f"{'='*60}")
+        eprint(f"STATUS: FAILED - GChat Reader encountered an error: {e}")
+        eprint(f"{'='*60}")
         import traceback
         traceback.print_exc(file=_debug_file)
         print(f"\n[gchat_reader] FAILED with error: {e}\n", flush=True)

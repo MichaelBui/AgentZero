@@ -68,8 +68,8 @@ python /a0/usr/skills/gchat/scripts/gchat_reader.py --cached-only
 | `--focus-title` | No | *(none)* | Substring filter for conversation titles |
 | `--cached-only` | No | false | Output cached summaries from DB without browser (fast, for reports) |
 | `--force` | No | false | Bypass change detection, re-fetch and re-summarize all |
-| `--output` | No | `data/gchat-output.md` | Write results to file (clean markdown for AI agents) |
-| `--debug-log` | No | `data/gchat-debug.log` | Write debug/progress messages to file |
+| `--output` | No | `workdir/gchat-output.md` | Write results to file (clean markdown for AI agents) |
+| `--debug-log` | No | `workdir/gchat-debug.log` | Write debug/progress messages to file |
 | `--debug-dom` | No | false | Dump Home feed DOM to stderr and exit |
 
 ## Environment Variables
@@ -97,7 +97,8 @@ Progress and diagnostics go to stderr. Use `PYTHONUNBUFFERED=1 python3 -u` for r
 
 ## Architecture
 - Self-contained: all modules (DB, cleaner, summarizer) embedded in `scripts/`
-- SQLite cache at `data/gchat_cache.db` (per-message caching)
+- SQLite cache at `data/gchat_cache.db` (persistent across sessions)
+- Output and debug logs written to `/a0/usr/workdir/` (transactional, per-session)
 - `resource_id`: `{group_id}/{topic_id}` for thread-specific items, `{group_id}` for main conversations
 - 3-panel layout navigation: nav (left), Home feed (middle), conversation (right)
 - Change detection via `data-display-timestamp` comparison at feed level
@@ -112,6 +113,9 @@ scripts/gchat_reader.py      - Main script (CDP + caching + summarization)
 scripts/gchat_db.py          - SQLite database management
 scripts/gchat_cleaner.py     - Chat message cleanup (deterministic)
 scripts/gchat_summarizer.py  - LLM summarization via LiteLLM
-data/gchat_cache.db          - SQLite cache (auto-created)
+data/gchat_cache.db          - SQLite cache (persistent, auto-created)
 _architecture.md             - Detailed design documentation
+# Transactional output written to /a0/usr/workdir/:
+#   gchat-output.md          - Results output (overwritten each run)
+#   gchat-debug.log          - Debug/progress log (overwritten each run)
 ```

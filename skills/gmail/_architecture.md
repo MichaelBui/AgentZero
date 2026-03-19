@@ -194,13 +194,13 @@ gmail/
 ├── SKILL.md                  # Agent-facing documentation
 ├── _architecture.md          # This file (human-facing design)
 ├── data/
-│   ├── .gitignore            # Excludes *.db from git
-│   └── gmail_cache.db        # SQLite (auto-created at runtime)
+│   └── gmail_cache.db        # SQLite (persistent, auto-created at runtime)
 └── scripts/
     ├── gmail_reader.py       # Main script: CDP + listing + caching + output
     ├── gmail_db.py           # Self-contained SQLite DB management
     ├── gmail_cleaner.py      # Self-contained email body cleanup
     └── gmail_summarizer.py   # Self-contained LLM summarization via LiteLLM
+# Transactional output → /a0/usr/workdir/gmail-output.md, gmail-debug.log
 ```
 
 ## Module Dependencies
@@ -230,8 +230,8 @@ flowchart TD
 | `--priority-labels` | `["⚠️IMPORTANT", ...]` | JSON array of priority labels (highest first) |
 | `--cached-only` | `false` | Output cached summaries from DB without browser (fast, for reports) |
 | `--force` | `false` | Bypass change detection, re-fetch and re-summarize all |
-| `--output` | `data/gmail-output.md` | Write results to file (clean markdown for AI agents) |
-| `--debug-log` | `data/gmail-debug.log` | Write debug/progress messages to file |
+| `--output` | `workdir/gmail-output.md` | Write results to file (clean markdown for AI agents) |
+| `--debug-log` | `workdir/gmail-debug.log` | Write debug/progress messages to file |
 
 ## Metadata Captured
 

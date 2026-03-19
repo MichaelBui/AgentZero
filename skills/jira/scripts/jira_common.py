@@ -31,16 +31,23 @@ DEFAULT_FIELDS = (
     "components,fixVersions"
 )
 
-DB_PATH = Path(__file__).resolve().parent.parent / "data" / "jira_cache.db"
+_WORKDIR = Path(__file__).resolve().parents[3] / "workdir"
+_DEFAULT_DB_PATH = Path(__file__).resolve().parent.parent / "data" / "jira_cache.db"
+DB_PATH = Path(os.environ.get("JIRA_DB_PATH", str(_DEFAULT_DB_PATH)))
 
 
 _debug_file = sys.stderr
 _output_file = sys.stdout
 
 
+def _ts() -> str:
+    from datetime import datetime, timezone
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
 def eprint(*a, **kw):
     try:
-        print(*a, file=_debug_file, flush=True, **kw)
+        print(f"[{_ts()}]", *a, file=_debug_file, flush=True, **kw)
     except ValueError:
         pass
 
@@ -489,13 +496,12 @@ def _print_output(db: SkillDB, key: str, summary_row: dict) -> None:
 
 def add_common_args(parser: _argparse.ArgumentParser) -> None:
     """Add --cached-only, --output, --debug-log to any Jira entry script."""
-    _data_dir = Path(__file__).resolve().parent.parent / "data"
     parser.add_argument("--cached-only", action="store_true",
                         help="Output cached summaries from DB without API fetching (fast, for reports)")
-    parser.add_argument("--output", default=str(_data_dir / "jira-output.md"),
-                        help="Write results to this file (default: data/jira-output.md)")
-    parser.add_argument("--debug-log", default=str(_data_dir / "jira-debug.log"),
-                        help="Write debug messages to this file (default: data/jira-debug.log)")
+    parser.add_argument("--output", default=str(_WORKDIR / "jira-output.md"),
+                        help="Write results to this file (default: workdir/jira-output.md)")
+    parser.add_argument("--debug-log", default=str(_WORKDIR / "jira-debug.log"),
+                        help="Write debug messages to this file (default: workdir/jira-debug.log)")
 
 
 def setup_output_redirection(args) -> None:
@@ -505,7 +511,10 @@ def setup_output_redirection(args) -> None:
         p.parent.mkdir(parents=True, exist_ok=True)
     _output_file = open(args.output, "w", encoding="utf-8", buffering=1)
     _debug_file = open(args.debug_log, "w", encoding="utf-8", buffering=1)
-    eprint(f"Jira started (output={args.output}, debug={args.debug_log})")
+    eprint(f"{'='*60}")
+    eprint(f"STATUS: STARTED - Jira Reader")
+    eprint(f"output={args.output}, debug={args.debug_log}")
+    eprint(f"{'='*60}")
 
 
 def cleanup_files() -> None:
@@ -521,4 +530,6 @@ def run_cached_only(db: SkillDB) -> None:
     eprint(f"Cached-only mode: {len(summaries)} summaries from DB")
     for s in summaries:
         _print_output(db, s["resource_id"], s)
-    eprint(f"Done: {len(summaries)} cached summaries output")
+    eprint(f"{'='*60}")
+    eprint(f"STATUS: COMPLETED - Jira Reader (cached-only): {len(summaries)} summaries output")
+    eprint(f"{'='*60}")

@@ -186,13 +186,13 @@ gchat/
 ├── SKILL.md                  # Agent-facing documentation
 ├── _architecture.md          # This file (human-facing design)
 ├── data/
-│   ├── .gitignore            # Excludes *.db from git
-│   └── gchat_cache.db        # SQLite (auto-created at runtime)
+│   └── gchat_cache.db        # SQLite (persistent, auto-created at runtime)
 └── scripts/
     ├── gchat_reader.py       # Main script: CDP + feed + caching + output
     ├── gchat_db.py           # Self-contained SQLite DB management
     ├── gchat_cleaner.py      # Self-contained chat message cleanup
     └── gchat_summarizer.py   # Self-contained LLM summarization via LiteLLM
+# Transactional output → /a0/usr/workdir/gchat-output.md, gchat-debug.log
 ```
 
 ## Module Dependencies
@@ -224,8 +224,8 @@ flowchart TD
 | `--cached-only` | `false` | Output cached summaries from DB without browser (fast, for reports) |
 | `--force` | `false` | Bypass change detection, re-fetch and re-summarize all |
 | `--debug-dom` | `false` | Dump Home feed DOM to stderr and exit |
-| `--output` | `data/gchat-output.md` | Write results to file (clean markdown for AI agents) |
-| `--debug-log` | `data/gchat-debug.log` | Write debug/progress messages to file |
+| `--output` | `workdir/gchat-output.md` | Write results to file (clean markdown for AI agents) |
+| `--debug-log` | `workdir/gchat-debug.log` | Write debug/progress messages to file |
 
 ## Metadata Captured
 

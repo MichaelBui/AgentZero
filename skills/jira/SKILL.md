@@ -70,8 +70,8 @@ python /a0/usr/skills/jira/scripts/jira_reader.py --cached-only
 | `--offset` | No | 0 | Pagination offset |
 | `--cached-only` | No | false | Output cached summaries from DB without API calls (fast, for reports) |
 | `--force` | No | false | Skip timestamp checks, force full fetch + re-summarize |
-| `--output` | No | `data/jira-output.md` | Write results to file (clean markdown for AI agents) |
-| `--debug-log` | No | `data/jira-debug.log` | Write debug/progress messages to file |
+| `--output` | No | `workdir/jira-output.md` | Write results to file (clean markdown for AI agents) |
+| `--debug-log` | No | `workdir/jira-debug.log` | Write debug/progress messages to file |
 | `--no-cache` | No (view) | false | Bypass JQL cache for view resolution |
 
 ## Output
@@ -89,7 +89,8 @@ Source: jira | Key: DPD-645 | Status: IN RELASE QUEUE (Done) | Type: Story | Pri
 Progress and diagnostics go to stderr.
 
 ## Architecture
-- SQLite cache at `data/jira_cache.db` (per-ticket + per-comment caching)
+- SQLite cache at `data/jira_cache.db` (persistent across sessions)
+- Output and debug logs written to `/a0/usr/workdir/` (transactional, per-session)
 - Timestamp-based skip: compares API `updated` field vs cached - skips unchanged tickets entirely
 - Full content preserved in cache (no truncation); AI summarization handles size reduction
 - 500 word max per summary (configurable via `MAX_SUMMARY_WORDS` env var)
@@ -110,6 +111,9 @@ scripts/
   jira_filter.py      - Entry point: saved filter by ID
   jira_view.py        - Entry point: Polaris view by ID
 data/
-  jira_cache.db       - SQLite cache (auto-created)
-_architecture.md      - Detailed design documentation
+  jira_cache.db              - SQLite cache (persistent, auto-created)
+_architecture.md             - Detailed design documentation
+# Transactional output written to /a0/usr/workdir/:
+#   jira-output.md           - Results output (overwritten each run)
+#   jira-debug.log           - Debug/progress log (overwritten each run)
 ```

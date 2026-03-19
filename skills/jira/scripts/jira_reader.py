@@ -126,7 +126,9 @@ def main():
         finally:
             finish_summarize_pipeline(sum_q, worker)
 
-        eprint(f"\nPipeline complete. {len(seen_keys)} unique tickets processed.")
+        eprint(f"{'='*60}")
+        eprint(f"STATUS: COMPLETED - Jira Reader pipeline finished successfully ({len(seen_keys)} unique tickets)")
+        eprint(f"{'='*60}")
         print(
             f"\n{'='*60}\n"
             f"[jira_reader] ALL DONE - output file is ready for use.\n"
@@ -135,7 +137,9 @@ def main():
             flush=True,
         )
     except Exception as e:
-        eprint(f"ERROR: {e}")
+        eprint(f"{'='*60}")
+        eprint(f"STATUS: FAILED - Jira Reader encountered an error: {e}")
+        eprint(f"{'='*60}")
         print(f"\n[jira_reader] FAILED with error: {e}\n", flush=True)
         raise
     finally:

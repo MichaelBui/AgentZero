@@ -61,8 +61,8 @@ python /a0/usr/skills/gmail/scripts/gmail_reader.py --cached-only
 | `--priority-labels` | No | `["⚠️IMPORTANT", ...]` | JSON array of priority labels |
 | `--cached-only` | No | false | Output cached summaries from DB without browser (fast, for reports) |
 | `--force` | No | false | Bypass change detection, re-fetch and re-summarize all |
-| `--output` | No | `data/gmail-output.md` | Write results to file (clean markdown for AI agents) |
-| `--debug-log` | No | `data/gmail-debug.log` | Write debug/progress messages to file |
+| `--output` | No | `workdir/gmail-output.md` | Write results to file (clean markdown for AI agents) |
+| `--debug-log` | No | `workdir/gmail-debug.log` | Write debug/progress messages to file |
 
 ## Environment Variables
 | Variable | Required | Default | Purpose |
@@ -86,7 +86,8 @@ Progress and diagnostics go to stderr. Use `PYTHONUNBUFFERED=1 python3 -u` for r
 ## Architecture
 - **Two-phase extraction**: Phase 1 scans listing pages (URL-based pagination via `/pN`), Phase 2 fetches details by direct thread URL navigation
 - Self-contained: all modules (DB, cleaner, summarizer) embedded in `scripts/`
-- SQLite cache at `data/gmail_cache.db` (per-message caching)
+- SQLite cache at `data/gmail_cache.db` (persistent across sessions)
+- Output and debug logs written to `/a0/usr/workdir/` (transactional, per-session)
 - Change detection via `data-legacy-last-non-draft-message-id` comparison at listing level
 - Email bodies are immutable; only new messages in threads trigger re-caching
 - Early-stop optimization: halts scanning after N consecutive cached threads
@@ -99,6 +100,9 @@ scripts/gmail_reader.py      - Main script (CDP + caching + summarization)
 scripts/gmail_db.py          - SQLite database management
 scripts/gmail_cleaner.py     - Email body cleanup (deterministic)
 scripts/gmail_summarizer.py  - LLM summarization via LiteLLM
-data/gmail_cache.db          - SQLite cache (auto-created)
+data/gmail_cache.db          - SQLite cache (persistent, auto-created)
 _architecture.md             - Detailed design documentation
+# Transactional output written to /a0/usr/workdir/:
+#   gmail-output.md          - Results output (overwritten each run)
+#   gmail-debug.log          - Debug/progress log (overwritten each run)
 ```

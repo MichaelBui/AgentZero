@@ -1,0 +1,7 @@
+-rw-rw-r--+ 1 3000 950 156K Mar 18 22:14 /a0/usr/skills/gmail/data/gmail-output.md
+    *   **Google Meet Link:** `meet.google.com/qwa-wved-oif`
+    *   **Phone Access (US):** +1 337-435-0235 | **PIN:** 657891631.
+
+**Summary for Exec Summary:**
+Immediate attention is required to address a BCRS SAP posting defect causing order status reversions ("Completed" to "Packed") during re-deliveries. This poses potential financial compliance risks. The core team will convene on **Mar 17, 2026, at 11:00 AM SGT** to define a resolution path. Michael Bui is expected to attend the session via Google Meet or phone.
+(venv) root@f93a5675f2a0:/a0/usr/workdir#

@@ -89,7 +89,9 @@ def main():
             sum_q.put(key)
 
         finish_summarize_pipeline(sum_q, worker)
-        eprint("Pipeline complete.")
+        eprint(f"{'='*60}")
+        eprint(f"STATUS: COMPLETED - Jira Filter pipeline finished successfully")
+        eprint(f"{'='*60}")
     finally:
         db.close()
         cleanup_files()

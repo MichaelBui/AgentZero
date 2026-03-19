@@ -143,8 +143,7 @@ jira/
 ├── SKILL.md                  # Agent-facing documentation
 ├── _architecture.md          # This file (human-facing design)
 ├── data/
-│   ├── .gitignore            # Excludes *.db from git
-│   └── jira_cache.db         # SQLite (auto-created at runtime)
+│   └── jira_cache.db         # SQLite (persistent, auto-created at runtime)
 └── scripts/
     ├── jira_common.py        # Core: auth, ADF, format, cache, summarize, output
     ├── jira_db.py            # Self-contained SQLite DB (SkillDB class)
@@ -153,6 +152,7 @@ jira/
     ├── jira_query.py         # Entry: --jql
     ├── jira_filter.py        # Entry: --filter-id (resolves JQL via REST)
     └── jira_view.py          # Entry: --viewId (resolves JQL via GraphQL)
+# Transactional output → /a0/usr/workdir/jira-output.md, jira-debug.log
 ```
 
 ## Module Dependencies
