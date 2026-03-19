@@ -85,15 +85,36 @@ python /a0/usr/skills/gchat/scripts/gchat_reader.py --cached-only
 Streams text blocks per conversation to stdout:
 ```
 ## gchat/dm/abc123: Nikhil Grover
-Source: gchat | Group: dm/abc123 | Messages: 20 | Last Activity: 2026-03-15T12:30:00+00:00
+Source: gchat | Group: dm/abc123 | Messages: 20 | Last Activity: 2026-03-15T12:30:00+08:00 | Last Updated: 2026-03-19T13:05:25+08:00
 [AI-generated summary - main conversation, no topic_id]
 
 ## gchat/space/AAAALHoAh6U/e2Tne49XGSA: Feature flag management
-Source: gchat | Group: space/AAAALHoAh6U/e2Tne49XGSA | Messages: 5 | Last Activity: 2026-03-15T10:00:00+00:00
+Source: gchat | Group: space/AAAALHoAh6U/e2Tne49XGSA | Messages: 5 | Last Activity: 2026-03-15T10:00:00+08:00 | Last Updated: 2026-03-19T13:05:25+08:00
 [AI-generated summary - thread-specific, resource_id = group_id/topic_id]
 ```
 
+`Last Activity` is the feed's last message timestamp. `Last Updated` is when the AI summary was last generated/refreshed.
+
 Progress and diagnostics go to stderr. Use `PYTHONUNBUFFERED=1 python3 -u` for real-time streaming to file.
+
+## Monitoring
+
+The script writes status markers to the debug log (`workdir/gchat-debug.log`). Use these to determine if the job is running correctly:
+
+- **Job started:** Look for `STATUS: STARTED` near the **top** of the log with a **recent timestamp** (within the last 5 minutes). If you do NOT see this, the job has not executed properly — wait up to 5 minutes or treat it as failed.
+- **Job completed:** Look for `STATUS: COMPLETED` or `STATUS: COMPLETED WITH ERRORS` near the **bottom** of the log. The script is only considered done when one of these markers appears. A run with only `STATUS: STARTED` but no completion marker is still in progress or failed.
+- **Job completed with errors:** `STATUS: COMPLETED WITH ERRORS` means the run finished but some conversations failed AI summarization (transient API errors with retries exhausted). Most output is available; failed conversations are listed in the log.
+- **Job failed:** Look for `STATUS: FAILED` in the log, which includes the error message.
+
+Progress messages use explicit phase labels — **fetching and summarization are two distinct phases**:
+- `[Fetching X/Y]` — currently fetching this conversation from GChat via browser; **summarization is still pending**
+- `[Fetched X/Y]` — fetched and cached, queued for AI summarization
+- `[Fetch skipped X/Y]` — skipped (unchanged timestamp or focus filter); still queued for summarization
+- `[Fetch failed X/Y]` — error during fetch (DOM not found, panel lost, 0 messages); skipped
+- `[Summarizing X/Y]` — AI is actively generating a summary for this conversation
+- `[Summarized X/Y]` — summary complete and written to output
+
+**Important:** Seeing `[Fetched 77/77]` does NOT mean the job is done. Wait for `STATUS: COMPLETED` at the bottom.
 
 ## Architecture
 - Self-contained: all modules (DB, cleaner, summarizer) embedded in `scripts/`

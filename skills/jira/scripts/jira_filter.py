@@ -65,32 +65,37 @@ def main():
         headers = get_auth_header(email, api_key)
 
         filter_name, jql = fetch_filter(args.filter_id, headers)
-        issues, total = fetch_issues(jql, args.limit, args.offset, headers)
-        eprint(f"Processing {len(issues)} issues... (force={args.force})")
+        issues, api_total = fetch_issues(jql, args.limit, args.offset, headers)
+        total = len(issues)
+        eprint(f"Processing {total}/{api_total} issues (force={args.force})")
 
-        sum_q, worker = start_summarize_pipeline(db, force=args.force)
+        pipeline = start_summarize_pipeline(db, force=args.force)
+        pipeline.set_total(total)
         unchanged_keys = []
 
-        for raw in issues:
+        for idx, raw in enumerate(issues, 1):
             key = raw.get("key", "")
             api_updated = raw.get("fields", {}).get("updated", "")
 
+            print(f"[Fetching {idx}/{total}] {key}", flush=True)
             if not args.force and not issue_needs_fetch(db, key, api_updated):
-                eprint(f"  {key}: unchanged (timestamp match), skipping")
+                eprint(f"  [{idx}/{total}] {key}: unchanged (timestamp match), skipping")
                 unchanged_keys.append(key)
+                print(f"[Fetched {idx}/{total}] {key}: unchanged (cached)", flush=True)
                 continue
 
             issue = format_issue(raw)
             cache_issue(db, issue)
-            eprint(f"  {key}: fetched and cached")
-            sum_q.put(key)
+            eprint(f"  [{idx}/{total}] {key}: fetched and cached")
+            pipeline.put(key)
+            print(f"[Fetched {idx}/{total}] {key}: cached, queued for summarization", flush=True)
 
         for key in unchanged_keys:
-            sum_q.put(key)
+            pipeline.put(key)
 
-        finish_summarize_pipeline(sum_q, worker)
+        finish_summarize_pipeline(pipeline)
         eprint(f"{'='*60}")
-        eprint(f"STATUS: COMPLETED - Jira Filter pipeline finished successfully")
+        eprint(f"STATUS: COMPLETED - Jira Filter pipeline finished successfully ({total} tickets)")
         eprint(f"{'='*60}")
     finally:
         db.close()

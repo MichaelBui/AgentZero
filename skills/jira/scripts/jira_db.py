@@ -8,15 +8,19 @@ Change detection uses updated_at timestamps only.
 """
 
 import json
+import os
 import sqlite3
 import threading
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 from typing import Optional
+from zoneinfo import ZoneInfo
+
+_TZ = ZoneInfo(os.environ.get("TZ", "Asia/Singapore"))
 
 
 def _now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
+    return datetime.now(_TZ).isoformat()
 
 
 _DB_OPEN_RETRIES = 3

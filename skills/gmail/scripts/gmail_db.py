@@ -9,14 +9,18 @@ No ticket_relationships table (Gmail threads are flat).
 """
 
 import json
+import os
 import sqlite3
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 from typing import Optional
+from zoneinfo import ZoneInfo
+
+_TZ = ZoneInfo(os.environ.get("TZ", "Asia/Singapore"))
 
 
 def _now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
+    return datetime.now(_TZ).isoformat()
 
 
 _DB_OPEN_RETRIES = 3
@@ -47,7 +51,13 @@ def get_gmail_db(db_path: str | Path, *, force: bool = False) -> "SkillDB":
         try:
             conn = sqlite3.connect(str(db_path), timeout=30)
             conn.row_factory = sqlite3.Row
-            conn.execute("PRAGMA journal_mode=WAL")
+            try:
+                conn.execute("PRAGMA journal_mode=WAL")
+            except sqlite3.OperationalError:
+                try:
+                    conn.execute("PRAGMA journal_mode=DELETE")
+                except sqlite3.OperationalError:
+                    pass
             conn.execute("PRAGMA synchronous=NORMAL")
             conn.execute("PRAGMA busy_timeout=10000")
             conn.execute("PRAGMA foreign_keys=ON")

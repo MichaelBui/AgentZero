@@ -20,7 +20,10 @@ import queue as _queue
 import sys
 import threading
 import time
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+
+_TZ = ZoneInfo(os.environ.get("TZ", "Asia/Singapore"))
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright, TimeoutError as PwTimeout
@@ -78,7 +81,7 @@ _output_file = sys.stdout
 
 
 def _ts() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.now(_TZ).strftime("%Y-%m-%dT%H:%M:%S%z")
 
 
 def eprint(*a, **kw):
@@ -548,7 +551,7 @@ def cache_conversation(db: SkillDB, resource_id: str, name: str,
         body = clean_chat_message(msg.get("body", ""))
         author = msg.get("sender", "Unknown")
         epoch_ms = msg.get("epoch_ms", 0)
-        ts_iso = datetime.fromtimestamp(epoch_ms / 1000, tz=timezone.utc).isoformat() if epoch_ms else ""
+        ts_iso = datetime.fromtimestamp(epoch_ms / 1000, tz=_TZ).isoformat() if epoch_ms else ""
 
         meta = {"timestamp_display": msg.get("timestamp", "")}
 
@@ -567,27 +570,34 @@ def summarize_and_output(db: SkillDB, info: dict) -> None:
     """Summarize a single conversation and stream output immediately."""
     resource_id = info["resource_id"]
     name = info["name"]
+    current = info.get("_sum_current", "?")
+    total = info.get("_sum_total", "?")
+    sum_progress = f"[Summarizing {current}/{total}]"
+    sum_done = f"[Summarized {current}/{total}]"
 
     if not db.needs_resummarize(resource_id):
         existing = db.get_resource_summary(resource_id)
         if existing:
-            eprint(f"  [{name[:40]}]: using cached summary")
-            _print_output(resource_id, name, existing["summary"], info)
+            eprint(f"{sum_done} [{name[:40]}]: using cached summary")
+            _print_output(resource_id, name, existing["summary"], info,
+                          summarized_at=existing.get("summarized_at", ""))
             return
         return
 
     existing_summary = db.get_resource_summary(resource_id)
     existing_text = existing_summary["summary"] if existing_summary else None
+    prev_summarized_at = existing_summary.get("summarized_at", "") if existing_summary else ""
 
     if existing_text and existing_summary:
-        items = db.get_items_since(resource_id, existing_summary.get("summarized_at", ""))
+        items = db.get_items_since(resource_id, prev_summarized_at)
         if not items:
             items = db.get_atomic_for_resource(resource_id)
     else:
         items = db.get_atomic_for_resource(resource_id)
 
     if not items and existing_text:
-        _print_output(resource_id, name, existing_text, info)
+        _print_output(resource_id, name, existing_text, info,
+                      summarized_at=prev_summarized_at)
         return
     if not items:
         return
@@ -595,7 +605,7 @@ def summarize_and_output(db: SkillDB, info: dict) -> None:
     all_items = db.get_atomic_for_resource(resource_id)
     meta = {"message_count": len(all_items), "url": info.get("url", "")}
 
-    eprint(f"  [{name[:40]}]: summarizing ({len(items)} messages)...")
+    eprint(f"{sum_progress} [{name[:40]}]: AI summarizing ({len(items)} messages)...")
     summary_text = summarize_resource(
         title=name,
         source_type="Google Chat conversation",
@@ -606,17 +616,23 @@ def summarize_and_output(db: SkillDB, info: dict) -> None:
 
     if summary_text:
         db.upsert_summary(resource_id, "gchat", name, summary_text, meta)
-        _print_output(resource_id, name, summary_text, info)
+        saved = db.get_resource_summary(resource_id)
+        new_summarized_at = saved.get("summarized_at", "") if saved else ""
+        _print_output(resource_id, name, summary_text, info,
+                      summarized_at=new_summarized_at)
+        eprint(f"{sum_done} [{name[:40]}]: done")
     elif existing_text:
-        _print_output(resource_id, name, existing_text, info)
+        _print_output(resource_id, name, existing_text, info,
+                      summarized_at=prev_summarized_at)
 
 
-def _print_output(resource_id: str, name: str, summary: str, info: dict) -> None:
+def _print_output(resource_id: str, name: str, summary: str, info: dict,
+                  summarized_at: str = "") -> None:
     """Stream a single conversation block to stdout."""
     display_ts = info.get("display_ts", 0)
     ts_str = ""
     if display_ts:
-        ts_str = datetime.fromtimestamp(display_ts / 1000, tz=timezone.utc).isoformat()
+        ts_str = datetime.fromtimestamp(display_ts / 1000, tz=_TZ).isoformat()
 
     items_count = info.get("message_count", "")
     meta_parts = [
@@ -627,24 +643,32 @@ def _print_output(resource_id: str, name: str, summary: str, info: dict) -> None
         meta_parts.append(f"Messages: {items_count}")
     if ts_str:
         meta_parts.append(f"Last Activity: {ts_str}")
+    if summarized_at:
+        meta_parts.append(f"Last Updated: {summarized_at}")
 
     print(f"\n\n## gchat/{resource_id}: {name}", file=_output_file, flush=True)
     print(" | ".join(meta_parts), file=_output_file, flush=True)
     print(summary, file=_output_file, flush=True)
 
 
-def _summarize_worker(q: "_queue.Queue", db_path: Path) -> None:
+def _summarize_worker(q: "_queue.Queue", db_path: Path, error_event: threading.Event, results: list) -> None:
     """Background worker: process summarization queue one item at a time."""
     worker_db = get_gchat_db(db_path)
+    current = 0
     try:
         while True:
             item = q.get()
             if item is None:
+                q.task_done()
                 break
+            current += 1
+            item["_sum_current"] = current
             try:
                 summarize_and_output(worker_db, item)
             except Exception as exc:
                 eprint(f"ERROR summarizing {item.get('resource_id', '?')}: {exc}")
+                results.append(exc)
+                error_event.set()
             finally:
                 q.task_done()
     finally:
@@ -698,7 +722,7 @@ def main():
     print("[gchat_reader] STARTED - processing Google Chat conversations. Do NOT interrupt or move on - this takes 5-15 minutes.", flush=True)
 
     cutoff_ms = int(
-        (datetime.now(timezone.utc) - timedelta(days=args.days)).timestamp() * 1000
+        (datetime.now(_TZ) - timedelta(days=args.days)).timestamp() * 1000
     )
 
     if args.force:
@@ -720,6 +744,7 @@ def main():
                 _print_output(
                     s["resource_id"], s.get("title", "(unknown)"),
                     s.get("summary", "(no summary)"), info,
+                    summarized_at=s.get("summarized_at", ""),
                 )
             eprint(f"{'='*60}")
             eprint(f"STATUS: COMPLETED - GChat Reader (cached-only): {len(summaries)} summaries output")
@@ -771,8 +796,10 @@ def main():
         fetched_ids: set = set()
 
         sum_q: _queue.Queue = _queue.Queue()
+        _sum_error_event = threading.Event()
+        _sum_errors: list = []
         worker = threading.Thread(
-            target=_summarize_worker, args=(sum_q, DB_PATH), daemon=True,
+            target=_summarize_worker, args=(sum_q, DB_PATH, _sum_error_event, _sum_errors), daemon=True,
         )
         worker.start()
 
@@ -791,19 +818,19 @@ def main():
             attempted += 1
 
             is_focused = not args.focus_title or args.focus_title.lower() in name.lower()
-            eprint(f"[{attempted}/{limit}] {name[:55]}...")
-            print(f"[Start fetching {attempted}/{limit}] {name}", flush=True)
+            eprint(f"[Fetching {attempted}/{limit}] {name[:55]}... (summarization pending)")
+            print(f"[Fetching {attempted}/{limit}] {name} (summarization pending)", flush=True)
 
             if not is_focused:
-                eprint("  SKIP: not matching --focus-title")
+                eprint(f"[Fetch skipped {attempted}/{limit}] {name[:55]} - not matching focus filter")
                 skipped_focus += 1
-                print(f"[Completed fetching {attempted}/{limit}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
+                print(f"[Fetch skipped {attempted}/{limit}] {name} - not matching focus filter", flush=True)
                 continue
 
             if early_stop_triggered or (
                 not args.force and not conversation_needs_fetch(db, rid, dts)
             ):
-                eprint(f"  -> unchanged (timestamp match)")
+                eprint(f"[Fetch skipped {attempted}/{limit}] {name[:55]} - unchanged (summarization pending)")
                 convo_infos.append({
                     "resource_id": rid, "name": name, "display_ts": dts,
                     "url": f"https://chat.google.com/{gid}", "fetched": False,
@@ -815,7 +842,7 @@ def main():
                         eprint(f"\n  Early stop: {consecutive_cached} consecutive cached conversations. "
                                f"Skipping fetches, continuing scan...")
                         early_stop_triggered = True
-                print(f"[Completed fetching {attempted}/{limit}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
+                print(f"[Fetch skipped {attempted}/{limit}] {name} - unchanged (summarization pending)", flush=True)
                 continue
 
             consecutive_cached = 0
@@ -827,7 +854,7 @@ def main():
                 if not click_feed_item(page, gid, dts):
                     eprint("  SKIP: item not found in DOM")
                     skipped_error += 1
-                    print(f"[Completed fetching {attempted}/{limit}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
+                    print(f"[Fetch failed {attempted}/{limit}] {name} - item not found in DOM", flush=True)
                     continue
 
             time.sleep(1)
@@ -835,7 +862,7 @@ def main():
                 eprint("  WARN: mid panel gone - wrong click, returning to Home")
                 go_home(page)
                 skipped_error += 1
-                print(f"[Completed fetching {attempted}/{limit}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
+                print(f"[Fetch failed {attempted}/{limit}] {name} - panel lost, returned to Home", flush=True)
                 continue
 
             if tid:
@@ -846,7 +873,7 @@ def main():
                 eprint("  SKIP: 0 messages loaded")
                 go_home(page)
                 skipped_error += 1
-                print(f"[Completed fetching {attempted}/{limit}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
+                print(f"[Fetch failed {attempted}/{limit}] {name} - 0 messages loaded", flush=True)
                 continue
 
             eprint(f"  {msg_count} message container(s)"
@@ -875,7 +902,6 @@ def main():
                 }
                 convo_infos.append(info_item)
                 fetched_ids.add(rid)
-                sum_q.put(info_item)
             else:
                 eprint("  SKIP: no messages in date range")
                 skipped_error += 1
@@ -883,7 +909,8 @@ def main():
             if "/app/home" not in page.url:
                 eprint("  Returning to Home...")
                 go_home(page)
-            print(f"[Completed fetching {attempted}/{limit}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
+            eprint(f"[Fetched {attempted}/{limit}] {name[:55]} - queued for summarization")
+            print(f"[Fetched {attempted}/{limit}] {name} - queued for summarization (pipeline running)", flush=True)
 
         stop_reason = ""
         if early_stop_triggered:
@@ -895,16 +922,31 @@ def main():
                f"attempted (unchanged: {skipped_unchanged}, focus-skip: {skipped_focus}, "
                f"errors: {skipped_error}{stop_reason})")
 
-        eprint(f"\nQueuing {len(convo_infos) - len(fetched_ids)} unchanged conversations for summarization...")
+        total_to_summarize = len(convo_infos)
+        eprint(f"\nQueuing {total_to_summarize} conversations for summarization ({len(fetched_ids)} fetched, {total_to_summarize - len(fetched_ids)} unchanged)...")
         for info in convo_infos:
-            if info["resource_id"] not in fetched_ids:
-                sum_q.put(info)
+            info["_sum_total"] = total_to_summarize
+            sum_q.put(info)
 
         sum_q.put(None)
         worker.join()
-        eprint(f"{'='*60}")
-        eprint(f"STATUS: COMPLETED - GChat Reader pipeline finished successfully")
-        eprint(f"{'='*60}")
+        if _sum_errors:
+            eprint(f"{'='*60}")
+            eprint(f"STATUS: COMPLETED WITH ERRORS - GChat Reader finished ({len(convo_infos)} conversations, {len(_sum_errors)} summarization error(s))")
+            for err in _sum_errors:
+                eprint(f"  ERROR: {err}")
+            eprint(f"{'='*60}")
+            print(
+                f"\n{'='*60}\n"
+                f"[gchat_reader] DONE WITH ERRORS - {len(_sum_errors)} conversation(s) failed summarization.\n"
+                f"Check gchat-debug.log for details. Other {len(convo_infos) - len(_sum_errors)} conversations completed.\n"
+                f"{'='*60}\n",
+                flush=True,
+            )
+        else:
+            eprint(f"{'='*60}")
+            eprint(f"STATUS: COMPLETED - GChat Reader pipeline finished successfully ({len(convo_infos)} conversations)")
+            eprint(f"{'='*60}")
         print(
             f"\n{'='*60}\n"
             f"[gchat_reader] ALL DONE - output file is ready for use.\n"

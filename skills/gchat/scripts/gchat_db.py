@@ -9,14 +9,18 @@ No edit detection in v1 - messages treated as insert-only.
 """
 
 import json
+import os
 import sqlite3
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 from typing import Optional
+from zoneinfo import ZoneInfo
+
+_TZ = ZoneInfo(os.environ.get("TZ", "Asia/Singapore"))
 
 
 def _now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
+    return datetime.now(_TZ).isoformat()
 
 
 _DB_OPEN_RETRIES = 3
@@ -47,7 +51,13 @@ def get_gchat_db(db_path: str | Path, *, force: bool = False) -> "SkillDB":
         try:
             conn = sqlite3.connect(str(db_path), timeout=30)
             conn.row_factory = sqlite3.Row
-            conn.execute("PRAGMA journal_mode=WAL")
+            try:
+                conn.execute("PRAGMA journal_mode=WAL")
+            except sqlite3.OperationalError:
+                try:
+                    conn.execute("PRAGMA journal_mode=DELETE")
+                except sqlite3.OperationalError:
+                    pass
             conn.execute("PRAGMA synchronous=NORMAL")
             conn.execute("PRAGMA busy_timeout=10000")
             conn.execute("PRAGMA foreign_keys=ON")
@@ -185,7 +195,7 @@ class SkillDB:
         data-display-timestamp (epoch_ms) against cached latest updated_at."""
         if display_ts_ms <= 0:
             return True
-        ts_iso = datetime.fromtimestamp(display_ts_ms / 1000, tz=timezone.utc).isoformat()
+        ts_iso = datetime.fromtimestamp(display_ts_ms / 1000, tz=_TZ).isoformat()
         latest = self._conn.execute(
             "SELECT MAX(updated_at) as max_ts FROM atomic_content WHERE resource_id=?",
             (group_id,),

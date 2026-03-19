@@ -26,6 +26,20 @@ Do NOT use for: creating/updating tickets, fetching non-NTUC Jira instances.
 JIRA_EMAIL    - michael.bui@fairpricegroup.sg
 JIRA_API_KEY  - loaded via secrets (never log full value)
 API_KEY_OTHER - LiteLLM proxy authentication (set via Terraform, or LLAMA_TOKEN)
+JIRA_DB_PATH  - (optional) Override SQLite DB path. Use when running from host Mac
+                (NFS mount: /Volumes/Apps/...) since WAL mode fails on NFS.
+                Set to a local path e.g. /tmp/jira_cache.db, copy the DB there
+                first, then copy back after the run.
+```
+
+## Running from Host Mac (NFS workaround)
+SQLite WAL mode is incompatible with NFS. When running outside Docker (host Mac),
+copy the DB to /tmp first, set JIRA_DB_PATH, run, then sync back:
+```bash
+python3 -c "import shutil; shutil.copyfile('/Volumes/Apps/AgentZero/usr/skills/jira/data/jira_cache.db', '/tmp/jira_cache.db')"
+export JIRA_DB_PATH=/tmp/jira_cache.db
+python /Volumes/Apps/AgentZero/usr/skills/jira/scripts/jira_query.py
+python3 -c "import shutil; shutil.copyfile('/tmp/jira_cache.db', '/Volumes/Apps/AgentZero/usr/skills/jira/data/jira_cache.db')"
 ```
 
 ## Usage
@@ -81,12 +95,32 @@ Text blocks to stdout, one per ticket:
 ```
 ---
 jira/DPD-645: Improve event sync to prevent overage
-Source: jira | Key: DPD-645 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-12 | Resolution: Done | blocks: DPD-273 | parent: DPD-644
+Source: jira | Key: DPD-645 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-12 | Resolution: Done | blocks: DPD-273 | parent: DPD-644 | Last Updated: 2026-03-19T13:05:25+08:00
 [AI-generated summary: current status, decisions, pending actions, key dates, blockers]
 ---
 ```
 
+`Last Updated` is the timestamp when the AI summary was last generated/refreshed.
+
 Progress and diagnostics go to stderr.
+
+## Monitoring
+
+The script writes status markers to the debug log (`workdir/jira-debug.log`). Use these to determine if the job is running correctly:
+
+- **Job started:** Look for `STATUS: STARTED` near the **top** of the log with a **recent timestamp** (within the last 5 minutes). If you do NOT see this, the job has not executed properly — wait up to 5 minutes or treat it as failed.
+- **Job completed:** Look for `STATUS: COMPLETED` or `STATUS: COMPLETED WITH ERRORS` near the **bottom** of the log. The script is only considered done when one of these markers appears. A run with only `STATUS: STARTED` but no completion marker is still in progress or failed.
+- **Job completed with errors:** `STATUS: COMPLETED WITH ERRORS` means the run finished but some tickets failed AI summarization (e.g. transient API errors). Those tickets will appear in the output with their cached or empty summary. The error list is shown in the log.
+- **Job failed:** Look for `STATUS: FAILED` in the log, which includes the error message.
+
+Progress messages use explicit phase labels — **fetching and summarization are two distinct phases**:
+- `[Fetching X/Y]` — currently fetching ticket data from the Jira API; **summarization is still pending**
+- `[Fetched X/Y]: unchanged - summarization pending` — cached, no new data; still pending summarization
+- `[Fetched X/Y]: queued for summarization` — newly fetched and cached; queued for AI summarization
+- `[Summarizing X/Y]` — AI is actively generating a summary for this ticket
+- `[Summarized X/Y]` — summary complete and written to output
+
+**Important:** Seeing `[Fetched 76/76]` does NOT mean the job is done. Wait for `STATUS: COMPLETED` at the bottom.
 
 ## Architecture
 - SQLite cache at `data/jira_cache.db` (persistent across sessions)

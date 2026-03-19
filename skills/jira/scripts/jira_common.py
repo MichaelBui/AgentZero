@@ -12,8 +12,10 @@ import queue as _queue
 import sys
 import threading
 import time
+from datetime import datetime
 from pathlib import Path
 from typing import Optional
+from zoneinfo import ZoneInfo
 
 import requests
 
@@ -35,14 +37,14 @@ _WORKDIR = Path(__file__).resolve().parents[3] / "workdir"
 _DEFAULT_DB_PATH = Path(__file__).resolve().parent.parent / "data" / "jira_cache.db"
 DB_PATH = Path(os.environ.get("JIRA_DB_PATH", str(_DEFAULT_DB_PATH)))
 
+_TZ = ZoneInfo(os.environ.get("TZ", "Asia/Singapore"))
 
 _debug_file = sys.stderr
 _output_file = sys.stdout
 
 
 def _ts() -> str:
-    from datetime import datetime, timezone
-    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.now(_TZ).strftime("%Y-%m-%dT%H:%M:%S%z")
 
 
 def eprint(*a, **kw):
@@ -351,13 +353,17 @@ def cache_issue(db: SkillDB, issue: dict) -> bool:
     return changed
 
 
-def _summarize_one(db: SkillDB, key: str, force: bool = False) -> None:
+def _summarize_one(
+    db: SkillDB, key: str, force: bool = False,
+    current: int = 0, total: int = 0,
+) -> None:
     """Summarize a single ticket and output immediately."""
+    progress = f"[Summarizing {current}/{total}] " if total else "[Summarizing] "
     if not force and not db.needs_resummarize(key):
         existing = db.get_resource_summary(key)
         if existing:
             _print_output(db, key, existing)
-            eprint(f"  {key}: using cached summary")
+            eprint(f"[Summarized {current}/{total}] {key}: using cached summary")
         return
 
     existing_summary = db.get_resource_summary(key)
@@ -389,7 +395,7 @@ def _summarize_one(db: SkillDB, key: str, force: bool = False) -> None:
                 title = line[7:]
                 break
 
-    eprint(f"  {key}: summarizing ({len(items)} items, existing_summary={'yes' if existing_text else 'no'})...")
+    eprint(f"{progress}{key}: AI summarizing ({len(items)} items, existing_summary={'yes' if existing_text else 'no'})...")
     summary_text = summarize_resource(
         title=f"{key}: {title}" if title else key,
         source_type="Jira ticket",
@@ -398,52 +404,85 @@ def _summarize_one(db: SkillDB, key: str, force: bool = False) -> None:
         existing_summary=existing_text,
     )
 
-    if summary_text:
-        db.upsert_summary(key, "jira", title or key, summary_text, meta)
-        saved = db.get_resource_summary(key)
-        if saved:
-            _print_output(db, key, saved)
-        else:
-            eprint(f"  {key}: summary generated but DB write may have failed")
-    elif existing_summary:
-        _print_output(db, key, existing_summary)
+    if not summary_text:
+        raise RuntimeError(f"Summarization returned empty result for {key} - LLM call may have failed")
+
+    db.upsert_summary(key, "jira", title or key, summary_text, meta)
+    saved = db.get_resource_summary(key)
+    if not saved:
+        raise RuntimeError(f"{key}: summary generated but DB write failed")
+    _print_output(db, key, saved)
+    eprint(f"[Summarized {current}/{total}] {key}: done")
 
 
 def summarize_issues(db: SkillDB, ticket_keys: list[str], force: bool = False) -> None:
     """Summarize tickets sequentially (legacy, non-pipelined)."""
-    for key in ticket_keys:
-        _summarize_one(db, key, force)
+    total = len(ticket_keys)
+    for idx, key in enumerate(ticket_keys, 1):
+        _summarize_one(db, key, force, current=idx, total=total)
 
 
-def _jira_summarize_worker(q: "_queue.Queue", db: SkillDB, force: bool = False) -> None:
+_SummarizeItem = tuple[str, int, int]  # (key, current, total)
+
+
+def _jira_summarize_worker(
+    q: "_queue.Queue[_SummarizeItem | None]", db: SkillDB, force: bool = False,
+    errors: "list | None" = None,
+) -> None:
     """Background worker: process summarization queue one item at a time.
 
     Shares the same DB connection as the main thread (thread-safe via SkillDB._lock).
+    On error, appends to errors list and continues (resilient - COMPLETED WITH ERRORS).
     """
     while True:
         item = q.get()
         if item is None:
+            q.task_done()
             break
+        key, current, total = item
         try:
-            _summarize_one(db, item, force)
+            _summarize_one(db, key, force, current=current, total=total)
         except Exception as exc:
-            eprint(f"ERROR summarizing {item}: {exc}")
+            eprint(f"ERROR summarizing {key}: {exc}")
+            if errors is not None:
+                errors.append(f"{key}: {exc}")
         finally:
             q.task_done()
 
 
-def start_summarize_pipeline(db: SkillDB, force: bool = False) -> tuple["_queue.Queue", threading.Thread]:
+class _SummarizePipeline:
+    """Encapsulates summarization worker state: queue, thread, errors list."""
+    def __init__(self, q: "_queue.Queue", t: threading.Thread, errors: list):
+        self.q = q
+        self.t = t
+        self.errors = errors
+        self._counter = 0
+        self._total = 0
+
+    def set_total(self, total: int) -> None:
+        self._total = total
+
+    def put(self, key: str) -> None:
+        self._counter += 1
+        self.q.put((key, self._counter, self._total))
+
+
+def start_summarize_pipeline(db: SkillDB, force: bool = False) -> "_SummarizePipeline":
     """Start a background summarization worker sharing the given DB connection."""
     q: _queue.Queue = _queue.Queue()
-    t = threading.Thread(target=_jira_summarize_worker, args=(q, db, force), daemon=True)
+    errors: list = []
+    t = threading.Thread(
+        target=_jira_summarize_worker, args=(q, db, force, errors), daemon=True
+    )
     t.start()
-    return q, t
+    return _SummarizePipeline(q, t, errors)
 
 
-def finish_summarize_pipeline(q: "_queue.Queue", t: threading.Thread) -> None:
-    """Signal worker to stop and wait for completion."""
-    q.put(None)
-    t.join()
+def finish_summarize_pipeline(pipeline: "_SummarizePipeline") -> list:
+    """Signal worker to stop and wait for completion. Returns list of errors (may be empty)."""
+    pipeline.q.put(None)
+    pipeline.t.join()
+    return pipeline.errors
 
 
 def _print_output(db: SkillDB, key: str, summary_row: dict) -> None:
@@ -484,6 +523,9 @@ def _print_output(db: SkillDB, key: str, summary_row: dict) -> None:
         for rtype, targets in grouped.items():
             meta_parts.append(f"{rtype}: {', '.join(targets)}")
 
+    summarized_at = summary_row.get("summarized_at", "")
+    if summarized_at:
+        meta_parts.append(f"Last Updated: {summarized_at}")
     metadata_block = " | ".join(meta_parts)
     summary = summary_row.get("summary", "")
 

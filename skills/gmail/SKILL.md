@@ -77,11 +77,31 @@ python /a0/usr/skills/gmail/scripts/gmail_reader.py --cached-only
 Streams text blocks per thread to stdout:
 ```
 ## gmail/19ceb94ec915103d: Re: Project update
-Source: gmail | Thread: 19ceb94ec915103d | Labels: Inbox, IMPORTANT | Priority: IMPORTANT | Senders: Jane Doe | Last Date: Mon, Mar 9, 2026, 3:30 PM
+Source: gmail | Thread: 19ceb94ec915103d | Labels: Inbox, IMPORTANT | Priority: IMPORTANT | Senders: Jane Doe | Last Date: Mon, Mar 9, 2026, 3:30 PM | Last Updated: 2026-03-19T13:05:25+08:00
 [AI-generated summary of thread]
 ```
 
+`Last Updated` is the timestamp when the AI summary was last generated/refreshed.
+
 Progress and diagnostics go to stderr. Use `PYTHONUNBUFFERED=1 python3 -u` for real-time streaming to file.
+
+## Monitoring
+
+The script writes status markers to the debug log (`workdir/gmail-debug.log`). Use these to determine if the job is running correctly:
+
+- **Job started:** Look for `STATUS: STARTED` near the **top** of the log with a **recent timestamp** (within the last 5 minutes). If you do NOT see this, the job has not executed properly — wait up to 5 minutes or treat it as failed.
+- **Job completed:** Look for `STATUS: COMPLETED` or `STATUS: COMPLETED WITH ERRORS` near the **bottom** of the log. The script is only considered done when one of these markers appears. A run with only `STATUS: STARTED` but no completion marker is still in progress or failed.
+- **Job completed with errors:** `STATUS: COMPLETED WITH ERRORS` means the run finished but some threads failed AI summarization (transient API errors with retries exhausted). Most output is available; failed threads are listed in the log.
+- **Job failed:** Look for `STATUS: FAILED` in the log, which includes the error message.
+
+Progress messages use explicit phase labels — **fetching and summarization are two distinct phases**:
+- `[Fetching X/Y]` — currently fetching this thread from Gmail via browser; **summarization is still pending**
+- `[Fetched X/Y]` — fetched and cached, queued for AI summarization
+- `[Fetch failed X/Y]` — thread could not be loaded (skipped, does not block other threads)
+- `[Summarizing X/Y]` — AI is actively generating a summary for this thread
+- `[Summarized X/Y]` — summary complete and written to output
+
+**Important:** Seeing `[Fetched 128/128]` does NOT mean the job is done. Wait for `STATUS: COMPLETED` at the bottom.
 
 ## Architecture
 - **Two-phase extraction**: Phase 1 scans listing pages (URL-based pagination via `/pN`), Phase 2 fetches details by direct thread URL navigation

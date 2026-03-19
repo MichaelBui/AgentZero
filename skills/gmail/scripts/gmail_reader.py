@@ -39,9 +39,14 @@ _debug_file = sys.stderr
 _output_file = sys.stdout
 
 
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
+_TZ = ZoneInfo(os.environ.get("TZ", "Asia/Singapore"))
+
+
 def _ts() -> str:
-    from datetime import datetime, timezone
-    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return datetime.now(_TZ).strftime("%Y-%m-%dT%H:%M:%S%z")
 
 
 def eprint(*a, **kw):
@@ -417,16 +422,18 @@ def cache_thread_messages(
 # ── Output & Summarization ─────────────────────────────────────────
 
 def _print_output(thread_id: str, subject: str, summary_text: str,
-                  labels: list, priority: str | None, senders: list, date: str):
+                  labels: list, priority: str | None, senders: list, date: str,
+                  summarized_at: str = ""):
     """Print a single thread's output in streaming format."""
     label_str = ", ".join(labels) if labels else "None"
     priority_str = priority or "None"
     sender_names = ", ".join(s.get("name", s.get("email", "")) for s in senders) if senders else "Unknown"
+    updated_str = f" | Last Updated: {summarized_at}" if summarized_at else ""
 
     print(f"\n\n## gmail/{thread_id}: {subject}", file=_output_file, flush=True)
     print(
         f"Source: gmail | Thread: {thread_id} | Labels: {label_str} | "
-        f"Priority: {priority_str} | Senders: {sender_names} | Last Date: {date}",
+        f"Priority: {priority_str} | Senders: {sender_names} | Last Date: {date}{updated_str}",
         file=_output_file, flush=True,
     )
     print(summary_text, file=_output_file, flush=True)
@@ -441,17 +448,22 @@ def summarize_and_output(db: SkillDB, thread_info: dict):
     senders = thread_info.get("senders", [])
     date = thread_info.get("date", "")
     last_msg_id = thread_info.get("last_msg_id", "")
+    current = thread_info.get("_sum_current", "?")
+    total = thread_info.get("_sum_total", "?")
+    sum_progress = f"[Summarizing {current}/{total}]"
+    sum_done = f"[Summarized {current}/{total}]"
 
     if not db.needs_resummarize(thread_id):
         existing = db.get_resource_summary(thread_id)
         if existing:
-            eprint(f"  [{subject[:40]}]: using cached summary")
-            _print_output(thread_id, subject, existing["summary"], labels, priority, senders, date)
+            eprint(f"{sum_done} [{subject[:40]}]: using cached summary")
+            _print_output(thread_id, subject, existing["summary"], labels, priority, senders, date,
+                          summarized_at=existing.get("summarized_at", ""))
             return
 
     items = db.get_atomic_for_resource(thread_id)
     if not items:
-        eprint(f"  [{subject[:40]}]: no cached messages, outputting metadata only")
+        eprint(f"{sum_done} [{subject[:40]}]: no cached messages, outputting metadata only")
         _print_output(thread_id, subject, "(Not yet fetched)", labels, priority, senders, date)
         return
 
@@ -459,18 +471,19 @@ def summarize_and_output(db: SkillDB, thread_info: dict):
     existing_text = existing_summary["summary"] if existing_summary else None
 
     if existing_text and existing_summary:
-        summarized_at = existing_summary.get("summarized_at", "")
-        new_items = db.get_items_since(thread_id, summarized_at) if summarized_at else items
+        prev_summarized_at = existing_summary.get("summarized_at", "")
+        new_items = db.get_items_since(thread_id, prev_summarized_at) if prev_summarized_at else items
         if new_items:
             items_to_summarize = new_items
         else:
             items_to_summarize = items
     else:
+        prev_summarized_at = ""
         items_to_summarize = items
 
     meta = {"labels": labels, "priority": priority, "last_message_id": last_msg_id}
 
-    eprint(f"  [{subject[:40]}]: summarizing ({len(items_to_summarize)} messages)...")
+    eprint(f"{sum_progress} [{subject[:40]}]: AI summarizing ({len(items_to_summarize)} messages)...")
     summary_text = summarize_resource(
         title=subject,
         source_type="Email thread",
@@ -481,23 +494,34 @@ def summarize_and_output(db: SkillDB, thread_info: dict):
 
     if summary_text:
         db.upsert_summary(thread_id, "gmail", subject, summary_text, meta)
-        _print_output(thread_id, subject, summary_text, labels, priority, senders, date)
+        saved = db.get_resource_summary(thread_id)
+        new_summarized_at = saved.get("summarized_at", "") if saved else ""
+        _print_output(thread_id, subject, summary_text, labels, priority, senders, date,
+                      summarized_at=new_summarized_at)
+        eprint(f"{sum_done} [{subject[:40]}]: done")
     elif existing_text:
-        _print_output(thread_id, subject, existing_text, labels, priority, senders, date)
+        _print_output(thread_id, subject, existing_text, labels, priority, senders, date,
+                      summarized_at=prev_summarized_at)
 
 
-def _summarize_worker(q: "_queue.Queue", db_path: Path) -> None:
+def _summarize_worker(q: "_queue.Queue", db_path: Path, error_event: threading.Event, results: list) -> None:
     """Background worker: process summarization queue one item at a time."""
     worker_db = get_gmail_db(db_path)
+    current = 0
     try:
         while True:
             item = q.get()
             if item is None:
+                q.task_done()
                 break
+            current += 1
+            item["_sum_current"] = current
             try:
                 summarize_and_output(worker_db, item)
             except Exception as exc:
                 eprint(f"ERROR summarizing {item.get('thread_id', '?')}: {exc}")
+                results.append(exc)
+                error_event.set()
             finally:
                 q.task_done()
     finally:
@@ -575,6 +599,7 @@ def main():
                     s["resource_id"], s.get("title", "(no subject)"),
                     s.get("summary", "(no summary)"),
                     labels, priority, senders, "",
+                    summarized_at=s.get("summarized_at", ""),
                 )
             eprint(f"{'='*60}")
             eprint(f"STATUS: COMPLETED - Gmail Reader (cached-only): {len(summaries)} summaries output")
@@ -700,8 +725,10 @@ def main():
         # ── Phase 2+3: Fetch and summarize in pipeline ──
         sum_q: _queue.Queue = _queue.Queue()
         fetched_ids: set = set()
+        _sum_error_event = threading.Event()
+        _sum_errors: list = []
         worker = threading.Thread(
-            target=_summarize_worker, args=(sum_q, DB_PATH), daemon=True,
+            target=_summarize_worker, args=(sum_q, DB_PATH, _sum_error_event, _sum_errors), daemon=True,
         )
         worker.start()
         eprint(f"\nPhase 2: Fetching {len(threads_to_fetch)} thread(s) "
@@ -714,15 +741,15 @@ def main():
             priority = info.get("priority")
             labels = info.get("labels", [])
             priority_tag = f" [{priority}]" if priority else ""
-            eprint(f"[{idx}/{len(threads_to_fetch)}] {subject[:55]}...{priority_tag}")
-            print(f"[Start fetching {idx}/{len(threads_to_fetch)}] {subject}{priority_tag}", flush=True)
+            eprint(f"[Fetching {idx}/{len(threads_to_fetch)}] {subject[:55]}...{priority_tag} (summarization pending)")
+            print(f"[Fetching {idx}/{len(threads_to_fetch)}] {subject}{priority_tag} (summarization pending)", flush=True)
 
             if not navigate_to_thread(page, thread_id):
                 eprint(f"  WARN: Could not load thread {thread_id}, retrying...")
                 time.sleep(2)
                 if not navigate_to_thread(page, thread_id):
                     eprint(f"  WARN: Thread {thread_id} failed to load after retry, skipping.")
-                    print(f"[Completed fetching {idx}/{len(threads_to_fetch)}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
+                    print(f"[Fetch failed {idx}/{len(threads_to_fetch)}] Thread {thread_id} - skipped after retry", flush=True)
                     continue
 
             thread_subject = get_thread_subject(page) or subject
@@ -740,20 +767,37 @@ def main():
 
             info["subject"] = thread_subject
             info["fetched"] = True
+            info["_sum_total"] = len(thread_infos)
             fetched_ids.add(thread_id)
             sum_q.put(info)
-            print(f"[Completed fetching {idx}/{len(threads_to_fetch)}] The script is still running, the output file content is still incomplete, please check the progress status in next {_HEARTBEAT_INTERVAL} seconds", flush=True)
+            eprint(f"[Fetched {idx}/{len(threads_to_fetch)}] {thread_subject[:60]} - queued for summarization")
+            print(f"[Fetched {idx}/{len(threads_to_fetch)}] {thread_subject[:60]} - queued for summarization (pipeline running)", flush=True)
 
         eprint(f"\nQueuing {len(thread_infos) - len(fetched_ids)} unchanged threads for summarization...")
         for info in thread_infos:
             if info["thread_id"] not in fetched_ids:
+                info["_sum_total"] = len(thread_infos)
                 sum_q.put(info)
 
         sum_q.put(None)
         worker.join()
-        eprint(f"{'='*60}")
-        eprint(f"STATUS: COMPLETED - Gmail Reader pipeline finished successfully")
-        eprint(f"{'='*60}")
+        if _sum_errors:
+            eprint(f"{'='*60}")
+            eprint(f"STATUS: COMPLETED WITH ERRORS - Gmail Reader finished ({len(thread_infos)} threads, {len(_sum_errors)} summarization error(s))")
+            for err in _sum_errors:
+                eprint(f"  ERROR: {err}")
+            eprint(f"{'='*60}")
+            print(
+                f"\n{'='*60}\n"
+                f"[gmail_reader] DONE WITH ERRORS - {len(_sum_errors)} thread(s) failed summarization.\n"
+                f"Check gmail-debug.log for details. Other {len(thread_infos) - len(_sum_errors)} threads completed.\n"
+                f"{'='*60}\n",
+                flush=True,
+            )
+        else:
+            eprint(f"{'='*60}")
+            eprint(f"STATUS: COMPLETED - Gmail Reader pipeline finished successfully ({len(thread_infos)} threads)")
+            eprint(f"{'='*60}")
         print(
             f"\n{'='*60}\n"
             f"[gmail_reader] ALL DONE - output file is ready for use.\n"
