@@ -1,9 +1,0 @@
-(venv) root@f93a5675f2a0:/a0/usr/workdir# (venv) root@f93a5675f2a0:/a0/usr/workdir# Cleanup complete
--rw-rw-r--+ 1 3000     950  11819 Feb 22 07:43  /a0/usr/workdir/agentic_ai_2026_report.md
--rw-rw-r--+ 1 3000     950  11495 Mar 14 13:11 '/a0/usr/workdir/❗ Daily Work Report 2026-03-14.md'
--rw-r--r--+ 1 3000     950  25898 Mar 19 07:07 '/a0/usr/workdir/❗ Daily Work Report 2026-03-19.md'
--rw-r-----+ 1  502 dialout  25608 Mar 19 07:27 '/a0/usr/workdir/❗ Daily Work Report.example.md'
--rw-rw-r--+ 1 3000     950 170103 Mar 19 07:50  /a0/usr/workdir/gchat-output.md
--rw-rw-r--+ 1 3000     950 314588 Mar 19 06:52  /a0/usr/workdir/gmail-output.md
--rw-rw-r--+ 1 3000     950 199053 Mar 19 06:51  /a0/usr/workdir/jira-output.md
-(venv) root@f93a5675f2a0:/a0/usr/workdir#
