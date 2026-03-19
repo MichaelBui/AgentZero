@@ -1,0 +1,203 @@
+/a0/usr/workdir/gchat-output.md 2203 lines
+>>>
+  1 
+  2 
+  3 ## gchat/space/AAAAsbHANyc: Shopping Cart Notification
+  4 Source: gchat | Group: space/AAAAsbHANyc | Last Activity: 2026-03-19T07:49:13.383000+00:00 | Last Updated: 2026-03-19T14:56:07.549372+08:00
+  5 **Daily Work Briefing: Shopping Cart Notification Alerts**
+  6 **Date:** March 17–19, 2026 (Update)
+  7 **Space:** `Shopping Cart Notification` (Google Chat)
+  8 
+  9 ### Key Participants & Roles
+ 10 *   **System/Tool:** Datadog App (Automated Monitoring)
+ 11 *   **Notification Channel:** `@hangouts-ShoppingCartNotification`
+ 12 *   **Ownership Teams:** `dpd-pricing`, `dpd-pricing-cart`.
+ 13 
+ 14 ### Main Topic
+ 15 Following March 16–18 incidents, transient latency issues persisted into March 19. Afternoon instability expanded from Checkout reliability to the `put_v2_shopping_list` endpoint. At **14:52 UTC**, a new critical alert triggered for request load success rates dropping below 99.9%, with the metric value falling to **97.143%**. This follows earlier P99 latency spikes in `get_v2_shopping_list` (10.887s) and prior Checkout SLO breaches.
+ 16 
+ 17 ### Incident Timeline & Actions
+ 18 **Morning Spike (March 19, ~02:15 – 03:49 UTC)**
+ 19 *   **Get Wish List by ID P90 (>1.7s):** Triggered at 02:15; Recovered.
+ 20 *   **Get V2 Shopping List P99 (>4.0s):** Triggered 03:49 (Metric: **10.887s**); Recovered 03:58.
+ 21 *   **Status:** All latency monitors recovered within minutes.
+ 22 
+ 23 **Afternoon Recurrence (March 19, ~13:00 – 14:52 UTC)**
+ 24 *   **Checkout Success Rate (<99.9%):** Triggered at 13:10; Recovered at 13:19.
+ 25 *   **SLO Error Budget Alert:** Triggered at 13:57 (94.894% budget consumed).
+ 26 *   **Put V2 Shopping List Success Rate (<99.9%) - Monitor ID `21245717`:**
+ 27     *   **Trigger Time:** 14:52 UTC.
+ 28     *   **Metric Value:** **97.143%**.
+ 29     *   **Service:** `frontend-gateway` (Resource: `put_/api/v2/shopping-list`).
+ 30     *   **Status:** **Active**. Datadog notification sent to `@hangouts-ShoppingCartNotification`.
+ 31 
+ 32 ### Pending Actions & Ownership
+ 33 *   **Owner:** `dpd-pricing-cart` and `dpd-pricing`.
+ 34 *   **Critical Investigation:** The new alert at 14:52 UTC confirms systemic instability affecting write operations (`put_v2_shopping_list`) in addition to read-heavy operations (Wishlist) and Checkout.
+ 35 *   **SLO Breach Risk:** With 94.894% of the error budget consumed by 13:57 UTC, the system is on the verge of a breach. The new success rate drop at 14:52 UTC exacerbates this risk immediately.
+ 36 *   **Correlation Required:** Link Event ID `8550344912656464335` (Current Alert) with previous events (`8550242097997133452`, `8550289276827905120`) to validate if the root cause is service-wide.
+ 37 
+ 38 ### Decisions Made
+ 39 *   **Auto-healing Confirmed:** Previous transient issues self-corrected within minutes; however, the current 14:52 UTC alert indicates a sustained failure requiring immediate intervention rather than passive monitoring.
+ 40 *   **Priority Shift:** Focus must shift to investigating the `frontend-gateway` service for `put_v2_shopping-list` specifically, alongside existing Checkout/Wishlist correlations.
+ 41 *   **SLO Mitigation:** Urgent root cause analysis is required to halt error budget burn before the threshold exceeds 95%.
+ 42 
+ 43 ### Key Dates & Follow-ups
+ 44 *   **Critical Window (March 19):** 02:15 UTC to 14:52 UTC.
+ 45 *   **Follow-up:** Investigate Event ID `8550344912656464335` immediately. Correlate with Wishlist and Checkout failure patterns.
+ 46 
+ 47 **References:**
+ 48 *   **New Monitor Alert:** `21245717` (Event: `8550344912656464335`)
+ 49 *   **Service Tags:** `service:frontend-gateway`, `team:dpd-pricing`, `dept:dpd`.
+ 50 
+ 51 
+ 52 ## gchat/dm/t3wf6EAAAAE: Nikhil Grover
+ 53 Source: gchat | Group: dm/t3wf6EAAAAE | Last Activity: 2026-03-19T07:48:28.418000+00:00 | Last Updated: 2026-03-19T14:24:34.126562+08:00
+ 54 **Daily Work Briefing: Nikhil Grover & Michael Bui**
+ 55 
+ 56 **Key Participants & Roles**
+ 57 *   **Nikhil Grover:** Initiator; coordinating UAT, managing configuration split flags, providing cost-saving metrics, and requesting meeting access.
+ 58 *   **Michael Bui:** Technical Lead (Engineering); enabling deployments, validating API logic, managing Jira tickets, and granting meeting co-host privileges.
+ 59 
+ 60 **Main Topics**
+ 61 1.  **Deployment Acceleration (Vertical Scroll & Swimlane Ads):**
+ 62     *   **Timeline Shift:** Target go-live moved from Monday (March 23) to **Wednesday, March 19**, contingent on immediate UAT signoff.
+ 63     *   **Process Change:** Deployment can proceed today if Nikhil signs off on the Jira ticket after lunch. Without this, deployment pushes to Tuesday.
+ 64     *   **Configuration Management:** Michael emphasized setting split flags correctly. Nikhil will configure slots and share for confirmation before managing configurations independently going forward. Configs can be adjusted while keeping features disabled ("off") for safety.
+ 65 
+ 66 2.  **UAT Scope & Data Sources:**
+ 67     *   UAT must cover both swimlanes and vertical scrolling simultaneously to validate shared API logic.
+ 68     *   **Data Source Verification:** Daryl is still required to identify Algolia vs. DS swimlanes on OMNI Home and enable test instances for ads.
+ 69 
+ 70 3.  **Ad Placement Anomaly:**
+ 71     *   Nikhil observed ads on slots 2 and 4 during UAT, deviating from the `[1,3,3,5]` logic. Michael suspects Out-of-Stock (OOS) products are masking the logic and requires checking "Normal" behavior to confirm.
+ 72 
+ 73 4.  **Cost Optimization:**
+ 74     *   Nikhil confirmed an estimated cost saving of **$4k/month** for Segment overage optimization.
+ 75 
+ 76 5.  **Meeting Access & Collaboration Tools:**
+ 77     *   **Access Restriction:** Nikhil requested co-host privileges for meetings, noting he lacks Gemini access otherwise.
+ 78     *   **Resolution:** Michael Bui confirmed the request was completed at 13:56 on March 19.
+ 79 
+ 80 **Decisions Made**
+ 81 *   **Accelerated Deployment:** Proceed with deployment on Wednesday, March 19, provided UAT signoff is received after lunch.
+ 82 *   **Configuration Handover:** Nikhil to assume responsibility for setting slot split flags after initial confirmation by Michael.
+ 83 *   **Ticket Consolidation:** Segment/ Omni optimization tasks consolidated into the existing DPD ticket structure.
+ 84 *   **Collaborative Access:** Nikhil Grover granted co-host status on meetings to facilitate collaboration in the absence of Gemini access.
+ 85 
+ 86 **Pending Actions & Owners**
+ 87 *   **UAT Signoff (Nikhil Grover):** Provide Jira signoff and configure split flags after lunch on March 19 for today's deployment attempt.
+ 88 *   **Data Source Verification (Daryl):** Identify Algolia vs. DS swimlanes on OMNI Home and enable instances for testing.
+ 89 *   **Ad Placement Investigation (Michael Bui):** Verify if OOS products cause slot 2/4 anomalies by checking "Normal" behavior.
+ 90 *   **Ticket Consolidation:** Nikhil Grover to ensure Segment optimization details are correctly linked within the DPD ticket.
+ 91 
+ 92 **Key Dates & Deadlines**
+ 93 *   **March 19, 2026 (Today):** Target deployment date contingent on afternoon UAT signoff; cost saving ($4k/mo) confirmed; meeting co-host access granted at 13:56.
+ 94 *   **Next Monday (March 23, 2026):** Original target go-live (now superseded by today's accelerated timeline).
+ 95 *   **Monday Stand-up:** Review OSMOS SKU support process.
+ 96 
+ 97 **Historical Context Note**
+ 98 Previous discussions established readiness for dynamic slots UAT with the `[1,3,3,5]` logic resolved. This session introduced vertical scrolling complexities and data source uncertainties (Algolia vs. DS). On March 20, negotiations shifted focus from a Monday go-live to an immediate deployment on Wednesday, March 19, pending configuration signoff. New discussions also clarified Segment optimization savings ($4k/mo) and ticket organization protocols. Additionally, operational access was updated on March 19 at 13:56 to grant Nikhil Grover co-host privileges for meetings due to limited Gemini access.
+ 99 
+100 
+101 ## gchat/space/AAAAxwwNw2U: #dd-dpd-engage-alert
+102 Source: gchat | Group: space/AAAAxwwNw2U | Last Activity: 2026-03-19T07:46:03.409000+00:00 | Last Updated: 2026-03-19T14:56:54.683174+08:00
+103 # Daily Work Briefing: #dd-dpd-rich-alert Monitoring Activity (Extended Update)
+104 
+105 **Key Participants**
+106 *   **System:** Datadog App (Automated Alerting)
+107 *   **Target Audience:** `@hangouts-dd-dpd-engage-alert` channel members.
+108 *   **Relevant Squads/Tribes:** Dynamics, Compass, Journey, DPD Engage (`squad:dynamics`, `squad:journey`, `squad:compass`, `tribe:engage`).
+109 
+110 **Main Topic**
+111 The incident window persists on **March 19**, characterized by a "flicker" pattern of latency spikes and error rate degradation. New volatility has been observed affecting `engage-my-persona-api-go` (MyInfo flows), `gamification-api`, `lyt-p13n-layout`, and iOS linkpoint loading metrics.
+112 
+113 **Status Summary & Timeline (Extended)**
+114 *   **March 16–18:** Initial cascade involving `gamification-api`, transient cart errors, and intermittent MyInfo latency. Continued instability detected on March 18 with peak error rates of 0.158% in `engage-my-persona-api-go`.
+115 *   **March 19 (Afternoon Volatility):**
+116     *   **iOS Linkpoint Loading:** At 14:44 UTC, Monitor #63109468 triggered for `ef-ios` success rates dropping to **97.81%** (<99.9% threshold). Recovered by 14:45 UTC (metric at 100%).
+117     *   **MyInfo Error Rate:** At 14:46 UTC, Monitor #92965074 for `engage-my-persona-api-go` showed a high error rate but recovered immediately to **0.092%** (just below the >0.1% trigger threshold).
+118     *   **MyInfo Latency Spike:** At 14:49 UTC, Monitor #50879027 triggered for P90 latency on `post_/new-myinfo/confirm` exceeding 1.8s. Metric reached **2.528s**.
+119     *   **Orchid Recommendations:** Frontend Gateway requests (`get_/api/recommender/orchid`) previously dipped to 99.853% success rate around 14:38 UTC (Monitor #17448311), recovering by 14:48 UTC (metric at 100%).
+120     *   **Previous Events:** MyInfo P99 latency (2.656s) and Gamification error rates (0.435%) occurred earlier between 14:17–14:33 UTC, consistent with the flicker pattern.
+121 
+122 **Pending Actions & Ownership**
+123 *   **Investigate `engage-my-persona-api-go` (Dynamics):** Address recurring P90 latency spikes (peak 2.528s at 14:49 UTC) and error rate fluctuations. Prioritize monitors #50879027, #50879037, and #92965074.
+124 *   **Investigate `ef-ios` (Compass):** Analyze transient linkpoint loading failures dropping to 97.81% at 14:44 UTC. Owner: Squad **Compass**.
+125 *   **Investigate Mobile Services (`ef-android`) (Compass):** Correlate previous iOS dips with backend API volatility. Owner: Squad **Compass**.
+126 *   **Investigate `lyt-p13n-layout` (Journey) & Frontend Gateway:** Analyze transient P99 latency spikes on scan-door requests and Orchid recommendation success rates. Owner: Squad **Journey**.
+127 
+128 **Decisions Made**
+129 No strategic decisions recorded. The incident confirms a systemic "flicker" pattern persisting into March 19 afternoon (14:44–14:49 UTC):
+130 1.  **Latency Instability:** `engage-my-persona-api-go` exhibits recurring P90 latency spikes (>2.5s) with rapid recovery times (<5 mins).
+131 2.  **Error Rate Volatility:** iOS linkpoint success rates and `gamification-api` error rates show transient surges, suggesting shared infrastructure or dependency contention affecting the Omni Home experience.
+132 
+133 **Key Dates & Follow-ups**
+134 *   **Active Window:** March 16–19 (UTC).
+135 *   **Follow-up Required:** Immediate root cause analysis for recurring latency spikes in MyInfo confirm flows and iOS linkpoint loading; stabilize `gamification-api` error rates.
+136 *   **Reference Links:**
+137     *   iOS Linkpoints: Monitor #63109468
+138     *   MyInfo Latency (P90): Monitor #50879027
+139     *   Gamification Errors: Monitor #92939290
+140     *   Orchid Requests: Monitor #17448311
+141 
+142 
+143 ## gchat/space/AAQAgT-LpYY/HAKjA0njutA: BCRS Firefighting Group
+144 Source: gchat | Group: space/AAQAgT-LpYY/HAKjA0njutA | Last Activity: 2026-03-19T07:42:39.598000+00:00 | Last Updated: 2026-03-19T14:56:24.358574+08:00
+145 **Daily Work Briefing: BCRS Firefighting Group**
+146 
+147 **Key Participants & Roles**
+148 *   **Prajney Sribhashyam:** Initiator/Coordinator; tracking UAT refund issues and escalating discrepancies to Finance, CS, and RPA teams.
+149 *   **Hendry Tionardi:** Technical Analyst (RPA); investigating duplicate API calls and SAP Odata logs.
+150 *   **De Wei Tey:** Assigned recipient of investigation requests regarding order anomalies.
+151 *   **Wai Ching Chan:** Assigned recipient of query regarding sales posting logic for vouchers/Linkpoints.
+152 
+153 **Main Topic**
+154 Investigation into specific refund and sales data discrepancies observed during the BCRS UAT 2026 cycle, specifically focusing on duplicate entries and missing postings in Finance records.
+155 
+156 **Pending Actions & Ownership**
+157 *   **Investigate Duplicate Refund Entry (Order #75549782):** Determine why two refund entries were posted with a ~4-minute gap.
+158     *   *Owner:* **De Wei Tey** (and RPA Team).
+159     *   *Context:* Hendry suspects the RPA may have triggered duplicate SAP Odata calls.
+160 *   **Investigate Missing Sales/Refund Postings:** Verify if Finance's report of "no sales or refund posting" is expected for orders #75549643 and #75549853, specifically regarding customer usage of e-vouchers and/or Linkpoints.
+161     *   *Owner:* **Wai Ching Chan**.
+162 *   **RPA Log Review:** Check RPA logs to confirm if the system called SAP Odata twice for Order #75549782.
+163     *   *Owner:* **De Wei Tey** (explicitly requested by Prajney).
+164 
+165 **Decisions Made**
+166 *   No final root cause was determined during this session; however, Hendry hypothesized that the duplicate refund entries were caused by the RPA calling SAP Odata twice rather than a functional error.
+167 *   The team agreed to use the "UAT Refunds (RPA, CS & Finance)" track in the Google Sheet for centralized tracking.
+168 
+169 **Key Dates & Follow-ups**
+170 *   **Date:** March 19, 2026.
+171 *   **Timeframe:** Discussion occurred between 14:42 and 14:51 (SGT).
+172 *   **Next Steps:** Immediate log analysis for Order #75549782 and clarification on voucher/Linkpoint posting rules for the two specified orders.
+173 
+174 **References**
+175 *   **Tracking Sheet:** https://docs.google.com/spreadsheets/d/1o6oklFTFyzpT490vQ4x8IKc00vdL41pl9hUAaQgg-ns/edit?usp=sharing
+176 *   **Space URL:** https://chat.google.com/space/AAQAgT-LpYY
+177 
+178 
+179 ## gchat/space/AAQAN8mDauE: [Leads] (Ecom/Omni) Digital Product Development
+180 Source: gchat | Group: space/AAQAN8mDauE | Last Activity: 2026-03-19T07:27:36.925000+00:00 | Last Updated: 2026-03-19T13:37:56.311773+08:00
+181 **Daily Work Briefing: Leads (Ecom/Omni) Digital Product Development**
+182 
+183 **Key Participants & Roles**
+184 *   **Sneha Parab:** Lead/Manager; coordinating cross-team support, SAP/API integration blockers.
+185 *   **Michael Bui:** Engineering/RMN Architect; managing architecture updates and infrastructure compliance.
+186 *   **Alvin Choo:** Leadership; addressing feedback loops, release schedules, and new epic queries.
+187 *   **Gopalakrishna Dhulipati:** Lead; overseeing risk registers, delivery approvals, and now leading service key rotation with SRE.
+188 *   **Others Active:** Daryl Ng (raised recent inquiry), Andin Eswarlal Rajesh, Olivia, Koklin, Zaw.
+189 
+190 **Main Topics**
+191 1.  **SAP/Deposit SKU Integration Blocker:** Marketplace lacks deposit data for SAP API integration. Proposed manual UD failed MP Ops sign-off due to poor PM communication; Olivia rejected new technical solutions. Immediate action from SAP team required.
+192 2.  **Requirement Clarity (BCRS):** Michael Bui flagged that "follow existing ones" is unacceptable acceptance criteria for BCRS deposit posting. Explicit UAT scenarios are required for Definition of Ready (DoR).
+193 3.  **Infrastructure Compliance:** Bitnami ending free Docker images impacts `sonic_raptor` and `mkp-fairnex`. Migration is mandatory.
+194 4.  **Service Key Rotation:** Gopalakrishna Dhulipati requested leads take ownership with the SRE team; discussion moved to a dedicated room.
+195 5.  **B2B Testing Alignment:** Sneha Parab raised queries on finalized B2B testing procedures. Zaw requires guidance on producing MP SKUs specifically for B2B testing.
+196 6.  **New Epic Inquiry (OMNI-1157):** Daryl Ng raised an item from the weekly epics (Jira link: OMNI-1157). Ravi indicated this action should only be performed for the new app. Alvin Choo and Gopalakrishna Dhulipati were tagged to clarify status.
+197 
+198 **Pending Actions & Owners**
+199 *   **OMNI-1157 Clarification:** Confirm if the item applies solely to the new app as per Ravi's feedback; coordinate with Daryl Ng. (Owners: Alvin Choo/Gopalakrishna Dhulipati)
+200 *   **Service Key Rotation:** Leads to take ownership of rotation with SRE. Review details in dedicated room. (Owner: All Leads / Gopalakrishna Dhulipati)
+<<<

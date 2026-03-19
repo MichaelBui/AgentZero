@@ -1,36 +1,7 @@
 
 
-## gchat/dm/8oukJSAAAAE: Lester Santiago Soriano
-Source: gchat | Group: dm/8oukJSAAAAE | Messages: 2 | Last Activity: 2026-03-19T14:52:25.338000+08:00 | Last Updated: 2026-03-19T14:55:40.152708+08:00
-**Daily Work Briefing: Google Chat Summary**
-
-**1. Key Participants & Roles**
-*   **Lester Santiago Soriano**: Initiator of the inquiry; likely a Stakeholder, Project Manager, or Peer responsible for deployment coordination.
-
-**2. Main Topic/Discussion**
-*   The discussion centers on the operational status and scheduling of a specific deployment. Lester is confirming whether the `go-platform-website` service is scheduled for deployment on the current date (March 19, 2026).
-
-**3. Pending Actions & Ownership**
-*   **Action**: Provide confirmation regarding the deployment schedule for `go-platform-website`.
-    *   **Owner**: The recipient of Lester's message (likely a Developer, DevOps Engineer, or Release Manager).
-    *   **Status**: Awaiting response.
-
-**4. Decisions Made**
-*   No decisions were made in this conversation thread; it is an active inquiry seeking status confirmation.
-
-**5. Key Dates & Deadlines**
-*   **Date of Inquiry**: March 19, 2026 (14:52 UTC+8).
-*   **Target Deployment Window**: "Today" (March 19, 2026).
-*   **Follow-up Required**: Immediate response needed to clarify deployment status.
-
-**6. Reference Details**
-*   **Resource**: Lester Santiago Soriano
-*   **Chat URL**: https://chat.google.com/dm/8oukJSAAAAE
-*   **Project Artifact**: `go-platform-website`
-
-
 ## gchat/space/AAAAsbHANyc: Shopping Cart Notification
-Source: gchat | Group: space/AAAAsbHANyc | Messages: 16 | Last Activity: 2026-03-19T14:52:22.382000+08:00 | Last Updated: 2026-03-19T14:56:07.549372+08:00
+Source: gchat | Group: space/AAAAsbHANyc | Last Activity: 2026-03-19T07:49:13.383000+00:00 | Last Updated: 2026-03-19T14:56:07.549372+08:00
 **Daily Work Briefing: Shopping Cart Notification Alerts**
 **Date:** March 17–19, 2026 (Update)
 **Space:** `Shopping Cart Notification` (Google Chat)
@@ -78,44 +49,57 @@ Following March 16–18 incidents, transient latency issues persisted into March
 *   **Service Tags:** `service:frontend-gateway`, `team:dpd-pricing`, `dept:dpd`.
 
 
-## gchat/space/AAQAgT-LpYY/HAKjA0njutA: BCRS Firefighting Group
-Source: gchat | Group: space/AAQAgT-LpYY/HAKjA0njutA | Messages: 7 | Last Activity: 2026-03-19T14:51:09.560000+08:00 | Last Updated: 2026-03-19T14:56:24.358574+08:00
-**Daily Work Briefing: BCRS Firefighting Group**
+## gchat/dm/t3wf6EAAAAE: Nikhil Grover
+Source: gchat | Group: dm/t3wf6EAAAAE | Last Activity: 2026-03-19T07:48:28.418000+00:00 | Last Updated: 2026-03-19T14:24:34.126562+08:00
+**Daily Work Briefing: Nikhil Grover & Michael Bui**
 
 **Key Participants & Roles**
-*   **Prajney Sribhashyam:** Initiator/Coordinator; tracking UAT refund issues and escalating discrepancies to Finance, CS, and RPA teams.
-*   **Hendry Tionardi:** Technical Analyst (RPA); investigating duplicate API calls and SAP Odata logs.
-*   **De Wei Tey:** Assigned recipient of investigation requests regarding order anomalies.
-*   **Wai Ching Chan:** Assigned recipient of query regarding sales posting logic for vouchers/Linkpoints.
+*   **Nikhil Grover:** Initiator; coordinating UAT, managing configuration split flags, providing cost-saving metrics, and requesting meeting access.
+*   **Michael Bui:** Technical Lead (Engineering); enabling deployments, validating API logic, managing Jira tickets, and granting meeting co-host privileges.
 
-**Main Topic**
-Investigation into specific refund and sales data discrepancies observed during the BCRS UAT 2026 cycle, specifically focusing on duplicate entries and missing postings in Finance records.
+**Main Topics**
+1.  **Deployment Acceleration (Vertical Scroll & Swimlane Ads):**
+    *   **Timeline Shift:** Target go-live moved from Monday (March 23) to **Wednesday, March 19**, contingent on immediate UAT signoff.
+    *   **Process Change:** Deployment can proceed today if Nikhil signs off on the Jira ticket after lunch. Without this, deployment pushes to Tuesday.
+    *   **Configuration Management:** Michael emphasized setting split flags correctly. Nikhil will configure slots and share for confirmation before managing configurations independently going forward. Configs can be adjusted while keeping features disabled ("off") for safety.
 
-**Pending Actions & Ownership**
-*   **Investigate Duplicate Refund Entry (Order #75549782):** Determine why two refund entries were posted with a ~4-minute gap.
-    *   *Owner:* **De Wei Tey** (and RPA Team).
-    *   *Context:* Hendry suspects the RPA may have triggered duplicate SAP Odata calls.
-*   **Investigate Missing Sales/Refund Postings:** Verify if Finance's report of "no sales or refund posting" is expected for orders #75549643 and #75549853, specifically regarding customer usage of e-vouchers and/or Linkpoints.
-    *   *Owner:* **Wai Ching Chan**.
-*   **RPA Log Review:** Check RPA logs to confirm if the system called SAP Odata twice for Order #75549782.
-    *   *Owner:* **De Wei Tey** (explicitly requested by Prajney).
+2.  **UAT Scope & Data Sources:**
+    *   UAT must cover both swimlanes and vertical scrolling simultaneously to validate shared API logic.
+    *   **Data Source Verification:** Daryl is still required to identify Algolia vs. DS swimlanes on OMNI Home and enable test instances for ads.
+
+3.  **Ad Placement Anomaly:**
+    *   Nikhil observed ads on slots 2 and 4 during UAT, deviating from the `[1,3,3,5]` logic. Michael suspects Out-of-Stock (OOS) products are masking the logic and requires checking "Normal" behavior to confirm.
+
+4.  **Cost Optimization:**
+    *   Nikhil confirmed an estimated cost saving of **$4k/month** for Segment overage optimization.
+
+5.  **Meeting Access & Collaboration Tools:**
+    *   **Access Restriction:** Nikhil requested co-host privileges for meetings, noting he lacks Gemini access otherwise.
+    *   **Resolution:** Michael Bui confirmed the request was completed at 13:56 on March 19.
 
 **Decisions Made**
-*   No final root cause was determined during this session; however, Hendry hypothesized that the duplicate refund entries were caused by the RPA calling SAP Odata twice rather than a functional error.
-*   The team agreed to use the "UAT Refunds (RPA, CS & Finance)" track in the Google Sheet for centralized tracking.
+*   **Accelerated Deployment:** Proceed with deployment on Wednesday, March 19, provided UAT signoff is received after lunch.
+*   **Configuration Handover:** Nikhil to assume responsibility for setting slot split flags after initial confirmation by Michael.
+*   **Ticket Consolidation:** Segment/ Omni optimization tasks consolidated into the existing DPD ticket structure.
+*   **Collaborative Access:** Nikhil Grover granted co-host status on meetings to facilitate collaboration in the absence of Gemini access.
 
-**Key Dates & Follow-ups**
-*   **Date:** March 19, 2026.
-*   **Timeframe:** Discussion occurred between 14:42 and 14:51 (SGT).
-*   **Next Steps:** Immediate log analysis for Order #75549782 and clarification on voucher/Linkpoint posting rules for the two specified orders.
+**Pending Actions & Owners**
+*   **UAT Signoff (Nikhil Grover):** Provide Jira signoff and configure split flags after lunch on March 19 for today's deployment attempt.
+*   **Data Source Verification (Daryl):** Identify Algolia vs. DS swimlanes on OMNI Home and enable instances for testing.
+*   **Ad Placement Investigation (Michael Bui):** Verify if OOS products cause slot 2/4 anomalies by checking "Normal" behavior.
+*   **Ticket Consolidation:** Nikhil Grover to ensure Segment optimization details are correctly linked within the DPD ticket.
 
-**References**
-*   **Tracking Sheet:** https://docs.google.com/spreadsheets/d/1o6oklFTFyzpT490vQ4x8IKc00vdL41pl9hUAaQgg-ns/edit?usp=sharing
-*   **Space URL:** https://chat.google.com/space/AAQAgT-LpYY
+**Key Dates & Deadlines**
+*   **March 19, 2026 (Today):** Target deployment date contingent on afternoon UAT signoff; cost saving ($4k/mo) confirmed; meeting co-host access granted at 13:56.
+*   **Next Monday (March 23, 2026):** Original target go-live (now superseded by today's accelerated timeline).
+*   **Monday Stand-up:** Review OSMOS SKU support process.
+
+**Historical Context Note**
+Previous discussions established readiness for dynamic slots UAT with the `[1,3,3,5]` logic resolved. This session introduced vertical scrolling complexities and data source uncertainties (Algolia vs. DS). On March 20, negotiations shifted focus from a Monday go-live to an immediate deployment on Wednesday, March 19, pending configuration signoff. New discussions also clarified Segment optimization savings ($4k/mo) and ticket organization protocols. Additionally, operational access was updated on March 19 at 13:56 to grant Nikhil Grover co-host privileges for meetings due to limited Gemini access.
 
 
 ## gchat/space/AAAAxwwNw2U: #dd-dpd-engage-alert
-Source: gchat | Group: space/AAAAxwwNw2U | Messages: 16 | Last Activity: 2026-03-19T14:49:52.778000+08:00 | Last Updated: 2026-03-19T14:56:54.683174+08:00
+Source: gchat | Group: space/AAAAxwwNw2U | Last Activity: 2026-03-19T07:46:03.409000+00:00 | Last Updated: 2026-03-19T14:56:54.683174+08:00
 # Daily Work Briefing: #dd-dpd-rich-alert Monitoring Activity (Extended Update)
 
 **Key Participants**
@@ -156,8 +140,234 @@ No strategic decisions recorded. The incident confirms a systemic "flicker" patt
     *   Orchid Requests: Monitor #17448311
 
 
+## gchat/space/AAQAgT-LpYY/HAKjA0njutA: BCRS Firefighting Group
+Source: gchat | Group: space/AAQAgT-LpYY/HAKjA0njutA | Last Activity: 2026-03-19T07:42:39.598000+00:00 | Last Updated: 2026-03-19T14:56:24.358574+08:00
+**Daily Work Briefing: BCRS Firefighting Group**
+
+**Key Participants & Roles**
+*   **Prajney Sribhashyam:** Initiator/Coordinator; tracking UAT refund issues and escalating discrepancies to Finance, CS, and RPA teams.
+*   **Hendry Tionardi:** Technical Analyst (RPA); investigating duplicate API calls and SAP Odata logs.
+*   **De Wei Tey:** Assigned recipient of investigation requests regarding order anomalies.
+*   **Wai Ching Chan:** Assigned recipient of query regarding sales posting logic for vouchers/Linkpoints.
+
+**Main Topic**
+Investigation into specific refund and sales data discrepancies observed during the BCRS UAT 2026 cycle, specifically focusing on duplicate entries and missing postings in Finance records.
+
+**Pending Actions & Ownership**
+*   **Investigate Duplicate Refund Entry (Order #75549782):** Determine why two refund entries were posted with a ~4-minute gap.
+    *   *Owner:* **De Wei Tey** (and RPA Team).
+    *   *Context:* Hendry suspects the RPA may have triggered duplicate SAP Odata calls.
+*   **Investigate Missing Sales/Refund Postings:** Verify if Finance's report of "no sales or refund posting" is expected for orders #75549643 and #75549853, specifically regarding customer usage of e-vouchers and/or Linkpoints.
+    *   *Owner:* **Wai Ching Chan**.
+*   **RPA Log Review:** Check RPA logs to confirm if the system called SAP Odata twice for Order #75549782.
+    *   *Owner:* **De Wei Tey** (explicitly requested by Prajney).
+
+**Decisions Made**
+*   No final root cause was determined during this session; however, Hendry hypothesized that the duplicate refund entries were caused by the RPA calling SAP Odata twice rather than a functional error.
+*   The team agreed to use the "UAT Refunds (RPA, CS & Finance)" track in the Google Sheet for centralized tracking.
+
+**Key Dates & Follow-ups**
+*   **Date:** March 19, 2026.
+*   **Timeframe:** Discussion occurred between 14:42 and 14:51 (SGT).
+*   **Next Steps:** Immediate log analysis for Order #75549782 and clarification on voucher/Linkpoint posting rules for the two specified orders.
+
+**References**
+*   **Tracking Sheet:** https://docs.google.com/spreadsheets/d/1o6oklFTFyzpT490vQ4x8IKc00vdL41pl9hUAaQgg-ns/edit?usp=sharing
+*   **Space URL:** https://chat.google.com/space/AAQAgT-LpYY
+
+
+## gchat/space/AAQAN8mDauE: [Leads] (Ecom/Omni) Digital Product Development
+Source: gchat | Group: space/AAQAN8mDauE | Last Activity: 2026-03-19T07:27:36.925000+00:00 | Last Updated: 2026-03-19T13:37:56.311773+08:00
+**Daily Work Briefing: Leads (Ecom/Omni) Digital Product Development**
+
+**Key Participants & Roles**
+*   **Sneha Parab:** Lead/Manager; coordinating cross-team support, SAP/API integration blockers.
+*   **Michael Bui:** Engineering/RMN Architect; managing architecture updates and infrastructure compliance.
+*   **Alvin Choo:** Leadership; addressing feedback loops, release schedules, and new epic queries.
+*   **Gopalakrishna Dhulipati:** Lead; overseeing risk registers, delivery approvals, and now leading service key rotation with SRE.
+*   **Others Active:** Daryl Ng (raised recent inquiry), Andin Eswarlal Rajesh, Olivia, Koklin, Zaw.
+
+**Main Topics**
+1.  **SAP/Deposit SKU Integration Blocker:** Marketplace lacks deposit data for SAP API integration. Proposed manual UD failed MP Ops sign-off due to poor PM communication; Olivia rejected new technical solutions. Immediate action from SAP team required.
+2.  **Requirement Clarity (BCRS):** Michael Bui flagged that "follow existing ones" is unacceptable acceptance criteria for BCRS deposit posting. Explicit UAT scenarios are required for Definition of Ready (DoR).
+3.  **Infrastructure Compliance:** Bitnami ending free Docker images impacts `sonic_raptor` and `mkp-fairnex`. Migration is mandatory.
+4.  **Service Key Rotation:** Gopalakrishna Dhulipati requested leads take ownership with the SRE team; discussion moved to a dedicated room.
+5.  **B2B Testing Alignment:** Sneha Parab raised queries on finalized B2B testing procedures. Zaw requires guidance on producing MP SKUs specifically for B2B testing.
+6.  **New Epic Inquiry (OMNI-1157):** Daryl Ng raised an item from the weekly epics (Jira link: OMNI-1157). Ravi indicated this action should only be performed for the new app. Alvin Choo and Gopalakrishna Dhulipati were tagged to clarify status.
+
+**Pending Actions & Owners**
+*   **OMNI-1157 Clarification:** Confirm if the item applies solely to the new app as per Ravi's feedback; coordinate with Daryl Ng. (Owners: Alvin Choo/Gopalakrishna Dhulipati)
+*   **Service Key Rotation:** Leads to take ownership of rotation with SRE. Review details in dedicated room. (Owner: All Leads / Gopalakrishna Dhulipati)
+*   **B2B Testing Procedure:** Clarify process for producing MP SKUs and confirm alignment status. Response required from Gopalakrishna Dhulipati regarding Zaw's inquiry. (Owner: Sneha Parab/Gopalakrishna Dhulipati)
+*   **SAP Timeline Resolution:** Push SAP team to explore deposit SKU data solutions; provide timeline. (Owner: Sneha Parab/Alvin Choo/Gopalakrishna Dhulipati)
+*   **BCRS Requirements:** Define explicit UAT scenarios with Koklin. (Owner: Alvin Choo/Gopalakrishna Dhulipati)
+*   **Infrastructure Migration:** Address Bitnami Docker image end-of-life. (Owner: Engineering Team/Michael Bui)
+*   **RAW Forms Review:** Review Risk Register for DPD RAW forms; confirm handovers and renew expired forms. Deadline: Tomorrow EOD. (Owner: All Leads/Sazali Bin Mohammed Ali's team)
+
+**Decisions Made**
+*   **RMN Architecture:** Michael Bui updated current, future, and transition architecture diagrams.
+*   **Townhall Coordination:** Team to meet Hui Hui post-townhall; no full Q&A scheduled.
+*   **Release Status:** Questions remain regarding holding today's regular app release (pending confirmation).
+
+**Key Dates & Deadlines**
+*   **RAW Forms Review:** Due Tomorrow EOD.
+*   **Townhall Meeting:** Today post-townhall session.
+*   **Chee Hoe Support:** Effective end of March for Product Catalogue/MarTech scope.
+*   **Bitnami Migration:** Ongoing (immediate action required).
+
+
+## gchat/space/AAQAUbi9szY: [Internal] (Ecom/Omni) Digital Product Development
+Source: gchat | Group: space/AAQAUbi9szY | Last Activity: 2026-03-19T07:09:48.304000+00:00 | Last Updated: 2026-03-19T13:36:21.779688+08:00
+**Daily Work Briefing: Digital Product Development (Ecom/Omni)**
+
+**Key Participants & Roles**
+*   **Sneha Parab:** BCRS/Fees/Store Closure Impact Lead.
+*   **Daryl Ng:** Backoffice/Order Management/Bug Reporting / Amplitude Tracking inquiry.
+*   **Michael Bui:** BCRS Deposit Logic/SAP Integration/Publisher of PRs.
+*   **Wai Ching Chan:** Order Service Deployment/Slot Logic Validation.
+*   **Andin Eswarlal Rajesh:** Frontend (iOS/Android) & BCRS UX queries / Amplitude tracking investigation.
+*   **Lester Santiago Soriano:** Backend Services Lead.
+*   **Others:** Akash Gupta, Piraba Nagkeeran, Jonathan Tanudjaja, Zaw Myo Htet.
+
+**Main Topics Discussed**
+1.  **Order Verification Bug (NED-278216):** Daryl Ng flagged an order verification failure. The investigation points to the Whitelisting API returning older contract data (identified by Andin Eswarlal Rajesh). Team members Akash Gupta and Wai Ching Chan are reviewing this issue.
+2.  **BCRS Deposit & SAP Integration:** Critical issue regarding duplicate deposit postings remains active (Fix in progress: PR #6).
+3.  **Order Re-delivery Logic:** Confirmation received regarding `completed_at` value updates during re-delivery status changes from "dispatch" to "completed".
+4.  **Event Tracking Integration:** Investigation ongoing into Frontend event flow to Amplitude via the tracking service (Andin Eswarlal Rajesh assigned).
+5.  **Payment Feature Flagging:** Zaw Myo Htet announced the complete offboarding of the split feature flag for Pinelabs in UAT to facilitate specific testing.
+6.  **Store Closing Process:** Sports Hub FFS store closure scheduled for **31 Mar 2026**. Team continues to request inputs on Marketplace SKU removal and fulfillment impact.
+7.  **UAT & Inventory Logic:** Sneha Parab flagged a UAT query regarding bulk threshold data for Meiji Paigen Cultured Milk SKU (`0-fat-13023506`). Investigation focuses on `inventory-service` vs. catalogue/stock_override tables (Wai Ching Chan, Akash Gupta, Daryl Ng involved).
+8.  **Notification Deployment:** Query regarding gChat notification changes for "1HD" deployment status in production.
+
+**Pending Actions & Ownership**
+*   **Lester Santiago Soriano:** Review PR #1538 (`bitbucket.org/ntuclink/go-platform-website/pull-requests/1538`). Assist with Whitelisting API contract issue (cc: Piraba Nagkeeran, Jonathan Tanudjaja).
+*   **Akash Gupta & Wai Ching Chan:** Investigate NED-278216 order verification failure and the Whitelisting API returning older contracts.
+*   **Zaw Myo Htet:** Execute testing on offboarded Pinelabs split feature flag in UAT.
+*   **Michael Bui:** Deploy PLU processor changes (scheduled ~2-3pm); Request UD for listed SKUs; Review PR `bcrs-deposit-posting` #6.
+*   **Wai Ching Chan:** Validate PFC slot logic in UAT (requested by Daryl Ng). Assist in identifying the source of bulk threshold settings for UAT SKU `13023506`.
+*   **Andin Eswarlal Rajesh:** Investigate iOS slot mapping error and assist with Amplitude event tracking flow inquiry.
+*   **Team/Backend:** Resolve Daryl Ng's query regarding 1HD gChat notification deployment status.
+
+**Decisions Made**
+*   **Deployment Approval:** Sneha Parab approved PLU processor deployment pending UD alignment. Wai Ching Chan confirmed order-service PR #2910 is safe for production at 11 PM on Mar 9 (Note: Current date context suggests this decision applies to past planning or requires re-verification).
+*   **Delivery Fee Config:** "Express" segment addition deemed acceptable.
+*   **UAT Configuration:** Pinelabs split feature flag disabled in UAT by Zaw Myo Htet for testing purposes.
+
+**Key Dates & Deadlines**
+*   **Mar 9 (Historical/Reference):** PLU processor deployment; Production deploy of order-service changes (11 PM).
+*   **Thursday (Upcoming):** D&T All Hands meeting.
+*   **Mar 31, 2026:** Sports Hub FFS store closure deadline.
+*   **Ongoing:** UAT validation for inventory thresholds, Code Review cycles, and Amplitude/Re-delivery logic investigations.
+
+**Note on Historical Context:** Previous mentions of code review priorities for `layout-service` PR #362, `website-service` PR #649, and `lt-strudel-api-go` PR #472 are superseded by the new urgent request for Lester to review PR #1538. The focus has now shifted to resolving NED-278216 and Pinelabs UAT testing.
+
+
+## gchat/space/AAQAUJW8HMo: ❗ Important Email
+Source: gchat | Group: space/AAQAUJW8HMo | Last Activity: 2026-03-19T07:05:17.753000+00:00 | Last Updated: 2026-03-19T14:57:46.798511+08:00
+**Daily Work Briefing Summary (Updated)**
+
+**Key Participants & Roles**
+*   **Michael Bui (You):** Managing Osmos support, event RSVPs, FileVault compliance, performance feedback, and Project Light coordination.
+*   **Alvin Choo:** Organizer of the "1 on 1 with michael" meeting; organizer of "[Placeholder] Project Light."
+*   **Miguel Ho Xian Da (FairPrice):** Lead requesting OSMOS integration for new retail media touchpoints.
+*   **Tong A. Yu (Accenture):** Proposed focused working session to review content landscape and integration options.
+*   **Winson Lim:** Guest attendee for Alvin Choo's performance meeting.
+*   **Bryan Choong (FairPrice):** On leave until Mar 24; OSMOS concerns deferred to his return.
+
+**Main Topics**
+1.  **Performance Feedback & Project Light:**
+    *   **Feedback Session:** Scheduled for Wednesday, Mar 18, 2026, at 4:00 PM SGT with Alvin Choo and Winson Lim.
+    *   **Project Light:** **UPDATED TIME**: Meeting rescheduled to **Thursday, March 19, 2026, from 5:00 PM – 6:00 PM SGT** (previously 3:00–4:00 PM). Location: FairPrice Hub-11-L11 Cappuccino (10) [Google Meet]. Attendees include Tiong Siong Tee, Akash Gupta, Daryl Ng, and Gopalakrishna Dhulipati.
+2.  **OSMOS Retail Media Integration (High Priority):** FairPrice Group is scaling Smart Carts, Digital Price Card, and IPOS, creating a need to consolidate disparate Content Management Systems (CMS).
+    *   **Status:** OSMOS supports dynamic video/images; short-term integration is feasible if architecture details are provided.
+    *   **Action:** Accenture team (Tong A. Yu) and Miguel Ho agreed to prioritize a working session next week to define the integration architecture.
+3.  **DPD Team BBQ:** Celebratory dinner for Mar 17, 2026 (6:00 PM – 9:00 PM) at BBQ Box, Jurong Point. Meet Lobby A at 5:45 PM.
+4.  **Mandatory Security Compliance:** FileVault encryption required by Mar 31, 2026.
+
+**Pending Actions & Ownership**
+*   **Project Light RSVP (Michael Bui):** **Critical**: Reply to Alvin Choo's updated invitation immediately confirming attendance for the new slot (Mar 19, 5:00 PM SGT).
+*   **Performance Meeting RSVP (Michael Bui):** Confirm attendance for Mar 18, 4:00 PM SGT.
+*   **OSMOS Coordination:** Support Accenture team in developing the detailed integration architecture. Await timeslots from Miguel Ho to schedule the working session.
+*   **FileVault Encryption (Michael Bui):** Register via calendar ASAP. Book appointment with Geek Squad (FP Hub Level 15) for Mar 28 deadline (Final: Mar 31). Bring MacBook; backup files to Google Drive.
+
+**Decisions Made**
+*   **OSMOS Capability:** Confirmed feasible short-term integration for dynamic media, contingent on receiving SmartCart/IPOS architecture details from FPG.
+*   **Working Session:** Prioritized for the week following March 12 to clarify requirements and determine long-term vision (Centralized CMS vs. intermediary layer).
+*   **Legacy SA Definition:** Accounts from 2019–2020; key removal priority before decommissioning.
+
+**Critical Dates & Deadlines**
+*   **Mar 16, 2026 (EOD):** RSVP deadline for DPD BBQ.
+*   **Mar 18, 2026 (4:00 PM):** Performance Feedback Meeting with Alvin Choo/Winson Lim.
+*   **Mar 19, 2026 (5:00 PM – 6:00 PM):** **Updated** Project Light meeting with Alvin Choo and team at FairPrice Hub-11-L11 Cappuccino.
+*   **Mar 24, 2026:** Bryan Choong returns; OSMOS support resumes.
+*   **Mar 28, 2026:** Internal FileVault deadline.
+*   **Mar 31, 2026:** Final FileVault compliance and FY2025 cycle closure.
+
+
+## gchat/space/AAQAgT-LpYY/LNq_qjvCggc: BCRS Firefighting Group
+Source: gchat | Group: space/AAQAgT-LpYY/LNq_qjvCggc | Last Activity: 2026-03-19T06:59:02.027000+00:00 | Last Updated: 2026-03-19T13:35:49.578778+08:00
+**Daily Work Briefing: BCRS Firefighting Group**
+
+**Key Participants & Roles**
+*   **Prajney Sribhashyam:** Initiator/Inquirer regarding deployment status.
+*   **Michael Bui:** Deployment lead (handling BCRS deposit posting).
+*   **Sneha Parab:** Release manager clarifying dependency logic for Seller Reports and Marketplace changes.
+
+**Main Topic**
+Status verification of three specific feature deployments (Invoice, Sales Posting, Seller Reports) to Production (PRD), specifically regarding feature flags and UAT sign-off requirements.
+
+**Decisions Made**
+1.  **No Immediate Deployment:** None of the requested features (Invoice, Sales Posting, Seller Reports) are currently deployed to PRD.
+2.  **Batch Release Strategy:** All changes must be released together to Production. Partial deployment is prohibited due to dependencies on BCRS data flows within the sync process.
+3.  **Trigger Condition:** The combined release will occur only after receiving UAT sign-off for Marketplace based on new requirement changes.
+
+**Pending Actions & Ownership**
+*   **Michael Bui (Owner):** Await PRD deployment request.
+    *   *Constraint:* Can only begin deploying to PRD after UAT sign-off is explicitly indicated in the Jira ticket.
+    *   *Requirement:* Must include the expected completion date on the ticket.
+*   **Team/Jira Owners:** Obtain and record UAT sign-off for Marketplace new requirement changes.
+*   **Michael Bui (Owner):** Estimate a 1–2 day timeline for PRD deployment once initiated.
+
+**Key Dates & Deadlines**
+*   **Current Date of Discussion:** March 19, 2026.
+*   **Estimated Deployment Duration:** 1–2 days post-initiation.
+*   **Next Milestone:** Submission of UAT sign-off to Jira (Date TBD by team).
+
+**Clarifications**
+Prajney Sribhashyam sought clarification on whether the restriction referred specifically to the "SKU creation flow," though Sneha Parab confirmed the broader scope involves all changes dependent on BCRS data sync.
+
+
+## gchat/dm/8oukJSAAAAE: Lester Santiago Soriano
+Source: gchat | Group: dm/8oukJSAAAAE | Last Activity: 2026-03-19T06:52:25.338000+00:00 | Last Updated: 2026-03-19T14:55:40.152708+08:00
+**Daily Work Briefing: Google Chat Summary**
+
+**1. Key Participants & Roles**
+*   **Lester Santiago Soriano**: Initiator of the inquiry; likely a Stakeholder, Project Manager, or Peer responsible for deployment coordination.
+
+**2. Main Topic/Discussion**
+*   The discussion centers on the operational status and scheduling of a specific deployment. Lester is confirming whether the `go-platform-website` service is scheduled for deployment on the current date (March 19, 2026).
+
+**3. Pending Actions & Ownership**
+*   **Action**: Provide confirmation regarding the deployment schedule for `go-platform-website`.
+    *   **Owner**: The recipient of Lester's message (likely a Developer, DevOps Engineer, or Release Manager).
+    *   **Status**: Awaiting response.
+
+**4. Decisions Made**
+*   No decisions were made in this conversation thread; it is an active inquiry seeking status confirmation.
+
+**5. Key Dates & Deadlines**
+*   **Date of Inquiry**: March 19, 2026 (14:52 UTC+8).
+*   **Target Deployment Window**: "Today" (March 19, 2026).
+*   **Follow-up Required**: Immediate response needed to clarify deployment status.
+
+**6. Reference Details**
+*   **Resource**: Lester Santiago Soriano
+*   **Chat URL**: https://chat.google.com/dm/8oukJSAAAAE
+*   **Project Artifact**: `go-platform-website`
+
+
 ## gchat/space/AAQAX9iKYf0: Team Starship
-Source: gchat | Group: space/AAQAX9iKYf0 | Messages: 3 | Last Activity: 2026-03-19T14:46:28.605000+08:00 | Last Updated: 2026-03-19T14:57:20.594719+08:00
+Source: gchat | Group: space/AAQAX9iKYf0 | Last Activity: 2026-03-19T06:46:28.605000+00:00 | Last Updated: 2026-03-19T14:57:20.594719+08:00
 **Daily Work Briefing: Team Starship (Updated)**
 
 **Key Participants & Roles**
@@ -210,50 +420,8 @@ Source: gchat | Group: space/AAQAX9iKYf0 | Messages: 3 | Last Activity: 2026-03-
 *   **Reference Tickets:** SHOP-3779, OMNI-1099, DPD-100, **DPD-783**, OMNI-1345, OMNI-1282, OMNI-1421.
 
 
-## gchat/space/AAQAUJW8HMo: ❗ Important Email
-Source: gchat | Group: space/AAQAUJW8HMo | Messages: 8 | Last Activity: 2026-03-19T14:46:08.491000+08:00 | Last Updated: 2026-03-19T14:57:46.798511+08:00
-**Daily Work Briefing Summary (Updated)**
-
-**Key Participants & Roles**
-*   **Michael Bui (You):** Managing Osmos support, event RSVPs, FileVault compliance, performance feedback, and Project Light coordination.
-*   **Alvin Choo:** Organizer of the "1 on 1 with michael" meeting; organizer of "[Placeholder] Project Light."
-*   **Miguel Ho Xian Da (FairPrice):** Lead requesting OSMOS integration for new retail media touchpoints.
-*   **Tong A. Yu (Accenture):** Proposed focused working session to review content landscape and integration options.
-*   **Winson Lim:** Guest attendee for Alvin Choo's performance meeting.
-*   **Bryan Choong (FairPrice):** On leave until Mar 24; OSMOS concerns deferred to his return.
-
-**Main Topics**
-1.  **Performance Feedback & Project Light:**
-    *   **Feedback Session:** Scheduled for Wednesday, Mar 18, 2026, at 4:00 PM SGT with Alvin Choo and Winson Lim.
-    *   **Project Light:** **UPDATED TIME**: Meeting rescheduled to **Thursday, March 19, 2026, from 5:00 PM – 6:00 PM SGT** (previously 3:00–4:00 PM). Location: FairPrice Hub-11-L11 Cappuccino (10) [Google Meet]. Attendees include Tiong Siong Tee, Akash Gupta, Daryl Ng, and Gopalakrishna Dhulipati.
-2.  **OSMOS Retail Media Integration (High Priority):** FairPrice Group is scaling Smart Carts, Digital Price Card, and IPOS, creating a need to consolidate disparate Content Management Systems (CMS).
-    *   **Status:** OSMOS supports dynamic video/images; short-term integration is feasible if architecture details are provided.
-    *   **Action:** Accenture team (Tong A. Yu) and Miguel Ho agreed to prioritize a working session next week to define the integration architecture.
-3.  **DPD Team BBQ:** Celebratory dinner for Mar 17, 2026 (6:00 PM – 9:00 PM) at BBQ Box, Jurong Point. Meet Lobby A at 5:45 PM.
-4.  **Mandatory Security Compliance:** FileVault encryption required by Mar 31, 2026.
-
-**Pending Actions & Ownership**
-*   **Project Light RSVP (Michael Bui):** **Critical**: Reply to Alvin Choo's updated invitation immediately confirming attendance for the new slot (Mar 19, 5:00 PM SGT).
-*   **Performance Meeting RSVP (Michael Bui):** Confirm attendance for Mar 18, 4:00 PM SGT.
-*   **OSMOS Coordination:** Support Accenture team in developing the detailed integration architecture. Await timeslots from Miguel Ho to schedule the working session.
-*   **FileVault Encryption (Michael Bui):** Register via calendar ASAP. Book appointment with Geek Squad (FP Hub Level 15) for Mar 28 deadline (Final: Mar 31). Bring MacBook; backup files to Google Drive.
-
-**Decisions Made**
-*   **OSMOS Capability:** Confirmed feasible short-term integration for dynamic media, contingent on receiving SmartCart/IPOS architecture details from FPG.
-*   **Working Session:** Prioritized for the week following March 12 to clarify requirements and determine long-term vision (Centralized CMS vs. intermediary layer).
-*   **Legacy SA Definition:** Accounts from 2019–2020; key removal priority before decommissioning.
-
-**Critical Dates & Deadlines**
-*   **Mar 16, 2026 (EOD):** RSVP deadline for DPD BBQ.
-*   **Mar 18, 2026 (4:00 PM):** Performance Feedback Meeting with Alvin Choo/Winson Lim.
-*   **Mar 19, 2026 (5:00 PM – 6:00 PM):** **Updated** Project Light meeting with Alvin Choo and team at FairPrice Hub-11-L11 Cappuccino.
-*   **Mar 24, 2026:** Bryan Choong returns; OSMOS support resumes.
-*   **Mar 28, 2026:** Internal FileVault deadline.
-*   **Mar 31, 2026:** Final FileVault compliance and FY2025 cycle closure.
-
-
 ## gchat/space/AAQAgT-LpYY: BCRS Firefighting Group
-Source: gchat | Group: space/AAQAgT-LpYY | Messages: 9 | Last Activity: 2026-03-19T14:42:21.866000+08:00 | Last Updated: 2026-03-19T14:58:18.911781+08:00
+Source: gchat | Group: space/AAQAgT-LpYY | Last Activity: 2026-03-19T06:42:21.866000+00:00 | Last Updated: 2026-03-19T14:58:18.911781+08:00
 **Updated Briefing: BCRS Firefighting Group**
 **Date:** March 19, 2026 (Latest activity: 3:49 PM)
 **Source:** Google Chat Space & Shared UAT Tracker (55 messages total)
@@ -308,7 +476,7 @@ Source: gchat | Group: space/AAQAgT-LpYY | Messages: 9 | Last Activity: 2026-03-
 
 
 ## gchat/space/AAQAHH3dAYc/OceYc-m64a4: [D&T] Discussion service account key decommission
-Source: gchat | Group: space/AAQAHH3dAYc/OceYc-m64a4 | Last Activity: 2026-03-19T14:41:21.327000+08:00 | Last Updated: 2026-03-19T14:42:45.479313+08:00
+Source: gchat | Group: space/AAQAHH3dAYc/OceYc-m64a4 | Last Activity: 2026-03-19T06:41:21.327000+00:00 | Last Updated: 2026-03-19T14:42:45.479313+08:00
 **Daily Work Briefing: D&T Discussion Service Account Key Decommission**
 
 **Key Participants & Roles**
@@ -344,7 +512,7 @@ Discussion regarding the decommissioning of D&T Discussion service account keys 
 
 
 ## gchat/space/AAQAXn1ocmE: Retail out of home (Digital Screens & CMS)
-Source: gchat | Group: space/AAQAXn1ocmE | Last Activity: 2026-03-19T14:29:07.057000+08:00 | Last Updated: 2026-03-19T14:43:43.911205+08:00
+Source: gchat | Group: space/AAQAXn1ocmE | Last Activity: 2026-03-19T06:29:07.057000+00:00 | Last Updated: 2026-03-19T14:43:43.911205+08:00
 **Daily Work Briefing: Retail Out of Home (Digital Screens & CMS)**
 
 **Key Participants & Roles**
@@ -386,7 +554,7 @@ The discussion centers on operationalizing **Retail Out of Home (RoOH) Phase 1**
 
 
 ## gchat/space/AAQAN8mDauE/ewxUvQHmSUM: [Leads] (Ecom/Omni) Digital Product Development
-Source: gchat | Group: space/AAQAN8mDauE/ewxUvQHmSUM | Last Activity: 2026-03-19T14:11:08.484000+08:00 | Last Updated: 2026-03-19T14:22:35.681744+08:00
+Source: gchat | Group: space/AAQAN8mDauE/ewxUvQHmSUM | Last Activity: 2026-03-19T06:11:08.484000+00:00 | Last Updated: 2026-03-19T14:22:35.681744+08:00
 **Daily Work Briefing: Service Key Rotation Initiative**
 
 **Key Participants & Roles**
@@ -420,7 +588,7 @@ Coordination regarding a **service key rotation** initiative involving the SRE (
 
 
 ## gchat/space/AAQAHH3dAYc: [D&T] Discussion service account key decommission
-Source: gchat | Group: space/AAQAHH3dAYc | Last Activity: 2026-03-19T14:06:01.925000+08:00 | Last Updated: 2026-03-19T14:22:59.237523+08:00
+Source: gchat | Group: space/AAQAHH3dAYc | Last Activity: 2026-03-19T06:06:01.925000+00:00 | Last Updated: 2026-03-19T14:22:59.237523+08:00
 **Daily Work Briefing: [D&T] Service Account Key Decommission**
 
 **Key Participants & Roles**
@@ -463,7 +631,7 @@ Himal Hewagamage will await G Suite group names from leads to onboard active acc
 
 
 ## gchat/dm/yHhI1sAAAAE: Zaw Myo Htet
-Source: gchat | Group: dm/yHhI1sAAAAE | Last Activity: 2026-03-19T13:59:42.142000+08:00 | Last Updated: 2026-03-19T14:23:34.171944+08:00
+Source: gchat | Group: dm/yHhI1sAAAAE | Last Activity: 2026-03-19T05:59:42.142000+00:00 | Last Updated: 2026-03-19T14:23:34.171944+08:00
 **Daily Work Briefing Summary**
 
 **Key Participants & Roles**
@@ -492,57 +660,8 @@ Clarification on operational workflow regarding order posting procedures specifi
 *   Contact **Calvin Phan** to resolve the procedural ambiguity regarding Preorder posting processes.
 
 
-## gchat/dm/t3wf6EAAAAE: Nikhil Grover
-Source: gchat | Group: dm/t3wf6EAAAAE | Last Activity: 2026-03-19T13:56:18.617000+08:00 | Last Updated: 2026-03-19T14:24:34.126562+08:00
-**Daily Work Briefing: Nikhil Grover & Michael Bui**
-
-**Key Participants & Roles**
-*   **Nikhil Grover:** Initiator; coordinating UAT, managing configuration split flags, providing cost-saving metrics, and requesting meeting access.
-*   **Michael Bui:** Technical Lead (Engineering); enabling deployments, validating API logic, managing Jira tickets, and granting meeting co-host privileges.
-
-**Main Topics**
-1.  **Deployment Acceleration (Vertical Scroll & Swimlane Ads):**
-    *   **Timeline Shift:** Target go-live moved from Monday (March 23) to **Wednesday, March 19**, contingent on immediate UAT signoff.
-    *   **Process Change:** Deployment can proceed today if Nikhil signs off on the Jira ticket after lunch. Without this, deployment pushes to Tuesday.
-    *   **Configuration Management:** Michael emphasized setting split flags correctly. Nikhil will configure slots and share for confirmation before managing configurations independently going forward. Configs can be adjusted while keeping features disabled ("off") for safety.
-
-2.  **UAT Scope & Data Sources:**
-    *   UAT must cover both swimlanes and vertical scrolling simultaneously to validate shared API logic.
-    *   **Data Source Verification:** Daryl is still required to identify Algolia vs. DS swimlanes on OMNI Home and enable test instances for ads.
-
-3.  **Ad Placement Anomaly:**
-    *   Nikhil observed ads on slots 2 and 4 during UAT, deviating from the `[1,3,3,5]` logic. Michael suspects Out-of-Stock (OOS) products are masking the logic and requires checking "Normal" behavior to confirm.
-
-4.  **Cost Optimization:**
-    *   Nikhil confirmed an estimated cost saving of **$4k/month** for Segment overage optimization.
-
-5.  **Meeting Access & Collaboration Tools:**
-    *   **Access Restriction:** Nikhil requested co-host privileges for meetings, noting he lacks Gemini access otherwise.
-    *   **Resolution:** Michael Bui confirmed the request was completed at 13:56 on March 19.
-
-**Decisions Made**
-*   **Accelerated Deployment:** Proceed with deployment on Wednesday, March 19, provided UAT signoff is received after lunch.
-*   **Configuration Handover:** Nikhil to assume responsibility for setting slot split flags after initial confirmation by Michael.
-*   **Ticket Consolidation:** Segment/ Omni optimization tasks consolidated into the existing DPD ticket structure.
-*   **Collaborative Access:** Nikhil Grover granted co-host status on meetings to facilitate collaboration in the absence of Gemini access.
-
-**Pending Actions & Owners**
-*   **UAT Signoff (Nikhil Grover):** Provide Jira signoff and configure split flags after lunch on March 19 for today's deployment attempt.
-*   **Data Source Verification (Daryl):** Identify Algolia vs. DS swimlanes on OMNI Home and enable instances for testing.
-*   **Ad Placement Investigation (Michael Bui):** Verify if OOS products cause slot 2/4 anomalies by checking "Normal" behavior.
-*   **Ticket Consolidation:** Nikhil Grover to ensure Segment optimization details are correctly linked within the DPD ticket.
-
-**Key Dates & Deadlines**
-*   **March 19, 2026 (Today):** Target deployment date contingent on afternoon UAT signoff; cost saving ($4k/mo) confirmed; meeting co-host access granted at 13:56.
-*   **Next Monday (March 23, 2026):** Original target go-live (now superseded by today's accelerated timeline).
-*   **Monday Stand-up:** Review OSMOS SKU support process.
-
-**Historical Context Note**
-Previous discussions established readiness for dynamic slots UAT with the `[1,3,3,5]` logic resolved. This session introduced vertical scrolling complexities and data source uncertainties (Algolia vs. DS). On March 20, negotiations shifted focus from a Monday go-live to an immediate deployment on Wednesday, March 19, pending configuration signoff. New discussions also clarified Segment optimization savings ($4k/mo) and ticket organization protocols. Additionally, operational access was updated on March 19 at 13:56 to grant Nikhil Grover co-host privileges for meetings due to limited Gemini access.
-
-
 ## gchat/space/AAAAQQGZSZU: RMN Leadership
-Source: gchat | Group: space/AAAAQQGZSZU | Last Activity: 2026-03-19T13:53:30.957000+08:00 | Last Updated: 2026-03-19T14:24:53.240827+08:00
+Source: gchat | Group: space/AAAAQQGZSZU | Last Activity: 2026-03-19T05:53:30.957000+00:00 | Last Updated: 2026-03-19T14:24:53.240827+08:00
 **Daily Briefing Summary: RMN Leadership Space**
 
 **Key Participants & Roles**
@@ -580,7 +699,7 @@ Source: gchat | Group: space/AAAAQQGZSZU | Last Activity: 2026-03-19T13:53:30.95
 
 
 ## gchat/dm/7d1XKcAAAAE: Google Drive
-Source: gchat | Group: dm/7d1XKcAAAAE | Last Activity: 2026-03-19T13:48:20.013000+08:00 | Last Updated: 2026-03-19T14:25:24.600564+08:00
+Source: gchat | Group: dm/7d1XKcAAAAE | Last Activity: 2026-03-19T05:48:20.013000+00:00 | Last Updated: 2026-03-19T14:25:24.600564+08:00
 **Daily Work Briefing Summary (Updated)**
 
 **Key Participants & Roles:**
@@ -623,7 +742,7 @@ Source: gchat | Group: dm/7d1XKcAAAAE | Last Activity: 2026-03-19T13:48:20.01300
 
 
 ## gchat/space/AAAAu4WIubc: 📢 COM Notifications
-Source: gchat | Group: space/AAAAu4WIubc | Last Activity: 2026-03-19T13:45:42.708000+08:00 | Last Updated: 2026-03-19T14:25:54.699327+08:00
+Source: gchat | Group: space/AAAAu4WIubc | Last Activity: 2026-03-19T05:45:42.708000+00:00 | Last Updated: 2026-03-19T14:25:54.699327+08:00
 **Daily Work Briefing: SonarCloud Quality Monitoring**
 
 **Key Participants & Roles**
@@ -671,7 +790,7 @@ Automated SonarCloud quality gate scans for `catalogue-job`, `fpon-sap-jobs`, `s
 
 
 ## gchat/space/AAQA5_B3lZQ/8u4mgk65pbo: DPD AI Guild
-Source: gchat | Group: space/AAQA5_B3lZQ/8u4mgk65pbo | Last Activity: 2026-03-19T13:45:01.869000+08:00 | Last Updated: 2026-03-19T14:26:05.501884+08:00
+Source: gchat | Group: space/AAQA5_B3lZQ/8u4mgk65pbo | Last Activity: 2026-03-19T05:45:01.869000+00:00 | Last Updated: 2026-03-19T14:26:05.501884+08:00
 **Daily Work Briefing: DPD AI Guild**
 
 **Key Participants & Roles**
@@ -699,7 +818,7 @@ No formal decisions or approvals were reached during this exchange. The discussi
 
 
 ## gchat/space/AAAAYX-ew1s: SRE / Network / DBA / DevOps / Infra
-Source: gchat | Group: space/AAAAYX-ew1s | Last Activity: 2026-03-19T13:42:25.827000+08:00 | Last Updated: 2026-03-19T14:26:35.608685+08:00
+Source: gchat | Group: space/AAAAYX-ew1s | Last Activity: 2026-03-19T05:42:25.827000+00:00 | Last Updated: 2026-03-19T14:26:35.608685+08:00
 **Daily Work Briefing: SRE / Infrastructure Team**
 
 **Key Participants & Roles**
@@ -746,7 +865,7 @@ Source: gchat | Group: space/AAAAYX-ew1s | Last Activity: 2026-03-19T13:42:25.82
 
 
 ## gchat/space/AAQA5_B3lZQ: DPD AI Guild
-Source: gchat | Group: space/AAQA5_B3lZQ | Last Activity: 2026-03-19T13:27:20.198000+08:00 | Last Updated: 2026-03-19T14:26:47.652173+08:00
+Source: gchat | Group: space/AAQA5_B3lZQ | Last Activity: 2026-03-19T05:27:20.198000+00:00 | Last Updated: 2026-03-19T14:26:47.652173+08:00
 ### Daily Work Briefing: DPD AI Guild
 
 **1. Key Participants & Roles**
@@ -776,7 +895,7 @@ Discussion on leveraging the newly released **Mistral Small 4** to optimize loca
 
 
 ## gchat/space/AAAAQQGZSZU/sFEfapjbCgM: RMN Leadership
-Source: gchat | Group: space/AAAAQQGZSZU/sFEfapjbCgM | Last Activity: 2026-03-19T13:21:31.244000+08:00 | Last Updated: 2026-03-19T14:27:00.701343+08:00
+Source: gchat | Group: space/AAAAQQGZSZU/sFEfapjbCgM | Last Activity: 2026-03-19T05:21:31.244000+00:00 | Last Updated: 2026-03-19T14:27:00.701343+08:00
 **Daily Work Briefing: RMN Leadership Space**
 
 **Key Participants & Roles**
@@ -808,7 +927,7 @@ Discussion regarding the operational status of **Advertima devices** following t
 
 
 ## gchat/space/AAAAzZ3qkNU: [Prod Support] Offers
-Source: gchat | Group: space/AAAAzZ3qkNU | Last Activity: 2026-03-19T12:35:07.855000+08:00 | Last Updated: 2026-03-19T13:35:11.584637+08:00
+Source: gchat | Group: space/AAAAzZ3qkNU | Last Activity: 2026-03-19T04:35:07.855000+00:00 | Last Updated: 2026-03-19T13:35:11.584637+08:00
 **Daily Work Briefing: [Prod Support] Offers**
 
 **Key Participants & Roles**
@@ -844,7 +963,7 @@ No final technical decisions or fixes have been documented in this thread yet. T
 
 
 ## gchat/space/AAAAwg3yipA: PFM x Events/UID Martech Issues
-Source: gchat | Group: space/AAAAwg3yipA | Last Activity: 2026-03-19T12:07:59.815000+08:00 | Last Updated: 2026-03-19T13:35:34.129729+08:00
+Source: gchat | Group: space/AAAAwg3yipA | Last Activity: 2026-03-19T04:07:59.815000+00:00 | Last Updated: 2026-03-19T13:35:34.129729+08:00
 **Daily Work Briefing: PFM x Events/UID Martech Issues**
 
 **Key Participants & Roles**
@@ -887,87 +1006,8 @@ Source: gchat | Group: space/AAAAwg3yipA | Last Activity: 2026-03-19T12:07:59.81
 *   Confluence Ref: https://ntuclink.atlassian.net/wiki/spaces/CMT/pages/2674622589/Exclusion+Inclusion+Self-service+System
 
 
-## gchat/space/AAQAgT-LpYY/LNq_qjvCggc: BCRS Firefighting Group
-Source: gchat | Group: space/AAQAgT-LpYY/LNq_qjvCggc | Last Activity: 2026-03-19T11:56:03.757000+08:00 | Last Updated: 2026-03-19T13:35:49.578778+08:00
-**Daily Work Briefing: BCRS Firefighting Group**
-
-**Key Participants & Roles**
-*   **Prajney Sribhashyam:** Initiator/Inquirer regarding deployment status.
-*   **Michael Bui:** Deployment lead (handling BCRS deposit posting).
-*   **Sneha Parab:** Release manager clarifying dependency logic for Seller Reports and Marketplace changes.
-
-**Main Topic**
-Status verification of three specific feature deployments (Invoice, Sales Posting, Seller Reports) to Production (PRD), specifically regarding feature flags and UAT sign-off requirements.
-
-**Decisions Made**
-1.  **No Immediate Deployment:** None of the requested features (Invoice, Sales Posting, Seller Reports) are currently deployed to PRD.
-2.  **Batch Release Strategy:** All changes must be released together to Production. Partial deployment is prohibited due to dependencies on BCRS data flows within the sync process.
-3.  **Trigger Condition:** The combined release will occur only after receiving UAT sign-off for Marketplace based on new requirement changes.
-
-**Pending Actions & Ownership**
-*   **Michael Bui (Owner):** Await PRD deployment request.
-    *   *Constraint:* Can only begin deploying to PRD after UAT sign-off is explicitly indicated in the Jira ticket.
-    *   *Requirement:* Must include the expected completion date on the ticket.
-*   **Team/Jira Owners:** Obtain and record UAT sign-off for Marketplace new requirement changes.
-*   **Michael Bui (Owner):** Estimate a 1–2 day timeline for PRD deployment once initiated.
-
-**Key Dates & Deadlines**
-*   **Current Date of Discussion:** March 19, 2026.
-*   **Estimated Deployment Duration:** 1–2 days post-initiation.
-*   **Next Milestone:** Submission of UAT sign-off to Jira (Date TBD by team).
-
-**Clarifications**
-Prajney Sribhashyam sought clarification on whether the restriction referred specifically to the "SKU creation flow," though Sneha Parab confirmed the broader scope involves all changes dependent on BCRS data sync.
-
-
-## gchat/space/AAQAUbi9szY: [Internal] (Ecom/Omni) Digital Product Development
-Source: gchat | Group: space/AAQAUbi9szY | Last Activity: 2026-03-19T11:52:35.801000+08:00 | Last Updated: 2026-03-19T13:36:21.779688+08:00
-**Daily Work Briefing: Digital Product Development (Ecom/Omni)**
-
-**Key Participants & Roles**
-*   **Sneha Parab:** BCRS/Fees/Store Closure Impact Lead.
-*   **Daryl Ng:** Backoffice/Order Management/Bug Reporting / Amplitude Tracking inquiry.
-*   **Michael Bui:** BCRS Deposit Logic/SAP Integration/Publisher of PRs.
-*   **Wai Ching Chan:** Order Service Deployment/Slot Logic Validation.
-*   **Andin Eswarlal Rajesh:** Frontend (iOS/Android) & BCRS UX queries / Amplitude tracking investigation.
-*   **Lester Santiago Soriano:** Backend Services Lead.
-*   **Others:** Akash Gupta, Piraba Nagkeeran, Jonathan Tanudjaja, Zaw Myo Htet.
-
-**Main Topics Discussed**
-1.  **Order Verification Bug (NED-278216):** Daryl Ng flagged an order verification failure. The investigation points to the Whitelisting API returning older contract data (identified by Andin Eswarlal Rajesh). Team members Akash Gupta and Wai Ching Chan are reviewing this issue.
-2.  **BCRS Deposit & SAP Integration:** Critical issue regarding duplicate deposit postings remains active (Fix in progress: PR #6).
-3.  **Order Re-delivery Logic:** Confirmation received regarding `completed_at` value updates during re-delivery status changes from "dispatch" to "completed".
-4.  **Event Tracking Integration:** Investigation ongoing into Frontend event flow to Amplitude via the tracking service (Andin Eswarlal Rajesh assigned).
-5.  **Payment Feature Flagging:** Zaw Myo Htet announced the complete offboarding of the split feature flag for Pinelabs in UAT to facilitate specific testing.
-6.  **Store Closing Process:** Sports Hub FFS store closure scheduled for **31 Mar 2026**. Team continues to request inputs on Marketplace SKU removal and fulfillment impact.
-7.  **UAT & Inventory Logic:** Sneha Parab flagged a UAT query regarding bulk threshold data for Meiji Paigen Cultured Milk SKU (`0-fat-13023506`). Investigation focuses on `inventory-service` vs. catalogue/stock_override tables (Wai Ching Chan, Akash Gupta, Daryl Ng involved).
-8.  **Notification Deployment:** Query regarding gChat notification changes for "1HD" deployment status in production.
-
-**Pending Actions & Ownership**
-*   **Lester Santiago Soriano:** Review PR #1538 (`bitbucket.org/ntuclink/go-platform-website/pull-requests/1538`). Assist with Whitelisting API contract issue (cc: Piraba Nagkeeran, Jonathan Tanudjaja).
-*   **Akash Gupta & Wai Ching Chan:** Investigate NED-278216 order verification failure and the Whitelisting API returning older contracts.
-*   **Zaw Myo Htet:** Execute testing on offboarded Pinelabs split feature flag in UAT.
-*   **Michael Bui:** Deploy PLU processor changes (scheduled ~2-3pm); Request UD for listed SKUs; Review PR `bcrs-deposit-posting` #6.
-*   **Wai Ching Chan:** Validate PFC slot logic in UAT (requested by Daryl Ng). Assist in identifying the source of bulk threshold settings for UAT SKU `13023506`.
-*   **Andin Eswarlal Rajesh:** Investigate iOS slot mapping error and assist with Amplitude event tracking flow inquiry.
-*   **Team/Backend:** Resolve Daryl Ng's query regarding 1HD gChat notification deployment status.
-
-**Decisions Made**
-*   **Deployment Approval:** Sneha Parab approved PLU processor deployment pending UD alignment. Wai Ching Chan confirmed order-service PR #2910 is safe for production at 11 PM on Mar 9 (Note: Current date context suggests this decision applies to past planning or requires re-verification).
-*   **Delivery Fee Config:** "Express" segment addition deemed acceptable.
-*   **UAT Configuration:** Pinelabs split feature flag disabled in UAT by Zaw Myo Htet for testing purposes.
-
-**Key Dates & Deadlines**
-*   **Mar 9 (Historical/Reference):** PLU processor deployment; Production deploy of order-service changes (11 PM).
-*   **Thursday (Upcoming):** D&T All Hands meeting.
-*   **Mar 31, 2026:** Sports Hub FFS store closure deadline.
-*   **Ongoing:** UAT validation for inventory thresholds, Code Review cycles, and Amplitude/Re-delivery logic investigations.
-
-**Note on Historical Context:** Previous mentions of code review priorities for `layout-service` PR #362, `website-service` PR #649, and `lt-strudel-api-go` PR #472 are superseded by the new urgent request for Lester to review PR #1538. The focus has now shifted to resolving NED-278216 and Pinelabs UAT testing.
-
-
 ## gchat/space/AAQAcjNXKpA: DPD x Platform Engineering
-Source: gchat | Group: space/AAQAcjNXKpA | Last Activity: 2026-03-19T11:47:56.300000+08:00 | Last Updated: 2026-03-19T13:36:53.224725+08:00
+Source: gchat | Group: space/AAQAcjNXKpA | Last Activity: 2026-03-19T03:47:56.300000+00:00 | Last Updated: 2026-03-19T13:36:53.224725+08:00
 **Daily Work Briefing: DPD x Platform Engineering**
 
 **Key Participants & Roles**
@@ -1017,7 +1057,7 @@ Source: gchat | Group: space/AAQAcjNXKpA | Last Activity: 2026-03-19T11:47:56.30
 
 
 ## gchat/space/AAQAN8mDauE/KtpVSnYJ3ys: [Leads] (Ecom/Omni) Digital Product Development
-Source: gchat | Group: space/AAQAN8mDauE/KtpVSnYJ3ys | Last Activity: 2026-03-19T11:39:26.426000+08:00 | Last Updated: 2026-03-19T13:37:04.472806+08:00
+Source: gchat | Group: space/AAQAN8mDauE/KtpVSnYJ3ys | Last Activity: 2026-03-19T03:39:26.426000+00:00 | Last Updated: 2026-03-19T13:37:04.472806+08:00
 **Daily Work Briefing: Digital Product Development (Leads Ecom/Omni)**
 
 **Key Participants & Roles**
@@ -1047,7 +1087,7 @@ The scope for OMNI-1157 is confirmed as "new app only." The immediate next step 
 
 
 ## gchat/space/AAQA-ICuJRM: BCRS ECOMM SAP POSTING
-Source: gchat | Group: space/AAQA-ICuJRM | Last Activity: 2026-03-19T11:30:21.463000+08:00 | Last Updated: 2026-03-19T13:37:32.924893+08:00
+Source: gchat | Group: space/AAQA-ICuJRM | Last Activity: 2026-03-19T03:30:21.463000+00:00 | Last Updated: 2026-03-19T13:37:32.924893+08:00
 **Daily Work Briefing: BCRS ECOMM SAP POSTING & Refunds UAT**
 
 **Key Participants & Roles**
@@ -1092,48 +1132,8 @@ UAT testing for BCRS E-commerce involving Sales Posting to SAP (F420) and the in
 *   **Immediate Follow-up:** Complete test case markup by Lai Shu Hui and finalize Zendesk/Operations Portal access issues to close UAT today.
 
 
-## gchat/space/AAQAN8mDauE: [Leads] (Ecom/Omni) Digital Product Development
-Source: gchat | Group: space/AAQAN8mDauE | Last Activity: 2026-03-19T11:29:34.982000+08:00 | Last Updated: 2026-03-19T13:37:56.311773+08:00
-**Daily Work Briefing: Leads (Ecom/Omni) Digital Product Development**
-
-**Key Participants & Roles**
-*   **Sneha Parab:** Lead/Manager; coordinating cross-team support, SAP/API integration blockers.
-*   **Michael Bui:** Engineering/RMN Architect; managing architecture updates and infrastructure compliance.
-*   **Alvin Choo:** Leadership; addressing feedback loops, release schedules, and new epic queries.
-*   **Gopalakrishna Dhulipati:** Lead; overseeing risk registers, delivery approvals, and now leading service key rotation with SRE.
-*   **Others Active:** Daryl Ng (raised recent inquiry), Andin Eswarlal Rajesh, Olivia, Koklin, Zaw.
-
-**Main Topics**
-1.  **SAP/Deposit SKU Integration Blocker:** Marketplace lacks deposit data for SAP API integration. Proposed manual UD failed MP Ops sign-off due to poor PM communication; Olivia rejected new technical solutions. Immediate action from SAP team required.
-2.  **Requirement Clarity (BCRS):** Michael Bui flagged that "follow existing ones" is unacceptable acceptance criteria for BCRS deposit posting. Explicit UAT scenarios are required for Definition of Ready (DoR).
-3.  **Infrastructure Compliance:** Bitnami ending free Docker images impacts `sonic_raptor` and `mkp-fairnex`. Migration is mandatory.
-4.  **Service Key Rotation:** Gopalakrishna Dhulipati requested leads take ownership with the SRE team; discussion moved to a dedicated room.
-5.  **B2B Testing Alignment:** Sneha Parab raised queries on finalized B2B testing procedures. Zaw requires guidance on producing MP SKUs specifically for B2B testing.
-6.  **New Epic Inquiry (OMNI-1157):** Daryl Ng raised an item from the weekly epics (Jira link: OMNI-1157). Ravi indicated this action should only be performed for the new app. Alvin Choo and Gopalakrishna Dhulipati were tagged to clarify status.
-
-**Pending Actions & Owners**
-*   **OMNI-1157 Clarification:** Confirm if the item applies solely to the new app as per Ravi's feedback; coordinate with Daryl Ng. (Owners: Alvin Choo/Gopalakrishna Dhulipati)
-*   **Service Key Rotation:** Leads to take ownership of rotation with SRE. Review details in dedicated room. (Owner: All Leads / Gopalakrishna Dhulipati)
-*   **B2B Testing Procedure:** Clarify process for producing MP SKUs and confirm alignment status. Response required from Gopalakrishna Dhulipati regarding Zaw's inquiry. (Owner: Sneha Parab/Gopalakrishna Dhulipati)
-*   **SAP Timeline Resolution:** Push SAP team to explore deposit SKU data solutions; provide timeline. (Owner: Sneha Parab/Alvin Choo/Gopalakrishna Dhulipati)
-*   **BCRS Requirements:** Define explicit UAT scenarios with Koklin. (Owner: Alvin Choo/Gopalakrishna Dhulipati)
-*   **Infrastructure Migration:** Address Bitnami Docker image end-of-life. (Owner: Engineering Team/Michael Bui)
-*   **RAW Forms Review:** Review Risk Register for DPD RAW forms; confirm handovers and renew expired forms. Deadline: Tomorrow EOD. (Owner: All Leads/Sazali Bin Mohammed Ali's team)
-
-**Decisions Made**
-*   **RMN Architecture:** Michael Bui updated current, future, and transition architecture diagrams.
-*   **Townhall Coordination:** Team to meet Hui Hui post-townhall; no full Q&A scheduled.
-*   **Release Status:** Questions remain regarding holding today's regular app release (pending confirmation).
-
-**Key Dates & Deadlines**
-*   **RAW Forms Review:** Due Tomorrow EOD.
-*   **Townhall Meeting:** Today post-townhall session.
-*   **Chee Hoe Support:** Effective end of March for Product Catalogue/MarTech scope.
-*   **Bitnami Migration:** Ongoing (immediate action required).
-
-
 ## gchat/space/AAQA85dw4So: RMN Notification
-Source: gchat | Group: space/AAQA85dw4So | Last Activity: 2026-03-19T11:21:05.866000+08:00 | Last Updated: 2026-03-19T13:38:46.631987+08:00
+Source: gchat | Group: space/AAQA85dw4So | Last Activity: 2026-03-19T03:21:05.866000+00:00 | Last Updated: 2026-03-19T13:38:46.631987+08:00
 **Daily Work Briefing: Automated Test Results Summary (RMN Notification)**
 
 **Key Participants & Roles**
@@ -1171,7 +1171,7 @@ The conversation comprises automated notifications from the Collection Runner re
 
 
 ## gchat/space/AAQAgT-LpYY/fN7jxS6RotE: BCRS Firefighting Group
-Source: gchat | Group: space/AAQAgT-LpYY/fN7jxS6RotE | Last Activity: 2026-03-19T10:53:49.779000+08:00 | Last Updated: 2026-03-19T13:38:59.240164+08:00
+Source: gchat | Group: space/AAQAgT-LpYY/fN7jxS6RotE | Last Activity: 2026-03-19T02:53:49.779000+00:00 | Last Updated: 2026-03-19T13:38:59.240164+08:00
 **Daily Work Briefing: BCRS Firefighting Group**
 
 **1. Key Participants & Roles**
@@ -1201,3 +1201,1003 @@ On 19 March, Prajney Sribhashyam inquired about UAT readiness for SnG refunds by
 **Reference Resources**
 *   **Group:** BCRS Firefighting Group
 *   **Chat URL:** https://chat.google.com/space/AAQAgT-LpYY
+
+
+## gchat/space/AAAAs0DTvmA: [Prod Support] Marketplace
+Source: gchat | Group: space/AAAAs0DTvmA | Last Activity: 2026-03-19T02:40:22.291000+00:00 | Last Updated: 2026-03-19T13:39:59.701362+08:00
+**Daily Work Briefing: [Prod Support] Marketplace**
+
+**Key Participants & Roles**
+*   **Support/Operations:** Willie Tan, Iris Chang, Lalita Phichagonakasit, Charlene Tan, Jie Yi Tan, Ayton See.
+*   **Technical/Admin Team:** Dang Hung Cuong, Shiva Kumar Yalagunda Bas (Frequent recipients of access/access issues), Olivia -, Amos Lam, Jill Ong, Greta Lee, Zaw Myo Htet, Angella Yeo, Cassandra Thoi.
+
+**Main Topics & Discussion Summary**
+The conversation covers critical operational blockers regarding seller onboarding, order fulfillment discrepancies, system configuration errors, and recent customer-facing listing failures. Major themes include:
+1.  **Access Management:** Multiple requests to grant "PickerApp" access for new or existing sellers (Meat Affair, Old Shanghai, BulkMartGo, PETS STATION HOLDING). Charlene Tan reported a new seller (Woah Group) encountering errors under the "Offers" section.
+2.  **Sales Data & Reporting:** Issues with vendors (CoLab Apac, Old Shanghai) not receiving sales breakdown reports since inception.
+3.  **Promotion & Pricing Conflicts:**
+    *   Conflicting promotions for "Falcon Galaxy Strong Garbage Bag" requiring one to be disabled.
+    *   Incorrect backend promotion configuration causing frontend stuck states (Ayton See).
+    *   Urgent case: A promotion expired in Mirakl but remains active on the front end, risking financial loss (Jill Ong).
+    *   Discount prices not showing despite SKU publication.
+4.  **Fulfillment & System Errors:**
+    *   Delivery slot display discrepancy for seller "Funa" (Mirakl shows 91h vs Frontend date) reported previously; now updated to a specific window duration issue on Mar 19.
+    *   Missing items in PickerApp compared to email picklists (Atasco Dairy, Estalife).
+    *   Orders completed without delivery by NJV (Order #246974265, #248270820).
+    *   Seller description/image updates not triggering "Pending Verification" status.
+5.  **New Listing & Logic Queries:**
+    *   **Item Visibility:** Lalita Phichagonakasit reported SKU **13226899** failing to appear under postal code **762115** since March 14th, despite prior online availability.
+    *   **Picklist Logic:** Amos Lam raised a query regarding picklist generation for postponed orders (e.g., shifting from March 3rd to March 15th) and whether the system adjusts accordingly.
+6.  **SAP Configuration Inquiry:** Iris Chang queried the definition and data source of "Lead Time" within SAP T-code ZMP_VENDOR on Mar 18, seeking clarification on field extraction (Dang Hung Cuong, Amos Lam, Jill Ong cc'd).
+
+**Pending Actions & Ownership**
+*   **Close DF SOF Order:** Willie Tan requested closure; tracking via DST-2578 (Owners: Dang Hung Cuong, Shiva Kumar Yalagunda Bas).
+*   **Vendor Report Issues:** Investigate missing sales breakdown reports for CoLab Apac (NED-277148) and Old Shanghai (NED-277329).
+*   **Access Grants:** Grant PickerApp access to Meat Affair (tianying@tlfood.com.sg), BulkMartGo, PETS STATION HOLDING, and others.
+*   **Promotion Resolution:** Disable conflicting promotion for Falcon Galaxy Bags; urgently disable stuck backend promotion per Jill Ong. Investigate Woah Group "Offers" error (Charlene Tan).
+*   **Fulfillment Investigation:** Check why Estalife missing Final Picklist PFC; investigate delivery slot display for Funa Artistic Hampers & Gifts (Current focus: Window shows 4 days vs expected 2 days); determine trigger for NJV non-delivery completions (Orders #246974265, #248270820).
+*   **System Logic & Listing Fixes:**
+    *   Investigate missing SKU 13226899 listing for postcode 762115.
+    *   Clarify picklist generation logic for postponed orders (Amos Lam query to Dang Hung Cuong, Shiva Kumar Yalagunda Bas).
+    *   Resolve SAP ZMP_VENDOR Lead Time definition and data source question raised by Iris Chang (Dang Hung Cuong/Amos Lam ownership implied).
+
+**Decisions Made**
+*   None explicitly stated as final decisions; most items are requests for technical investigation or approval. Ayton See decided to educate a seller on promotion setup rules after identifying a configuration error. Dang Hung Cuong is currently addressing the Woah Group offers error, the postponed order logic query, and the SAP Lead Time inquiry.
+
+**Key Dates & Deadlines**
+*   **2026-03-03:** DF SOF order request raised.
+*   **2026-03-18 (Yesterday):** Iris Chang inquired about SAP T-code ZMP_VENDOR "Lead Time" definition; 8 replies generated.
+*   **2026-03-19 (Today/Recent):** Jie Yi Tan reported Funa Artistic Hampers & Gifts delivery window discrepancy (4 days vs 2 days expected); discussion ongoing with 34 replies and last update 24 minutes ago.
+*   **Historical Context:** Previous dates regarding NJV orders, Estalife picklists, and SKU visibility remain relevant to the active investigation list.
+
+
+## gchat/space/AAAA8dv5lp0: fairnex-datadog-notification
+Source: gchat | Group: space/AAAA8dv5lp0 | Last Activity: 2026-03-19T02:39:45.338000+00:00 | Last Updated: 2026-03-19T13:40:31.414818+08:00
+**Daily Work Briefing: Datadog Monitoring Alerts (fairnex-datadog-notification)**
+
+**Key Participants & Roles**
+*   **Datadog App:** Automated monitoring system.
+*   **Service Owner(s):** `dpd-fulfilment` / `seller-experience` squad.
+*   **Notification Target:** `@hangouts-fairnex-datadog-notification`.
+
+**Main Topic**
+The conversation comprises automated Datadog alerts for the production environment (`env:prod`). Instability in Mirakl integration has extended from March 17 through mid-day on March 18, and resumed on March 19. Additionally, a recurring latency spike was detected in the `picklist-pregenerator` service on the night of March 17 and again early morning March 19. All new alerts triggered today (March 19) were automatically recovered.
+
+**Incident Summary & Timeline (2026-03-15 to 2026-03-19)**
+*   **Service:** `fni-order-create` (Mirakl Integration) – **Recurring Pattern Continuation**
+    *   **Cycle D (Mar 18, 08:46):** Triggered at 08:46:39 UTC. Recovered by 08:51:50 UTC (~5 mins).
+    *   **Cycle E (Mar 18, 13:02):** Triggered at 13:02:39 UTC. Recovered by 13:09:49 UTC (~7 mins).
+    *   **Cycle F (Mar 19, 01:38):** Triggered at 09:38:39 UTC (Local Time) with "Exception Occurred At Mirakl Route" and "Error while calling APIs." Both alerts recovered by 09:43:40 UTC (~5 mins duration).
+    *   **Note:** This confirms a persistent recurrence of Mirakl integration failures across March 17, 18, and 19.
+
+*   **Service:** `seller` (`picklist-pregenerator`) – **Recurring Latency**
+    *   **Cycle (Mar 17, 23:01):** Triggered with P2 warning (3604.897s duration). Recovered subsequently.
+    *   **Cycle F (Mar 19, 07:01):** Triggered at 07:01:23 UTC (Local Time) with P2 warning regarding completion time. Metric value: 3605.054s. Status recovered by subsequent monitoring cycles.
+
+*   **Service:** `fni-offer`
+    *   Historical incidents from March 15–17 remain noted. No new events reported in the current window.
+
+**Actions Pending & Ownership**
+*   **Action:** Investigate root cause of expanded Mirakl integration instability affecting `fni-order-create`. The pattern now includes three distinct recurrence windows across three consecutive days (Mar 17, 18, and 19), involving DBP route failures and persistent order-fetching issues.
+    *   **Owner:** `dpd-fulfilment` / `seller-experience` squad.
+*   **Action:** Investigate the root cause of extreme latency spikes in `picklist-pregenerator`. A cycle occurred on March 17 (3604s) and a near-identical spike was recorded on March 19 at 07:01 UTC (3605.054s).
+    *   **Owner:** `dpd-fulfilment` / `seller-experience` squad.
+*   **Action:** Review Monitor `29851723` logic for Apple Pay/Google Pay transactions following the March 16 spike (historical context) and resolve the test alert triggered on March 19 at 07:04 UTC regarding Google Pay metrics.
+    *   **Owner:** `dpd-fulfilment` / `seller-experience` squad.
+
+**Decisions Made**
+None. The conversation remains purely alert-driven without human discussion.
+
+**Key Dates & Follow-ups**
+*   **Active Period:** March 15–19, 2026.
+*   **Critical Deadlines:** Immediate investigation required due to the continuous recurrence of Mirakl errors and high-latency events in `picklist-pregenerator` spanning four days.
+
+**Summary for Leadership**
+Mirakl integration instability has persisted and intensified across March 17, 18, and 19. On March 19 (09:38 UTC), the system triggered "Exception Occurred At Mirakl Route" and "Error while calling APIs," resolving within 5 minutes. Simultaneously, `picklist-pregenerator` exhibited a critical performance anomaly on March 19 at 07:01 UTC with a completion time of 3605.054 seconds, mirroring the severity of the March 17 event (3604s). These recurring patterns suggest systemic issues within the data pipeline and job processing logic requiring urgent engineering review.
+
+
+## gchat/space/AAQAaCRlnFQ: @omni-ops #standup - Mar 19
+Source: gchat | Group: space/AAQAaCRlnFQ | Last Activity: 2026-03-19T02:02:26.108000+00:00 | Last Updated: 2026-03-19T13:40:41.357460+08:00
+**Daily Work Briefing: #standup Channel Update**
+
+**Key Participants & Roles**
+*   **Yangyu Wang**: Initiated the standup discussion. (Role inferred: Team member/Lead initiating daily sync).
+*   **Channel Audience**: 7 of 8 members viewed the message, indicating broad awareness within the `#standup` channel and the broader @omni-ops resource group.
+
+**Main Topic/Discussion**
+The sole recorded interaction is a prompt to commence or initiate the daily standup meeting. No specific project updates, blockers, or status reports were exchanged in this log snippet. The conversation consists entirely of the query "standup?", suggesting the session was just beginning or attendance was being confirmed.
+
+**Pending Actions & Ownership**
+*   **Initiate Standup**: Action to begin the meeting is pending.
+    *   **Owner**: Yangyu Wang (based on who initiated the call).
+    *   **Status**: Awaiting response from other team members to proceed with full participation or agenda setting.
+
+**Decisions Made**
+No formal decisions were recorded in this conversation segment due to the lack of substantive discussion beyond the initiation prompt.
+
+**Key Dates, Deadlines, & Follow-ups**
+*   **Date/Time**: March 19, 2026, at 10:02 AM (UTC+8).
+*   **Context**: Daily standup scheduled for this time slot.
+*   **Follow-up**: Next step is the actual completion of the standup round-robin or status sharing, which was not captured in the provided text.
+
+**Summary Note**
+This log represents only a single initiating message from Yangyu Wang to start the daily sync on March 19, 2026. The conversation ended immediately after the query with no further updates reported in this dataset.
+
+
+## gchat/space/AAQAR16KXqc: Product x RMN x Platform
+Source: gchat | Group: space/AAQAR16KXqc | Last Activity: 2026-03-19T02:00:12.056000+00:00 | Last Updated: 2026-03-19T13:41:00.981585+08:00
+**Daily Work Briefing: Product x RMN x Platform**
+
+**Key Participants**
+*   **Christopher Yong:** Product/Business Lead (seeking in-store data to close Nestle deal).
+*   **Rajiv Kumar Singh:** Ad Operations/Strategy.
+*   **Sanjana Sanjana:** Analytics/Measurement (GA tracking for sponsored vs. organic impressions).
+*   **Nikhil Grover:** Product Engineering (in-store data lead).
+*   **Vivian Lim Yu Qian:** Data Science/Ecom Search Lead.
+*   **Ravi Goel:** Source of FPG app user data and in-store transaction breakdowns.
+
+**Main Topics Discussed**
+1.  **In-Store Data Requirements (Nestle Deal):** Christopher Yong requested the average percentage breakdown of DCC (Direct-to-Consumer) vs. non-DCC in-store payments to validate measurable data scale for Nestle.
+    *   **Initial Response:** On March 19, Ravi Goel provided December 2025 GMV data, noting ~41% of grocery business GMV was checked out via app/digital loyalty.
+    *   **Current Status:** Christopher Yong noted that <50% DCC activity is not advantageous for the pitch. He has requested a deeper dive into transaction-level data to find more flattering metrics for Nestle engagement.
+2.  **Banner UX Standardization:** Nikhil Grover proposed standardizing banner auto-scroll timers from 5 to 3 seconds. Approved pending beta testing with CTR variance within 10% of baseline.
+3.  **Ecom Search Analysis:** Post-launch review showed stable RMN revenue (~$300/week uplift) but no significant new customer acquisition or conversion uplift despite increased search traffic.
+
+**Decisions Made**
+*   **Banner Timer Change:** Standardization to a 3-second auto-scroll timer approved, conditional on successful beta testing (CTR within 10% of baseline).
+*   **Data Analysis Direction:** Christopher Yong directed Ravi Goel and Nikhil Grover to investigate transaction-level data more deeply rather than relying solely on GMV percentages.
+
+**Pending Actions & Ownership**
+*   **Deep-Dive Data Analysis:** Ravi Goel and Nikhil Grover must analyze transaction-level data to identify a higher percentage of DCC activity that can be presented to the Nestle brand team.
+*   **Provide User Metrics:** Christopher Yong still awaits weekly/monthly active FPG app user data from Ravi.
+*   **Monitor Banner Beta Performance:** Product team to track impressions and CTR during the phased rollout (currently 20% on March 16–19; scaling to 50% by March 19). Proceed only if CTR variance stays within 10% of baseline.
+*   **GA Tracking Implementation:** Sanjana Sanjana to finalize tracking for Sponsored vs. Organic Product Impressions.
+
+**Key Dates & Deadlines**
+*   **March 16 (Mon):** Banner beta test began on iOS v7.24.0 and Android v7.22.1; Ecom Search rollout scheduled for Android.
+*   **March 16–19:** Banner phased rollout at 20% user volume.
+*   **March 19:** Banner scale-up to 50% of users. (Note: In-store data inquiry occurred during this phase).
+*   **March 23:** Banner full (100%) rollout scheduled.
+
+
+## gchat/space/AAAAjDYVcBU: FPG Everyone - General
+Source: gchat | Group: space/AAAAjDYVcBU | Last Activity: 2026-03-19T01:44:24.863000+00:00 | Last Updated: 2026-03-19T13:41:26.774616+08:00
+**Daily Work Briefing: FPG Everyone Chat Summary (Updated)**
+**Date Range:** March 3 – March 19, 2026
+**Source:** Google Chat (FPG Everyone - General)
+
+### Key Participants & Roles
+*   **Maisy Heeng:** Marketing/Product Announcement Lead.
+*   **Mary Pereira:** Mediacorp Microdrama Collaboration Lead.
+*   **Jolene Lim:** Own Brands Team (FairPrice Foaming Hand Soap).
+*   **Eva Wang, Siew Mei Chu, Ng Zhuang Shu:** OB Sensory Team.
+*   **Zhaoyue Touw & Ariel Yap:** Unity/Wellness Campaign Lead.
+*   **Cheryl Tan:** NTUC Women and Family Event Coordinator.
+*   **Kara Pua & Chloe Ong:** Loyalty/Rewards Coordination.
+*   **Pauline Tan:** FPG ADvantage LinkedIn Page Launch Lead.
+*   **Vincent Phua:** Digital & Technology Announcement (Cardless Access).
+
+### Main Topics
+1.  **Digital Access Rollout:** Schedule confirmed: Live (Facilities/Tech); Mar 16 (C-suite/HR/Finance); Mar 23 (Customer/Marketing/E-Commerce); Mar 30 (Remaining Hub staff). User guide distributed.
+2.  **Media Collaboration – "Bowl of Love":** FairPrice launched a microdrama with Mediacorp featuring fresh pork from Malaysia, focusing on Mdm Gao and porridge.
+    *   **Trailer:** Live on FB, IG, and TikTok.
+    *   **Episodes:** Dropping March 20–21, 2026, on @mediacorp.re.dian TikTok.
+    *   **Cast:** Tyler Tennn, Tasha Low, Xiang Yun.
+3.  **Sensory Testing Panels:**
+    *   **Frozen Snacks:** Evaluation scheduled for March 18 & 19, 2026 (3 slots). Limited to 40 panelists. Mobile device submission required.
+    *   **Chapati:** Screening form remains open.
+    *   **Frozen Processed Food/Nuts:** Session status pending confirmation of overlap with Frozen Snacks dates.
+4.  **Wellness Campaign – World Oral Health Day:** Ariel Yap promoted daily oral care routines ahead of the occasion. Featured products include Euthymol Whitening Purple Corrector Toothpaste, Curatick Oral Wound & Ulcer Patch, Dentalpro Interdental Brush Assorted, and Sensodyne Repair & Protect Toothpaste.
+    *   **Offer Link:** https://go.fpg.sg/HABAFPG_WK3
+
+### Pending Actions & Ownership
+*   **Sensory Test Sign-ups (Owner: All Staff):**
+    *   **Frozen Snacks Evaluation:** Register immediately for March 18 or 19 via `https://tinyurl.com/HQSEC`. Select tabs "SEC 18.03.2026" or "SEC 19.03.2026".
+    *   **Chapati Recruitment:** Complete screening form (`https://forms.gle/DFYrahZcvhtcoJ9R7`).
+*   **Wellness Engagement (Owner: All Staff):**
+    *   Visit nearest Unity store for recommended oral care essentials.
+    *   Explore deals at https://go.fpg.sg/HABAFPG_WK3.
+*   **Social Engagement:** Watch trailer and share "Bowl of Love" content on social channels before the March 20–21 episode drop.
+
+### Critical Dates & Deadlines
+*   **March 6:** End of Foaming Hand Soap offer (Completed).
+*   **March 8:** International Women's Day Celebration (Completed).
+*   **March 12:** Non-Halal Soup Sensory Evaluation (Completed).
+*   **March 16–30:** Cardless access rollout phases.
+*   **March 17:** Frozen Food/Nuts session (Status: Pending confirmation/overshadowed).
+*   **March 18–19 (Wed & Thu):** Frozen Snacks Sensory Evaluation.
+*   **March 20–21:** "Bowl of Love" episodes drop on TikTok.
+*   **March 22:** FairPrice Walnuts with Cranberries redemption ends.
+
+### Decisions Made
+*   No formal strategic decisions recorded; focus remains on correcting Cardless Access communication, recruiting panelists for Frozen Snacks/Chapati testing, promoting the "Bowl of Love" microdrama collaboration, and supporting World Oral Health Day wellness initiatives via Unity stores.
+
+
+## gchat/space/AAAAnlKPglA: #dd-fpg-watchdog-alert
+Source: gchat | Group: space/AAAAnlKPglA | Last Activity: 2026-03-19T01:37:23.221000+00:00 | Last Updated: 2026-03-19T13:41:50.135854+08:00
+# Daily Work Briefing: #dd-fpg-watchdog-alert
+
+### Key Participants & Roles
+*   **Datadog App:** Automated monitoring system.
+*   **@hangouts-dd-dpd-watchdog-alert:** Targeted notification channel.
+*   *Note: Interactions remain purely automated.*
+
+### Main Topic
+The channel tracks **P3 [DPD Watchdog] infrastructure incidents** in Production. Logs show recurring transient issues (excluding `tcp_retrans_jump` and `full_disk_forecast`) aggregated by `story_key` over a 30-minute window.
+
+### Incident Summary & Status Update
+**Historical Resolved Incidents:**
+1.  **Mar 05–17:** 11 distinct events triggered and recovered within the period (e.g., Mar 16 duration ~3h, Mar 17 Afternoon duration ~4h). Full list remains consistent with previous records.
+
+**Resolved Incident (New):**
+*   **Mar 19 (Morning):** Incident `story_key`: `10aaf170-dac2-5fec-97bf-cfd442f8706b`.
+    *   **Triggered:** Mar 18, 22:14 UTC.
+    *   **Recovered:** Mar 19, 03:37 UTC (approx., based on alert timestamp 09:37+08:00).
+    *   **Status:** **Resolved**.
+    *   **Duration:** ~5.6 hours (slightly above the historical average of ~4 hours).
+
+**Current Status:** All alerts resolved. No active incidents pending recovery.
+
+### Pending Actions & Ownership
+*   **Immediate Action:** None required at this time; the Mar 18/19 incident has successfully recovered.
+*   **Ownership:** Automated monitoring (`managed_by:datadog-sync`).
+*   **Investigation Note:** The recent incident duration (~5.6 hours) exceeded the ~4-hour historical average. While resolved, continued observation is recommended given the frequency of triggers on consecutive days (Mar 17–19).
+
+### Decisions Made
+*   None recorded. The conversation reflects system state transitions only.
+
+### Key Dates & Follow-ups
+*   **Latest Event:** March 19, 2026, at ~03:37 UTC (Recovery confirmed).
+*   **Monitor ID:** 17447511 (Datadog EU).
+*   **Next Steps:** Maintain routine monitoring. No escalation required for the resolved incident unless frequency increases or resolution times consistently exceed averages.
+
+### References
+*   **Space URL:** https://chat.google.com/space/AAAAnlKPglA
+*   **Datadog Monitor Link:** [View in Datadog](https://app.datadoghq.eu/monitors/17447511)
+*   **Resolved Incident Link (Mar 18/19):** https://app.datadoghq.eu/monitors/17447511?group=story_key%3A10aaf170-dac2-5fec-97bf-cfd442f8706b&from_ts=1773883251000&to_ts=1773884451000&event_id=8550027906224008084
+*   **Recovered Incident Link (Mar 17):** https://app.datadoghq.eu/monitors/17447511?group=story_key%3Ae40567bb-115b-5b81-be58-09d665e5969f
+
+### Monitor Configuration
+*   **Query:** `events("source:watchdog (story_category:infrastructure -story_type:(tcp_retrans_jump OR full_disk_forecast)) env:(PROD OR production OR prod)").rollup("count").by("story_key").last("30m") > 0`
+
+
+## gchat/space/AAQAP-kMoqY: 📅 Daily summary
+Source: gchat | Group: space/AAQAP-kMoqY | Last Activity: 2026-03-19T00:03:09.293000+00:00 | Last Updated: 2026-03-19T13:42:16.747547+08:00
+**Daily Work Briefing Summary (Updated: March 19, 2026)**
+
+**Key Participants & Roles**
+*   **Michael Bui:** Primary recipient; responsible for code reviews, UAT support, and project ownership.
+*   **Tan Gay Lee / Hendry Tionardi / Olivia:** Finance/UAT coordination (BCRS).
+*   **Nikhil Grover / Ravi Singh / Yian Koh:** Programmatic advertising (Advertima/TTD) strategy and testing.
+*   **Gautam Singh / Sundy Yaputra / Daryl Ng:** Development leads for Search Indexer, BCRS, and Platform fixes.
+*   **James Lai / Mohammed Miran / Andin Eswarlal Rajesh:** iOS Chapter handover responsibilities.
+
+**Main Topics & Discussions**
+1.  **Programmatic Advertising (Advertima/TTD):** Focus remains on validating discrepancies for `advertima_ttd-fixed-price-test-1.5`. Ravi Singh confirmed receipt of raw BURLs; validation was targeted for Monday, March 17th. Yian Koh requested confirmation on deals `advertima_ttd-first-price-test` and `advertima_ttd-fixed-price-test-1`.
+2.  **New Deal Setup:** Yasmina Tregan (Advertima) required an end-to-end test setup this week. Wei Phung to share live campaign details; Ravi Singh to execute setup, push to TradeDesk, and map segments before launch.
+3.  **BCRS UAT & Finance Integration:** Progress on SAP document numbers, duplicate posting fixes via PubSub "exactly once" policy (PR #1033), and Bukit Timah Plaza pricing/display issues.
+4.  **Event Sync Optimization (DPD-645):** Addressing the massive event overage (14M vs. normal 550k). PRD deployment plan set for Sunday, March 15.
+5.  **Security & Compliance:** RMN Pentest fixes (DPD-700) deployed to Prod; Bitbucket App Passwords deprecated effective June 9, 2026.
+
+**Status Update: Inbox & Communications**
+*   **Inbox Status:** As of March 19, 2026, the workspace inbox is fully caught up across all categories (Urgent Action Items, Project Themes, Meeting Updates, and FYI). No pending unread items require immediate attention.
+
+**Pending Actions & Owners**
+*   **BCRS UAT SAP Docs:** Update Column J in Google Sheet for Finance finalization. *Owner: Michael Bui / Hendry Tionardi*.
+*   **Bitbucket Security:** Generate scoped API tokens to replace deprecated App Passwords by June 9, 2026. *Owner: All Devs*.
+*   **Event Overload Investigation:** Investigate the 14M event spike in the audience pipeline. *Owner: Michael Bui*.
+*   **TTD Discrepancy Confirmation:** Ravi Singh to confirm discrepancies on raw BURLs; Yian Koh to validate other deals. *Owner: Ravi Singh / Yian Koh*.
+*   **New Deal Setup:** Wei Phung to share details; Ravi Singh to execute. *Owner: Ravi Singh / Wei Phung*.
+
+**Decisions Made**
+*   **SLO Monitoring:** Merged PRs #882, #884, and #891 for night-time mute schedules and on-call configurations.
+*   **Ad Strategy:** FPG to use "Native" creative formats for TTD carousel; OSMOS SDK restricted to tracking only. End-to-end test required before live launch.
+*   **Release Schedule:** FairPrice Website v10.57.0 release canceled; RMN Pentest fixes (DPD-700) confirmed fixed in Prod.
+
+**Key Dates & Deadlines**
+*   **March 3, 2026:** Retail Media TV catch-up meeting.
+*   **March 5, 2026:** Raya Scan visuals live; v10.57.0 release canceled.
+*   **March 9, 2026:** D&T Q1 All Hands RSVP deadline.
+*   **March 11, 2026 (12 AM):** RDCS database upgrade maintenance.
+*   **March 15, 2026 (8–11 PM):** Tentative PRD rollout for DPD-645 event sync fix.
+*   **March 17, 2026:** Deadline for TTD discrepancy confirmation.
+*   **March 31, 2026:** FY2025 Performance Closeout deadline (MyHR).
+*   **June 9, 2026:** Bitbucket App Password deprecation deadline.
+
+
+## gchat/space/AAAAx50IkHw: Digital Product Development {DPD}
+Source: gchat | Group: space/AAAAx50IkHw | Last Activity: 2026-03-18T12:22:26.402000+00:00 | Last Updated: 2026-03-18T22:37:50.842992+00:00
+**Daily Work Briefing: Digital Product Development (DPD)**
+
+**Key Participants & Roles**
+*   **Flora Wo Ke:** Team Lead (Project Status, Incident Response).
+*   **Alvin Choo:** Developer/QA (Feature Release, Payment Services).
+*   **Nicholas Tan:** DevOps/Infrastructure (Golden Pipeline, Container Risks).
+*   **Tiong Siong Tee / Andin Eswarlal Rajesh:** QA/Engineering (iOS Bug Reporting).
+*   **Winson Lim:** Engineering Lead/Strategy (Disaster Recovery Scenarios, UX Trends).
+*   **Natalya Kosenko:** DevOps/SRE (Datadog Infrastructure as Code Governance).
+*   **Boning He / Gopalakrishna Dhulipati:** Team Members (Social/Culture).
+*   **Kyle Nguyen:** Team Member (Event Coordination).
+*   **Maou Sheng Lee:** Team Member.
+
+**Main Topics & Discussions**
+1.  **Infrastructure & Operations Risk:** Nicholas Tan flagged an operational risk regarding Broadcom ending free Bitnami images, causing `kubectl` image tag failures and increased Time To Recovery (TTR) during service resuscitation. The issue impacts the Golden Pipeline (GP).
+2.  **Payment Service Issues:** Alvin Choo reported that promo codes failed to redeem in FP Pay. Later confirmed that a change freeze has ended and feature releases are proceeding.
+3.  **Mobile Quality Assurance:** Andin Eswarlal Rajesh identified a bug on iOS FPPay where QR codes load correctly without user login. The issue was escalated via file download.
+4.  **Datadog Governance:** Natalya Kosenko reported unauthorized manual changes to Datadog On-Call teams (removals of Maxine, Arijit, Minu). She emphasized that Terraform manages this config; manual console edits are overwritten on the next run.
+5.  **Strategic Planning:** Winson Lim highlighted data centers as potential targets in modern warfare (Iran conflict context) to inform Disaster Recovery (DR) scenarios.
+6.  **Social Events & Sentiment:** Kyle Nguyen announced an upcoming DPD BBQ with the sentiment "We come first." Wai Ching Chan responded positively, tagging Vincent Wei Teck Lim regarding event details. Maou Sheng Lee expressed a sentiment of feeling like energy is being wasted on March 18.
+7.  **Social Notes:** Boning He and Gopalakrishna Dhulipati shared snacks (Chinese cookies with chicken gizzard/medicinal barley and Indian cookies) in pantry areas.
+
+**Pending Actions & Owners**
+*   **GP Team (Nicholas Tan / Mohit Niranwal):** Investigate Bitnami image replacement strategy to resolve TTR issues and update Golden Pipeline dependencies.
+*   **iOS/Dev Team (Tiong Siong Tee / Andin Eswarlal Rajesh):** Investigate the iOS FPPay QR code login bypass bug.
+*   **Datadog Admins:** Anyone who manually altered Datadog Teams must submit a Pull Request to `https://bitbucket.org/ntuclink/fp-datadog-eu` instead of editing the console to prevent configuration loss.
+
+**Decisions Made**
+*   No formal change freeze; feature releases are currently active (Alvin Choo).
+*   Datadog team configurations must strictly follow Infrastructure as Code (Terraform) protocols; manual overrides are deprecated.
+
+**Key Dates & Follow-ups**
+*   **Mar 3, 2026:** Project status noted as "one step behind."
+*   **Mar 7, 2026:** FP Pay promo code issue raised; change freeze lifted same day.
+*   **Mar 9, 2026:** BCRS discussion and Meta AI news shared.
+*   **Mar 10, 2026:** iOS bug discovered.
+*   **Mar 12, 2026:** "BB incident" query raised; Data center DR scenario discussed.
+*   **Mar 13, 2026:** Datadog governance warning issued.
+*   **Mar 17, 2026:** DPD BBQ announcement made by Kyle Nguyen; Wai Ching Chan engaged with Vincent Wei Teck Lim regarding the event (Last Reply: 12:15 PM).
+*   **Mar 18, 2026:** Maou Sheng Lee noted sentiment regarding wasted energy.
+
+**Social Notes**
+*   Boning He and Gopalakrishna Dhulipati shared snacks in pantry areas.
+*   Upcoming DPD BBQ announced by Kyle Nguyen ("We come first, see you!").
+
+
+## gchat/space/AAQAgT-LpYY/K3BvO-zFaHE: BCRS Firefighting Group
+Source: gchat | Group: space/AAQAgT-LpYY/K3BvO-zFaHE | Last Activity: 2026-03-18T10:39:40.482000+00:00 | Last Updated: 2026-03-18T22:39:12.631066+00:00
+**Daily Work Briefing: BCRS Firefighting Group**
+
+**Key Participants & Roles**
+*   **Sathya Murthy Karthik:** Requester; initiated the inquiry regarding user access.
+*   **Sneha Parab:** Investigator; verified user status within the DBP UAT environment.
+*   **Prajney Sribhashyam:** Proposer of alternative solution; managing stakeholder follow-up.
+*   **Hanafi Yakub:** Tagged for assistance and context regarding the proposed workaround.
+
+**Main Topic**
+Verification of database access rights for `shu_hui.lai@fairpricegroup.sg` in the DBP UAT environment and determining the fastest method to achieve the required workflow.
+
+**Key Discussion Points**
+*   Sathya Murthy Karthik requested confirmation of whether Shu Hui Lai has existing access to DBP UAT.
+*   Sneha Parab confirmed that the user account could not be found in the DBP UAT system.
+*   Sathya sought assistance to provision this access immediately.
+*   Prajney Sribhashyam noted that creating a new account is time-consuming and proposed an alternative workflow: adding invoices directly to a sheet instead of relying on DBP UAT access.
+
+**Decisions Made**
+*   **Process Change:** The team agreed that manually adding invoices to a sheet is more efficient than provisioning a new user account for Shu Hui Lai due to the time constraints associated with account creation.
+
+**Pending Actions & Ownership**
+1.  **Follow-up with Stakeholder:** Prajney Sribhashyam is following up directly with Shu Hui Lai (`shu_hui.lai@fairpricegroup.sg`) regarding the alternative solution (adding invoices to a sheet).
+    *   *Owner:* Prajney Sribhashyam
+
+**Key Dates & References**
+*   **Date:** 2026-03-18
+*   **Timeframe:** Discussion occurred between 10:17 and 10:39 (UTC+0).
+*   **Target User:** `shu_hui.lai@fairpricegroup.sg`
+*   **System:** DBP UAT
+*   **Group Channel:** BCRS Firefighting Group (URL: https://chat.google.com/space/AAQAgT-LpYY)
+
+
+## gchat/space/AAQACfHCuNI: BCRS - UAT
+Source: gchat | Group: space/AAQACfHCuNI | Last Activity: 2026-03-18T10:25:00.437000+00:00 | Last Updated: 2026-03-18T22:40:38.750183+00:00
+**BCRS UAT Daily Briefing Summary (Updated: 18 Mar 2026)**
+
+**Key Participants & Roles**
+*   **Sathya Murthy Karthik:** UAT Lead/Coordinator (Provided status update as of 18 Mar).
+*   **Danielle Lee:** Previously inquired about technical live date and production release status.
+*   **Prajney Sribhashyam:** Tagged regarding live date confirmation.
+*   **Finance Team:** Currently testing; numbers to be updated.
+*   **S&G Team:** Developing Returns & Refunds functionality.
+
+**Main Topic**
+Progress tracking on OG Returns & Refunds, In-store Pre-order, CS Testing, and Finance Testing as of 18 Mar 2026 at 6:25 PM. Clarification provided on S&G development status and upcoming sign-off timelines.
+
+**Pending Actions & Owners**
+*   **Returns & Refunds (OG):** Manual cancellation after delivery test cases require retesting. Owner: Testing Team.
+*   **In-store Pre-order:** Most test cases pending retest following clarification and bug fixes. Owner: Sathya Murthy Karthik / Testing Team.
+*   **Finance Testing:** Testing is underway; numbers to be updated in the test sheet. Owner: Finance Team.
+*   **S&G Development:** Ongoing development for Returns & Refunds.
+
+**Decisions Made & Clarifications**
+*   **Sign-off Timeline:** Sign-off for OG returns and refunds is planned for 19 Mar 2026 (tomorrow).
+*   **CS Testing Updates:** Manual cancellation case status changed to pending; re-delivery case remains failed.
+*   **Production Status:** Previous query regarding production release timing (Feature Flag off since 9 Mar) remains noted in history, though current focus is on UAT execution and S&G development.
+
+**Status Snapshot (as of 18 Mar, 6:25 PM)**
+*   **OG Returns & Refunds:** Testing underway. Sign-off scheduled for tomorrow.
+    *   *Note:* In-store pre-order testing also currently underway.
+*   **CS Testing:**
+    *   **Passed:** 17
+    *   **Pending:** 1 (Manual cancellation)
+    *   **Failed:** 1 (Re-delivery)
+*   **Finance Testing:** Underway. Numbers to be updated in test sheet.
+*   **In-store Pre-order:** Most cases pending retest after clarification and bug fixes; specific pass/fail/pending counts to be updated.
+
+**Key Dates & Deadlines**
+*   **9 Mar 2026:** Feature Flag turned off for production.
+*   **17 Mar 2026:** Previous status reporting date (context only).
+*   **18 Mar 2026:** Current status reporting date.
+*   **19 Mar 2026:** Planned sign-off for OG returns and refunds.
+
+
+## gchat/space/AAAAS7vPcKs: QE <-> All Tribes
+Source: gchat | Group: space/AAAAS7vPcKs | Last Activity: 2026-03-18T09:54:33.288000+00:00 | Last Updated: 2026-03-18T22:42:28.333804+00:00
+**Daily Work Briefing: QE <-> All Tribes** (Updated)
+
+**Key Participants & Roles**
+*   **Patrick Thun:** Lead/Coordination.
+*   **Madhuri Nalamothu:** QA Lead/Test Execution.
+*   **Milind Badame:** QA Engineer.
+*   **Hang Chawin Tan:** DevOps/Backend Support.
+*   **Daryl Ng / Michael Bui:** Dev/Product.
+*   **Others:** Dany Jacob, Piraba Nagkeeran, Yangyu Wang, Andin Eswarlal Rajesh.
+
+**Main Topics & Discussion**
+1.  **LinkPoints Test Failure (New):** Tests remain disabled in regression due to the LinkPoints fix status update is pending. Milind Badame and Michael Bui are awaiting ETA on the resolution. *Status:* Blocked waiting for dev update.
+2.  **Postal Code Offer Label Missing (New):** Milind Badame reported a missing `label` attribute for the first product in "TestHasOffer swimlane" for Postal code **098619**. Requires investigation.
+3.  **QC Food Tile Removal Testing:** Daryl Ng confirmed testing is underway on the removal of QC (O2O) food tiles on the Omni home page.
+4.  **Load Testing & Environment Stability:** Small-scale load test completed on **5 Mar, 11 AM–1 PM** (UAT LEAP env). Scale-down operations executed successfully.
+5.  **DC Membership Logic Discrepancy:** Critical inconsistency where users have `DC member` flags in back office but lack active plans/UI awards. *Status:* Investigation ongoing regarding award logic and payment errors for new DC trial members.
+6.  **E2E Test Failures & UI Defects:**
+    *   **Cart Page:** Broken alignment on the third highlighted product; unidentified "view buttons" require clarification (Refs: Andin Eswarlal Rajesh).
+    *   **iOS/Navigation:** Disappearing swimlanes, EVoucher errors, Express delivery label changes ("Get in 1Hr"), and 1-hour filter chip failures.
+
+**Pending Actions & Ownership**
+*   **LinkPoints Fix Status:** Provide ETA for the LinkPoints fix to re-enable tests. *Owner: Dev Team / Michael Bui.* (High Priority).
+*   **Postal Code Label Debug:** Investigate missing `label` for Postal code 098619 in TestHasOffer swimlane. *Owner: Milind Badame / Dev Team.*
+*   **SonarCloud Fix:** Change `invoice-service` New Code baseline from "Specific version" to "Previous version". *Owner: Hang Chawin Tan / Project Admins.*
+*   **Cart Page UI & Payment Issues:** Resolve Cart alignment, view buttons, and payment failures for new DC trial members. *Owners: Milind Badame, Andin Eswarlal Rajesh, Madhuri Nalamothu, Dev Team.*
+*   **QC Removal Testing:** Monitor progress of QC (O2O) food tile removal on Omni home. *Owner: Daryl Ng / QA Team.*
+
+**Decisions Made**
+*   Ad slot changes proceed; known test impacts acknowledged.
+*   No decision yet on LinkPoints fix or Cart view buttons; awaiting dev clarification.
+
+**Key Dates & Deadlines**
+*   **5 Mar:** Load testing window (completed).
+*   **16 Mar:** DC membership logic discrepancy logged.
+*   **17 Mar:** UI defects reported on cart page (06:23–06:33 AM).
+*   **Today (18 Mar):** LinkPoints fix ETA required; Postal code 098619 issue flagged.
+
+
+## gchat/space/AAAA1BqTEzo: Digital Signage - Network and StoreTech
+Source: gchat | Group: space/AAAA1BqTEzo | Last Activity: 2026-03-18T08:40:00.545000+00:00 | Last Updated: 2026-03-18T22:44:09.082980+00:00
+**Daily Work Briefing: Digital Signage Network Support**
+
+**Key Participants & Roles**
+*   **Daryl Ng:** Requester (Service Desk Ticket Owner).
+*   **Steven Ng Teck Leong:** Technical Support/Network Administrator.
+
+**Main Topic**
+Provisioning network connectivity (IP address) for a digital signage TV associated with Service Desk ticket **NED-195890**. The discussion focuses on determining the connection method (Wired vs. Wi-Fi) to assign appropriate network credentials and security configurations.
+
+**Decisions Made**
+*   **Wired Connection:** If the device connects via Ethernet, it must be assigned an IP within the range **10.19.77.66–10.19.77.78**, with a Subnet Mask of **255.255.255.240** and Gateway at **10.19.77.65**.
+*   **Wi-Fi Connection:** If the device connects via Wi-Fi, static IP assignment is insufficient; the MAC address must be whitelisted before connectivity can be established.
+
+**Pending Actions & Ownership**
+*   **Action:** Determine the connection type (Wired or Wi-Fi) for the TV and provide necessary credentials (IP details or MAC address).
+    *   **Owner:** Daryl Ng (to confirm with the site/user).
+    *   **Context:** The specific IP cannot be finalized until the connection method is confirmed. If Wi-Fi, Steven requires the MAC address to proceed with whitelisting.
+
+**Key Dates & References**
+*   **Date of Conversation:** March 18, 2026 (Timeline: 08:31 – 08:40 UTC).
+*   **Ticket Reference:** [NED-195890](https://ntucenterprise.atlassian.net/servicedesk/customer/portal/8/NED-195890?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0Z3QiOiJhbm9ueW1vdXMtbGluayIsInFzaCI6IjViOThmMWY0MWUwZmZmNjI3NTliZjBjZTE2OGI1ZmRkNTE1MWY1NWFmY2NlMTVhYjI2MmJiY2I1ZWIxZGEwMWYiLCJpc3MiOiJzZXJ2aWNlZGVzay1qd3QtdG9rZW4taXNzdWVyIiwiY29udGV4dCI6eyJ1c2VyIjoiMTA2MDUiLCJpc3N1ZSI6Ik5FRC0xOTU4OTAifSwiZXhwIjoxNzc2MjE0MzgzLCJpYXQiOjE3NzM3OTUxODN9.lVNBoVHVpF4WMA1KrZH_5yMV1o-Ruw77n_9mCSWJCgI)
+*   **Next Follow-up:** Daryl Ng to reply regarding the connection method or provide the MAC address if Wi-Fi is required.
+
+
+## gchat/space/AAQAh7WXRkE: Alvin, Winson
+Source: gchat | Group: space/AAQAh7WXRkE | Last Activity: 2026-03-18T08:00:42.568000+00:00 | Last Updated: 2026-03-18T22:48:43.049185+00:00
+**Daily Work Briefing: Google Chat Summary**
+**Resource:** Alvin, Winson
+**Date:** March 18, 2026
+
+**Key Participants & Roles**
+*   **Alvin Choo:** Participant; scheduled to arrive late and join the discussion later.
+*   **Winson Lim:** Participant; initiating the session independently due to Alvin's delay.
+
+**Main Topic**
+Coordination of a meeting or presentation involving "Michael," specifically regarding strategic planning for the year 2026 onwards. The discussion focused on scheduling adjustments to accommodate Alvin's late arrival and Winson's early departure.
+
+**Decisions Made**
+1.  **Meeting Start:** Winson Lim will commence the session immediately without waiting for Alvin Choo.
+2.  **Presentation Handover:** Alvin Choo is designated to join later specifically to provide Michael with a view of "2026 onwards."
+
+**Pending Actions & Ownership**
+*   **Action:** Join the meeting later to present 2026+ details to Michael.
+    *   **Owner:** Alvin Choo (Confirmed via: "okay thanks!")
+*   **Action:** Conduct initial portion of the session/meeting prior to Alvin's arrival.
+    *   **Owner:** Winson Lim
+
+**Key Dates, Deadlines & Follow-ups**
+*   **Meeting Date:** Tuesday, March 18, 2026.
+*   **Start Time:** Approximately 07:56 UTC (Winson started).
+*   **Deadline/Departure:** 4:30 PM (Local time implied) – Winson Lim must leave by this time.
+*   **Next Step:** Alvin Choo to join the session after the initial start time but before the 4:30 PM deadline to deliver his specific segment to Michael.
+
+**Metadata Reference**
+*   Chat URL: https://chat.google.com/space/AAQAh7WXRkE
+
+
+## gchat/space/AAAAS7vPcKs/I2HUUWoIMDY: QE <-> All Tribes
+Source: gchat | Group: space/AAAAS7vPcKs/I2HUUWoIMDY | Last Activity: 2026-03-18T07:01:49.417000+00:00 | Last Updated: 2026-03-18T22:49:32.402607+00:00
+**Daily Work Briefing: QE <-> All Tribes**
+
+**Participants & Roles**
+*   **Milind Badame:** QA/Test Lead (Reporting defects, validating fixes).
+*   **Michael Bui:** Development/Engineering (Investigating issues, applying fixes).
+
+**Main Topic**
+Resolution of a labeling defect in the "TestHasOffer" swimlane for Postal Code `098619`, specifically regarding a missing "Ad" label on the first product.
+
+**Key Issues & Findings**
+*   **Defect Identified:** Milind reported that for postal code `098619`, the first product in the TestHasOffer swimlane was incorrectly missing the "Ad" label.
+*   **Fix Applied:** Michael confirmed a hotfix was deployed to ensure the first product is now labeled as "add" (Ad).
+
+**Pending Actions & Ownership**
+*   **Action:** Re-run test cases for postal code `098619`.
+    *   **Owner:** Milind Badame.
+    *   **Status:** Initiated immediately upon fix confirmation.
+*   **Action:** Notify the team once User Acceptance Testing (UAT) is completed to confirm test success.
+    *   **Owner:** Michael Bui.
+
+**Decisions Made**
+*   **Immediate Fix:** Engineering proceeded with updating the data/label for the first product immediately rather than waiting for a scheduled release cycle.
+*   **Timeline Management:** The team agreed to wait until next week for any broader UAT cycles or long-term updates, though Michael will proactively communicate if significant changes occur over an extended period.
+
+**Dates & Deadlines**
+*   **Issue Reported:** March 18, 2026, at 05:24 UTC.
+*   **Fix Confirmed:** March 18, 2026, at 07:01 UTC.
+*   **Next Follow-up:** Post-UAT completion (Date TBD; team to wait until next week for formal closure).
+
+**References**
+*   Meeting/Room Link: `https://chat.google.com/room/AAAAS7vPcKs/YgGvvuD2Ow8/YgGvvuD2Ow8?cls=10`
+
+
+## gchat/dm/4Ut7xcAAAAE: Yangyu Wang
+Source: gchat | Group: dm/4Ut7xcAAAAE | Last Activity: 2026-03-18T07:00:06.516000+00:00 | Last Updated: 2026-03-18T22:49:47.986890+00:00
+**Daily Work Briefing: Prod Deployment Discussion**
+
+**Key Participants & Roles**
+*   **Yangyu Wang:** Initiator/Deployer (Requesting approval, executing deployment).
+*   **Michael Bui:** Approver/Monitor (Validating safety, offering oversight during deployment).
+
+**Main Topic**
+Discussion regarding the safety and scheduling of a production deployment for "express order" changes. The conversation centers on risk mitigation due to an unavailability feature flag.
+
+**Decisions Made**
+*   **Safety Approval:** Michael Bui confirmed the changes are safe for production. Because the specific feature flag is unavailable, the system will automatically fallback to default slots (1, 3).
+*   **Deployment Timing:** The deployment window was agreed upon for approximately **2:30 PM**.
+
+**Actions & Ownership**
+*   **Pending Action:** Monitor the deployment closely.
+    *   **Owner:** Michael Bui
+    *   **Trigger:** Requires a ping from Yangyu Wang immediately prior to the PRD deployment start.
+*   **Completed Action:** Initiated deployment.
+    *   **Owner:** Yangyu Wang
+    *   **Status:** Confirmed at 06:59:28 UTC on 2026-03-18.
+
+**Key Dates, Deadlines & Timeline**
+*   **2026-03-18 | 03:30 AM - 03:32 AM:** Initial discussion regarding safety and timing.
+*   **Target Deployment Time:** Approx. **2:30 PM** (Local time implied by context).
+*   **Prod Testing Deadline:** **5:00 PM** following the deployment window.
+*   **Deployment Execution:** Started at **06:59:28 UTC** (Note: This timestamp differs from the planned 2:30 PM local estimate, suggesting a timezone offset or schedule adjustment).
+*   **Confirmation Noted:** Michael Bui acknowledged the start at **07:00:06 UTC**.
+
+**Summary of Event Flow**
+Yangyu Wang initiated the conversation asking for deployment safety confirmation prior to an afternoon test. Michael Bui approved the move, citing a safe fallback mechanism (default slots 1,3) due to the missing feature flag and requested pre-deployment notification for monitoring. Yangyu confirmed the target time (2:30 PM) with a subsequent test at 5:00 PM. Following this agreement, Yangyu executed the deployment at 06:59:28 UTC on March 18, 2026, which Michael Bui acknowledged one minute later. No further actions are currently pending.
+
+
+## gchat/space/AAQAgT-LpYY/rpB8hFkpx_c: BCRS Firefighting Group
+Source: gchat | Group: space/AAQAgT-LpYY/rpB8hFkpx_c | Last Activity: 2026-03-18T06:48:54.954000+00:00 | Last Updated: 2026-03-18T22:50:05.307951+00:00
+**Daily Work Briefing: BCRS Firefighting Group**
+
+**Key Participants & Roles**
+*   **Shiva Kumar Yalagunda Bas:** Initiated investigation; troubleshooting lead.
+*   **Hendry Tionardi:** SAP technical analysis (database queries).
+*   **Onkar Bamane:** Identified root cause and applied fix.
+*   **Chee Hoe Leong, Gautam Singh:** Tagged for initial awareness/verification.
+
+**Main Topic**
+Investigation into a data integrity issue where the `depositSKU` was missing from the SAP response for specific product configurations (Scheme: BCRS, Quantity Unit of Measure: 4), despite successful message publishing.
+
+**Technical Details & Root Cause**
+*   **Affected SKU:** `90175783`.
+*   **Configuration Parameters:** `"Zzscheme":"BCRS"`, `"Zzqtybuom":"4"`.
+*   **Diagnosis:** Hendry Tionardi executed a SAP query (`zbcrs_deposku`) confirming no record existed for `zzqtybuom = 4` with scheme BCRS. The system returned "no record."
+*   **Root Cause:** Onkar Bamane confirmed that the missing configuration entry was removed earlier for testing purposes and had not been restored to production.
+
+**Decisions Made**
+*   No issue was found with the Pub/Sub publishing mechanism; the failure was purely data-related due to missing master data in SAP.
+*   The team agreed to restore the missing record rather than investigate further into message processing logic.
+
+**Pending Actions & Owners**
+*   **Action:** Restore the removed `depositSKU` configuration for `zzqtybuom = 4`.
+    *   **Owner:** Onkar Bamane (stated intent: "let me put it and confirm").
+*   **Verification:** Confirm that the issue is resolved after the data restoration.
+    *   **Owner:** Shiva Kumar Yalagunda Bas (implied requirement to verify).
+
+**Key Dates & Follow-ups**
+*   **Date:** 2026-03-18 (Session time: 06:17 – 06:49 UTC).
+*   **Immediate Follow-up:** Onkar Bamane to update the database record and provide confirmation of success.
+*   **Status Update:** Shiva Kumar Bas noted ("Pls ignore") once the root cause was identified, indicating no further action is required on the Pub/Sub side pending Onkar's confirmation.
+
+**Reference Links**
+*   Chat Space: https://chat.google.com/space/AAQAgT-LpYY
+*   Attachment: `scratch_204.json` (Request payload).
+
+
+## gchat/space/AAAAtxQjB7c: #dd-dpd-grocery-alert
+Source: gchat | Group: space/AAAAtxQjB7c | Last Activity: 2026-03-18T04:03:56.808000+00:00 | Last Updated: 2026-03-18T22:51:05.572528+00:00
+**Daily Work Briefing: #dd-dpd-grocery-alert** (Updated Mar 18, 04:03 UTC)
+
+**Key Participants & Roles**
+*   **System:** Datadog (Automated monitoring agent).
+*   **Alert Recipients/Owners:** `@hangouts-dd-dpd-grocery-alert`, `@opsgenie-dpd-grocery-discovery`.
+*   **Escalations:** `@hangouts-GT-Search-DatadogAlerts`, `@oncall-dpd-staff-excellence-pdm`.
+*   **Service Teams:** DPD Grocery Discovery (`team:dpd-grocery-discovery`), Search Indexing (`service:fp-search-indexer`), Product Data Management (`team:dpd-staff-excellence-pdm`).
+
+**Main Topic**
+**CRITICAL ALERT:** The `fp-search-indexer` service has transitioned from stable to a **P2 Error State** on the production environment. While previous volatility in `sku-store-attribute` and transient issues in `qc-layout-service` were noted, immediate attention is now required for the Search Indexer due to 100% unavailability of error tolerance.
+
+**Pending Actions & Ownership**
+*   **Action:** **URGENT INVESTIGATION:** Address errors on `fp-search-indexer` (env: prod).
+    *   **Owner:** Product Data Management On-Call (`@oncall-dpd-staff-excellence-pdm`) & Search Team.
+    *   **Status:** Alert triggered at **Mar 18, 04:03 UTC**. Metric `trace.http.request.errors` exceeded 0.0 (Value: 1.0) in the last minute.
+    *   **Required Checks:**
+        1.  Review Datadog logs for `fp-search-indexer`.
+        2.  Inspect K8s deployment (`fpon-cluster/default/fp-search-indexer` in asia-southeast1).
+        3.  Consult Support Runbook (Jira SR-2001831558).
+    *   **Context:** This contradicts prior status where the service was stable; immediate manual intervention is now mandatory.
+
+*   **Action:** Investigate chronic low file processing counts for `sku-store-attribute`.
+    *   **Owner:** DPD Grocery Discovery Team (`@hangouts-dd-dpd-grocery-alert`).
+    *   **Status:** Job remains unstable with high-frequency flapping. Recent cycles: Mar 17, 22:07–00:02 UTC; Mar 18, 00:35–01:01 UTC. Pattern suggests intermittent dependency issues requiring log review.
+
+*   **Action:** Monitor `sku-global-attribute` error rates.
+    *   **Owner:** Product Data Management Team (`@opsgenie-dpd-grocery-discovery`).
+    *   **Status:** Alert triggered Mar 17, 03:02 UTC (92% error rate); recovered by 03:30 UTC. Verification of batch processing logic recommended.
+
+**Decisions Made**
+*   Automated monitoring detected a critical failure in `fp-search-indexer` at 04:03 UTC; no prior resolution exists for this specific P2 event. The previous "resolved" status for this service is now superseded by the active error condition.
+
+**Key Dates & Follow-ups (Mar 16–18, 2026)**
+*   **Service: `fp-search-indexer` (P2 - Product Data Management) [ACTIVE CRITICAL]**
+    *   *Issue:* `trace.http.request.errors` > 0 on prod.
+    *   *Timeline:* Triggered **Mar 18, 04:03 UTC**.
+    *   *Metric:* Value 1.0 over last 1m.
+    *   *Links:* [Datadog Monitor](https://app.datadoghq.eu/monitors/17447691) | [K8s Console](https://console.cloud.google.com/kubernetes/deployment/asia-southeast1/fpon-cluster/default/fp-search-indexer/overview) | [Runbook](https://ntuclink.atlassian.net/wiki/spaces/SR/pages/2001831558/Support+Run+book).
+*   **Service: `sku-store-attribute` (P3 - Grocery Discovery)**
+    *   *Pattern:* Recurring "Low Processed Files" (<6 files in 5h).
+    *   *Latest Activity:* Triggered/Recovered cycle on **Mar 17, 22:07–00:02 UTC** and **Mar 18, 00:35–01:01 UTC**. Monitor ID: `20382848`.
+*   **Service: `qc-layout-service` (P3 - Product Data Management)**
+    *   *Issue:* Success rate dropped below 99.9% for PLP requests.
+    *   *Timeline:* Triggered **Mar 17, 02:48 UTC** (66.66%); Recovered **02:58 UTC**. Monitor ID: `20382951`.
+*   **Service: `sku-global-attribute` (P3 - Product Data Management)**
+    *   *Issue:* High error rate in batch processing.
+    *   *Timeline:* Triggered **Mar 17, 03:02 UTC** (92.0%); Recovered **03:30 UTC**. Monitor ID: `91573503`.
+
+**Summary of Critical Issues**
+1.  **P2 Search Indexer Failure:** Immediate attention required for `fp-search-indexer` errors on prod as of Mar 18, 04:03 UTC.
+2.  **Flapping SKU Jobs:** The `sku-store-attribute` job shows a concerning pattern of short-lived failures.
+3.  **Transient PLP Failure:** Brief drop in success rate for `qc-layout-service` on Mar 17 morning (resolved).
+
+**Reference Links:**
+*   Datadog Space: https://chat.google.com/space/AAAAtxQjB7c
+
+
+## gchat/space/AAQA-bdVPoA: Jacob, Sathya, Daryl, Tiong Siong, ...
+Source: gchat | Group: space/AAQA-bdVPoA | Last Activity: 2026-03-18T04:00:26.997000+00:00 | Last Updated: 2026-03-18T22:51:25.361763+00:00
+**Daily Work Briefing: Project Light Leave Planning (Updated)**
+
+**Key Participants & Roles**
+*   **Sathya Murthy Karthik:** Requester/Owner of the "Omni Leave Plans" spreadsheet; driving data collection.
+*   **Michael Bui, Daryl Ng, Tiong Siong Tee, Akash Gupta:** Team members requested to submit leave plans.
+
+**Main Topic**
+Collection of individual leave plans extending through October 2026. While a central Google Sheet was established for long-term tracking, team feedback indicates that accurate planning beyond one month is difficult due to standard travel booking cycles (1–1.5 months in advance).
+
+**Pending Actions & Ownership**
+*   **Action:** Input all known leave dates into the "Omni Leave Plans" spreadsheet.
+    *   **Scope Nuance:** Akash Gupta has noted that planning beyond one month is not feasible for him currently; he will update plans 1–1.5 months prior to travel.
+*   **Owner:** All tagged team members (**Michael Bui, Daryl Ng, Tiong Siong Tee, Akash Gupta**).
+*   **Status Update:**
+    *   **Akash Gupta:** Initially required access (granted by Sathya). Confirmed no major leave plans for the next month. Stated inability to commit to a full October 2026 schedule due to planning horizons; will provide updates closer to dates.
+    *   **Michael Bui:** Confirmed leave for late March (~1 week).
+    *   **Daryl Ng:** Provided initial coverage dates (Reservist duties on 30 March PM; 22–30 April) but noted long-term plans are unavailable. Committed to securing team coverage during absences.
+    *   **Tiong Siong Tee:** Confirmed no long-term leave plan yet, pending update on specific leaves.
+
+**Decisions Made**
+*   A centralized Google Sheet has been designated as the single source of truth for Project Light leave planning.
+*   **Revised Expectation:** While Sathya requested data "till Oct," participants (specifically Akash) have clarified that accurate input is limited to ~1 month in advance, with long-term dates being tentative or unavailable.
+
+**Key Dates & Deadlines**
+*   **March 18, 2026:** Initial deadline for known leave plans.
+    *   **Access Confirmed:** Akash Gupta provided access at 03:53 UTC on this date.
+*   **Future Coverage Data:**
+    *   **Next Month (April 2026):** No major leaves confirmed by Akash.
+    *   Late March (~1 week): Michael Bui's confirmed leave.
+    *   March 30 (PM): Daryl Ng's reservist duty.
+    *   April 22–30: Daryl Ng's reservist duty.
+
+**Reference**
+*   **Document:** Omni Leave Plans (Project Light)
+*   **Link:** https://docs.google.com/spreadsheets/d/1BuohjrUTREwWgj_4JNLUnu4d2c-a4VPEPWrvJJks_eo/edit?gid=0#gid=0
+
+
+## gchat/space/AAAAnyFGr84: PDM Notification
+Source: gchat | Group: space/AAAAnyFGr84 | Last Activity: 2026-03-18T03:57:43.330000+00:00 | Last Updated: 2026-03-18T22:51:35.669592+00:00
+**Daily Work Briefing: PDM Notification Summary**
+
+**Key Participants & Roles**
+*   **Gchat Notification / API Bot (Collection Runner):** Automated system generating test reports.
+*   **Webhook Bot:** System component responsible for processing requests; currently operational failure.
+
+**Main Topic**
+Automated API contract and functional tests for the `gt-catalogue-service` in the Staging environment failed to execute due to a backend processing error. No actual test cases were run or evaluated.
+
+**Pending Actions & Ownership**
+*   **Action:** Investigate why the "Webhook Bot is unable to process your request" error occurred for both API Contract and API Tests.
+*   **Owner:** Engineering/DevOps Team (implied ownership of the notification pipeline).
+*   **Context:** Two separate test suites (`[API Contract Tests]` and `[API Tests]`) returned zero requests, zero passed, and zero failed results because execution was blocked before completion.
+
+**Decisions Made**
+None recorded in this conversation; all outcomes indicate system failure rather than business decisions.
+
+**Key Dates & Follow-ups**
+*   **Date:** March 18, 2026 (03:57 UTC).
+*   **Environment:** Staging.
+*   **Service:** `gt-catalogue-service`.
+*   **Immediate Follow-up Required:** Review the notification pipeline to ensure the Webhook Bot is functional before re-running tests on the Collection Runner.
+
+**Status Summary**
+The automated run summary indicates a critical failure in the test execution pipeline itself, not the service being tested. Both reports show 0 total requests due to the webhook bot's inability to process the trigger. No manual intervention or code changes were discussed; this requires technical troubleshooting of the CI/CD notification mechanism.
+
+
+## gchat/space/AAAAde_cYKA: [Prod Support] Ecom FFS Ops
+Source: gchat | Group: space/AAAAde_cYKA | Last Activity: 2026-03-18T03:36:00.064000+00:00 | Last Updated: 2026-03-18T22:52:03.522368+00:00
+**Daily Work Briefing: [Prod Support] Ecom FFS Ops**
+
+**Key Participants & Roles**
+*   **Wai Ching Chan / Sampada Shukla:** Operations/Product Leads (investigating packlist discrepancies and managing app releases).
+*   **TL HCBP FFS, TL - HGPT FFS, TLEPT FFS, Harry Akbar Ali Munir:** Store/Regional Team Leads reporting operational blockers.
+*   **Adrian Yap Chye Soon:** Technical Lead/Support (reviewing app release candidates and packlist validation).
+
+**Main Topics**
+1.  **Packlist Discrepancies & Validation:** Ongoing investigation into orders where `packed_qty` significantly exceeds `delivered_qty`.
+    *   **New Incident (Mar 18):** Order #22828448 at Hyper Hougang (Store ID 212) shows a critical mismatch: `packed_qty` of 11,570,930 vs. `delivered_qty` of 7. Reported by Harry Akbar Ali Munir on Mar 18 at 03:36 UTC.
+    *   **Ongoing Focus:** Hyper Sports Hub (HSPH), Orchid Country Club (OCCL), and Hyper Parkway (HPWP).
+2.  **Inventory System Glitches:** Reports of Store SOH showing 0 while IC app shows stock, missing "Last SOH" on reports, and pagination failures in the T18 order list.
+3.  **Picker App Release:** Preparation for rolling out version 10.4.0 to address authentication loops (OE-3518) and performance improvements.
+
+**Pending Actions & Ownership**
+*   **Critical Order Validation (New):**
+    *   *TL - HGPT FFS:* Investigate order #2282848 at Hyper Houngang (Store ID 212). Discrepancy: `packed_qty` (11,570,930) vs. `delivered_qty` (7). Date: Mar 18.
+    *   *Adrian Yap Chye Soon:* Review packlist status NULL issue for order #22789688 (Orchid Country Club, Mar 14).
+*   **Order Validation (Packlist Discrepancies):**
+    *   *TL HSPH FFS:* Confirm packlists for orders #22738044, #22754559, #22780412.
+    *   *TL OCCL2 FFS:* Double-confirm orders #22756415 and #22752129 (Mar 11).
+    *   *TL HPWP FFS:* Confirm packlist for order #22786748 and investigate discrepancy in order #22781194.
+*   **Technical Investigation:**
+    *   *Wai Ching Chan:* Investigate "Missing pagination button" in T18 view reported by TLEPT FFS.
+    *   *Adrian Yap Chye Soon:* Review IC app inventory sync issue (SOH mismatch) reported by TLEPT FFS.
+*   **System Fixes:**
+    *   *TL HCBP FFS:* Resolve order #256307387 stuck in "pending" status after accidental picker unassignment; verify other packlists are clean.
+
+**Decisions Made**
+*   **App Release Strategy:** Sampada Shukla to release Picker App 10.4.0 to a single store on March 10 at 1:30 PM. Full rollout is contingent on no issues reported within 2 days. Choice of the initial store was deferred for decision.
+
+**Key Dates & Deadlines**
+*   **Mar 9:** Picker App 10.4.0 release target (Single store).
+*   **Mar 10 – Mar 11:** Observation window for app stability.
+*   **Immediate:** Validation of specific packlist discrepancies for deliveries scheduled between Mar 10 and Mar 15, including the new Mar 18 incident at Hyper Hougang.
+
+**Critical Alerts**
+*   **New Alert (Mar 18):** Critical `packed_qty` anomaly detected in order #22828448 (Hyper Hougang), where packed quantity is orders of magnitude higher than delivered. Immediate attention required from TL - HGPT FFS.
+*   Persistent issues with `packed_qty` being NULL or mismatched against delivered quantities across multiple stores (HSPH, HPWP, OCCL).
+*   TLEPT FFS reports a critical UI bug preventing view of orders beyond the first 20 in the T18 fulfillment list.
+
+
+## gchat/space/AAQAgT-LpYY/2-RpHBXJWBw: BCRS Firefighting Group
+Source: gchat | Group: space/AAQAgT-LpYY/2-RpHBXJWBw | Last Activity: 2026-03-18T03:02:57.052000+00:00 | Last Updated: 2026-03-18T03:31:25.128717+00:00
+**Daily Work Briefing: BCRS Firefighting Group (BCRS Container Count Field)**
+
+**Key Participants & Roles**
+*   **Prajney Sribhashyam:** Business Lead/Stakeholder; coordinating UAT planning and requesting timelines.
+*   **Sneha Parab:** Development Lead/Engineering; confirmed development completion and managing SIT.
+*   **Sathya Murthy Karthik:** Stakeholder (CC'd); involved in UAT coordination.
+*   **Amos:** Seller Operations representative; assigned to perform UAT on behalf of sellers.
+*   **Jon Ho:** Catalog Ops representative; assigned to perform UAT.
+*   **TBD:** CMs/KAMs representatives; role identified but specific individuals not yet confirmed.
+
+**Main Topic**
+Discussion regarding the implementation timeline and User Acceptance Testing (UAT) strategy for the new "BCRS container count" field in MP. The team reviewed development status, SIT completion targets, and defined UAT scope and participants.
+
+**Pending Actions & Owners**
+*   **Prepare UAT Test Cases:** Owner: Prajney Sribhashyam. Action: Draft test cases to facilitate next week's UAT.
+*   **Confirm CMs/KAMs Participants:** Owner: Prajney Sribhashyam / Team. Action: Finalize specific names for Customer Management and Key Account Manager roles (currently TBD).
+*   **Execute Parallel Tracking Proposal:** Owner: Sneha Parab. Action: Evaluate feasibility of starting UAT immediately to run in parallel with SIT, as requested by Prajney.
+
+**Decisions Made**
+*   **UAT Participant List:** Confirmed involvement from Seller Ops (Amos), Catalog Ops (Jon Ho), and CMs/KAMs (TBD).
+*   **SIT Completion Target:** Scheduled for completion by End of Day (EOD) on March 20, 2026.
+
+**Key Dates & Deadlines**
+*   **March 18, 2026:** UAT test case preparation initiated; proposal to parallel track SIT and UAT raised.
+*   **March 20, 2026 (EOD):** Deadline for System Integration Testing (SIT) completion.
+*   **Next Week (Week of March 23-27):** Scheduled window for execution of UAT.
+
+**Follow-Ups**
+*   Sneha Parab to respond regarding the feasibility of parallel SIT and UAT tracks starting tomorrow.
+*   Prajney Sribhashyam to finalize CMs/KAMs names and complete test case preparation ahead of next week's UAT cycle.
+
+
+## gchat/space/AAQABQNOFAs: @ecom-ops #standup - Mar 18
+Source: gchat | Group: space/AAQABQNOFAs | Last Activity: 2026-03-18T02:17:47.299000+00:00 | Last Updated: 2026-03-18T03:31:57.080848+00:00
+**Daily Work Briefing: @ecom-ops #standup**
+**Date:** March 18, 2026 (UTC)
+**Channel:** Resource: @ecom-ops #standup
+**Source URL:** https://chat.google.com/space/AAQABQNOFAs
+
+### 1. Key Participants & Roles
+*   **Shiva Kumar Yalagunda Bas**: Participant in the channel. Role inferred as a team member or lead initiating logistics coordination.
+*   **Channel Audience**: The message was viewed by 6 of 8 total members, indicating active engagement from the broader ops team.
+
+### 2. Main Topic/Discussion
+The discussion focused on determining the attendance modality for an upcoming session or meeting. Specifically, the team is verifying whether they are connecting via a virtual platform ("online"). No other topics were introduced in this log entry.
+
+### 3. Pending Actions & Ownership
+*   **Action**: Confirm attendance modality (Online vs. In-person) and communicate final decision to all members.
+*   **Owner**: Shiva Kumar Yalagunda Bas (initiator); Team consensus required from the remaining 2 members not yet recorded as viewing the message.
+
+### 4. Decisions Made
+*   **Status**: No decisions were finalized in this specific log entry. The conversation is currently in the inquiry phase to establish the meeting format.
+
+### 5. Key Dates & Follow-ups
+*   **Date of Log**: March 18, 2026 (Timestamp: 02:17:47 UTC).
+*   **Follow-up Required**: Immediate confirmation regarding the "online" status is needed to proceed with logistics or agenda setting for the standup session.
+
+**Summary Note:** This log represents a single inquiry at the start of the day's coordination. The team must resolve the attendance format query before proceeding with standard operational updates or task allocation.
+
+
+## gchat/space/AAQAVIu_P4s: Banner delivery for impressions-based campaigns - Mar 18
+Source: gchat | Group: space/AAQAVIu_P4s | Last Activity: 2026-03-18T02:09:51.991000+00:00 | Last Updated: 2026-03-18T03:32:10.480303+00:00
+**Daily Work Briefing: Banner Delivery for Impressions-Based Campaigns**
+**Date:** March 18, 2026
+**Source:** Google Chat Space (Resource ID: AAQAVIu_P4s)
+
+**Key Participants & Roles**
+*   **Nikhil Grover:** Initiator of scheduling change; likely meeting lead.
+*   **Allen Umali:** Participant confirming availability.
+*   **Cecilia Koo Hai Ling:** Participant requesting tool assistance (Gemini).
+*   *Note: Conversation viewed by 7 of 8 space members.*
+
+**Main Topic/Discussion**
+The discussion centered on rescheduling a meeting regarding "Banner delivery for impressions-based campaigns." The conversation was brief, consisting solely of scheduling coordination and a request for AI assistance. No technical details or campaign data were discussed in this specific thread.
+
+**Decisions Made**
+*   **Meeting Time Change:** Nikhil Grover requested to start the session at 10:05 due to being slightly late. Allen Umali explicitly agreed ("ok"). The meeting time was officially set for 10:05.
+
+**Pending Actions & Ownership**
+*   **Action:** Generate or utilize "Gemini" (presumably Google's AI model) to summarize, analyze, or draft content related to the campaign topic.
+    *   **Owner:** Cecilia Koo Hai Ling (Requested "can gemini this").
+    *   **Status:** Pending execution by Cecilia or an assigned assistant.
+
+**Key Dates & Deadlines**
+*   **Meeting Start Time:** 10:05 (March 18, 2026).
+*   **Context Date:** March 18, 2026.
+
+**Summary of Chronology**
+At 01:44 UTC on March 18, Nikhil Grover notified the group he was running late and proposed a new start time of 10:05. Allen Umali confirmed this adjustment at 01:49 UTC. Approximately 20 minutes later (02:09 UTC), Cecilia Koo Hai Ling requested to "gemini" the context, implying a need for AI processing or summarization of the campaign details.
+
+
+## gchat/space/AAQAqwOWBZ4: Madhawa, Soumya, Tayza, Madhuri, ...
+Source: gchat | Group: space/AAQAqwOWBZ4 | Last Activity: 2026-03-17T14:44:52.368000+00:00 | Last Updated: 2026-03-17T17:24:25.606268+00:00
+**Daily Work Briefing: Google Chat Summary**
+
+**Key Participants & Roles**
+*   **Wai Ching Chan:** Reported arrival status.
+*   **Sundy Yaputra:** Inquired about location details; acknowledged confirmation.
+*   **Yangyu Wang:** Provided specific location clarification (Level 1, outside mall).
+
+**Main Topic/Discussion**
+The conversation focused on the immediate physical location of Wai Ching Chan upon arrival at a facility. The group clarified whether the arrival point was inside or outside the mall and identified the specific floor (Level 1).
+
+**Actions Pending & Ownership**
+*   **Pending:** None explicitly stated in this thread.
+*   **Ownership:** No new action items were assigned; the discussion concluded with Sundy Yaputra thanking Yangyu Wang for the clarification.
+
+**Decisions Made**
+*   Confirmed location: Outside the mall on Level 1.
+*   Confirmed status: The team member (Wai Ching Chan) has successfully arrived.
+
+**Key Dates & Follow-ups**
+*   **Date:** March 17, 2026.
+*   **Time Window:** 10:03 AM – 10:12 AM UTC.
+*   **Follow-up:** Immediate follow-up required to integrate the arrival status with any pre-scheduled meeting or handover plans (implied by the context of "reached" and location queries).
+
+**Specific References**
+*   **Resource List:** Madhawa, Soumya, Tayza, Madhuri.
+*   **Space URL:** https://chat.google.com/space/AAQAqwOWBZ4
+*   **Location Details:** Level 1, Outside the mall.
+
+
+## gchat/dm/62iuUSAAAAE: Yaxin Hao
+Source: gchat | Group: dm/62iuUSAAAAE | Last Activity: 2026-03-17T09:57:08.515000+00:00 | Last Updated: 2026-03-17T17:27:27.135865+00:00
+**Daily Work Briefing: Google Chat Summary**
+
+**Resource:** Yaxin Hao
+**Conversation URL:** https://chat.google.com/dm/62iuUSAAAAE
+**Date Range:** March 17, 2026 (09:56 – 09:57 UTC)
+
+### Key Participants & Roles
+*   **Yaxin Hao:** Initiator of the invitation/meeting request.
+*   **Michael Bui:** Recipient; confirmed non-attendance due to conflicting commitments.
+
+### Main Topic
+Scheduling a physical meeting or attendance at location **"L10"**. Yaxin Hao inquired if Michael Bui would attend, and Michael responded regarding his availability for the day.
+
+### Decisions Made
+*   **Attendance Status:** Michael Bui explicitly declined the request to visit L10 on March 17, 2026.
+*   **Reasoning:** Michael is currently attending an "offline event."
+
+### Pending Actions & Ownership
+*   **Current Status:** No new meeting has been scheduled based on this exchange.
+*   **Ownership:** Neither participant assigned a specific follow-up action in the chat log. The topic remains pending unless rescheduled via a separate communication channel, as Michael indicated he is unavailable *today*.
+
+### Key Dates & Deadlines
+*   **Primary Date:** March 17, 2026 (Today's date of conversation).
+*   **Timeframe:** Discussion occurred between 09:56 and 09:57 UTC.
+*   **Follow-up Required:** None explicitly stated in the provided text.
+
+### Summary
+On March 17, 2026, Yaxin Hao initiated a brief exchange asking Michael Bui if he would come down to L10. Michael Bui declined immediately, citing a scheduled offline event as the reason for his unavailability that day. The conversation concluded with no new action items or future dates established within this specific thread.
+
+
+## gchat/space/AAAAQuMQ3Bs: Omni Fairmily
+Source: gchat | Group: space/AAAAQuMQ3Bs | Last Activity: 2026-03-17T08:04:44.451000+00:00 | Last Updated: 2026-03-17T17:30:05.738102+00:00
+**Daily Work Briefing Summary: Omni Fairmily Space**
+
+**Key Participants & Roles**
+*   **Pauline Tan:** Announced FPG ADvantage LinkedIn launch; highlighted team's showcase at the FairPrice Partners' Excellence Awards. Acknowledged cross-functional contributors including Rajiv Kumar Singh, Christopher Yong, Wendi Koh, Karlie Sia, Allen Umali, Pamela Koh, Serene Tan Si Lin, and Neo Seng Ka.
+*   **Fiona U:** Organized group lunch orders; confirmed food distribution.
+*   **Christine Yap Ee Ling:** Lead for Project Light user research; coordinating participant recruitment.
+*   **Jacob Yeo:** Edited previous lunch order messages (Meta-data note).
+
+**Main Topic/Discussion**
+The conversation covers three distinct activities:
+1.  **Marketing & Brand Presence:** Following the official FPG ADvantage LinkedIn launch, Pauline Tan reported on the team's successful showcase of retail media solutions at the FairPrice Partners' Excellence Awards last week. Activities included presenting the "Most Outstanding Omnichannel Partner" recognition and engaging guests at the booth to demonstrate connectivity between brands and shoppers across the ecosystem.
+2.  **Team Logistics:** Coordination of a group lunch order for "Heybo," including collection logistics at L12 main pantry.
+3.  **User Research Recruitment:** Urgent request to recruit non-staff participants (friends/family) for usability testing on the FPG App ("Project Light").
+
+**Pending Actions & Ownership**
+*   **Social Media Engagement:** Follow, like, and share the FPG ADvantage LinkedIn page. *Owner: All Team Members.*
+*   **Recruitment Referral:** Forward the provided WhatsApp/Telegram template to trusted social circles to find eligible participants. *Owner: All Team Members (as requested by Christine).*
+*   **Participant Booking:** Prospective participants must book slots via the provided calendar link. Confirmation of slots will be handled by Sriharsh or Christine after booking.
+
+**Decisions Made**
+*   **Lunch Logistics:** Group order finalized for Heybo with a collection ETA of 12:00 PM on March 10, 2026. Food is currently available at L12 main pantry. *(Note: The original deadline was 10:30 AM).*
+*   **Research Incentives:** Confirmed token amounts ($10 for online/Google Meet, $20 for in-person at FairPrice Hub/Joo Koon/L12).
+
+**Key Dates & Deadlines**
+*   **March 9, 2026 (09:33 AM):** FPG ADvantage LinkedIn page launch announcement.
+*   **March 10, 2026:**
+    *   Order deadline: 10:30 AM.
+    *   Lunch collection ETA: 12:00 PM.
+    *   Food arrival confirmed by 04:02 AM on March 10.
+*   **March 17, 2026 (08:04 AM):** Post-event report issued regarding the FairPrice Partners' Excellence Awards showcase.
+*   **March 16, 2026 (02:05 AM):** User research recruitment request issued.
+*   **Upcoming Research Sessions:** March 25–27, 2026 (Wednesday to Friday). Available slots are 12:00 PM and 1:15 PM.
+*   **Confirmation Timeline:** Sriharsh or Christine will confirm booked slots within 2 working days.
+
+**Participant Eligibility Criteria (Project Light)**
+Participants must be non-FPG staff, aged 25+, fluent in English, currently use the FPG App, have ordered online grocery delivery in the past 3 months, and manage household grocery shopping. They must not have participated in a FairPrice customer interview in the last 6 months.
