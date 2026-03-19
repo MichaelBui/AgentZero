@@ -1,5 +1,9 @@
-[gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:1363) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+Thursday
+(venv) root@f93a5675f2a0:/a0/usr/workdir# (venv) root@f93a5675f2a0:/a0/usr/workdir# Running with DAYS=2
+(venv) root@f93a5675f2a0:/a0/usr/workdir# [1] 849
+(venv) root@f93a5675f2a0:/a0/usr/workdir# Monitoring log at /a0/usr/skills/gmail/data/gmail-debug.log
+(venv) root@f93a5675f2a0:/a0/usr/workdir# [gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
+(node:850) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
 
 
