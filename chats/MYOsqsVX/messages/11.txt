@@ -1,0 +1,203 @@
+/a0/usr/workdir/gmail-output.md 2633 lines
+>>>
+  1 
+  2 
+  3 ## gmail/19d07ec0bebbd2b9: You have no events scheduled today.
+  4 Source: gmail | Thread: 19d07ec0bebbd2b9 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Thu, Mar 19, 2026, 9:06 PM | Last Updated: 2026-03-19T22:03:04.433430+00:00
+  5 **Daily Work Briefing Summary**
+  6 
+  7 *   **Key Participants:**
+  8     *   **Michael Bui** (Recipient/Account Holder): `michael.bui@fairpricegroup.sg`
+  9     *   **Google Calendar System**: Automated sender (`calendar-notification@google.com`)
+ 10 
+ 11 *   **Main Topic:**
+ 12     *   Delivery of the daily agenda notification for March 20, 2026. The system confirmed there are no scheduled events on the calendars subscribed to by Michael Bui (specifically "Digital Business Tech Release/Changes").
+ 13 
+ 14 *   **Pending Actions & Ownership:**
+ 15     *   **Review Agenda**: No specific action required as the schedule is clear.
+ 16     *   **Calendar Management (Optional)**: If Michael Bui wishes to modify which calendars trigger these notifications, he must log in to `https://calendar.google.com/calendar/` and adjust notification settings.
+ 17 
+ 18 *   **Decisions Made:**
+ 19     *   None; this is an automated informational update.
+ 20 
+ 21 *   **Key Dates & Deadlines:**
+ 22     *   **Current Date**: Friday, March 20, 2026 (Reference date for the "no events" status).
+ 23     *   **Notification Timestamp**: Thursday, March 19, 2026, at 9:06 PM.
+ 24 
+ 25 *   **Specific References:**
+ 26     *   **Email Address**: `michael.bui@fairpricegroup.sg`
+ 27     *   **Calendar Name**: "Digital Business Tech Release/Changes"
+ 28     *   **Management URL**: `https://calendar.google.com/calendar/`
+ 29     *   **Message ID**: 19d07ec0bebbd2b9
+ 30 
+ 31 
+ 32 ## gmail/19d06d47e91983ee: Smarter Spaces winners revealed  Enter Demo Jam to win a Metis Card
+ 33 Source: gmail | Thread: 19d06d47e91983ee | Labels: Inbox, Promotions | Priority: None | Senders: Axelera AI | Last Date: Thu, Mar 19, 2026, 4:01 PM | Last Updated: 2026-03-19T22:03:29.716342+00:00
+ 34 **Daily Work Briefing: Axelera AI Community Update**
+ 35 
+ 36 **Key Participants & Roles**
+ 37 *   **Axelera AI Team (Sender):** Provider of community updates, project challenges, and technical resources. Contact: `info@axelera.ai`. Website: `community.axelera.ai`.
+ 38 *   **Michael (Recipient):** Target audience for the update; potential community participant.
+ 39 
+ 40 **Main Topic/Request**
+ 41 Axelera AI announces the conclusion of the "Smarter Spaces" project challenge and launches a new voluntary contest ("Demo Jam") to showcase skills using Metis Compute Boards and the Voyager SDK. The email also highlights a specific technical build guide regarding Metis-powered CCTV integration with Home Assistant.
+ 42 
+ 43 **Pending Actions & Ownership**
+ 44 *   **Review Winners:** All recipients must view the "Smarter Spaces" winner announcements and project details via the provided link. (Owner: Recipient)
+ 45 *   **Participate in Demo Jam:** Recipients are invited to record a video or tutorial showcasing Metis/Voyager SDK work before the deadline. Winning entry receives a 4 Quad-Core Metis PCIe Card. (Owner: Interested Recipients)
+ 46 *   **Read Build Guide:** Review the technical guide for offloading Raspberry Pi object detection to Metis for smart CCTV with Home Assistant. (Owner: Interested Recipients)
+ 47 
+ 48 **Decisions Made**
+ 49 *   The "Smarter Spaces" Project Challenge has been officially concluded and winners have been selected (specific names not disclosed in this email).
+ 50 *   The "Demo Jam" is officially live; submissions are now being accepted.
+ 51 
+ 52 **Key Dates & Deadlines**
+ 53 *   **Email Date:** March 19, 2026.
+ 54 *   **Demo Jam Submission Deadline:** April 12, 2026 (prior to this date).
+ 55 
+ 56 **Specific References**
+ 57 *   **Prizes:** Flagship 4 Quad-Core Metis PCIe Card.
+ 58 *   **Technical Stack:** Metis Compute Board, Voyager SDK, Raspberry Pi, Home Assistant.
+ 59 *   **Performance Metrics Cited in Guide:** Two 1080p cameras at 30 FPS; zone-based filtering; phone notifications with snapshots under 2 seconds; fully local operation (no cloud).
+ 60 *   **Contact/Links:** `community.axelera.ai`; Metis Compute Board build guide link.
+ 61 
+ 62 
+ 63 ## gmail/19d0675202ba45ee: RMN PRD
+ 64 Source: gmail | Thread: 19d0675202ba45ee | Labels: Inbox | Priority: None | Senders: Nikhil Grover | Last Date: Thu, Mar 19, 2026, 2:17 PM | Last Updated: 2026-03-19T22:03:47.601933+00:00
+ 65 **Daily Work Briefing Summary**
+ 66 
+ 67 **Key Participants & Roles**
+ 68 *   **Nikhil Grover** (nikhil.grover@fairpricegroup.sg): Sender; driving the PRD sharing and meeting coordination.
+ 69 *   **Shubhangi**: Recipient; expected to review the PRD and attend the integration planning session.
+ 70 *   **Rahul**: Recipient; expected to review the PRD and attend the integration planning session.
+ 71 
+ 72 **Main Topic/Request**
+ 73 Nikhil Grover has distributed the Product Requirements Document (PRD) for the **RMN PRD** project. The primary objective is to convene a meeting to discuss and finalize the integration plan associated with this document.
+ 74 
+ 75 **Pending Actions & Ownership**
+ 76 *   **Action:** Share a calendar invitation for the planning meeting.
+ 77     *   **Owner:** Nikhil Grover
+ 78     *   **Status:** Pending (stated as "will share shortly")
+ 79 *   **Action:** Review the RMN PRD prior to the scheduled meeting.
+ 80     *   **Owner:** Shubhangi and Rahul
+ 81 
+ 82 **Decisions Made**
+ 83 *   A dedicated session has been confirmed to review the integration plan for the RMN PRD project.
+ 84 
+ 85 **Key Dates & Follow-ups**
+ 86 *   **Date of Meeting:** Wednesday, March 19, 2026 (Note: Context implies the meeting is scheduled *for* Wednesday following the Tuesday email timestamp, or potentially the email was sent on a different day than the prompt's implied chronological flow; however, based strictly on the text "Let's go over... on Wednesday," the meeting target is Wednesday).
+ 87     *   *Correction based on strict chronology:* The email timestamp is **Mar 19, 2026, 2:17 PM**. If sent on a Wednesday, the phrasing "on Wednesday" implies today. If sent earlier in the week, it refers to the upcoming Wednesday. Given the single message provided, the immediate follow-up is the invitation for this Wednesday.
+ 88 *   **Next Step:** Receipt of the meeting invite from Nikhil Grover.
+ 89 
+ 90 **Specific References**
+ 91 *   **Document:** RMN PRD
+ 92 *   **Topic:** Integration plan
+ 93 *   **Email Thread ID:** 19d0675202ba45ee
+ 94 
+ 95 
+ 96 ## gmail/19cbcd49e2a0bf4b: Fwd: Advertima - TTD : Lab test and PMP set up questions
+ 97 Source: gmail | Thread: 19cbcd49e2a0bf4b | Labels: Inbox | Priority: None | Senders: Iman, Viv., Ravi | Last Date: Thu, Mar 19, 2026, 11:19 AM | Last Updated: 2026-03-19T22:04:23.103416+00:00
+ 98 **Daily Work Briefing: Advertima TTD Lab Test Success & Strategic Roadmap (Updated)**
+ 99 
+100 **Key Participants**
+101 *   **Yian Koh (The Trade Desk):** Lead on reporting/data validation. Confirmed test completion; supported live activation strategy.
+102 *   **Ravi Singh (Place Exchange/Broadsign):** Technical lead. Validated segment support with Advertima; confirmed PX/TTD setup consistency. Expressed readiness for future execution.
+103 *   **Iman Nahvi (Advertima Co-Founder):** Strategic oversight. Celebrated test completion, defined roadmap for deterministic in-store media, and outlined vision for closed-loop measurement.
+104 *   **Yasmina Tregan (Advertima, Global Head of Product):** Initiated new segment deal setup requests.
+105 *   **Vivek Misra (The Trade Desk):** Acknowledged successful test completion.
+106 *   **Wei Phung & Rajiv Kumar Singh (FairPrice Group):** Clarifying test architecture; live campaign details pending.
+107 
+108 **Main Topic/Request**
+109 Investigation into CPM clearing discrepancies and setup of a new audience segment (`s0a113Gz`) targeting player `tizentest`. Following the resolution of initial inquiries, lab tests have been officially completed and validated by all stakeholders. Ravi Singh confirmed readiness to execute future campaigns and continue pushing the project forward.
+110 
+111 **Decisions Made & Status Update**
+112 *   **Test Completion:** Confirmed on Mar 19 by Vivek Misra, Ravi Singh, and Yasmina Tregan. The transition from testing to live operations is now active.
+113 *   **Strategic Pivot:** Iman Nahvi emphasized that while current capabilities rely on probabilistic in-store audience segments (a market differentiator), the next phase will integrate visual-spatial intelligence to match deterministic shopper IDs with probabilistic ones. This enables true closed-loop measurement via the new Advertima In-store Session ID.
+114 *   **Activation Mode:** All activations utilize PMP or PG; Open Exchange remains unsupported.
+115 *   **Bid Strategy:** Proceed with live campaigns using First Price or Fixed Price deals, with base/max bid set to fixed floor price.
+116 
+117 **Pending Actions & Owners**
+118 *   **Iman Nahvi / Team:** Execute intensified demand generation push to capitalize on promising new campaigns flowing in; prepare for deterministic ID integration and sales uplift measurement.
+119 *   **Wei Phung:** Provide specific details regarding live campaign and new audience segment for deal mapping to ensure seamless transition.
+120 *   **Yian Koh:** Monitor live campaigns closely as they go "live"; stand by for any implementation changes (currently unlikely).
+121 *   **Ravi Singh:** Validate support for new audience segments with the Advertima team; prepare to map new segments against deals once available from Wei Phung.
+122 
+123 **Key Dates & Deadlines**
+124 *   **Mar 18, 2026:** Ravi Singh confirmed handling of new segment validation separately; Yasmina Tregan requested end-to-end test for `s0a113Gz`; Yian Koh recommended live First/Fixed price deals.
+125 *   **Mar 19, 2026 (1:58 AM):** Vivek Misra confirmed tests completed successfully.
+126 *   **Mar 19, 2026 (4:35 AM):** Iman Nahvi celebrated the milestone, declared the shift to production ("let's get campaigns flowing"), and outlined the strategic vision for deterministic ID integration.
+127 *   **Mar 19, 2026 (11:19 AM):** Ravi Singh acknowledged the broader perspective, thanked the team for collaboration on this pioneering project, and confirmed readiness to execute future campaigns.
+128 
+129 **Specific References**
+130 *   **Test Deals:** `advertima_ttd-first-price-test`, `advertima_ttd-fixed-price-test-1`, `advertima_ttd-fixed-price-test-1.5`.
+131 *   **New Segment/Player:** `s0a113Gz` (>25yo) and player `tizentest`.
+132 *   **Strategic Focus:** Transition from probabilistic in-store segments to deterministic shopper IDs via visual-spatial intelligence; implementation of Advertima In-store Session ID.
+133 
+134 
+135 ## gmail/19d04f4687ab5298: Updated invitation: BCRS - Refunds Issue War Room @ Thu Mar 19, 2026 3:30pm - 4:30pm (SGT) (Michael Bui)
+136 Source: gmail | Thread: 19d04f4687ab5298 | Labels: Inbox | Priority: None | Senders: Prajney Sribhashyam | Last Date: Thu, Mar 19, 2026, 7:16 AM | Last Updated: 2026-03-19T22:04:35.490847+00:00
+137 **Daily Work Briefing: BCRS Refunds Issue War Room**
+138 
+139 **1. Key Participants & Roles**
+140 *   **Organizer:** Prajney Sribhashyam (prajney.sribhashyam@fairpricegroup.sg)
+141 *   **Confirmed Attendees:** Wai Ching Chan, Sathya Murthy Karthik, De Wei Tey, Daryl Ng, Michael Bui (michael.bui@fairpricegroup.sg), Lai Shu Hui.
+142 *   **Optional Guest:** Pazhanisamy Harish Prabhu.
+143 
+144 **2. Main Topic/Request**
+145 The thread concerns an update to the calendar invitation for a **"BCRS - Refunds Issue War Room"** meeting. The primary purpose of this session is to address and resolve issues related to BCRS refunds.
+146 
+147 **3. Pending Actions & Ownership**
+148 *   **Action:** Review updated invitation details (specifically the Google Meet link) and confirm attendance status.
+149 *   **Owner:** All listed attendees, specifically Michael Bui who received the notification.
+150 *   **RSVP Options:** The system allows for "Yes," "No," or "Maybe" responses to be submitted to the organizer.
+151 
+152 **4. Decisions Made**
+153 *   No strategic decisions regarding refund protocols are recorded in this thread; the update is purely logistical (event details modification).
+154 
+155 **5. Key Dates & Deadlines**
+156 *   **Meeting Date:** Thursday, March 19, 2026.
+157 *   **Time:** 3:30 PM – 4:30 PM (Singapore Standard Time).
+158 *   **Notification Timestamp:** Email received on March 19, 2026, at 7:16 AM SGT (indicating the event was updated shortly before the scheduled start time).
+159 
+160 **6. Meeting Access Details**
+161 *   **Video Conference:** Google Meet Link: `meet.google.com/pvz-gxca-pkc`
+162 *   **Phone Dial-in:**
+163     *   US Number: +1 216-512-1244
+164     *   PIN: 991171272
+165 *   **Other Options:** Additional international phone numbers are available via the calendar invitation.
+166 
+167 
+168 ## gmail/19d04f263b5f941c: Accepted: [Placeholder] Project Light @ Thu Mar 19, 2026 4pm - 5pm (SGT) (Alvin Choo)
+169 Source: gmail | Thread: 19d04f263b5f941c | Labels: None | Priority: None | Senders: me | Last Date: Thu, Mar 19, 2026, 7:14 AM | Last Updated: 2026-03-19T22:04:47.269829+00:00
+170 **Daily Work Briefing: Project Light Meeting Update**
+171 
+172 **1. Key Participants & Roles**
+173 *   **Alvin Choo:** Organizer (Project Light).
+174 *   **Michael Bui:** Attendee; Confirmed acceptance of invitation.
+175 *   **Other Guests:** Tiong Siong Tee, Akash Gupta, Daryl Ng, Gopalakrishna Dhulipati.
+176 
+177 **2. Main Topic & Request**
+178 *   **Subject:** Project Light operational meeting.
+179 *   **Context:** Discussion scheduled within the context of FairPrice Group operations (indicated by Michael Bui's email domain and venue location).
+180 
+181 **3. Decisions Made**
+182 *   The meeting time and agenda have been confirmed for **Thursday, March 19, 2026**.
+183 *   Michael Bui has formally accepted the invitation to attend.
+184 
+185 **4. Pending Actions & Ownership**
+186 *   **Attendance Confirmation:** No further action required from Michael Bui (status: Accepted). Action pending for other guests (Tiong Siong Tee, Akash Gupta, Daryl Ng, Gopalakrishna Dhulipati) to confirm attendance or decline if not yet responded.
+187 *   **Meeting Execution:** Alvin Choo owns the facilitation of the session at the scheduled time.
+188 
+189 **5. Key Dates, Deadlines & Logistics**
+190 *   **Date/Time:** Thursday, March 19, 2026, 4:00 PM – 5:00 PM (SGT).
+191 *   **Venue/Hybrid Location:** FairPrice Hub-11-L11 Cappuccino (Room 10) [In-person] and Google Meet.
+192 *   **Digital Access:**
+193     *   **Google Meet Link:** `meet.google.com/fwa-uffr-txc`
+194     *   **Phone Dial-in (US):** +1 404-692-7573 | PIN: 264012841.
+195 
+196 **Summary Note:** The invitation for Project Light is active and confirmed by Michael Bui. All logistical details, including the hybrid venue in Singapore and digital access codes, are finalized for the upcoming Thursday session.
+197 
+198 
+199 ## gmail/19d04e97bdbad01f: Updated invitation: [Placeholder] Project Light @ Thu Mar 19, 2026 4pm - 5pm (SGT) (Michael Bui)
+200 Source: gmail | Thread: 19d04e97bdbad01f | Labels: Inbox | Priority: None | Senders: Alvin Choo | Last Date: Thu, Mar 19, 2026, 7:05 AM | Last Updated: 2026-03-19T22:05:15.359009+00:00
+<<<
