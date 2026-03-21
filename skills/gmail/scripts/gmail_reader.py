@@ -421,16 +421,29 @@ def cache_thread_messages(
 
 # ── Output & Summarization ─────────────────────────────────────────
 
+def _to_local_ts(iso_str: str) -> str:
+    """Convert an ISO timestamp string to the configured local timezone."""
+    if not iso_str:
+        return iso_str
+    try:
+        dt = datetime.fromisoformat(iso_str)
+        return dt.astimezone(_TZ).isoformat()
+    except (ValueError, TypeError):
+        return iso_str
+
+
 def _print_output(thread_id: str, subject: str, summary_text: str,
                   labels: list, priority: str | None, senders: list, date: str,
-                  summarized_at: str = ""):
+                  summarized_at: str = "",
+                  current: int = 0, total: int = 0):
     """Print a single thread's output in streaming format."""
     label_str = ", ".join(labels) if labels else "None"
     priority_str = priority or "None"
     sender_names = ", ".join(s.get("name", s.get("email", "")) for s in senders) if senders else "Unknown"
-    updated_str = f" | Last Updated: {summarized_at}" if summarized_at else ""
+    updated_str = f" | Last Updated: {_to_local_ts(summarized_at)}" if summarized_at else ""
 
-    print(f"\n\n## gmail/{thread_id}: {subject}", file=_output_file, flush=True)
+    numbering = f"[{current}/{total}] " if current and total else ""
+    print(f"\n\n## {numbering}{subject}", file=_output_file, flush=True)
     print(
         f"Source: gmail | Thread: {thread_id} | Labels: {label_str} | "
         f"Priority: {priority_str} | Senders: {sender_names} | Last Date: {date}{updated_str}",
@@ -450,6 +463,8 @@ def summarize_and_output(db: SkillDB, thread_info: dict):
     last_msg_id = thread_info.get("last_msg_id", "")
     current = thread_info.get("_sum_current", "?")
     total = thread_info.get("_sum_total", "?")
+    current_int = current if isinstance(current, int) else 0
+    total_int = total if isinstance(total, int) else 0
     sum_progress = f"[Summarizing {current}/{total}]"
     sum_done = f"[Summarized {current}/{total}]"
 
@@ -458,13 +473,15 @@ def summarize_and_output(db: SkillDB, thread_info: dict):
         if existing:
             eprint(f"{sum_done} [{subject[:40]}]: using cached summary")
             _print_output(thread_id, subject, existing["summary"], labels, priority, senders, date,
-                          summarized_at=existing.get("summarized_at", ""))
+                          summarized_at=existing.get("summarized_at", ""),
+                          current=current_int, total=total_int)
             return
 
     items = db.get_atomic_for_resource(thread_id)
     if not items:
         eprint(f"{sum_done} [{subject[:40]}]: no cached messages, outputting metadata only")
-        _print_output(thread_id, subject, "(Not yet fetched)", labels, priority, senders, date)
+        _print_output(thread_id, subject, "(Not yet fetched)", labels, priority, senders, date,
+                      current=current_int, total=total_int)
         return
 
     existing_summary = db.get_resource_summary(thread_id)
@@ -497,11 +514,13 @@ def summarize_and_output(db: SkillDB, thread_info: dict):
         saved = db.get_resource_summary(thread_id)
         new_summarized_at = saved.get("summarized_at", "") if saved else ""
         _print_output(thread_id, subject, summary_text, labels, priority, senders, date,
-                      summarized_at=new_summarized_at)
+                      summarized_at=new_summarized_at,
+                      current=current_int, total=total_int)
         eprint(f"{sum_done} [{subject[:40]}]: done")
     elif existing_text:
         _print_output(thread_id, subject, existing_text, labels, priority, senders, date,
-                      summarized_at=prev_summarized_at)
+                      summarized_at=prev_summarized_at,
+                      current=current_int, total=total_int)
 
 
 def _summarize_worker(q: "_queue.Queue", db_path: Path, error_event: threading.Event, results: list) -> None:
@@ -589,8 +608,9 @@ def main():
     if args.cached_only:
         try:
             summaries = db.get_all_summaries(source="gmail")
-            eprint(f"Cached-only mode: {len(summaries)} summaries from DB")
-            for s in summaries:
+            total = len(summaries)
+            eprint(f"Cached-only mode: {total} summaries from DB")
+            for idx, s in enumerate(summaries, 1):
                 meta = json.loads(s.get("metadata", "{}"))
                 labels = meta.get("labels", [])
                 priority = meta.get("priority")
@@ -600,6 +620,7 @@ def main():
                     s.get("summary", "(no summary)"),
                     labels, priority, senders, "",
                     summarized_at=s.get("summarized_at", ""),
+                    current=idx, total=total,
                 )
             eprint(f"{'='*60}")
             eprint(f"STATUS: COMPLETED - Gmail Reader (cached-only): {len(summaries)} summaries output")

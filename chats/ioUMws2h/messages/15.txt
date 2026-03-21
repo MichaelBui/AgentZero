@@ -1,0 +1,81 @@
+/a0/usr/workdir/❗ Daily Work Report 2026-03-21.md written 78 lines
+>>>
+ 1 # ❗ Daily Work Report - Saturday, March 21, 2026
+ 2 
+ 3 ---
+ 4 
+ 5 Critical production instability continues across Orchid, Shopping Cart, and Grocery services with P2 error states persisting since March 18. The BCRS Phase 2 release (DPD-715/733) is technically complete but blocked by a Bitbucket pipeline failure on the merge commit, requiring immediate investigation before deployment can proceed. Two major initiatives face extended delays: Meta integration for OSMOS offsite ads remains blocked due to lack of response from Meta on campaign whitelisting (now in its 4th month), and VIP verification bypass awaits business-side alignment on the identification logic.
+ 6 
+ 7 Delivery risk is elevated for BCRS Phase 2 given the pipeline blocker, while operational stability concerns intensify with recurring flicker patterns consuming error budgets. Team dynamics show effective cross-squad collaboration on production incidents but systemic gaps in vendor responsiveness (Meta) and business process clarity (VIP definition). The Smart Cart x RMN catch-up meeting scheduled for Tuesday provides an opportunity to address ongoing alignment.
+ 8 
+ 9 ---
+10 
+11 ## 🔴 My Action Items (Pending My Action)
+12 
+13 | Metadata | Details | Suggested Action |
+14 |----------|---------|-----------------|
+15 | **Priority:** 🔴<br>**Priority reason:** Production release blocked by CI/CD failure on merge commit<br>**Source:** Gmail (Bitbucket Pipeline Alert)<br>**Date:** March 21, 2026, 1:05 AM<br>**From:** Bitbucket System | **Context:** PR #131 for DPD-715 was merged to master and triggered a pipeline failure at commit fc067b7. The PR addressed "Sanitize configured slots" edge cases. Pipeline ran for 54 seconds before failing, blocking deployment of DPD-715/733 which are currently in "IN RELASE QUEUE" status. Immediate investigation required to determine if this is a code logic issue from the merge or infrastructure problem.<br>**References:** PR #131, commit fc067b7, DPD-715<br>**Cross-source signals:** Jira (DPD-715, DPD-733 in release queue) | Investigate Bitbucket pipeline failure for commit fc067b7 immediately. Review error logs at "View this pipeline" link to determine root cause. If code-related, prepare hotfix or revert. If infrastructure, coordinate with DevOps. Must resolve before deploying DPD-715/733. |
+16 | **Priority:** 🔴<br>**Priority reason:** UAT completed but deployment pending approval<br>**Source:** Jira (DPD-715, DPD-733)<br>**Date:** March 19, 2026<br>**From:** Nikhil Grover | **Context:** Both DPD-715 and DPD-733 are in "IN RELASE QUEUE" (Done) status. UAT was completed on March 19 by Michael Bui with successful outcomes documented. However, Omni Home swimlanes show fixed positions at (1,3) instead of dynamic Split configuration - discrepancy needs clarification before full sign-off. Deployment cannot proceed without resolving this inconsistency or getting explicit approval to proceed despite it.<br>**References:** DPD-715, DPD-733<br>**Cross-source signals:** Gmail (Bitbucket pipeline failure on same PR) | Contact Nikhil Grover via GChat immediately to clarify Omni Home discrepancy. Either: (a) get confirmation to proceed with deployment despite fixed positions if this is acceptable, or (b) escalate for stakeholder review before release. Coordinate with DevOps once decision made. |
+17 | **Priority:** 🟡<br>**Priority reason:** Meeting requires RSVP to confirm attendance<br>**Source:** Gmail (Calendar Invitation)<br>**Date:** March 20, 2026<br>**From:** Ching Hui Ng | **Context:** Calendar invitation for "Smart Cart x RMN Catchup" on Tuesday, March 24, 2026 at 5:00-5:30 PM SGT. No agenda provided beyond title. Requires RSVP response to confirm attendance.<br>**References:** Invitation thread<br>**Cross-source signals:** Single source | Reply to Ching Hui Ng with RSVP (Yes/No/Maybe) by end of day today. If attending, request agenda details to prepare appropriately for discussion on Smart Cart x RMN alignment. |
+18 
+19 ---
+20 
+21 ## 🟡 My Follow-Ups (Waiting on Others)
+22 
+23 | Metadata | Details | Suggested Action |
+24 |----------|---------|-----------------|
+25 | **Priority:** 🔴<br>**Priority reason:** Blocking $600k revenue initiative for 4+ months<br>**Source:** Jira (OMNI-1191)<br>**Since:** Late October 2025<br>**Days Waiting:** 113 days<br>**Waiting On:** Meta campaign whitelisting team | **Context:** OMNI-1191 remains blocked due to Meta not whitelisting specific campaigns required for OSMOS API testing completion. Initial config was enabled by Meta in Oct 2025, but whitelisting delayed until Jan 2026 with no progress since. Testing of one use case pending completion due to error; Meta asked to revert by end of week (late Jan) with no response. Escalation to senior Meta leads ongoing. Without resolution, the ~4-6 week development cycle cannot begin, risking missing 2025 delivery window entirely.<br>**References:** OMNI-1191<br>**Cross-source signals:** Single source | Escalate directly to Michael Bui's known contacts at Meta (business leadership level) today. Set explicit deadline of March 28 for whitelist completion or provide alternative path forward. Document impact on $600k revenue timeline in escalation email. |
+26 | **Priority:** 🟡<br>**Priority reason:** Feature complete but blocked from release awaiting business decision<br>**Source:** Jira (OPCO-1940)<br>**Since:** March 16, 2026<br>**Days Waiting:** 5 days<br>**Waiting On:** Business side/CS team for VIP definition alignment | **Context:** OPCO-1940 (FP VIP Verification Bypass) is technically complete with UAT signed off on Feb 2. However, deployment paused per Vivian Lim Yu Qian's March 16 update requiring re-alignment on VIP identification logic. Original implementation used Split flag referencing external tracking sheet; feedback indicates system must use direct backoffice tag instead. Business team must confirm new definition before Michael can execute release with mandated Datadoghq monitoring.<br>**References:** OPCO-1940<br>**Cross-source signals:** Single source | Follow up with Vivian Lim Yu Qian today to determine if business alignment is complete. If not, set response deadline of March 25 for VIP definition confirmation. Prepare deployment plan with monitoring requirements pending approval. |
+27 
+28 ---
+29 
+30 ## 📋 Work Stream Summaries
+31 
+32 ### BCRS Phase 2 - Product Ads in Omni Home Swimlanes - **[Status: Blocked]**
+33 
+34 - **What's happening:** Three stories under epic DPD-710 are technically complete but deployment stalled. DPD-715 and DPD-733 (dynamic ad slot configuration for homepage swimlanes and vertical scroll) reached "IN RELASE QUEUE" status after UAT on March 19. However, a critical blocker emerged: Bitbucket pipeline failed immediately after PR #131 merge to master at commit fc067b7. Additionally, Omni Home swimlanes show fixed positions (1,3) instead of dynamic Split configuration - discrepancy identified during UAT but not yet resolved with stakeholders.
+35 - **Key people:** Michael Bui (deployment owner), Nikhil Grover (reporter/stakeholder)
+36 - **Open questions or risks:** (1) Is the pipeline failure code-related from the merge commit or infrastructure issue? (2) Does the Omni Home discrepancy require stakeholder review before release, or can we proceed with documented limitation? (3) What is the deployment timeline if blocked continues beyond today?
+37 - **Recommendation:** Investigate pipeline failure immediately and escalate Omni Home clarification to Nikhil Grover within 2 hours of investigation start.
+38 
+39 ### Meta Integration for OSMOS Offsite Ads - **[Status: Blocked]**
+40 
+41 - **What's happening:** OMNI-1191 has been blocked since late October 2025 waiting on Meta to whitelist specific campaigns for API testing completion. Initial configuration enabled by Meta in Oct 2025, but whitelisting delayed through January with no progress since. Testing of one use case pending due to error; Meta asked to revert by end of week (late Jan) with no response. Project carries high risk of missing 2025 delivery window (~4-6 weeks development cycle required post-blocker removal). Escalation to senior Meta leads has been ongoing but yielded no resolution.
+42 - **Key people:** Nikhil Grover (following up with Meta), Michael Bui (escalation path)
+43 - **Open questions or risks:** (1) Who are the most appropriate senior contacts at Meta for escalation? (2) What is the revenue impact timeline if whitelist not received by March 28? (3) Is there an alternative testing approach that doesn't require full whitelisting?
+44 - **Recommendation:** Escalate directly to business leadership level at Meta today with explicit deadline and documented revenue impact. Prepare contingency plan for potential Q2 delivery.
+45 
+46 ### Production Stability & Alerting - **[Status: At Risk]**
+47 
+48 - **What's happening:** Multiple critical production incidents observed in early morning hours of March 21 (UTC+8). Orchid/Boughtbought endpoints show "flicker" pattern with success rates dropping to 97.9-99.8% between 02:42-03:14 UTC. Shopping Cart service experienced P99 write latency spike to 6.135s on wish-list endpoint at 03:01 UTC - first time write operations exceeded previous read-only thresholds. DPD Grocery discovery service remains in P2 error state since March 18 with unresolved root cause. All incidents self-corrected within 1-13 minutes but recurring pattern indicates systemic degradation consuming error budgets.
+49 - **Key people:** Squad Journey (Orchid/Boughtbought), Squad Dynamics (My-Persona API), Squad Compass (Android linkpoints), dpd-pricing-cart team
+50 - **Open questions or risks:** (1) Shared infrastructure contention within Dynamics services? (2) Error budget consumption accelerating beyond acceptable thresholds? (3) Potential for escalation to P1 if flicker pattern continues through weekend traffic?
+51 - **Recommendation:** Monitor closely through Monday morning; prepare incident response plan if patterns persist. Schedule root cause analysis with all involved squads by Tuesday.
+52 
+53 ### Marketplace Operations - **[Status: On Track]**
+54 
+55 - **What's happening:** Operational support team addressing multiple seller onboarding and fulfillment issues. Urgent promotion removal requested for Item ID 90244361 (incorrectly configured) to prevent financial loss. Additional queries include FFS order status for Yumsay Food, vendor report issues for CoLab Apac and Old Shanghai, access grants for new sellers, and delivery slot display discrepancies. Team actively responding with most items resolved within same-day or next-day SLA.
+56 - **Key people:** Willie Tan (operations), Dang Hung Cuong (technical lead), Lalita Phichagonakasit (business liaison)
+57 - **Open questions or risks:** (1) Promotion removal timeline for Item 90244361 - needs immediate execution to prevent revenue loss. (2) Delivery slot logic discrepancy affecting seller experience may indicate systemic issue if not isolated case.
+58 - **Recommendation:** Confirm promotion removal completed by end of day today. Monitor delivery slot issue for recurrence pattern before escalating to engineering team.
+59 
+60 ### RMN Testing Infrastructure - **[Status: At Risk]**
+61 
+62 - **What's happening:** Automated test suite for marketing-service showing consistent 2 API test failures per nightly run from March 17 through March 21 (5 consecutive days). Stable services include promo-service and marketing-personalization-service with 100% pass rates. Webhook bot consistently failing to process notifications across all cycles, masking visibility into actual test outcomes. Failures appear persistent rather than flaky, suggesting systematic issue requiring engineering attention.
+63 - **Key people:** DevOps team (webhook bot), marketing-service owners
+64 - **Open questions or risks:** (1) What specific tests are failing consistently? (2) Is webhook bot failure preventing visibility into other service health? (3) Risk of undetected regressions if notification system remains broken?
+65 - **Recommendation:** Escalate to DevOps team today for webhook bot remediation. Request detailed failure reports from test suite owner for marketing-service API failures.
+66 
+67 ---
+68 
+69 ## 💡 Patterns and Observations
+70 
+71 - **Meta vendor responsiveness gap:** OMNI-1191 has been blocked for 113 days with senior-level escalation yielding no response - this is not an isolated incident but a recurring pattern where external partners fail to meet SLAs, forcing internal teams to carry business risk without recourse.
+72 - **Production incident masking:** All recent stability incidents (Orchid flicker, Shopping Cart latency spikes) self-corrected within minutes before human intervention could occur, indicating our automated recovery is effective but also hiding the true severity of underlying system degradation from stakeholders who only see "resolved" alerts.
+73 - **Release process fragility:** DPD-715/733 reached UAT sign-off and release queue status, yet a single pipeline failure on merge commit blocks deployment - suggests CI/CD validation needs to run pre-merge rather than post-merge to catch issues earlier in the workflow.
+74 - **Business-process-to-engineering handoff gaps:** OPCO-1940 demonstrates pattern where engineering delivers complete solution but business side redefines requirements mid-stream (VIP identification logic), causing deployment delays and requiring rework that wasn't anticipated in original acceptance criteria.
+75 
+76 ---
+77 
+78 **Quick Stats:** 3 action items | 2 follow-ups | 5 work streams | 5 patterns/observations | Sources: 0 memory items, 6 Jira tickets, 5 GChat spaces, 6 Gmail threads
+<<<

@@ -1,0 +1,10 @@
+{
+    "code_exec_first_output_timeout": 300,
+    "code_exec_between_output_timeout": 300,
+    "code_exec_max_exec_timeout": 1800,
+    "code_exec_dialog_timeout": 10,
+    "output_first_output_timeout": 300,
+    "output_between_output_timeout": 300,
+    "output_max_exec_timeout": 1800,
+    "output_dialog_timeout": 10
+}

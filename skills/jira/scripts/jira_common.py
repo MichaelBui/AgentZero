@@ -362,7 +362,7 @@ def _summarize_one(
     if not force and not db.needs_resummarize(key):
         existing = db.get_resource_summary(key)
         if existing:
-            _print_output(db, key, existing)
+            _print_output(db, key, existing, current=current, total=total)
             eprint(f"[Summarized {current}/{total}] {key}: using cached summary")
         return
 
@@ -379,7 +379,7 @@ def _summarize_one(
 
     if not items:
         if existing_summary:
-            _print_output(db, key, existing_summary)
+            _print_output(db, key, existing_summary, current=current, total=total)
         return
 
     ticket_item = next(
@@ -411,7 +411,7 @@ def _summarize_one(
     saved = db.get_resource_summary(key)
     if not saved:
         raise RuntimeError(f"{key}: summary generated but DB write failed")
-    _print_output(db, key, saved)
+    _print_output(db, key, saved, current=current, total=total)
     eprint(f"[Summarized {current}/{total}] {key}: done")
 
 
@@ -485,7 +485,19 @@ def finish_summarize_pipeline(pipeline: "_SummarizePipeline") -> list:
     return pipeline.errors
 
 
-def _print_output(db: SkillDB, key: str, summary_row: dict) -> None:
+def _to_local_ts(iso_str: str) -> str:
+    """Convert an ISO timestamp string to the configured local timezone."""
+    if not iso_str:
+        return iso_str
+    try:
+        dt = datetime.fromisoformat(iso_str)
+        return dt.astimezone(_TZ).isoformat()
+    except (ValueError, TypeError):
+        return iso_str
+
+
+def _print_output(db: SkillDB, key: str, summary_row: dict,
+                  current: int = 0, total: int = 0) -> None:
     """Print text output block immediately and flush stdout."""
     meta = json.loads(summary_row.get("metadata", "{}"))
     title = summary_row.get("title", "")
@@ -525,11 +537,12 @@ def _print_output(db: SkillDB, key: str, summary_row: dict) -> None:
 
     summarized_at = summary_row.get("summarized_at", "")
     if summarized_at:
-        meta_parts.append(f"Last Updated: {summarized_at}")
+        meta_parts.append(f"Last Updated: {_to_local_ts(summarized_at)}")
     metadata_block = " | ".join(meta_parts)
     summary = summary_row.get("summary", "")
 
-    header = f"jira/{key}: {title}" if title else f"jira/{key}"
+    numbering = f"[{current}/{total}] " if total else ""
+    header = f"{numbering}{title}" if title else f"{numbering}{key}"
     try:
         print(f"\n\n## {header}\n{metadata_block}\n{summary}", file=_output_file, flush=True)
     except ValueError:
@@ -569,9 +582,10 @@ def cleanup_files() -> None:
 def run_cached_only(db: SkillDB) -> None:
     """Output all cached Jira summaries from DB without any API calls."""
     summaries = db.get_all_summaries(source="jira")
-    eprint(f"Cached-only mode: {len(summaries)} summaries from DB")
-    for s in summaries:
-        _print_output(db, s["resource_id"], s)
+    total = len(summaries)
+    eprint(f"Cached-only mode: {total} summaries from DB")
+    for idx, s in enumerate(summaries, 1):
+        _print_output(db, s["resource_id"], s, current=idx, total=total)
     eprint(f"{'='*60}")
-    eprint(f"STATUS: COMPLETED - Jira Reader (cached-only): {len(summaries)} summaries output")
+    eprint(f"STATUS: COMPLETED - Jira Reader (cached-only): {total} summaries output")
     eprint(f"{'='*60}")

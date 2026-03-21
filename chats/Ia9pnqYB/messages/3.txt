@@ -1,0 +1,68 @@
+JIRA output file size: 141457 characters
+
+=== First 5000 chars ===
+
+
+## jira/OMNI-1191: [OSMOS only] Enable offsite ads integration with Meta on OSMOS
+Source: jira | Key: OMNI-1191 | Status: Define (In Progress) | Type: Idea | Priority: High | Assignee: Nikhil Grover | Reporter: Nikhil Grover | polaris-work-item-link: RM-556 | Last Updated: 2026-03-20T14:44:56.988023+00:00
+**Ticket:** OMNI-1191 | **Status:** Red (Blocked) | **Assignee:** Nikhil Grover | **Priority:** High | **Linked Issue:** RM-556
+
+### Current State
+The initiative to enable offsite ads integration with Meta on OSMOS remains blocked. While the solution design is defined and success criteria target $600k RMN Offsite revenue, development cannot proceed due to external dependencies. The project carries a high risk of missing the 2025 delivery window (~4-6 weeks development cycle required post-blocker removal).
+
+### Blockers & Key Dates
+*   **Primary Blocker:** Meta has not whitelisted specific campaigns required for API testing completion. This configuration update was delayed from October through January.
+*   **Recent History:**
+    *   **Oct 2025:** Configuration enabled by Meta; initial API testing began.
+    *   **Nov 1, 2025:** Performance Marketing team confirmed correct config. Testing resumed but stalled waiting for campaign whitelisting.
+    *   **Nov 28, 2025 - Jan 29, 2026:** Status remains blocked due to lack of response from Meta on whitelisting.
+*   **Latest Update (Jan 22, 2026):** Testing of one use case is pending completion due to an error. Meta was asked to revert by the end of that week; no further update as of Jan 29.
+
+### Pending Actions & Ownership
+1.  **Finalize Whitelisting:** Meta must whitelist specific campaigns to allow OSMOS to complete API testing.
+    *   *Owner:* Nikhil Grover (following up with Meta).
+    *   *Escalation Path:* Business leadership and senior leads at Meta were previously engaged; escalation remains ongoing if no response is received.
+2.  **Resolve Testing Error:** The error encountered in the current test case must be addressed by Meta to allow full testing completion.
+3.  **Effort Estimation & Timeline:** Once testing is complete, OSMOS must confirm development effort and final timeline.
+    *   *Owner:* OSMOS team (pending test completion).
+
+### Decisions Made
+*   **Validation Approach:** The idea was validated against a baseline of 7-8 offsite campaigns per month versus a target of $600k revenue.
+*   **Escalation Strategy:** Upon multiple failed follow-ups in late October, the issue was escalated to senior leads at Meta and internal business stakeholders.
+
+### Next Steps
+Immediate focus is on securing Meta's response regarding campaign whitelisting to unblock API testing. Once OSMOS completes testing, they will provide a concrete effort estimate for the remaining development phase.
+
+
+## jira/DPD-715: Dynamic ad slot configuration for Homepage swimlanes
+Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | parent: DPD-710 | Last Updated: 2026-03-20T14:45:22.796038+00:00
+### Daily Briefing Summary: DPD-715 (Dynamic Ad Slot Configuration)
+
+**Current Status:** **IN RELEASE QUEUE** (Resolution: Done). The story is technically complete and pending final deployment/approval.
+
+**Key Decisions & Actions Taken:**
+*   **Feature Flag Implementation:** Split configuration logic implemented to dynamically control ad slot indices (e.g., `[3, 5, 7]`) without code changes. Handles fallback defaults (`[1, 3]`), empty arrays (organic only), and out-of-bounds scenarios gracefully.
+*   **Environment Updates (2026-03-16):**
+    *   **OG Home:** Verified SplitIO change reflection in swimlanes.
+    *   **Mobile Apps:** Confirmed fix for mobile-specific issues; ticket marked ready for UAT.
+    *   **Omni Home:** Positions remain fixed at `(1, 3)` pending further investigation by Michael Bui (contacting stakeholders).
+
+**Pending Actions & Ownership:**
+*   **UAT Execution:** Conducted on **2026-03-19** by Michael Bui. Outcomes to be documented.
+*   **Omni Home Discrepancy:** Investigate why Omni swimlanes are not reflecting the dynamic Split changes (currently stuck at fixed positions). Owner: **Michael Bui**.
+*   **Final Release:** Move from "In Release Queue" to production deployment post-UAT sign-off.
+
+**Key Dates & Constraints:**
+*   **Due Date:** 2026-03-17 (Note: Status indicates completion past this date).
+*   **Critical Constraint:** System must maintain existing stock availability checks; no out-of-stock products can be rendered as ads.
+*   **Parent Ticket:** DPD-710 ([RMN] Activate product ads in Omni Home swimlanes).
+
+**Technical Context:**
+*   **Logic:** API requests adapt to Split configuration counts (e.g., 3 slots = request 3 ads). If Ad Supply is short, system fills available slots and renders organic content for gaps.
+*   **Reporting:** Michael Bui reported successful UAT session completion on 2026-03-19.
+
+**Blockers/Notes:**
+*   Minor incon
+
+Saved to /a0/tmp/jira-full.txt
+(venv) root@80e3e99df9ff:/a0/usr/workdir#

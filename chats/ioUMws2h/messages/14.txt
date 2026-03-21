@@ -1,0 +1,203 @@
+/a0/usr/workdir/gmail-output.md 2105 lines
+>>>
+  1 
+  2 
+  3 ## gmail/19d0e57d944bb79a: [Dashboard Report] Retail Media - DD Dashboard | Sat 21 Mar 11:00AM +08
+  4 Source: gmail | Thread: 19d0e57d944bb79a | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Sat, Mar 21, 2026, 3:02 AM | Last Updated: 2026-03-21T03:33:09.018963+00:00
+  5 **Daily Work Briefing: Retail Media Dashboard Update**
+  6 
+  7 **Key Participants & Roles**
+  8 *   **Michael:** Recipient of the report; responsible for monitoring.
+  9 *   **Datadog HQ (no-reply@dtdg.eu):** Sender; automated system notification from Datadog Inc. representing the reporting team.
+ 10 *   **Team Datadog:** Sender signature; operational support unit.
+ 11 
+ 12 **Main Topic & Request**
+ 13 The email serves as an automated delivery of the **"Retail Media - DD Dashboard"** report. The sender explicitly states that this attachment contains data covering the **past 3 days** leading up to the generation time (March 21, 2026). The direct instruction provided is "Happy monitoring," indicating a passive update requiring review rather than an active task request.
+ 14 
+ 15 **Pending Actions & Ownership**
+ 16 *   **Action:** Review the attached dashboard report for the specified date range.
+ 17 *   **Owner:** Michael.
+ 18 
+ 19 **Decisions Made**
+ 20 No business decisions were made or recorded in this thread; it is purely informational.
+ 21 
+ 22 **Key Dates, Deadlines, & Follow-ups**
+ 23 *   **Report Generation Time:** March 21, 2026, at 11:00 AM (UTC+8).
+ 24 *   **Email Receipt Timestamp:** March 21, 2026, at 3:02 AM.
+ 25     *   *Note:* The email was received approximately 8 hours prior to the report's stated generation time in the metadata header, or implies a timezone discrepancy between the receipt log (AM) and the report header (AM +08). Given the timestamp logic, the data reflects the period ending March 21, 2026.
+ 26 *   **Data Scope:** Past 3 days relative to the report date (March 18 – March 21, 2026).
+ 27 *   **Follow-up:** None scheduled; pending review by Michael.
+ 28 
+ 29 **Specific References**
+ 30 *   **Subject/Resource Title:** Retail Media - DD Dashboard
+ 31 *   **Sender Email:** no-reply@dtdg.eu
+ 32 *   **Organization Address:** 620 8th Avenue, 45th Floor, New York, NY 10018.
+ 33 *   **Report Labels:** Inbox, Updates.
+ 34 *   **Last Message ID:** 19d0e57d944bb79a
+ 35 
+ 36 
+ 37 ## gmail/19623aec468de051: NED-222914 [FairPrice General Service Request] Access for FPG Backoffice
+ 38 Source: gmail | Thread: 19623aec468de051 | Labels: Inbox, Updates | Priority: None | Senders: Pamela | Last Date: Sat, Mar 21, 2026, 2:31 AM | Last Updated: 2026-03-21T02:46:58.021515+00:00
+ 39 **Daily Work Briefing: Ticket NED-222914 [FairPrice General Service Request] Access for FPG Backoffice**
+ 40 
+ 41 **Key Participants & Roles**
+ 42 *   **Pamela Koh**: Participant/Requester.
+ 43 *   **Calvin Phan**: Approver and Technical Lead (Jira Service Management).
+ 44 *   **Michael Bui**: Original requestor; recipient of resolution notice.
+ 45 *   **Ram Datchnamoorthy**: Participant.
+ 46 *   **Allen Umali**: Participant; previously flagged for outdated email records.
+ 47 *   **Hanafi Yakub**: System/Automation Sender (Resolution Notification).
+ 48 *   **ScriptRunner for Jira**: Automation tool managing status transitions.
+ 49 
+ 50 **Main Topic/Request**
+ 51 The ticket concerns a request from Michael Bui for production DBP portal access to configure and update the `isnotadvertisable` flag for new products, specifically granting privileges for the Batch Upload Job.
+ 52 
+ 53 **Decisions Made & Status History**
+ 54 *   **Initial Approval**: Calvin Phan approved the request on Apr 11, 2025, at 7:52 AM, transitioning status from "Open" to **"In Progress."**
+ 55 *   **Access Granted**: Privileges for the Batch Upload Job were successfully granted on Apr 11, 2025, at 8:33 AM. A warning was issued regarding Allen Umali's outdated email record.
+ 56 *   **Final Resolution**: On Mar 21, 2026, at 2:31 AM, the automation tool **ScriptRunner for Jira** changed the ticket status to **"Verified and Closed."**
+ 57 
+ 58 **Pending Actions & Ownership**
+ 59 *   **Resolved**: The previous requirement to verify Allen Umali's access due to outdated email records has been superseded by the system closing the ticket. No further manual verification is indicated in the final closed state.
+ 60 *   **Notification Scope**: The resolution was shared with Pamela Koh, Michael Bui, and Allen Umali.
+ 61 
+ 62 **Key Dates & Deadlines**
+ 63 *   **Apr 11, 2025, 7:09 AM**: Request initiated; Pamela Koh added as participant.
+ 64 *   **Apr 11, 2025, 7:52 AM**: Calvin Phan approved and set status to "In Progress."
+ 65 *   **Apr 11, 2025, 8:33 AM**: Access granted; warning issued regarding Allen Umali's email.
+ 66 *   **Mar 18, 2026**: Automated resolution notification sent by Hanafi Yakub. (Note: The ticket was subsequently closed three days later).
+ 67 *   **Mar 21, 2026, 2:31 AM**: Ticket automatically transitioned to **"Verified and Closed"** via ScriptRunner for Jira.
+ 68 
+ 69 **Summary**
+ 70 Access for the Batch Upload Job was successfully granted on Apr 11, 2025. Although Allen Umali's access was initially flagged due to an outdated email record in Jira, the ticket status was automatically updated to "Verified and Closed" by ScriptRunner for Jira on Mar 21, 2026. All stakeholders (Pamela Koh, Michael Bui, and Allen Umali) have been notified of the closure.
+ 71 
+ 72 
+ 73 ## gmail/19d0decc709009e3: [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink/marketing-service)
+ 74 Source: gmail | Thread: 19d0decc709009e3 | Labels: Inbox, Updates | Priority: None | Senders: Bitbucket | Last Date: Sat, Mar 21, 2026, 1:05 AM | Last Updated: 2026-03-21T02:01:13.687483+00:00
+ 75 **Daily Work Briefing: Bitbucket Pipeline Failure Alert**
+ 76 
+ 77 *   **Key Participants & Roles:**
+ 78     *   **System (Bitbucket):** Automated notification service triggering the alert.
+ 79     *   **Repository Owner:** `ntuclink/marketing-service`.
+ 80     *   **Commit Author/PR Creator:** Implied via PR #131 and DPD-715; specific user name not listed in metadata, but associated with the merge of "Sanitize configured slots."
+ 81 
+ 82 *   **Main Topic/Request:**
+ 83     *   Notification regarding a failed CI/CD pipeline execution on the `master` branch. The failure occurred immediately following the automatic merge of Pull Request #131 (Ticket: DPD-715), which addressed sanitizing configured slots for multiple edge cases.
+ 84 
+ 85 *   **Pending Actions & Ownership:**
+ 86     *   **Action Required:** Investigate the root cause of the pipeline failure and execute a fix to restore build stability on `master`.
+ 87     *   **Owner:** Development team responsible for the `marketing-service` repository (specifically the contributor who submitted PR #131).
+ 88     *   **Next Step:** Review the specific error logs in Bitbucket Pipelines (link provided: "View this pipeline") to determine if the failure is due to code logic introduced in DPD-715 or infrastructure issues.
+ 89 
+ 90 *   **Decisions Made:**
+ 91     *   No strategic decisions were made in this thread; it is an automated status update regarding a build state change. The merge of PR #131 was technically executed before the pipeline failure was detected.
+ 92 
+ 93 *   **Key Dates, Deadlines, & Follow-ups:**
+ 94     *   **Date/Time of Incident:** March 21, 2026, at 1:05 AM UTC (or local server time).
+ 95     *   **Commit Hash:** `fc067b7`.
+ 96     *   **Duration:** Pipeline ran for 54 seconds before failing.
+ 97     *   **Associated Ticket:** DPD-715 (Sanitize configured slots for multiple edge cases).
+ 98     *   **Pull Request ID:** #131.
+ 99     *   **Follow-up Needed:** Immediate re-evaluation of the `fc067b7` commit status to prevent deployment blockage.
+100 
+101 *   **Specific References:**
+102     *   Repository: `ntuclink/marketing-service`
+103     *   Branch: `master`
+104     *   Bitbucket Notification ID: `19d0decc709009e3` (Last Message ID)
+105     *   Email Sender: `notifications-noreply@bitbucket.org`
+106 
+107 
+108 ## gmail/19d0d28d084c5870: You have no events scheduled today.
+109 Source: gmail | Thread: 19d0d28d084c5870 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Fri, Mar 20, 2026, 9:31 PM | Last Updated: 2026-03-20T22:01:58.846652+00:00
+110 **Daily Work Briefing Summary**
+111 
+112 **Key Participants & Roles**
+113 *   **Michael Bui:** Recipient of the daily agenda notification (Account: michael.bui@fairpricegroup.sg). Role implies ownership or subscription to the "Digital Business Tech Release/Changes" calendar.
+114 *   **Google Calendar System:** Automated sender (calendar-notification@google.com) providing status updates on event schedules.
+115 
+116 **Main Topic/Request**
+117 The email is an automated system notification confirming that no events are currently scheduled for Michael Bui's calendar for the upcoming date, Saturday, March 21, 2026. It also serves to inform the user of their subscription status regarding daily agendas for specific calendars and provides instructions on how to modify these settings.
+118 
+119 **Pending Actions & Ownership**
+120 *   **Action:** Review and potentially update notification preferences if the current calendar subscriptions ("Digital Business Tech Release/Changes") are no longer accurate or desired.
+121 *   **Owner:** Michael Bui (via self-service at https://calendar.google.com/calendar/).
+122 *   **Status:** No immediate action required unless the user wishes to change subscription settings.
+123 
+124 **Decisions Made**
+125 No decisions regarding business operations, projects, or personnel were made in this thread. The content is purely informational regarding calendar availability and system configuration.
+126 
+127 **Key Dates, Deadlines, & Follow-ups**
+128 *   **Date of Notification:** March 20, 2026, at 9:31 PM.
+129 *   **Relevant Schedule Date:** Saturday, March 21, 2026 (Confirmed availability).
+130 *   **Follow-up:** None scheduled; the user has no events on the relevant date.
+131 
+132 **Specific References & Metadata**
+133 *   **Account Email:** michael.bui@fairpricegroup.sg
+134 *   **Calendar Subscription:** Digital Business Tech Release/Changes
+135 *   **Last Message ID:** 19d0d28d084c5870
+136 *   **Labels:** Inbox, Updates
+137 *   **External Links:** https://calendar.google.com/calendar/
+138 
+139 
+140 ## gmail/19cfb0400c5977a9: Re:[## 112056 ##] TMICC | Brand-to-Manufacturer Mapping
+141 Source: gmail | Thread: 19cfb0400c5977a9 | Labels: Inbox | Priority: None | Senders: Osmos, Trina | Last Date: Fri, Mar 20, 2026, 10:15 AM | Last Updated: 2026-03-21T01:07:50.701103+08:00
+142 **Daily Work Briefing: TMICC Brand-to-Manufacturer Mapping Update**
+143 
+144 **Key Participants & Roles**
+145 *   **Osmos Support:** Execution team responsible for completing mappings.
+146 *   **Trina Esguerra (Ad Ops):** Final decision-maker; currently out of office (25–30 Mar, 2 PM–3 Apr, 21–25 May).
+147 *   **FPG Team Stakeholders (cc'd):** Michael Bui, Nikhil Grover, Allen Umali.
+148 *   **OSMOS/Internal Stakeholders (cc'd):** Siddharth Aklujkar, Shubhangi Agrawal.
+149 
+150 **Main Topic/Request**
+151 Osmos Support has completed the Brand-to-Manufacturer mapping for **Account: Tmicc - 77307** (Vendor Code: 77307). Following validation on March 18 regarding duplicate mappings and compliance gaps, the team executed the work based on the approved scope.
+152 
+153 **Execution Status & Results**
+154 *   **Status:** Completed. As of **March 20, 2026**, at 10:15 AM, Osmos Support confirmed that mapping for all valid combinations is finished.
+155 *   **Completed Mappings:**
+156     *   Tmicc - 77307 | 77307 | 8471
+157     *   Tmicc - 77307 | 77307 | 9121
+158     *   Tmicc - 77307 | 77307 | 31377
+159 *   **Exclusions (Historical Context):** The following were excluded per previous instructions and remain inactive:
+160     *   **Duplicates:** Brand IDs 5899, 7247, 6480, 9464, 9682, 9756, 27640.
+161     *   **Compliance:** Brand ID 6480 (non-compliant due to missing SKU validation).
+162 
+163 **Pending Actions & Ownership**
+164 *   **Ticket Closure:** Osmos Support will proceed with closing Ticket ## 112056 ## by End of Day (March 20, 2026) if no objections or questions are raised from the FPG team.
+165 *   **Action Required:** None currently active unless Trina Esguerra or a designated contact identifies errors in the completed mappings before the ticket closure deadline.
+166 
+167 **Decisions Made & Current Scope**
+168 *   **Scope Validated:** The three unique Brand IDs (8471, 9121, 31377) were successfully mapped without the need for further FPG confirmation on exclusions, as execution proceeded based on prior validation steps.
+169 *   **Outcome:** All requested mappings for this account are finalized.
+170 
+171 **Key Dates & Follow-ups**
+172 *   **Duplicate Identification:** March 18, 2026 (10:03 AM – Trina).
+173 *   **Execution Confirmation:** March 20, 2026 (10:15 AM – Osmos Support).
+174 *   **Ticket Closure Deadline:** EOD, March 20, 2026.
+175 
+176 **Specific References**
+177 *   **Resource ID:** ## 112056 ##
+178 *   **Account:** Tmicc - 77307
+179 *   **Related Ticket:** #111860 (Allen Umali's request).
+180 *   **Final Mappings:** Vendor Code 77307 + [Brand IDs: 8471, 9121, 31377].
+181 *   **Communication:** "If we do not hear back from you, we will proceed with closing this ticket by EOD." (March 20, 2026).
+182 
+183 
+184 ## gmail/19d0aa1b6bf2a883: Invitation: Smart Cart x RMN Catchup @ Tue Mar 24, 2026 5pm - 5:30pm (SGT) (Michael Bui)
+185 Source: gmail | Thread: 19d0aa1b6bf2a883 | Labels: Inbox | Priority: None | Senders: Ching Hui Ng | Last Date: Fri, Mar 20, 2026, 9:44 AM | Last Updated: 2026-03-21T01:08:00.360076+08:00
+186 **Daily Work Briefing: Smart Cart x RMN Catch-up**
+187 
+188 **Key Participants & Roles:**
+189 *   **Ching Hui Ng** (chinghui.ng@fairpricegroup.sg): Meeting Organizer.
+190 *   **Michael Bui** (michael.bui@fairpricegroup.sg): Invitee/Attendee.
+191 
+192 **Main Topic/Request:**
+193 The thread contains a calendar invitation for a catch-up meeting regarding the "Smart Cart x RMN" initiative. No agenda details or discussion topics were provided in the email content beyond the title.
+194 
+195 **Pending Actions & Ownership:**
+196 *   **Action:** Review invitation and submit RSVP (Yes, No, or Maybe).
+197 *   **Owner:** Michael Bui (michael.bui@fairpricegroup.sg).
+198 *   **Status:** Pending; no response recorded in the provided metadata.
+199 
+200 **Decisions Made:**
+<<<

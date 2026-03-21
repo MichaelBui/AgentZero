@@ -1,0 +1,41 @@
+/a0/usr/workdir/gmail-debug.log 199 lines
+>>>
+162 [2026-03-21T03:33:09+0000] [Summarized 28/62] [Invitation: BCRS - Refunds Issue Warroom]: using cached summary
+163 [2026-03-21T03:33:09+0000] [Summarized 29/62] [Accepted: [Placeholder] Project Light @ ]: using cached summary
+164 [2026-03-21T03:33:09+0000] [Summarized 30/62] [Updated invitation: [Placeholder] Projec]: using cached summary
+165 [2026-03-21T03:33:09+0000] [Summarized 31/62] [Invitation: Offer Service Monitors Impro]: using cached summary
+166 [2026-03-21T03:33:09+0000] [Summarized 32/62] [Re: Whitelisting of 13 inch VXT Samsung ]: using cached summary
+167 [2026-03-21T03:33:09+0000] [Summarized 33/62] [Notes: “ACNxOsmos: Daily Cadence” Mar 19]: using cached summary
+168 [2026-03-21T03:33:09+0000] [Summarized 34/62] [Delivery Status Notification (Failure)]: using cached summary
+169 [2026-03-21T03:33:09+0000] [Summarized 35/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+170 [2026-03-21T03:33:09+0000] [Summarized 36/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+171 [2026-03-21T03:33:09+0000] [Summarized 37/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+172 [2026-03-21T03:33:09+0000] [Summarized 38/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+173 [2026-03-21T03:33:09+0000] [Summarized 39/62] [Share request for "ACNxOsmos: Daily Cade]: using cached summary
+174 [2026-03-21T03:33:09+0000] [Summarized 40/62] [Issue with the event segment audience pi]: using cached summary
+175 [2026-03-21T03:33:09+0000] [Summarized 41/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+176 [2026-03-21T03:33:09+0000] [Summarized 42/62] [Out of Office Re: Updated invitation: AC]: using cached summary
+177 [2026-03-21T03:33:09+0000] [Summarized 43/62] [Delivery Status Notification (Failure)]: using cached summary
+178 [2026-03-21T03:33:09+0000] [Summarized 44/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+179 [2026-03-21T03:33:09+0000] [Summarized 45/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+180 [2026-03-21T03:33:09+0000] [Summarized 46/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+181 [2026-03-21T03:33:09+0000] [Summarized 47/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+182 [2026-03-21T03:33:09+0000] [Summarized 48/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+183 [2026-03-21T03:33:09+0000] [Summarized 49/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+184 [2026-03-21T03:33:09+0000] [Summarized 50/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+185 [2026-03-21T03:33:09+0000] [Summarized 51/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+186 [2026-03-21T03:33:09+0000] [Summarized 52/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+187 [2026-03-21T03:33:09+0000] [Summarized 53/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+188 [2026-03-21T03:33:09+0000] [Summarized 54/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+189 [2026-03-21T03:33:09+0000] [Summarized 55/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+190 [2026-03-21T03:33:09+0000] [Summarized 56/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+191 [2026-03-21T03:33:09+0000] [Summarized 57/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+192 [2026-03-21T03:33:09+0000] [Summarized 58/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+193 [2026-03-21T03:33:09+0000] [Summarized 59/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+194 [2026-03-21T03:33:09+0000] [Summarized 60/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+195 [2026-03-21T03:33:09+0000] [Summarized 61/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+196 [2026-03-21T03:33:09+0000] [Summarized 62/62] [Delivery Status Notification (Failure)]: using cached summary
+197 [2026-03-21T03:33:09+0000] ============================================================
+198 [2026-03-21T03:33:09+0000] STATUS: COMPLETED - Gmail Reader pipeline finished successfully (62 threads)
+199 [2026-03-21T03:33:09+0000] ============================================================
+<<<

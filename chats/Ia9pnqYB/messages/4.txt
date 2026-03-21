@@ -1,0 +1,23 @@
+Found 5 daily work reports
+
+=== ❗ Daily Work Report.example.md ===
+## 🔴 My Action Items (Pending My Action)
+
+| Metadata | Details | Suggested Action |
+|----------|---------|-----------------|
+| **Priority:** 🔴 Critical<br>**Priority reason:** Deployment is gated on Jira signoff today; delay pushes to Tuesday<br>**Source:** GChat (Nikhil Grover DM), Jira (DPD-715, DPD-733, DPD-734)<br>**Date:** March 19 (discussion at 13:56 SGT)<br>**From:** Nikhil Grover | **Context:** DPD-715 (Dynamic ad slot configuration for swimlanes) and DPD-733 (Dynamic ad slots for verti
+
+=== ❗ Daily Work Report.example-v2.md ===
+## 🔴 My Action Items (Pending My Action)
+
+| Metadata | Details | Suggested Action |
+|----------|---------|-----------------|
+| **Priority:** 🔴 Critical<br>**Priority reason:** DPD-734 is 3 days past due date; blocks complete RMN swimlane attribution<br>**Source:** Jira (DPD-734), GChat (Video & Product Ads Working Group)<br>**Date:** March 20 (Store ID debug session 09:04-09:11 UTC)<br>**From:** Nikhil Grover (Reporter), Andin (debugging partner) | **Context:** DPD-734 "Include swimlane name in
+
+=== ❗ Daily Work Report 2026-03-21.md ===
+## 🔴 My Action Items (Pending My Action)
+
+| Metadata | Details | Suggested Action |
+|----------|---------|-----------------|
+| **Priority:** 🔴 Critical<br>**Priority reason:** Deployment blocked; master branch pipeline failure prevents release<br>**Source:** Gmail (Bitbucket alert), Jira (DPD-715, DPD-733)<br>**Date:** March 21 (01:05 AM UTC)<br>**From:** Bitbucket System | **Context:** A Bitbucket pipeline for `ntuclink/marketing-service` failed on commit `fc067b7` immediately after merging PR
+(venv) root@80e3e99df9ff:/a0/usr/workdir#

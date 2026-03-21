@@ -626,6 +626,17 @@ def summarize_and_output(db: SkillDB, info: dict) -> None:
                       summarized_at=prev_summarized_at)
 
 
+def _to_local_ts(iso_str: str) -> str:
+    """Convert an ISO timestamp string to the configured local timezone."""
+    if not iso_str:
+        return iso_str
+    try:
+        dt = datetime.fromisoformat(iso_str)
+        return dt.astimezone(_TZ).isoformat()
+    except (ValueError, TypeError):
+        return iso_str
+
+
 def _print_output(resource_id: str, name: str, summary: str, info: dict,
                   summarized_at: str = "") -> None:
     """Stream a single conversation block to stdout."""
@@ -635,6 +646,8 @@ def _print_output(resource_id: str, name: str, summary: str, info: dict,
         ts_str = datetime.fromtimestamp(display_ts / 1000, tz=_TZ).isoformat()
 
     items_count = info.get("message_count", "")
+    current = info.get("_sum_current", "")
+    total = info.get("_sum_total", "")
     meta_parts = [
         f"Source: gchat",
         f"Group: {resource_id}",
@@ -642,11 +655,12 @@ def _print_output(resource_id: str, name: str, summary: str, info: dict,
     if items_count:
         meta_parts.append(f"Messages: {items_count}")
     if ts_str:
-        meta_parts.append(f"Last Activity: {ts_str}")
+        meta_parts.append(f"Last Activity: {_to_local_ts(ts_str)}")
     if summarized_at:
-        meta_parts.append(f"Last Updated: {summarized_at}")
+        meta_parts.append(f"Last Updated: {_to_local_ts(summarized_at)}")
 
-    print(f"\n\n## gchat/{resource_id}: {name}", file=_output_file, flush=True)
+    numbering = f"[{current}/{total}] " if current and total else ""
+    print(f"\n\n## {numbering}{name}", file=_output_file, flush=True)
     print(" | ".join(meta_parts), file=_output_file, flush=True)
     print(summary, file=_output_file, flush=True)
 
@@ -733,13 +747,16 @@ def main():
     if args.cached_only:
         try:
             summaries = db.get_all_summaries(source="gchat")
-            eprint(f"Cached-only mode: {len(summaries)} summaries from DB")
-            for s in summaries:
+            total = len(summaries)
+            eprint(f"Cached-only mode: {total} summaries from DB")
+            for idx, s in enumerate(summaries, 1):
                 meta = json.loads(s.get("metadata", "{}"))
                 info = {
                     "display_ts": 0,
                     "url": "",
                     "message_count": meta.get("message_count", ""),
+                    "_sum_current": idx,
+                    "_sum_total": total,
                 }
                 _print_output(
                     s["resource_id"], s.get("title", "(unknown)"),

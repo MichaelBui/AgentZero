@@ -1,0 +1,54 @@
+/a0/usr/workdir/gchat-debug.log 217 lines
+>>>
+167 [2026-03-21T03:24:21+0000] [Summarized 13/60] [FPG Everyone - General]: using cached summary
+168 [2026-03-21T03:24:21+0000] [Summarized 14/60] [QE <-> All Tribes]: using cached summary
+169 [2026-03-21T03:24:21+0000] [Summarized 15/60] [#dd-fpg-watchdog-alert]: using cached summary
+170 [2026-03-21T03:24:21+0000] [Summarized 16/60] [Ching Hui Ng]: using cached summary
+171 [2026-03-21T03:24:21+0000] [Summarized 17/60] [Andin Eswarlal Rajesh]: using cached summary
+172 [2026-03-21T03:24:21+0000] [Summarized 18/60] [❗ Important Email]: using cached summary
+173 [2026-03-21T03:24:21+0000] [Summarized 19/60] [Video & Product Ads Working Group]: using cached summary
+174 [2026-03-21T03:24:21+0000] [Summarized 20/60] [Video & Product Ads Working Group]: using cached summary
+175 [2026-03-21T03:24:21+0000] [Summarized 21/60] [[Leads] (Ecom/Omni) Digital Product Deve]: using cached summary
+176 [2026-03-21T03:24:21+0000] [Summarized 22/60] [[Internal] (Ecom/Omni) Digital Product D]: using cached summary
+177 [2026-03-21T03:24:21+0000] [Summarized 23/60] [Project Light Attack and Defence Leads]: using cached summary
+178 [2026-03-21T03:24:21+0000] [Summarized 24/60] [BCRS Firefighting Group]: using cached summary
+179 [2026-03-21T03:24:21+0000] [Summarized 25/60] [BCRS Firefighting Group]: using cached summary
+180 [2026-03-21T03:24:21+0000] [Summarized 26/60] [📢 COM Notifications]: using cached summary
+181 [2026-03-21T03:24:21+0000] [Summarized 27/60] [Retail out of home (Digital Screens & CM]: using cached summary
+182 [2026-03-21T03:24:21+0000] [Summarized 28/60] [DPD All Leads]: using cached summary
+183 [2026-03-21T03:24:21+0000] [Summarized 29/60] [Alvin Choo]: using cached summary
+184 [2026-03-21T03:24:21+0000] [Summarized 30/60] [DPD All Leads]: using cached summary
+185 [2026-03-21T03:24:21+0000] [Summarized 31/60] [SRE / Network / DBA / DevOps / Infra]: using cached summary
+186 [2026-03-21T03:24:21+0000] [Summarized 32/60] [GE Connect]: using cached summary
+187 [2026-03-21T03:24:21+0000] [Summarized 33/60] [[Leads] (Ecom/Omni) Digital Product Deve]: using cached summary
+188 [2026-03-21T03:24:21+0000] [Summarized 34/60] [Nikhil Grover]: using cached summary
+189 [2026-03-21T03:24:21+0000] [Summarized 35/60] [@ecom-ops #standup - Mar 20]: using cached summary
+190 [2026-03-21T03:24:21+0000] [Summarized 36/60] [[D&T] Discussion service account key dec]: using cached summary
+191 [2026-03-21T03:24:21+0000] [Summarized 37/60] [@omni-ops #standup - Mar 20]: using cached summary
+192 [2026-03-21T03:24:21+0000] [Summarized 38/60] [Smart Cart x RMN]: using cached summary
+193 [2026-03-21T03:24:21+0000] [Summarized 39/60] [Ping Pong 🏓]: using cached summary
+194 [2026-03-21T03:24:21+0000] [Summarized 40/60] [Product x RMN x Platform]: using cached summary
+195 [2026-03-21T03:24:21+0000] [Summarized 41/60] [Ping Pong 🏓]: using cached summary
+196 [2026-03-21T03:24:21+0000] [Summarized 42/60] [[Leads] (Ecom/Omni) Digital Product Deve]: using cached summary
+197 [2026-03-21T03:24:21+0000] [Summarized 43/60] [[Prod Support] Ecom FFS Ops]: using cached summary
+198 [2026-03-21T03:24:21+0000] [Summarized 44/60] [Team Starship]: using cached summary
+199 [2026-03-21T03:24:21+0000] [Summarized 45/60] [BCRS Firefighting Group]: using cached summary
+200 [2026-03-21T03:24:21+0000] [Summarized 46/60] [BCRS - Refunds Issue War Room - Mar 19]: using cached summary
+201 [2026-03-21T03:24:21+0000] [Summarized 47/60] [BCRS Firefighting Group]: using cached summary
+202 [2026-03-21T03:24:21+0000] [Summarized 48/60] [Lester Santiago Soriano]: using cached summary
+203 [2026-03-21T03:24:21+0000] [Summarized 49/60] [[D&T] Discussion service account key dec]: using cached summary
+204 [2026-03-21T03:24:21+0000] [Summarized 50/60] [[Leads] (Ecom/Omni) Digital Product Deve]: using cached summary
+205 [2026-03-21T03:24:21+0000] [Summarized 51/60] [Zaw Myo Htet]: using cached summary
+206 [2026-03-21T03:24:21+0000] [Summarized 52/60] [RMN Leadership]: using cached summary
+207 [2026-03-21T03:24:21+0000] [Summarized 53/60] [Google Drive]: using cached summary
+208 [2026-03-21T03:24:21+0000] [Summarized 54/60] [DPD AI Guild]: using cached summary
+209 [2026-03-21T03:24:21+0000] [Summarized 55/60] [DPD AI Guild]: using cached summary
+210 [2026-03-21T03:24:21+0000] [Summarized 56/60] [RMN Leadership]: using cached summary
+211 [2026-03-21T03:24:21+0000] [Summarized 57/60] [[Prod Support] Offers]: using cached summary
+212 [2026-03-21T03:24:21+0000] [Summarized 58/60] [PFM x Events/UID Martech Issues]: using cached summary
+213 [2026-03-21T03:24:21+0000] [Summarized 59/60] [DPD x Platform Engineering]: using cached summary
+214 [2026-03-21T03:24:21+0000] [Summarized 60/60] [[Leads] (Ecom/Omni) Digital Product Deve]: using cached summary
+215 [2026-03-21T03:24:21+0000] ============================================================
+216 [2026-03-21T03:24:21+0000] STATUS: COMPLETED - GChat Reader pipeline finished successfully (60 conversations)
+217 [2026-03-21T03:24:21+0000] ============================================================
+<<<

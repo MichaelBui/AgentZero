@@ -1,0 +1,68 @@
+=== Checking file timestamps ===
+(venv) root@80e3e99df9ff:/a0/usr/workdir# -rw-rw-r--+ 1 3000 950 194786 Mar 21 02:44 /a0/usr/workdir/gchat-output.md
+-rw-rw-r--+ 1 3000 950 151640 Mar 21 02:46 /a0/usr/workdir/gmail-output.md
+-rw-rw-r--+ 1 3000 950 141502 Mar 21 02:39 /a0/usr/workdir/jira-output.md
+(venv) root@80e3e99df9ff:/a0/usr/workdir# \n=== JIRA debug log tail ===
+(venv) root@80e3e99df9ff:/a0/usr/workdir# [2026-03-21T02:39:07+0000] [Summarized 42/58] OMNI-1361: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 43/58] OMNI-1227: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 44/58] OMNI-1208: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 45/58] OMNI-1242: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 46/58] OMNI-1334: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 47/58] OMNI-1389: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 48/58] OMNI-1390: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 49/58] OMNI-1353: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 50/58] OMNI-1179: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 51/58] OMNI-1247: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 52/58] OMNI-1391: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 53/58] OMNI-1393: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 54/58] OMNI-1400: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 55/58] OMNI-1405: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 56/58] OMNI-1428: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 57/58] OMNI-1431: using cached summary
+[2026-03-21T02:39:07+0000] [Summarized 58/58] OMNI-1432: using cached summary
+[2026-03-21T02:39:07+0000] ============================================================
+[2026-03-21T02:39:07+0000] STATUS: COMPLETED - Jira Reader pipeline finished successfully (58 unique tickets)
+[2026-03-21T02:39:07+0000] ============================================================
+(venv) root@80e3e99df9ff:/a0/usr/workdir# \n=== GChat debug log tail ===
+(venv) root@80e3e99df9ff:/a0/usr/workdir# [2026-03-21T02:44:04+0000] [Summarized 44/60] [Team Starship]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 45/60] [BCRS Firefighting Group]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 46/60] [BCRS - Refunds Issue War Room - Mar 19]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 47/60] [BCRS Firefighting Group]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 48/60] [Lester Santiago Soriano]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 49/60] [[D&T] Discussion service account key dec]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 50/60] [[Leads] (Ecom/Omni) Digital Product Deve]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 51/60] [Zaw Myo Htet]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 52/60] [RMN Leadership]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 53/60] [Google Drive]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 54/60] [DPD AI Guild]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 55/60] [DPD AI Guild]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 56/60] [RMN Leadership]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 57/60] [[Prod Support] Offers]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 58/60] [PFM x Events/UID Martech Issues]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 59/60] [DPD x Platform Engineering]: using cached summary
+[2026-03-21T02:44:04+0000] [Summarized 60/60] [[Leads] (Ecom/Omni) Digital Product Deve]: using cached summary
+[2026-03-21T02:44:04+0000] ============================================================
+[2026-03-21T02:44:04+0000] STATUS: COMPLETED - GChat Reader pipeline finished successfully (60 conversations)
+[2026-03-21T02:44:04+0000] ============================================================
+(venv) root@80e3e99df9ff:/a0/usr/workdir# \n=== Gmail debug log tail ===
+(venv) root@80e3e99df9ff:/a0/usr/workdir# [2026-03-21T02:46:58+0000] [Summarized 46/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 47/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 48/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 49/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 50/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 51/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 52/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 53/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 54/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 55/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 56/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 57/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 58/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 59/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 60/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 61/62] [Delivery Status Notification (Failure)]: using cached summary
+[2026-03-21T02:46:58+0000] [Summarized 62/62] [[Dashboard Report] Retail Media - DD Das]: using cached summary
+[2026-03-21T02:46:58+0000] ============================================================
+[2026-03-21T02:46:58+0000] STATUS: COMPLETED - Gmail Reader pipeline finished successfully (62 threads)
+[2026-03-21T02:46:58+0000] ============================================================
+(venv) root@80e3e99df9ff:/a0/usr/workdir#
