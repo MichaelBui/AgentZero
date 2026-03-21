@@ -1,0 +1,77 @@
+/a0/usr/workdir/❗ Daily Work Report 2026-03-21.md written 74 lines
+>>>
+ 1 # ❗ Daily Work Report - Friday, March 21, 2026
+ 2 
+ 3 ---
+ 4 
+ 5 Today is a critical execution day for the **RMN Homepage Ads deployment**, where DPD-715 and DPD-733 are technically complete but stalled awaiting Nikhil Grover's UAT sign-off to trigger production release. Simultaneously, the **BCRS Phase 2** initiative remains in active UAT with PRD deployments blocked pending business alignment on VIP logic and missing SAP document numbers that are now 13 days overdue. The broader platform environment continues to exhibit a persistent "flicker" pattern of instability across Cart, MyInfo, and Grocery Indexer services, with a new P2 error state in `fp-search-indexer` requiring urgent investigation. While the RMN ads project is at the finish line, the combination of external Meta API blocks (56+ days) and internal business alignment delays creates significant delivery risk for the week.
+ 6 
+ 7 ---
+ 8 
+ 9 ## 🔴 My Action Items (Pending My Action)
+10 
+11 | Metadata | Details | Suggested Action |
+12 |----------|---------|-----------------|
+13 | **Priority:** 🔴 Critical<br>**Priority reason:** Deployment blocked; master branch pipeline failure prevents release<br>**Source:** Gmail (Bitbucket alert), Jira (DPD-715, DPD-733)<br>**Date:** March 21 (01:05 AM UTC)<br>**From:** Bitbucket System | **Context:** A Bitbucket pipeline for `ntuclink/marketing-service` failed on commit `fc067b7` immediately after merging PR #131 (DPD-715). This failure blocks the deployment of the completed RMN Homepage Ads features. Nikhil Grover is expected to sign off on UAT today, but the broken master branch must be fixed first to enable the release.<br>**References:** DPD-715, DPD-733, Bitbucket commit `fc067b7`<br>**Cross-source signals:** Gmail (Pipeline alert), Jira (2 tickets) | **Immediate:** Investigate and fix the Bitbucket pipeline failure on master (`fc067b7`). Once fixed, confirm Nikhil's UAT sign-off and trigger the DPD-715/733 deployment. |
+14 | **Priority:** 🔴 Critical<br>**Priority reason:** Deployment gating; Nikhil's sign-off is the final step<br>**Source:** GChat (Nikhil Grover DM), Jira (DPD-715, DPD-733)<br>**Date:** March 20-21<br>**From:** Nikhil Grover | **Context:** DPD-715 and DPD-733 are in Release Queue. Nikhil confirmed he would configure split flags and sign off on Jira after lunch (yesterday/today). The deployment was pulled forward to today but is contingent on this specific action.<br>**References:** DPD-715, DPD-733<br>**Cross-source signals:** GChat (Nikhil DM), Jira | **After Pipeline Fix:** Confirm Nikhil has signed off on Jira for DPD-715/733. If not, ping him immediately. Once signed, execute the deployment. |
+15 | **Priority:** 🔴 Critical<br>**Priority reason:** P2 Error State; critical search functionality impacted<br>**Source:** GChat (#dd-dpd-grocery-alert)<br>**Date:** March 18-21 (Active)<br>**From:** Datadog System | **Context:** The `fp-search-indexer` service has been in a P2 Error State since March 18. New alerts on March 20-21 confirm the issue persists and is not self-resolving. This impacts grocery search functionality.<br>**References:** Monitor #17447691, Runbook SR-2001831558<br>**Cross-source signals:** GChat (Grocery Alerts) | **Immediate:** Review Datadog logs for `fp-search-indexer` and consult Runbook SR-2001831558. Escalate to Product Data Management on-call if not resolved within the hour. |
+16 | **Priority:** 🟡 Important<br>**Priority reason:** BCRS UAT blocked; Finance cannot validate without data<br>**Source:** GChat (BCRS Firefighting Group)<br>**Date:** March 21<br>**From:** Prajney Sribhashyam | **Context:** PRD deployment for BCRS Invoice, Sales Posting, and Seller Reports is blocked. Finance requires SAP document numbers (Column J in UAT tracker) which are 13 days overdue. Michael must drive the escalation to unblock.<br>**References:** BCRS UAT Tracker<br>**Cross-source signals:** GChat (Multiple threads), Jira (OMNI-1294) | **Today:** Escalate to Hendry Tionardi and Onkar Bamane directly. Demand SAP document numbers by EOD or set a hard deadline for tomorrow. |
+17 | **Priority:** 🟡 Important<br>**Priority reason:** Scope definition missed; risk of further delay<br>**Source:** Jira (DPD-734)<br>**Date:** March 17 (Missed Deadline)<br>**From:** Nikhil Grover | **Context:** DPD-734 (Include swimlane name in ad request) is "To Be Defined" with a missed due date of March 17. This is part of the RMN Ads epic and needs scoping to avoid further slippage.<br>**References:** DPD-734<br>**Cross-source signals:** Jira only | **Today:** Open DPD-734, draft acceptance criteria, and assign a start date. Do not let this remain undefined. |
+18 
+19 ---
+20 
+21 ## 🟡 My Follow-Ups (Waiting on Others)
+22 
+23 | Metadata | Details | Suggested Action |
+24 |----------|---------|-----------------|
+25 | **Priority:** 🔴 Critical<br>**Priority reason:** 13 days overdue; Finance completely blocked<br>**Source:** GChat (Google Drive DM / BCRS UAT)<br>**Since:** March 6, 2026<br>**Days Waiting:** 15 days<br>**Waiting On:** Hendry Tionardi (RPA Team) | **Context:** SAP document numbers for BCRS UAT verification are missing. Finance cannot validate end-to-end postings without this data. The deadline was March 10.<br>**References:** BCRS UAT Spreadsheet<br>**Cross-source signals:** GChat, Jira | **Escalate:** Direct message to Hendry Tionardi: "SAP document numbers are 15 days overdue. Finance is blocked. I need these by EOD today or a concrete ETA by noon." |
+26 | **Priority:** 🟡 Important<br>**Priority reason:** 56+ days blocked; $600k revenue at risk<br>**Source:** Jira (OMNI-1191)<br>**Since:** Jan 22, 2026<br>**Days Waiting:** 58 days<br>**Waiting On:** Meta (External) via Bryan Choong | **Context:** Offsite ads integration with Meta is blocked by API whitelisting. No response from Meta since Jan 29. Bryan returns March 24.<br>**References:** OMNI-1191, Polaris RM-556<br>**Cross-source signals:** Jira only | **Wait for Bryan:** Prompt Bryan Choong on March 24 to re-escalate to senior Meta contacts immediately upon return. |
+27 | **Priority:** 🟡 Important<br>**Priority reason:** Business alignment delay; feature complete since Feb<br>**Source:** Jira (OPCO-1940)<br>**Since:** March 16, 2026<br>**Days Waiting:** 5 days<br>**Waiting On:** Vivian Lim Yu Qian (Product/Business) | **Context:** VIP verification bypass is done but on hold due to business re-alignment requirements. OPCO-1956 is blocked by this.<br>**References:** OPCO-1940<br>**Cross-source signals:** Jira only | **Nudge:** DM Vivian Lim Yu Qian: "Checking in on OPCO-1940 business alignment. Is there a timeline for resolution? We are ready to deploy once aligned." |
+28 | **Priority:** 🟢 Nice-to-have<br>**Priority reason:** Awaiting clarity on compliance mandates<br>**Source:** GChat ([D&T] Discussion SA key decommission)<br>**Since:** March 19, 2026<br>**Days Waiting:** 2 days<br>**Waiting On:** Himal Hewagamage / Mohit Niranwal | **Context:** Service account key decommission initiative. Michael is ready to help but needs the specific list of SAs and mandates.<br>**References:** GChat threads<br>**Cross-source signals:** GChat only | **Follow-up:** Ping Himal/Mohit for the specific SA list under DPD/RMN scope. |
+29 
+30 ---
+31 
+32 ## 📋 Work Stream Summaries
+33 
+34 ### RMN Homepage Ads (DPD-710 Epic) - **At Risk**
+35 - **What's happening:** DPD-715 and DPD-733 are technically complete and in Release Queue. However, a Bitbucket pipeline failure on master (`fc067b7`) blocks the deployment. Nikhil Grover is expected to sign off on UAT today. DPD-734 remains undefined.
+36 - **Key people:** Michael Bui (Deployment Owner), Nikhil Grover (PM/Sign-off).
+37 - **Open questions or risks:** (1) Master branch pipeline failure must be fixed before deployment. (2) DPD-734 scope needs definition. (3) Ad placement anomaly [2,4 vs 1,3,3,5] noted in UAT needs post-deployment validation.
+38 - **Recommendation:** Fix pipeline immediately, secure Nikhil's sign-off, deploy today. Define DPD-734 scope by EOD.
+39 
+40 ### BCRS Phase 2 - UAT & Production Deployment - **Blocked**
+41 - **What's happening:** UAT is active but PRD deployment is blocked pending business alignment (VIP logic) and missing SAP document numbers. Refunds UAT track launched with a target of March 24.
+42 - **Key people:** Prajney Sribhashyam (Coordinator), Michael Bui (PRD Deploy Owner).
+43 - **Open questions or risks:** (1) SAP document numbers 15 days overdue. (2) Business alignment on VIP logic pending. (3) Duplicate deposit posting bug under investigation.
+44 - **Recommendation:** Escalate SAP data issue today. Monitor business alignment status. Prepare for PRD deployment once unblocked.
+45 
+46 ### Platform Reliability & Incidents - **Critical Instability**
+47 - **What's happening:** Persistent "flicker" pattern of alerts across Cart, MyInfo, and Grocery services. `fp-search-indexer` is in a P2 Error State since March 18. `marketing-service` has 2 recurring API test failures daily.
+48 - **Key people:** dpd-pricing-cart, Product Data Management On-Call.
+49 - **Open questions or risks:** (1) Root cause of `fp-search-indexer` P2 error unknown. (2) Recurring `marketing-service` test failures since March 17. (3) Cart SLO error budget burn rate is high.
+50 - **Recommendation:** Prioritize `fp-search-indexer` investigation. Assign owner to `marketing-service` flakiness. Monitor Cart SLO closely.
+51 
+52 ### Service Account Key Decommission (Compliance) - **Pending Clarity**
+53 - **What's happening:** Mandatory compliance initiative for GCP SA keys. Michael is ready to assist but awaits the specific list of SAs and mandates from Infra team.
+54 - **Key people:** Himal Hewagamage, Mohit Niranwal.
+55 - **Open questions or risks:** Gap between previous automation requests and current manual enforcement not explained.
+56 - **Recommendation:** Follow up for SA list today. Provide G Suite group names once identified.
+57 
+58 ### OSMOS / Meta Integration - **Stalled**
+59 - **What's happening:** OMNI-1191 blocked by Meta API whitelisting for 56+ days. No progress expected until Bryan Choong returns March 24.
+60 - **Key people:** Nikhil Grover, Bryan Choong.
+61 - **Open questions or risks:** $600k revenue at risk due to external dependency.
+62 - **Recommendation:** Deprioritize in roadmap review. Escalate internally if no response from Meta by April.
+63 
+64 ---
+65 
+66 ## 💡 Patterns and Observations
+67 
+68 - **Chronic External Dependency Delays:** The 56+ day block on Meta API whitelisting (OMNI-1191) mirrors the pattern of internal business alignment delays (OPCO-1940, BCRS SAP data). Both external and internal stakeholders are causing multi-week slippages that require executive-level escalation to resolve.
+69 - **Recurring Platform Instability:** The "flicker" pattern across Cart, MyInfo, and Grocery services is not a one-off incident but a persistent systemic issue. Auto-recovery masks the severity, but the frequency of alerts (daily/weekly) indicates underlying infrastructure or code quality debt that needs root cause analysis, not just monitoring.
+70 - **CI/CD Fragility:** The Bitbucket pipeline failure on master immediately after merging a critical feature (DPD-715) highlights a gap in pre-merge validation. This directly blocks production releases and adds unnecessary operational overhead.
+71 
+72 ---
+73 
+74 **Quick Stats:** 5 action items | 4 follow-ups | 5 work streams | 3 patterns/observations | Sources: 0 memory items, 6 Jira tickets, 8 GChat spaces, 6 Gmail threads
+<<<

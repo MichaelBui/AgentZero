@@ -1,203 +1,22 @@
-/a0/usr/workdir/jira-output.md 2482 lines
->>>
-  1 
-  2 
-  3 ## jira/OMNI-1191: [OSMOS only] Enable offsite ads integration with Meta on OSMOS
-  4 Source: jira | Key: OMNI-1191 | Status: Define (In Progress) | Type: Idea | Priority: High | Assignee: Nikhil Grover | Reporter: Nikhil Grover | polaris-work-item-link: RM-556 | Last Updated: 2026-03-19T12:35:56.248550+08:00
-  5 **Ticket:** OMNI-1191 (Idea: [OSMOS only] Enable offsite ads integration with Meta on OSMOS)
-  6 **Assignee:** Nikhil Grover | **Priority:** High | **Current Status:** Define / In Progress
-  7 
-  8 **Problem Definition & Success Criteria**
-  9 The current workflow requires manual setup of campaigns in Meta/TTD and limits ad creation solely to FairPrice handles. This restricts advertisers from running ads on their own accounts, hindering campaign success and traffic maximization.
- 10 *   **Goal:** Enable RMN Ad Ops to manage onsite/offsite channels on a single platform; allow advertisers to run ads on personal accounts alongside FairPrice handles.
- 11 *   **Key Metrics:** Target $600k increase in RMN Offsite revenue; baseline of 7-8 offsite campaigns/month.
- 12 
- 13 **Current State & Blockers**
- 14 The project is stalled awaiting external dependencies from Meta. While API documentation was received, critical configuration updates and campaign whitelisting remain incomplete. Testing of the first use case is pending due to a reported error escalated to Meta on 2026-01-22.
- 15 *   **Blocker:** No update from Meta on campaign whitelisting or configuration as of 2026-01-29.
- 16 *   **Risk:** Delivery within 2025 is at high risk; ~4–6 weeks of development time remains after API testing completion.
- 17 
- 18 **Pending Actions & Ownership**
- 19 *   **Meta (External):** Enable specific campaign whitelisting; resolve API testing errors; provide firm ETAs. Owner: External vendor, currently unresponsive.
- 20 *   **Bryan:** Escalation to senior Meta leads initiated on 2025-10-08 and again on 2026-01-22 to unblock configuration and whitelisting.
- 21 *   **Nikhil Grover:** Ongoing follow-ups with Meta; coordination with OSMOS post-testing. Validating assumptions regarding user impact (estimated % of users affected).
- 22 *   **Performance Marketing Team:** Confirmed correct config enabled (2025-11-05).
- 23 *   **OSMOS Team:** Awaiting whitelisting to complete API testing; pending confirmation of effort estimate and timeline upon resolution.
- 24 
- 25 **Key Decisions & Context**
- 26 *   **Solution Path:** Integration requires updated Meta Ads account configuration, specific campaign whitelisting, and OSMOS development (estimated 4–6 weeks once enabled).
- 27 *   **Impact:** Targeting $600k RMN Offsite revenue increase; baseline of 7-8 offsite campaigns/month.
- 28 *   **Escalation Path:** Due to lack of response from Meta standard channels, issues have been escalated to senior Meta leads and internal business stakeholders (11/11).
- 29 
- 30 **Key Dates & Blockers**
- 31 *   **2025-02-27:** Ticket created with status "Define / In Progress"; linked to Polaris work item RM-556.
- 32 *   **2025-10-22:** Status marked Red due to lack of Meta configuration update.
- 33 *   **2025-11-05:** Performance Marketing confirmed config enabled; OSMOS target ETA for testing completion was 14 Nov (missed).
- 34 *   **2026-01-22:** Testing error escalated to Meta with expectation of response by week-end.
- 35 *   **2026-01-29:** No further updates; blocked status continues.
- 36 
- 37 **Linked Issues:** RM-556
- 38 
- 39 
- 40 ## jira/DPD-715: Dynamic ad slot configuration for Homepage swimlanes
- 41 Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | parent: DPD-710 | Last Updated: 2026-03-19T04:15:48.930329+00:00
- 42 **Ticket Summary: DPD-715 (Dynamic ad slot configuration for Homepage swimlanes)**
- 43 *Parent:* DPD-710 ([RMN] Activate product ads in Omni Home swimlanes)
- 44 *Assignee:* Michael Bui | *Reporter:* Nikhil Grover
- 45 *Priority:* High | *Status:* **DONE** (In Release Queue) | *Due Date:* 2026-03-17
- 46 
- 47 **Current Status**
- 48 The story is marked as **DONE** and resides in the **Release Queue**. The feature enables dynamic control of ad placement and count via Split feature flags for both Omni and OG Homepages, removing dependencies on code changes. While initial deployment discrepancies were observed on 2026-03-16 (where OG Home updated to slots [2,5] but Omni lagged at [1,3]), the resolution is recorded as "Done," indicating alignment has been achieved.
- 49 
- 50 **Pending Actions & Ownership**
- 51 *   **UAT Completion:** Michael Bui conducted a UAT session on **2026-03-19T00:46:38+0800**, confirming the solution meets all acceptance criteria and marking the ticket as resolved.
- 52 *   **Release Execution:** The ticket is pending final deployment validation in the release queue. No further development actions are required.
- 53 
- 54 **Decisions Made & Acceptance Criteria**
- 55 The following behaviors were validated against the requirements:
- 56 *   **Dynamic API Requests:** With the flag ON and config `[3, 5, 7]`, the system requests exactly 3 ads rendering at positions 3, 5, and 7. Updating Split config to `[2, 4, 6, 8, 10]` triggers a request for 5 ads in new user sessions without deployment.
- 57 *   **Fallback Logic:** If the flag is OFF, the system defaults to slots `[1, 3]`, fetching 2 ads.
- 58 *   **Empty Configuration:** An empty Split array `[]` results in 0 ad requests; the page displays only organic products with no gaps.
- 59 *   **Supply Shortage Handling:** If configuration calls for 3 slots (e.g., `[3, 5, 7]`) but only 2 valid ads are returned, slots 3 and 5 fill with ads, while slot 7 renders organic content.
- 60 *   **Out-of-Bounds Handling:** Slot indices exceeding the available content range (e.g., index 20 in a 10-item swimlane) are ignored; only valid indices render.
- 61 *   **Stock Integrity:** The system strictly honors existing stock availability checks before requesting ads to prevent displaying out-of-stock items.
- 62 
- 63 **Key Dates & History**
- 64 *   **2026-03-10T12:29:37+0800:** Ticket created by Nikhil Grover (Title: Dynamic ad slot configuration for Homepage swimlanes) defining requirements for dynamic placement via Split flags.
- 65 *   **2026-03-16T16:54:01+0800:** Partial deployment observed; OG Home updated to 2,5 while Omni Home lagged at 1,3. Coordination initiated to resolve the discrepancy.
- 66 *   **2026-03-16T18:07:30+0800:** Mobile application issues resolved; ticket initially marked ready for UAT.
- 67 *   **2026-03-19T00:46:38+0800:** Michael Bui conducted UAT session, confirming readiness and marking resolution as "Done."
- 68 
- 69 **Blockers & Constraints**
- 70 *   *Resolved:* The Omni Home swimlane configuration discrepancy (previously fixed at 1,3) has been addressed to allow full deployment.
- 71 *   *Constraint:* Integration with existing stock logic remains a hard constraint; no out-of-stock products may be displayed as ads.
- 72 
- 73 
- 74 ## jira/DPD-733: Dynamic ad slots for vertical scroll on omni homepage
- 75 Source: jira | Key: DPD-733 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | parent: DPD-710 | Last Updated: 2026-03-19T04:16:05.107518+00:00
- 76 **Daily Briefing Summary: DPD-733**
- 77 
- 78 **Current Status & State**
- 79 *   **Ticket:** DPD-733 (Dynamic ad slots for vertical scroll on omni homepage)
- 80 *   **Status:** IN RELASE QUEUE (Category: Done, Resolution: Done). Development is complete; the feature is awaiting release.
- 81 *   **Parent Ticket:** DPD-710 ([RMN] Activate product ads in Omni Home swimlanes).
- 82 
- 83 **Ownership & Pending Actions**
- 84 *   **Assignee:** Michael Bui (Development owner).
- 85 *   **Reporter:** Nikhil Grover (Stakeholder/Requester).
- 86 *   **Pending Action:** Release deployment. The feature is ready for production rollout with no further development or testing required.
- 87 
- 88 **Key Decisions & Technical Scope**
- 89 The story implements a Split feature flag to enable dynamic control of ad placement and count on the Omni homepage vertical scroll without code changes or manual API updates. Key logic decisions derived from acceptance criteria include:
- 90 *   **Dynamic Configuration:** When enabled, the system requests ads based on the dashboard-defined slot array (e.g., `[3, 5, 7]`), rendering them at specific indices.
- 91 *   **Fallback Logic:** If the feature flag is OFF but ads are enabled, the system defaults to slots `[1, 3]`, requesting 2 ads.
- 92 *   **Dynamic Density:** Changes to the Split configuration (e.g., updating from `[3, 5, 7]` to `[2, 4, 6, 8, 10]`) are instantly reflected in new user sessions, requesting a corresponding number of ads without redeployment.
- 93 *   **Empty Configuration:** An empty array `[]` results in zero ad requests; the vertical scroll displays only organic content with no gaps or placeholders.
- 94 *   **Supply Shortage Handling:** If the Ad API returns fewer ads than requested (e.g., requesting 3 but receiving 2), slots are filled sequentially (e.g., slots 3 and 5), and remaining slots render organic content rather than leaving gaps.
- 95 *   **Out-of-Bounds Handling:** Invalid indices beyond available content length (e.g., index 20 with only 10 items) are ignored; rendering is capped by actual content availability.
- 96 *   **Stock Integrity:** The system strictly honors existing stock availability checks prior to API requests; out-of-stock products will not be shown as ads.
- 97 
- 98 **Key Dates & Deadlines**
- 99 *   **Due Date:** March 17, 2026.
-100 *   **Last Update:** March 10, 2026 (Status transitioned to "IN RELASE QUEUE").
-101 
-102 **Blockers**
-103 None identified. The ticket indicates successful completion pending release execution.
-104 
-105 
-106 ## jira/DPD-734: Include swimlane name in the ad request for all Omni Home swimlanes
-107 Source: jira | Key: DPD-734 | Status: TO BE DEFINED (To Do) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | parent: DPD-710 | Last Updated: 2026-03-19T04:16:16.283770+00:00
-108 **Daily Briefing Summary: DPD-734**
-109 
-110 *   **Current Status**: The ticket remains in **"TO BE DEFINED"** (Status Category: To Do). As a Story assigned by Reporter Nikhil Grover, the requirement is now explicitly defined with clear acceptance criteria. No development has commenced as of March 10, 2026.
-111 *   **Ownership & Action Items**:
-112     *   **Assignee**: Michael Bui is responsible for executing the story.
-113     *   **Pending Action**: Implement logic to pass the swimlane name as the `Page_name` parameter in all ad requests sent to OSMOS for Omni Home swimlanes where ads are enabled, specifically adhering to the defined acceptance criteria.
-114 *   **Decisions Made & Requirements**:
-115     *   **User Story**: "As a Product Manager, I want to know which ad requests originated from which swimlanes and their corresponding responses So that I can track and optimise the performance on a swimlane level."
-116     *   **Functional Requirement**: When an ad request is triggered from a swimlane enabled for ads, the system must include the `Page_name` parameter in the OSMOS request containing the name of that specific swimlane.
-117 *   **Key Dates & Deadlines**:
-118     *   **Due Date**: March 17, 2026 (High Priority).
-119     *   **Parent Epic**: DPD-710 ("[RMN] Activate product ads in Omni Home swimlanes").
-120 *   **Technical Context**:
-121     *   **Objective**: Enable granular performance tracking and optimization at the specific swimlane level.
-122     *   **Integration Point**: OSMOS ad request service.
-123     *   **Target Parameter**: `Page_name`.
-124 
-125 This briefing reflects the transition of DPD-734 from a placeholder to a defined requirement, maintaining the original timeline and ownership structure while incorporating the explicit "As-Product Manager" narrative and acceptance criteria.
-126 
-127 
-128 ## jira/DPD-644: [RMN] Streamline event sync from Segment.io to OSMOS to resolve overage
-129 Source: jira | Key: DPD-644 | Status: Done (Done) | Type: Epic | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-12 | Resolution: Done | parent: DPD-645 | polaris-work-item-link: OMNI-1418, OMNI-1418 | Last Updated: 2026-03-19T12:46:02.643253+08:00
-130 ### Daily Briefing Summary: DPD-644
-131 
-132 **Current Status**
-133 *   **Ticket:** DPD-644 ([RMN] Streamline event sync from Segment.io to OSMOS to resolve overage)
-134 *   **Type:** Epic (High Priority)
-135 *   **State:** `Done` / `Resolution: Done`. The work is officially completed.
-136 *   **Owner:** Michael Bui (Assignee).
-137 
-138 **Pending Actions & Ownership**
-139 *   **Status Update:** No further actions are required; the ticket status and resolution have both been set to "Done."
-140 *   **Responsibility:** Michael Bui has successfully executed the scope, strategy, and execution plan for streamlining event synchronization.
-141 *   **External Dependency:** The task remains linked to Polaris work item **OMNI-1418**.
-142 
-143 **Decisions Made**
-144 *   The primary objective of resolving "overage" issues through process streamlining has been achieved, confirmed by the `Done` resolution status.
-145 *   Technical and strategic decisions were finalized during the execution phase, superseding any prior planning states.
-146 
-147 **Key Dates & Blockers**
-148 *   **Due Date:** March 12, 2026.
-149 *   **Latest Activity:** Ticket creation recorded on March 3, 2026, at 14:07 UTC+8 by Nikhil Grover (Reporter). The status was updated to `Done` immediately upon or following creation in the log entry.
-150 *   **Blockers:** None; the `Done` status indicates successful completion without open blockers.
-151 
-152 **Technical Context**
-153 *   **Source System:** Segment.io
-154 *   **Target System:** OSMOS
-155 *   **Objective:** Optimize data flow to resolve financial overages associated with current sync volumes.
-156 
-157 **Historical Note**
-158 *   Previous tracking indicated the work was in a `TO BE DEFINED` state awaiting initiation. This status has been superseded by the current `Done` resolution, confirming that the definition phase and subsequent execution were successfully concluded between creation and the due date. The log confirms the ticket transitioned directly to completion with the title and metadata finalized on March 3, 2026.
-159 
-160 
-161 ## jira/DPD-645: Improve event sync to prevent overage
-162 Source: jira | Key: DPD-645 | Status: Done (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-12 | Resolution: Done | blocks: DPD-273, DPD-273 | parent: DPD-644 | Last Updated: 2026-03-19T12:46:18.668408+08:00
-163 **Ticket:** DPD-645: Improve event sync to prevent overage
-164 **Status:** Done | **Priority:** High | **Resolution:** Done
-165 **Assignee:** Michael Bui | **Reporter:** Nikhil Grover
-166 **Parent:** DPD-644 ([RMN] Streamline event sync from Segment.io to OSMOS to resolve overage)
-167 **Linked Issues:** Blocks DPD-273
-168 
-169 ### 1. Current Status & Context
-170 *   **Objective:** Optimize the OSMOS PROD destination function in Segment to eliminate recurring monthly cost overages caused by excessive execution times (Transaction and Product events).
-171 *   **Acceptance Criteria:** The function must complete syncing at least **50% faster** than baseline.
-172 *   **Outcome Confirmation:** As of March 19, 2026, no abnormalities were observed in PROD. The optimization is deemed successful.
-173     *   **Performance Gain:** Daily function time reduced from ~25 days to ~8 days.
-174     *   **Impact:** This represents a reduction of approximately **12,200 hours/month** of function time. Actual cost savings will be realized over the coming months.
-175 *   **Testing Limitations:** Verification relies on monitoring execution logs and daily totals rather than UI interactions, as E2E testing cannot cover this backend scenario.
-176 
-177 ### 2. Pending Actions & Ownership
-178 *   **Monitoring:** Continued observation is required to validate the long-term impact of the time reduction on monthly billing cycles.
-179     *   **Owner:** Michael Bui.
-180 *   **Verification Strategy:** No further immediate deployment windows are required as the target optimization has been confirmed stable in PROD since March 19.
-181 
-182 ### 3. Key Decisions Made
-183 *   **Resolution Status:** The ticket is marked "Done" as the acceptance criteria were met. The execution time reduction achieved (~68%, from ~25d to ~8d) significantly exceeds the required 50% target.
-184 *   **Versioning:** Optimization was successfully implemented beyond version #56 (original target).
-185 
-186 ### 4. Key Dates & Blockers
-187 *   **Critical Dates:**
-188     *   **Ticket Creation/Title Update:** 2026-03-03.
-189     *   **Original Due Date:** 2026-03-12 (Completed post-deadline).
-190     *   **Stability Confirmation:** 2026-03-19 (Michael Bui confirmed no abnormality in PROD).
-191 *   **Blockers:** No current blockers.
-192 
-193 ### 5. Technical References
-194 *   **System Architecture:** Segment.io -> OSMOS PROD destination function -> BigQuery.
-195 *   **Platforms Monitored:** IOS UAT, Android UAT; PROD monitoring confirmed via daily function duration logs.
-196 
-197 
-198 ## jira/OPCO-1940: FP VIPs encounter verification after S&G purchase for fewer reasons, vs other customers
-199 Source: jira | Key: OPCO-1940 | Status: In release queue (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Ravi Goel | Resolution: Done | Labels: priority:improvement | blocks: OPCO-1956 | Last Updated: 2026-03-16T13:53:56.498248+00:00
-200 **Jira Ticket Summary: OPCO-1940**
-<<<
+=== Jira Sync Final Status ===
+(venv) root@80e3e99df9ff:/a0/usr/workdir# Last log entries:
+(venv) root@80e3e99df9ff:/a0/usr/workdir# [2026-03-21T02:15:19+0000] [Summarized 47/58] OMNI-1389: using cached summary
+[2026-03-21T02:15:19+0000] [Summarized 48/58] OMNI-1390: using cached summary
+[2026-03-21T02:15:19+0000] [Summarized 49/58] OMNI-1353: using cached summary
+[2026-03-21T02:15:19+0000] [Summarized 50/58] OMNI-1179: using cached summary
+[2026-03-21T02:15:19+0000] [Summarized 51/58] OMNI-1247: using cached summary
+[2026-03-21T02:15:19+0000] [Summarized 52/58] OMNI-1391: using cached summary
+[2026-03-21T02:15:19+0000] [Summarized 53/58] OMNI-1393: using cached summary
+[2026-03-21T02:15:19+0000] [Summarized 54/58] OMNI-1400: using cached summary
+[2026-03-21T02:15:19+0000] [Summarized 55/58] OMNI-1405: using cached summary
+[2026-03-21T02:15:19+0000] [Summarized 56/58] OMNI-1428: using cached summary
+[2026-03-21T02:15:19+0000] [Summarized 57/58] OMNI-1431: using cached summary
+[2026-03-21T02:15:19+0000] [Summarized 58/58] OMNI-1432: using cached summary
+[2026-03-21T02:15:19+0000] ============================================================
+[2026-03-21T02:15:19+0000] STATUS: COMPLETED - Jira Reader pipeline finished successfully (58 unique tickets)
+[2026-03-21T02:15:19+0000] ============================================================
+(venv) root@80e3e99df9ff:/a0/usr/workdir#
+(venv) root@80e3e99df9ff:/a0/usr/workdir# Output file exists: YES
+(venv) root@80e3e99df9ff:/a0/usr/workdir# (venv) root@80e3e99df9ff:/a0/usr/workdir# (venv) root@80e3e99df9ff:/a0/usr/workdir# > > > > > > > > > Tickets cached: 0
+0
+(venv) root@80e3e99df9ff:/a0/usr/workdir# (venv) root@80e3e99df9ff:/a0/usr/workdir#

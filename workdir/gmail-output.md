@@ -1,5 +1,108 @@
 
 
+## gmail/19623aec468de051: NED-222914 [FairPrice General Service Request] Access for FPG Backoffice
+Source: gmail | Thread: 19623aec468de051 | Labels: Inbox, Updates | Priority: None | Senders: Pamela | Last Date: Sat, Mar 21, 2026, 2:31 AM | Last Updated: 2026-03-21T02:46:58.021515+00:00
+**Daily Work Briefing: Ticket NED-222914 [FairPrice General Service Request] Access for FPG Backoffice**
+
+**Key Participants & Roles**
+*   **Pamela Koh**: Participant/Requester.
+*   **Calvin Phan**: Approver and Technical Lead (Jira Service Management).
+*   **Michael Bui**: Original requestor; recipient of resolution notice.
+*   **Ram Datchnamoorthy**: Participant.
+*   **Allen Umali**: Participant; previously flagged for outdated email records.
+*   **Hanafi Yakub**: System/Automation Sender (Resolution Notification).
+*   **ScriptRunner for Jira**: Automation tool managing status transitions.
+
+**Main Topic/Request**
+The ticket concerns a request from Michael Bui for production DBP portal access to configure and update the `isnotadvertisable` flag for new products, specifically granting privileges for the Batch Upload Job.
+
+**Decisions Made & Status History**
+*   **Initial Approval**: Calvin Phan approved the request on Apr 11, 2025, at 7:52 AM, transitioning status from "Open" to **"In Progress."**
+*   **Access Granted**: Privileges for the Batch Upload Job were successfully granted on Apr 11, 2025, at 8:33 AM. A warning was issued regarding Allen Umali's outdated email record.
+*   **Final Resolution**: On Mar 21, 2026, at 2:31 AM, the automation tool **ScriptRunner for Jira** changed the ticket status to **"Verified and Closed."**
+
+**Pending Actions & Ownership**
+*   **Resolved**: The previous requirement to verify Allen Umali's access due to outdated email records has been superseded by the system closing the ticket. No further manual verification is indicated in the final closed state.
+*   **Notification Scope**: The resolution was shared with Pamela Koh, Michael Bui, and Allen Umali.
+
+**Key Dates & Deadlines**
+*   **Apr 11, 2025, 7:09 AM**: Request initiated; Pamela Koh added as participant.
+*   **Apr 11, 2025, 7:52 AM**: Calvin Phan approved and set status to "In Progress."
+*   **Apr 11, 2025, 8:33 AM**: Access granted; warning issued regarding Allen Umali's email.
+*   **Mar 18, 2026**: Automated resolution notification sent by Hanafi Yakub. (Note: The ticket was subsequently closed three days later).
+*   **Mar 21, 2026, 2:31 AM**: Ticket automatically transitioned to **"Verified and Closed"** via ScriptRunner for Jira.
+
+**Summary**
+Access for the Batch Upload Job was successfully granted on Apr 11, 2025. Although Allen Umali's access was initially flagged due to an outdated email record in Jira, the ticket status was automatically updated to "Verified and Closed" by ScriptRunner for Jira on Mar 21, 2026. All stakeholders (Pamela Koh, Michael Bui, and Allen Umali) have been notified of the closure.
+
+
+## gmail/19d0decc709009e3: [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink/marketing-service)
+Source: gmail | Thread: 19d0decc709009e3 | Labels: Inbox, Updates | Priority: None | Senders: Bitbucket | Last Date: Sat, Mar 21, 2026, 1:05 AM | Last Updated: 2026-03-21T02:01:13.687483+00:00
+**Daily Work Briefing: Bitbucket Pipeline Failure Alert**
+
+*   **Key Participants & Roles:**
+    *   **System (Bitbucket):** Automated notification service triggering the alert.
+    *   **Repository Owner:** `ntuclink/marketing-service`.
+    *   **Commit Author/PR Creator:** Implied via PR #131 and DPD-715; specific user name not listed in metadata, but associated with the merge of "Sanitize configured slots."
+
+*   **Main Topic/Request:**
+    *   Notification regarding a failed CI/CD pipeline execution on the `master` branch. The failure occurred immediately following the automatic merge of Pull Request #131 (Ticket: DPD-715), which addressed sanitizing configured slots for multiple edge cases.
+
+*   **Pending Actions & Ownership:**
+    *   **Action Required:** Investigate the root cause of the pipeline failure and execute a fix to restore build stability on `master`.
+    *   **Owner:** Development team responsible for the `marketing-service` repository (specifically the contributor who submitted PR #131).
+    *   **Next Step:** Review the specific error logs in Bitbucket Pipelines (link provided: "View this pipeline") to determine if the failure is due to code logic introduced in DPD-715 or infrastructure issues.
+
+*   **Decisions Made:**
+    *   No strategic decisions were made in this thread; it is an automated status update regarding a build state change. The merge of PR #131 was technically executed before the pipeline failure was detected.
+
+*   **Key Dates, Deadlines, & Follow-ups:**
+    *   **Date/Time of Incident:** March 21, 2026, at 1:05 AM UTC (or local server time).
+    *   **Commit Hash:** `fc067b7`.
+    *   **Duration:** Pipeline ran for 54 seconds before failing.
+    *   **Associated Ticket:** DPD-715 (Sanitize configured slots for multiple edge cases).
+    *   **Pull Request ID:** #131.
+    *   **Follow-up Needed:** Immediate re-evaluation of the `fc067b7` commit status to prevent deployment blockage.
+
+*   **Specific References:**
+    *   Repository: `ntuclink/marketing-service`
+    *   Branch: `master`
+    *   Bitbucket Notification ID: `19d0decc709009e3` (Last Message ID)
+    *   Email Sender: `notifications-noreply@bitbucket.org`
+
+
+## gmail/19d0d28d084c5870: You have no events scheduled today.
+Source: gmail | Thread: 19d0d28d084c5870 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Fri, Mar 20, 2026, 9:31 PM | Last Updated: 2026-03-20T22:01:58.846652+00:00
+**Daily Work Briefing Summary**
+
+**Key Participants & Roles**
+*   **Michael Bui:** Recipient of the daily agenda notification (Account: michael.bui@fairpricegroup.sg). Role implies ownership or subscription to the "Digital Business Tech Release/Changes" calendar.
+*   **Google Calendar System:** Automated sender (calendar-notification@google.com) providing status updates on event schedules.
+
+**Main Topic/Request**
+The email is an automated system notification confirming that no events are currently scheduled for Michael Bui's calendar for the upcoming date, Saturday, March 21, 2026. It also serves to inform the user of their subscription status regarding daily agendas for specific calendars and provides instructions on how to modify these settings.
+
+**Pending Actions & Ownership**
+*   **Action:** Review and potentially update notification preferences if the current calendar subscriptions ("Digital Business Tech Release/Changes") are no longer accurate or desired.
+*   **Owner:** Michael Bui (via self-service at https://calendar.google.com/calendar/).
+*   **Status:** No immediate action required unless the user wishes to change subscription settings.
+
+**Decisions Made**
+No decisions regarding business operations, projects, or personnel were made in this thread. The content is purely informational regarding calendar availability and system configuration.
+
+**Key Dates, Deadlines, & Follow-ups**
+*   **Date of Notification:** March 20, 2026, at 9:31 PM.
+*   **Relevant Schedule Date:** Saturday, March 21, 2026 (Confirmed availability).
+*   **Follow-up:** None scheduled; the user has no events on the relevant date.
+
+**Specific References & Metadata**
+*   **Account Email:** michael.bui@fairpricegroup.sg
+*   **Calendar Subscription:** Digital Business Tech Release/Changes
+*   **Last Message ID:** 19d0d28d084c5870
+*   **Labels:** Inbox, Updates
+*   **External Links:** https://calendar.google.com/calendar/
+
+
 ## gmail/19cfb0400c5977a9: Re:[## 112056 ##] TMICC | Brand-to-Manufacturer Mapping
 Source: gmail | Thread: 19cfb0400c5977a9 | Labels: Inbox | Priority: None | Senders: Osmos, Trina | Last Date: Fri, Mar 20, 2026, 10:15 AM | Last Updated: 2026-03-21T01:07:50.701103+08:00
 **Daily Work Briefing: TMICC Brand-to-Manufacturer Mapping Update**
@@ -2001,196 +2104,3 @@ No decisions or strategic choices were recorded in this correspondence; this is 
 *   **Company Address:** 620 8th Avenue, 45th Floor, New York, NY 10018 (Datadog Inc.)
 *   **Metadata Labels:** Inbox, Updates
 *   **Last Message ID:** 19d040b9affdc42d
-
-
-## gmail/19d03f08b1ddecbf: FY2025 Performance Management (Executive) for Michael Bui Routing Notice
-Source: gmail | Thread: 19d03f08b1ddecbf | Labels: Inbox | Priority: None | Senders: HR Administrator | Last Date: Thu, Mar 19, 2026, 2:33 AM | Last Updated: 2026-03-19T13:05:17.164334+08:00
-**Daily Work Briefing: FY2025 Performance Management (Executive)**
-
-*   **Key Participants & Roles:**
-    *   **Michael Bui:** Executive recipient; owner of the pending action.
-    *   **HR Administrator (`MyHR@ntucenterprise.sg`):** System notifier; responsible for routing and communication.
-    *   **Alvin Choo:** Previous holder of the document; provided prior comments before routing to Michael Bui.
-
-*   **Main Topic/Request:**
-    Notification regarding the availability of the **"FY2025 Performance Management (Executive)"** document within the MyHR system, specifically under the **My Forms - Inbox** folder. The document requires immediate review and action by Michael Bui following its return from Alvin Choo.
-
-*   **Pending Actions & Ownership:**
-    *   **Action:** Access the document via the provided link and complete necessary follow-up actions within the MyHR Performance module.
-    *   **Owner:** Michael Bui.
-    *   **Status:** Document has been routed back from Alvin Choo to Michael Bui; action is currently pending completion by Michael Bui.
-
-*   **Decisions Made:**
-    *   None recorded in this specific notification thread. The content serves as a status update and routing instruction rather than a decision-making log.
-
-*   **Key Dates, Deadlines & Follow-ups:**
-    *   **Notification Date:** March 19, 2026, 2:33 AM.
-    *   **System Location:** MyHR Performance module > My Forms - Inbox folder.
-    *   **Access Point:** Document Link (URL provided in original email).
-    *   **Follow-up Requirement:** No specific deadline date is stated in the notification; however, the instruction implies immediate attention ("available... for your follow up action").
-    *   **Contact Protocol:** Queries regarding this process should be directed to the relevant HR team; do not reply to the auto-generated email.
-
-
-## gmail/19d039ff903e9301: [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink/marketing-service)
-Source: gmail | Thread: 19d039ff903e9301 | Labels: Inbox, Updates | Priority: None | Senders: Bitbucket | Last Date: Thu, Mar 19, 2026, 1:05 AM | Last Updated: 2026-03-19T13:05:29.555106+08:00
-**Daily Work Briefing: Bitbucket Pipeline Failure**
-
-**Key Participants & Roles**
-*   **Bitbucket System (`notifications-noreply@bitbucket.org`):** Automated notification sender.
-*   **Contributors:** No specific human author names listed in the thread; however, the change is attributed to a merge request identified by ticket `DPD-715`.
-
-**Main Topic/Request**
-*   **Notification of CI Failure:** The automated pipeline for the `ntuclink/marketing-service` repository failed immediately after merging changes into the `master` branch.
-*   **Specific Context:** The failure occurred following the merge of Pull Request #131, titled "DPD-715: Sanitize configured slots for multiple edge cases."
-
-**Pending Actions & Ownership**
-*   **Action Required:** Investigate the cause of the pipeline failure and restore CI stability.
-*   **Ownership:** Implicitly assigned to the engineering team responsible for `ntuclink/marketing-service`. Specific individual owners are not identified in this notification thread.
-*   **Next Step:** Access the "View this pipeline" link to review build logs for error details.
-
-**Decisions Made**
-*   No human decisions or strategy changes were recorded in this specific thread, as it is an automated system alert. The merge of PR #131 was executed prior to the failure notification.
-
-**Key Dates & Deadlines**
-*   **Incident Date:** March 19, 2026.
-*   **Incident Time:** 1:05 AM (UTC/Local time not specified).
-*   **Commit Hash:** `fc067b7`.
-*   **Pipeline Duration:** 51 seconds.
-*   **Branch Affected:** `master`.
-
-**Specific References**
-*   **Repository:** `ntuclink/marketing-service`
-*   **Pull Request:** #131
-*   **Ticket ID:** `DPD-715` (Title: Sanitize configured slots for multiple edge cases)
-*   **Commit Hash:** `fc067b7`
-*   **Email Metadata Labels:** "Inbox", "Updates"
-*   **Last Message ID:** `19d039ff903e9301`
-
-
-## gmail/19d03848e656e49c: Michael Bui, you have work due in Jira
-Source: gmail | Thread: 19d03848e656e49c | Labels: Inbox, Updates | Priority: None | Senders: Jira | Last Date: Thu, Mar 19, 2026, 12:35 AM | Last Updated: 2026-03-19T13:05:41.421282+08:00
-**Daily Work Briefing Summary**
-
-**Key Participants & Roles**
-*   **Michael Bui:** Recipient of the notification; owner of the overdue work item.
-*   **Jira System (jira@ntuclink.atlassian.net):** Automated sender providing status updates on work items.
-
-**Main Topic/Request**
-Automated notification regarding overdue tasks within the Jira project. The system flagged one specific item that was due or overdue within the last 7 days.
-
-**Pending Actions & Ownership**
-*   **Action:** Address an overdue work item.
-*   **Owner:** Michael Bui.
-*   **Details:** The item "DPD-734" requires attention as it is currently overdue.
-
-**Decisions Made**
-No decisions were recorded in this thread; the content consists solely of an automated status alert.
-
-**Key Dates, Deadlines & Follow-ups**
-*   **Date Notified:** March 19, 2026 (12:35 AM).
-*   **Original Due Date for Item:** March 17, 2026.
-*   **Deadline Status:** The item is currently overdue (exceeded due date by two days as of notification time).
-*   **Review Window:** The system flagged items due or overdue within the last 7 days (March 12 – March 19, 2026).
-
-**Specific References & Details**
-*   **Work Item ID:** DPD-734.
-*   **Task Description:** "Include swimlane name in the ad request for all Om..." (Description truncated in source text).
-*   **System Contact/Address:** 341 George Street, Sydney, NSW, 2000, Australia.
-*   **Platform Links Referenced:** "View work items," "Manage notifications."
-
-**Metadata Context**
-*   **Labels:** Inbox, Updates.
-*   **Priority:** Not specified (null).
-*   **Last Message ID:** 19d03848e656e49c.
-
-
-## gmail/19d032e781fbb0ba: [Webinar] Learn how to create faster with Lucid AI
-Source: gmail | Thread: 19d032e781fbb0ba | Labels: Inbox, Promotions | Priority: None | Senders: Lucid | Last Date: Wed, Mar 18, 2026, 11:01 PM | Last Updated: 2026-03-19T13:05:52.862279+08:00
-### Daily Work Briefing: Lucid AI Webinar Invitation
-
-**Key Participants & Roles:**
-*   **Sender:** Lucid Software (Webinars Team) – *webinars@e.lucid.co*. Acting as the event organizer and product vendor.
-*   **Recipient:** Internal User (You). Role is attendee/potential participant for team alignment or personal upskilling.
-
-**Main Topic/Request:**
-Invitation to register for an upcoming webinar titled **"Move at the speed of AI."** The session focuses on demonstrating how Lucid's new intelligent features accelerate diagram creation and documentation. Key technical highlights include:
-*   Integration via a **MCP server** to bring visual power into broader AI ecosystems.
-*   Expanded capabilities for **Lucid AI**, specifically enhanced diagram support and voice-to-text functionality.
-*   Introduction of the **Process Agent** as a collaboration partner.
-
-**Pending Actions & Ownership:**
-*   **Action:** Register for the webinar session that aligns with your time zone to attend live or receive the recording.
-*   **Owner:** You (Internal User).
-*   **Note:** Recording availability is guaranteed upon registration regardless of live attendance.
-
-**Decisions Made:**
-*   No internal decisions recorded in this thread; this is an informational invitation requiring a binary choice (Register/No Register).
-
-**Key Dates & Deadlines:**
-*   **Americas Session:** March 26, 2026, at 1:00 p.m. ET / 11:00 a.m. MT.
-*   **EMEA Session:** March 31, 2026, at 3:00 p.m. CEST.
-*   **Webinar Content Date:** Sent March 18, 2026.
-
-**Specific References:**
-*   **Event Subject:** Learn how to create faster with Lucid AI.
-*   **Product Features:** MCP server, Process Agent, Voice-to-text.
-*   **Company Address:** Lucid Software Inc., 10355 South Jordan Gateway, Suite 300, South Jordan, UT 84095 USA.
-
-
-## gmail/19d02dec8a7bb31b: You have no events scheduled today.
-Source: gmail | Thread: 19d02dec8a7bb31b | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Wed, Mar 18, 2026, 9:34 PM | Last Updated: 2026-03-18T22:04:12.601554+00:00
-**Daily Work Briefing Summary**
-
-*   **Key Participants:**
-    *   **Michael Bui** (Account holder: michael.bui@fairpricegroup.sg): Recipient of the notification.
-    *   **Google Calendar** (System/Notification Source): Sender of the automated agenda alert.
-
-*   **Main Topic/Request:**
-    *   Automated system notification confirming that no calendar events are scheduled for Michael Bui today, Thursday, March 19, 2026. The message serves as a daily agenda update for the "Digital Business Tech Release/Changes" calendar subscription.
-
-*   **Pending Actions & Ownership:**
-    *   **No pending actions required.** The system explicitly states there are no events scheduled for today.
-    *   Users may optionally modify notification subscriptions via Google Calendar settings, but this is a preference adjustment, not an operational task.
-
-*   **Decisions Made:**
-    *   None. This is an informational status update regarding the calendar schedule.
-
-*   **Key Dates & Deadlines:**
-    *   **Today's Date:** Thursday, March 19, 2026 (No events).
-    *   **Notification Sent:** Wednesday, March 18, 2026, at 9:34 PM.
-
-*   **System Metadata:**
-    *   The message is tagged under "Inbox" and "Updates."
-    *   Last Message ID: `19d02dec8a7bb31b`.
-
-
-## gmail/19d023141fffc27e: Webinar: rethink how AI actually drives impact at work
-Source: gmail | Thread: 19d023141fffc27e | Labels: Inbox, Promotions | Priority: None | Senders: Atlassian | Last Date: Wed, Mar 18, 2026, 6:24 PM | Last Updated: 2026-03-18T22:05:40.598952+00:00
-**Daily Briefing Summary: Atlassian Webinar Invitation**
-
-**Key Participants & Roles**
-*   **Host:** Atlassian (info@e.atlassian.com)
-*   **Speaker 1:** Will White, Senior Analyst at Forrester. Focuses on technology architecture, delivery, and enterprise service management.
-*   **Speaker 2:** Hersh Iyer, Senior Principal Product Manager at Atlassian. Leads platform and data strategy; instrumental in launching the Teamwork Graph and Rovo.
-
-**Main Topic/Request**
-Invitation to a webinar titled *"Why AI misses the mark – and how to fix it"* scheduled for March 25–26, 2026. The session addresses why enterprise AI initiatives often underperform despite feature deployment. It features findings from a Forrester Consulting Thought Leadership Paper (commissioned by Atlassian) surveying 275 AI decision-makers. The core thesis is that adding organizational context via knowledge graphs (specifically the Atlassian Teamwork Graph) is essential for grounding AI in real work contexts to improve adoption and ROI.
-
-**Pending Actions & Ownership**
-*   **Action:** Register/Save a seat for the webinar.
-*   **Owner:** Recipient of this email.
-*   **Supporting Materials:** Speakers' bios, webinar recording/download links, and the Forrester Thought Leadership Paper are available via "Download" buttons referenced in the original email.
-
-**Decisions Made**
-No internal decisions were recorded within this thread; it is a promotional invitation from Atlassian to external stakeholders or employees.
-
-**Key Dates & Deadlines**
-*   **Event Date:** March 25–26, 2026 (Time not specified in text).
-*   **Last Message ID:** 19d023141fffc27e.
-*   **Follow-up:** No automatic follow-up dates listed; action required is immediate registration prior to the event dates.
-
-**Specific References**
-*   **Paper Title:** Forrester Consulting Thought Leadership Paper (commissioned by Atlassian).
-*   **Concepts:** Knowledge graphs, Atlassian Teamwork Graph, Rovo, enterprise AI underperformance.
-*   **Speaker Backgrounds:** Hersh Iyer's prior roles at Amazon (Alexa team) and degrees from NYU Stern and Georgia Tech are noted.
-*   **Contact/Address:** Atlassian Pty Ltd., 341 George Street, Sydney, NSW, 2000, Australia.

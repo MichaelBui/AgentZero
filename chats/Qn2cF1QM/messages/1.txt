@@ -1,10 +1,15 @@
-Thursday
-(venv) root@f93a5675f2a0:/a0/usr/workdir# (venv) root@f93a5675f2a0:/a0/usr/workdir# Running with DAYS=2
-(venv) root@f93a5675f2a0:/a0/usr/workdir# [1] 849
-(venv) root@f93a5675f2a0:/a0/usr/workdir# Monitoring log at /a0/usr/skills/gmail/data/gmail-debug.log
-(venv) root@f93a5675f2a0:/a0/usr/workdir# [gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:850) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
-(Use `node --trace-deprecation ...` to show where the warning was created)
+Latest log entries:
+[2026-03-21T02:01:13+0000] [Summarized 56/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:01:13+0000] [Summarized 57/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:01:13+0000] [Summarized 58/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:01:13+0000] [Summarized 59/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
+[2026-03-21T02:01:13+0000] [Summarized 60/62] [Delivery Status Notification (Failure)]: using cached summary
+[2026-03-21T02:01:13+0000] [Summarized 61/62] [[Dashboard Report] Retail Media - DD Das]: using cached summary
+[2026-03-21T02:01:13+0000] [Summarized 62/62] [FY2025 Performance Management (Executive]: using cached summary
+[2026-03-21T02:01:13+0000] ============================================================
+[2026-03-21T02:01:13+0000] STATUS: COMPLETED - Gmail Reader pipeline finished successfully (62 threads)
+[2026-03-21T02:01:13+0000] ============================================================
 
 
-[SYSTEM: Returning control to agent after 15 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+>>> Output file exists: 150831 bytes
+(venv) root@80e3e99df9ff:/a0/usr/workdir#
