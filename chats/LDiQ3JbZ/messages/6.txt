@@ -1,0 +1,17 @@
+#### Extract the exact structure and formatting rules for the daily report.
+The daily report must follow a strict markdown structure starting with the title `# ❗ Daily Work Report - [Day of week], [Month DD, YYYY]`. Immediately following the title is a `---` separator, then 4-6 sentences of plain prose for the Executive Summary (no headings or bullets), followed by another `---`. The body consists of four specific sections with exact emoji and header formatting: `## 🔴 My Action Items (Pending My Action)`, `## 🟡 My Follow-Ups (Waiting on Others)`, `## 📊 Work Streams`, and `## 💡 Patterns and Observations`. Each section is separated by `---`. The Action Items and Follow-Ups sections must be formatted as Markdown tables with specific columns: Action Items require `Metadata`, `Details`, and `Suggested Action` (prioritized by 🔴, 🟡, 🟢), while Follow-Ups require the same columns but include "Since" and "Days Waiting" in metadata. Work Streams must be presented as blocks starting with `### [Work Stream Name] - **[Status: On Track / At Risk / Blocked / Completed / Paused]**` containing bulleted subsections for "What's happening," "Key people," "Open questions or risks," and "Recommendation." The report concludes with a bolded Quick Stats line summarizing counts for action items, follow-ups, work streams, patterns, and source counts (memory, Jira, GChat, Gmail).
+
+#### Identify any specific analysis frameworks or prioritization logic to apply.
+The report generation requires a multi-step analysis framework starting with **Structured Pre-Analysis** to classify every source item into exactly one of four labels: `ACTION` (Michael must do something), `FOLLOW-UP` (waiting on others), `WORKSTREAM` (informational), or `NOISE` (irrelevant). Items must be cross-referenced across sources (Jira, GChat, Gmail) to identify "cross-source signals," which are treated as higher priority. Prioritization logic assigns specific emoji levels: **🔴 Critical** (deadline today/tomorrow, blocking work, or executive request), **🟡 Important** (SLA risk this week, manager request, or team blocker), and **🟢 Low** (no immediate deadline). Rows in tables must be sorted by this priority order (Critical first, then Important, then Low). Additionally, implied actions must be detected (e.g., unanswered questions to Michael) and "Fact-checking" is mandatory to ensure every claim traces back to a specific source item without fabrication.
+
+#### List any mandatory sections or headers that must be included.
+The report must include the following mandatory headers in this exact order:
+1.  `# ❗ Daily Work Report - [Day of week], [Month DD, YYYY]` (Title)
+2.  Executive Summary prose (no heading label, just text after the first separator)
+3.  `## 🔴 My Action Items (Pending My Action)`
+4.  `## 🟡 My Follow-Ups (Waiting on Others)`
+5.  `## 📊 Work Streams`
+6.  `## 💡 Patterns and Observations`
+7.  `**Quick Stats:** [X] action items | [Y] follow-ups | [Z] work streams | [W] patterns/observations | Sources: [n_memory] memory items, [n_jira] Jira tickets, [n_gchat] chats, [n_gmail] emails`
+
+Additionally, within the Work Streams section, every block must start with `### [Work Stream Name] - **[Status: On Track / At Risk / Blocked / Completed / Paused]**`. If any section has no items, the specific text "None identified in the reporting period." must be written.

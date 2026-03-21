@@ -1,6 +1,6 @@
 
 
-## [1/24] [Dashboard Report] Retail Media - DD Dashboard | Sat 21 Mar 11:00AM +08
+## [1/23] [Dashboard Report] Retail Media - DD Dashboard | Sat 21 Mar 11:00AM +08
 Source: gmail | Thread: 19d0e57d944bb79a | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Sat, Mar 21, 2026, 3:02 AM | Last Updated: 2026-03-21T03:33:09.018963+00:00
 **Daily Work Briefing: Retail Media Dashboard Update**
 
@@ -34,7 +34,7 @@ No business decisions were made or recorded in this thread; it is purely informa
 *   **Last Message ID:** 19d0e57d944bb79a
 
 
-## [2/24] NED-222914 [FairPrice General Service Request] Access for FPG Backoffice
+## [2/23] NED-222914 [FairPrice General Service Request] Access for FPG Backoffice
 Source: gmail | Thread: 19623aec468de051 | Labels: Inbox, Updates | Priority: None | Senders: Pamela | Last Date: Sat, Mar 21, 2026, 2:31 AM | Last Updated: 2026-03-21T02:46:58.021515+00:00
 **Daily Work Briefing: Ticket NED-222914 [FairPrice General Service Request] Access for FPG Backoffice**
 
@@ -70,7 +70,7 @@ The ticket concerns a request from Michael Bui for production DBP portal access 
 Access for the Batch Upload Job was successfully granted on Apr 11, 2025. Although Allen Umali's access was initially flagged due to an outdated email record in Jira, the ticket status was automatically updated to "Verified and Closed" by ScriptRunner for Jira on Mar 21, 2026. All stakeholders (Pamela Koh, Michael Bui, and Allen Umali) have been notified of the closure.
 
 
-## [3/24] [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink/marketing-service)
+## [3/23] [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink/marketing-service)
 Source: gmail | Thread: 19d0decc709009e3 | Labels: Inbox, Updates | Priority: None | Senders: Bitbucket | Last Date: Sat, Mar 21, 2026, 1:05 AM | Last Updated: 2026-03-21T02:01:13.687483+00:00
 **Daily Work Briefing: Bitbucket Pipeline Failure Alert**
 
@@ -105,7 +105,7 @@ Source: gmail | Thread: 19d0decc709009e3 | Labels: Inbox, Updates | Priority: No
     *   Email Sender: `notifications-noreply@bitbucket.org`
 
 
-## [4/24] You have no events scheduled today.
+## [4/23] You have no events scheduled today.
 Source: gmail | Thread: 19d0d28d084c5870 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Fri, Mar 20, 2026, 9:31 PM | Last Updated: 2026-03-20T22:01:58.846652+00:00
 **Daily Work Briefing Summary**
 
@@ -137,7 +137,7 @@ No decisions regarding business operations, projects, or personnel were made in 
 *   **External Links:** https://calendar.google.com/calendar/
 
 
-## [5/24] Re:[## 112056 ##] TMICC | Brand-to-Manufacturer Mapping
+## [5/23] Re:[## 112056 ##] TMICC | Brand-to-Manufacturer Mapping
 Source: gmail | Thread: 19cfb0400c5977a9 | Labels: Inbox | Priority: None | Senders: Osmos, Trina | Last Date: Fri, Mar 20, 2026, 10:15 AM | Last Updated: 2026-03-20T17:07:50.701103+00:00
 **Daily Work Briefing: TMICC Brand-to-Manufacturer Mapping Update**
 
@@ -181,7 +181,7 @@ Osmos Support has completed the Brand-to-Manufacturer mapping for **Account: Tmi
 *   **Communication:** "If we do not hear back from you, we will proceed with closing this ticket by EOD." (March 20, 2026).
 
 
-## [6/24] Invitation: Smart Cart x RMN Catchup @ Tue Mar 24, 2026 5pm - 5:30pm (SGT) (Michael Bui)
+## [6/23] Invitation: Smart Cart x RMN Catchup @ Tue Mar 24, 2026 5pm - 5:30pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d0aa1b6bf2a883 | Labels: Inbox | Priority: None | Senders: Ching Hui Ng | Last Date: Fri, Mar 20, 2026, 9:44 AM | Last Updated: 2026-03-20T17:08:00.360076+00:00
 **Daily Work Briefing: Smart Cart x RMN Catch-up**
 
@@ -213,7 +213,7 @@ No decisions were made during this correspondence stage as this is a scheduling 
 Michael Bui must determine availability and respond to the invitation by the organizer's deadline (likely prior to the meeting date) to confirm attendance.
 
 
-## [7/24] Jazz Tong currently away Re: NTUC Enterprise-2025 Web Service Penetration Testing for RMN APIs
+## [7/23] Jazz Tong currently away Re: NTUC Enterprise-2025 Web Service Penetration Testing for RMN APIs
 Source: gmail | Thread: 19d0a80fa3346f78 | Labels: Inbox | Priority: None | Senders: Jazz Tong | Last Date: Fri, Mar 20, 2026, 9:08 AM | Last Updated: 2026-03-20T17:08:13.791615+00:00
 **Daily Work Briefing: NTUC Enterprise Web Service Penetration Testing**
 
@@ -248,7 +248,7 @@ The thread addresses the "NTUC Enterprise-2025 Web Service Penetration Testing f
 *   Email Metadata: Last message ID 19d0a80fa3346f78.
 
 
-## [8/24] NTUC Enterprise-2025 Web Service Penetration Testing for RMN APIs
+## [8/23] NTUC Enterprise-2025 Web Service Penetration Testing for RMN APIs
 Source: gmail | Thread: 19abde329ef69594 | Labels: Inbox, ⚠️IMPORTANT | Priority: ⚠️IMPORTANT | Senders: Ong, Jazz, me | Last Date: Fri, Mar 20, 2026, 9:07 AM | Last Updated: 2026-03-20T17:08:35.328233+00:00
 **Subject:** Daily Briefing: NTUC Enterprise-2025 Web Service Penetration Testing for RMN APIs (Final Report Requested)
 
@@ -286,7 +286,7 @@ The initial testing phase concluded in early December 2025. Remediation for Medi
 The retest execution phase is now **complete**. On **March 20, 2026, at 9:07 AM**, Michael Bui explicitly requested the updated results. LGMS has compiled the final data and is proceeding to share the report with the client immediately to satisfy this request. The project remains in a waiting state for administrative closure, specifically pending the submission of the signed Milestone Acknowledgement form from Michael Bui and the final report sign-off from Jazz Tong following receipt of the updated deliverables.
 
 
-## [9/24] Unlock your potential with FairPrice Group’s Internal Talent Marketplace
+## [9/23] Unlock your potential with FairPrice Group’s Internal Talent Marketplace
 Source: gmail | Thread: 19d0a78f43ef89a0 | Labels: Inbox, Updates | Priority: None | Senders: HR Announcement | Last Date: Fri, Mar 20, 2026, 8:59 AM | Last Updated: 2026-03-20T17:08:49.410961+00:00
 **Daily Work Briefing: Internal Talent Marketplace Announcement**
 
@@ -330,7 +330,7 @@ Source: gmail | Thread: 19d0a78f43ef89a0 | Labels: Inbox, Updates | Priority: No
     *   Contact: ta@fairpricegroup.sg.
 
 
-## [10/24] Notes: Meeting Mar 20, 2026 at 3:59 PM GMT+08:00
+## [10/23] Notes: Meeting Mar 20, 2026 at 3:59 PM GMT+08:00
 Source: gmail | Thread: 19d0a72350dd8388 | Labels: Inbox, Updates | Priority: None | Senders: Gemini | Last Date: Fri, Mar 20, 2026, 8:52 AM | Last Updated: 2026-03-20T17:09:04.427074+00:00
 **Daily Work Briefing: Store ID Debugging Session**
 
@@ -366,7 +366,7 @@ Investigation into a critical inconsistency where the Store ID changes between t
 *   **Context:** All action items are linked to resolving the Store ID inconsistency reported on March 20, 2026.
 
 
-## [11/24] OSMOS PROD Destination Function Overage
+## [11/23] OSMOS PROD Destination Function Overage
 Source: gmail | Thread: 19b1155626cc7a41 | Labels: Inbox | Priority: None | Senders: Yadear, me, Nikhil | Last Date: Fri, Mar 20, 2026, 6:18 AM | Last Updated: 2026-03-20T17:09:25.149368+00:00
 **Daily Work Briefing: OSMOS PROD Destination Function Optimization & Cost Monitoring**
 
@@ -403,7 +403,7 @@ Addressing severe execution time overage and unexpected cost increases in the "O
 Production deployment completed on Sunday, March 15, 2026. Initial metrics (Mar 20) showed a significant reduction in wall-clock time from 25–30 days to approximately 10 days. However, recent sporadic surges have triggered an overage. The project has transitioned from deployment verification to strict compliance monitoring. Success is contingent on Yadear confirming that daily processing stabilizes below 4 days and the total accumulated time stays under 16 days by next week.
 
 
-## [12/24] Re: Retail Media
+## [12/23] Re: Retail Media
 Source: gmail | Thread: 19cd598da8ea44d8 | Labels: Inbox, ⚠️IMPORTANT | Priority: ⚠️IMPORTANT | Senders: Miguel, Lilibeth | Last Date: Fri, Mar 20, 2026, 3:58 AM | Last Updated: 2026-03-20T17:09:46.624824+00:00
 **Subject:** Update: Retail Media Integration (Smart Carts, IPOS, Digital Price Cards) – Meeting Rescheduling Requested
 
@@ -446,7 +446,7 @@ Addressing the operational challenge of managing content across fragmented touch
 *   FairPrice Group IDs: `miguel_ho@fairpricegroup.sg`, `michael.bui@fairpricegroup.sg`
 
 
-## [13/24] FP/RDCS - IP Whitelisting
+## [13/23] FP/RDCS - IP Whitelisting
 Source: gmail | Thread: 19d095548807fb1a | Labels: Inbox | Priority: None | Senders: Jinli LI (HPB) | Last Date: Fri, Mar 20, 2026, 3:41 AM | Last Updated: 2026-03-20T17:09:56.502886+00:00
 **Daily Work Briefing: FP/RDCS IP Whitelisting**
 
@@ -471,7 +471,7 @@ Source: gmail | Thread: 19d095548807fb1a | Labels: Inbox | Priority: None | Send
     *   **No specific deadline** for Sneha's response or the infrastructure change date is stated in this message; however, the action implies urgency prior to the HPB migration event.
 
 
-## [14/24] [Dashboard Report] Retail Media - DD Dashboard | Fri 20 Mar 11:00AM +08
+## [14/23] [Dashboard Report] Retail Media - DD Dashboard | Fri 20 Mar 11:00AM +08
 Source: gmail | Thread: 19d09323e9e029af | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Fri, Mar 20, 2026, 3:03 AM | Last Updated: 2026-03-20T17:10:07.643436+00:00
 **Daily Work Briefing Summary: Retail Media Dashboard Report**
 
@@ -505,7 +505,7 @@ No formal decisions were recorded in this thread. The communication serves as a 
 *   **Labels:** Inbox, Updates.
 
 
-## [15/24] Invitation: Discussion service account key decommission  @ Mon Mar 23, 2026 11am - 11:30am (SGT) (Michael Bui)
+## [15/23] Invitation: Discussion service account key decommission  @ Mon Mar 23, 2026 11am - 11:30am (SGT) (Michael Bui)
 Source: gmail | Thread: 19d09137f07ebb5c | Labels: Inbox | Priority: None | Senders: Himal Hewagamage | Last Date: Fri, Mar 20, 2026, 2:29 AM | Last Updated: 2026-03-20T17:10:18.883330+00:00
 **Daily Work Briefing: Service Account Key Decommission Review**
 
@@ -536,7 +536,7 @@ No final decisions are recorded in this thread yet; the meeting serves as a revi
 *   The email was generated from a Google Calendar subscription; forwarding allows modification of RSVP status by recipients.
 
 
-## [16/24] Selamat Hari Raya Aidilfitri to our Fairmily
+## [16/23] Selamat Hari Raya Aidilfitri to our Fairmily
 Source: gmail | Thread: 19d08f8914b8d860 | Labels: Inbox, Updates | Priority: None | Senders: Internal Comms | Last Date: Fri, Mar 20, 2026, 2:00 AM | Last Updated: 2026-03-20T17:10:28.734150+00:00
 **Daily Work Briefing Summary**
 
@@ -566,7 +566,7 @@ The primary subject of this correspondence is a seasonal greeting and well-wishi
 This communication is informational and celebratory in nature. It requires no immediate operational response or tracking by the executive team. No further action is necessary beyond acknowledging receipt of the festive greeting.
 
 
-## [17/24] New Request for SRA (Advertima)
+## [17/23] New Request for SRA (Advertima)
 Source: gmail | Thread: 19aa4dbce6ed37a8 | Labels: Inbox, ⚠️IMPORTANT | Priority: ⚠️IMPORTANT | Senders: sazali.binm., me | Last Date: Fri, Mar 20, 2026, 1:28 AM | Last Updated: 2026-03-20T17:10:44.216753+00:00
 **Daily Work Briefing: SRA Request for Advertima (Retail Media In-Store)**
 
@@ -597,7 +597,7 @@ The discussion concerns the Security Risk Assessment (SRA) and Proof of Value (P
 *   **Next Week** (Relative to Nov 21, 2025): Proposed call time with Sazali.
 
 
-## [18/24] [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink/marketing-service)
+## [18/23] [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink/marketing-service)
 Source: gmail | Thread: 19d08c677c2fdeb1 | Labels: Inbox, Updates | Priority: None | Senders: Bitbucket | Last Date: Fri, Mar 20, 2026, 1:05 AM | Last Updated: 2026-03-20T17:10:57.914136+00:00
 **Daily Work Briefing: Bitbucket Pipeline Failure**
 
@@ -635,7 +635,7 @@ Automated CI/CD pipeline failure for the `marketing-service` repository on the `
 The CI pipeline for the `marketing-service` repository failed immediately (1 min 1 sec) after the merge of pull request #131 into the `master` branch. The merge introduced changes related to issue DPD-715 regarding the sanitization of configured slots for multiple edge cases. The specific error details are located in the "View this pipeline" link provided in the original Bitbucket notification, which was generated at 1:05 AM on March 20, 2026.
 
 
-## [19/24] [RAW Overdue] Expired Risk Acceptance & Waiver Form
+## [19/23] [RAW Overdue] Expired Risk Acceptance & Waiver Form
 Source: gmail | Thread: 19d08c4164a35423 | Labels: Inbox | Priority: None | Senders: cyberrisk.automation | Last Date: Fri, Mar 20, 2026, 1:02 AM | Last Updated: 2026-03-20T17:11:10.869337+00:00
 **Subject:** Daily Briefing: Expired Risk Acceptance & Waiver (RAW) Alert
 
@@ -671,7 +671,7 @@ No decisions were recorded in this thread; this is an automated reminder initiat
 *   **Sign-off Requirement:** Full name or initials plus an "Approved" or "Signed" comment are mandatory for each sign-off.
 
 
-## [20/24] Michael Bui, you have work due in Jira
+## [20/23] Michael Bui, you have work due in Jira
 Source: gmail | Thread: 19d0892ec3d8332f | Labels: Inbox, Updates | Priority: None | Senders: Jira | Last Date: Fri, Mar 20, 2026, 12:08 AM | Last Updated: 2026-03-20T17:11:20.629795+00:00
 **Daily Work Briefing: Jira Notification Summary**
 
@@ -702,7 +702,7 @@ No decisions were recorded in this thread; the email is a system-generated notif
 *   **System URL/Link:** "View work items" (via jira@ntuclink.atlassian.net).
 
 
-## [21/24] You have no events scheduled today.
+## [21/23] You have no events scheduled today.
 Source: gmail | Thread: 19d07ec0bebbd2b9 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Thu, Mar 19, 2026, 9:06 PM | Last Updated: 2026-03-19T22:03:04.433430+00:00
 **Daily Work Briefing Summary**
 
@@ -731,7 +731,7 @@ Source: gmail | Thread: 19d07ec0bebbd2b9 | Labels: Inbox, Updates | Priority: No
     *   **Message ID**: 19d07ec0bebbd2b9
 
 
-## [22/24] Smarter Spaces winners revealed  Enter Demo Jam to win a Metis Card
+## [22/23] Smarter Spaces winners revealed  Enter Demo Jam to win a Metis Card
 Source: gmail | Thread: 19d06d47e91983ee | Labels: Inbox, Promotions | Priority: None | Senders: Axelera AI | Last Date: Thu, Mar 19, 2026, 4:01 PM | Last Updated: 2026-03-19T22:03:29.716342+00:00
 **Daily Work Briefing: Axelera AI Community Update**
 
@@ -762,7 +762,7 @@ Axelera AI announces the conclusion of the "Smarter Spaces" project challenge an
 *   **Contact/Links:** `community.axelera.ai`; Metis Compute Board build guide link.
 
 
-## [23/24] RMN PRD
+## [23/23] RMN PRD
 Source: gmail | Thread: 19d0675202ba45ee | Labels: Inbox | Priority: None | Senders: Nikhil Grover | Last Date: Thu, Mar 19, 2026, 2:17 PM | Last Updated: 2026-03-19T22:03:47.601933+00:00
 **Daily Work Briefing Summary**
 
@@ -793,42 +793,3 @@ Nikhil Grover has distributed the Product Requirements Document (PRD) for the **
 *   **Document:** RMN PRD
 *   **Topic:** Integration plan
 *   **Email Thread ID:** 19d0675202ba45ee
-
-
-## [24/24] Fwd: Advertima - TTD : Lab test and PMP set up questions
-Source: gmail | Thread: 19cbcd49e2a0bf4b | Labels: Inbox | Priority: None | Senders: Iman, Vivek, Ravi | Last Date: Thu, Mar 19, 2026, 11:19 AM | Last Updated: 2026-03-19T22:04:23.103416+00:00
-**Daily Work Briefing: Advertima TTD Lab Test Success & Strategic Roadmap (Updated)**
-
-**Key Participants**
-*   **Yian Koh (The Trade Desk):** Lead on reporting/data validation. Confirmed test completion; supported live activation strategy.
-*   **Ravi Singh (Place Exchange/Broadsign):** Technical lead. Validated segment support with Advertima; confirmed PX/TTD setup consistency. Expressed readiness for future execution.
-*   **Iman Nahvi (Advertima Co-Founder):** Strategic oversight. Celebrated test completion, defined roadmap for deterministic in-store media, and outlined vision for closed-loop measurement.
-*   **Yasmina Tregan (Advertima, Global Head of Product):** Initiated new segment deal setup requests.
-*   **Vivek Misra (The Trade Desk):** Acknowledged successful test completion.
-*   **Wei Phung & Rajiv Kumar Singh (FairPrice Group):** Clarifying test architecture; live campaign details pending.
-
-**Main Topic/Request**
-Investigation into CPM clearing discrepancies and setup of a new audience segment (`s0a113Gz`) targeting player `tizentest`. Following the resolution of initial inquiries, lab tests have been officially completed and validated by all stakeholders. Ravi Singh confirmed readiness to execute future campaigns and continue pushing the project forward.
-
-**Decisions Made & Status Update**
-*   **Test Completion:** Confirmed on Mar 19 by Vivek Misra, Ravi Singh, and Yasmina Tregan. The transition from testing to live operations is now active.
-*   **Strategic Pivot:** Iman Nahvi emphasized that while current capabilities rely on probabilistic in-store audience segments (a market differentiator), the next phase will integrate visual-spatial intelligence to match deterministic shopper IDs with probabilistic ones. This enables true closed-loop measurement via the new Advertima In-store Session ID.
-*   **Activation Mode:** All activations utilize PMP or PG; Open Exchange remains unsupported.
-*   **Bid Strategy:** Proceed with live campaigns using First Price or Fixed Price deals, with base/max bid set to fixed floor price.
-
-**Pending Actions & Owners**
-*   **Iman Nahvi / Team:** Execute intensified demand generation push to capitalize on promising new campaigns flowing in; prepare for deterministic ID integration and sales uplift measurement.
-*   **Wei Phung:** Provide specific details regarding live campaign and new audience segment for deal mapping to ensure seamless transition.
-*   **Yian Koh:** Monitor live campaigns closely as they go "live"; stand by for any implementation changes (currently unlikely).
-*   **Ravi Singh:** Validate support for new audience segments with the Advertima team; prepare to map new segments against deals once available from Wei Phung.
-
-**Key Dates & Deadlines**
-*   **Mar 18, 2026:** Ravi Singh confirmed handling of new segment validation separately; Yasmina Tregan requested end-to-end test for `s0a113Gz`; Yian Koh recommended live First/Fixed price deals.
-*   **Mar 19, 2026 (1:58 AM):** Vivek Misra confirmed tests completed successfully.
-*   **Mar 19, 2026 (4:35 AM):** Iman Nahvi celebrated the milestone, declared the shift to production ("let's get campaigns flowing"), and outlined the strategic vision for deterministic ID integration.
-*   **Mar 19, 2026 (11:19 AM):** Ravi Singh acknowledged the broader perspective, thanked the team for collaboration on this pioneering project, and confirmed readiness to execute future campaigns.
-
-**Specific References**
-*   **Test Deals:** `advertima_ttd-first-price-test`, `advertima_ttd-fixed-price-test-1`, `advertima_ttd-fixed-price-test-1.5`.
-*   **New Segment/Player:** `s0a113Gz` (>25yo) and player `tizentest`.
-*   **Strategic Focus:** Transition from probabilistic in-store segments to deterministic shopper IDs via visual-spatial intelligence; implementation of Advertima In-store Session ID.

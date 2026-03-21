@@ -1,54 +1,7 @@
 
 
-## [1/30] Shopping Cart Notification
-Source: gchat | Group: space/AAAAsbHANyc | Messages: 18 | Last Activity: 2026-03-21T08:41:02.184000+00:00 | Last Updated: 2026-03-21T08:46:50.447964+00:00
-**Daily Work Briefing: Shopping Cart Notification Alerts (Update)**
-**Date:** March 21, 2026 (Morning)
-**Space:** `Shopping Cart Notification` (Google Chat)
-
-### Key Participants & Roles
-*   **System/Tool:** Datadog App (Automated Monitoring)
-*   **Notification Channel:** `@hangouts-ShoppingCartNotification`
-*   **Ownership Teams:** `dpd-pricing`, `dpd-pricing-cart`.
-
-### Main Topic
-Instability in `frontend-gateway` and `st-cart-prod` persists. Following a critical P99 write spike at 03:01 UTC+8, the system exhibited rapid P90 read jitter (04:44–04:47 UTC+8) and new latency spikes later this morning. The situation has escalated to an **Error Budget Alert**, with 94.99% of the 7-day SLO budget consumed for `slo_pricing_cart_put_product_id_wish_list`.
-
-### Incident Timeline & Actions
-**March 21 Early Morning (Historical Context)**
-*   **03:01 UTC+8:** Wish List Write P99 triggered (6.135s); recovered at 03:08 UTC+8.
-*   **04:44–04:47 UTC+8:** Recurrent P90 read jitter on `get_/api/wish-list/_id` (~1.775s) with rapid trigger/recovery cycles.
-
-**March 21 Mid-Morning (Escalation)**
-*   **06:43–06:44 UTC+8:** **P90 Read Latency Spike.** `get_/api/wish-list/_id` exceeded 1.7s (Value: 1.721s) for Monitor `21245720`. Recovered at 06:44 UTC+8 (Value: 1.186s).
-*   **06:54–07:04 UTC+8:** **Checkout P99 Latency.** `post_/api/checkout` exceeded 3.0s (Value: 3.101s) for Monitor `21245705`. Recovered at 07:04 UTC+8 (Value: 1.496s).
-*   **08:19–08:41 UTC+8:** **Wish List Write/Read Surge.**
-    *   **Trigger:** P99 of `put_/api/product/_id/wish-list` exceeded 6.0s (Value: 8.109s) at 08:19 UTC+8 (Monitor `21245701`). Simultaneously, P90 for the same endpoint exceeded 5.0s (Monitor `21245706`).
-    *   **Recovery:** Both monitors recovered by 08:41 UTC+8 (P99 Value: 3.678s; P90 Value: 2.383s).
-
-### Pending Actions & Ownership
-*   **Owner:** `dpd-pricing-cart` and `dpd-pricing`.
-*   **Critical Risk:** **SLO Error Budget Breach Imminent.** Alert `[P2] Warn` indicates 94.99% consumption of the 7-day budget. Immediate resolution is required to prevent SLO failure.
-*   **Scope:** Investigation must cover:
-    *   Correlate Event IDs `8553331330033966959` (P99 Write) and `8553235019395761858` (P90 Read) with the 08:41 UTC+8 recovery.
-    *   Analyze if `frontend-gateway` resource exhaustion is causing simultaneous degradation across Checkout, Wish List reads, and Wish List writes.
-
-### Decisions Made
-*   **Priority Escalation:** Status shifted from "Investigation" to **"Critical Incident"** due to the P2 Error Budget Alert (94.99% consumed).
-*   **Auto-healing Insufficient:** The pattern of rapid trigger/recovery cycles continues to mask severity, but the cumulative error budget burn now overrides auto-recovery assumptions.
-*   **Focus Shift:** Immediate analysis required for the 08:19 UTC+8 spike on `put_/api/product/_id/wish-list` to determine if a shared dependency failure is driving both P99 write and P90 read degradation.
-
-### Key Dates & Follow-ups
-*   **Critical Window:** Extended activity from March 20, 17:45 UTC through at least March 21, 08:41 UTC.
-*   **Follow-up:** Investigate Event ID `8553353468310960153` (P2 Error Budget) immediately. Correlate the 08:19 UTC+8 write failure with previous read jitter events to identify the root cause before the budget threshold is breached.
-
-**References:**
-*   **Active Monitors:** `21245701` (Write P99), `21245720` (Read P90), `21245705` (Checkout P99), `21245706` (Write P90), `21245790` (SLO Budget).
-*   **Service Tags:** `service:frontend-gateway`, `team:dpd-pricing`.
-
-
-## [2/30] #dd-dpd-engage-alert
-Source: gchat | Group: space/AAAAxwwNw2U | Messages: 16 | Last Activity: 2026-03-21T08:27:16.437000+00:00 | Last Updated: 2026-03-21T08:47:28.766452+00:00
+## [1/30] #dd-dpd-engage-alert
+Source: gchat | Group: space/AAAAxwwNw2U | Messages: 16 | Last Activity: 2026-03-21T14:28:26.107000+00:00 | Last Updated: 2026-03-21T14:34:01.660860+00:00
 # Daily Work Briefing: #dd-dpd-engage-alert Monitoring Activity (March 21 Update)
 
 **Key Participants**
@@ -57,40 +10,241 @@ Source: gchat | Group: space/AAAAxwwNw2U | Messages: 16 | Last Activity: 2026-03
 *   **Relevant Squads/Tribes:** Dynamics, Compass, Journey (`squad:dynamics`, `squad:compass`, `squad:journey`, `tribe:engage`).
 
 **Main Topic**
-Service volatility continued through the morning of March 21 (UTC+8). Following an initial critical degradation window at **06:16 UTC**, a secondary wave of instability emerged starting at **07:33 UTC**. This phase involved recurring error spikes in `gamification-api` and severe MyInfo signup failures, dropping success rates to **85.7%**. Orchid endpoint availability also fluctuated repeatedly between 07:38 and 08:27 UTC.
+Service volatility persisted from the morning of March 21 (UTC+8) well into the afternoon. Following initial instability starting at **06:16 UTC**, a secondary wave emerged at **07:33 UTC**. The incident escalated into prolonged cyclic instability from **08:47 to 10:31 UTC**. Additional anomalies were detected between **13:57 and 14:28 UTC**, affecting `lt-gateway-app`, `frontend-gateway`, and `lyt-p13n-layout`.
 
 **Status Summary & Timeline**
-*   **04:24 – 06:30 UTC (Initial Critical Window):**
-    *   `engage-my-persona-api-go` triggered high error rates (>0.1%) starting at 06:16:05 UTC. MyInfo Signup success dropped to **77.8%** and Verification to **66.7%**.
-    *   Instability persisted with oscillating error rates until recovering briefly around 06:30 UTC.
+*   **06:16 – 10:31 UTC (Initial Prolonged Instability):**
+    *   **Persona API Volatility:** `engage-my-persona-api-go` triggered high error rates (>0.1%) cyclically between 08:50 and 10:30 UTC.
+    *   **Android Linkpoints:** `ef-android` view user linkpoint failures occurred at 08:47 (99.103% success) and 10:21 (99.283%). Owner: **Squad Compass**.
+    *   **MyInfo Latency:** P90 latency spikes (>2s) detected at 09:56 and 10:02.
 
-*   **07:33 – 08:27 UTC (Secondary Volatility Wave):**
-    *   **07:33:16 UTC:** `gamification-api` triggered a high error rate alert (**Metric: 0.312%**). Recovered by 07:43:15 UTC.
-    *   **07:35:03 – 08:25:01 UTC:** `engage-my-persona-api-go` experienced recurring failures. At **07:40:05 UTC**, MyInfo Signup success plummeted to **85.7%**. The service triggered multiple high-error-rate alarms (e.g., at 07:48 and 08:25) with intermittent recoveries.
-    *   **Orchid Fluctuations:** `frontend-gateway` Orchid requests dropped below the 99.9% success threshold on three separate occasions:
-        *   Triggered at 07:38:16 UTC (Metric: 99.856%), Recovered at 07:48:16 UTC.
-        *   Triggered at 07:50:17 UTC (Metric: 99.653%), Recovered at 08:02:16 UTC.
-        *   Triggered again at 08:15:17 UTC (Metric: 99.857%), Recovered at 08:27:16 UTC.
+*   **13:57 – 14:28 UTC (Afternoon Recurrence):**
+    *   **Campaign Request Latency:** `lt-gateway-app` (`get_/rms/me/campaigns`) P90 latency spiked to **1.282s** at **13:57**, recovering by 13:58. Owner: **Squad Dynamics**.
+    *   **Persona API & Gamification Recurrence:** `engage-my-persona-api-go` error rates exceeded 0.1% again at **13:59**, **14:02**, and **14:07** (peaking at 0.108%). Concurrently, `gamification-api` triggered a high error rate alarm at **14:07** (Metric: 0.658%), recovering by 14:17. Owner: **Squad Dynamics**.
+    *   **Frontend Gateway Latency:** `frontend-gateway` (`get_/api/layout/home/v2`) P99 latency exceeded 1.8s at **14:01** (Metric: 1.802), recovering by 14:02. Owner: **Squad Journey**.
+    *   **Scratch Card Claims:** `lyt-p13n-layout` (`post_/v1/scan-door/scratch-cards/claim`) success rates dropped below 99.9% at **14:11** (98.182%) and again at **14:28** (97.561%). Owner: **Squad Journey**.
 
 **Pending Actions & Ownership**
-*   **Investigate Recurring `gamification-api` Errors:** Analyze the spike to **0.312%** error rate at 07:33 UTC and its correlation with subsequent Persona API failures. Owner: **Squad Dynamics**.
-*   **Resolve Persistent MyInfo Signup Degradation:** Address repeated triggers where success rates dropped below 90% (lowest recorded: 85.7%) despite brief recoveries. Focus on `post_/new-myinfo/signup/confirm` logic. Owner: **Squad Dynamics**.
-*   **Stabilize Orchid Gateway Requests:** Investigate cyclical failures in `frontend-gateway` affecting Orchid recommendations (3 distinct events between 07:38 and 08:15). Owner: **Squad Journey**.
+*   **Investigate `engage-my-persona-api-go` Cyclic Errors:** Address recurring high error rate triggers (>0.1%) observed in both the morning and afternoon sessions, including the peak at 14:28 (0.108%). Owner: **Squad Dynamics**.
+*   **Resolve Gamification & Scratch Card Failures:** Investigate `gamification-api` spike (0.658% errors) and recurring success rate drops in scratch card claims (<97.6%) at 14:28. Owner: **Squad Dynamics** / **Squad Journey**.
+*   **Analyze Frontend & Gateway Latency:** Review P90 latency spikes for campaign requests (1.282s) and P99 home page v2 latency (1.802s). Owner: **Squad Dynamics** / **Squad Journey**.
 
 **Decisions Made**
-The incident pattern indicates a shift from isolated latency issues to systemic, cyclic instability across multiple services:
-1.  **Cascading/Correlated Failure:** The reappearance of `gamification-api` errors at 07:33 UTC immediately preceding severe MyInfo signup drops suggests potential shared resource exhaustion or dependency contention similar to the morning's initial collapse.
-2.  **Chronic Instability:** Unlike the continuous degradation seen in the 06:16 window, the 07:33–08:27 period is characterized by a "sawtooth" pattern of failure and partial recovery across Gamification, Persona, and Orchid services, indicating unstable infrastructure or transient load spikes rather than a single code fault.
+The incident pattern has evolved from isolated incidents to a systemic, multi-service "sawtooth" instability spanning over eight hours with two distinct waves:
+1.  **Cross-Service Dependency Failure:** Correlation persists between `engage-my-persona-api-go` errors and failures in `gamification-api`, `lt-gateway-app`, and `lyt-p13n-layout`, suggesting shared backend contention or resource exhaustion affecting both API layers and frontend RUM.
+2.  **Broad Latency Threshold Breach:** Services beyond MyInfo (Campaigns, Home Page V2) are exhibiting critical latency degradation (>1.8s P99), indicating potential infrastructure-wide threading issues distinct from the initial error rate spikes.
 
 **Key Dates & Follow-ups**
-*   **Active Window:** March 21 (UTC+8), with critical escalation at 06:16 UTC and secondary wave from 07:33–08:27 UTC.
+*   **Active Window:** March 21 (UTC+8), with persistent volatility extending through at least **14:28 UTC**.
 *   **Reference Links:**
-    *   Gamification API Monitor #92939290 (Peak error: 0.312%)
-    *   MyInfo Signup Monitor #94562100 (Critical failure: 85.7% success at 07:40 UTC)
-    *   Orchid Gateway Monitor #17448311 (Recurring sub-99.9% alerts)
+    *   Campaign Latency Monitor #17447551 (P90 spike: 1.282s)
+    *   Gamification Error Monitor #92939290 (Peak error: 0.658%)
+    *   Scratch Card Claims Monitor #20382861 (Lowest success: 97.561%)
+    *   Frontend Home Page Monitor #17448327 (P99 spike: 1.802s)
 
 
-## [3/30] [Prod Support] Marketplace
+## [2/30] Shopping Cart Notification
+Source: gchat | Group: space/AAAAsbHANyc | Messages: 32 | Last Activity: 2026-03-21T13:34:31.035000+00:00 | Last Updated: 2026-03-21T14:34:44.390647+00:00
+**Daily Work Briefing: Shopping Cart Notification Alerts (Update)**
+**Date:** March 21, 2026 (Afternoon)
+**Space:** `Shopping Cart Notification` (Google Chat)
+**Message Count:** 250 (Updated from 234)
+
+### Key Participants & Roles
+*   **System/Tool:** Datadog App (Automated Monitoring)
+*   **Notification Channel:** `@hangouts-ShoppingCartNotification`
+*   **Ownership Teams:** `dpd-pricing`, `dpd-pricing-cart`.
+
+### Main Topic
+Instability in `frontend-gateway` and `st-cart-prod` persists. The situation is critical due to recurring latency spikes on Wish List writes/reads and new SLO failure alerts on Cart updates (`post_/cart`). The **P2 Error Budget Alert** remains active, with the 7-day budget now at **70.086%** consumed (updated from 94.99% historical context; current alerts indicate sustained burning).
+
+### Incident Timeline & Actions
+**Morning History (Context)**
+*   *See original summary for 03:01–10:26 UTC+8 activity regarding `frontend-gateway` latency and initial cart spikes.*
+
+**Mid-Day Escalation (New Activity)**
+*   **11:13 UTC:** Monitor `22710472` triggered. Cart success rate dropped to **99.823%** (< 99.9% threshold). Recovered at 11:23 (Value: 100.0%).
+*   **11:16 UTC:** **P2 Error Budget Alert** fired (`slo_pricing_sng_post_cart`).
+*   **12:10–12:18 UTC:** Rapid oscillation on Cart success rate:
+    *   Triggered at 12:10 (Value: 99.9%), Recovered at 12:15 (Value: 99.902%).
+    *   Re-triggered at 12:16 (Value: 99.896%), Recovered at 12:18 (Value: 100.0%).
+*   **13:00 UTC:** `frontend-gateway` P90 latency on `put_/api/product/_id/wish-list` exceeded 5s (Value: 5.336s). Recovered at 13:03.
+*   **13:24–13:34 UTC:** Concurrent Spike Cluster:
+    *   **Wish List Reads:** P99 on `get_/api/wish-list/_id` exceeded 3.1s (Value: 3.15s). Recovered at 13:34.
+    *   **Wish List Writes:** P99 on `put_/api/product/_id/wish-list` exceeded 6s (Value: 7.389s). Recovered at 13:29.
+    *   **Read Jitter:** P90 on `get_...` exceeded 1.7s (Value: 1.775s). Recovered at 13:28.
+
+### Pending Actions & Ownership
+*   **Owner:** `dpd-pricing-cart` and `dpd-pricing`.
+*   **Critical Risk:** **P2 Error Budget Alert** triggered again at 11:16 and 12:13 UTC. The pattern of rapid trigger/recovery cycles (12:10–12:18) confirms auto-healing is insufficient.
+*   **Scope:** Investigation must correlate Event ID `8553648825556588478` (latest 13:34 recovery) with the 11:13 and 12:10 Cart success rate drops. Determine if `st-cart-prod` failures are driving the `frontend-gateway` latency cascade observed at 13:00–13:34.
+
+### Decisions Made
+*   **Priority Escalation:** Status remains **"Critical Incident"**. The recurrence of P2 Error Budget Alerts (Monitor ID `21245796`) and sub-99.9% success rates on Cart updates indicates a systemic degradation, not isolated latency.
+*   **Focus Shift:** Immediate analysis required for the 13:00–13:34 window to identify if shared dependency failures (e.g., database or caching layers) are causing simultaneous degradation across `st-cart-prod`, Wish List writes, and reads.
+
+### Key Dates & Follow-ups
+*   **Critical Window:** Extended activity from March 20, 17:45 UTC through at least March 21, 13:34 UTC.
+*   **Follow-up:** Investigate the latest Event ID `8553648825556588478` and correlate with the Cart SLO failure events (Event IDs `8553509591075940205`, `8553566967588704768`).
+
+**References:**
+*   **Active Monitors:** `22710472` (Cart Success Rate), `21245796` (SLO Error Budget), `21245701/21245706` (Write Latency), `21245720/21245725` (Read Latency).
+*   **Service Tags:** `service:frontend-gateway`, `service:st-cart-prod`, `team:dpd-pricing`.
+
+
+## [3/30] #dd-fpg-watchdog-alert
+Source: gchat | Group: space/AAAAnlKPglA | Messages: 3 | Last Activity: 2026-03-21T13:14:22.650000+00:00 | Last Updated: 2026-03-21T14:35:21.625451+00:00
+# Daily Work Briefing: #dd-fpg-watchdog-alert
+
+### Key Participants & Roles
+*   **Datadog App:** Automated monitoring system.
+*   **@hangouts-dd-dpd-watchdog-alert:** Targeted notification channel.
+*   *Note: Interactions remain purely automated.*
+
+### Main Topic
+The channel tracks **P3 [DPD Watchdog] infrastructure incidents** in Production. Logs show recurring transient issues (excluding `tcp_retrans_jump` and `full_disk_forecast`) aggregated by `story_key` over a 30-minute window.
+
+### Incident Summary & Status Update
+**Historical Resolved Incidents:**
+1.  **Mar 05–17:** 11 distinct events triggered and recovered within the period (e.g., Mar 16 duration ~3h, Mar 17 Afternoon duration ~4h). Full list remains consistent with previous records.
+2.  **Mar 18/19:** Incident `story_key`: `10aaf170-dac2-5fec-97bf-cfd442f8706b`. Triggered Mar 18 22:14 UTC, Recovered Mar 19 ~03:37 UTC. Duration ~5.6 hours. Status: **Resolved**.
+
+**New Incident Resolved:**
+*   **Date:** March 20, 2026.
+*   **Incident ID (`story_key`):** `2787bcd7-d59e-58f0-961a-8f578260cd84`.
+*   **Triggered:** Mar 20, 05:14 UTC.
+*   **Recovered:** Mar 20, 09:37 UTC.
+*   **Status:** **Resolved**.
+*   **Duration:** ~4.4 hours (consistent with historical averages).
+
+**Current Status Update (New):**
+*   **Date/Time:** March 21, 2026, at 13:14 UTC.
+*   **Incident ID (`story_key`):** `41621369-8f6a-58df-b6a8-5e7c89d60ae6`.
+*   **Status:** **[Triggered]** (Active).
+*   **Alert Message:** "Datadog is unable to process your request."
+*   **Severity:** P3.
+
+### Pending Actions & Ownership
+*   **Immediate Action:** Investigate the active trigger on March 21 (`story_key`: `41621369-8f6a-58df-b6a8-5e7c89d60ae6`). The specific error message "Datadog is unable to process your request" suggests a potential ingestion or processing failure within the monitoring system itself, rather than just an infrastructure alert.
+*   **Ownership:** Automated monitoring (`managed_by:datadog-sync`).
+*   **Investigation Note:** Recurrence continues (Mar 17, Mar 18/19, Mar 20, and now Mar 21). The latest trigger occurs shortly after the previous resolution window. The error message requires immediate verification to ensure the watchdog mechanism is functioning correctly.
+
+### Decisions Made
+*   None recorded yet. Pending investigation into the "unable to process" error on March 21.
+
+### Key Dates & Follow-ups
+*   **Latest Event:** March 21, 2026, at 13:14 UTC (New Trigger).
+*   **Monitor ID:** 17447511 (Datadog EU).
+*   **Next Steps:** Monitor for recovery. If the error persists or resolution times exceed averages, escalate to SRE/Platform Engineering to investigate Datadog ingestion pipelines.
+
+### References
+*   **Space URL:** https://chat.google.com/space/AAAAnlKPglA
+*   **Datadog Monitor Link:** [View in Datadog](https://app.datadoghq.eu/monitors/17447511)
+*   **New Incident (Mar 20):** https://app.datadoghq.eu/monitors/17447511?group=story_key%3A2787bcd7-d59e-58f0-961a-8f578260cd84&from_ts=1773982671000&to_ts=1773983871000&event_id=8551695889001406368
+*   **Recovered Link (Mar 20):** https://app.datadoghq.eu/monitors/17447511?group=story_key%3A2787bcd7-d59e-58f0-961a-8f578260cd84&from_ts=1773998451000&to_ts=1773999651000&event_id=8551960641901155525
+*   **Active Incident (Mar 21):** https://app.datadoghq.eu/monitors/17447511?group=story_key%3A41621369-8f6a-58df-b6a8-5e7c89d60ae6&from_ts=1774097871000&to_ts=1774099071000&event_id=8553628622588111192
+
+### Monitor Configuration
+*   **Query:** `events("source:watchdog (story_category:infrastructure -story_type:(tcp_retrans_jump OR full_disk_forecast)) env:(PROD OR production OR prod)").rollup("count").by("story_key").last("30m") > 0`
+
+
+## [4/30] [Prod Support] Ecom FFS Ops
+Source: gchat | Group: space/AAAAde_cYKA | Messages: 2 | Last Activity: 2026-03-21T12:57:19.993000+00:00 | Last Updated: 2026-03-21T14:35:54.510594+00:00
+**Daily Work Briefing: [Prod Support] Ecom FFS Ops**
+
+**Key Participants & Roles**
+*   **Wai Ching Chan / Sampada Shukla:** Operations/Product Leads.
+*   **TL HCBP FFS, TL - HGPT FFS, TLEPT FFS, Harry Akbar Ali Munir:** Store/Regional Team Leads reporting blockers.
+*   **Adrian Yap Chye Soon:** Technical Lead/Support (investigating data anomalies).
+*   **Akash Gupta:** DPD / Fulfilment / On Call (Source of new alert).
+
+**Main Topics**
+1.  **Packlist Discrepancies & Validation:** Ongoing investigation into orders with critical `packed_qty` anomalies (NULL values or massive mismatches vs. `delivered_qty`).
+    *   **New Critical Incident (Mar 21):** Order #22870202 at Hyper Changi (Store ID 45) shows status `RECEIVED` but `packed_quantity` is NULL. Delivery date: Mar 21, 2026, 10:00 AM. Reported by Akash Gupta to Adrian Yap Chye Soon.
+    *   **Re-Confirmed Incident (Mar 21):** Order #22839804 at Hyper Sports Hub (Store ID 17) confirmed with NULL `packed_quantity` despite `RECEIVED` status. Prior noted delivery date was Mar 20; current check confirms ongoing issue. Reported by Harry Akbar Ali Munir.
+    *   **New Critical Incident (Mar 19):** Order #22862214 at Hyper Parkway (Store ID 186) shows `packed_qty` of 13,053,078 vs. `delivered_qty` of 1. Reported by Harry Akbar Ali Munir; flagged for TL HPWP FFS investigation.
+    *   **Historical Context:** Previous Mar 18 incident at Hyper Hougang (Order #22828448) and Mar 14 incident at Orchid Country Club remain reference points.
+
+**Pending Actions & Ownership**
+*   **Critical Data Validation (New - Mar 21):**
+    *   *@Yap Chye Soon Adrian:* Confirm NULL `packed_quantity` for Order #22870202 (Hyper Changi) and re-verify Order #22839804 (Hyper Sports Hub). Immediate response required from Akash Gupta's query.
+    *   **Investigation Required:** Check Order #22862214 (Hyper Parkway) where `packed_qty` vastly exceeds `delivered_qty`.
+*   **Critical Order Validation (Historical):**
+    *   *TL - HGPT FFS:* Continue investigation into Order #22828448 (Hyper Hougang).
+    *   *Adrian Yap Chye Soon:* Review packlist NULL issue for Order #22789688 (Orchid Country Club).
+*   **Order Validation (Packlist Discrepancies):**
+    *   *TL HSPH FFS:* Confirm packlists for Orders #22738044, #22754559, #22780412.
+    *   *TL OCCL2 FFS:* Double-confirm Orders #22756415 and #22752129 (Mar 11).
+    *   *TL HPWP FFS:* Confirm packlist for Order #22786748; investigate discrepancy in Order #22781194.
+*   **System Fixes:**
+    *   *TL HCBP FFS:* Resolve Order #256307387 stuck in "pending" status.
+
+**Decisions Made**
+*   **App Release Strategy:** Picker App 10.4.0 rollout remains on hold pending resolution of critical data anomalies (Mar 18–21). Full rollout contingent on stability post-fixes, specifically addressing the new Mar 21 NULL quantity alerts.
+
+**Key Dates & Deadlines**
+*   **Immediate:** Validation of Mar 21 incidents at Hyper Changi and Hyper Sports Hub; investigation into Mar 19 anomaly at Hyper Parkway.
+*   **Pending:** Re-evaluation of Picker App 10.4.0 release timeline once data integrity is restored across all reported stores (HSPH, HPWP, HC).
+
+**Critical Alerts**
+*   **New Alert (Mar 21, 12:57 PM):** Two critical anomalies detected today. Akash Gupta flagged Order #22870202 (Hyper Changi) with NULL `packed_quantity` and `RECEIVED` status, requesting immediate confirmation from Adrian Yap Chye Soon.
+*   **Ongoing Alert:** Persistent NULL `packed_qty` issues across Hyper Sports Hub and Hyper Changi; massive data mismatch at Hyper Parkway (13M+ packed vs 1 delivered).
+
+
+## [5/30] FPG Everyone - General
+Source: gchat | Group: space/AAAAjDYVcBU | Messages: 3 | Last Activity: 2026-03-21T12:24:53.064000+00:00 | Last Updated: 2026-03-21T14:36:33.526137+00:00
+**Daily Work Briefing: FPG Everyone Chat Summary (Updated)**
+**Date Range:** March 3 – March 21, 2026
+**Source:** Google Chat (FPG Everyone - General)
+
+### Key Participants & Roles
+*   **Maisy Heeng:** Marketing/Product Announcement Lead.
+*   **Mary Pereira:** Mediacorp Microdrama Collaboration Lead.
+*   **Jolene Lim:** Own Brands Team (FairPrice Foaming Hand Soap).
+*   **Eva Wang, Siew Mei Chu, Ng Zhuang Shu:** OB Sensory Team.
+*   **Zhaoyue Touw & Ariel Yap:** Unity/Wellness Campaign Lead.
+*   **Cheryl Tan:** NTUC Women and Family Event Coordinator.
+*   **Kara Pua & Chloe Ong:** Loyalty/Rewards Coordination.
+*   **Pauline Tan:** FPG ADvantage LinkedIn Page Launch Lead.
+*   **Vincent Phua:** Digital & Technology Announcement (Cardless Access).
+*   **Jenna Poh:** Day of Service Coordinator.
+
+### Main Topics
+1.  **Digital Access Rollout:** Schedule confirmed: Live (Facilities/Tech); Mar 16 (C-suite/HR/Finance); Mar 23 (Customer/Marketing/E-Commerce); Mar 30 (Remaining Hub staff). User guide distributed.
+2.  **Media Collaboration – "Bowl of Love":** FairPrice launched a microdrama with Mediacorp featuring fresh pork from Malaysia, focusing on Mdm Gao and porridge.
+    *   **Status:** Episodes 1–5 starring Tyler Ten were previously live. **Final episodes are now officially live** following the March 20 launch. The finale features Tyler Ten, Tasha Low, and Xiang Yun depicting a story of warmth and healing.
+    *   **Platform:** @mediacorp.re.dian TikTok (`https://vt.tiktok.com/ZSusN9b4n/`).
+3.  **Sensory Testing Panels:**
+    *   **Frozen Snacks:** Evaluation conducted on March 18 & 19, 2026 (3 slots). Limited to 40 panelists. Mobile device submission required. Sign-up closed.
+    *   **Chapati:** Screening form remains open.
+    *   **Frozen Processed Food/Nuts:** Session status pending confirmation of overlap with Frozen Snacks dates.
+4.  **Wellness Campaign – World Oral Health Day:** Ariel Yap promoted daily oral care routines ahead of the occasion, extending offers through March 25.
+    *   **New Offer Details:** Up to 50% OFF essentials at Unity stores. Featured: Listerine Mouthwash (2 for $15.95), Colgate Charcoal Toothpaste (2 for $12.95), Colgate Gentle Gum Care Brushes (2 for $14.90), and Oral-B Vitality Electric Toothbrush ($48.10).
+    *   **Offer Link:** https://go.fpg.sg/WOHD
+
+### Pending Actions & Ownership
+*   **Day of Service Registration (Owner: All Staff):** Join the "Willing Hearts Kitchen Crew" on March 27, 2026 (1:00 PM – 5:00 PM) to help prep/pack 3,000 meals. Only 20 spots available. Register at `https://forms.gle/Y4B22gtUmU7SF42V6`.
+*   **Sensory Test Sign-ups (Owner: All Staff):** Chapati screening form remains open (`https://forms.gle/DFYrahZcvhtcoJ9R7`). Frozen Snacks sign-up is closed.
+*   **Wellness Engagement:** Visit Unity stores for deals before Mar 25 or explore https://go.fpg.sg/WOHD.
+*   **Social Engagement:** Watch the "Bowl of Love" finale on TikTok (`https://vt.tiktok.com/ZSusN9b4n/`) to see the conclusion featuring fresh pork from Malaysia.
+
+### Critical Dates & Deadlines
+*   **March 6:** End of Foaming Hand Soap offer (Completed).
+*   **March 8:** International Women's Day Celebration (Completed).
+*   **March 12:** Non-Halal Soup Sensory Evaluation (Completed).
+*   **March 16–30:** Cardless access rollout phases.
+*   **March 17:** Frozen Food/Nuts session (Status: Pending confirmation/overshadowed).
+*   **March 18–19:** Frozen Snacks Sensory Evaluation (Completed).
+*   **March 21:** "Bowl of Love" finale episodes live on TikTok.
+*   **March 22:** FairPrice Walnuts with Cranberries redemption ends.
+*   **March 25:** World Oral Health Day offers expire at Unity stores.
+*   **March 27 (Friday):** Day of Service at Willing Hearts Kitchen.
+
+### Decisions Made
+*   No formal strategic decisions recorded; focus remains on correcting Cardless Access communication, recruiting panelists for Frozen Snacks/Chapati testing, promoting the "Bowl of Love" microdrama collaboration (now complete with finale release), supporting World Oral Health Day initiatives via Unity stores (extended to Mar 25), and coordinating the March 27 Day of Service event.
+
+
+## [6/30] [Prod Support] Marketplace
 Source: gchat | Group: space/AAAAs0DTvmA | Last Activity: 2026-03-21T04:32:34.437000+00:00 | Last Updated: 2026-03-21T05:00:39.207120+00:00
 **Daily Work Briefing: [Prod Support] Marketplace**
 
@@ -139,7 +293,7 @@ The conversation covers critical operational blockers regarding seller onboardin
 *   **December 2025 (Historical Context):** Vendor involved in Amos Lam's query opted out of public holidays.
 
 
-## [4/30] BCRS ECOMM SAP POSTING
+## [7/30] BCRS ECOMM SAP POSTING
 Source: gchat | Group: space/AAQA-ICuJRM | Last Activity: 2026-03-21T04:14:49.285000+00:00 | Last Updated: 2026-03-21T05:01:17.257876+00:00
 **Daily Work Briefing: BCRS ECOMM SAP POSTING & Refunds UAT (Mar 21 Update)**
 
@@ -183,49 +337,7 @@ UAT testing for BCRS E-commerce involving Sales Posting to SAP (F420) and Refund
 **Immediate Follow-up:** Execute the new deposit refund test for order #75570370, provide the two additional test cases to Lai Shu Hui for review, and coordinate the deployment of SAP Finance changes once Deposit UAT is signed off.
 
 
-## [5/30] [Prod Support] Ecom FFS Ops
-Source: gchat | Group: space/AAAAde_cYKA | Last Activity: 2026-03-21T03:35:20.975000+00:00 | Last Updated: 2026-03-21T05:01:50.992725+00:00
-**Daily Work Briefing: [Prod Support] Ecom FFS Ops**
-
-**Key Participants & Roles**
-*   **Wai Ching Chan / Sampada Shukla:** Operations/Product Leads.
-*   **TL HCBP FFS, TL - HGPT FFS, TLEPT FFS, Harry Akbar Ali Munir:** Store/Regional Team Leads reporting blockers.
-*   **Adrian Yap Chye Soon:** Technical Lead/Support (investigating data anomalies).
-
-**Main Topics**
-1.  **Packlist Discrepancies & Validation:** Ongoing investigation into orders with critical `packed_qty` anomalies (NULL values or massive mismatches vs. `delivered_qty`).
-    *   **New Critical Incident (Mar 21):** Order #22870202 at Hyper Changi (Store ID 45) shows status `RECEIVED` but `packed_quantity` is NULL. Delivery date: Mar 21, 10:00 AM. Reported by Harry Akbar Ali Munir to Adrian Yap Chye Soon.
-    *   **Re-Confirmed Incident (Mar 21):** Order #22839804 at Hyper Sports Hub (Store ID 17) confirmed with NULL `packed_quantity` despite `RECEIVED` status. Prior noted delivery date was Mar 20; current check confirms ongoing issue. Reported by Harry Akbar Ali Munir.
-    *   **New Critical Incident (Mar 19):** Order #22862214 at Hyper Parkway (Store ID 186) shows `packed_qty` of 13,053,078 vs. `delivered_qty` of 1. Reported by Harry Akbar Ali Munir; flagged for TL HPWP FFS investigation.
-    *   **Historical Context:** Previous Mar 18 incident at Hyper Hougang (Order #22828448) and Mar 14 incident at Orchid Country Club remain reference points.
-
-**Pending Actions & Ownership**
-*   **Critical Data Validation (New - Mar 21):**
-    *   *@Yap Chye Soon Adrian:* Confirm NULL `packed_quantity` for Order #22870202 (Hyper Changi) and re-verify Order #22839804 (Hyper Sports Hub).
-    *   **Investigation Required:** Check Order #22862214 (Hyper Parkway) where `packed_qty` vastly exceeds `delivered_qty`.
-*   **Critical Order Validation (Historical):**
-    *   *TL - HGPT FFS:* Continue investigation into Order #22828448 (Hyper Hougang).
-    *   *Adrian Yap Chye Soon:* Review packlist NULL issue for Order #22789688 (Orchid Country Club).
-*   **Order Validation (Packlist Discrepancies):**
-    *   *TL HSPH FFS:* Confirm packlists for Orders #22738044, #22754559, #22780412.
-    *   *TL OCCL2 FFS:* Double-confirm Orders #22756415 and #22752129 (Mar 11).
-    *   *TL HPWP FFS:* Confirm packlist for Order #22786748; investigate discrepancy in Order #22781194.
-*   **System Fixes:**
-    *   *TL HCBP FFS:* Resolve Order #256307387 stuck in "pending" status.
-
-**Decisions Made**
-*   **App Release Strategy:** Picker App 10.4.0 rollout remains on hold pending resolution of critical data anomalies (Mar 18–21). Full rollout contingent on stability post-fixes.
-
-**Key Dates & Deadlines**
-*   **Immediate:** Validation of Mar 21 incidents at Hyper Changi and Hyper Sports Hub; investigation into Mar 19 anomaly at Hyper Parkway.
-*   **Pending:** Re-evaluation of Picker App 10.4.0 release timeline once data integrity is restored across all reported stores (HSPH, HPWP, HC).
-
-**Critical Alerts**
-*   **New Alert (Mar 21):** Two critical anomalies detected today: Order #22870202 (NULL quantity, RECEIVED status) and re-confirmation of Order #22839804. Immediate attention required from @Yap Chye Soon Adrian.
-*   **Ongoing Alert:** Persistent NULL `packed_qty` issues across Hyper Sports Hub and Hyper Changi; massive data mismatch at Hyper Parkway (13M+ packed vs 1 delivered).
-
-
-## [6/30] RMN Notification
+## [8/30] RMN Notification
 Source: gchat | Group: space/AAQA85dw4So | Last Activity: 2026-03-21T03:20:45.163000+00:00 | Last Updated: 2026-03-21T05:02:23.239497+00:00
 **Daily Work Briefing: Automated Test Results Summary (RMN Notification)**
 
@@ -264,7 +376,7 @@ The conversation comprises automated notifications from the Collection Runner re
 *   **Next Steps:** Immediate investigation into the `marketing-service` API flakiness and Webhook Bot connectivity issues.
 
 
-## [7/30] #dd-dpd-grocery-alert
+## [9/30] #dd-dpd-grocery-alert
 Source: gchat | Group: space/AAAAtxQjB7c | Last Activity: 2026-03-21T00:59:10.091000+00:00 | Last Updated: 2026-03-21T02:08:46.969727+00:00
 **Daily Work Briefing: #dd-dpd-grocery-alert** (Updated Mar 21, 09:30 UTC)
 
@@ -325,7 +437,7 @@ Source: gchat | Group: space/AAAAtxQjB7c | Last Activity: 2026-03-21T00:59:10.09
 *   Datadog Space: https://chat.google.com/space/AAAAtxQjB7c
 
 
-## [8/30] 📅 Daily summary
+## [10/30] 📅 Daily summary
 Source: gchat | Group: space/AAQAP-kMoqY | Last Activity: 2026-03-21T00:03:09.011000+00:00 | Last Updated: 2026-03-21T02:10:08.620197+00:00
 **Daily Work Briefing Summary (Updated: March 21, 2026)**
 
@@ -371,7 +483,7 @@ Source: gchat | Group: space/AAQAP-kMoqY | Last Activity: 2026-03-21T00:03:09.01
 **Note on New Content:** The latest system notification confirms the inbox remains clear of urgent action items, project themes, meeting updates, and FYI notices as of March 21, 2026. No changes to pending actions or decisions were required based on this update.
 
 
-## [9/30] fairnex-datadog-notification
+## [11/30] fairnex-datadog-notification
 Source: gchat | Group: space/AAAA8dv5lp0 | Last Activity: 2026-03-20T23:01:22.301000+00:00 | Last Updated: 2026-03-21T02:11:15.168399+00:00
 **Daily Work Briefing: Datadog Monitoring Alerts (fairnex-datadog-notification)**
 
@@ -418,7 +530,7 @@ None. The conversation remains purely alert-driven without human discussion.
 Mirakl integration instability has persisted across March 17–20, with a P2 event at 08:42 UTC on March 20 resolving in 5 minutes. A new critical pattern emerged on March 20 at 19:12 UTC where the `fpon-seller-sap-picklist-reporter` service experienced a P1 SAP authentication failure for approximately 5 minutes before automatic recovery. Concurrently, `picklist-pregenerator` exhibited a critical performance anomaly at **23:01:22 UTC on March 20** with a metric value of **3611.453s**. These recurring patterns across Mirakl, SAP, and job processing logic require urgent engineering review to address systemic pipeline issues.
 
 
-## [10/30] BCRS - UAT
+## [12/30] BCRS - UAT
 Source: gchat | Group: space/AAQACfHCuNI | Last Activity: 2026-03-20T13:18:36.396000+00:00 | Last Updated: 2026-03-20T15:41:34.903215+00:00
 **BCRS UAT Daily Briefing Summary (Updated: 20 Mar 2026)**
 
@@ -467,7 +579,7 @@ Progress tracking on OG Returns & Refunds, In-store Pre-order, CS Testing, and F
 *   OG Returns & Refunds development, previously ongoing on 18 Mar, is now confirmed complete as of 20 Mar.
 
 
-## [11/30] BCRS Firefighting Group
+## [13/30] BCRS Firefighting Group
 Source: gchat | Group: space/AAQAgT-LpYY/fN7jxS6RotE | Last Activity: 2026-03-20T12:33:53.106000+00:00 | Last Updated: 2026-03-20T15:42:20.707438+00:00
 **Daily Work Briefing: BCRS Firefighting Group (Updated)**
 
@@ -506,7 +618,7 @@ On 20 March at 12:26 PM, De Wei Tey confirmed that "SnG is ready for testing." P
 *   **Chat URL:** https://chat.google.com/space/AAQAgT-LpYY
 
 
-## [12/30] Project Light Attack and Defence Leads
+## [14/30] Project Light Attack and Defence Leads
 Source: gchat | Group: space/AAQAsFyLso4/YnGsH8DqBGs | Last Activity: 2026-03-20T12:18:50.538000+00:00 | Last Updated: 2026-03-20T15:42:59.594021+00:00
 **Daily Work Briefing: Project Light Attack and Defence Leads**
 
@@ -540,7 +652,7 @@ Discussion regarding the strategic implications of **Project Hive**, specificall
 *   **URL:** https://chat.google.com/space/AAQAsFyLso4
 
 
-## [13/30] Jacob, Alvin, Sathya, Daryl, ...
+## [15/30] Jacob, Alvin, Sathya, Daryl, ...
 Source: gchat | Group: space/AAQARrKvd_Y | Last Activity: 2026-03-20T12:08:15.636000+00:00 | Last Updated: 2026-03-20T15:43:31.419470+00:00
 **Daily Work Briefing: Workshop Catering Coordination**
 
@@ -570,60 +682,7 @@ Collection of dietary restrictions to arrange catering for the upcoming workshop
 The deadline for dietary submissions has passed (or is imminent) at 1:15 PM today. While the DPD leads have been covered provisionally by Gopalakrishna Dhulipati, a specific gap remains regarding Hui Hui's requirements, which Sathya is actively addressing to ensure accurate catering arrangements.
 
 
-## [14/30] FPG Everyone - General
-Source: gchat | Group: space/AAAAjDYVcBU | Last Activity: 2026-03-20T11:20:03.551000+00:00 | Last Updated: 2026-03-20T15:44:34.896849+00:00
-**Daily Work Briefing: FPG Everyone Chat Summary (Updated)**
-**Date Range:** March 3 – March 20, 2026
-**Source:** Google Chat (FPG Everyone - General)
-
-### Key Participants & Roles
-*   **Maisy Heeng:** Marketing/Product Announcement Lead.
-*   **Mary Pereira:** Mediacorp Microdrama Collaboration Lead.
-*   **Jolene Lim:** Own Brands Team (FairPrice Foaming Hand Soap).
-*   **Eva Wang, Siew Mei Chu, Ng Zhuang Shu:** OB Sensory Team.
-*   **Zhaoyue Touw & Ariel Yap:** Unity/Wellness Campaign Lead.
-*   **Cheryl Tan:** NTUC Women and Family Event Coordinator.
-*   **Kara Pua & Chloe Ong:** Loyalty/Rewards Coordination.
-*   **Pauline Tan:** FPG ADvantage LinkedIn Page Launch Lead.
-*   **Vincent Phua:** Digital & Technology Announcement (Cardless Access).
-*   **Jenna Poh:** Day of Service Coordinator.
-
-### Main Topics
-1.  **Digital Access Rollout:** Schedule confirmed: Live (Facilities/Tech); Mar 16 (C-suite/HR/Finance); Mar 23 (Customer/Marketing/E-Commerce); Mar 30 (Remaining Hub staff). User guide distributed.
-2.  **Media Collaboration – "Bowl of Love":** FairPrice launched a microdrama with Mediacorp featuring fresh pork from Malaysia, focusing on Mdm Gao and porridge.
-    *   **Status:** Episodes 1–5 starring Tyler Ten are now live on TikTok. A second half drops Mar 21.
-    *   **Platform:** @mediacorp.re.dian TikTok (`https://vt.tiktok.com/ZSug86yv1/`).
-3.  **Sensory Testing Panels:**
-    *   **Frozen Snacks:** Evaluation conducted on March 18 & 19, 2026 (3 slots). Limited to 40 panelists. Mobile device submission required.
-    *   **Chapati:** Screening form remains open.
-    *   **Frozen Processed Food/Nuts:** Session status pending confirmation of overlap with Frozen Snacks dates.
-4.  **Wellness Campaign – World Oral Health Day:** Ariel Yap promoted daily oral care routines ahead of the occasion, extending offers through March 25.
-    *   **New Offer Details:** Up to 50% OFF essentials at Unity stores. Featured: Listerine Mouthwash (2 for $15.95), Colgate Charcoal Toothpaste (2 for $12.95), Colgate Gentle Gum Care Brushes (2 for $14.90), and Oral-B Vitality Electric Toothbrush ($48.10).
-    *   **Offer Link:** https://go.fpg.sg/WOHD
-
-### Pending Actions & Ownership
-*   **Day of Service Registration (Owner: All Staff):** Join the "Willing Hearts Kitchen Crew" on March 27, 2026 (1:00 PM – 5:00 PM) to help prep/pack 3,000 meals. Only 20 spots available. Register at `https://forms.gle/Y4B22gtUmU7SF42V6`.
-*   **Sensory Test Sign-ups (Owner: All Staff):** Chapati screening form remains open (`https://forms.gle/DFYrahZcvhtcoJ9R7`). Frozen Snacks sign-up is now closed following the March 18–19 sessions.
-*   **Wellness Engagement:** Visit Unity stores for deals before Mar 25 or explore https://go.fpg.sg/WOHD.
-*   **Social Engagement:** Watch "Bowl of Love" episodes on TikTok and spot fresh pork from Malaysia in the storyline.
-
-### Critical Dates & Deadlines
-*   **March 6:** End of Foaming Hand Soap offer (Completed).
-*   **March 8:** International Women's Day Celebration (Completed).
-*   **March 12:** Non-Halal Soup Sensory Evaluation (Completed).
-*   **March 16–30:** Cardless access rollout phases.
-*   **March 17:** Frozen Food/Nuts session (Status: Pending confirmation/overshadowed).
-*   **March 18–19:** Frozen Snacks Sensory Evaluation (Completed).
-*   **March 20–21:** "Bowl of Love" episodes drop on TikTok.
-*   **March 22:** FairPrice Walnuts with Cranberries redemption ends.
-*   **March 25:** World Oral Health Day offers expire at Unity stores.
-*   **March 27 (Friday):** Day of Service at Willing Hearts Kitchen.
-
-### Decisions Made
-*   No formal strategic decisions recorded; focus remains on correcting Cardless Access communication, recruiting panelists for Frozen Snacks/Chapati testing, promoting the "Bowl of Love" microdrama collaboration, supporting World Oral Health Day initiatives via Unity stores (extended to Mar 25), and coordinating the March 27 Day of Service event.
-
-
-## [15/30] QE <-> All Tribes
+## [16/30] QE <-> All Tribes
 Source: gchat | Group: space/AAAAS7vPcKs | Last Activity: 2026-03-20T11:05:52.385000+00:00 | Last Updated: 2026-03-20T15:45:39.538220+00:00
 **Daily Work Briefing: QE <-> All Tribes** (Updated)
 
@@ -664,56 +723,6 @@ Source: gchat | Group: space/AAAAS7vPcKs | Last Activity: 2026-03-20T11:05:52.38
 *   **17 Mar:** UI defects reported on cart page (06:23–06:33 AM).
 *   **18 Mar:** LinkPoints fix ETA required; Postal code 098619 issue flagged.
 *   **20 Mar (Today):** Critical Express delivery bug flagged by Komal Ashokkumar Jain at 11:05 UTC.
-
-
-## [16/30] #dd-fpg-watchdog-alert
-Source: gchat | Group: space/AAAAnlKPglA | Last Activity: 2026-03-20T09:37:23.221000+00:00 | Last Updated: 2026-03-20T15:46:36.885773+00:00
-# Daily Work Briefing: #dd-fpg-watchdog-alert
-
-### Key Participants & Roles
-*   **Datadog App:** Automated monitoring system.
-*   **@hangouts-dd-dpd-watchdog-alert:** Targeted notification channel.
-*   *Note: Interactions remain purely automated.*
-
-### Main Topic
-The channel tracks **P3 [DPD Watchdog] infrastructure incidents** in Production. Logs show recurring transient issues (excluding `tcp_retrans_jump` and `full_disk_forecast`) aggregated by `story_key` over a 30-minute window.
-
-### Incident Summary & Status Update
-**Historical Resolved Incidents:**
-1.  **Mar 05–17:** 11 distinct events triggered and recovered within the period (e.g., Mar 16 duration ~3h, Mar 17 Afternoon duration ~4h). Full list remains consistent with previous records.
-2.  **Mar 18/19:** Incident `story_key`: `10aaf170-dac2-5fec-97bf-cfd442f8706b`. Triggered Mar 18 22:14 UTC, Recovered Mar 19 ~03:37 UTC. Duration ~5.6 hours. Status: **Resolved**.
-
-**New Incident Resolved:**
-*   **Date:** March 20, 2026.
-*   **Incident ID (`story_key`):** `2787bcd7-d59e-58f0-961a-8f578260cd84`.
-*   **Triggered:** Mar 20, 05:14 UTC.
-*   **Recovered:** Mar 20, 09:37 UTC.
-*   **Status:** **Resolved**.
-*   **Duration:** ~4.4 hours (consistent with historical averages).
-
-**Current Status:** All alerts resolved. No active incidents pending recovery. The monitoring system successfully detected and cleared the incident on March 20.
-
-### Pending Actions & Ownership
-*   **Immediate Action:** None required; the Mar 20 incident has fully recovered.
-*   **Ownership:** Automated monitoring (`managed_by:datadog-sync`).
-*   **Investigation Note:** Frequency of triggers remains high (consecutive days: Mar 17, Mar 18/19, and Mar 20). While the latest duration (~4.4h) is stable compared to the ~5.6h spike on Mar 18/19, the recurrence warrants continued observation without immediate escalation unless resolution times degrade further.
-
-### Decisions Made
-*   None recorded. The conversation reflects system state transitions only.
-
-### Key Dates & Follow-ups
-*   **Latest Event:** March 20, 2026, at ~09:37 UTC (Recovery confirmed).
-*   **Monitor ID:** 17447511 (Datadog EU).
-*   **Next Steps:** Maintain routine monitoring. No escalation required for the resolved incident unless frequency increases or resolution times consistently exceed averages.
-
-### References
-*   **Space URL:** https://chat.google.com/space/AAAAnlKPglA
-*   **Datadog Monitor Link:** [View in Datadog](https://app.datadoghq.eu/monitors/17447511)
-*   **New Incident (Mar 20):** https://app.datadoghq.eu/monitors/17447511?group=story_key%3A2787bcd7-d59e-58f0-961a-8f578260cd84&from_ts=1773982671000&to_ts=1773983871000&event_id=8551695889001406368
-*   **Recovery Link (Mar 20):** https://app.datadoghq.eu/monitors/17447511?group=story_key%3A2787bcd7-d59e-58f0-961a-8f578260cd84&from_ts=1773998451000&to_ts=1773999651000&event_id=8551960641901155525
-
-### Monitor Configuration
-*   **Query:** `events("source:watchdog (story_category:infrastructure -story_type:(tcp_retrans_jump OR full_disk_forecast)) env:(PROD OR production OR prod)").rollup("count").by("story_key").last("30m") > 0`
 
 
 ## [17/30] Ching Hui Ng
