@@ -1,14 +1,8 @@
-[gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:4652) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
-(Use `node --trace-deprecation ...` to show where the warning was created)
-[Fetching 1/1] [Dashboard Report] Retail Media - DD Dashboard | Sun 22 Mar 11:00AM +08 (summarization pending)
-[Fetched 1/1] [Dashboard Report] Retail Media - DD Dashboard | Sun 22 Mar  - queued for summarization (pipeline running)
-
-============================================================
-[gmail_reader] ALL DONE - output file is ready for use.
-Fetched: 1 thread(s) | total scanned: 43
-============================================================
-
+[2026-03-22T14:01:01+0000] [Summarized 29/30] [Smarter Spaces winners revealed  Enter D]: using cached summary
+[2026-03-22T14:01:01+0000] [Summarized 30/30] [RMN PRD]: using cached summary
+[2026-03-22T14:01:01+0000] ============================================================
+[2026-03-22T14:01:01+0000] STATUS: COMPLETED - Gmail Reader pipeline finished successfully (30 threads)
+[2026-03-22T14:01:01+0000] ============================================================
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
 
 [SYSTEM: Returning control to agent after 300 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
