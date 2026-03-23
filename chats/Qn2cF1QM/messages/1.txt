@@ -1,16 +1,18 @@
 [gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:5088) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:5168) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[Fetching 1/3] [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink/marketing-service) (summarization pending)
-[Fetched 1/3] [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink - queued for summarization (pipeline running)
-[Fetching 2/3] [RAW Overdue] Expired Risk Acceptance & Waiver Form (summarization pending)
-[Fetched 2/3] [RAW Overdue] Expired Risk Acceptance & Waiver Form - queued for summarization (pipeline running)
-[Fetching 3/3] Michael Bui, you have work due in Jira (summarization pending)
-[Fetched 3/3] Michael Bui, you have work due in Jira - queued for summarization (pipeline running)
+[Fetching 1/4] Accepted: ACNxOsmos: Daily Cadence @ Mon Mar 23, 2026 12:30pm - 1pm (SGT) (michael.bui@fairpricegroup.sg) (summarization pending)
+[Fetched 1/4] Accepted: ACNxOsmos: Daily Cadence @ Mon Mar 23, 2026 12:30p - queued for summarization (pipeline running)
+[Fetching 2/4] Invitation: RMN integration planning @ Wed Mar 25, 2026 3pm - 4:30pm (SGT) (Michael Bui) (summarization pending)
+[Fetched 2/4] Invitation: RMN integration planning @ Wed Mar 25, 2026 3pm  - queued for summarization (pipeline running)
+[Fetching 3/4] Declined: ACNxOsmos: Daily Cadence @ Mon Mar 23, 2026 12:30pm - 1pm (SGT) (Michael Bui) (summarization pending)
+[Fetched 3/4] Declined: ACNxOsmos: Daily Cadence @ Mon Mar 23, 2026 12:30p - queued for summarization (pipeline running)
+[Fetching 4/4] [Dashboard Report] Retail Media - DD Dashboard | Mon 23 Mar 11:00AM +08 (summarization pending)
+[Fetched 4/4] [Dashboard Report] Retail Media - DD Dashboard | Mon 23 Mar  - queued for summarization (pipeline running)
 
 ============================================================
 [gmail_reader] ALL DONE - output file is ready for use.
-Fetched: 3 thread(s) | total scanned: 78
+Fetched: 4 thread(s) | total scanned: 56
 ============================================================
 
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
