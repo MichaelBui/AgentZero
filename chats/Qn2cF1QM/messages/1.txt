@@ -1,6 +1,60 @@
 [gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:5315) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:5962) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
+[Fetching 1/24] Updated invitation: Postmortem: (P1) Picking list emails not being sent to so... @ Tue Mar 24, 2026 2:30pm - 3:15pm (SGT) (Michael Bui) (summarization pending)
+[Fetched 1/24] Updated invitation: Postmortem: (P1) Picking list emails not - queued for summarization (pipeline running)
+[Fetching 2/24] OSMOS PROD Destination Function Overage (summarization pending)
+[Fetched 2/24] OSMOS PROD Destination Function Overage - queued for summarization (pipeline running)
+[Fetching 3/24] New Request for SRA (Advertima) [⚠️IMPORTANT] (summarization pending)
+[Fetched 3/24] New Request for SRA (Advertima) - queued for summarization (pipeline running)
+[Fetching 4/24] Invitation: Postmortem: (P1) Picking list emails not being sent to so... @ Tue Mar 24, 2026 2:30pm - 3:15pm (SGT) (Michael Bui) (summarization pending)
+[Fetched 4/24] Invitation: Postmortem: (P1) Picking list emails not being s - queued for summarization (pipeline running)
+[Fetching 5/24] We’ve updated our Terms of Service (summarization pending)
+[Fetched 5/24] We’ve updated our Terms of Service - queued for summarization (pipeline running)
+[Fetching 6/24] New assignment: "KPMG FY 2025 Audit - UAR Self-Review" (summarization pending)
+[Fetched 6/24] New assignment: "KPMG FY 2025 Audit - UAR Self-Review" - queued for summarization (pipeline running)
+[Fetching 7/24] GCP Service Account Key clean UP (summarization pending)
+[Fetched 7/24] GCP Service Account Key clean UP - queued for summarization (pipeline running)
+[Fetching 8/24] [VidiCenter] Weekly Performance Report (summarization pending)
+[Fetched 8/24] [VidiCenter] Weekly Performance Report - queued for summarization (pipeline running)
+[Fetching 9/24] [Dashboard Report] Retail Media - DD Dashboard | Tue 24 Mar 11:00AM +08 (summarization pending)
+[Fetched 9/24] [Dashboard Report] Retail Media - DD Dashboard | Tue 24 Mar  - queued for summarization (pipeline running)
+[Fetching 10/24] NTUC Enterprise-2025 Web Service Penetration Testing for RMN APIs [⚠️IMPORTANT] (summarization pending)
+[Fetched 10/24] NTUC Enterprise-2025 Web Service Penetration Testing for RMN - queued for summarization (pipeline running)
+[Fetching 11/24] Invitation: [Postmortem] 300126 - P1 - Some customers charged full price @ Thu Mar 26, 2026 3pm - 4pm (SGT) (Michael Bui) (summarization pending)
+[Fetched 11/24] NTUC Enterprise-2025 Web Service Penetration Testing for RMN - queued for summarization (pipeline running)
+[Fetching 12/24] [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink/marketing-service) (summarization pending)
+[Fetched 12/24] [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink - queued for summarization (pipeline running)
+[Fetching 13/24] Declined: RMN integration planning @ Wed Mar 25, 2026 3pm - 4:30pm (SGT) (Nikhil Grover) (summarization pending)
+[Fetched 13/24] Declined: RMN integration planning @ Wed Mar 25, 2026 3pm -  - queued for summarization (pipeline running)
+[Fetching 14/24] Declined: [Placeholder] Discussion with Accenture on RMN @ Thu Mar 26, 2026 2pm - 3pm (SGT) (Miguel Ho Xian Da) (summarization pending)
+[Fetched 14/24] Declined: [Placeholder] Discussion with Accenture on RMN @ T - queued for summarization (pipeline running)
+[Fetching 15/24] Re: Retail Media [⚠️IMPORTANT] (summarization pending)
+[Fetched 15/24] Re: Retail Media - queued for summarization (pipeline running)
+[Fetching 16/24] Declined: Offer Service Monitors Improvement @ Wed Mar 25, 2026 14:00 - 15:00 (SGT) (Zaw Myo Htet) (summarization pending)
+[Fetched 16/24] Declined: Offer Service Monitors Improvement @ Wed Mar 25, 2 - queued for summarization (pipeline running)
+[Fetching 17/24] Invitation: [Placeholder] Discussion with Accenture on RMN @ Thu Mar 26, 2026 2pm - 3pm (SGT) (Michael Bui) (summarization pending)
+[Fetched 17/24] Invitation: [Placeholder] Discussion with Accenture on RMN @ - queued for summarization (pipeline running)
+[Fetching 18/24] Michael Bui, you have work due in Jira (summarization pending)
+[Fetched 18/24] Michael Bui, you have work due in Jira - queued for summarization (pipeline running)
+[Fetching 19/24] Michael, get inside Google’s 2026 security blueprint (summarization pending)
+[Fetched 19/24] Michael, get inside Google’s 2026 security blueprint - queued for summarization (pipeline running)
+[Fetching 20/24] You have no events scheduled today. (summarization pending)
+[Fetched 20/24] You have no events scheduled today. - queued for summarization (pipeline running)
+[Fetching 21/24] Presentation shared with you: "Project Light: Mobilization & Planning Workshop" (summarization pending)
+[Fetched 21/24] Presentation shared with you: "Project Light: Mobilization & - queued for summarization (pipeline running)
+[Fetching 22/24] Recurring concerns regarding the quality and effectiveness of the OSMOS support [⚠️IMPORTANT] (summarization pending)
+[Fetch failed 22/24] Thread 19b4f4c3f38613b3 - skipped after retry
+[Fetching 23/24] [##107672##] Your reply has been received. (summarization pending)
+[Fetched 23/24] [##107672##] Your reply has been received. - queued for summarization (pipeline running)
+[Fetching 24/24] New reply received for this ticket on which you are CC'd (summarization pending)
+[Fetched 24/24] New reply received for this ticket on which you are CC'd - queued for summarization (pipeline running)
+
+============================================================
+[gmail_reader] ALL DONE - output file is ready for use.
+Fetched: 23 thread(s) | total scanned: 37
+============================================================
+
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
 
 [SYSTEM: Returning control to agent after 300 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
