@@ -1,6 +1,585 @@
 
 
-## [1/51] Declined: BCRS Redelivery - Grooming Session @ Wed Mar 25, 2026 11am - 12pm (SGT) (Prajney Sribhashyam)
+## [1/60] NTUC Enterprise-2025 Web Service Penetration Testing for RMN APIs
+Source: gmail | Thread: 19abde329ef69594 | Labels: Inbox, ⚠️IMPORTANT | Priority: ⚠️IMPORTANT | Senders: Ong, Jazz, me | Last Date: Wed, Mar 25, 2026, 1:59 AM | Last Updated: 2026-03-25T02:02:08.447584+00:00
+**Subject:** Daily Briefing: NTUC Enterprise-2025 Web Service Penetration Testing for RMN APIs (Final Report Delivered & Client Confirmation)
+
+**Key Participants & Roles:**
+*   **Michael Bui (FairPrice Group):** Client/Project Owner. Received final results on March 24, 2026; confirmed remediation status via email on March 25, 2026; requested Jazz Tong to handle document acknowledgement.
+*   **Ong Xiao Cong (LGMS):** Vendor Lead. Executed retest and delivered the final report via secure link on March 24, 2026.
+*   **Jazz Tong (FairPrice Group):** Internal Stakeholder. Requested by Michael Bui to assist with document acknowledgement and involved in final approvals.
+
+**Main Topic/Request:**
+Delivery of post-assessment results for RMN APIs following retest on March 16, 2026. On March 25, 2026, Michael Bui provided a summary confirming the resolution status of all findings and requested assistance with document acknowledgement.
+
+**Decisions Made:**
+*   **Testing Scope:** Confirmed for UAT only; permissions granted for Create/Update/Delete in UAT.
+*   **CORS Finding:** Deprioritized as "Informational" due to low ROI (time-consuming to evaluate impact on dependent services); LGMS marked this as the sole remaining item.
+*   **Retest Execution:** Completed successfully by Ong Xiao Cong (LGMS) on March 16, 2026 (1:30 PM – 6:30 PM SGT).
+
+**Pending Actions & Ownership:**
+*   **[Owner: Jazz Tong / FairPrice Group]** Assist Michael Bui with the document acknowledgement process upon request.
+*   **[Owner: Michael Bui / FairPrice Group]** Facilitate the submission of the signed Milestone Acknowledgement (MA) form to LGMS for internal audit. *Note: Link expires on March 31, 2026.*
+*   **[Owner: Ong Xiao Cong / LGMS]** Monitor receipt of the signed MA form to proceed with final project closure.
+
+**Key Dates & Deadlines:**
+*   **Nov 21, 2025:** Order Confirmation Milestone.
+*   **Dec 2–8, 2025:** Primary Penetration Testing Window.
+*   **Jan 15, 2026:** Initial PDF Report shared (Link expired Jan 22).
+*   **Feb 5, 2026:** Milestone Acknowledgement form requested.
+*   **Mar 5, 2026:** Quick retest of TLS/SSL findings confirmed resolved by LGMS.
+*   **Mar 16, 2026 (Mon):** Retest Window (1:30 PM – 6:30 PM SGT) - **Completed.**
+*   **Mar 20, 2026 (Fri), 9:07 AM:** Michael Bui requests updated results.
+*   **Mar 24, 2026 (Tue), 10:52 AM:** Ong Xiao Cong (LGMS) delivered the final report via secure link.
+*   **Mar 25, 2026 (Wed), 1:59 AM:** Michael Bui confirmed zero critical/high findings and resolved medium/low issues; CORS remains as informational.
+*   **Mar 31, 2026:** Link expiration deadline for accessing the deliverables.
+
+**Status Summary:**
+The retest execution concluded successfully on March 16, 2026. On March 24, 2026, LGMS delivered the final report via a secure link (https://lgms.online/s/Dpaizwt5cwaZTZW). Following this delivery, Michael Bui provided a detailed breakdown on **March 25, 2026**, confirming:
+*   **No Critical or High severity findings.**
+*   **All Medium and Low severity findings resolved.**
+*   **Almost all Informational findings resolved**, with the exception of one CORS item (deemed low ROI).
+
+The project remains in the **Post-Delivery Review** phase. The secure link is password-protected and expires on March 31, 2026. While Michael Bui has confirmed the technical results, the administrative closure requires the submission of the signed Milestone Acknowledgement (MA) form to LGMS. Jazz Tong has been asked by Michael Bui to assist with this acknowledgement process immediately upon receipt of the document.
+
+
+## [2/60] [Action Required] Service Account Key Expiring, Renewal Required - 38b2c9beefaee7dedb82b53341418b3ea761fc9e
+Source: gmail | Thread: 19d22b20a5d37418 | Labels: Inbox, Forums | Priority: None | Senders: noreply-sre | Last Date: Wed, Mar 25, 2026, 1:53 AM | Last Updated: 2026-03-25T02:02:23.157645+00:00
+**Daily Work Briefing: Service Account Key Expiration Alert**
+
+**1. Key Participants & Roles**
+*   **Sender:** `noreply-sre@ntucenterprise.sg` (SRE Team/System Notification). Represents the infrastructure authority managing IAM keys.
+*   **Recipient:** Owner of service account `fponprd/seller-analytics-service@fponprd.iam.gserviceaccount.com`. Specific individual name is not provided in the thread; ownership rests with the application team responsible for this service account.
+
+**2. Main Topic/Request**
+The SRE team notified that a specific Service Account Key (ID: `38b2c9beefaee7dedb82b53341418b3ea761fc9e`) associated with the 'fponprd/seller-analytics-service' is scheduled to expire. The objective is to prevent authentication failures and service disruption by rotating this key before the expiration date.
+
+**3. Pending Actions & Ownership**
+*   **Action:** Await receipt of a new service account key via email (stated to be sent "shortly" after the notification).
+*   **Action:** Download the newly issued key.
+*   **Action:** Replace the existing key (`38b2c9beefaee7dedb82b53341418b3ea761fc9e`) in the target system with the new key.
+*   **Alternative Action:** If the key is determined to be stale, raise an SRE request via `noreply-sre@ntucenterprise.sg` to permanently remove it.
+*   **Owner:** The application team/service owner responsible for 'fponprd/seller-analytics-service'.
+
+**4. Decisions Made**
+No decisions were made within this thread; this is a system-generated notification requiring external action by the recipient.
+
+**5. Key Dates & Deadlines**
+*   **Notification Date:** March 25, 2026, at 1:53 AM.
+*   **Expiration Deadline:** April 24, 2026. The key becomes invalid and unusable for authentication after this date.
+*   **Follow-up:** Immediate attention required upon receipt of the new key email to ensure completion prior to April 24, 2026.
+
+
+## [3/60] Updated invitation: Offer Service Monitors Improvement @ Wed Apr 1, 2026 2pm - 3pm (SGT) (Michael Bui)
+Source: gmail | Thread: 19d22ae20a7db158 | Labels: Inbox | Priority: None | Senders: Zaw Myo Htet | Last Date: Wed, Mar 25, 2026, 1:48 AM | Last Updated: 2026-03-25T02:02:37.763266+00:00
+**Daily Work Briefing Update: Service Monitors Improvement Meeting**
+
+**Meeting Overview**
+*   **Topic:** Offer Service Monitors Improvement.
+*   **New Date & Time:** Wednesday, April 1, 2026, from 2:00 PM to 3:00 PM (Singapore Standard Time).
+    *   *Note:* This is a reschedule from the original date of March 25, 2026.
+*   **Location:** FairPrice Hub-11-L11 Macchiato (8) [Google Meet].
+*   **Join Link:** meet.google.com/jdg-weyk-wzy
+*   **Phone Access:** (US) +1 843-790-4650 | PIN: 277052911
+
+**Key Participants & Roles**
+*   **Organizer:** Zaw Myo Htet (<zawmyo.htet@fairpricegroup.sg>).
+*   **Confirmed Attendees (Required):** Wai Ching Chan, Tayza Htoon, Yangyu Wang, Sundy Yaputra, Michael Bui (<michael.bui@fairpricegroup.sg>), Dany Jacob.
+*   **Optional Attendees:** Tiong Siong Tee, Daryl Ng.
+
+**Status Summary**
+*   **Decisions Made:** The meeting time and physical location have been officially updated by the organizer. All participants were notified via calendar invitation update on March 25, 2026.
+*   **Pending Actions:** No specific action items or deliverables are listed in this notification thread. Participants are expected to attend the rescheduled session.
+    *   *Action Required:* Attendees should verify their availability for the new date (April 1) and utilize "Yes/No/Maybe" options if a response is required by the organizer.
+
+**Key Dates & Deadlines**
+*   **Meeting Date:** April 1, 2026.
+*   **Notification Sent:** March 25, 2026 (approx. 7 days prior to rescheduled meeting).
+
+**Reference Details**
+*   **Last Message ID:** 19d22ae20a7db158.
+*   **Label Category:** Inbox.
+
+
+## [4/60] [JIRA] Prajney Sribhashyam mentioned you on DPD-225
+Source: gmail | Thread: 19d22a4531caf1c8 | Labels: Inbox, Updates | Priority: None | Senders: Prajney Sribhashyam. | Last Date: Wed, Mar 25, 2026, 1:38 AM | Last Updated: 2026-03-25T02:02:49.157175+00:00
+**Daily Briefing Summary: DPD-225 Deployment Update**
+
+**Key Participants & Roles**
+*   **Prajney Sribhashyam:** Initiator/Project Lead (Jira). Announced backend deployment sign-off and shared documentation.
+*   **Stakeholders Notified:** Daryl Ng, Andin Eswarlal Rajesh, Sneha Parab, Michael Bui, Shiva Kumar Yalagunda Bas, Dany Jacob, Gopalakrishna Dhulipati, Alvin Choo.
+
+**Main Topic/Request**
+Notification regarding the completion of backend deployment for Jira work item **DPD-225**: "[BCRS] Inform customers on BCRS deposit during Order Placement & Returns/Refunds Process." Prajney is circulating sign-off documents and requesting confirmation of any concerns before proceeding to production testing.
+
+**Decisions Made**
+*   **Backend Deployment Sign-off:** Formal approval has been granted for the backend deployment phase of DPD-225.
+
+**Pending Actions & Owners**
+*   **Review Documents:** Stakeholders must review attached deployment documentation to identify any concerns. (Owner: All notified stakeholders).
+*   **Deployment & Smoke Test Plan:** Prajney Sribhashyam is scheduled to share the specific plan for production deployment and smoke testing shortly.
+
+**Key Dates, Deadlines, & References**
+*   **Date of Notification:** March 25, 2026 (1:38 AM / 9:38 AM Singapore Time).
+*   **Work Item ID:** DPD-225.
+*   **Reference Documents Shared:**
+    *   Deployment Plan/Docs: https://docs.google.com/document/d/1ir3vznLEk5t7Uvsr7_yQGc2lDD8e8WT7Al4RvOrOAcc/edit?usp=drivesdk
+    *   Process Docs: https://docs.google.com/document/d/18TstqRb5EeIfrW57slnxuIQRqVbxpLHt2OgSp2UoQWo/edit?usp=drivesdk
+
+
+## [5/60] [JIRA] Prajney Sribhashyam mentioned you on OMNI-1294
+Source: gmail | Thread: 19d22a2ec30349da | Labels: Inbox, Updates | Priority: None | Senders: Prajney Sribhashyam. | Last Date: Wed, Mar 25, 2026, 1:36 AM | Last Updated: 2026-03-25T02:03:02.003880+00:00
+**Daily Work Briefing: OMNI-1294 Update**
+
+**Key Participants & Roles**
+*   **Prajney Sribhashyam:** Initiator/Project Lead; announced sign-off and shared documentation.
+*   **Daryl Ng, Sneha Parab, Andin Eswarlal Rajesh, Michael Bui, Gopalakrishna Dhulipati, Alvin Choo:** Primary recipients notified for backend deployment review.
+*   **Koklin Gan, Danielle Lee, Qiuyan Tian, Sathya Murthy Karthik:** CC'd stakeholders monitoring the update.
+
+**Main Topic & Decisions**
+*   **Work Item:** OMNI-1294 [BCRS Compliance] Phase 2: Order Place & Returns/Refunds Process (Omni Roadmap).
+*   **Decision Made:** Backend deployment sign-off has been officially granted by Prajney Sribhashyam.
+*   **Immediate Action:** Deployment and production smoke test plans are pending release.
+
+**Pending Actions**
+*   **Review Documents:** Recipients (@Daryl Ng, @Sneha Parab, @Andin Eswarlal Rajesh, @Michael Bui, @Gopalakrishna Dhulipati, @Alvin Choo) must review attached deployment documents and raise any concerns.
+    *   *Document 1:* https://docs.google.com/document/d/1ir3vznLEk5t7Uvsr7_yQGc2lDD8e8WT7Al4RvOrOAcc/edit?usp=drivesdk
+    *   *Document 2:* https://docs.google.com/document/d/18TstqRb5EeIfrW57slnxuIQRqVbxpLHt2OgSp2UoQWo/edit?usp=drivesdk
+*   **Await Plans:** The team is waiting for Prajney Sribhashyam to share the deployment and production smoke test plan.
+
+**Key Dates & Timeline**
+*   **Notification Date:** March 25, 2026, at 1:36 AM (Singapore Time).
+*   **Follow-up:** Deployment and smoke test plans to be shared "shortly."
+
+**Next Steps for Action Owners**
+1.  Verify receipt of the sign-off notification.
+2.  Access the provided Google Docs links immediately.
+3.  Provide feedback or confirmation on concerns before the deployment phase begins.
+
+
+## [6/60] Accepted: Project Light: Mobilization and Planning Workshop Day 3 @ Thu Mar 26, 2026 9am - 6pm (SGT) (Jacob Yeo)
+Source: gmail | Thread: 19d229b441724542 | Labels: None | Priority: None | Senders: me | Last Date: Wed, Mar 25, 2026, 1:28 AM | Last Updated: 2026-03-25T02:03:15.814842+00:00
+**Daily Work Briefing: Project Light Workshop Day 3**
+
+**1. Key Participants & Roles**
+*   **Michael Bui (michael.bui@fairpricegroup.sg):** Organizer/Key Participant from FairPrice Group. Accepted the invitation on Mar 25, 2026.
+*   **Jacob Yeo:** Resource contact associated with the "Accepted" status for Project Light Day 3.
+*   **Co-Mall Team:** External partner team participating in the joint workshop.
+
+**2. Main Topic/Request**
+Confirmation and mobilization planning for **Project Light: Mobilization and Planning Workshop**. This is a joint session between FairPrice Group and Co-Mall. The specific focus of this entry is **Day 3**, scheduled to run from 9:00 AM to 6:00 PM (SGT).
+
+**3. Pending Actions & Ownership**
+*   **Action:** Review workshop agenda materials prior to the session.
+    *   **Owner:** All participants.
+    *   **Reference:** Agenda document available at [Google Sheets Link](https://docs.google.com/spreadsheets/d/1ODEEFsP8mMxmUhYNuQ1norNCnWoIJwddZzUFqEUX-qw/edit?gid=1079702164#gid=1079702164).
+*   **Action:** Join the virtual meeting via Google Meet or phone.
+    *   **Owner:** All attendees.
+    *   **Link:** `meet.google.com/nii-qeqd-cek`
+    *   **Phone (US):** +1 424-327-5715 | PIN: 650753402
+
+**4. Decisions Made**
+*   **Calendar Block:** The organizer has successfully blocked the calendar for all invitees from **March 24–26, 2026**, to ensure full attendance for the joint workshop series.
+*   **Attendance Confirmation:** Michael Bui has formally accepted the invitation for Day 3.
+
+**5. Key Dates & Deadlines**
+*   **Event Date:** Thursday, March 26, 2026.
+*   **Event Time:** 9:00 AM – 6:00 PM (SGT).
+*   **Contextual Window:** The broader workshop series spans March 24–26, 2026.
+*   **Next Step:** Immediate preparation for Day 3 session on the specified date.
+
+**Summary Note:** Michael Bui has confirmed availability for Project Light Day 3. All stakeholders are required to review the linked agenda and prepare for the full-day session with the Co-Mall team.
+
+
+## [7/60] Accepted: Project Light: Mobilization and Planning Workshop Day 2 @ Wed Mar 25, 2026 9am - 6pm (SGT) (Jacob Yeo)
+Source: gmail | Thread: 19d229b35032b30d | Labels: None | Priority: None | Senders: me | Last Date: Wed, Mar 25, 2026, 1:28 AM | Last Updated: 2026-03-25T02:03:29.533935+00:00
+**Daily Work Briefing: Project Light Mobilization**
+
+**1. Key Participants & Roles**
+*   **Jacob Yeo:** Organizer/Host (Resource title indicates acceptance of the workshop invitation).
+*   **Michael Bui:** Participant (Accepted the invitation; email domain `fairpricegroup.sg` suggests internal FairPrice Group involvement).
+*   **Co-Mall Team:** External partners invited for a joint workshop.
+
+**2. Main Topic & Request**
+*   **Event:** Project Light: Mobilization and Planning Workshop, Day 2.
+*   **Objective:** Conduct a joint planning session with the Co-Mall team to mobilize Project Light.
+*   **Scope:** The initial communication from Michael Bui indicates a broader calendar block has been requested for **March 24–26** to accommodate this workshop series.
+
+**3. Pending Actions & Ownership**
+*   **Action:** Confirm attendance and prepare for Day 2 of the workshop.
+    *   **Owner:** All invited participants (Calendar invitation accepted by Michael Bui).
+*   **Action:** Review the detailed workshop agenda prior to the session.
+    *   **Owner:** Participants (Link provided in original email context).
+*   **Logistics:** Connect via Google Meet on the scheduled date.
+
+**4. Decisions Made**
+*   **Scheduling Confirmation:** Day 2 of the workshop is confirmed for **Wednesday, March 25, 2026**.
+*   **Time Zone & Hours:** 9:00 AM – 6:00 PM (SGT).
+
+**5. Key Dates & Deadlines**
+*   **March 24–26, 2026:** Full workshop window blocked for all participants.
+*   **March 25, 2026 (Day 2):** Specific meeting date and time:
+    *   Start: 9:00 AM SGT
+    *   End: 6:00 PM SGT
+*   **Immediate Follow-up:** Review the agenda document at `https://docs.google.com/spreadsheets/d/1ODEEFsP8mMxmUhYNuQ1norNCnWoIJwddZzUFqEUX-qw/edit?gid=1079702164#gid=1079702164` before the start time.
+
+**Meeting Access Details (Day 2)**
+*   **Platform:** Google Meet
+*   **Link:** `meet.google.com/ioj-aqhd-syu`
+*   **Phone Options:**
+    *   US: +1 513-816-0930 (PIN: 671730790)
+
+
+## [8/60] Updated invitation: BCRS Production Deployment Planning Session @ Wed Mar 25, 2026 11am - 12pm (SGT) (Michael Bui)
+Source: gmail | Thread: 19d2294734e28a64 | Labels: Inbox | Priority: None | Senders: Prajney Sribhashyam | Last Date: Wed, Mar 25, 2026, 1:27 AM | Last Updated: 2026-03-25T02:03:41.413087+00:00
+**Daily Work Briefing: BCRS Production Deployment Planning Session**
+
+**Key Participants & Roles**
+*   **Organizer:** Prajney Sribhashyam (prajney.sribhashyam@fairpricegroup.sg)
+*   **Core Attendees:** Sneha Parab, Onkar Bamane, Daryl Ng, Andin Eswarlal Rajesh.
+*   **Optional Attendees:** Koklin Gan, Sathya Murthy Karthik, Michael Bui (Michael.bui@fairpricegroup.sg).
+
+**Main Topic/Request**
+The thread concerns an updated invitation for the "BCRS Production Deployment Planning Session." The organizer has issued two sequential updates regarding the session's logistics.
+
+**Decisions Made**
+1.  **Time Change:** The meeting time was moved forward by two hours, shifting from 1:00 PM – 2:00 PM to **11:00 AM – 12:00 PM (SGT)**.
+2.  **Location Change:** The physical room was updated from "FairPrice Hub-12-L12 Room 3 (6)" to **"FairPrice Hub-11-L11 Room 11 (6)"**.
+
+**Pending Actions & Ownership**
+*   **Action:** Confirm attendance status for the updated slot.
+*   **Owner:** Michael Bui (and all other guests).
+*   **Current Status:** Your RSVP is currently marked as "optional." No specific assignment of ownership for preparation tasks was listed in this thread; however, attendance confirmation is required.
+
+**Key Dates & Deadlines**
+*   **Meeting Date:** Wednesday, March 25, 2026.
+*   **Meeting Time:** 11:00 AM – 12:00 PM (Singapore Standard Time).
+*   **Virtual Access:** Google Meet link `meet.google.com/hhk-rtmq-wrx` or Phone (+1 337-441-2534, PIN: 938401958).
+
+**Follow-Up Required**
+No further follow-up emails were generated in this thread. The organization relies on the calendar RSVP system for confirmation. Ensure attendance is accepted to finalize the guest list.
+
+
+## [9/60] Declined: BCRS Production Deployment Planning Session @ Wed Mar 25, 2026 11am - 12pm (SGT) (Prajney Sribhashyam)
+Source: gmail | Thread: 19d22964e3820b15 | Labels: None | Priority: None | Senders: me | Last Date: Wed, Mar 25, 2026, 1:22 AM | Last Updated: 2026-03-25T02:03:52.180837+00:00
+**Daily Work Briefing: BCRS Production Deployment Planning Session**
+
+*   **Key Participants & Roles:**
+    *   **Prajney Sribhashyam:** Organizer (BCRS Production Deployment).
+    *   **Michael Bui:** Optional attendee; declined the meeting.
+    *   **Other Attendees:** Sneha Parab, Onkar Bamane, Daryl Ng, Andin Eswarlal Rajesh (Confirmed/Unknown status).
+    *   **Optional Attendees:** Koklin Gan, Sathya Murthy Karthik.
+
+*   **Main Topic/Request:**
+    *   Planning session for the BCRS Production Deployment scheduled for Wednesday, March 25, 2026, from 11:00 AM to 12:00 PM (SGT).
+
+*   **Pending Actions & Ownership:**
+    *   **Action:** Reschedule or re-propose the session time.
+    *   **Owner:** Prajney Sribhashyam (Organizer).
+    *   **Reason:** Michael Bui declined due to a "Meeting clash." The organizer must determine if this conflict impacts the core planning scope and identify a new viable slot for all critical stakeholders.
+
+*   **Decisions Made:**
+    *   No final scheduling decision was reached in this thread; the session is currently marked as declined by one key stakeholder (Michael Bui).
+
+*   **Key Dates & Details:**
+    *   **Original Session Date/Time:** Wednesday, March 25, 2026, 11:00 AM – 12:00 PM (SGT).
+    *   **Venue:** Virtual via Google Meet (`meet.google.com/hhk-rtmq-wrx`) and Phone.
+    *   **Last Update:** March 25, 2026, at 1:22 AM (Michael Bui's response time).
+
+*   **Next Steps:**
+    *   Organizer to review attendee availability excluding Michael Bui or propose a new time slot that accommodates the clash.
+
+
+## [10/60] Declined: BCRS Redelivery - Grooming Session @ Wed Mar 25, 2026 1pm - 2pm (SGT) (Prajney Sribhashyam)
+Source: gmail | Thread: 19d2296229f0d327 | Labels: None | Priority: None | Senders: me | Last Date: Wed, Mar 25, 2026, 1:22 AM | Last Updated: 2026-03-25T02:04:04.139158+00:00
+**Daily Work Briefing: BCRS Redelivery Grooming Session**
+
+**Key Participants & Roles**
+*   **Organizer:** Prajney Sribhashyam
+*   **Primary Attendees/Owners:** Wai Ching Chan, De Wei Tey, Michael Bui
+*   **Optional Guests:** Daryl Ng, Yap Chye Soon Adrian, Koklin Gan, Sathya Murthy Karthik
+
+**Main Topic/Request**
+A grooming session was scheduled to discuss the re-delivery of BCRS items and associated metadata updates (Reference: Jira ticket **DPD-807**). The goal was to align on three specific technical tasks regarding deposit management.
+
+**Decisions Made**
+*   **Meeting Status:** The invitation for **Wednesday, March 25, 2026, at 1:00 PM – 2:00 PM (SGT)** was **declined** by Michael Bui due to a meeting clash. No alternative time or rescheduling action is recorded in the current thread.
+
+**Pending Actions & Ownership**
+Three specific tasks were identified for execution, though no new dates were set for these actions following the declined meeting:
+1.  **Order Service:** Maintain the 'Deposit posted to SAP' field in metadata.
+    *   **Owner:** Wai Ching Chan
+2.  **Sales Posting:** Consume the aforementioned field and suppress duplicate postings of BCRS deposits.
+    *   **Owner:** Michael Bui
+3.  **RPA Implementation:** Charge the BCRS deposit to the customer's original payment method.
+    *   **Owner:** De Wei Tey
+
+**Key Dates & Follow-ups**
+*   **Original Meeting Date:** Wednesday, March 25, 2026 (1:00 PM SGT).
+*   **Action Required:** The team must reschedule a follow-up session to proceed with the tasks listed in Jira ticket **DPD-807**, as the initial grooming session was not attended by Michael Bui.
+
+**Contact Information**
+*   **Google Meet Link:** `meet.google.com/src-bpmg-ryn`
+*   **Jira Reference:** https://ntuclink.atlassian.net/browse/DPD-807
+
+
+## [11/60] Updated invitation: BCRS Redelivery - Grooming Session @ Wed Mar 25, 2026 1pm - 2pm (SGT) (Michael Bui)
+Source: gmail | Thread: 19d229506ee3ee6e | Labels: Inbox | Priority: None | Senders: Prajney Sribhashyam | Last Date: Wed, Mar 25, 2026, 1:21 AM | Last Updated: 2026-03-25T02:04:18.856561+00:00
+**Daily Work Briefing: BCRS Redelivery Grooming Session Update**
+
+**Meeting Overview**
+*   **Topic:** Grooming session to discuss the re-delivery of BCRS (Business Continuity & Recovery System) items.
+*   **Resource Link:** https://ntuclink.atlassian.net/browse/DPD-807
+*   **Original Date/Time:** Wed, Mar 25, 2026, 11:00 AM – 12:00 PM (SGT)
+*   **Updated Date/Time:** Wed, Mar 25, 2026, 1:00 PM – 2:00 PM (SGT)
+*   **Location:** FairPrice Hub-11-L11 Room 11 (6) [Google Meet]
+    *   *Virtual Link:* meet.google.com/src-bpmg-ryn
+    *   *Phone (US):* +1 541-649-2375 (PIN: 815400477)
+
+**Key Participants & Roles**
+*   **Organizer:** Prajney Sribhashyam <prajney.sribhashyam@fairpricegroup.sg>
+*   **Core Team (Required):**
+    *   Wai Ching Chan
+    *   Michael Bui <michael.bui@fairpricegroup.sg>
+    *   De Wei Tey
+*   **Additional Guests:** Daryl Ng, Yap Chye Soon Adrian (Optional), Koklin Gan (Optional), Sathya Murthy Karthik (Optional).
+
+**Action Items & Owners**
+Three specific jobs are identified for the session:
+1.  **Order Service Configuration:** Maintain the 'Deposit posted to SAP' field in metadata.
+    *   **Owner:** Wai Ching Chan
+2.  **Sales Posting Logic:** Consume the aforementioned field to suppress duplicate postings of BCRS deposits.
+    *   **Owner:** Michael Bui
+3.  **RPA Implementation:** Configure RPA to charge the BCRS deposit against the customer's original payment method.
+    *   **Owner:** De Wei Tey
+
+**Decisions Made**
+*   **Schedule Change:** The meeting time was shifted from 11:00 AM SGT to 1:00 PM SGT on March 25, 2026. No other agenda or attendee changes were noted in the update log.
+
+**Follow-Ups & Deadlines**
+*   **Immediate Action:** Attendees (specifically Michael Bui) must review the updated calendar invitation and confirm attendance ("Yes/No/Maybe") before the session.
+*   **Session Objective:** To finalize technical requirements for the three action items listed above prior to implementation.
+
+
+## [12/60] Declined: BCRS Production Deployment Planning Session @ Wed Mar 25, 2026 1pm - 2pm (SGT) (Prajney Sribhashyam)
+Source: gmail | Thread: 19d2293596eb3364 | Labels: None | Priority: None | Senders: me | Last Date: Wed, Mar 25, 2026, 1:19 AM | Last Updated: 2026-03-25T02:04:28.998384+00:00
+**Daily Work Briefing: BCRS Production Deployment Planning Session**
+
+**Key Participants & Roles**
+*   **Prajney Sribhashyam**: Meeting Organizer.
+*   **Michael Bui** (michael.bui@fairpricegroup.sg): Optional attendee; declined the session due to a scheduling conflict.
+*   **Other Attendees**: Sneha Parab, Onkar Bamane, Daryl Ng, Andin Eswarlal Rajesh, Koklin Gan (optional), Sathya Murthy Karthik (optional).
+
+**Main Topic/Request**
+The meeting was scheduled to plan the BCRS Production Deployment. It took place on **Wednesday, March 25, 2026**, from **1:00 PM to 2:00 PM (SGT)**. The session utilized Google Meet (`meet.google.com/hhk-rtmq-wrx`) and was hosted at FairPrice Hub-12-L12 Room 3 (6).
+
+**Decisions Made**
+*   Michael Bui declined attendance due to an overlapping meeting.
+*   It was agreed that the meeting recording would be utilized by Michael Bui as a substitute for his physical presence.
+
+**Pending Actions & Ownership**
+The following action items were defined in Michael Bui's decline note and require immediate attention:
+1.  **Recording Access**: The organizer must ensure the meeting is recorded so Michael Bui can review it asynchronously.
+2.  **Jira Update**: The team must indicate **UAT sign-off** within the relevant Jira ticket.
+3.  **Action Item Tracking**: Michael Bui will follow up on his specific action items after reviewing the recording.
+
+**Key Dates & Deadlines**
+*   **Meeting Date**: Mar 25, 2026 (Already occurred).
+*   **Next Steps**: Pending completion of the Jira ticket update and review of the meeting recording by Michael Bui.
+
+
+## [13/60] Updated invitation: BCRS Production Deployment Planning Session @ Wed Mar 25, 2026 1pm - 2pm (SGT) (Michael Bui)
+Source: gmail | Thread: 19d228d8f8223e7f | Labels: Inbox | Priority: None | Senders: Prajney Sribhashyam | Last Date: Wed, Mar 25, 2026, 1:13 AM | Last Updated: 2026-03-25T02:04:39.927747+00:00
+**Daily Work Briefing: BCRS Production Deployment Planning Session**
+
+**Key Participants & Roles**
+*   **Organizer:** Prajney Sribhashyam (prajney.sribhashyam@fairpricegroup.sg)
+*   **Confirmed Guests:** Sneha Parab, Onkar Bamane, Daryl Ng, Andin Eswarlal Rajesh.
+*   **Optional Attendees:** Koklin Gan, Sathya Murthy Karthik, Michael Bui (michael.bui@fairpricegroup.sg).
+
+**Main Topic/Request**
+Notification regarding an update to the "BCRS Production Deployment Planning Session." The primary change involves a modified meeting location and the inclusion of specific virtual joining details.
+
+**Key Details & Dates**
+*   **Event Date:** Wednesday, March 25, 2026
+*   **Time:** 1:00 PM – 2:00 PM (SGT)
+*   **Location Update:** FairPrice Hub-12-L12 Room 3 (6) [Google Meet]
+*   **Virtual Access:**
+    *   Google Meet Link: meet.google.com/hhk-rtmq-wrx
+    *   US Phone: +1 337-441-2534 | PIN: 938401958
+
+**Decisions Made**
+*   The physical meeting location has been confirmed and updated to "FairPrice Hub-12-L12 Room 3 (6)."
+*   Virtual access instructions were finalized and distributed.
+
+**Pending Actions & Ownership**
+*   **RSVP Confirmation:** Michael Bui (michael.bui@fairpricegroup.sg) must confirm attendance status for this optional session. Current email indicates the option to select "Yes," "No," or "Maybe."
+*   **Calendar Management:** Recipients should verify their calendar settings if they wish to stop receiving these specific notifications.
+
+**Follow-ups**
+None specified in thread; next step is adherence to the scheduled time on March 25, 2026.
+
+
+## [14/60] Invitation: BCRS Production Deployment Planning Session @ Wed Mar 25, 2026 1pm - 2pm (SGT) (Michael Bui)
+Source: gmail | Thread: 19d228cf97efb57b | Labels: Inbox | Priority: None | Senders: Prajney Sribhashyam | Last Date: Wed, Mar 25, 2026, 1:12 AM | Last Updated: 2026-03-25T02:04:51.141219+00:00
+**Daily Work Briefing: BCRS Production Deployment Planning Session**
+
+**1. Key Participants & Roles**
+*   **Organizer:** Prajney Sribhashyam (prajney.sribhashyam@fairpricegroup.sg)
+*   **Confirmed Attendees:** Sneha Parab, Onkar Bamane, Daryl Ng, Andin Eswarlal Rajesh.
+*   **Optional Attendees:** Koklin Gan, Sathya Murthy Karthik, Michael Bui (michael.bui@fairpricegroup.sg).
+
+**2. Main Topic & Request**
+The session is a planning meeting for the **BCRS Production Deployment**, scheduled to run from 1:00 PM to 2:00 PM Singapore Standard Time (SGT) on **Wednesday, March 25, 2026**. The organizer has provided Google Meet access details for virtual attendance.
+
+**3. Pending Actions & Ownership**
+*   **RSVP Confirmation:** Michael Bui must finalize attendance status ("Yes", "No", or "Maybe") as the invitation explicitly notes his attendance is optional.
+*   **Meeting Access:** All participants must verify connectivity via Google Meet (`meet.google.com/hhk-rtmq-wrx`) or phone dial-in (+1 337-441-2534, PIN: 938401958).
+
+**4. Decisions Made**
+No specific technical decisions or deployment strategies were recorded in this thread; the content is strictly a logistical invitation to convene for planning purposes.
+
+**5. Key Dates & Deadlines**
+*   **Meeting Date:** Wednesday, March 25, 2026.
+*   **Time Slot:** 1:00 PM – 2:00 PM (SGT).
+*   **Follow-up:** Post-meeting documentation or action items are not listed in the current email thread and will likely originate from the session itself.
+
+**Metadata Summary**
+*   **Priority:** Unspecified.
+*   **Label:** Inbox.
+*   **Last Message ID:** 19d228cf97efb57b.
+
+
+## [15/60] [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink/marketing-service)
+Source: gmail | Thread: 19d2286504601630 | Labels: Inbox, Updates | Priority: None | Senders: Bitbucket | Last Date: Wed, Mar 25, 2026, 1:05 AM | Last Updated: 2026-03-25T02:05:02.719224+00:00
+**Daily Work Briefing: Bitbucket Pipeline Failure**
+
+**Key Participants & Roles**
+*   **System:** Bitbucket (Automated Notification Source)
+*   **Repository Owner:** `ntuclink/marketing-service`
+*   **Branch Affected:** `master`
+*   **Commit Author/Trigger:** Commit hash `fc067b7`
+
+**Main Topic**
+The automated CI/CD pipeline for the `marketing-service` repository failed immediately following a merge to the `master` branch. The failure was triggered by commit `fc067b7`, which contained merge changes from Pull Request #131 titled "Sanitize configured slots for multiple edge cases" (Jira ticket: DPD-715).
+
+**Pending Actions & Ownership**
+*   **Action:** Investigate the cause of the pipeline failure and execute a fix.
+*   **Ownership:** Development team responsible for the `marketing-service` repository (specifically the engineer who merged PR #131 or the on-call developer, as no specific individual name was provided in the notification).
+*   **Required Step:** Review the 51-second execution logs to identify the root cause of the failure.
+
+**Decisions Made**
+*   The changes associated with Pull Request #131 (DPD-715) were successfully merged into the `master` branch as of Mar 25, 2026. No decisions regarding reverting or holding the merge have been recorded in this log; however, the subsequent pipeline failure requires immediate attention to restore deployment stability.
+
+**Key Dates & Deadlines**
+*   **Failure Date:** March 25, 2026
+*   **Failure Time:** 1:05 AM (UTC)
+*   **Execution Duration:** 51 seconds before failure.
+*   **Follow-up:** Immediate review of the pipeline logs is required to prevent deployment blocking in subsequent cycles.
+
+**Specific References**
+*   **Repository:** `ntuclink/marketing-service`
+*   **Commit Hash:** `fc067b7`
+*   **Pull Request:** #131
+*   **Jira Ticket:** DPD-715 ("Sanitize configured slots for multiple edge cases")
+*   **Branch:** `master`
+
+
+## [16/60] Reminder: Appointment For FileVault Encryption(Macbook User) (Micha... @ Thu Mar 26, 2026 9am - 9:30am (SGT) (Chee Keong Ng)
+Source: gmail | Thread: 19d2281567dc0d16 | Labels: Inbox, Updates | Priority: None | Senders: Chee Keong Ng (Goog. | Last Date: Wed, Mar 25, 2026, 12:59 AM | Last Updated: 2026-03-25T02:05:12.739190+00:00
+**Daily Work Briefing Summary**
+
+**Key Participants & Roles:**
+*   **Organizer/Host:** Chee Keong Ng (IT Support Lead)
+*   **Appointee/User:** Michael Bui (`michael.bui@fairpricegroup.sg`)
+*   **Attendees:** Maeves Goh, Sam Lim Cheng San, David Peh Loke Yew, Theo Adi.
+
+**Main Topic/Request:**
+Technical appointment scheduled to perform FileVault encryption on a specific MacBook device for user Michael Bui.
+
+**Pending Actions & Ownership:**
+*   **Action:** Attend the scheduled technical session to enable FileVault encryption.
+*   **Owner:** Michael Bui (User) and Chee Keong Ng (Technician).
+*   **Deadline:** The session must be completed by 9:30 AM SGT on Thursday, March 26, 2026.
+
+**Decisions Made:**
+*   Confirmed that the appointment for FileVault encryption is required for the specific Mac device identified below.
+*   Appointment time slot (9:00 AM – 9:30 AM SGT) was finalized and booked by Michael Bui via Google Calendar scheduling.
+
+**Key Dates & References:**
+*   **Event Date/Time:** Thursday, March 26, 2026; 9:00 AM – 9:30 AM (Singapore Standard Time).
+*   **Device Details:**
+    *   PC Name: `FPG-MB2506002`
+    *   MacBook Serial Number: `HT7D1Q2523`
+*   **Booking Reference:** Email thread ID `19d2281567dc0d16`.
+
+**Note:** The appointment was originally booked by Michael Bui. Participants should ensure availability for the 30-minute window to avoid rescheduling.
+
+
+## [17/60] Daily digest: At least one user has made updates on "Measuring Cycle Time for JIRA Project"
+Source: gmail | Thread: 19d221d2ef613e02 | Labels: Inbox, Updates | Priority: None | Senders: Confluence | Last Date: Tue, Mar 24, 2026, 11:10 PM | Last Updated: 2026-03-25T02:05:23.988783+00:00
+**Daily Work Briefing Summary**
+
+**Key Participants & Roles**
+*   **Confluence System (confluence@ntuclink.atlassian.net):** Automated notification service from Atlassian. No human sender identified in this specific digest thread.
+*   **User(s):** Unspecified individuals who contributed to or interacted with the content "Measuring Cycle Time for JIRA Project." The system indicates "At least one user" made updates, but names are not disclosed in this automated summary.
+
+**Main Topic/Request**
+*   Automated digest notification regarding activity on a specific Confluence page titled **"Measuring Cycle Time for JIRA Project"**.
+*   The notification highlights that new changes or contributions have been made to this content since the last review cycle (March 24, 2026).
+
+**Pending Actions & Ownership**
+*   **Action:** Review the "Top post" section of the digest to view specific updates on the JIRA Project Cycle Time measurement page.
+*   **Ownership:** The recipient of this briefing email must take ownership of reviewing the update link provided in the original digest. No specific human assignee is listed for the update itself within this metadata, as it appears to be a passive notification of activity by an external team or user.
+
+**Decisions Made**
+*   None recorded in this thread. This is purely an informational digest.
+
+**Key Dates & Deadlines**
+*   **Digest Date:** March 24, 2026.
+*   **Time Sent:** 11:10 PM (Timestamp provided in metadata).
+*   **Next Steps:** Immediate review of the "Measuring Cycle Time for JIRA Project" content to understand recent contributions or changes. No specific deadline is set by this email, but it indicates an update occurred on March 24.
+
+**Specific References**
+*   **Page Title:** Measuring Cycle Time for JIRA Project.
+*   **Platform:** Atlassian Confluence (ntuclink.atlassian.net).
+*   **Project Context:** JIRA Project metrics.
+*   **Last Message ID:** 19d221d2ef613e02.
+*   **Labels:** Inbox, Updates.
+
+
+## [18/60] You have no events scheduled today.
+Source: gmail | Thread: 19d21bee0c169912 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Tue, Mar 24, 2026, 9:27 PM | Last Updated: 2026-03-24T22:01:49.001333+00:00
+**Daily Work Briefing Summary**
+
+**1. Key Participants & Roles**
+*   **Michael Bui** (michael.bui@fairpricegroup.sg): Primary recipient; subscribed to daily agenda notifications for the "Digital Business Tech Release/Changes" calendar.
+*   **Google Calendar System**: Automated notification source sending schedule updates.
+
+**2. Main Topic/Request**
+The email is an automated system notification confirming that no events are currently scheduled on Michael Bui's Google Calendar for today, Wednesday, March 25, 2026. It serves as a status update rather than a human-initiated request or discussion.
+
+**3. Pending Actions & Ownership**
+*   **No specific actions pending.**
+*   The email notes that if the user wishes to modify which calendars trigger these daily agenda notifications, they must manually log in to Google Calendar and adjust notification settings for each specific calendar. This is a self-service administrative task owned by Michael Bui if desired.
+
+**4. Decisions Made**
+No decisions were made within this thread; it is a passive system alert regarding schedule availability.
+
+**5. Key Dates & Follow-ups**
+*   **Date of Notification:** March 24, 2026, at 9:27 PM.
+*   **Relevant Date (Status Check):** Wednesday, March 25, 2026 (Today).
+*   **Follow-up:** None required based on content. The user has "no events scheduled today."
+
+**6. Metadata & References**
+*   **Labels:** Inbox, Updates.
+*   **Last Message ID:** 19d21bee0c169912.
+*   **Source Account:** michael.bui@fairpricegroup.sg.
+*   **Relevant Calendar:** Digital Business Tech Release/Changes.
+*   **Privacy Notice:** Email marked as confidential and potentially privileged.
+
+
+## [19/60] Declined: BCRS Redelivery - Grooming Session @ Wed Mar 25, 2026 11am - 12pm (SGT) (Prajney Sribhashyam)
 Source: gmail | Thread: 19d1fae0c43e4b37 | Labels: None | Priority: None | Senders: me | Last Date: Tue, Mar 24, 2026, 11:50 AM | Last Updated: 2026-03-24T14:01:32.668010+00:00
 **Daily Work Briefing: BCRS Redelivery Grooming Session**
 
@@ -35,7 +614,7 @@ The following tasks were defined for execution:
 Michael Bui must coordinate with the team to ensure his action item (Sales posting logic) is addressed despite his absence from the grooming session, or await a rescheduled discussion. The project timeline relies on the completion of the three defined technical tasks by their respective owners.
 
 
-## [2/51] Tentatively Accepted: BCRS Redelivery - Grooming Session @ Wed Mar 25, 2026 11am - 12pm (SGT) (Prajney Sribhashyam)
+## [20/60] Tentatively Accepted: BCRS Redelivery - Grooming Session @ Wed Mar 25, 2026 11am - 12pm (SGT) (Prajney Sribhashyam)
 Source: gmail | Thread: 19d1fadfd307c0b8 | Labels: None | Priority: None | Senders: me | Last Date: Tue, Mar 24, 2026, 11:49 AM | Last Updated: 2026-03-24T14:01:46.291335+00:00
 **Daily Work Briefing: BCRS Redelivery Grooming Session**
 
@@ -69,7 +648,7 @@ Source: gmail | Thread: 19d1fadfd307c0b8 | Labels: None | Priority: None | Sende
 **Note:** Ensure attendance or confirm status prior to the meeting time. Action items are dependent on the outcome of this session.
 
 
-## [3/51] Updated invitation: BCRS Redelivery - Grooming Session @ Wed Mar 25, 2026 11am - 12pm (SGT) (Michael Bui)
+## [21/60] Updated invitation: BCRS Redelivery - Grooming Session @ Wed Mar 25, 2026 11am - 12pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d1fab431ba314e | Labels: Inbox | Priority: None | Senders: Prajney Sribhashyam | Last Date: Tue, Mar 24, 2026, 11:46 AM | Last Updated: 2026-03-24T14:02:01.140601+00:00
 **Daily Work Briefing: BCRS Redelivery Grooming Session Update**
 
@@ -106,7 +685,7 @@ Update regarding the "BCRS Redelivery - Grooming Session." The session is a groo
 *   Phone: (US) +1 541-649-2375, PIN: 815400477
 
 
-## [4/51] Invitation: BCRS Redelivery - Grooming Session @ Wed Mar 25, 2026 11am - 12pm (SGT) (Michael Bui)
+## [22/60] Invitation: BCRS Redelivery - Grooming Session @ Wed Mar 25, 2026 11am - 12pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d1faaf4c060b6b | Labels: Inbox | Priority: None | Senders: Prajney Sribhashyam | Last Date: Tue, Mar 24, 2026, 11:46 AM | Last Updated: 2026-03-24T14:02:14.903661+00:00
 **Daily Work Briefing: BCRS Redelivery Grooming Session**
 
@@ -142,45 +721,7 @@ The following specific tasks must be addressed prior to or during the session:
 *   **Action Required:** Attendees must review the Jira ticket `DPD-807` and prepare their respective action items before the call.
 
 
-## [5/51] NTUC Enterprise-2025 Web Service Penetration Testing for RMN APIs
-Source: gmail | Thread: 19abde329ef69594 | Labels: Inbox, ⚠️IMPORTANT | Priority: ⚠️IMPORTANT | Senders: Ong, Jazz, me | Last Date: Tue, Mar 24, 2026, 10:52 AM | Last Updated: 2026-03-24T14:02:42.820468+00:00
-**Subject:** Daily Briefing: NTUC Enterprise-2025 Web Service Penetration Testing for RMN APIs (Final Report Delivered)
-
-**Key Participants & Roles:**
-*   **Michael Bui (FairPrice Group):** Client/Project Owner. Received final results on March 24, 2026; responsible for accessing the file and submitting the signed Milestone Acknowledgement (MA).
-*   **Ong Xiao Cong (LGMS):** Vendor Lead. Executed retest and delivered the final report via secure link on March 24, 2026.
-*   **Jazz Tong (FairPrice Group):** Internal Stakeholder. Involved in final document approvals.
-
-**Main Topic/Request:**
-Delivery of the post-assessment penetration testing results for RMN APIs following the retest conducted on March 16, 2026. The vendor has fulfilled the client's request for updated results made on March 20, 2026.
-
-**Decisions Made:**
-*   **Testing Scope:** Confirmed for UAT only; permissions granted for Create/Update/Delete in UAT.
-*   **CORS Finding:** Deprioritized as "Informational" due to low ROI; LGMS has marked this on the final report.
-*   **Retest Execution:** Completed successfully by Ong Xiao Cong (LGMS) on March 16, 2026 (1:30 PM – 6:30 PM SGT).
-
-**Pending Actions & Ownership:**
-*   **[Owner: Michael Bui / FairPrice Group]** Access the shared results using the previously provided password. Review findings and submit the signed Milestone Acknowledgement (MA) form to LGMS for internal audit. *Note: Link expires on March 31, 2026.*
-*   **[Owner: Ong Xiao Cong / LGMS]** Monitor receipt of the signed MA form to proceed with final project closure.
-
-**Key Dates & Deadlines:**
-*   **Nov 21, 2025:** Order Confirmation Milestone.
-*   **Dec 2–8, 2025:** Primary Penetration Testing Window.
-*   **Jan 15, 2026:** Initial PDF Report shared (Link expired Jan 22).
-*   **Feb 5, 2026:** Milestone Acknowledgement form requested.
-*   **Mar 5, 2026:** Quick retest of TLS/SSL findings confirmed resolved by LGMS.
-*   **Mar 16, 2026 (Mon):** Retest Window (1:30 PM – 6:30 PM SGT) - **Completed.**
-*   **Mar 20, 2026 (Fri), 9:07 AM:** Michael Bui requests updated results.
-*   **Mar 24, 2026 (Tue), 10:52 AM:** Ong Xiao Cong (LGMS) delivered the final report via secure link.
-*   **Mar 31, 2026:** Link expiration deadline for accessing the deliverables.
-
-**Status Summary:**
-The retest execution phase concluded successfully on March 16, 2026. Following a client request on March 20, LGMS completed its internal review and delivered the final "RMN web service post assessment result" to Michael Bui on **March 24, 2026, at 10:52 AM**. The results are accessible via the secure link (https://lgms.online/s/Dpaizwt5cwaZTZW) and remain password-protected using the previously shared credential.
-
-The project has transitioned from a "waiting for delivery" status to **Post-Delivery Review**. Ong Xiao Cong confirmed the document is ready for perusal, with the link set to expire on March 31, 2026. The immediate next step is for Michael Bui to access the file and facilitate the administrative closure by submitting the signed Milestone Acknowledgement form. Once the MA is received, the project will proceed to final sign-off pending Jazz Tong's review.
-
-
-## [6/51] [Bitbucket] You have been granted write access to ntuclink/fpg-frontoffice
+## [23/60] [Bitbucket] You have been granted write access to ntuclink/fpg-frontoffice
 Source: gmail | Thread: 19d1f68df2fd6f5a | Labels: Inbox, Updates | Priority: None | Senders: Bitbucket | Last Date: Tue, Mar 24, 2026, 10:34 AM | Last Updated: 2026-03-24T14:02:51.943624+00:00
 **Daily Work Briefing: Bitbucket Access Notification**
 
@@ -209,7 +750,7 @@ Source: gmail | Thread: 19d1f68df2fd6f5a | Labels: Inbox, Updates | Priority: No
 The system has confirmed that write access to the repository `ntuclink/fpg-frontoffice` is active for the account. No further action is required from administrators unless access issues arise during the first attempt to push changes.
 
 
-## [7/51] Updated invitation: Project Light: Mobilization and Planning Workshop Day 2 @ Wed Mar 25, 2026 9am - 6pm (SGT) (Michael Bui)
+## [24/60] Updated invitation: Project Light: Mobilization and Planning Workshop Day 2 @ Wed Mar 25, 2026 9am - 6pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d1f5a7f038b613 | Labels: Inbox | Priority: None | Senders: Jacob Yeo | Last Date: Tue, Mar 24, 2026, 10:18 AM | Last Updated: 2026-03-24T14:03:06.942003+00:00
 **Daily Work Briefing: Project Light Mobilization & Planning Workshop**
 
@@ -249,7 +790,7 @@ Source: gmail | Thread: 19d1f5a7f038b613 | Labels: Inbox | Priority: None | Send
 *   **PIN:** 671730790
 
 
-## [8/51] Notes: “Project Light: Mobilization and Planning Workshop Day 1” Mar 24, 2026
+## [25/60] Notes: “Project Light: Mobilization and Planning Workshop Day 1” Mar 24, 2026
 Source: gmail | Thread: 19d1f5966f1650ce | Labels: Inbox | Priority: None | Senders: Gemini | Last Date: Tue, Mar 24, 2026, 10:17 AM | Last Updated: 2026-03-24T14:03:29.845231+00:00
 **Daily Briefing: Project Light Mobilization Workshop (Day 1)**
 **Date:** March 24, 2026
@@ -296,7 +837,7 @@ The workshop focused on the mobilization for a new app development project targe
 *   **October/November 2026:** Customer-facing refund functionality go-live.
 
 
-## [9/51] Accepted: [Virtual] Smart Cart x RMN Catchup @ Fri Mar 27, 2026 4pm - 4:30pm (SGT) (Ching Hui Ng)
+## [26/60] Accepted: [Virtual] Smart Cart x RMN Catchup @ Fri Mar 27, 2026 4pm - 4:30pm (SGT) (Ching Hui Ng)
 Source: gmail | Thread: 19d1f09da6f3d682 | Labels: None | Priority: None | Senders: me | Last Date: Tue, Mar 24, 2026, 8:50 AM | Last Updated: 2026-03-24T10:01:21.732570+00:00
 **Daily Work Briefing: Smart Cart x RMN Catchup**
 
@@ -334,7 +875,7 @@ Michael Bui initiated a request to understand:
 Following the acceptance of the invitation by Michael Bui on March 24, a formal request was logged seeking clarity on Osmo's strategic direction and its specific applicability to Smart Cart operations. The upcoming session is intended to bridge technical understanding between the teams to facilitate potential integration pathways. No other participants or dates were referenced in the current thread summary.
 
 
-## [10/51] New material: "KPMG FY2025 Audit - UAR Self-Review"
+## [27/60] New material: "KPMG FY2025 Audit - UAR Self-Review"
 Source: gmail | Thread: 19d1eed5694bd314 | Labels: Inbox, Updates, ❗️ ASAP  🏃‍♂️‍➡️, 👀 KIV 🧘‍♂️ | Priority: ❗️ ASAP  🏃‍♂️‍➡️ | Senders: Soo Ngee Tong (Clas. | Last Date: Tue, Mar 24, 2026, 8:19 AM | Last Updated: 2026-03-24T10:01:37.692059+00:00
 **Daily Work Briefing: KPMG FY2025 Audit – UAR Self-Review**
 
@@ -368,7 +909,7 @@ No strategic decisions were made in this thread; the content is a notification o
 The message is tagged with "Inbox," "Updates," and high-priority labels ("❗️ ASAP 🏃‍♂️‍➡️"), indicating this requires immediate executive or operational oversight to prevent audit qualification failures in future reporting cycles.
 
 
-## [11/51] Updated invitation: [Virtual] Smart Cart x RMN Catchup @ Fri Mar 27, 2026 4pm - 4:30pm (SGT) (Michael Bui)
+## [28/60] Updated invitation: [Virtual] Smart Cart x RMN Catchup @ Fri Mar 27, 2026 4pm - 4:30pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d1edea37f23926 | Labels: Inbox | Priority: None | Senders: Ching Hui Ng | Last Date: Tue, Mar 24, 2026, 8:03 AM | Last Updated: 2026-03-24T10:01:52.074107+00:00
 **Daily Work Briefing: Smart Cart x RMN Catchup Update**
 
@@ -402,7 +943,7 @@ Ching Hui Ng explicitly requested an understanding of the **Osmo roadmap** and h
 The invitation for the "Smart Cart x RMN Catchup" was updated on March 24, 2026. The meeting time remains confirmed for March 27, 2026. The core objective is to facilitate a dialogue between FairPrice Group (Ching Hui Ng) and the technical team (Michael Bui/Nikhil) regarding Osmo's future trajectory and its compatibility with Smart Cart.
 
 
-## [12/51] Invitation: Plan the activity for Power Breakfast @ Tue Mar 31, 2026 1:30pm - 2pm (SGT) (Michael Bui)
+## [29/60] Invitation: Plan the activity for Power Breakfast @ Tue Mar 31, 2026 1:30pm - 2pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d1edbdc2cfef97 | Labels: Inbox | Priority: None | Senders: Trina Boquiren | Last Date: Tue, Mar 24, 2026, 8:00 AM | Last Updated: 2026-03-24T10:02:05.261074+00:00
 **Daily Work Briefing: D&T Power Breakfast Planning**
 
@@ -437,7 +978,7 @@ No final decisions were recorded in this thread. The session is designated as a 
 The next step relies on the outcome of the March 31 brainstorming session. Subsequent planning will depend on the ideas generated by the team during this specific window.
 
 
-## [13/51] Accepted: [Virtual] Smart Cart x RMN Catchup @ Fri Mar 27, 2026 3pm - 3:30pm (SGT) (Ching Hui Ng)
+## [30/60] Accepted: [Virtual] Smart Cart x RMN Catchup @ Fri Mar 27, 2026 3pm - 3:30pm (SGT) (Ching Hui Ng)
 Source: gmail | Thread: 19d1ed718cd5dc22 | Labels: None | Priority: None | Senders: me | Last Date: Tue, Mar 24, 2026, 7:55 AM | Last Updated: 2026-03-24T10:02:17.676265+00:00
 **Daily Work Briefing: Smart Cart x RMN Catchup**
 
@@ -472,7 +1013,7 @@ Scheduling and confirmation of a virtual catch-up session regarding the "Smart C
 **Note**: This email is a system-generated calendar notification. No new discussion content was generated in this thread beyond the acceptance confirmation.
 
 
-## [14/51] Updated invitation: [Virtual] Smart Cart x RMN Catchup @ Fri Mar 27, 2026 3pm - 3:30pm (SGT) (Michael Bui)
+## [31/60] Updated invitation: [Virtual] Smart Cart x RMN Catchup @ Fri Mar 27, 2026 3pm - 3:30pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d1ed6cb51ecb54 | Labels: Inbox | Priority: None | Senders: Ching Hui Ng | Last Date: Tue, Mar 24, 2026, 7:54 AM | Last Updated: 2026-03-24T10:02:28.142518+00:00
 **Daily Work Briefing: Smart Cart x RMN Catchup Update**
 
@@ -503,7 +1044,7 @@ Update regarding the "[Virtual] Smart Cart x RMN Catchup" meeting scheduled for 
 No further follow-ups are pending at this time; the meeting is confirmed for the new slot provided Michael Bui accepts the invitation.
 
 
-## [15/51] Updated invitation: Smart Cart x RMN Catchup @ Fri Mar 27, 2026 5:50pm - 6:20pm (SGT) (Michael Bui)
+## [32/60] Updated invitation: Smart Cart x RMN Catchup @ Fri Mar 27, 2026 5:50pm - 6:20pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d1ed5c4db9d254 | Labels: Inbox | Priority: None | Senders: Ching Hui Ng | Last Date: Tue, Mar 24, 2026, 7:53 AM | Last Updated: 2026-03-24T10:02:39.050736+00:00
 **Daily Briefing Summary: Smart Cart x RMN Catchup Update**
 
@@ -535,7 +1076,7 @@ Source: gmail | Thread: 19d1ed5c4db9d254 | Labels: Inbox | Priority: None | Send
     *   **PIN:** 392491415
 
 
-## [16/51] Your Weekly Digest from Datadog
+## [33/60] Your Weekly Digest from Datadog
 Source: gmail | Thread: 19d1ebe48a29f27d | Labels: Inbox, Updates | Priority: None | Senders: Datadog | Last Date: Tue, Mar 24, 2026, 7:28 AM | Last Updated: 2026-03-24T10:03:04.679502+00:00
 **Subject:** Daily Briefing: Datadog Weekly Digest & Active Alerts for NTUC Enterprise
 
@@ -584,7 +1125,7 @@ The following alerts were cleared between Mar 23, 15:52 and 16:03 UTC:
 Total Events: 85 | Alerts Triggered: 16 | Recoveries: 23 (Note: Digest mentions 69 recovered generally, specific list shows partial recovery timeline).
 
 
-## [17/51] Updated invitation: Postmortem: (P1) Picking list emails not being sent to so... @ Tue Mar 24, 2026 2:30pm - 3:15pm (SGT) (Michael Bui)
+## [34/60] Updated invitation: Postmortem: (P1) Picking list emails not being sent to so... @ Tue Mar 24, 2026 2:30pm - 3:15pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d1e7e147a3f053 | Labels: Inbox | Priority: None | Senders: Sneha Parab | Last Date: Tue, Mar 24, 2026, 6:17 AM | Last Updated: 2026-03-24T07:12:52.143736+00:00
 **Daily Work Briefing: Postmortem Meeting Update**
 
@@ -618,7 +1159,7 @@ Source: gmail | Thread: 19d1e7e147a3f053 | Labels: Inbox | Priority: None | Send
 **Status Note:** Michael Bui has responded with "Yes" to the invitation.
 
 
-## [18/51] OSMOS PROD Destination Function Overage
+## [35/60] OSMOS PROD Destination Function Overage
 Source: gmail | Thread: 19b1155626cc7a41 | Labels: Inbox | Priority: None | Senders: Yadear, me, Nikhil | Last Date: Tue, Mar 24, 2026, 5:45 AM | Last Updated: 2026-03-24T07:13:13.993372+00:00
 **Daily Work Briefing: OSMOS PROD Destination Function Optimization & Cost Monitoring**
 
@@ -654,7 +1195,7 @@ Production deployment for the **OSMOS PROD Destination Function** is complete (M
 However, Nikhil Grover provided a critical clarification: the "Audience Sync" function was not part of the code update. The reduction in execution time may be attributed to the successful optimization of the Destination Function or temporary variances in sync volume. A potential correlation remains between large audience syncs and temporary execution spikes. The project has transitioned from deployment verification to strict compliance monitoring, contingent on maintaining daily processing under **4 days** to keep total accumulated time below **16 days**.
 
 
-## [19/51] New Request for SRA (Advertima)
+## [36/60] New Request for SRA (Advertima)
 Source: gmail | Thread: 19aa4dbce6ed37a8 | Labels: Inbox, ⚠️IMPORTANT | Priority: ⚠️IMPORTANT | Senders: sazali.bi. | Last Date: Tue, Mar 24, 2026, 5:33 AM | Last Updated: 2026-03-24T07:13:32.982964+00:00
 **Daily Work Briefing: SRA Request for Advertima (Retail Media In-Store)**
 
@@ -686,7 +1227,7 @@ The discussion concerns the Security Risk Assessment (SRA) and Proof of Value (P
 *   **End of April 2026**: Target extended POV period requested by RMN business.
 
 
-## [20/51] Invitation: Postmortem: (P1) Picking list emails not being sent to so... @ Tue Mar 24, 2026 2:30pm - 3:15pm (SGT) (Michael Bui)
+## [37/60] Invitation: Postmortem: (P1) Picking list emails not being sent to so... @ Tue Mar 24, 2026 2:30pm - 3:15pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d1e22c099c70d5 | Labels: Inbox | Priority: None | Senders: Sneha Parab | Last Date: Tue, Mar 24, 2026, 4:38 AM | Last Updated: 2026-03-24T07:13:50.070176+00:00
 **Daily Work Briefing: Postmortem Meeting Summary**
 
@@ -717,7 +1258,7 @@ No final decisions are recorded in this thread yet, as the meeting is scheduled 
 *   **Incident Date Referenced:** January 23, 2026 (per report filename).
 
 
-## [21/51] We’ve updated our Terms of Service
+## [38/60] We’ve updated our Terms of Service
 Source: gmail | Thread: 19d1df66b3ab5506 | Labels: Inbox, Updates | Priority: None | Senders: Figma | Last Date: Tue, Mar 24, 2026, 3:49 AM | Last Updated: 2026-03-24T07:14:01.319722+00:00
 ### Daily Work Briefing: Figma Terms of Service Update
 
@@ -748,7 +1289,7 @@ Figma is updating its Terms of Service specifically for **Starter** and **Profes
 **Summary Note:** This is a standard compliance and feature-update notification. No immediate intervention is required other than reviewing the updated documentation to ensure business continuity aligns with the new stipulations effective in 30 days.
 
 
-## [22/51] New assignment: "KPMG FY 2025 Audit - UAR Self-Review"
+## [39/60] New assignment: "KPMG FY 2025 Audit - UAR Self-Review"
 Source: gmail | Thread: 19d1ddfc44c20768 | Labels: Inbox, Updates | Priority: None | Senders: Soo Ngee Tong (Clas. | Last Date: Tue, Mar 24, 2026, 3:24 AM | Last Updated: 2026-03-24T07:14:16.362629+00:00
 **Daily Work Briefing: KPMG FY 2025 Audit - UAR Self-Review**
 
@@ -786,7 +1327,7 @@ Source: gmail | Thread: 19d1ddfc44c20768 | Labels: Inbox, Updates | Priority: No
 This is an automated notification from the Google Classroom system triggered by an assignment post. Immediate action required is to log into the Google Classroom portal and review the specific requirements for the "KPMG FY 2025 Audit - UAR Self-Review" to ensure compliance with IT audit standards.
 
 
-## [23/51] GCP Service Account Key clean UP
+## [40/60] GCP Service Account Key clean UP
 Source: gmail | Thread: 195892088be2d83b | Labels: Inbox | Priority: None | Senders: Mohit, Jazz, Himal | Last Date: Tue, Mar 24, 2026, 3:11 AM | Last Updated: 2026-03-24T07:14:36.779956+00:00
 **Daily Work Briefing: GCP Service Account Key Cleanup**
 
@@ -824,7 +1365,7 @@ The team is addressing security risks associated with legacy GCP Service Account
 *   *Documentation*: [GCP][Security] Service Account Key Rotation & Decommission (To be updated by Kyle).
 
 
-## [24/51] [VidiCenter] Weekly Performance Report
+## [41/60] [VidiCenter] Weekly Performance Report
 Source: gmail | Thread: 19d1dd33885b243f | Labels: Updates | Priority: None | Senders: Quividi | Last Date: Tue, Mar 24, 2026, 3:11 AM | Last Updated: 2026-03-24T07:14:48.570601+00:00
 **Daily Work Briefing: VidiCenter Weekly Performance Report**
 
@@ -856,7 +1397,7 @@ Delivery of the "Weekly Performance Report" for the FairPrice digital signage ne
 *   **Next Steps:** Immediate review of the three active locations is required to determine if they are still operational or if hardware repairs are needed.
 
 
-## [25/51] [Dashboard Report] Retail Media - DD Dashboard | Tue 24 Mar 11:00AM +08
+## [42/60] [Dashboard Report] Retail Media - DD Dashboard | Tue 24 Mar 11:00AM +08
 Source: gmail | Thread: 19d1dcb8189110df | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Tue, Mar 24, 2026, 3:02 AM | Last Updated: 2026-03-24T07:14:58.772191+00:00
 **Daily Work Briefing: Retail Media Dashboard Update**
 
@@ -887,7 +1428,7 @@ No strategic decisions were made during this correspondence; the communication i
 Team Datadog has completed the scheduled distribution for the Retail Media dashboard. The report attached covers a three-day window leading up to March 24, 2026. No specific alerts or action items were flagged in the body text beyond the general instruction to monitor the data. Michael is expected to review the attachment for any anomalies or insights required for daily operations.
 
 
-## [26/51] Invitation: [Postmortem] 300126 - P1 - Some customers charged full price @ Thu Mar 26, 2026 3pm - 4pm (SGT) (Michael Bui)
+## [43/60] Invitation: [Postmortem] 300126 - P1 - Some customers charged full price @ Thu Mar 26, 2026 3pm - 4pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d1d7f77afb7fc3 | Labels: Inbox | Priority: None | Senders: Zaw Myo Htet | Last Date: Tue, Mar 24, 2026, 1:39 AM | Last Updated: 2026-03-24T07:15:41.683126+00:00
 ### Daily Work Briefing: NTUC Enterprise Penetration Testing Meeting
 
@@ -925,7 +1466,7 @@ The primary focus is the coordination of resources required to conduct the 2025 
 *   The invitation indicates that forwarding allows recipients to modify RSVP status or invite others, though standard protocol suggests maintaining the original guest list integrity for security-sensitive topics.
 
 
-## [27/51] [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink/marketing-service)
+## [44/60] [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink/marketing-service)
 Source: gmail | Thread: 19d1d5fca3268ac3 | Labels: Inbox, Updates | Priority: None | Senders: Bitbucket | Last Date: Tue, Mar 24, 2026, 1:05 AM | Last Updated: 2026-03-24T07:15:52.749022+00:00
 **Daily Work Briefing: Bitbucket Pipeline Failure**
 
@@ -958,7 +1499,7 @@ Source: gmail | Thread: 19d1d5fca3268ac3 | Labels: Inbox, Updates | Priority: No
     *   **Immediate Follow-up:** Review pipeline logs and attempt to re-run or fix the build as soon as possible (Priority: High due to master branch impact).
 
 
-## [28/51] Declined: RMN integration planning @ Wed Mar 25, 2026 3pm - 4:30pm (SGT) (Nikhil Grover)
+## [45/60] Declined: RMN integration planning @ Wed Mar 25, 2026 3pm - 4:30pm (SGT) (Nikhil Grover)
 Source: gmail | Thread: 19d1d5250d43b90b | Labels: None | Priority: None | Senders: me | Last Date: Tue, Mar 24, 2026, 12:50 AM | Last Updated: 2026-03-24T07:16:03.883701+00:00
 **Daily Work Briefing: RMN Integration Planning**
 
@@ -989,7 +1530,7 @@ Source: gmail | Thread: 19d1d5250d43b90b | Labels: None | Priority: None | Sende
 *   **US Phone Access:** +1 216-800-5806 (PIN: 847595795)
 
 
-## [29/51] Declined: [Placeholder] Discussion with Accenture on RMN @ Thu Mar 26, 2026 2pm - 3pm (SGT) (Miguel Ho Xian Da)
+## [46/60] Declined: [Placeholder] Discussion with Accenture on RMN @ Thu Mar 26, 2026 2pm - 3pm (SGT) (Miguel Ho Xian Da)
 Source: gmail | Thread: 19d1d51dc31401dc | Labels: None | Priority: None | Senders: me | Last Date: Tue, Mar 24, 2026, 12:49 AM | Last Updated: 2026-03-24T07:16:13.811538+00:00
 **Daily Work Briefing: Meeting Status Update**
 
@@ -1019,7 +1560,7 @@ A scheduled discussion regarding "RMN" (Resource Management Network) involving A
 *   **Conference PIN:** 583106441 (US: +1 413-758-2682)
 
 
-## [30/51] Re: Retail Media
+## [47/60] Re: Retail Media
 Source: gmail | Thread: 19cd598da8ea44d8 | Labels: Inbox, ⚠️IMPORTANT | Priority: ⚠️IMPORTANT | Senders: Miguel, Lilibeth | Last Date: Tue, Mar 24, 2026, 12:49 AM | Last Updated: 2026-03-24T07:16:36.241736+00:00
 **Subject:** Update: Retail Media Integration – Meeting Confirmed for March 26, 2026
 
@@ -1061,7 +1602,7 @@ Addressing the operational challenge of managing content across fragmented touch
 *   FairPrice Group IDs: `miguel_ho@fairpricegroup.sg`, `michael.bui@fairpricegroup.sg`
 
 
-## [31/51] Declined: Offer Service Monitors Improvement @ Wed Mar 25, 2026 14:00 - 15:00 (SGT) (Zaw Myo Htet)
+## [48/60] Declined: Offer Service Monitors Improvement @ Wed Mar 25, 2026 14:00 - 15:00 (SGT) (Zaw Myo Htet)
 Source: gmail | Thread: 19d1d5126baa3ad1 | Labels: None | Priority: None | Senders: me | Last Date: Tue, Mar 24, 2026, 12:49 AM | Last Updated: 2026-03-24T07:16:45.622691+00:00
 **Daily Work Briefing: Offer Service Monitors Improvement Meeting (Declined)**
 
@@ -1090,7 +1631,7 @@ Source: gmail | Thread: 19d1d5126baa3ad1 | Labels: None | Priority: None | Sende
     *   None currently recorded in the thread; organizer must initiate a new invitation or confirm if the meeting proceeds without Michael Bui.
 
 
-## [32/51] Invitation: [Placeholder] Discussion with Accenture on RMN @ Thu Mar 26, 2026 2pm - 3pm (SGT) (Michael Bui)
+## [49/60] Invitation: [Placeholder] Discussion with Accenture on RMN @ Thu Mar 26, 2026 2pm - 3pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d1d4fb9437745d | Labels: Inbox | Priority: None | Senders: Miguel Ho Xian Da | Last Date: Tue, Mar 24, 2026, 12:47 AM | Last Updated: 2026-03-24T07:16:56.545409+00:00
 **Daily Work Briefing: Accenture & RMN Discussion**
 
@@ -1123,7 +1664,7 @@ The primary agenda is a discussion regarding the **RMN** initiative involving **
 *   **PIN**: 583106441
 
 
-## [33/51] Michael Bui, you have work due in Jira
+## [50/60] Michael Bui, you have work due in Jira
 Source: gmail | Thread: 19d1d3fde903eac2 | Labels: Inbox, Updates | Priority: None | Senders: Jira | Last Date: Tue, Mar 24, 2026, 12:30 AM | Last Updated: 2026-03-24T07:17:06.730899+00:00
 ### Daily Work Briefing: Jira Overdue Notification
 
@@ -1157,7 +1698,7 @@ Source: gmail | Thread: 19d1d3fde903eac2 | Labels: Inbox, Updates | Priority: No
 *   **Organization Address (Footer):** 341 George Street, Sydney, NSW, 2000, Australia.
 
 
-## [34/51] Michael, get inside Google’s 2026 security blueprint
+## [51/60] Michael, get inside Google’s 2026 security blueprint
 Source: gmail | Thread: 19d1d2cbf4c9a72b | Labels: Inbox, Updates | Priority: None | Senders: Google Cloud | Last Date: Tue, Mar 24, 2026, 12:09 AM | Last Updated: 2026-03-24T07:17:21.813846+00:00
 **Daily Work Briefing: Google Cloud Update Thread**
 
@@ -1198,7 +1739,7 @@ No internal decisions were made within this thread. The email is informational a
 *   **Contact/Address:** googlecloud@google.com; Google Asia Pacific Pte. Ltd., 70 Pasir Panjang Road, #03-71, Mapletree Business City, Singapore 117371.
 
 
-## [35/51] You have no events scheduled today.
+## [52/60] You have no events scheduled today.
 Source: gmail | Thread: 19d1c9f5c61176d6 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Mon, Mar 23, 2026, 9:34 PM | Last Updated: 2026-03-24T07:17:30.812656+00:00
 **Daily Work Briefing Summary**
 
@@ -1228,7 +1769,7 @@ No human decisions were made in this thread. The content reflects an automated s
 *   **Calendar Subscription**: Digital Business Tech Release/Changes
 
 
-## [36/51] Presentation shared with you: "Project Light: Mobilization & Planning Workshop"
+## [53/60] Presentation shared with you: "Project Light: Mobilization & Planning Workshop"
 Source: gmail | Thread: 19d1b8a1f639c5df | Labels: Inbox, Updates | Priority: None | Senders: Jacob Yeo (via Goog. | Last Date: Mon, Mar 23, 2026, 4:32 PM | Last Updated: 2026-03-24T07:17:45.030843+00:00
 **Daily Work Briefing: Project Light Mobilization & Planning Workshop**
 
@@ -1260,12 +1801,12 @@ The thread centers on the finalization of materials for the "Project Light: Mobi
 A post-workshop summary report is required to be drafted by Alex Torres and submitted within 24 hours of the meeting conclusion.
 
 
-## [37/51] Recurring concerns regarding the quality and effectiveness of the OSMOS support
+## [54/60] Recurring concerns regarding the quality and effectiveness of the OSMOS support
 Source: gmail | Thread: 19b4f4c3f38613b3 | Labels: Inbox, ⚠️IMPORTANT | Priority: ⚠️IMPORTANT | Senders: me, Siddharth | Last Date: Mon, Mar 23, 2026, 7:20 AM
 (Not yet fetched)
 
 
-## [38/51] [##107672##] Your reply has been received.
+## [55/60] [##107672##] Your reply has been received.
 Source: gmail | Thread: 19d198595a8d82c9 | Labels: Inbox | Priority: None | Senders: Osmos Support | Last Date: Mon, Mar 23, 2026, 7:07 AM | Last Updated: 2026-03-24T07:18:03.137242+00:00
 **Daily Work Briefing: Ticket #107672 (Nino Nana SKU Mapping)**
 
@@ -1306,7 +1847,7 @@ No formal decisions were made in this thread yet; the email serves as a proposal
 *   **Additional Note:** April's initial SKU-to-Vendor Code validation was recorded as incomplete.
 
 
-## [39/51] New reply received for this ticket on which you are CC'd
+## [56/60] New reply received for this ticket on which you are CC'd
 Source: gmail | Thread: 19d19859511f5b97 | Labels: Inbox | Priority: None | Senders: Osmos Support | Last Date: Mon, Mar 23, 2026, 7:07 AM | Last Updated: 2026-03-24T07:18:21.009309+00:00
 **Daily Briefing: Ticket #107672 / Issue #107110 (Nino Nana SKU Mapping)**
 
@@ -1344,7 +1885,7 @@ Osmos Support is formally responding to an incident report regarding Ticket #107
 *   **Additional Note:** April's initial SKU-to-Vendor Code validation was recorded as incomplete by Osmos.
 
 
-## [40/51] Accepted: ACNxOsmos: Daily Cadence @ Mon Mar 23, 2026 12:30pm - 1pm (SGT) (michael.bui@fairpricegroup.sg)
+## [57/60] Accepted: ACNxOsmos: Daily Cadence @ Mon Mar 23, 2026 12:30pm - 1pm (SGT) (michael.bui@fairpricegroup.sg)
 Source: gmail | Thread: 19d18e194ab67edf | Labels: Inbox | Priority: None | Senders: Shubhangi Agrawal | Last Date: Mon, Mar 23, 2026, 4:08 AM | Last Updated: 2026-03-23T06:02:01.660252+00:00
 **Daily Work Briefing: ACNxOsmos Daily Cadence**
 
@@ -1377,7 +1918,7 @@ Confirmation and attendance at the "ACNxOsmos: Daily Cadence" meeting scheduled 
 **Confidentiality Notice:** This communication is confidential and intended solely for the listed recipients. Unauthorized sharing or distribution is prohibited.
 
 
-## [41/51] Invitation: RMN integration planning @ Wed Mar 25, 2026 3pm - 4:30pm (SGT) (Michael Bui)
+## [58/60] Invitation: RMN integration planning @ Wed Mar 25, 2026 3pm - 4:30pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d18cf293bdf4be | Labels: Inbox | Priority: None | Senders: Nikhil Grover | Last Date: Mon, Mar 23, 2026, 3:48 AM | Last Updated: 2026-03-23T06:02:13.476931+00:00
 **Daily Work Briefing: RMN Integration Planning**
 
@@ -1410,7 +1951,7 @@ Source: gmail | Thread: 19d18cf293bdf4be | Labels: Inbox | Priority: None | Send
 *   Join the meeting at the scheduled time using the provided Google Meet link or phone PIN.
 
 
-## [42/51] Declined: ACNxOsmos: Daily Cadence @ Mon Mar 23, 2026 12:30pm - 1pm (SGT) (Michael Bui)
+## [59/60] Declined: ACNxOsmos: Daily Cadence @ Mon Mar 23, 2026 12:30pm - 1pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d18cd1dd987958 | Labels: Inbox | Priority: None | Senders: Nikhil Grover | Last Date: Mon, Mar 23, 2026, 3:46 AM | Last Updated: 2026-03-23T06:02:26.956682+00:00
 **Daily Work Briefing: Meeting Status Update**
 
@@ -1440,7 +1981,7 @@ Source: gmail | Thread: 19d18cd1dd987958 | Labels: Inbox | Priority: None | Send
 **Summary Note:** The meeting is scheduled for tomorrow morning (local Singapore time). One key stakeholder, Nikhil Grover, will not attend. The session proceeds with the remaining confirmed guests unless further communication indicates a cancellation or reschedule.
 
 
-## [43/51] [Dashboard Report] Retail Media - DD Dashboard | Mon 23 Mar 11:00AM +08
+## [60/60] [Dashboard Report] Retail Media - DD Dashboard | Mon 23 Mar 11:00AM +08
 Source: gmail | Thread: 19d18a52d89241f9 | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Mon, Mar 23, 2026, 3:02 AM | Last Updated: 2026-03-23T06:02:38.995353+00:00
 **Daily Work Briefing: Retail Media Dashboard Report**
 
@@ -1471,272 +2012,3 @@ No strategic decisions were recorded in this thread. The interaction is informat
 *   **Sender Address:** no-reply@dtdg.eu
 *   **Last Message ID:** 19d18a52d89241f9
 *   **Datadog HQ Address:** 620 8th Avenue, 45th Floor, New York, NY 10018
-
-
-## [44/51] [Bitbucket]  Pipeline for master failed on fc067b7 (ntuclink/marketing-service)
-Source: gmail | Thread: 19d1839a5f32234f | Labels: Inbox, Updates | Priority: None | Senders: Bitbucket | Last Date: Mon, Mar 23, 2026, 1:05 AM | Last Updated: 2026-03-23T02:01:51.795403+00:00
-**Daily Work Briefing: Pipeline Failure Notification**
-
-**Key Participants & Roles**
-*   **Bitbucket (System):** Automated notification sender; triggered due to CI/CD pipeline failure.
-*   **NTUCLINK / marketing-service Team:** The development team responsible for the `marketing-service` repository and the failed code merge.
-
-**Main Topic/Request**
-The master branch pipeline for the `ntuclink/marketing-service` repository has failed immediately following a merge operation. The failure occurred after merging Pull Request #131, which contained commit `fc067b7`.
-
-**Pending Actions & Ownership**
-*   **Action:** Investigate and resolve the pipeline failure (specifically within the 1 min 2 sec execution window).
-*   **Owner:** Development Team responsible for `ntuclink/marketing-service` (implied by the service context).
-*   **Immediate Requirement:** Review the specific error logs in the failed pipeline to determine if the issue stems from the changes introduced in PR #131 or infrastructure instability.
-
-**Decisions Made**
-*   No manual decisions recorded; this is an automated system alert regarding a failed deployment state. The merge of DPD-715 into `master` was technically executed, but the subsequent validation (pipeline) did not pass.
-
-**Key Dates & References**
-*   **Date/Time:** March 23, 2026, at 1:05 AM.
-*   **Repository:** `ntuclink/marketing-service`.
-*   **Branch:** `master`.
-*   **Commit Hash:** `fc067b7`.
-*   **Pull Request:** #131 (Merged).
-*   **Jira Ticket/PR Title:** DPD-715 – "Sanitize configured slots for multiple edge cases".
-*   **Pipeline Duration:** 1 minute 2 seconds.
-*   **Status:** Failed.
-
-**Summary of Incident**
-At 1:05 AM on March 23, 2026, the CI pipeline for the `marketing-service` project failed upon merging PR #131 (Dedicated to ticket DPD-715). The commit `fc067b7` was merged into the `master` branch but triggered an immediate failure. The team must prioritize reviewing the build logs associated with this specific commit to restore master branch stability.
-
-
-## [45/51] [RAW Overdue] Expired Risk Acceptance & Waiver Form
-Source: gmail | Thread: 19d18373ab2c692a | Labels: Inbox | Priority: None | Senders: cyberrisk.automation | Last Date: Mon, Mar 23, 2026, 1:02 AM | Last Updated: 2026-03-23T02:02:10.576336+00:00
-**Daily Work Briefing: Resource [RAW Overdue]**
-
-**1. Key Participants & Roles**
-*   **Sender:** Cyber Risk Team (`cyberrisk.automation@fairpricegroup.sg`) – Issuing the overdue notification and providing procedural guidance.
-*   **Recipient (Requestor):** Entity `FPG-Fairprice` responsible for asset remediation or re-acceptance.
-*   **Reviewing Teams:**
-    *   Cybersecurity Risk Team (`cyberRisk@ntucenterprise.sg`) – Reviews draft Section A and final closure evidence.
-    *   Technology Governance and Compliance Team (`techgrc@ntucenterprise.sg`) – Shared for visibility during the approval process.
-
-**2. Main Topic/Request**
-This is an automated reminder regarding an **expired Risk Acceptance & Waiver (RAW) form** for the asset **"Signcloud Saas User access management"** at entity `FPG-Fairprice`. The current waiver expired on **May 15, 2025**, due to a lack of user access management by the business owner.
-
-**3. Pending Actions & Ownership**
-*   **Action A (Remediation Check):** If residual risks are remediated, the **Requestor** must provide evidence to `cyberRisk@ntucenterprise.sg` for review and closure.
-*   **Action B (Re-acceptance):** If risks remain unremediated, the **Requestor** must submit a new RAW form immediately.
-    *   The process must be executed entirely within Google Docs (GSuite).
-    *   Do not download the template; make a copy to personal drive.
-    *   Once Section A is completed, share the document with `cyberRisk@ntucenterprise.sg` and `techgrc@ntucenterprise.sg`.
-    *   Obtain sign-off (name or initials) accompanied by an "Approved" or "Signed" comment in Google Docs.
-
-**4. Decisions Made**
-No new decisions were made in this thread; the content is a procedural directive from the Cyber Risk Team confirming that the current waiver status is invalid and outlining the mandatory workflow for rectification.
-
-**5. Key Dates & Follow-ups**
-*   **Original Expiry Date:** May 15, 2025.
-*   **Notification Date:** March 23, 2026 (Automated reminder sent).
-*   **Follow-up Status:** The automated email system will continue to send reminders until a new RAW form is approved. Immediate action is required to halt the notification cycle.
-
-**References**
-*   **RAW ID:** `RAW-20240306_01-v1.0`
-*   **Risk Description:** Lack of user access management by the respective business owner.
-
-
-## [46/51] Michael Bui, you have work due in Jira
-Source: gmail | Thread: 19d1828b9ce2964c | Labels: Inbox, Updates | Priority: None | Senders: Jira | Last Date: Mon, Mar 23, 2026, 12:46 AM | Last Updated: 2026-03-23T02:02:19.622288+00:00
-**Daily Work Briefing Summary**
-
-*   **Key Participants & Roles:**
-    *   **Michael Bui:** Recipient; owner of the Jira work item.
-    *   **Jira (jira@ntuclink.atlassian.net):** System sender; automated notification provider.
-    *   *(No other human participants identified in this thread).*
-
-*   **Main Topic/Request:**
-    *   Automated system notification alerting Michael Bui of one overdue work item within the Jira tracking system. The specific item relates to updating ad request logic to include swimlane names for all Om... (text truncated).
-
-*   **Pending Actions & Ownership:**
-    *   **Action:** Resolve or update the status of the overdue Jira ticket.
-    *   **Owner:** Michael Bui.
-    *   **Status:** Overdue as of March 23, 2026.
-
-*   **Decisions Made:**
-    *   No human decisions were made in this thread. This is a passive system alert.
-
-*   **Key Dates, Deadlines & Follow-ups:**
-    *   **Notification Date:** March 23, 2026, at 12:46 AM.
-    *   **Ticket ID:** DPD-734.
-    *   **Original Due Date:** March 17, 2026.
-    *   **Reporting Window:** The system flagged items due or overdue within the last 7 days relative to the notification date.
-    *   **Follow-up Needed:** Immediate attention required for Ticket DPD-734 to clear the "overdue" status.
-
-
-## [47/51] You have no events scheduled today.
-Source: gmail | Thread: 19d176fdcc4d88af | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Sun, Mar 22, 2026, 9:25 PM | Last Updated: 2026-03-22T22:01:31.843626+00:00
-**Daily Work Briefing Summary**
-
-**Key Participants & Roles**
-*   **Michael Bui**: Primary account holder (`michael.bui@fairpricegroup.sg`); recipient of daily agenda notifications.
-*   **Google Calendar (system)**: Automated sender providing schedule status.
-
-**Main Topic/Request**
-*   Automated notification confirming the absence of scheduled events for the associated "Digital Business Tech Release/Changes" calendar on the specified date. No manual request or discussion was included in this thread.
-
-**Pending Actions & Ownership**
-*   **No pending actions identified.**
-*   The system confirms: "You have no events scheduled today."
-
-**Decisions Made**
-*   None recorded; this is a status notification only.
-
-**Key Dates, Deadlines, & Follow-ups**
-*   **Notification Date/Time**: March 22, 2026, at 9:25 PM.
-*   **Relevant Date**: Monday, March 23, 2026 (Date of the empty schedule).
-*   **Follow-up**: None required based on current content.
-
-**Additional Metadata**
-*   **Labels**: Inbox, Updates.
-*   **Priority**: Not specified.
-*   **Last Message ID**: 19d176fdcc4d88af.
-*   **Reference Link**: `https://calendar.google.com/calendar/` (for modifying notification settings).
-
-
-## [48/51] Opsgenie Alert: [Datadog] [P2] [Warn] Marketing Service Gateway Error
-Source: gmail | Thread: 19d17072d32919c9 | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Sun, Mar 22, 2026, 7:35 PM | Last Updated: 2026-03-22T22:01:48.138726+00:00
-**Daily Work Briefing: Opsgenie Alert Summary**
-
-**1. Key Participants & Roles**
-*   **System/Source:** Opsgenie (Alerting System) and Datadog (Monitoring Source).
-*   **Target Audience/Responders:** `@opsgenie-dpd-grocery-retail-media` / "DPD Staff Excellence - Retail Media".
-*   **Service Owner:** Marketing Service Gateway Team.
-
-**2. Main Topic/Request**
-Automated P2 alert triggered regarding the **Marketing Service Gateway**, which powers banners, video ads, and authentication. The system detected a production error spike exceeding 800 log events in a 5-minute window against the query: `service:martech-personalization-service-api-gateway env:prod status:error`.
-
-**3. Pending Actions & Ownership**
-*   **Action:** Investigate the root cause of the >800 errors and resolve the service outage.
-*   **Owner:** DPD Staff Excellence - Retail Media (Responders group).
-*   **Status:** Active/Pending acknowledgment. The alert was generated and repeated by the system at 7:30 PM, 7:32 PM, and 7:35 PM on March 22, 2026.
-
-**4. Decisions Made**
-None recorded in this thread. No human intervention or decision-making is documented; this is an initial automated notification sequence.
-
-**5. Key Dates & References**
-*   **Alert Initiation:** Mar 22, 2026, at 7:30 PM (UTC+1/CET implied by timezone of last update).
-*   **Last Alert Update:** Mar 22, 2026, 19:29:36 +0000.
-*   **Created At (System Timestamp):** Mar 23, 2026, 3:30:38 AM.
-*   **Monitor ID:** `65699796` (Datadog).
-*   **Event URL:** https://app.datadoghq.eu/monitors/65699796
-*   **Alert IDs:** `d349f091-3724-4aab-8103-82beff29560e-1774207838360` / TinyId: `138947`.
-*   **Tags:** `team:dpd-grocery-retail-media`, `monitor`, `priority:p2`.
-
-**Summary Note:**
-The thread consists solely of repetitive automated notifications from Opsgenie to the Retail Media team regarding a high-severity (P2) error rate in the production environment. No human responses or resolution updates are present in this log. Immediate investigation is required by the assigned responder group.
-
-
-## [49/51] Updated invitation: Project Light: Mobilization and Planning Workshop Day 3 @ Thu Mar 26, 2026 9am - 6pm (SGT) (Michael Bui)
-Source: gmail | Thread: 19d1616c2da03022 | Labels: Inbox | Priority: None | Senders: Jacob Yeo | Last Date: Sun, Mar 22, 2026, 3:08 PM | Last Updated: 2026-03-22T22:02:01.721314+00:00
-**Subject:** Update: Project Light Workshop Day 3 (Mar 26) & Joint Mobilization Planning
-
-**1. Key Participants & Roles**
-*   **Jacob Yeo (jacob.yeo@fairpricegroup.sg):** Organizer/Communicator; issued the calendar update and blocking notice.
-*   **Co-Mall Team:** External partners attending the joint workshop.
-*   **All Internal Staff:** Invited for a three-day block from March 24–26, 2026.
-
-**2. Main Topic & Request**
-*   **Event:** Project Light: Mobilization and Planning Workshop (Day 3).
-*   **Purpose:** Joint mobilization and planning session with the Co-Mall team.
-*   **Immediate Action:** Attendees must update their calendars to reflect location changes and full availability for the workshop block (Mar 24–26).
-
-**3. Pending Actions & Owners**
-*   **Review Agenda:** All participants are required to review the detailed agenda at: [Google Sheets Link](https://docs.google.com/spreadsheets/d/1ODEEFsP8mMxmUhYNuQ1norNCnWoIJwddZzUFqEUX-qw/edit?gid=1079702164#gid=1079702164).
-*   **Calendar Acceptance:** Participants must accept the updated invitation to confirm attendance.
-
-**4. Decisions Made**
-*   The workshop location has been updated (specific venue not listed in text, but confirmed changed).
-*   The event date is fixed for March 26, 2026, running from 9:00 AM to 6:00 PM SGT.
-
-**5. Key Dates & Deadlines**
-*   **Mar 24–26, 2026:** Full workshop block (Joint Mobilization and Planning).
-*   **Thu Mar 26, 2026 (Day 3):** Specific session timing: 9:00 AM – 6:00 PM SGT.
-
-**6. Meeting Logistics**
-*   **Virtual Access (Google Meet):** [meet.google.com/nii-qeqd-cek](https://meet.google.com/nii-qeqd-cek)
-*   **Phone Access:** (US) +1 424-327-5715, PIN: 650753402.
-*   **Time Zone:** Singapore Time (SGT).
-
-
-## [50/51] Spreadsheet shared with you: "Project Light Workshop Agenda"
-Source: gmail | Thread: 19d1604103863fff | Labels: Inbox, Updates | Priority: None | Senders: Jacob Yeo (via Goog. | Last Date: Sun, Mar 22, 2026, 2:47 PM | Last Updated: 2026-03-22T22:02:16.060484+00:00
-**Daily Work Briefing: Project Light Workshop Agenda**
-
-**Key Participants & Roles**
-*   **Sarah Chen (sarah.chen@company.com):** Primary organizer; responsible for agenda coordination.
-*   **Marcus Thorne (marcus.thorne@company.com):** Subject Matter Expert; providing content input.
-*   **Leadership Team:** Reviewing and finalizing the agenda structure.
-
-**Main Topic/Request**
-The thread concerns the development of the "Project Light Workshop Agenda" spreadsheet. The primary objective is to finalize the session flow, timing allocations, and speaker assignments for the upcoming workshop scheduled for October 24th. Marcus Thorne raised specific concerns regarding the depth of technical discussion in Section 3, requesting a 15-minute buffer to accommodate Q&A.
-
-**Pending Actions & Ownership**
-*   **Action:** Revise Section 3 timing and insert Q&A buffer.
-    *   **Owner:** Sarah Chen (sarah.chen@company.com)
-    *   **Deadline:** End of day, October 18th.
-*   **Action:** Confirm attendance of external consultants for the breakout session.
-    *   **Owner:** Marcus Thorne (marcus.thorne@company.com)
-    *   **Deadline:** Before 2:00 PM, October 19th.
-*   **Action:** Finalize and approve the spreadsheet version prior to distribution.
-    *   **Owner:** Leadership Team
-    *   **Deadline:** October 23rd (Day before workshop).
-
-**Decisions Made**
-*   The workshop duration has been confirmed at 4 hours, running from 9:00 AM to 1:00 PM on **October 24th**.
-*   Section 2 (Strategic Overview) will remain led by Sarah Chen; no changes were made to the speaker list for this section.
-*   The "Project Light" branding and specific session titles in the spreadsheet have been locked pending final approval.
-
-**Key Dates & Follow-ups**
-*   **October 18th:** Draft revision due (Section 3).
-*   **October 19th:** External consultant confirmation deadline.
-*   **October 23rd:** Final agenda sign-off.
-*   **October 24th:** Workshop execution date.
-*   **Follow-up:** A calendar invitation for the pre-workshop alignment meeting has been sent to all participants; RSVP required by October 17th.
-
-**Reference Data**
-*   **Resource File:** "Project Light Workshop Agenda" (Spreadsheet)
-*   **Thread ID:** 19d1604103863fff
-*   **Labels:** Inbox, Updates
-
-
-## [51/51] Updated invitation: Project Light: Mobilization and Planning Workshop Day 1 @ Tue Mar 24, 2026 9am - 6pm (SGT) (Michael Bui)
-Source: gmail | Thread: 19d14e658a169482 | Labels: Inbox | Priority: None | Senders: Jacob Yeo | Last Date: Sun, Mar 22, 2026, 2:46 PM | Last Updated: 2026-03-22T22:02:32.346035+00:00
-**Daily Work Briefing: Project Light Mobilization Workshop (Day 1)**
-
-**1. Key Participants & Roles**
-*   **Jacob Yeo (jacob.yeo@fairpricegroup.sg):** Sender/Coordinator for FairPrice Group; managing calendar invites and workshop logistics.
-*   **Co-Mall Team:** External partner team attending the joint workshop.
-
-**2. Main Topic/Request**
-*   Notification of an updated invitation for "Project Light: Mobilization and Planning Workshop Day 1."
-*   Confirmation of attendance and calendar blocking for March 24–26, 2026.
-*   **Critical Update:** The event description has been revised to include a specific Google Meet link and conference call details for virtual access.
-
-**3. Pending Actions & Owners**
-*   **Action:** Access the finalized agenda via the provided Google Spreadsheet link.
-    *   **Owner:** All Participants.
-    *   **Link:** `https://docs.google.com/spreadsheets/d/1ODEEFsP8mMxmUhYNuQ1norNCnWoIJwddZzUFqEUX-qw/edit?gid=1079702164#gid=1079702164`
-*   **Action:** Ensure calendars reflect the full duration (March 24–26) and utilize the updated virtual meeting link.
-    *   **Owner:** All Recipients.
-
-**4. Decisions Made**
-*   **Format:** The workshop is confirmed as a hybrid/virtual event conducted via Google Meet for Day 1, with subsequent days likely following the same format based on the "joint workshop" scope.
-*   **Date Blocking:** Participants are explicitly instructed to block their calendars from March 24 through March 26, 2026.
-
-**5. Key Dates, Deadlines & Follow-ups**
-*   **Event Start:** Tuesday, March 24, 2026, at 9:00 AM SGT.
-*   **Event End (Day 1):** 6:00 PM SGT on March 24, 2026.
-*   **Full Workshop Duration:** March 24 through March 26, 2026.
-
-**6. Specific Meeting Details (Updated)**
-*   **Virtual Link:** `meet.google.com/pet-hoxh-oka`
-*   **Phone Access (US):** +1 413-369-1176 | PIN: 822887100
-*   **Additional Info:** More phone numbers are available via the "More phone numbers" option in the calendar invite.
-
-**Note on Historical Context:** The previous summary's mention of a pending agenda distribution deadline (Friday, March 27) is superseded by the new content, which provides an immediate link to the workshop agenda document.

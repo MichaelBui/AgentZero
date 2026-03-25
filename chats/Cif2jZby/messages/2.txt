@@ -1,0 +1,39 @@
+The trends that will shape AI and tech in 2026 - IBM
+https://www.ibm.com/think/news/ai-tech-trends-predictions-2026
+And the hardware race won’t only be about GPUs anymore. “GPUs will remain king, but ASIC-based accelerators, chiplet designs, analog inference and even quantum-assisted optimizers will mature,” El Maghraoui said.
+
+Three new AI breakthroughs shaping 2026: AI trends | Deloitte US
+https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/blogs/pulse-check-series-latest-ai-developments/new-ai-breakthroughs-ai-trends.html
+We'll continue to monitor these and other emerging trends to share updated predictions for the coming year in future posts. To find out the latest research, market trends, and viewpoints on innovative technologies that are shaping our future, subscribe to the Deloitte AI Institute newsletter and follow the AI Institute for future blog posts ...
+
+Tech Trends 2026 | Deloitte Insights
+https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends.html
+From June to July 2025, Deloitte ... technologies across industries. Gartner, “Gartner predicts over 40 % of agentic AI projects will be canceled by end of 2027,” press release, June 25, 2025....
+
+What's next for AI in 2026 | MIT Technology Review
+https://www.technologyreview.com/2026/01/05/1130662/whats-next-for-ai-in-2026/
+We got a glimpse of how this could work in May, when Google DeepMind revealed AlphaEvolve, a system that used the firm’s Gemini LLM to come up with new algorithms for solving unsolved problems. The breakthrough was to combine Gemini with an evolutionary algorithm that checked its suggestions, picked the best ones, and fed them back into the LLM to make them even better.
+
+6 AI breakthroughs that will define 2026 | InfoWorld
+https://www.infoworld.com/article/4108092/6-ai-breakthroughs-that-will-define-2026.html
+Here are six predictions for how AI capabilities will evolve in 2026.
+
+17 predictions for AI in 2026
+https://www.understandingai.org/p/17-predictions-for-ai-in-2026
+But I predict the context lengths of general-purpose frontier models will stay about the same over the next year. Timothy B. Lee · The year 2027 has acquired a totemic status in some corners of the AI world.
+
+Five Trends in AI and Data Science for 2026 | Thomas H. Davenport and Randy Bean | MIT Sloan Management Review
+https://sloanreview.mit.edu/article/five-trends-in-ai-and-data-science-for-2026/
+Agents turned out to be the most-hyped trend since, well, generative AI. GenAI now resides in the Gartner trough of disillusionment, which we predict agents will fall into in 2026.
+
+Six AI Predictions for 2026
+https://about.att.com/blogs/2025/2026-ai-predictions.html
+Here’s what I think 2026 is going to hold for AI, increasing its impact on technology, businesses and society. These predictions are largely driven by two technologies combined: AI agents and AI-fueled coding.
+
+10 AI predictions for 2026 | CIO
+https://www.cio.com/article/3630070/12-ai-predictions-for-2025.html
+Last year, we saw the integration ... year gathers pace, we'll see agentic AI move from pilots into production, the emergence of AI payments, and AI redefine how we think of user interfaces....
+
+10 AI Predictions For 2026 - Forbes
+https://www.forbes.com/sites/robtoews/2025/12/22/10-ai-predictions-for-2026/
+Rob Toews's stories. I write about the big picture of artificial intelligence.
