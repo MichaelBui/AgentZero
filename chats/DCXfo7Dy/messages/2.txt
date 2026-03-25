@@ -1,8 +1,234 @@
-[2026-03-25T06:46:31+0000] [Summarizing 11/68] [QE <-> All Tribes]: AI summarizing (3 messages)...
-[2026-03-25T06:47:04+0000] [Summarized 11/68] [QE <-> All Tribes]: done
-[2026-03-25T06:47:04+0000] [Summarizing 12/68] [BCRS Firefighting Group]: AI summarizing (2 messages)...
-[2026-03-25T06:47:56+0000] [Summarized 12/68] [BCRS Firefighting Group]: done
-[2026-03-25T06:47:56+0000] [Summarizing 13/68] [Team Starship]: AI summarizing (2 messages)...
-(venv) root@80e3e99df9ff:/a0/usr/workdir#
-
-[SYSTEM: Returning control to agent after 300 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+/a0/usr/workdir/gchat-debug.log 231 lines
+>>>
+  1 [2026-03-25T14:30:53+0000] ============================================================
+  2 [2026-03-25T14:30:53+0000] STATUS: STARTED - GChat Reader
+  3 [2026-03-25T14:30:53+0000] output=/a0/usr/workdir/gchat-output.md, debug=/a0/usr/workdir/gchat-debug.log
+  4 [2026-03-25T14:30:53+0000] ============================================================
+  5 [2026-03-25T14:30:53+0000] Connecting to browser at http://192.168.1.11:9223...
+  6 [2026-03-25T14:30:53+0000] Connecting to Chrome at http://192.168.1.11:9223...
+  7 [2026-03-25T14:30:54+0000] Connected (124.0.6367.78), 2 tab(s)
+  8 [2026-03-25T14:30:54+0000] Reusing tab: https://chat.google.com/app/home
+  9 [2026-03-25T14:30:54+0000] Browser connected.
+ 10 [2026-03-25T14:30:59+0000] Feed: 64 item(s) within 2 day(s)
+ 11 [2026-03-25T14:30:59+0000] 
+ 12 Processing (target: 200, feed: 64, early-stop: 3)...
+ 13 
+ 14 [2026-03-25T14:30:59+0000] [Fetching 1/64] #dd-dpd-engage-alert... (summarization pending)
+ 15 [2026-03-25T14:31:05+0000]   16 message container(s)
+ 16 [2026-03-25T14:31:28+0000]   Hit scroll limit (5)
+ 17 [2026-03-25T14:31:28+0000]   -> 16 message(s) within 2 day(s)
+ 18 [2026-03-25T14:31:28+0000]   -> 16 new message(s) cached
+ 19 [2026-03-25T14:31:28+0000] [Fetched 1/64] #dd-dpd-engage-alert - queued for summarization
+ 20 [2026-03-25T14:31:28+0000] [Fetching 2/64] [Leads] (Ecom/Omni) Digital Product Development... (summarization pending)
+ 21 [2026-03-25T14:31:34+0000]   3 message container(s) (thread: o4m2XO8j1K0)
+ 22 [2026-03-25T14:31:39+0000]   Reached top after 1 scroll(s)
+ 23 [2026-03-25T14:31:39+0000]   Expanded 2 bar(s)
+ 24 [2026-03-25T14:31:39+0000]   -> 26 message(s) within 2 day(s)
+ 25 [2026-03-25T14:31:39+0000]   -> 26 new message(s) cached
+ 26 [2026-03-25T14:31:39+0000] [Fetched 2/64] [Leads] (Ecom/Omni) Digital Product Development - queued for summarization
+ 27 [2026-03-25T14:31:39+0000] [Fetching 3/64] Video & Product Ads Working Group... (summarization pending)
+ 28 [2026-03-25T14:31:45+0000]   3 message container(s) (thread: RZyBk6LBi14)
+ 29 [2026-03-25T14:31:46+0000]   Reached cutoff after 0 scroll(s)
+ 30 [2026-03-25T14:31:46+0000]   -> 10 message(s) within 2 day(s)
+ 31 [2026-03-25T14:31:46+0000]   -> 1 new message(s) cached
+ 32 [2026-03-25T14:31:46+0000] [Fetched 3/64] Video & Product Ads Working Group - queued for summarization
+ 33 [2026-03-25T14:31:46+0000] [Fetching 4/64] Google Drive... (summarization pending)
+ 34 [2026-03-25T14:31:52+0000]   20 message container(s)
+ 35 [2026-03-25T14:32:10+0000]   Reached cutoff after 0 scroll(s)
+ 36 [2026-03-25T14:32:10+0000]   -> 4 message(s) within 2 day(s)
+ 37 [2026-03-25T14:32:10+0000]   -> 4 new message(s) cached
+ 38 [2026-03-25T14:32:10+0000] [Fetched 4/64] Google Drive - queued for summarization
+ 39 [2026-03-25T14:32:10+0000] [Fetching 5/64] Nikhil Grover... (summarization pending)
+ 40 [2026-03-25T14:32:16+0000]   20 message container(s)
+ 41 [2026-03-25T14:32:38+0000]   Scroll early-stop: 5 consecutive cached messages
+ 42 [2026-03-25T14:32:38+0000]   -> 25 message(s) within 2 day(s)
+ 43 [2026-03-25T14:32:38+0000]   -> 4 new message(s) cached
+ 44 [2026-03-25T14:32:38+0000] [Fetched 5/64] Nikhil Grover - queued for summarization
+ 45 [2026-03-25T14:32:38+0000] [Fetching 6/64] Shopping Cart Notification... (summarization pending)
+ 46 [2026-03-25T14:32:45+0000]   16 message container(s)
+ 47 [2026-03-25T14:33:08+0000]   Hit scroll limit (5)
+ 48 [2026-03-25T14:33:08+0000]   -> 16 message(s) within 2 day(s)
+ 49 [2026-03-25T14:33:08+0000]   -> 12 new message(s) cached
+ 50 [2026-03-25T14:33:08+0000] [Fetched 6/64] Shopping Cart Notification - queued for summarization
+ 51 [2026-03-25T14:33:08+0000] [Fetching 7/64] fairnex-datadog-notification... (summarization pending)
+ 52 [2026-03-25T14:33:14+0000]   17 message container(s)
+ 53 [2026-03-25T14:33:37+0000]   Hit scroll limit (5)
+ 54 [2026-03-25T14:33:37+0000]   -> 17 message(s) within 2 day(s)
+ 55 [2026-03-25T14:33:37+0000]   -> 4 new message(s) cached
+ 56 [2026-03-25T14:33:37+0000] [Fetched 7/64] fairnex-datadog-notification - queued for summarization
+ 57 [2026-03-25T14:33:37+0000] [Fetching 8/64] #dd-dpd-grocery-alert... (summarization pending)
+ 58 [2026-03-25T14:33:43+0000]   16 message container(s)
+ 59 [2026-03-25T14:34:01+0000]   Reached cutoff after 0 scroll(s)
+ 60 [2026-03-25T14:34:01+0000]   -> 15 message(s) within 2 day(s)
+ 61 [2026-03-25T14:34:01+0000]   -> 2 new message(s) cached
+ 62 [2026-03-25T14:34:01+0000] [Fetched 8/64] #dd-dpd-grocery-alert - queued for summarization
+ 63 [2026-03-25T14:34:01+0000] [Fetching 9/64] Sneha Parab... (summarization pending)
+ 64 [2026-03-25T14:34:07+0000]   20 message container(s)
+ 65 [2026-03-25T14:34:24+0000]   Reached cutoff after 0 scroll(s)
+ 66 [2026-03-25T14:34:24+0000]   -> 2 message(s) within 2 day(s)
+ 67 [2026-03-25T14:34:24+0000]   -> 1 new message(s) cached
+ 68 [2026-03-25T14:34:24+0000] [Fetched 9/64] Sneha Parab - queued for summarization
+ 69 [2026-03-25T14:34:24+0000] [Fetching 10/64] DPD AI Guild... (summarization pending)
+ 70 [2026-03-25T14:34:30+0000]   3 message container(s) (thread: 9rNMaZEmMZE)
+ 71 [2026-03-25T14:34:32+0000]   Reached top after 1 scroll(s)
+ 72 [2026-03-25T14:34:32+0000]   -> 6 message(s) within 2 day(s)
+ 73 [2026-03-25T14:34:33+0000]   -> 1 new message(s) cached
+ 74 [2026-03-25T14:34:33+0000] [Fetched 10/64] DPD AI Guild - queued for summarization
+ 75 [2026-03-25T14:34:33+0000] [Fetching 11/64] #dd-fpg-watchdog-alert... (summarization pending)
+ 76 [2026-03-25T14:34:38+0000]   16 message container(s)
+ 77 [2026-03-25T14:34:56+0000]   Reached cutoff after 0 scroll(s)
+ 78 [2026-03-25T14:34:56+0000]   -> 6 message(s) within 2 day(s)
+ 79 [2026-03-25T14:34:56+0000]   -> 1 new message(s) cached
+ 80 [2026-03-25T14:34:56+0000] [Fetched 11/64] #dd-fpg-watchdog-alert - queued for summarization
+ 81 [2026-03-25T14:34:56+0000] [Fetching 12/64] [Leads] (Ecom/Omni) Digital Product Development... (summarization pending)
+ 82 [2026-03-25T14:35:02+0000]   16 message container(s)
+ 83 [2026-03-25T14:35:19+0000]   Reached cutoff after 0 scroll(s)
+ 84 [2026-03-25T14:35:19+0000]   -> 5 message(s) within 2 day(s)
+ 85 [2026-03-25T14:35:19+0000]   -> 1 new message(s) cached
+ 86 [2026-03-25T14:35:19+0000] [Fetched 12/64] [Leads] (Ecom/Omni) Digital Product Development - queued for summarization
+ 87 [2026-03-25T14:35:19+0000] [Fetching 13/64] Miguel Ho Xian Da... (summarization pending)
+ 88 [2026-03-25T14:35:25+0000]   20 message container(s)
+ 89 [2026-03-25T14:35:42+0000]   Reached cutoff after 0 scroll(s)
+ 90 [2026-03-25T14:35:42+0000]   -> 4 message(s) within 2 day(s)
+ 91 [2026-03-25T14:35:43+0000]   -> 4 new message(s) cached
+ 92 [2026-03-25T14:35:43+0000] [Fetched 13/64] Miguel Ho Xian Da - queued for summarization
+ 93 [2026-03-25T14:35:43+0000] [Fetching 14/64] BCRS - UAT... (summarization pending)
+ 94 [2026-03-25T14:35:48+0000]   16 message container(s)
+ 95 [2026-03-25T14:36:06+0000]   Reached cutoff after 0 scroll(s)
+ 96 [2026-03-25T14:36:06+0000]   -> 2 message(s) within 2 day(s)
+ 97 [2026-03-25T14:36:06+0000]   -> 1 new message(s) cached
+ 98 [2026-03-25T14:36:06+0000] [Fetched 14/64] BCRS - UAT - queued for summarization
+ 99 [2026-03-25T14:36:06+0000] [Fetching 15/64] Project Light: Mobilization and Planning Workshop Day 3... (summarization pending)
+100 [2026-03-25T14:36:12+0000]   4 message container(s)
+101 [2026-03-25T14:36:30+0000]   Reached top after 1 scroll(s)
+102 [2026-03-25T14:36:30+0000]   -> 2 message(s) within 2 day(s)
+103 [2026-03-25T14:36:30+0000]   -> 2 new message(s) cached
+104 [2026-03-25T14:36:30+0000] [Fetched 15/64] Project Light: Mobilization and Planning Workshop Day 3 - queued for summarization
+105 [2026-03-25T14:36:30+0000] [Fetching 16/64] BCRS Firefighting Group... (summarization pending)
+106 [2026-03-25T14:36:30+0000] [Fetch skipped 16/64] BCRS Firefighting Group - unchanged (summarization pending)
+107 [2026-03-25T14:36:30+0000] [Fetching 17/64] RMN Leadership... (summarization pending)
+108 [2026-03-25T14:36:30+0000] [Fetch skipped 17/64] RMN Leadership - unchanged (summarization pending)
+109 [2026-03-25T14:36:30+0000] [Fetching 18/64] FP x Mirakl... (summarization pending)
+110 [2026-03-25T14:36:30+0000] [Fetch skipped 18/64] FP x Mirakl - unchanged (summarization pending)
+111 [2026-03-25T14:36:30+0000] 
+112   Early stop: 3 consecutive cached conversations. Skipping fetches, continuing scan...
+113 [2026-03-25T14:36:30+0000] [Fetching 19/64] [Leads] (Ecom/Omni) Digital Product Development... (summarization pending)
+114 [2026-03-25T14:36:30+0000] [Fetch skipped 19/64] [Leads] (Ecom/Omni) Digital Product Development - unchanged (summarization pending)
+115 [2026-03-25T14:36:30+0000] [Fetching 20/64] [Leads] (Ecom/Omni) Digital Product Development... (summarization pending)
+116 [2026-03-25T14:36:30+0000] [Fetch skipped 20/64] [Leads] (Ecom/Omni) Digital Product Development - unchanged (summarization pending)
+117 [2026-03-25T14:36:30+0000] [Fetching 21/64] FPG Everyone - General... (summarization pending)
+118 [2026-03-25T14:36:30+0000] [Fetch skipped 21/64] FPG Everyone - General - unchanged (summarization pending)
+119 [2026-03-25T14:36:30+0000] [Fetching 22/64] [Internal] (Ecom/Omni) Digital Product Development... (summarization pending)
+120 [2026-03-25T14:36:30+0000] [Fetch skipped 22/64] [Internal] (Ecom/Omni) Digital Product Development - unchanged (summarization pending)
+121 [2026-03-25T14:36:30+0000] [Fetching 23/64] [Internal] (Ecom/Omni) Digital Product Development... (summarization pending)
+122 [2026-03-25T14:36:30+0000] [Fetch skipped 23/64] [Internal] (Ecom/Omni) Digital Product Development - unchanged (summarization pending)
+123 [2026-03-25T14:36:30+0000] [Fetching 24/64] Project Light: Mobilization and Planning Workshop Day 1... (summarization pending)
+124 [2026-03-25T14:36:30+0000] [Fetch skipped 24/64] Project Light: Mobilization and Planning Workshop Day 1 - unchanged (summarization pending)
+125 [2026-03-25T14:36:30+0000] [Fetching 25/64] Project Light: Spotlight Topic - HIVE/Inventory - Mar 2... (summarization pending)
+126 [2026-03-25T14:36:30+0000] [Fetch skipped 25/64] Project Light: Spotlight Topic - HIVE/Inventory - Mar 2 - unchanged (summarization pending)
+127 [2026-03-25T14:36:30+0000] [Fetching 26/64] DPD x DPM... (summarization pending)
+128 [2026-03-25T14:36:30+0000] [Fetch skipped 26/64] DPD x DPM - unchanged (summarization pending)
+129 [2026-03-25T14:36:30+0000] [Fetching 27/64] [Leads] (Ecom/Omni) Digital Product Development... (summarization pending)
+130 [2026-03-25T14:36:30+0000] [Fetch skipped 27/64] [Leads] (Ecom/Omni) Digital Product Development - unchanged (summarization pending)
+131 [2026-03-25T14:36:30+0000] [Fetching 28/64] QE <-> All Tribes... (summarization pending)
+132 [2026-03-25T14:36:30+0000] [Fetch skipped 28/64] QE <-> All Tribes - unchanged (summarization pending)
+133 [2026-03-25T14:36:30+0000] [Fetching 29/64] Project Light Attack and Defence Leads... (summarization pending)
+134 [2026-03-25T14:36:30+0000] [Fetch skipped 29/64] Project Light Attack and Defence Leads - unchanged (summarization pending)
+135 [2026-03-25T14:36:30+0000] [Fetching 30/64] Vera, Alvin, Ravi, Gopalakrishna... (summarization pending)
+136 [2026-03-25T14:36:30+0000] [Fetch skipped 30/64] Vera, Alvin, Ravi, Gopalakrishna - unchanged (summarization pending)
+137 [2026-03-25T14:36:30+0000] [Fetching 31/64] [Prod Support] Ecom FFS Ops... (summarization pending)
+138 [2026-03-25T14:36:30+0000] [Fetch skipped 31/64] [Prod Support] Ecom FFS Ops - unchanged (summarization pending)
+139 [2026-03-25T14:36:30+0000] [Fetching 32/64] Alvin Choo... (summarization pending)
+140 [2026-03-25T14:36:30+0000] [Fetch skipped 32/64] Alvin Choo - unchanged (summarization pending)
+141 [2026-03-25T14:36:30+0000] [Fetching 33/64] #dpd-dba... (summarization pending)
+142 [2026-03-25T14:36:30+0000] [Fetch skipped 33/64] #dpd-dba - unchanged (summarization pending)
+143 [2026-03-25T14:36:30+0000] [Fetching 34/64] BCRS Firefighting Group... (summarization pending)
+144 [2026-03-25T14:36:30+0000] [Fetch skipped 34/64] BCRS Firefighting Group - unchanged (summarization pending)
+145 [2026-03-25T14:36:30+0000] [Fetching 35/64] BCRS Firefighting Group... (summarization pending)
+146 [2026-03-25T14:36:30+0000] [Fetch skipped 35/64] BCRS Firefighting Group - unchanged (summarization pending)
+147 [2026-03-25T14:36:30+0000] [Fetching 36/64] Team Starship... (summarization pending)
+148 [2026-03-25T14:36:30+0000] [Fetch skipped 36/64] Team Starship - unchanged (summarization pending)
+149 [2026-03-25T14:36:30+0000] [Fetching 37/64] PFM x Events/UID Martech Issues... (summarization pending)
+150 [2026-03-25T14:36:30+0000] [Fetch skipped 37/64] PFM x Events/UID Martech Issues - unchanged (summarization pending)
+151 [2026-03-25T14:36:30+0000] [Fetching 38/64] Digital Product Development {DPD}... (summarization pending)
+152 [2026-03-25T14:36:30+0000] [Fetch skipped 38/64] Digital Product Development {DPD} - unchanged (summarization pending)
+153 [2026-03-25T14:36:30+0000] [Fetching 39/64] Product x RMN x Platform... (summarization pending)
+154 [2026-03-25T14:36:30+0000] [Fetch skipped 39/64] Product x RMN x Platform - unchanged (summarization pending)
+155 [2026-03-25T14:36:30+0000] [Fetching 40/64] BCRS Production Deployment Planning Session - Mar 25... (summarization pending)
+156 [2026-03-25T14:36:30+0000] [Fetch skipped 40/64] BCRS Production Deployment Planning Session - Mar 25 - unchanged (summarization pending)
+157 [2026-03-25T14:36:30+0000] [Fetching 41/64] BCRS Working Group - OMNI... (summarization pending)
+158 [2026-03-25T14:36:30+0000] [Fetch skipped 41/64] BCRS Working Group - OMNI - unchanged (summarization pending)
+159 [2026-03-25T14:36:30+0000] [Fetching 42/64] BCRS Firefighting Group... (summarization pending)
+160 [2026-03-25T14:36:30+0000] [Fetch skipped 42/64] BCRS Firefighting Group - unchanged (summarization pending)
+161 [2026-03-25T14:36:30+0000] [Fetching 43/64] Project Light Attack and Defence Leads... (summarization pending)
+162 [2026-03-25T14:36:30+0000] [Fetch skipped 43/64] Project Light Attack and Defence Leads - unchanged (summarization pending)
+163 [2026-03-25T14:36:30+0000] [Fetching 44/64] Theo Adi... (summarization pending)
+164 [2026-03-25T14:36:30+0000] [Fetch skipped 44/64] Theo Adi - unchanged (summarization pending)
+165 [2026-03-25T14:36:30+0000] [Fetching 45/64] Chee Keong Ng... (summarization pending)
+166 [2026-03-25T14:36:30+0000] [Fetch skipped 45/64] Chee Keong Ng - unchanged (summarization pending)
+167 [2026-03-25T14:36:30+0000] [Fetching 46/64] 📢 COM Notifications... (summarization pending)
+168 [2026-03-25T14:36:30+0000] [Fetch skipped 46/64] 📢 COM Notifications - unchanged (summarization pending)
+169 [2026-03-25T14:36:30+0000] [Fetching 47/64] DPD x Platform Engineering... (summarization pending)
+170 [2026-03-25T14:36:30+0000] [Fetch skipped 47/64] DPD x Platform Engineering - unchanged (summarization pending)
+171 [2026-03-25T14:36:30+0000] [Fetching 48/64] RMN Notification... (summarization pending)
+172 [2026-03-25T14:36:30+0000] [Fetch skipped 48/64] RMN Notification - unchanged (summarization pending)
+173 [2026-03-25T14:36:30+0000] [Fetching 49/64] QE <-> All Tribes... (summarization pending)
+174 [2026-03-25T14:36:30+0000] [Fetch skipped 49/64] QE <-> All Tribes - unchanged (summarization pending)
+175 [2026-03-25T14:36:30+0000] [Fetching 50/64] ❗ Important Email... (summarization pending)
+176 [2026-03-25T14:36:30+0000] [Fetch skipped 50/64] ❗ Important Email - unchanged (summarization pending)
+177 [2026-03-25T14:36:30+0000] [Fetching 51/64] BCRS ECOMM SAP POSTING... (summarization pending)
+178 [2026-03-25T14:36:30+0000] [Fetch skipped 51/64] BCRS ECOMM SAP POSTING - unchanged (summarization pending)
+179 [2026-03-25T14:36:30+0000] [Fetching 52/64] [Prod Support] Marketplace... (summarization pending)
+180 [2026-03-25T14:36:30+0000] [Fetch skipped 52/64] [Prod Support] Marketplace - unchanged (summarization pending)
+181 [2026-03-25T14:36:30+0000] [Fetching 53/64] Release - FPG Back Office (Mon-Thurs)... (summarization pending)
+182 [2026-03-25T14:36:30+0000] [Fetch skipped 53/64] Release - FPG Back Office (Mon-Thurs) - unchanged (summarization pending)
+183 [2026-03-25T14:36:30+0000] [Fetching 54/64] BCRS Firefighting Group... (summarization pending)
+184 [2026-03-25T14:36:30+0000] [Fetch skipped 54/64] BCRS Firefighting Group - unchanged (summarization pending)
+185 [2026-03-25T14:36:30+0000] [Fetching 55/64] @omni-ops #standup - Mar 25... (summarization pending)
+186 [2026-03-25T14:36:30+0000] [Fetch skipped 55/64] @omni-ops #standup - Mar 25 - unchanged (summarization pending)
+187 [2026-03-25T14:36:30+0000] [Fetching 56/64] BCRS Firefighting Group... (summarization pending)
+188 [2026-03-25T14:36:30+0000] [Fetch skipped 56/64] BCRS Firefighting Group - unchanged (summarization pending)
+189 [2026-03-25T14:36:30+0000] [Fetching 57/64] Project Light Attack and Defence Leads... (summarization pending)
+190 [2026-03-25T14:36:30+0000] [Fetch skipped 57/64] Project Light Attack and Defence Leads - unchanged (summarization pending)
+191 [2026-03-25T14:36:30+0000] [Fetching 58/64] Backend Chapter... (summarization pending)
+192 [2026-03-25T14:36:30+0000] [Fetch skipped 58/64] Backend Chapter - unchanged (summarization pending)
+193 [2026-03-25T14:36:30+0000] [Fetching 59/64] BCRS Firefighting Group... (summarization pending)
+194 [2026-03-25T14:36:30+0000] [Fetch skipped 59/64] BCRS Firefighting Group - unchanged (summarization pending)
+195 [2026-03-25T14:36:30+0000] [Fetching 60/64] BCRS Firefighting Group... (summarization pending)
+196 [2026-03-25T14:36:30+0000] [Fetch skipped 60/64] BCRS Firefighting Group - unchanged (summarization pending)
+197 [2026-03-25T14:36:30+0000] [Fetching 61/64] 📅 Daily summary... (summarization pending)
+198 [2026-03-25T14:36:30+0000] [Fetch skipped 61/64] 📅 Daily summary - unchanged (summarization pending)
+199 [2026-03-25T14:36:30+0000] [Fetching 62/64] Ping Pong 🏓... (summarization pending)
+200 [2026-03-25T14:36:30+0000] [Fetch skipped 62/64] Ping Pong 🏓 - unchanged (summarization pending)
+201 [2026-03-25T14:36:30+0000] [Fetching 63/64] Ping Pong 🏓... (summarization pending)
+202 [2026-03-25T14:36:30+0000] [Fetch skipped 63/64] Ping Pong 🏓 - unchanged (summarization pending)
+203 [2026-03-25T14:36:30+0000] [Fetching 64/64] Soo Ngee Tong... (summarization pending)
+204 [2026-03-25T14:36:30+0000] [Fetch skipped 64/64] Soo Ngee Tong - unchanged (summarization pending)
+205 [2026-03-25T14:36:30+0000] 
+206 Fetch done: 64 conversation(s) from 64 attempted (unchanged: 49, focus-skip: 0, errors: 0, early-stopped)
+207 [2026-03-25T14:36:30+0000] 
+208 Queuing 64 conversations for summarization (15 fetched, 49 unchanged)...
+209 [2026-03-25T14:36:30+0000] [Summarizing 1/64] [#dd-dpd-engage-alert]: AI summarizing (16 messages)...
+210 [2026-03-25T14:37:13+0000] [Summarized 1/64] [#dd-dpd-engage-alert]: done
+211 [2026-03-25T14:37:13+0000] [Summarizing 2/64] [[Leads] (Ecom/Omni) Digital Product Deve]: AI summarizing (26 messages)...
+212 [2026-03-25T14:37:34+0000] [Summarized 2/64] [[Leads] (Ecom/Omni) Digital Product Deve]: done
+213 [2026-03-25T14:37:34+0000] [Summarizing 3/64] [Video & Product Ads Working Group]: AI summarizing (1 messages)...
+214 [2026-03-25T14:37:57+0000] [Summarized 3/64] [Video & Product Ads Working Group]: done
+215 [2026-03-25T14:37:57+0000] [Summarizing 4/64] [Google Drive]: AI summarizing (4 messages)...
+216 [2026-03-25T14:38:32+0000] [Summarized 4/64] [Google Drive]: done
+217 [2026-03-25T14:38:32+0000] [Summarizing 5/64] [Nikhil Grover]: AI summarizing (4 messages)...
+218 [2026-03-25T14:38:56+0000] [Summarized 5/64] [Nikhil Grover]: done
+219 [2026-03-25T14:38:56+0000] [Summarizing 6/64] [Shopping Cart Notification]: AI summarizing (12 messages)...
+220 [2026-03-25T14:39:32+0000] [Summarized 6/64] [Shopping Cart Notification]: done
+221 [2026-03-25T14:39:32+0000] [Summarizing 7/64] [fairnex-datadog-notification]: AI summarizing (4 messages)...
+222 [2026-03-25T14:40:04+0000] [Summarized 7/64] [fairnex-datadog-notification]: done
+223 [2026-03-25T14:40:04+0000] [Summarizing 8/64] [#dd-dpd-grocery-alert]: AI summarizing (2 messages)...
+224 [2026-03-25T14:40:38+0000] [Summarized 8/64] [#dd-dpd-grocery-alert]: done
+225 [2026-03-25T14:40:38+0000] [Summarizing 9/64] [Sneha Parab]: AI summarizing (1 messages)...
+226 [2026-03-25T14:40:50+0000] [Summarized 9/64] [Sneha Parab]: done
+227 [2026-03-25T14:40:50+0000] [Summarizing 10/64] [DPD AI Guild]: AI summarizing (1 messages)...
+228 [2026-03-25T14:41:07+0000] [Summarized 10/64] [DPD AI Guild]: done
+229 [2026-03-25T14:41:07+0000] [Summarizing 11/64] [#dd-fpg-watchdog-alert]: AI summarizing (1 messages)...
+230 [2026-03-25T14:41:57+0000] [Summarized 11/64] [#dd-fpg-watchdog-alert]: done
+231 [2026-03-25T14:41:57+0000] [Summarizing 12/64] [[Leads] (Ecom/Omni) Digital Product Deve]: AI summarizing (1 messages)...
+<<<
