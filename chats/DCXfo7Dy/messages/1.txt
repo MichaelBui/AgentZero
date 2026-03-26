@@ -1,9 +1,13 @@
-=== Initial gchat-debug.log check ===
-(venv) root@80e3e99df9ff:/a0/usr/workdir# [2026-03-26T02:44:41+0000] [Summarized 36/37] [[Internal] (Ecom/Omni) Digital Product D]: using cached summary
-[2026-03-26T02:44:41+0000] [Summarized 37/37] [Project Light: Spotlight Topic - HIVE/In]: using cached summary
-[2026-03-26T02:44:41+0000] ============================================================
-[2026-03-26T02:44:41+0000] STATUS: COMPLETED - GChat Reader pipeline finished successfully (37 conversations)
-[2026-03-26T02:44:41+0000] ============================================================
+[2026-03-26T14:40:10+0000] [Summarized 79/85] [Release - FPG Back Office (Mon-Thurs)]: using cached summary
+[2026-03-26T14:40:10+0000] [Summarized 80/85] [BCRS Firefighting Group]: using cached summary
+[2026-03-26T14:40:10+0000] [Summarized 81/85] [@omni-ops #standup - Mar 25]: using cached summary
+[2026-03-26T14:40:10+0000] [Summarized 82/85] [BCRS Firefighting Group]: using cached summary
+[2026-03-26T14:40:10+0000] [Summarized 83/85] [Project Light Attack and Defence Leads]: using cached summary
+[2026-03-26T14:40:10+0000] [Summarized 84/85] [BCRS Firefighting Group]: using cached summary
+[2026-03-26T14:40:10+0000] [Summarized 85/85] [BCRS Firefighting Group]: using cached summary
+[2026-03-26T14:40:10+0000] ============================================================
+[2026-03-26T14:40:10+0000] STATUS: COMPLETED - GChat Reader pipeline finished successfully (85 conversations)
+[2026-03-26T14:40:10+0000] ============================================================
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
 
 [SYSTEM: Returning control to agent after 300 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
