@@ -1,20 +1,18 @@
 [gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:7394) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:7927) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[Fetching 1/5] Spreadsheet shared with you: "Product_Ads_Analytics_Demand_&_Supply_High_Demand_Search_Queries_Baby-Child-Toys_>_Infant-Formula--1__E(20260325)__ID(69c3eb4efa2a5efc3cc8cab7)" (summarization pending)
-[Fetched 1/5] Spreadsheet shared with you: "Product_Ads_Analytics_Demand_& - queued for summarization (pipeline running)
-[Fetching 2/5] Spreadsheet shared with you: "Product_Ads_Analytics_Demand_&_Supply_High_Demand_Search_Queries_Baby-Child-Toys_>_Infant-Formula--1__E(20260304)__ID(69a7bed626389de5bba51941)" (summarization pending)
-[Fetched 2/5] Spreadsheet shared with you: "Product_Ads_Analytics_Demand_& - queued for summarization (pipeline running)
-[Fetching 3/5] Urgent - PLA Impressions drop by 50% (summarization pending)
-[Fetched 3/5] Urgent - PLA Impressions drop by 50% - queued for summarization (pipeline running)
-[Fetching 4/5] [Search&Relevancy] Ticket - 4460996 Chatbot - App Issue (summarization pending)
-[Fetched 4/5] [Search&Relevancy] Ticket - 4460996 Chatbot - App Issue - queued for summarization (pipeline running)
-[Fetching 5/5] OOO - Travel 19th -27th Mar'26 Re: Urgent - PLA Impressions drop by 50% (summarization pending)
-[Fetched 5/5] OOO - Travel 19th -27th Mar'26 Re: Urgent - PLA Impressions  - queued for summarization (pipeline running)
+[Fetching 1/4] [GCP] New Service Account Key Created - a7a49005482a712992311bfb9b6be276b5103a07 (summarization pending)
+[Fetched 1/4] [GCP] New Service Account Key Created - a7a49005482a71299231 - queued for summarization (pipeline running)
+[Fetching 2/4] Invitation: [BCRS]-ECOM Flow Deployment @ Fri Mar 27, 2026 12am - 1am (SGT) (Michael Bui) (summarization pending)
+[Fetched 2/4] Invitation: [BCRS]-ECOM Flow Deployment @ Fri Mar 27, 2026 1 - queued for summarization (pipeline running)
+[Fetching 3/4] [RAW Overdue] Expired Risk Acceptance & Waiver Form (summarization pending)
+[Fetched 3/4] [RAW Overdue] Expired Risk Acceptance & Waiver Form - queued for summarization (pipeline running)
+[Fetching 4/4] Daily digest: updates from Tan Nhu Duong (summarization pending)
+[Fetched 4/4] Daily digest: updates from Tan Nhu Duong - queued for summarization (pipeline running)
 
 ============================================================
 [gmail_reader] ALL DONE - output file is ready for use.
-Fetched: 5 thread(s) | total scanned: 73
+Fetched: 4 thread(s) | total scanned: 77
 ============================================================
 
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
