@@ -1,18 +1,22 @@
 [gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:7927) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:8133) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[Fetching 1/4] [GCP] New Service Account Key Created - a7a49005482a712992311bfb9b6be276b5103a07 (summarization pending)
-[Fetched 1/4] [GCP] New Service Account Key Created - a7a49005482a71299231 - queued for summarization (pipeline running)
-[Fetching 2/4] Invitation: [BCRS]-ECOM Flow Deployment @ Fri Mar 27, 2026 12am - 1am (SGT) (Michael Bui) (summarization pending)
-[Fetched 2/4] Invitation: [BCRS]-ECOM Flow Deployment @ Fri Mar 27, 2026 1 - queued for summarization (pipeline running)
-[Fetching 3/4] [RAW Overdue] Expired Risk Acceptance & Waiver Form (summarization pending)
-[Fetched 3/4] [RAW Overdue] Expired Risk Acceptance & Waiver Form - queued for summarization (pipeline running)
-[Fetching 4/4] Daily digest: updates from Tan Nhu Duong (summarization pending)
-[Fetched 4/4] Daily digest: updates from Tan Nhu Duong - queued for summarization (pipeline running)
+[Fetching 1/6] Invitation: BCRS Regroup - Open Item Planning @ Thu Mar 26, 2026 4pm - 5pm (SGT) (Michael Bui) (summarization pending)
+[Fetched 1/6] Invitation: BCRS Regroup - Open Item Planning @ Thu Mar 26,  - queued for summarization (pipeline running)
+[Fetching 2/6] Re: [Not Virus Scanned] Re: FairPrice Performance Marketing Meta x Osmos (summarization pending)
+[Fetched 2/6] Re: [Not Virus Scanned] Re: FairPrice Performance Marketing  - queued for summarization (pipeline running)
+[Fetching 3/6] Data COE Org Announcement (summarization pending)
+[Fetched 3/6] Data COE Org Announcement - queued for summarization (pipeline running)
+[Fetching 4/6] [Dashboard Report] Retail Media - DD Dashboard | Thu 26 Mar 11:00AM +08 (summarization pending)
+[Fetched 4/6] [Dashboard Report] Retail Media - DD Dashboard | Thu 26 Mar  - queued for summarization (pipeline running)
+[Fetching 5/6] Declined: ACNxOsmos: Daily Cadence @ Thu Mar 26, 2026 1:30pm - 2pm (SGT) (michael.bui@fairpricegroup.sg) (summarization pending)
+[Fetched 5/6] Declined: ACNxOsmos: Daily Cadence @ Thu Mar 26, 2026 1:30pm - queued for summarization (pipeline running)
+[Fetching 6/6] Message from Group CEO: Leadership Team announcement (summarization pending)
+[Fetched 6/6] Message from Group CEO: Leadership Team announcement - queued for summarization (pipeline running)
 
 ============================================================
 [gmail_reader] ALL DONE - output file is ready for use.
-Fetched: 4 thread(s) | total scanned: 77
+Fetched: 6 thread(s) | total scanned: 74
 ============================================================
 
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
