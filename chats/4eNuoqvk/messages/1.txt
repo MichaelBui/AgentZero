@@ -1,8 +1,23 @@
-[2026-03-27T01:31:46+0000] [Summarized 57/58] OMNI-1431: using cached summary
-[2026-03-27T01:31:46+0000] [Summarized 58/58] OMNI-1432: using cached summary
-[2026-03-27T01:31:46+0000] ============================================================
-[2026-03-27T01:31:46+0000] STATUS: COMPLETED - Jira Reader pipeline finished successfully (58 unique tickets)
-[2026-03-27T01:31:46+0000] ============================================================
+[2026-03-27T13:33:57+0000] [Summarized 44/58] OMNI-1242: using cached summary
+[2026-03-27T13:33:57+0000] [Summarized 45/58] OMNI-1334: using cached summary
+[2026-03-27T13:33:57+0000] [Summarized 46/58] OMNI-1389: using cached summary
+[2026-03-27T13:33:57+0000] [Summarized 47/58] OMNI-1390: using cached summary
+[2026-03-27T13:33:57+0000] [Summarized 48/58] OMNI-1353: using cached summary
+[2026-03-27T13:33:57+0000] [Summarizing 49/58] OMNI-1179: AI summarizing (1 items, existing_summary=yes)...
+[2026-03-27T13:34:19+0000] [Summarized 49/58] OMNI-1179: done
+[2026-03-27T13:34:19+0000] [Summarized 50/58] OMNI-1247: using cached summary
+[2026-03-27T13:34:19+0000] [Summarized 51/58] OMNI-1391: using cached summary
+[2026-03-27T13:34:19+0000] [Summarized 52/58] OMNI-1393: using cached summary
+[2026-03-27T13:34:19+0000] [Summarized 53/58] OMNI-1400: using cached summary
+[2026-03-27T13:34:19+0000] [Summarized 54/58] OMNI-1405: using cached summary
+[2026-03-27T13:34:19+0000] [Summarized 55/58] OMNI-1428: using cached summary
+[2026-03-27T13:34:19+0000] [Summarized 56/58] OMNI-1431: using cached summary
+[2026-03-27T13:34:19+0000] [Summarized 57/58] OMNI-1432: using cached summary
+[2026-03-27T13:34:19+0000] [Summarizing 58/58] OMNI-1433: AI summarizing (1 items, existing_summary=yes)...
+[2026-03-27T13:34:35+0000] [Summarized 58/58] OMNI-1433: done
+[2026-03-27T13:34:35+0000] ============================================================
+[2026-03-27T13:34:35+0000] STATUS: COMPLETED - Jira Reader pipeline finished successfully (58 unique tickets)
+[2026-03-27T13:34:35+0000] ============================================================
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
 
 [SYSTEM: Returning control to agent after 300 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

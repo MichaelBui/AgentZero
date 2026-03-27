@@ -1,22 +1,12 @@
 [gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:8744) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:8942) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[Fetching 1/6] To be modified / 驳回待修改 (summarization pending)
-[Fetched 1/6] To be modified / 驳回待修改 - queued for summarization (pipeline running)
-[Fetching 2/6] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod (summarization pending)
-[Fetched 2/6] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing - queued for summarization (pipeline running)
-[Fetching 3/6] Trivy compromise & LiteLLM infected (summarization pending)
-[Fetched 3/6] Trivy compromise & LiteLLM infected - queued for summarization (pipeline running)
-[Fetching 4/6] Canceled event with note: [Virtual] Smart Cart x RMN Catchup @ Fri Mar 27, 2026 4pm - 4:30pm (SGT) (Michael Bui) (summarization pending)
-[Fetched 4/6] Canceled event with note: [Virtual] Smart Cart x RMN Catchup - queued for summarization (pipeline running)
-[Fetching 5/6] Re: [Bitbucket] Pull request #919: chore/omni ops monitor (ntuclink/dpd-datadog-monitoring) (summarization pending)
-[Fetched 5/6] Re: [Bitbucket] Pull request #919: chore/omni ops monitor (n - queued for summarization (pipeline running)
-[Fetching 6/6] [Dashboard Report] Retail Media - DD Dashboard | Fri 27 Mar 11:00AM +08 (summarization pending)
-[Fetched 6/6] [Dashboard Report] Retail Media - DD Dashboard | Fri 27 Mar  - queued for summarization (pipeline running)
+[Fetching 1/1] Urgent - PLA Impressions drop by 50% (summarization pending)
+[Fetched 1/1] Urgent - PLA Impressions drop by 50% - queued for summarization (pipeline running)
 
 ============================================================
 [gmail_reader] ALL DONE - output file is ready for use.
-Fetched: 6 thread(s) | total scanned: 50
+Fetched: 1 thread(s) | total scanned: 49
 ============================================================
 
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
