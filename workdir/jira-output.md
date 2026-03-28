@@ -1,10 +1,10 @@
 
 
 ## [1/58] Dynamic ad slot configuration for Homepage swimlanes
-Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | parent: DPD-710 | Last Updated: 2026-03-28T01:31:18.332284+00:00
+Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | parent: DPD-710 | Last Updated: 2026-03-28T03:34:22.609628+00:00
 ### Daily Briefing Summary: DPD-715 (Dynamic Ad Slot Configuration)
 
-**Current Status:** **IN RELEASE QUEUE** (Resolution: Done). The story is technically complete, UAT signed off, and deployed to production. However, a critical race condition involving shared variable overwrites was identified post-deployment on 2026-03-28.
+**Current Status:** **IN RELEASE QUEUE** (Resolution: Done). The story is technically complete with UAT signed off and deployed to production. However, a critical race condition involving shared variable overwrites was identified post-deployment on 2026-03-28.
 
 **Key Decisions & Actions Taken:**
 *   **Feature Flag Implementation:** Split configuration logic successfully implemented to dynamically control ad slot indices without code changes. Supports density updates (e.g., `[3, 5, 7]` to `[2, 4, 6, 8, 10]`) and handles empty arrays for organic-only views.
@@ -41,26 +41,26 @@ Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Pri
 
 
 ## [2/58] Suppress duplicate BCRS deposit posting via order metadata
-Source: jira | Key: DPD-842 | Status: TESTING IN PREPRODUCTION (In Progress) | Type: Subtask | Priority: High | Assignee: Michael Bui | Reporter: Michael Bui | child: DPD-383 | parent: DPD-383 | work-item-split: DPD-807, DPD-807 | Last Updated: 2026-03-28T01:31:32.912632+00:00
+Source: jira | Key: DPD-842 | Status: TESTING IN PREPRODUCTION (In Progress) | Type: Subtask | Priority: High | Assignee: Michael Bui | Reporter: Michael Bui | child: DPD-383 | parent: DPD-383 | work-item-split: DPD-807, DPD-807 | Last Updated: 2026-03-28T03:34:37.903686+00:00
 **Daily Briefing Summary: DPD-842**
 
 **Current Status**
-The subtask **DPD-842** ("Suppress duplicate BCRS deposit posting via order metadata") remains in the **"TESTING IN PREPRODUCTION"** phase, categorized as "In Progress." This is a high-priority subtask under parent ticket **DPD-383** ("Sales posting for BCRS deposit amount").
+The subtask **DPD-842** ("Suppress duplicate BCRS deposit posting via order metadata") is currently in the **"TESTING IN PREPRODUCTION"** phase, categorized as "In Progress." This high-priority subtask falls under parent ticket **DPD-383** ("Sales posting for BCRS deposit amount"). The work item was created as a split from linked issue **DPD-807**.
 
 **Ownership and Actions**
 *   **Owner:** Michael Bui (Assignee and Reporter).
-*   **Pending Action:** Verification that re-delivering an order does not trigger duplicate BCRS deposit postings to SAP. Testing activities were conducted on **2026-03-28**, specifically between **02:57:42** and **03:02:22 (+0800)**.
-*   **Dependency/Context:** This work item is a split from ticket **DPD-807**.
+*   **Pending Action:** No immediate pending actions are required; the testing phase has concluded with validation.
+*   **Testing Execution:** Testing activities were conducted on **2026-03-28**. The status was updated to "TESTING IN PREPRODUCTION" at **02:57:42+0800**.
 
 **Decisions Made**
-*   **Validation Confirmed:** On **2026-03-28 at 03:02:22+0800**, it was confirmed that re-delivering an order will **not** send a duplicate BCRS deposit posting to SAP. This validation is based on the use of order metadata to suppress duplicates.
-*   **Data Capture:** A capture of the state after BCRS posting was recorded at **2026-03-28 03:00:02+0800** to support this verification.
+*   **Validation Confirmed:** On **2026-03-28 at 03:02:22+0800**, it was confirmed that re-delivering an order will **not** send a duplicate BCRS deposit posting to SAP. This validation relies on the suppression logic utilizing order metadata.
+*   **Data Capture:** To support this verification, the system state after BCRS posting was captured at **2026-03-28 03:00:02+0800**.
 
 **Key Dates and Blockers**
 *   **Timeline:** Key activities occurred on **2026-03-28**:
-    *   Status set to "TESTING IN PREPRODUCTION" at 02:57:42+0800.
-    *   Post-BCRS posting state captured at 03:00:02+0800.
-    *   Duplicate suppression confirmed at 03:02:22+0800.
+    *   **02:57:42+0800:** Ticket title confirmed as "Suppress duplicate BCRS deposit posting via order metadata"; Status set to "TESTING IN PREPRODUCTION".
+    *   **03:00:02+0800:** Post-BCRS posting state captured.
+    *   **03:02:22+0800:** Duplicate suppression logic validated successfully.
 *   **Deadlines:** The ticket currently has **no assigned due date**.
 *   **Blockers:** No blockers or resolution issues are currently listed.
 
@@ -72,7 +72,7 @@ The subtask **DPD-842** ("Suppress duplicate BCRS deposit posting via order meta
 
 
 ## [3/58] Charge BCRS deposit for re-delivery
-Source: jira | Key: DPD-807 | Status: TO BE DEFINED (To Do) | Type: Story | Priority: High | Reporter: Prajney Sribhashyam | parent: DPD-225 | relates: DPD-383, DPD-383 | work-item-split: DPD-842, DPD-842 | Last Updated: 2026-03-28T01:31:54.252252+00:00
+Source: jira | Key: DPD-807 | Status: TO BE DEFINED (To Do) | Type: Story | Priority: High | Reporter: Prajney Sribhashyam | parent: DPD-225 | relates: DPD-383, DPD-383 | work-item-split: DPD-842, DPD-842 | Last Updated: 2026-03-28T03:34:59.700323+00:00
 **Daily Briefing Summary: DPD-807 – Charge BCRS Deposit for Re-delivery**
 
 **Current Status & State**
@@ -83,14 +83,15 @@ Source: jira | Key: DPD-807 | Status: TO BE DEFINED (To Do) | Type: Story | Prio
 *   **Reporter:** Prajney Sribhashyam
 *   **Assignee:** Unassigned.
 *   **Linked Issues:** Relates to DPD-383; Work item split of DPD-842.
+*   **Creation Date:** 2026-03-24 (Defined by Prajney Sribhashyam).
 *   **Last Activity:** 2026-03-27T15:54:11+0800 (Inquiry regarding Backoffice Custom Fields ownership).
 
 **Decisions Made & Scope Definition**
-*   **Feature Logic:** As an Operations Manager, the system must apply BCRS deposit fees (e.g., €0.10/unit) to eligible items (plastic bottles, aluminum cans) in re-delivery orders. Non-eligible items (cardboard, produce) are excluded; no charge is applied. The fee appears as a separate line item.
+*   **Core Feature Logic:** As an Operations Manager, the system must apply BCRS deposit fees (e.g., €0.10/unit) to eligible items (plastic bottles, aluminum cans) in re-delivery orders. Non-eligible items (cardboard, produce) are excluded; no charge is applied. The fee appears as a separate line item.
 *   **Refund/Credit Logic:** If the original deposit was refunded or cancelled, a new charge applies on re-delivery. Otherwise, duplicate charges are suppressed based on payment history verification.
-*   **System Architecture:**
+*   **System Architecture Requirements:**
     *   **Order Service:** Must maintain metadata flag `Deposit posted to SAP`.
-    *   **Deposit Sales Posting:** Updates this field to `true` only after the first successful posting. It consumes this flag to suppress duplicate postings during re-deliveries.
+    *   **Deposit Sales Posting:** Updates this field to `true` only after the first successful posting; consumes this flag to suppress duplicate postings during re-deliveries.
     *   **RPA Component:** Responsible for charging BCRS deposits to the customer's original payment method and posting sales data.
 
 **Pending Actions & Ownership**
@@ -116,24 +117,27 @@ Source: jira | Key: DPD-807 | Status: TO BE DEFINED (To Do) | Type: Story | Prio
 *   **Test Case Reference:** Delivery Order ID `75588070` (URL: `https://admin-uat.fairprice.com.sg/customer-support/delivery-orders/75588070`).
 
 **Key Dates & Deadlines**
-*   **Creation/Definition:** Ticket created and defined by Prajney Sribhashyam on 2026-03-24.
 *   **Due Date:** Not defined.
 *   **Blockers:** No assignee is currently linked to the ticket; development cannot commence until ownership is assigned and the Backoffice Custom Field configuration is resolved.
 
 
 ## [4/58] Sales posting for BCRS deposit amount
-Source: jira | Key: DPD-383 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Prajney Sribhashyam | Due: 2026-02-18 | Resolution: Done | blocks: DPD-551, DPD-551 | child: DPD-590, DPD-842 | parent: DPD-225, DPD-590, DPD-842 | relates: DPD-807, DPD-807 | Last Updated: 2026-03-28T01:32:14.901622+00:00
+Source: jira | Key: DPD-383 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Prajney Sribhashyam | Due: 2026-02-18 | Resolution: Done | blocks: DPD-551, DPD-551 | child: DPD-590, DPD-842 | parent: DPD-225, DPD-590, DPD-842 | relates: DPD-807, DPD-807 | Last Updated: 2026-03-28T03:35:23.712588+00:00
 **Ticket:** DPD-383 (Sales posting for BCRS deposit amount)
 **Status:** Done | **Category:** In Release Queue | **Priority:** High
 **Assignee:** Michael Bui | **Reporter:** Prajney Sribhashyam
 
 **Current State & Key Decisions**
-*   **Resolution:** Ticket resolved as **Done** with status "IN RELASE QUEUE". Original due date: 2026-02-18. Parent ticket: **DPD-225**.
-*   **Core Objective:** DBP calculates BCRS deposits at the order line level (`deposit price × fulfilled quantity`) and aggregates totals for SAP posting (Order + SKU level). This applies to E-Comm, Marketplace, Returns/Refunds, Donations, and FOC items.
+*   **Resolution:** Ticket resolved as **Done** with status "IN RELASE QUEUE". Original due date: 2026-02-18. Parent ticket: **DPD-225** ("[BCRS] Inform customers on BCRS deposit...").
+*   **Core Objective:** DBP calculates BCRS deposits at the **order line level** (`deposit price × fulfilled quantity`) and aggregates totals for SAP posting (Order + SKU level). This applies to E-Comm, Marketplace, Returns/Refunds, Donations, and FOC items.
 *   **Eligibility Logic:** System processes only **COMPLETED** orders. OFFLINE channels and RB PreOrders are acknowledged but ignored.
 *   **Calculation Rules:** Deposit per line = (Deposit Price × Ordered Quantity). Aggregated total is the sum of all eligible lines. Quantities follow BRD rules for final fulfilled quantity.
+
+**Technical Implementation & Acceptance Criteria**
+*   **Order Status Handling:** The SAP Deposit Posting service processes orders only when status is `COMPLETED`. Non-COMPLETED messages are acknowledged but not processed.
+*   **Channel Filtering:** Explicitly ignores OFFLINE channel orders and RB PreOrders.
 *   **Special Scenarios:**
-    *   **Donation Orders:** Deposits calculated and posted using standard logic for BCRS-eligible items.
+    *   **Donation Orders:** Deposits calculated using standard logic for BCRS-eligible items.
     *   **FOC Items:** Deposits calculated if the master SKU is BCRS-eligible, treated identically to non-FOC items.
 *   **Duplicate Prevention:** Subtask **DPD-842** implements suppression via order metadata. A "delivery once" policy on GCP PubSub ensures SAP captures only the first valid posting.
 
@@ -142,7 +146,7 @@ Source: jira | Key: DPD-383 | Status: IN RELASE QUEUE (Done) | Type: Story | Pri
 *   **Dependencies:** Blocking issue **DPD-551** (PLU Processor) resolved by exposing `sapMaterialNumber` via API on 2026-02-20. Issue **DPD-807** remains relatable. Subtask **DPD-590** assigned for archiving proposals post-release.
 
 **Key Dates & Timeline**
-*   **2026-01-30:** Ticket created; title set to "Sales posting for BCRS deposit amount". Requirements defined for all use cases (E-Comm, Marketplace, Returns/Refunds). Subtask DPD-590 assigned.
+*   **2026-01-30:** Ticket created; title set to "Sales posting for BCRS deposit amount". Requirements defined for all use cases (E-Comm, Marketplace, Returns/Refunds). Subtask DPD-590 assigned. Status updated to "IN RELASE QUEUE".
 *   **2026-02-18:** Original due date passed; ticket resolved as Done. Resolution category updated to "IN RELASE QUEUE".
 *   **2026-02-20:** `sapMaterialNumber` exposed via API (Resolves block DPD-551).
 

@@ -1,0 +1,20 @@
+[gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
+(node:9471) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[Fetching 1/4] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod (summarization pending)
+[Fetched 1/4] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing - queued for summarization (pipeline running)
+[Fetching 2/4] [Search&Relevancy] [GCP] New Service Account Key Created - b5a766243501e9d9981779fc00ebdd0a445dd449 (summarization pending)
+[Fetched 2/4] [Search&Relevancy] [GCP] New Service Account Key Created - b - queued for summarization (pipeline running)
+[Fetching 3/4] [Search&Relevancy] [Action Required] Service Account Key Expiring, Renewal Required - 15088472b46aa51560af2eacac7196ccdf96d4f8 (summarization pending)
+[Fetched 3/4] [Search&Relevancy] [Action Required] Service Account Key Exp - queued for summarization (pipeline running)
+[Fetching 4/4] [Dashboard Report] Retail Media - DD Dashboard | Sat 28 Mar 11:00AM +08 (summarization pending)
+[Fetched 4/4] [Dashboard Report] Retail Media - DD Dashboard | Sat 28 Mar  - queued for summarization (pipeline running)
+
+============================================================
+[gmail_reader] ALL DONE - output file is ready for use.
+Fetched: 4 thread(s) | total scanned: 74
+============================================================
+
+(venv) root@80e3e99df9ff:/a0/usr/workdir#
+
+[SYSTEM: Returning control to agent after 300 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
