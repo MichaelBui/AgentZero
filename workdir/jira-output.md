@@ -1,7 +1,37 @@
 
 
-## [1/58] Dynamic ad slot configuration for Homepage swimlanes
-Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | parent: DPD-710 | Last Updated: 2026-03-28T03:34:22.609628+00:00
+## [1/58] Transition to Impression-Based Inventory & Multi-Banner Delivery
+Source: jira | Key: DPD-838 | Status: TO BE DEFINED (To Do) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | parent: DPD-385 | Last Updated: 2026-03-28T13:34:35.027547+00:00
+**Daily Briefing Summary: DPD-838**
+
+**Current Status**
+Ticket **DPD-838**, titled "Transition to Impression-Based Inventory & Multi-Banner Delivery," is a **High** priority **Story** in the **"TO BE DEFINED"** (To Do) state. Assigned to **Michael Bui** and reported by **Nikhil Grover**, it remains unresolved with no due date set. The ticket serves as an execution component for parent ticket **DPD-385** ("[RMN] Enable transition from fixed tenancy to impressions-based banner delivery"). Last activity was logged on **2026-03-27 at 16:32:37 +0800**.
+
+**Pending Actions & Ownership**
+*   **Action:** The Product Manager/Ad Ops Lead must execute the migration from fixed-slot tenancy to an inventory-based model. The primary goal is enabling multi-banner support and tiered prioritization to maximize yield, improve fill rates, and scale revenue via impression-based selling.
+*   **Owner:** The task is assigned to **Michael Bui**.
+*   **Scope:** This initiative targets the following app pages: Omni Homepage, OG Homepage, O2O homepage, Search page, Category page (navigation categories), and FP Pay receipt.
+
+**Decisions Made & Technical Requirements**
+The ticket defines specific acceptance criteria for the transition:
+1.  **Unified Request Architecture:** For user navigation on defined pages, the system must send a single batch request to OSMOS for all 20 slots. This request must include page-level metadata (User ID, page type/ID, category ID, search keyword).
+2.  **Display Sequence Integrity:** Banners returned by OSMOS must be displayed on the front end in the exact sequence provided by the backend response.
+3.  **Endemic Prioritization Logic:** If a non-endemic banner (identified via "Campaign type") occupies the first position, the first endemic banner must be boosted to Position 1 while maintaining the relative order of subsequent banners. If no endemic banners exist, the returned sequence remains unchanged.
+4.  **Duplicate Slot Handling:** If multiple banners share the same number in the "Slot" parameter, only the first instance in the sequence is passed; duplicates are dropped.
+5.  **Partial Response Management:** If fewer than 20 campaigns are configured (e.g., 12), the system must return only the available banners without sending empty responses for remaining positions.
+
+**Key Dates, Deadlines, & Blockers**
+*   **Last Activity:** 2026-03-27 (Logged by Nikhil Grover).
+*   **Deadline:** None currently set (`duedate: null`).
+*   **Blockers:** No specific technical blockers are listed. However, the **"TO BE DEFINED"** status indicates that scope finalization and an execution plan must be established immediately before development can commence based on the defined acceptance criteria.
+
+**Stakeholders**
+*   **Reporter:** Nikhil Grover
+*   **Assignee:** Michael Bui
+
+
+## [2/58] Dynamic ad slot configuration for Homepage swimlanes
+Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | parent: DPD-710 | Last Updated: 2026-03-28T10:14:09.764459+00:00
 ### Daily Briefing Summary: DPD-715 (Dynamic Ad Slot Configuration)
 
 **Current Status:** **IN RELEASE QUEUE** (Resolution: Done). The story is technically complete with UAT signed off and deployed to production. However, a critical race condition involving shared variable overwrites was identified post-deployment on 2026-03-28.
@@ -14,7 +44,7 @@ Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Pri
 *   **Production Deployment:** On **2026-03-26**, Michael Bui confirmed successful deployment to PRD with the specific slot configuration: `3, 5, 7, 11, 13, 15`.
 
 **Critical New Findings (Post-Deployment):**
-*   **Race Condition Identified:** On **2026-03-28**, Michael Bui identified a code issue where a shared variable (`share`) is overwritten during concurrent requests, impacting subsequent operations. The specific instance (`pnct=1`) stopped after the initial deployment and was verified as resolved on UAT environments prior to PRD promotion.
+*   **Race Condition Identified:** On **2026-03-28**, Michael Bui discovered a code defect where a shared variable (`share`) is overwritten during concurrent requests. This specific instance (`pnct=1`) stopped functioning after the initial deployment. The issue was verified as resolved on UAT environments prior to PRD promotion but requires attention in production stability checks.
 
 **Pending Actions & Ownership:**
 *   **Immediate Monitoring:** Given the identified race condition in shared variable handling, close monitoring of concurrent request stability is required across Omni and OG Homepages.
@@ -30,7 +60,7 @@ Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Pri
 *   **Resilience:** The system gracefully handles Ad Supply Shortages (filling available slots with organic content) and Out-of-Bounds scenarios (ignoring indices exceeding swimlane length, e.g., index 20 in a 10-item list).
 
 **Timeline Update:**
-*   **2026-03-10:** Ticket created by Nikhil Grover defining acceptance criteria for dynamic API requests, fallback defaults, and empty array handling.
+*   **2026-03-10:** Ticket created by Nikhil Grover defining acceptance criteria for dynamic API requests, fallback defaults, and empty array handling. Features: Dynamic ad slot configuration for Homepage swimlanes.
 *   **2026-03-19:** UAT session conducted by Michael Bui.
 *   **2026-03-25:** Nikhil Grover signed off on UAT and requested specific production config: `3, 5, 7, 11, 13, 15`.
 *   **2026-03-26:** Michael Bui deployed to Production; confirmed functionality.
@@ -40,7 +70,7 @@ Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Pri
 *   **Resolution of Discrepancy:** The previously noted issue where Omni Home swimlanes were stuck at fixed positions has been resolved. Stakeholders confirmed slot positions now match SplitIO flag values.
 
 
-## [2/58] Suppress duplicate BCRS deposit posting via order metadata
+## [3/58] Suppress duplicate BCRS deposit posting via order metadata
 Source: jira | Key: DPD-842 | Status: TESTING IN PREPRODUCTION (In Progress) | Type: Subtask | Priority: High | Assignee: Michael Bui | Reporter: Michael Bui | child: DPD-383 | parent: DPD-383 | work-item-split: DPD-807, DPD-807 | Last Updated: 2026-03-28T03:34:37.903686+00:00
 **Daily Briefing Summary: DPD-842**
 
@@ -71,7 +101,7 @@ The subtask **DPD-842** ("Suppress duplicate BCRS deposit posting via order meta
 *   **Resolution Logic:** The system suppresses duplicate postings by utilizing order metadata.
 
 
-## [3/58] Charge BCRS deposit for re-delivery
+## [4/58] Charge BCRS deposit for re-delivery
 Source: jira | Key: DPD-807 | Status: TO BE DEFINED (To Do) | Type: Story | Priority: High | Reporter: Prajney Sribhashyam | parent: DPD-225 | relates: DPD-383, DPD-383 | work-item-split: DPD-842, DPD-842 | Last Updated: 2026-03-28T03:34:59.700323+00:00
 **Daily Briefing Summary: DPD-807 – Charge BCRS Deposit for Re-delivery**
 
@@ -121,7 +151,7 @@ Source: jira | Key: DPD-807 | Status: TO BE DEFINED (To Do) | Type: Story | Prio
 *   **Blockers:** No assignee is currently linked to the ticket; development cannot commence until ownership is assigned and the Backoffice Custom Field configuration is resolved.
 
 
-## [4/58] Sales posting for BCRS deposit amount
+## [5/58] Sales posting for BCRS deposit amount
 Source: jira | Key: DPD-383 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Prajney Sribhashyam | Due: 2026-02-18 | Resolution: Done | blocks: DPD-551, DPD-551 | child: DPD-590, DPD-842 | parent: DPD-225, DPD-590, DPD-842 | relates: DPD-807, DPD-807 | Last Updated: 2026-03-28T03:35:23.712588+00:00
 **Ticket:** DPD-383 (Sales posting for BCRS deposit amount)
 **Status:** Done | **Category:** In Release Queue | **Priority:** High
@@ -162,7 +192,7 @@ Source: jira | Key: DPD-383 | Status: IN RELASE QUEUE (Done) | Type: Story | Pri
 *   Validation of real-world BCRS orders in Production remains the final step before full operational confirmation.
 
 
-## [5/58] [BCRS] Inform customers on BCRS deposit during Order Placement & Returns/Refunds Process
+## [6/58] [BCRS] Inform customers on BCRS deposit during Order Placement & Returns/Refunds Process
 Source: jira | Key: DPD-225 | Status: IN DEVELOPMENT (In Progress) | Type: Epic | Priority: High | Reporter: Andin Eswarlal Rajesh | Due: 2026-03-26 | discovery---connected: NEDMT-2334 | parent: DPD-807, DPD-383 | polaris-work-item-link: OMNI-1294, OMNI-1294 | relates: DPD-26 | Last Updated: 2026-03-27T21:32:17.122631+00:00
 **Daily Briefing: DPD-225 [BCRS] Inform customers on BCRS deposit during Order Placement & Returns/Refunds Process**
 
@@ -191,7 +221,7 @@ Source: jira | Key: DPD-225 | Status: IN DEVELOPMENT (In Progress) | Type: Epic 
     *   **Connected Discovery:** NEDMT-2334
 
 
-## [6/58] [RMN] Streamline event sync from Segment.io to OSMOS to resolve overage
+## [7/58] [RMN] Streamline event sync from Segment.io to OSMOS to resolve overage
 Source: jira | Key: DPD-644 | Status: Done (Done) | Type: Epic | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-12 | Resolution: Done | parent: DPD-645 | polaris-work-item-link: OMNI-1418 | Last Updated: 2026-03-27T21:32:29.917584+00:00
 **Daily Briefing: Jira Ticket DPD-644**
 
@@ -211,31 +241,6 @@ Source: jira | Key: DPD-644 | Status: Done (Done) | Type: Epic | Priority: High 
 The high-priority Epic **DPD-644**, titled "[RMN] Streamline event sync from Segment.io to OSMOS to resolve overage," has been formally resolved. The work was assigned to **Michael Bui** and reported by **Nikhil Grover**. On March 3, 2026, at 14:07 UTC+08, the team successfully optimized the data flow between **Segment.io** and **OSMOS**, achieving a status of "Done" ahead of the scheduled due date of March 12, 2026. The primary objective was to eliminate unnecessary cost overages caused by inefficient syncing mechanisms, a decision executed as part of this high-priority initiative. No blockers were recorded during the execution cycle. The associated Polaris work item **OMNI-1418** remains linked to this epic for traceability.
 
 The resolution status ("Done") and issue type (Epic) are confirmed in the latest system update. All metadata, including priority levels and assignee details, aligns with the final record.
-
-
-## [7/58] Transition to Impression-Based Inventory & Multi-Banner Delivery
-Source: jira | Key: DPD-838 | Status: TO BE DEFINED (To Do) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | parent: DPD-385 | Last Updated: 2026-03-27T21:32:40.563958+00:00
-**Daily Briefing Summary: DPD-838**
-
-**Current Status**
-The ticket **DPD-838**, titled "Transition to Impression-Based Inventory & Multi-Banner Delivery," is a **High** priority **Story** currently in the **"TO BE DEFINED"** state, categorized under **"To Do"**. It remains unresolved with no due date set. The latest system update confirms this status was logged on **2026-03-27** at 16:32:37 +0800 by Nikhil Grover.
-
-**Pending Actions & Ownership**
-*   **Action:** Define requirements and establish execution planning for the transition from fixed tenancy to an impression-based inventory model, specifically enabling multi-banner delivery capabilities.
-*   **Owner:** The task is assigned to **Michael Bui**.
-*   **Context:** This story functions as a direct child of parent ticket **DPD-385** ("[RMN] Enable transition from fixed tenancy to impressions-based banner delivery"), representing a specific execution component within the broader RMN initiative.
-
-**Decisions Made**
-No technical decisions or finalized requirements have been recorded, consistent with the **"TO BE DEFINED"** status. The core directive remains established by parent ticket **DPD-385**: migrate the inventory model from fixed tenancy to an impression-based delivery system capable of supporting multi-banner configurations.
-
-**Key Dates, Deadlines, & Blockers**
-*   **Last Activity:** 2026-03-27 (Logged by Nikhil Grover).
-*   **Deadline:** None currently set (`duedate: null`).
-*   **Blockers:** No specific technical blockers are listed; however, the **"TO BE DEFINED"** status indicates that scope definition and an execution plan must be established immediately before development can commence.
-
-**Stakeholders**
-*   **Reporter:** Nikhil Grover
-*   **Assignee:** Michael Bui
 
 
 ## [8/58] [BCRS Compliance] Phase 2: Order Place & Returns/Refunds Process
