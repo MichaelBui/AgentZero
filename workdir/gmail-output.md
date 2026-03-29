@@ -1,6 +1,195 @@
 
 
-## [1/32] Re: [Bitbucket] Pull request #7: DPD-383: Suppress duplicate BCRS deposit posting via order metadata (ntuclink/bcrs-deposit-posting)
+## [1/51] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
+Source: gmail | Thread: 19d36f49cbc748cd | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Sun, Mar 29, 2026, 1:26 AM | Last Updated: 2026-03-29T02:01:05.109307+00:00
+**Daily Work Briefing: Opsgenie Alert Summary**
+
+**1. Key Participants & Roles**
+*   **System:** Opsgenie (Alerting System) and Datadog (Monitoring Source).
+*   **Notification Targets:**
+    *   `@hangouts-dd-dpd-grocery-alert` (Hangouts Group: Operations/Incident Response).
+    *   `@opsgenie-dpd-grocery-retail-media` (Opsgenie Team Channel).
+*   **Assigned Responders:** DPD Staff Excellence - Retail Media.
+
+**2. Main Topic & Request**
+*   **Subject:** Abnormal throughput change detected in the `marketing-service` production environment (`env:prod`).
+*   **Alert Type:** P4 Priority Anomaly Detection.
+*   **Trigger Condition:** 100% of trace HTTP request hit values deviated by more than 3 standard deviations from predicted values over a 15-minute window.
+*   **Requested Actions:** Immediate investigation via provided links to Datadog APM, Google Kubernetes Engine (GKE) deployment overview, and the specific Runbook.
+
+**3. Pending Actions & Ownership**
+*   **Action:** Investigate service throughput anomaly using supplied monitoring links.
+*   **Owner:** DPD Staff Excellence - Retail Media (Assigned via Opsgenie responder group).
+*   **Reference Links Provided:**
+    *   Datadog APM: `marketing-service` operations.
+    *   Kubernetes Console: `asia-southeast1/fpon-cluster/default/marketing-service`.
+    *   Runbook: `NTUCLink - marketing-service Run book`.
+
+**4. Decisions Made**
+*   No human decisions or mitigations recorded in this thread yet; the content consists entirely of automated system alerts indicating an ongoing, unresolved issue.
+
+**5. Key Dates & Timeline**
+*   **March 29, 2026, 12:18 AM (UTC):** Initial alert triggered. Last Updated: 00:17:10 +0000. Created At: 08:18:13 AM (System timestamp).
+*   **March 29, 2026, 12:23 AM (UTC):** Duplicate alert received (Last Updated same as initial).
+*   **March 29, 2026, 1:21 AM (UTC):** Alert updated/retriggered. Last Updated: 01:20:10 +0000. Created At: 09:21:12 AM (System timestamp).
+*   **March 29, 2026, 1:26 AM (UTC):** Duplicate of the 1:21 AM alert received.
+
+**Status:** Alert remains active with repeated notifications indicating no resolution or acknowledgment has been logged in this thread.
+
+
+## [2/51] [RAW Overdue] Expired Risk Acceptance & Waiver Form
+Source: gmail | Thread: 19d371d74be27bd7 | Labels: Inbox | Priority: None | Senders: cyberrisk.automation | Last Date: Sun, Mar 29, 2026, 1:02 AM | Last Updated: 2026-03-29T02:01:22.713174+00:00
+**Daily Briefing: Resource [RAW Overdue] Expired Risk Acceptance & Waiver Form**
+
+**Key Participants & Roles**
+*   **Cyber Risk Team / Automation System:** Sender of the reminder; responsible for monitoring expiry and reviewing remediation evidence. Contact: `cyberRisk@ntucenterprise.sg`.
+*   **Technology Governance and Compliance Team:** Recipient for form sharing to ensure correct completion prior to sign-off. Contact: `techgrc@ntucenterprise.sg`.
+*   **Requestor (Entity Owner):** The individual responsible for raising the new RAW request, completing Section A, and securing approvals. Currently unspecified in thread but is the target audience of this alert.
+
+**Main Topic/Request**
+The system has detected an expired Risk Acceptance & Waiver (RAW) form for the asset **Signcloud Saas User access management** (Entity: FPG-Fairprice). The original waiver expired on **May 15, 2025**, due to a lack of user access management by the respective business owner. The requestor must either provide evidence of remediation or submit a new RAW form immediately.
+
+**Pending Actions & Ownership**
+*   **Action:** Determine if residual risks have been remediated.
+    *   *If Yes:* Provide evidence to `cyberRisk@ntucenterprise.sg` for closure review.
+    *   *If No:* Initiate a new RAW request via Gsuite immediately. This action is owned by the **Requestor**.
+*   **Action:** If submitting a new form, complete Section A of the template and share it with `cyberRisk@ntucenterprise.sg` for pre-submission review and with `techgrc@ntucenterprise.sg`. Ownership: **Requestor**.
+*   **Action:** Obtain sign-offs on Google Docs (full names or initials) accompanied by specific comments stating "Approved" or "Signed". Ownership: **Approvers**.
+*   **Ownership Note:** The automation system will continue sending reminders until the new RAW is approved.
+
+**Decisions Made**
+No decisions were made in this thread; it serves as a notification of non-compliance and an instruction to act. The process requires all interactions and approvals to occur strictly within Google Docs (via Gsuite), not via email downloads.
+
+**Key Dates & Deadlines**
+*   **Current Date:** March 29, 2026.
+*   **Original Expiry Date:** May 15, 2025.
+*   **Status:** Overdue (expired ~1 year ago).
+*   **Follow-up:** Continuous reminders will be sent until a new form is approved. Immediate action is required to stop the cycle.
+
+**Specific References**
+*   **RAW ID:** RAW-20240306_01-v1.0
+*   **Email Address (Sender):** `cyberrisk.automation@fairpricegroup.sg`
+*   **Email Address (Remediation/Review):** `cyberRisk@ntucenterprise.sg`
+*   **Email Address (Governance):** `techgrc@ntucenterprise.sg`
+
+
+## [3/51] You have no events scheduled today.
+Source: gmail | Thread: 19d36528a7ca0ffc | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Sat, Mar 28, 2026, 9:21 PM | Last Updated: 2026-03-28T22:02:06.885346+00:00
+**Daily Work Briefing Summary**
+
+**Key Participants & Roles**
+*   **Michael Bui** (Recipient/Account Holder): `michael.bui@fairpricegroup.sg`. Subscribed to daily agenda notifications for the "Digital Business Tech Release/Changes" calendar.
+*   **Google Calendar System**: Automated notification sender (`calendar-notification@google.com`).
+
+**Main Topic/Request**
+*   Automated system confirmation of the user's schedule status for Sunday, March 29, 2026. The email confirms that no events are currently scheduled on the specific calendars to which the user is subscribed.
+
+**Pending Actions & Ownership**
+*   **None.** No manual actions are required based on this notification.
+*   *Optional (User Discretion)*: To modify calendar subscription settings, Michael Bui must log in to `https://calendar.google.com/calendar/` and adjust notification preferences for specific calendars.
+
+**Decisions Made**
+*   None. This is a system-generated status update.
+
+**Key Dates & Deadlines**
+*   **Date of Notification**: March 28, 2026, at 9:21 PM.
+*   **Reference Date (Schedule Check)**: Sunday, March 29, 2026.
+*   **Status**: No events scheduled for the reference date on the "Digital Business Tech Release/Changes" calendar.
+
+**Additional Notes**
+*   The email footer indicates confidentiality and privilege status.
+*   Resource status confirms zero scheduled events for today (Mar 29, 2026).
+
+
+## [4/51] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
+Source: gmail | Thread: 19d35a661786941f | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Sat, Mar 28, 2026, 6:18 PM | Last Updated: 2026-03-28T22:02:26.935586+00:00
+**Daily Work Briefing: Opsgenie Alert Summary**
+
+**Key Participants & Roles**
+*   **System/Integration:** Opsgenie (Alerting) and Datadog (Monitoring Source).
+*   **Responders/Owner:** DPD Staff Excellence - Retail Media.
+*   **Notification Channels:** `@hangouts-dd-dpd-grocery-alert` (Google Hangouts) and `@opsgenie-dpd-grocery-retail-media`.
+
+**Main Topic & Request**
+An automated P2 warning alert was triggered for the production environment (`env:prod`) regarding the `marketing-service`. The system detected a high HTTP error rate, specifically where the ratio of errors to total hits exceeded the 5% threshold (trigger condition: `> 0.05`).
+
+**Alert Details**
+*   **Service:** `marketing-service`
+*   **Environment:** Production (`prod`)
+*   **Triggered Metric:** Error Rate over the last 10 minutes.
+*   **Threshold vs. Actual:** Threshold > 0.05; Current Metric Value: 0.044.
+*   **Alert ID/Event ID:** `b74b992c-3262-446e-b5e5-59be6c0dae1f` / Event ID `8564076224683445561`.
+*   **Monitor URL:** https://app.datadoghq.eu/monitors/17447106
+
+**Pending Actions & Ownership**
+*   **Action:** Investigate the service health and identify root causes for the elevated error rate.
+*   **Owner:** DPD Staff Excellence - Retail Media.
+*   **Required Checks (as per runbook):**
+    1.  Review Datadog APM resources: [Datadog Link](https://app.datadoghq.com/apm/services/marketing-service/operations/http.request/resources?env=prod)
+    2.  Review Kubernetes deployment status: [GCP K8s Link](https://console.cloud.google.com/kubernetes/deployment/asia-southeast1/fpon-cluster/default/marketing-service/overview?cloudshell=false&project=fponprd)
+    3.  Consult the official Runbook: [Atlassian Wiki Link](https://ntuclink.atlassian.net/wiki/spaces/DIS/pages/2008167992/marketing-service+-+Run+book)
+
+**Decisions Made**
+No human decisions were recorded in this thread; all entries are automated system notifications.
+
+**Key Dates & Timeline**
+*   **Alert Created:** Mar 28, 2026, at 18:12:06 UTC (Last Updated).
+*   **Notification Sent:** Mar 29, 2026, at 02:13:08 AM.
+*   **Thread Activity:** Three identical alert notifications were logged by Opsgenie between 18:13 PM and 18:18 PM on Mar 28, 2026.
+
+**Status Note**
+The metric value (0.044) is currently below the strict threshold of 0.05 (>5%) but remains close to the limit, prompting a "Warn" status rather than a critical failure. However, as this is a P2 alert in production, immediate investigation per the provided links and runbook is required.
+
+
+## [5/51] [JIRA] (DPD-838) Transition to Impression-Based Inventory & Multi-Banner Delivery
+Source: gmail | Thread: 19d2e82fa82f66fe | Labels: Inbox, Updates | Priority: None | Senders: Nikhil | Last Date: Sat, Mar 28, 2026, 2:47 PM | Last Updated: 2026-03-28T22:02:52.274590+00:00
+**Daily Work Briefing: JIRA (DPD-838)**
+
+**Project Context**
+*   **JIRA ID:** DPD-838
+*   **Topic:** Transition to Impression-Based Inventory & Multi-Banner Delivery
+*   **Category:** Ecom/Omni
+*   **Updated By:** Michael Bui (via Jira automated system) / Nikhil Grover
+
+**Key Participants**
+*   **Nikhil Grover:** Product Manager/Ad Ops Lead; Defined initial acceptance criteria.
+*   **Michael Bui:** Technical Stakeholder; Raised critical clarifications regarding scope, logic, and edge cases.
+
+**Main Topic & Request**
+The initiative involves migrating ad architecture from fixed-slot tenancy to an impression-based model with multi-banner support. A new comment by Michael Bui (Mar 28, 2026) challenges the initial assumption that all six page types must migrate simultaneously, highlighting that Category and Search pages currently use the legacy RMN/MPS service which does not support video UIs.
+
+**Critical Clarifications & Questions Raised**
+1.  **Scope of Migration:** Is it mandatory to change logic for Category and Search pages? The current assumption is that only Omni Home, OG Home, and FPPay need updates due to video support; other pages may remain on MPS. This impacts Front-End (FE) component changes.
+2.  **Non-Endemic Identification Logic:** The method to identify non-endemic banners/videos via the "Campaign type" field is undefined. Clarification is needed: Is this an exact match or substring match?
+3.  **OSMOS Capacity Limits:** OSMOS currently supports a `pcnt` (priority/sequence count?) limit of 10. The team needs to know when support for >10 will be available and what the fallback strategy is if the system remains capped at 10 while expecting 20 slots.
+4.  **Position Tracking & Slot Values:** Clarification is required on how "position" values are maintained for tracking, specifically regarding OSMOS-provided slot sequences (e.g., `[-1, 0, 1, 2, 2, 5, 999]`). It is unclear if OSMOS manages these or if the client must map them.
+5.  **Video Behavior:** Logic for auto-play and auto-next is undefined for scenarios involving multiple videos.
+6.  **Failure Handling:** Expectations are needed for cases where OSMOS returns no banners or the API becomes inaccessible.
+
+**Decisions Made**
+*   No final decisions were made in this update; instead, specific technical ambiguities have been identified that block further development estimation and scope confirmation.
+
+**Pending Actions & Ownership**
+*   **Action:** Clarify if Category and Search pages are in scope for the new banner component (video support) or remain on MPS.
+    *   **Owner:** Nikhil Grover (Immediate).
+*   **Action:** Define the exact matching logic for "Campaign type" to distinguish endemic vs. non-endemic content.
+    *   **Owner:** Product/Architecture Team.
+*   **Action:** Confirm OSMOS `pcnt` support timeline and define the strategy for handling requests exceeding the current 10-item limit.
+    *   **Owner:** Nikhil Grover / Engineering Lead.
+*   **Action:** Define tracking logic for position values (e.g., `[-1, 0, ...]`) and clarify who manages slot assignment.
+    *   **Owner:** Development Team.
+*   **Action:** Specify fallback behavior for empty responses or API unavailability.
+    *   **Owner:** Product/Engineering.
+
+**Key Dates & Follow-ups**
+*   **Last Update Timestamp:** March 28, 2026, at 10:44 PM Singapore Time (Michael Bui comment).
+*   **Follow-up:** Immediate response required from Nikhil Grover regarding scope expansion and technical constraints before development can proceed.
+
+**Summary for Executive Review**
+Michael Bui has flagged significant scope and technical ambiguities in DPD-838, challenging the initial plan to update all six page types (Category, Search, etc.). He questions if legacy MPS pages require migration given their lack of video UI support. Furthermore, critical logic gaps exist regarding how non-endemic content is identified (exact vs. substring match), how OSMOS handles limits exceeding its current `pcnt` cap of 10, and how specific slot position values are tracked. The update also highlights undefined behaviors for auto-play/auto-next scenarios and API failure states. These questions must be resolved before the development team can finalize estimates or begin implementation of the unified batch request logic.
+
+
+## [6/51] Re: [Bitbucket] Pull request #7: DPD-383: Suppress duplicate BCRS deposit posting via order metadata (ntuclink/bcrs-deposit-posting)
 Source: gmail | Thread: 19d3315c2ea65f6f | Labels: Inbox, Updates | Priority: None | Senders: Lester | Last Date: Sat, Mar 28, 2026, 8:50 AM | Last Updated: 2026-03-28T10:01:20.857461+00:00
 **Daily Work Briefing: Bitbucket Pull Request #7 (DPD-383)**
 
@@ -36,7 +225,7 @@ The thread concerns Pull Request #7 for the repository `ntuclink/bcrs-deposit-po
 *   **Next Step:** The developer must clarify the duplicate repository argument, refactor service dependencies per suggestions, and potentially simplify the order update request structure before the PR can be merged.
 
 
-## [2/32] [GCP] New Service Account Key Created - dfbeaa78dbcc29b8fe1bc5027e84d27ceab3f778
+## [7/51] [GCP] New Service Account Key Created - dfbeaa78dbcc29b8fe1bc5027e84d27ceab3f778
 Source: gmail | Thread: 19d3380ff846e647 | Labels: Inbox, Forums | Priority: None | Senders: noreply-sre | Last Date: Sat, Mar 28, 2026, 8:13 AM | Last Updated: 2026-03-28T10:01:37.502653+00:00
 ### Daily Work Briefing: GCP Service Account Key Generation
 
@@ -71,48 +260,7 @@ Source: gmail | Thread: 19d3380ff846e647 | Labels: Inbox, Forums | Priority: Non
 *   **Message Context:** Inbox / Forums (Metadata: Priority null, Last Message ID: 19d3380ff846e647)
 
 
-## [3/32] [JIRA] (DPD-838) Transition to Impression-Based Inventory & Multi-Banner Delivery
-Source: gmail | Thread: 19d2e82fa82f66fe | Labels: Inbox, Updates | Priority: None | Senders: Nikhil Grover (Jira) | Last Date: Sat, Mar 28, 2026, 7:42 AM | Last Updated: 2026-03-28T10:01:59.281373+00:00
-**Daily Work Briefing: JIRA (DPD-838)**
-
-**Project Context**
-*   **JIRA ID:** DPD-838
-*   **Topic:** Transition to Impression-Based Inventory & Multi-Banner Delivery
-*   **Category:** Ecom/Omni
-*   **Updated By:** Nikhil Grover (via Jira automated system)
-
-**Key Participants**
-*   **Nikhil Grover:** Product Manager/Ad Ops Lead; Source of requirements and update sender.
-*   *Note: No other specific human participants are listed.*
-
-**Main Topic & Request**
-The initiative involves migrating ad architecture from fixed-slot tenancy to an impression-based model featuring multi-banner support and tiered prioritization to maximize yield, fill rates, and revenue. The core functional scope is defined by five acceptance criteria scenarios:
-1.  **Unified Batch Requests:** For Omni Homepage, OG Homepage, O2O homepage, Search, Category pages, or FP Pay receipt pages, the system must send a single batch request for all 20 slots to OSMOS, including metadata (User ID, page type/ID, category ID, search keyword).
-2.  **Sequence & Prioritization:** Banners are displayed in the sequence returned by OSMOS. However, if a non-endemic banner appears first, the first endemic banner is boosted to position one while maintaining the relative order of others. If no endemic banners exist, the original sequence is kept.
-3.  **Fallback Logic:** If multiple banners share the same "Slot" number in the response, only the first instance is passed; duplicates are dropped.
-4.  **Partial Inventory:** If fewer than 20 campaigns are configured (e.g., 12), the system returns the available banners without sending empty responses for missing positions.
-
-**Decisions Made**
-*   No formal project decisions were made in this update; however, specific technical constraints and logic rules for OSMOS integration have been established as mandatory acceptance criteria.
-*   The requirement to use the "campaign type" custom field from the OSMOS response to distinguish endemic vs. non-endemic content is confirmed.
-
-**Pending Actions & Ownership**
-*   **Action:** Review full work item for attachments over 100 KB and detailed technical specifications.
-    *   **Owner:** Stakeholders with Jira Cloud access (Immediate).
-*   **Action:** Implement logic to handle the unified batch request (20 slots) with specific metadata context.
-    *   **Owner:** Development team (Inferred).
-*   **Action:** Develop conditional logic for endemic banner prioritization and duplicate slot handling.
-    *   **Owner:** Development team (Inferred).
-
-**Key Dates & Follow-ups**
-*   **Last Update Timestamp:** March 28, 2026, at 7:42 AM (System Generated) / 3:31 PM Singapore Time (Original Jira Log entry time).
-*   **Follow-up:** Implementation of the specified acceptance criteria scenarios requires immediate technical review.
-
-**Summary for Executive Review**
-Nikhil Grover has updated DPD-838 with detailed acceptance criteria for transitioning to an impression-based inventory model. The update clarifies that the system must handle a unified 20-slot batch request to OSMOS across six specific app pages, enriched with user and page metadata. Critical logic includes boosting endemic banners to the first position if non-endemic content is returned first, dropping duplicate slot entries, and handling partial responses (e.g., returning only 12 of 20 configured campaigns) without empty slots. This defines the exact technical boundary for the development phase, moving beyond the previous general requirement of "fetching personalized banners" to a specific set of behavioral rules.
-
-
-## [4/32] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
+## [8/51] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
 Source: gmail | Thread: 19d327223226bbf4 | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Sat, Mar 28, 2026, 3:22 AM | Last Updated: 2026-03-28T03:57:16.143199+00:00
 **Daily Work Briefing: Opsgenie Alert Summary**
 
@@ -149,7 +297,7 @@ No human decisions were recorded in this thread. The alert was generated automat
 *   **Alert ID:** 440c94cd-4a5e-47a2-8b84-ff9f7c88fbfa-1774667833113
 
 
-## [5/32] [Search&Relevancy] [GCP] New Service Account Key Created - b5a766243501e9d9981779fc00ebdd0a445dd449
+## [9/51] [Search&Relevancy] [GCP] New Service Account Key Created - b5a766243501e9d9981779fc00ebdd0a445dd449
 Source: gmail | Thread: 19d326d010f3ca64 | Labels: Inbox, Forums | Priority: None | Senders: noreply-sre via Gro. | Last Date: Sat, Mar 28, 2026, 3:11 AM | Last Updated: 2026-03-28T03:57:32.392350+00:00
 **Daily Work Briefing: Service Account Key Generation Alert**
 
@@ -179,7 +327,7 @@ Source: gmail | Thread: 19d326d010f3ca64 | Labels: Inbox, Forums | Priority: Non
 **Summary Note:** This notification is labeled with "Inbox" and "Forums" metadata. If your team does not manage the `fp-search-indexer` service for project `fpon-224503`, this email may be ignored. Otherwise, immediate action is required to download the key before it becomes obsolete or if previous keys are revoked.
 
 
-## [6/32] [Search&Relevancy] [Action Required] Service Account Key Expiring, Renewal Required - 15088472b46aa51560af2eacac7196ccdf96d4f8
+## [10/51] [Search&Relevancy] [Action Required] Service Account Key Expiring, Renewal Required - 15088472b46aa51560af2eacac7196ccdf96d4f8
 Source: gmail | Thread: 19d326ce2a188b9b | Labels: Inbox, Forums | Priority: None | Senders: noreply-sre via Gro. | Last Date: Sat, Mar 28, 2026, 3:11 AM | Last Updated: 2026-03-28T03:57:45.302490+00:00
 **Daily Work Briefing: Service Account Key Renewal Alert**
 
@@ -211,7 +359,7 @@ No decisions were made in this thread; this is an initial system-generated alert
 4.  If the key is obsolete, submit a SRE request to remove it.
 
 
-## [7/32] [Dashboard Report] Retail Media - DD Dashboard | Sat 28 Mar 11:00AM +08
+## [11/51] [Dashboard Report] Retail Media - DD Dashboard | Sat 28 Mar 11:00AM +08
 Source: gmail | Thread: 19d32651dd4ac55d | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Sat, Mar 28, 2026, 3:03 AM | Last Updated: 2026-03-28T03:57:56.012386+00:00
 **Daily Work Briefing: Retail Media Dashboard Report**
 
@@ -242,7 +390,7 @@ Distribution of the latest "Retail Media - DD Dashboard" report containing aggre
 *   **Metadata Reference:** Last Message ID `19d32651dd4ac55d`.
 
 
-## [8/32] Daily digest: updates from Tan Nhu Duong
+## [12/51] Daily digest: updates from Tan Nhu Duong
 Source: gmail | Thread: 19d3190616ddf3a5 | Labels: Inbox, Updates | Priority: None | Senders: Confluence | Last Date: Fri, Mar 27, 2026, 11:10 PM | Last Updated: 2026-03-28T02:01:42.750778+00:00
 **Daily Work Briefing: Content Update Digest**
 
@@ -275,7 +423,7 @@ Source: gmail | Thread: 19d3190616ddf3a5 | Labels: Inbox, Updates | Priority: No
 **Summary:** Tan Nhu Duong updated the "Handover Identity scope" page. This digest serves as a record of that activity for March 27, 2026. Stakeholders should access Confluence to review specific edit details if required for their workflow.
 
 
-## [9/32] You have no events scheduled today.
+## [13/51] You have no events scheduled today.
 Source: gmail | Thread: 19d314eea87a1d60 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Fri, Mar 27, 2026, 9:59 PM | Last Updated: 2026-03-27T22:01:30.160610+00:00
 **Daily Work Briefing Summary**
 
@@ -305,7 +453,7 @@ Source: gmail | Thread: 19d314eea87a1d60 | Labels: Inbox, Updates | Priority: No
     *   **System Message ID:** 19d314eea87a1d60.
 
 
-## [10/32] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
+## [14/51] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
 Source: gmail | Thread: 19d2e6031921b6cd | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Fri, Mar 27, 2026, 8:16 PM | Last Updated: 2026-03-27T22:01:57.314023+00:00
 **Daily Work Briefing: Marketing Service Error Rate Alert (P2)**
 
@@ -343,7 +491,7 @@ An automated P2 (Warning) alert was triggered for the `marketing-service` in the
 *   **Integration Source:** dpd-grocery-retail-media-eu (Datadog).
 
 
-## [11/32] [JIRA] (DPD-715) Dynamic ad slot configuration for Homepage swimlanes
+## [15/51] [JIRA] (DPD-715) Dynamic ad slot configuration for Homepage swimlanes
 Source: gmail | Thread: 19cd82204175d296 | Labels: Inbox, Updates | Priority: None | Senders: Nikhil | Last Date: Fri, Mar 27, 2026, 7:49 PM | Last Updated: 2026-03-27T22:02:21.472268+00:00
 **Daily Work Briefing: DPD-715 Dynamic Ad Slot Configuration (Production Deployed with Post-Deploy Issue)**
 
@@ -390,7 +538,7 @@ Development of a dynamic ad slot configuration system (Ticket: **DPD-715**) for 
 *   Previous mobile app issues were resolved in the earlier UAT cycle and verified during initial deployment, though the current race condition represents a new code-level defect unrelated to previous mobile fixes.
 
 
-## [12/32] [Bitbucket]  Pipeline for DPD-383 failed on 10d28d9 (ntuclink/bcrs-deposit-posting)
+## [16/51] [Bitbucket]  Pipeline for DPD-383 failed on 10d28d9 (ntuclink/bcrs-deposit-posting)
 Source: gmail | Thread: 19d30bec61b50cb9 | Labels: Inbox, Updates | Priority: None | Senders: Bitbucket | Last Date: Fri, Mar 27, 2026, 7:21 PM | Last Updated: 2026-03-27T22:02:33.759207+00:00
 **Daily Work Briefing: Bitbucket Pipeline Failure (DPD-383)**
 
@@ -425,7 +573,7 @@ No strategic decisions were made during this thread; it is a system-generated st
 *   **Priority Status**: Currently null (requires manual triage based on severity).
 
 
-## [13/32] [JIRA] (DPD-842) Suppress duplicate BCRS deposit posting via order metadata
+## [17/51] [JIRA] (DPD-842) Suppress duplicate BCRS deposit posting via order metadata
 Source: gmail | Thread: 19d30b2835e5120b | Labels: Inbox, Updates | Priority: None | Senders: Michael Bui (Jira) | Last Date: Fri, Mar 27, 2026, 7:08 PM | Last Updated: 2026-03-27T22:02:49.495866+00:00
 **Daily Work Briefing: DPD-842 Update**
 
@@ -463,7 +611,7 @@ Source: gmail | Thread: 19d30b2835e5120b | Labels: Inbox, Updates | Priority: No
 The issue regarding duplicate BCRS deposit postings has been successfully addressed in code and is currently undergoing preproduction validation. The reporter confirmed that re-delivery logic effectively prevents SAP duplicates, supported by attached evidence. The ticket remains under active development/testing control with no blockers identified in this thread.
 
 
-## [14/32] [JIRA] Michael Bui assigned DPD-842 to you
+## [18/51] [JIRA] Michael Bui assigned DPD-842 to you
 Source: gmail | Thread: 19d30a8f49fa308a | Labels: Inbox, Updates | Priority: None | Senders: Michael Bui (Jira) | Last Date: Fri, Mar 27, 2026, 6:57 PM | Last Updated: 2026-03-27T22:03:01.237059+00:00
 **Daily Work Briefing: JIRA Assignment DPD-842**
 
@@ -496,7 +644,7 @@ Source: gmail | Thread: 19d30a8f49fa308a | Labels: Inbox, Updates | Priority: No
 *   **Notification Source:** Jira Cloud (jira@ntuclink.atlassian.net)
 
 
-## [15/32] Verifying it's you
+## [19/51] Verifying it's you
 Source: gmail | Thread: 19d301429f6276db | Labels: Inbox, Updates | Priority: None | Senders: Atlassian | Last Date: Fri, Mar 27, 2026, 4:15 PM | Last Updated: 2026-03-27T22:03:10.059456+00:00
 **Daily Work Briefing Summary**
 
@@ -526,7 +674,7 @@ None recorded in this thread; this is a transactional security prompt rather tha
 *   **Labels:** Inbox, Updates
 
 
-## [16/32] Urgent - PLA Impressions drop by 50%
+## [20/51] Urgent - PLA Impressions drop by 50%
 Source: gmail | Thread: 19d24c9e00402c74 | Labels: Inbox | Priority: None | Senders: Rachit, me, Nikhil | Last Date: Fri, Mar 27, 2026, 11:27 AM | Last Updated: 2026-03-27T14:01:17.936075+00:00
 **Daily Work Briefing: Urgent PLA Impressions Drop – Data Delivery & Analysis Phase**
 
@@ -560,7 +708,7 @@ Investigate a 50% drop in PLA impressions over the last week. Initial data showe
 Investigation remains active with a refined hypothesis regarding product density. The immediate blocker has been partially addressed: Rachit has delivered specific request logs for the 4th UTC hour on March 27, moving the team from data collection to granular verification. Michael must now analyze this new dataset to validate if the "single product per response" anomaly persists in the latest hourly window, confirming whether the root cause is systemic or a recent fluctuation.
 
 
-## [17/32] Re: [## 112603 ##] Sev1 incident: Ad Products per response is low for PLA
+## [21/51] Re: [## 112603 ##] Sev1 incident: Ad Products per response is low for PLA
 Source: gmail | Thread: 19d2ead5d3ae56a5 | Labels: Inbox | Priority: None | Senders: Nikhil Grover | Last Date: Fri, Mar 27, 2026, 9:43 AM | Last Updated: 2026-03-27T10:07:05.558515+00:00
 **Daily Work Briefing: Sev1 Incident #112603**
 
@@ -590,7 +738,7 @@ No formal decisions were recorded in this specific exchange. The thread represen
 At 9:43 AM on March 27, 2026, Nikhil Grover escalated the matter by adding Michael Bui to the thread. Nikhil explicitly stated an inability to access the necessary request URL and requested Michael's advice to proceed with the Sev1 investigation regarding low PLA responses.
 
 
-## [18/32] Re: CISA Adds One Known Exploited Vulnerability to Catalog
+## [22/51] Re: CISA Adds One Known Exploited Vulnerability to Catalog
 Source: gmail | Thread: 19d2ea0ef27d9afe | Labels: Inbox, Forums | Priority: None | Senders: Cyber Alert | Last Date: Fri, Mar 27, 2026, 9:29 AM | Last Updated: 2026-03-27T10:07:16.373260+00:00
 **Daily Work Briefing: CISA & Security Vulnerability Alert**
 
@@ -619,7 +767,7 @@ No formal decisions were recorded in this thread. The communication functions as
 **Summary:** Immediate attention is required from all staff to determine exposure to the Aqua Security Trivy vulnerability and implement mitigation steps. The specific technical details are located in the linked reference provided by the sender.
 
 
-## [19/32] A Little Better: Coming Together to Make Our Iftar Possible
+## [23/51] A Little Better: Coming Together to Make Our Iftar Possible
 Source: gmail | Thread: 19d2e873a4aa9f15 | Labels: Inbox, Updates | Priority: None | Senders: Internal Comms | Last Date: Fri, Mar 27, 2026, 9:01 AM | Last Updated: 2026-03-27T10:07:31.249449+00:00
 **Daily Work Briefing: Ramadan Iftar Initiative Summary**
 
@@ -656,7 +804,7 @@ The email reports on the 18th annual Ramadan Buka Puasa initiative where FPG dis
 *   **Sender Email:** internal_comms@fairpricegroup.sg
 
 
-## [20/32] [JIRA] (DPD-838) Fetch personalised banners from OSMOS
+## [24/51] [JIRA] (DPD-838) Fetch personalised banners from OSMOS
 Source: gmail | Thread: 19d2e7ac19e05d88 | Labels: Inbox, Updates | Priority: None | Senders: Nikhil Grover (Jira) | Last Date: Fri, Mar 27, 2026, 8:48 AM | Last Updated: 2026-03-27T10:07:55.264923+00:00
 **Daily Work Briefing: JIRA DPD-838**
 
@@ -687,7 +835,7 @@ Source: gmail | Thread: 19d2e7ac19e05d88 | Labels: Inbox, Updates | Priority: No
 *   Mobile notifications for Jira Cloud are available via Android/iOS apps.
 
 
-## [21/32] [JIRA] (DPD-838) Fetch multiple banners per slot from OSMOS
+## [25/51] [JIRA] (DPD-838) Fetch multiple banners per slot from OSMOS
 Source: gmail | Thread: 19d2e7613ef55388 | Labels: Inbox, Updates | Priority: None | Senders: Nikhil Grover (Jira) | Last Date: Fri, Mar 27, 2026, 8:43 AM | Last Updated: 2026-03-27T10:08:05.937971+00:00
 **Daily Work Briefing: JIRA Update DPD-838**
 
@@ -719,7 +867,7 @@ Creation of user story **[DPD-838] Fetch multiple banners per slot from OSMOS**.
 *   **Source:** JIRA (jira@ntuclink.atlassian.net).
 
 
-## [22/32] [Action Required] Service Account Key Expiring, Renewal Required - 0b001c303f2e01cefa4828ea0d37f46d8e76ae05
+## [26/51] [Action Required] Service Account Key Expiring, Renewal Required - 0b001c303f2e01cefa4828ea0d37f46d8e76ae05
 Source: gmail | Thread: 19d2e5a71666e00b | Labels: Inbox, Forums | Priority: None | Senders: noreply-sre | Last Date: Fri, Mar 27, 2026, 8:12 AM | Last Updated: 2026-03-27T10:08:36.702191+00:00
 **Daily Work Briefing: Service Account Key Expiration**
 
@@ -749,7 +897,7 @@ Source: gmail | Thread: 19d2e5a71666e00b | Labels: Inbox, Forums | Priority: Non
     *   Project/Environment Context: `fp-marketing-tech-production`
 
 
-## [23/32] To be modified / 驳回待修改
+## [27/51] To be modified / 驳回待修改
 Source: gmail | Thread: 19d2da940cb36e48 | Labels: Inbox, Updates | Priority: None | Senders: service | Last Date: Fri, Mar 27, 2026, 4:59 AM | Last Updated: 2026-03-27T06:01:43.416884+00:00
 **Daily Work Briefing: Visa Application Status Update**
 
@@ -776,7 +924,7 @@ Notification regarding the rejection of Business Visa Application Form No. **SGP
 *   **Next Step:** Immediate amendment required before re-submission to avoid further delays. No specific deadline was provided in the notification; immediate action is recommended to secure appointment slots.
 
 
-## [24/32] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
+## [28/51] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
 Source: gmail | Thread: 19d2c9102a5fde4d | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Fri, Mar 27, 2026, 4:25 AM | Last Updated: 2026-03-27T06:02:07.067738+00:00
 **Daily Work Briefing: Opsgenie Alert Summary (Updated)**
 
@@ -814,7 +962,7 @@ Source: gmail | Thread: 19d2c9102a5fde4d | Labels: Inbox, Updates | Priority: No
 The alert is currently active. A new instance (TinyId: `139160`) was generated at 4:20 AM on March 27, 2026, following the initial notification. No resolution or status update has been logged in the provided thread since the latest generation. The team should prioritize this P4 incident based on the 100% anomalous rate observed over the last 15 minutes.
 
 
-## [25/32] Trivy compromise & LiteLLM infected
+## [29/51] Trivy compromise & LiteLLM infected
 Source: gmail | Thread: 19d2d713065f8bdf | Labels: Inbox, Forums | Priority: None | Senders: 'Nicholas Tan' via . | Last Date: Fri, Mar 27, 2026, 3:58 AM | Last Updated: 2026-03-27T06:02:28.516503+00:00
 **Executive Briefing: Trivy & LiteLLM Supply Chain Compromise**
 
@@ -855,7 +1003,7 @@ A critical security advisory regarding the compromise of **Trivy v0.69.4**, a po
     *   Wiz.io Blog: LiteLLM Trojanization (https://www.wiz.io/blog/threes-a-crowd-teampcp-trojanizes-litellm-in-continuation-of-campaign)
 
 
-## [26/32] Canceled event with note: [Virtual] Smart Cart x RMN Catchup @ Fri Mar 27, 2026 4pm - 4:30pm (SGT) (Michael Bui)
+## [30/51] Canceled event with note: [Virtual] Smart Cart x RMN Catchup @ Fri Mar 27, 2026 4pm - 4:30pm (SGT) (Michael Bui)
 Source: gmail | Thread: 19d2d6e904472726 | Labels: Inbox | Priority: None | Senders: Ching Hui Ng | Last Date: Fri, Mar 27, 2026, 3:55 AM | Last Updated: 2026-03-27T06:02:39.646394+00:00
 **Daily Work Briefing: [Virtual] Smart Cart x RMN Catchup Cancellation**
 
@@ -884,7 +1032,7 @@ Ching Hui Ng requested a detailed roadmap for "Osmo" and sought clarification on
 *   **Next Steps**: The team must coordinate with Ching Hui Ng to reschedule the discussion regarding the Osmo roadmap and Smart Cart integration, adhering to the "To revisit" instruction.
 
 
-## [27/32] Re: [Bitbucket] Pull request #919: chore/omni ops monitor (ntuclink/dpd-datadog-monitoring)
+## [31/51] Re: [Bitbucket] Pull request #919: chore/omni ops monitor (ntuclink/dpd-datadog-monitoring)
 Source: gmail | Thread: 19d2d6690d21cc23 | Labels: Inbox, Updates | Priority: None | Senders: Sundy Yaputra | Last Date: Fri, Mar 27, 2026, 3:46 AM | Last Updated: 2026-03-27T06:02:53.551152+00:00
 **Daily Work Briefing: Pull Request #919 Summary**
 
@@ -919,7 +1067,7 @@ No formal business decisions (e.g., budget approval, timeline extension) are rec
 *   **Message ID**: `19d2d6690d21cc23`
 
 
-## [28/32] [Dashboard Report] Retail Media - DD Dashboard | Fri 27 Mar 11:00AM +08
+## [32/51] [Dashboard Report] Retail Media - DD Dashboard | Fri 27 Mar 11:00AM +08
 Source: gmail | Thread: 19d2d3eb8bab7659 | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Fri, Mar 27, 2026, 3:02 AM | Last Updated: 2026-03-27T06:03:04.555523+00:00
 **Subject:** Daily Briefing: Retail Media Datadog Dashboard Report (Mar 27)
 
@@ -952,7 +1100,7 @@ Source: gmail | Thread: 19d2d3eb8bab7659 | Labels: Inbox, Updates | Priority: No
 *   **Datadog HQ Location:** 620 8th Avenue, 45th Floor, New York, NY 10018.
 
 
-## [29/32] Safeguarding our Foundation - The new Regulatory Compliance Policy
+## [33/51] Safeguarding our Foundation - The new Regulatory Compliance Policy
 Source: gmail | Thread: 19d2d04c30ff7501 | Labels: Inbox, Updates | Priority: None | Senders: GRC | Last Date: Fri, Mar 27, 2026, 1:59 AM | Last Updated: 2026-03-27T02:01:30.772695+00:00
 **Daily Work Briefing: Regulatory Compliance Policy Update**
 
@@ -983,7 +1131,7 @@ The Governance, Risk & Compliance (GRC) team has officially introduced the new *
 *   **Guidance Contact:** For doubts or clarification, contact `ask_grc@fairpricegroup.sg` or the relevant Direct Manager/Reporting Officer.
 
 
-## [30/32] You have no events scheduled today.
+## [34/51] You have no events scheduled today.
 Source: gmail | Thread: 19d2c11f1c0487ef | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Thu, Mar 26, 2026, 9:34 PM | Last Updated: 2026-03-26T22:01:21.544265+00:00
 **Daily Work Briefing Summary**
 
@@ -1012,7 +1160,7 @@ Source: gmail | Thread: 19d2c11f1c0487ef | Labels: Inbox, Updates | Priority: No
 *   **Confidentiality Notice**: The email body contains a standard confidentiality disclaimer stating the content may be privileged.
 
 
-## [31/32] It's raining new Jira updates!
+## [35/51] It's raining new Jira updates!
 Source: gmail | Thread: 19d2b32183edc65e | Labels: Inbox, Updates | Priority: None | Senders: Atlassian | Last Date: Thu, Mar 26, 2026, 5:29 PM | Last Updated: 2026-03-26T22:01:36.067468+00:00
 **Daily Work Briefing: Jira Product Updates & Events**
 
@@ -1048,7 +1196,7 @@ Monthly update covering the March 2026 Jira release cycle, focusing on new AI ca
 *   **Jira + Loom Integration:** Enhanced bug reporting mode and AI-suggested work item updates from recordings.
 
 
-## [32/32] [JIRA] (DPD-383) Sales posting for BCRS deposit amount
+## [36/51] [JIRA] (DPD-383) Sales posting for BCRS deposit amount
 Source: gmail | Thread: 19c0dd2af26388b0 | Labels: Inbox, Updates | Priority: None | Senders: Prajney | Last Date: Thu, Mar 26, 2026, 2:47 PM | Last Updated: 2026-03-26T22:01:56.627400+00:00
 **Daily Briefing: JIRA DPD-383 – Sales posting for BCRS deposit amount**
 
@@ -1088,3 +1236,519 @@ Implementation of a service to calculate and post BCRS (Bottle Deposit) amounts 
 *   Postman Setup Guide & Chat Room links available in thread.
 *   Sample Order ID: 75412611.
 *   Deployment Verification: Image attachment (image-20260326-143621.png) posted by Michael Bui on Mar 26, 2026.
+
+
+## [37/51] March 2026 Google Cloud on Coursera Newsletter
+Source: gmail | Thread: 19d2a3af8e725b68 | Labels: Inbox, Updates | Priority: None | Senders: no-r...@...l.coursera.org | Last Date: Thu, Mar 26, 2026, 1:00 PM | Last Updated: 2026-03-26T22:02:13.777741+00:00
+### Daily Work Briefing: March 2026 Google Cloud on Coursera Newsletter
+
+**Key Participants & Roles**
+*   **Google Cloud (Sender):** Providing official updates, learning resources, and webinar invitations via `no-reply@m.mail.coursera.org`.
+*   **Recipients:** Professionals seeking cloud certification and upskilling (No specific individual names listed; audience is the general newsletter subscriber base).
+
+**Main Topic/Request**
+The email serves as the March 2026 edition of the "Google Cloud on Coursera" newsletter. It outlines key learning opportunities, specifically highlighting a new webinar for the **Cloud Digital Leader Exam** and listing newly available or localized training specializations in Generative AI, infrastructure, and application development across multiple languages (English, Deutsch, Indonesian, 日本語，Português, Français, 한국어, Español, 简体中文，繁體中文).
+
+**Pending Actions & Ownership**
+*   **Action:** Register for the "Take the Lead: Your Guide to Mastering the Cloud Digital Leader Exam" webinar.
+    *   **Owner:** Recipients (via "Save your spot here" link).
+    *   **Benefit:** Includes a discount voucher for the exam.
+*   **Action:** Review and enroll in new learning content, including the "[New!] Build and Modernize Applications With Generative AI [Specialization]" and various localized courses.
+    *   **Owner:** Recipients.
+
+**Decisions Made**
+No internal business decisions were made within this communication; it is a distribution of educational resources and event invitations.
+
+**Key Dates & Deadlines**
+*   **March 25, 2026, 8:00 am Pacific / 11:00 am Eastern:** The scheduled time for the Cloud Digital Leader Exam webinar (sent March 26, 2026). *Note: The event date listed in the content is prior to the newsletter send date.*
+*   **March 2026:** Current context for wrapping up Q1 and establishing professional growth milestones.
+
+**Specific References & Content Highlights**
+*   **Certification Focus:** Cloud Digital Leader (no technical background required).
+*   **New Specialization:** Build and Modernize Applications With Generative AI (English).
+*   **Localized Content Updates:**
+    *   Deutsch: Deploy and Scale AI Models with Cloud Run; Essential Google Cloud Infrastructure: Core Services.
+    *   Indonesian: Deploy and Scale AI Models with Cloud Run.
+    *   日本語：Select a Google Cloud Database for Your Applications; Service Orchestration and Choreography on Google Cloud.
+    *   Português: Select a Google Cloud Database for Your Applications; Developing Containerized Applications on Google Cloud; Accelerate App Development with Gemini CLI.
+    *   Français: Select a Google Cloud Database for Your Applications; Developing Containerized Applications on Google Cloud; Service Orchestration and Choreography on Google Cloud; Accelerate App Development with Gemini CLI.
+    *   한국어：Developing Containerized Applications on Google Cloud; AI Infrastructure: Cloud GPUs.
+    *   Español: Developing Containerized Applications on Google Cloud; Service Orchestration and Choreography on Google Cloud; Accelerate App Development with Gemini CLI.
+    *   简体中文/繁體中文：Accelerate App Development with Gemini CLI; AI Infrastructure: Cloud GPUs (Traditional).
+
+
+## [38/51] DOS: Don't Wait for a Special Season - Give with Purpose Today!
+Source: gmail | Thread: 19d295fbcda1be58 | Labels: Inbox, Promotions | Priority: None | Senders: Day of Service | Last Date: Thu, Mar 26, 2026, 9:00 AM | Last Updated: 2026-03-26T22:02:24.725070+00:00
+**Daily Work Briefing: Day of Service Initiative**
+
+**Key Participants & Roles**
+*   **Sender:** CSR Team (fairprice.com.sg) representing "Day of Service."
+*   **Recipient Audience:** FPG colleagues, referred to as "Fairmily."
+*   **Beneficiaries:** Seniors and community members receiving support.
+
+**Main Topic/Request**
+The email solicits immediate volunteer participation for the "Day of Service" initiative. The core message emphasizes that volunteering should not be reserved for special seasons but can occur through everyday actions. Specific examples of past impact include preparing 3,000 nutritious meals, celebrating Easter with seniors, and assisting beneficiaries with daily essentials.
+
+**Pending Actions & Ownership**
+*   **Action:** Explore upcoming volunteer opportunities via the provided link (image).
+    *   **Owner:** FPG colleagues ("Fairmily").
+*   **Action:** Contact the CSR team for clarification on specific locations or roles if needed.
+    *   **Owner:** Interested FPG colleagues.
+    *   **Contact Channel:** csr@fairprice.com.sg.
+
+**Decisions Made**
+No formal decisions were recorded in this thread; the communication is an informational solicitation inviting participation rather than reporting on a concluded decision-making process.
+
+**Key Dates, Deadlines, and Follow-ups**
+*   **Sent Date:** March 26, 2026, at 9:00 AM.
+*   **Immediate Action Required:** Volunteers are encouraged to "explore upcoming volunteer opportunities today."
+*   **Future Outlook:** The initiative describes ongoing activities (e.g., meal preparation, senior support) rather than a single fixed deadline, urging colleagues to act now ("Give with Purpose Today").
+
+**Specific References & Data Points**
+*   **Subject/Resource Title:** "DOS: Don't Wait for a Special Season - Give with Purpose Today!"
+*   **Email Address:** csr@fairprice.com.sg
+*   **Impact Metrics:** 3,000 nutritious meals prepared in previous initiatives.
+*   **Volunteer Time Commitment Options:** Two hours or half a day.
+
+
+## [39/51] Notes: “BCRS Regroup - Open Item Planning” Mar 26, 2026
+Source: gmail | Thread: 19d295faa30a0ec9 | Labels: Inbox | Priority: None | Senders: Gemini | Last Date: Thu, Mar 26, 2026, 9:00 AM | Last Updated: 2026-03-26T22:02:40.668471+00:00
+**Daily Work Briefing: BCRS Regroup - Open Item Planning**
+**Date:** March 26, 2026
+**Source:** Meeting Notes (Auto-generated by Gemini)
+
+**Key Participants & Roles**
+*   **Dany Jacob:** Code implementation lead.
+*   **Sathya Murthy Karthik:** Support coordination and testing confirmation lead.
+*   **Wai Ching Chan:** Configuration management, UAT status tracking, and FOC issue investigation.
+*   **Emerald/Business Team:** Stakeholders required to confirm pre-order testing necessity.
+*   **Daryl:** Technical support provider for Dany Jacob.
+*   **External Team:** Conducting Scan and Go UAT testing.
+
+**Main Topic/Request**
+The meeting focused on resolving critical blockers for the April 1st BC go-live, specifically regarding **Refund SKU and container deposit implementation**, **Scan and Go testing status**, and a technical defect where deposits are not charging on Free of Charge (FOC) items due to POS omission of $0 value items.
+
+**Decisions Made**
+*   The team confirmed that refund SKU and container deposit details can be retrieved from the order detail SKU.
+*   Deployment timelines were prioritized to allow immediate testing, as Finance is currently blocking sign-off on returns/refunds.
+*   It was identified that a solution for FOC items requires investigation into whether the existing $0.01 dummy SKU setup needs modification since the POS omits $0 value items.
+
+**Pending Actions & Owners**
+*   **Dany Jacob:** Deploy code changes to the UAT environment by tomorrow morning (March 27, 2026).
+*   **Sathya Murthy Karthik:** Secure support from Daryl for Dany Jacob and close out this task ASAP.
+*   **Sathya Murthy Karthik:** Confirm with Emerald or the Business Team whether pre-order testing is necessary.
+*   **Wai Ching Chan:** Request a status update and expected completion date from the UAT team regarding ongoing Scan and Go testing.
+*   **Wai Ching Chan:** Implement necessary back-office configuration changes for the production environment.
+*   **Wai Ching Chan:** Investigate the FOC deposit issue thread to determine how to handle deposit SKUs against zero-dollar items.
+*   **Someone in L12 Room 4 (FairPrice Hub, 12):** Gather data team members into a chat and provide a heads-up regarding readiness for tomorrow morning testing.
+
+**Key Dates & Deadlines**
+*   **March 27, 2026 (Tomorrow Morning):** Deadline for Dany Jacob to deploy code to UAT; deadline for Data Team readiness check.
+*   **April 1, 2026:** Target BC go-live date (current Finance block on returns/refunds poses a risk).
+*   **Ongoing:** External team Scan and Go testing began Monday (March 23) in UAT; deployment awaits their completion.
+
+
+## [40/51] [JIRA] Wai Ching Chan mentioned you on DPD-807
+Source: gmail | Thread: 19d2955e3e3a835e | Labels: Inbox, Updates | Priority: None | Senders: Wai Ching Chan (Jir. | Last Date: Thu, Mar 26, 2026, 8:49 AM | Last Updated: 2026-03-26T22:02:53.768290+00:00
+**Daily Work Briefing: DPD-807 Notification**
+
+**1. Key Participants & Roles**
+*   **Wai Ching Chan:** Jira User/Reporter; Identified as the initiator of the task notification.
+*   **Michael Bui (You):** The assignee/receiver of the instruction; responsible for executing the technical update.
+*   **System:** NTU Clink / FairPrice UAT environments acting as the execution target.
+
+**2. Main Topic/Request**
+The email addresses a specific technical requirement regarding Jira work item **DPD-807**: **"Charge BCRS deposit for re-delivery"**. The objective is to manually update the system metadata to reflect that a deposit has been successfully posted to SAP for delivery order **75588070**.
+
+**3. Pending Actions & Ownership**
+*   **Action:** Execute a `curl` PUT request to update the delivery order metadata in the UAT environment.
+    *   **Endpoint:** `https://api.zs-uat.fairprice.com.sg/order-service/v3/deliveryOrders/75588070`
+    *   **Payload Requirement:** Set `"metadata": { "Deposit posted to SAP": true }` and enable `"updateAction": ["UPDATE_ACTION_UPDATE_METADATA"]`.
+*   **Owner:** Michael Bui.
+
+**4. Decisions Made**
+No strategic decisions were made in this thread. The communication confirms the requirement that the specific metadata flag (`Deposit posted to SAP`) must be toggled to `true` for order `75588070`. A reference link to the customer support view is provided at `https://admin-uat.fairprice.com.sg/customer-support/delivery-orders/75588070`.
+
+**5. Key Dates & Follow-ups**
+*   **Date:** March 26, 2026
+*   **Time:** 8:49 AM (Notification timestamp) / 4:49 PM Singapore Time (Wai Ching Chan's action time).
+*   **Follow-up:** Immediate execution of the provided `curl` command is required to close the update loop. No future deadline was specified beyond the immediate request context.
+
+**6. Specific References**
+*   **Jira ID:** DPD-807 (Ecom/Omni category).
+*   **Order ID:** 75588070.
+*   **Environment:** UAT (`api.zs-uat.fairprice.com.sg`, `admin-uat.fairprice.com.sg`).
+
+
+## [41/51] New event: Michael On Leave @ Sat 28 Mar - Sun 5 Apr 2026 (CPD Team Calendar)
+Source: gmail | Thread: 19d29498c1a3f9dc | Labels: None | Priority: None | Senders: me | Last Date: Thu, Mar 26, 2026, 8:36 AM | Last Updated: 2026-03-26T22:03:05.425124+00:00
+**Daily Work Briefing: Calendar Notification Summary**
+
+**Key Participants & Roles**
+*   **Michael Bui** (`michael.bui@fairpricegroup.sg`): Event Organizer. The email indicates he is the subject of the leave event ("Michael On Leave").
+*   **CPD Team**: Collective attendees/observers subscribed to the "CPD Team Calendar" receiving this notification.
+
+**Main Topic/Request**
+*   Automated system notification regarding a scheduled absence for Michael Bui.
+*   The event title is explicitly defined as: **"New event: Michael On Leave @ Sat 28 Mar - Sun 5 Apr 2026"**.
+*   The invitation was generated via Google Calendar and distributed to the CPD Team Calendar subscription list.
+
+**Pending Actions & Ownership**
+*   **No specific human actions are required** in this automated notification thread.
+*   Recipients are instructed via the footer that forwarding the email allows them to modify the guest list or RSVP; however, no such action has been initiated by any recipient as of the last message timestamp.
+
+**Decisions Made**
+*   No new decisions were made during this specific communication exchange. The content reflects a pre-existing calendar entry notification rather than a discussion requiring consensus.
+
+**Key Dates & Deadlines**
+*   **Event Start Date:** Saturday, 28 March 2026.
+*   **Event End Date:** Sunday, 5 April 2026.
+*   **Notification Timestamp:** Wednesday, 26 March 2026, at 8:36 AM.
+*   **Last Message ID:** `19d29498c1a3f9dc`.
+
+**Specific References**
+*   **Calendar System:** Google Calendar (CPD Team Calendar).
+*   **Domain:** FairPrice Group (`@fairpricegroup.sg`).
+*   **Confidentiality Notice:** The email body includes a standard legal disclaimer stating the message is "confidential and may also be privileged."
+
+*Summary Note: This thread serves as an informational alert to the CPD Team regarding Michael Bui's upcoming two-week leave period in Q2 2026. No immediate follow-up is required unless operational coverage planning has already been triggered by this calendar block.*
+
+
+## [42/51] New event: Michael On Leave @ Sat Mar 28 - Sun Apr 5, 2026 (CPD Team Calendar)
+Source: gmail | Thread: 19d29498c065d410 | Labels: None | Priority: None | Senders: me | Last Date: Thu, Mar 26, 2026, 8:36 AM | Last Updated: 2026-03-26T22:03:15.876799+00:00
+**Daily Work Briefing: Calendar Notification Summary**
+
+**1. Key Participants & Roles**
+*   **Organizer/Subject:** Michael Bui (`michael.bui@fairpricegroup.sg`)
+*   **Audience:** Subscribers to the CPD Team Calendar (automated notification recipients).
+*   **System:** Google Calendar infrastructure handling automated notifications and RSVP permissions.
+
+**2. Main Topic/Request**
+The email is an automated system notification regarding a scheduled event titled **"Michael On Leave."** It serves as an official calendar invitation alerting team members to the organizer's unavailability during the specified period. The content includes standard security disclaimers regarding forwarding confidentiality and details on how recipients can manage their subscription settings or permission levels.
+
+**3. Pending Actions & Ownership**
+*   **No manual actions required:** This is a read-only system notification generated by Google Calendar.
+*   **Optional Management (Recipient-owned):** Subscribers may choose to stop receiving these notifications by navigating to Calendar settings, selecting the "CPD Team Calendar," and adjusting "Other notifications."
+*   **RSVP/Permissions:** While the email notes that forwarding allows recipients to modify RSVPs or invite others, no specific action has been requested of the current recipients in this thread.
+
+**4. Decisions Made**
+*   Michael Bui has officially blocked out his schedule for leave from **Saturday, March 28, 2026**, through **Sunday, April 5, 2026**.
+*   The CPD Team Calendar has been updated to reflect this unavailability.
+
+**5. Key Dates & Deadlines**
+*   **Event Start:** Saturday, March 28, 2026
+*   **Event End:** Sunday, April 5, 2026
+*   **Notification Date:** March 26, 2026, at 8:36 AM
+
+**Note:** This summary is derived solely from the automated calendar notification provided. No further discussion or decision-making thread was present in the source content.
+
+
+## [43/51] Declined: BCRS Regroup - Open Item Planning @ Thu Mar 26, 2026 4pm - 5pm (SGT) (Prajney Sribhashyam)
+Source: gmail | Thread: 19d2908490bc9a1f | Labels: None | Priority: None | Senders: me | Last Date: Thu, Mar 26, 2026, 7:25 AM | Last Updated: 2026-03-26T22:03:29.134987+00:00
+**Daily Work Briefing: BCRS Regroup Meeting Status**
+
+**1. Key Participants & Roles**
+*   **Organizer:** Prajney Sribhashyam
+*   **Attendees:**
+    *   Michael Bui (Declined)
+    *   Sathya Murthy Karthik
+    *   Daryl Ng
+    *   Akash Gupta
+    *   De Wei Tey
+    *   Wai Ching Chan
+    *   Zaw Myo Htet
+*   **Optional Attendee:** Koklin Gan
+
+**2. Main Topic/Request**
+*   **Subject:** BCRS Regroup - Open Item Planning.
+*   **Purpose:** Planning session for open items within the BCRS project.
+*   **Meeting Details:** Scheduled for Thursday, March 26, 2026, from 4:00 PM to 5:00 PM (SGT).
+*   **Location:** FairPrice Hub-12-L12 Room 4 (6) [Google Meet].
+
+**3. Pending Actions & Ownership**
+*   **Action:** Reschedule the meeting due to Michael Bui's unavailability.
+*   **Owner:** Prajney Sribhashyam (Organizer).
+*   **Context:** Michael Bui declined the invitation citing a "Meeting clash." No new time has been proposed in the current thread; the organizer must coordinate a new slot with the team, specifically ensuring Michael Bui's availability.
+
+**4. Decisions Made**
+*   **Status:** The meeting for March 26, 2026, at 4:00 PM SGT is effectively cancelled for Michael Bui pending rescheduling. No final decision on a new time was recorded in this thread snippet; the current status remains "Declined."
+
+**5. Key Dates & Follow-ups**
+*   **Original Date/Time:** Thursday, March 26, 2026 | 4:00 PM – 5:00 PM (SGT).
+*   **Follow-up Required:** Immediate coordination by Prajney Sribhashyam to find an alternative time slot that accommodates Michael Bui.
+
+**6. Contact Information & References**
+*   **Michael Bui Email:** michael.bui@fairpricegroup.sg
+*   **Meeting Link:** meet.google.com/gbg-fuft-uzq
+*   **Phone Access (US):** +1 574-313-1033 | PIN: 366674343
+
+
+## [44/51] Updated invitation: BCRS Regroup - Open Item Planning @ Thu Mar 26, 2026 4pm - 5pm (SGT) (Michael Bui)
+Source: gmail | Thread: 19d2907bbd65bcc6 | Labels: Inbox | Priority: None | Senders: Prajney Sribhashyam | Last Date: Thu, Mar 26, 2026, 7:24 AM | Last Updated: 2026-03-26T22:03:41.149030+00:00
+**Daily Work Briefing: BCRS Regroup – Open Item Planning**
+
+**1. Key Participants & Roles**
+*   **Organizer:** Prajney Sribhashyam (prajney.sribhashyam@fairpricegroup.sg)
+*   **Confirmed/Noted Attendees:** Sathya Murthy Karthik, Daryl Ng, Akash Gupta, Michael Bui, De Wei Tey, Wai Ching Chan, Zaw Myo Htet.
+*   **Optional Guest:** Koklin Gan.
+
+**2. Main Topic/Request**
+The session is an "Open Item Planning" meeting for the BCRS Regroup initiative. The primary purpose of this communication is to disseminate an updated calendar invitation containing revised location and access details for the scheduled discussion.
+
+**3. Pending Actions & Ownership**
+*   **Action:** RSVP to the updated meeting invitation (Yes/No/Maybe).
+    *   **Owner:** All invited guests, specifically including Michael Bui (michael.bui@fairpricegroup.sg) as per the reply prompt context.
+*   **Action:** Join the session via Google Meet or phone conference at the specified time.
+    *   **Owner:** All attendees.
+
+**4. Decisions Made**
+*   No strategic decisions are recorded in this thread; the update reflects a logistical change regarding the meeting venue.
+
+**5. Key Dates, Deadlines & Follow-ups**
+*   **Event Date/Time:** Thursday, March 26, 2026, from 4:00 PM to 5:00 PM (Singapore Standard Time).
+*   **Updated Location:** FairPrice Hub-12-L12 Room 4 (6) [Google Meet].
+    *   *Note:* The location field was explicitly marked as "CHANGED" in the notification.
+*   **Virtual Access Details:**
+    *   **Google Meet Link:** meet.google.com/gbg-fuft-uzq
+    *   **Phone Dial-in:** (US) +1 574-313-1033 | PIN: 366674343.
+*   **Follow-up:** Attendees must verify the new physical room assignment prior to the meeting time.
+
+
+## [45/51] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
+Source: gmail | Thread: 19d28c94b778fa51 | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Thu, Mar 26, 2026, 6:21 AM | Last Updated: 2026-03-26T22:03:55.937269+00:00
+**Daily Work Briefing: Opsgenie Alert Summary**
+
+**Key Participants & Roles**
+*   **System:** Opsgenie (Alerting Platform), Datadog (Monitoring Source).
+*   **Responders/On-call Team:** "DPD Staff Excellence - Retail Media" team (specifically notified via `@hangouts-dd-dpd-grocery-alert` and `@opsgenie-dpd-grocery-retail-media`).
+*   **Managed Service:** `marketing-service` in the `fpon-cluster` (Kubernetes environment).
+
+**Main Topic/Request**
+An automated P4 alert was triggered regarding an abnormal throughput change for the `marketing-service` in the production (`env:prod`) environment. The anomaly detection system identified that 100% of HTTP request hit values deviated by more than 3 standard deviations from predicted values over a 15-minute window.
+
+**Pending Actions & Ownership**
+*   **Investigation Required:** The on-call team must immediately investigate the cause of the throughput spike/drop.
+*   **Ownership:** "DPD Staff Excellence - Retail Media" (assigned responders).
+*   **Required Checks:**
+    1.  Review Datadog APM metrics: [Marketing Service HTTP Request](https://app.datadoghq.com/apm/services/marketing-service/operations/http.request/resources?env=prod)
+    2.  Review Kubernetes deployment status: [GKE Marketing Service Overview](https://console.cloud.google.com/kubernetes/deployment/asia-southeast1/fpon-cluster/default/marketing-service/overview?cloudshell=false&project=fponprd)
+    3.  Execute standard troubleshooting procedures per the official runbook: [Marketing-Service Runbook](https://ntuclink.atlassian.net/wiki/spaces/DIS/pages/2008167992/marketing-service+-+Run+book)
+
+**Decisions Made**
+No manual decisions were recorded in this thread. The alert generation and notification routing to the specific responder groups are automated system actions based on configured monitors.
+
+**Key Dates, Deadlines & Follow-ups**
+*   **Alert Trigger Time:** March 26, 2026, at 06:15:10 UTC (Last Updated).
+*   **Opsgenie Notification Time:** March 26, 2026, at 06:16 AM and a duplicate notification at 06:21 AM.
+*   **Metric Window Affected:** Last 15 minutes prior to the alert.
+*   **Monitor ID:** `17447110` (Datadog).
+*   **Follow-up Status:** Pending investigation by the Retail Media team. No closure or resolution timestamp is present in the current thread.
+
+
+## [46/51] Invitation: BCRS Regroup - Open Item Planning @ Thu Mar 26, 2026 4pm - 5pm (SGT) (Michael Bui)
+Source: gmail | Thread: 19d288af3d43dd36 | Labels: Inbox | Priority: None | Senders: Daryl Ng | Last Date: Thu, Mar 26, 2026, 5:08 AM | Last Updated: 2026-03-26T06:01:34.958053+00:00
+**Daily Work Briefing: BCRS Regroup – Open Item Planning**
+
+**1. Key Participants & Roles**
+*   **Organizer:** Prajney Sribhashyam (FairPrice Group)
+*   **Confirmed Attendees:** Sathya Murthy Karthik, Daryl Ng (daryl.ng@fairpricegroup.sg), Akash Gupta, Michael Bui (michael.bui@fairpricegroup.sg).
+*   **Optional Attendee:** Koklin Gan.
+
+**2. Main Topic/Request**
+The meeting focuses on **"BCRS Regroup - Open Item Planning."** The objective is to review and plan outstanding items within the BCRS framework.
+
+**3. Pending Actions & Ownership**
+*   **Action:** Review "Open Items" (specific details not listed in this thread) during the scheduled session.
+*   **Ownership:** Collective responsibility of the attendee group; execution leads to be determined during the meeting.
+*   **Note:** Michael Bui has responded with a "Yes" confirmation to attend.
+
+**4. Decisions Made**
+No specific operational decisions or strategic outcomes were recorded in this thread. The primary decision made was the scheduling and confirmation of the meeting slot.
+
+**5. Key Dates, Deadlines & Follow-ups**
+*   **Meeting Date:** Thursday, March 26, 2026.
+*   **Time:** 4:00 PM – 5:00 PM (Singapore Standard Time - SGT).
+*   **Access Details:**
+    *   **Google Meet Link:** `meet.google.com/gbg-fuft-uzq`
+    *   **Phone Access (US):** +1 574-313-1033 | **PIN:** 366674343.
+*   **Next Steps:** Attendees are expected to join the session as scheduled to address open items.
+
+**Summary**
+This is a standard calendar invitation and meeting reminder email for the "BCRS Regroup - Open Item Planning" session. The thread contains logistical details (time, location, RSVP status) but no substantive discussion or resolution of business issues prior to the meeting date.
+
+
+## [47/51] Re: [Not Virus Scanned] Re: FairPrice Performance Marketing Meta x Osmos
+Source: gmail | Thread: 19d25769187b9103 | Labels: Inbox | Priority: None | Senders: Nikhil, Gauri | Last Date: Thu, Mar 26, 2026, 5:07 AM | Last Updated: 2026-03-26T06:01:51.964662+00:00
+**Daily Work Briefing: FairPrice Performance Marketing Meta x Osmos Integration Update**
+
+**Key Participants & Roles**
+*   **Nikhil Grover** (nikhil.grover@fairpricegroup.sg): Project Stakeholder – Initiated request for next steps and timeline.
+*   **Gauri Salunke** (gauri.salunke@osmos.ai): Primary Point of Contact (Osmos) – Responded to inquiry regarding integration strategy.
+
+**Main Topic & Current Status**
+Following the confirmation of completed API testing on March 25, 2026, Gauri Salunke has officially responded to Nikhil Grover's request for a path forward. The project has transitioned from "waiting for guidance" to "active evaluation."
+
+Gauri confirmed that Osmos will immediately begin evaluating the required integration changes on their end and is committed to sharing specific timelines in return. This response supersedes the previous pending status of Gauri's advice; the direction is now defined as an internal technical assessment by Osmos.
+
+**Pending Actions & Ownership**
+*   **Action**: Evaluate required integration changes internally.
+    *   **Owner**: Gauri Salunke (Osmos team).
+    *   **Status**: Active/In Progress (Initiated Mar 26, 2026).
+*   **Action**: Share revised project timelines and deliverables with Nikhil Grover.
+    *   **Owner**: Gauri Salunke.
+    *   **Status**: Pending completion of evaluation; no specific deadline provided in response but implied immediate execution.
+
+**Decisions Made**
+*   **Agreed Path Forward**: Osmos (Gauri) has accepted the mandate to proceed with integration change evaluation rather than requesting further clarification on scope from Nikhil at this stage.
+*   **Baseline Confirmed**: API testing completion remains the validated baseline for all subsequent work.
+*   **Timeline Protocol**: Gauri will proactively provide the schedule upon completing the technical assessment, shifting ownership of timeline creation solely to Osmos until shared with FairPrice.
+
+**Key Dates & Follow-ups**
+*   **Original Inquiry Date**: March 25, 2026 (Time: 2:47 PM).
+*   **Milestone Achieved**: API testing completion (Mar 25, 2026).
+*   **Response Received**: Mar 26, 2026, at 5:07 AM from Gauri Salunke.
+*   **Next Step/Deadline**: Osmos to share evaluated timelines and requirements following the internal review.
+
+**Contextual Note**
+This update continues within the "FairPrice Performance Marketing Meta x Osmos" discussion thread. The initial [Not Virus Scanned] header indicates the ongoing security-monitored workflow. The communication flow has shifted from a pending inquiry (Mar 25) to an active acceptance of task (Mar 26), moving the project into the technical evaluation phase.
+
+
+## [48/51] Data COE Org Announcement
+Source: gmail | Thread: 19d288431ce247d5 | Labels: Inbox, Forums | Priority: None | Senders: Shirley BH Peh | Last Date: Thu, Mar 26, 2026, 5:00 AM | Last Updated: 2026-03-26T06:02:07.211353+00:00
+**Daily Work Briefing: Data COE Org Announcement Summary**
+
+**Key Participants & Roles**
+*   **Dennis Seah:** Chief Digital and Technology Officer (Sender; issued announcement on behalf of Shirley BH Peh).
+*   **Shirley BH Peh:** Sent the email on Dennis Seah's behalf.
+*   **Hu Yiqun:** Leader of the Data Centre of Excellence (COE); will transition functions.
+*   **Karen Chan:** Incoming Chief Customer and Marketing Officer (CCMO); becoming Hu Yiqun's new direct reporter.
+*   **FairPrice Group (FPG) Colleagues:** Recipients of the announcement.
+
+**Main Topic/Request**
+Formal announcement regarding the strategic realignment of the Data COE to accelerate the "Customer Centricity" strategy by moving data capabilities closer to business operations and customer-facing strategies.
+
+**Decisions Made**
+*   **Organizational Transfer:** Effective April 1, 2026, the Data COE (led by Hu Yiqun) transitions from the Digital & Tech function to the Customer and Marketing (CCMO) function.
+*   **Reporting Line Change:** Hu Yiqun will report directly to Karen Chan. Existing reporting lines within the Data COE remain unchanged.
+*   **Scope Retention:** The scope of work remains unchanged, continuing to serve all business units and corporate functions in:
+    *   Data Platform and Engineering
+    *   Data Product Solutions
+    *   Advanced Analytics and Intelligence
+*   **Strategic Objectives:** To eliminate silos (Unified Data Strategy), increase proximity to business challenges (Proximity to the Business), and expand internal mobility for staff (Enhanced Career Opportunities).
+
+**Pending Actions & Ownership**
+*   **Action:** Execute organizational transition.
+    *   **Owner:** Hu Yiqun, Karen Chan, and all relevant stakeholders.
+    *   **Context:** Team must begin operating under CCMO leadership immediately upon the effective date.
+*   **Action:** Maintain operational continuity.
+    *   **Owner:** Data COE team.
+    *   **Context:** Continue delivering data products and services to all business units without interruption.
+
+**Key Dates & Deadlines**
+*   **Announcement Date:** March 26, 2026 (5:00 AM).
+*   **Effective Transition Date:** April 1, 2026.
+*   **Next Steps:** No specific follow-up meeting dates are listed; the instruction is to "support the team" as they embark on this chapter.
+
+**Contact Information**
+*   **Sender Email:** shirley_pehbh@fairpricegroup.sg
+*   **Reference Thread ID:** 19d288431ce247d5
+
+
+## [49/51] [Dashboard Report] Retail Media - DD Dashboard | Thu 26 Mar 11:00AM +08
+Source: gmail | Thread: 19d2817d11501d86 | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Thu, Mar 26, 2026, 3:02 AM | Last Updated: 2026-03-26T06:02:14.893319+00:00
+**Daily Work Briefing: Retail Media Dashboard Report**
+
+**Key Participants & Roles:**
+*   **Datadog HQ (no-reply@dtdg.eu):** Sender; Operations/Support team providing the automated report.
+*   **Michael:** Recipient and primary owner of the dashboard metrics.
+
+**Main Topic/Request:**
+Submission of the "Retail Media - DD Dashboard" containing performance data for the preceding three days. The email serves as a notification to share monitoring insights rather than an explicit request for new input or approval.
+
+**Pending Actions & Ownership:**
+*   **Action:** Review the attached dashboard report covering the last 3 days of data.
+*   **Owner:** Michael.
+*   **Status:** Awaiting internal review (no reply requested in original thread).
+
+**Decisions Made:**
+None recorded in this specific email thread; this is an informational update only.
+
+**Key Dates, Deadlines & Follow-ups:**
+*   **Report Date/Time:** Thursday, March 26, 2026, at 11:00 AM +08 (Timestamp of resource metadata).
+*   **Email Sent Time:** Wednesday, March 25, 2026, at 3:02 AM.
+*   **Data Scope:** Past 3 days relative to the report date.
+*   **Contact/Reference:** Team Datadog; Addressed to Michael.
+
+
+## [50/51] Declined: ACNxOsmos: Daily Cadence @ Thu Mar 26, 2026 1:30pm - 2pm (SGT) (michael.bui@fairpricegroup.sg)
+Source: gmail | Thread: 19d281786814b122 | Labels: Inbox | Priority: None | Senders: Rahul Jain | Last Date: Thu, Mar 26, 2026, 3:02 AM | Last Updated: 2026-03-26T06:02:31.387229+00:00
+**Daily Work Briefing: Meeting Status Update**
+
+**Meeting Overview**
+*   **Event:** ACNxOsmos: Daily Cadence
+*   **Date/Time:** Thursday, March 26, 2026, from 1:30 PM to 2:00 PM (SGT)
+*   **Status:** Declined by Rahul Jain.
+
+**Key Participants & Roles**
+*   **Organizer:** Michael Bui (`michael.bui@fairpricegroup.sg`)
+*   **Primary Attendees (Confirmed/Invited):**
+    *   Flora Wo, Tanish Nevatia, Vipul Gupta, Barkha Kewalramani (`barkha.kewalramani_fp@ntucguest.com`), Rahul Jain (`rahul.jain@onlinesales.ai`), Tiongsiong Tee, Daryl Ng, Shravan Kankaria, John Henji Mantaring, Artharn Senrit (both `@ntucguest.com` and `@accenture.com` addresses noted), Nikhil Grover, Aman Khatri, Tanul Mehta (`tanul.mehta_fp@ntucguest.com` & `tanul.mehta@accenture.com`), Nabhey Samant, Winson Lim, Shubhangi Agrawal, Siddharth Aklujkar, Rachit Sachdeva, Satish Pamidimarthi.
+*   **Optional Attendee:** Ravi Goel (`ravi_goel@fairpricegroup.sg`)
+
+**Main Topic/Request**
+The meeting is a "Daily Cadence" session for the ACNxOsmos project. The organizer distributed the "FPG Project Plan 2905025" as an attachment to facilitate discussion on this specific plan (Ref: FPG Project Plan 2905025).
+
+**Decisions Made**
+*   **RSVP Action:** Rahul Jain (`rahul.jain@onlinesales.ai`) has formally declined the invitation as of March 26, 2026, at 3:02 AM. No other acceptance or decline statuses are recorded in this thread snippet.
+
+**Pending Actions & Ownership**
+*   **Action:** Verify if a quorum exists for the meeting given Rahul Jain's absence and confirm attendance with other key stakeholders listed.
+*   **Owner:** The meeting organizer, Michael Bui (`michael.bui@fairpricegroup.sg`), or project coordination team.
+*   **Context:** Ensure participation from Accenture (`accenture.com`) and FairPrice Group (`fairpricegroup.sg`, `fairprice.com.sg`) representatives as the thread involves cross-organizational collaboration (ONLINE SALES AI, NTUC Guest, NTU Centreprise).
+
+**Key Dates & Follow-ups**
+*   **Meeting Date:** March 26, 2026.
+*   **Follow-up Trigger:** If the meeting proceeds despite Rahul Jain's decline, a summary of the FPG Project Plan discussion should be circulated to all attendees (excluding the declined participant unless specifically requested).
+
+**Constraints & Notes**
+*   The email contains confidential project data; sharing or forwarding without authorization is prohibited.
+*   Google Meet link: `meet.google.com/ise-ydtd-por`.
+
+
+## [51/51] Message from Group CEO: Leadership Team announcement
+Source: gmail | Thread: 19d27f9ebd9b6ccb | Labels: Inbox, Updates | Priority: None | Senders: Internal Comms | Last Date: Thu, Mar 26, 2026, 2:29 AM | Last Updated: 2026-03-26T06:02:48.310014+00:00
+**Daily Work Briefing: Leadership Team Announcement**
+
+**1. Key Participants & Roles**
+*   **Vipul:** Group CEO (Sender).
+*   **Alvin Neo:** Outgoing Chief Customer and Marketing Officer (CCMO); transitioning to Advisor role until Dec 31, 2026.
+*   **Karen Chan:** Incoming Chief Customer and Marketing Officer (CCMO), effective June 1, 2026. Previously Group Chief Commercial Officer at AirAsia Aviation Group; joined FairPrice Group (FPG) in 2024 as a key driver of customer transformation.
+*   **Internal Comms (`internal_comms@fairpricegroup.sg`):** Sender of the official announcement on behalf of FPG leadership.
+
+**2. Main Topic/Request**
+Formal announcement regarding the restructuring of Leadership under "Customer & Marketing Transformation." The update details Alvin Neo's departure from the CCMO role to focus on community impact, and Karen Chan's appointment as his successor to integrate data, customer, marketing, and loyalty capabilities in an AI-driven economy.
+
+**3. Pending Actions & Ownership**
+*   **Action:** Share new organizational structure plans for Customer, Data, and Marketing functions.
+    *   **Owner:** Karen Chan (in collaboration with Alvin Neo and Tongwen).
+    *   **Status:** Plans are currently being developed; specific release date not yet stated other than "shortly."
+*   **Action:** Execute smooth transition of CCMO remit from Alvin to Karen.
+    *   **Owner:** Alvin Neo (providing support during transition) and Karen Chan.
+
+**4. Decisions Made**
+*   **Role Change:** Alvin Neo is relinquishing the role of Chief Customer and Marketing Officer effective June 1, 2026.
+*   **Appointment:** Karen Chan appointed as the new CCMO effective June 1, 2026.
+*   **New Mandate:** The CCMO mandate now focuses on fully integrating data, customer, marketing, and loyalty capabilities to maximize value realization for the FPG ecosystem.
+*   **Advisory Role:** Alvin Neo will serve as an Advisor supporting strategic initiatives until December 31, 2026.
+
+**5. Key Dates & Deadlines**
+*   **March 26, 2026:** Announcement date (Sent at 2:29 AM).
+*   **June 1, 2026:** Effective date for Karen Chan's appointment as CCMO and Alvin Neo's departure from the role.
+*   **December 31, 2026:** End of Alvin Neo's advisory tenure.
+
+**6. Contextual References**
+*   **Strategic Goal:** Becoming Asia's most admired retailer by 2030; "Every Day, Made A Little Better."
+*   **Key Initiatives Mentioned:** Project Leap (unified "golden customer profile"), Link program integration, "The Price of Being Fair" bestseller.
+
+**Summary for Team:**
+Please note the leadership transition effective June 1, 2026. Karen Chan will assume responsibility for merging data and marketing functions. Alvin Neo remains as an Advisor through year-end. Await further communication from Karen regarding the new organizational structure.
