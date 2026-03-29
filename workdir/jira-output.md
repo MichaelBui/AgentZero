@@ -1,29 +1,31 @@
 
 
 ## [1/58] Transition to Impression-Based Inventory & Multi-Banner Delivery
-Source: jira | Key: DPD-838 | Status: TO BE DEFINED (To Do) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | parent: DPD-385 | Last Updated: 2026-03-28T13:34:35.027547+00:00
+Source: jira | Key: DPD-838 | Status: TO BE DEFINED (To Do) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | parent: DPD-385 | Last Updated: 2026-03-29T05:30:43.708501+00:00
 **Daily Briefing Summary: DPD-838**
 
 **Current Status**
-Ticket **DPD-838**, titled "Transition to Impression-Based Inventory & Multi-Banner Delivery," is a **High** priority **Story** in the **"TO BE DEFINED"** (To Do) state. Assigned to **Michael Bui** and reported by **Nikhil Grover**, it remains unresolved with no due date set. The ticket serves as an execution component for parent ticket **DPD-385** ("[RMN] Enable transition from fixed tenancy to impressions-based banner delivery"). Last activity was logged on **2026-03-27 at 16:32:37 +0800**.
+Ticket **DPD-838**, titled "Transition to Impression-Based Inventory & Multi-Banner Delivery," is a **High** priority **Story** in the **"TO BE DEFINED"** (To Do) state. Assigned to **Michael Bui** and reported by **Nikhil Grover**, it remains unresolved with no due date set. It serves as an execution component for parent ticket **DPD-385**.
+*   **Last Activity:** 2026-03-27 (Ticket creation/logged) and 2026-03-28T22:44:15+0800 (Questions raised).
 
 **Pending Actions & Ownership**
-*   **Action:** The Product Manager/Ad Ops Lead must execute the migration from fixed-slot tenancy to an inventory-based model. The primary goal is enabling multi-banner support and tiered prioritization to maximize yield, improve fill rates, and scale revenue via impression-based selling.
-*   **Owner:** The task is assigned to **Michael Bui**.
-*   **Scope:** This initiative targets the following app pages: Omni Homepage, OG Homepage, O2O homepage, Search page, Category page (navigation categories), and FP Pay receipt.
+The Product Manager/Ad Ops Lead must execute the migration from fixed-slot tenancy to an inventory-based model. However, assignment is currently in flux due to unresolved scope questions. **Michael Bui** has raised critical clarifications regarding the execution plan:
+*   **Scope Clarification:** Michael Bui questioned if Category and Search pages (using the legacy MPS service) require immediate migration alongside new components (Omni/OG Home, FPPay), noting potential FE component changes and video support discrepancies.
+*   **Blockers:** The "TO BE DEFINED" status reflects a need to finalize scope before development. Specific questions regarding OSMOS logic limits, position tracking, fallback behaviors, and API availability must be resolved by the reporter/PM before work can commence.
 
 **Decisions Made & Technical Requirements**
 The ticket defines specific acceptance criteria for the transition:
-1.  **Unified Request Architecture:** For user navigation on defined pages, the system must send a single batch request to OSMOS for all 20 slots. This request must include page-level metadata (User ID, page type/ID, category ID, search keyword).
-2.  **Display Sequence Integrity:** Banners returned by OSMOS must be displayed on the front end in the exact sequence provided by the backend response.
-3.  **Endemic Prioritization Logic:** If a non-endemic banner (identified via "Campaign type") occupies the first position, the first endemic banner must be boosted to Position 1 while maintaining the relative order of subsequent banners. If no endemic banners exist, the returned sequence remains unchanged.
-4.  **Duplicate Slot Handling:** If multiple banners share the same number in the "Slot" parameter, only the first instance in the sequence is passed; duplicates are dropped.
-5.  **Partial Response Management:** If fewer than 20 campaigns are configured (e.g., 12), the system must return only the available banners without sending empty responses for remaining positions.
+1.  **Unified Request Architecture:** For defined pages (Omni/OG/O2O Home, Search, Category, FP Pay), the system must send a single batch request to OSMOS for all 20 slots, including page-level metadata (User ID, page type/ID, category ID, search keyword).
+2.  **Display Sequence Integrity:** Banners returned by OSMOS must be displayed in the exact sequence provided.
+3.  **Endemic Prioritization Logic:** If a non-endemic banner occupies Position 1, the first endemic banner is boosted to Position 1 while maintaining relative order of subsequent banners. Logic for identifying "non-endemic" via the "Campaign type" field requires clarification (exact vs. substring match).
+4.  **Duplicate Slot Handling:** If multiple banners share the same "Slot" parameter number, only the first instance is passed; duplicates are dropped. Clarification is needed on how OSMOS manages position values (e.g., `[-1,0,1,2,2,5,999]`).
+5.  **Partial Response Management:** If fewer than 20 campaigns are configured, the system returns only available banners without empty responses.
+6.  **Edge Cases:** Requirements for auto-play/auto-next logic (for videos), fallback handling if OSMOS returns no results or is inaccessible, and limits on OSMOS `pcnt` (currently unclear if limit remains at 10) require definition.
 
 **Key Dates, Deadlines, & Blockers**
-*   **Last Activity:** 2026-03-27 (Logged by Nikhil Grover).
+*   **Last Activity:** 2026-03-28T22:44:15+0800 (Michael Bui raised questions).
 *   **Deadline:** None currently set (`duedate: null`).
-*   **Blockers:** No specific technical blockers are listed. However, the **"TO BE DEFINED"** status indicates that scope finalization and an execution plan must be established immediately before development can commence based on the defined acceptance criteria.
+*   **Blockers:** Pending answers to six specific technical queries from Michael Bui regarding legacy page scope, endemic identification logic, OSMOS `pcnt` limits, position tracking, video logic, and error handling.
 
 **Stakeholders**
 *   **Reporter:** Nikhil Grover
