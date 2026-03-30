@@ -1,6 +1,86 @@
 
 
-## [1/58] Transition to Impression-Based Inventory & Multi-Banner Delivery
+## [1/58] Dynamic ad slot configuration for Homepage swimlanes
+Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | child: DPD-849 | parent: DPD-710 | Last Updated: 2026-03-30T13:31:29.132475+00:00
+### Daily Briefing Summary: DPD-715 (Dynamic Ad Slot Configuration)
+
+**Current Status:** **IN RELEASE QUEUE** (Resolution: Done). The story is technically complete, UAT signed off, and deployed to production. A critical race condition involving shared variable overwrites was identified post-deployment on 2026-03-28.
+
+**Key Decisions & Actions Taken:**
+*   **Feature Flag Implementation:** Split configuration logic successfully implemented to dynamically control ad slot indices without code changes. Supports density updates (e.g., `[3, 5, 7]` to `[2, 4, 6, 8, 10]`) and handles empty arrays for organic-only views.
+*   **Test Automation Status:** Milind Badame confirmed on 2026-03-30 that existing E2E tests cover static ad label positions in vertical and horizontal swimlanes. Runtime verification based on Split on/off settings cannot be automated at this time; no updates to E2E suites are required unless specific new position verifications are requested manually.
+*   **Environment Updates:**
+    *   **OG Home & Mobile Apps:** Verified SplitIO changes reflect correctly; mobile-specific issues resolved.
+    *   **Omni Home:** Slot positions updated to configured values (e.g., `3, 5, 7`) following production deployment. The previous discrepancy regarding fixed positions at `(1, 3)` has been resolved.
+*   **Production Deployment:** On **2026-03-26**, Michael Bui confirmed successful deployment to PRD with the specific slot configuration: `3, 5, 7, 11, 13, 15`.
+
+**Critical New Findings (Post-Deployment):**
+*   **Race Condition Identified:** On **2026-03-28**, Michael Bui discovered a code defect where a shared variable (`share`) is overwritten during concurrent requests. This specific instance (`pnct=1`) stopped functioning after the initial deployment. The issue was verified as resolved on UAT environments prior to PRD promotion but requires attention in production stability checks.
+
+**Pending Actions & Ownership:**
+*   **Immediate Monitoring:** Given the identified race condition in shared variable handling, close monitoring of concurrent request stability is required across Omni and OG Homepages.
+*   **Root Cause Analysis:** Verify if the `share` variable logic requires a broader code review to prevent potential data integrity issues in high-concurrency scenarios not yet captured in UAT.
+*   **E2E Maintenance:** No immediate action required for E2E updates, pending manual verification requests from stakeholders.
+
+**Key Dates & Constraints:**
+*   **Due Date:** 2026-03-17 (Deployment occurred post-due date on 2026-03-26).
+*   **Critical Constraint:** System honors existing stock availability checks; no out-of-stock products are rendered as ads.
+*   **Parent Ticket:** DPD-710 ([RMN] Activate product ads in Omni Home swimlanes).
+*   **Subtask:** DPD-849 ([BE] update layout-service dependency).
+
+**Technical Context:**
+*   **Logic:** API requests adapt dynamically to Split configuration counts (e.g., 6 slots = request 6 ads). Fallback defaults (`[1,3]`) apply when the flag is OFF.
+*   **Resilience:** The system gracefully handles Ad Supply Shortages (filling available slots with organic content) and Out-of-Bounds scenarios (ignoring indices exceeding swimlane length, e.g., index 20 in a 10-item list).
+
+**Timeline Update:**
+*   **2026-03-10:** Ticket created by Nikhil Grover defining acceptance criteria for dynamic API requests, fallback defaults, and empty array handling.
+*   **2026-03-19:** UAT session conducted by Michael Bui.
+*   **2026-03-25:** Nikhil Grover signed off on UAT and requested specific production config: `3, 5, 7, 11, 13, 15`.
+*   **2026-03-26:** Michael Bui deployed to Production; confirmed functionality.
+*   **2026-03-28:** Michael Bui identified a race condition regarding shared variable overwrites during concurrent requests (`pnct=1`).
+*   **2026-03-30:** Milind Badame clarified E2E automation strategy; no test updates required for runtime Split verification.
+
+**Blockers/Notes:**
+*   **Resolution of Discrepancy:** The previously noted issue where Omni Home swimlanes were stuck at fixed positions has been resolved. Stakeholders confirmed slot positions now match SplitIO flag values.
+
+
+## [2/58] Dynamic ad slots for vertical scroll on omni homepage
+Source: jira | Key: DPD-733 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | parent: DPD-710 | Last Updated: 2026-03-30T13:31:46.922287+00:00
+**Daily Briefing Summary: DPD-733**
+
+**1. Current Status & State**
+*   **Ticket ID:** DPD-733 (Dynamic ad slots for vertical scroll on omni homepage)
+*   **Status:** IN RELASE QUEUE (Resolution: Done).
+*   **Parent Epic:** DPD-710 ("[RMN] Activate product ads in Omni Home swimlanes").
+*   **Priority:** High.
+*   **Type:** Story.
+*   **Due Date:** March 17, 2026.
+
+**2. Actions Pending & Ownership**
+*   **Pending Action:** Deployment from the release queue to production is required. No E2E test updates are currently needed as existing tests verify static label positions; runtime verification for Split settings remains manual if requested.
+*   **Owner:** Michael Bui (Assignee).
+*   **Stakeholder/Reporter:** Nikhil Grover.
+*   **QA Note:** Milind Badame confirmed that while E2E tests exist for ad label positions, automated runtime verification for Split on/off states is not currently feasible without specific position inputs from the team.
+
+**3. Key Decisions & Technical Implementation**
+The feature enables dynamic control of product ad placement and count via a Split feature flag, eliminating code changes or manual API updates.
+
+*   **Dynamic Logic:** The system requests ads based on configuration arrays (e.g., `[3, 5, 7]`). If enabled, the app requests N ads and renders them at specific indices defined in the config.
+*   **Fallback Behavior:** If the feature flag is OFF but ads are enabled, the system defaults to slots `[1, 3]` (requesting 2 ads).
+*   **Real-Time Updates:** Updating Split configuration (e.g., to `[2, 4, 6, 8, 10]`) in the dashboard immediately affects new user sessions without code deployment.
+*   **Edge Case Handling:**
+    *   **Empty Config:** If configured as `[]`, the system requests 0 ads; only organic content is displayed.
+    *   **Supply Shortage:** If fewer ads are returned than requested (e.g., config asks for 3, API returns 2), valid slots fill first, and remaining slots display organic content.
+    *   **Out-of-Bounds:** Indices exceeding the available content range (e.g., index 20 with only 10 items) are ignored; ads render only within the valid range.
+*   **Constraints:** The system strictly honors existing stock availability checks; out-of-stock products cannot be served as ads.
+
+**4. Key Dates & Deadlines**
+*   **Due Date:** March 17, 2026.
+*   **Last Activity:** March 30, 2026 (QA update regarding E2E automation scope). Note: The "IN RELASE QUEUE" status was recorded on March 10, 2026.
+*   **Blockers:** None reported; ticket is resolved and awaiting release deployment.
+
+
+## [3/58] Transition to Impression-Based Inventory & Multi-Banner Delivery
 Source: jira | Key: DPD-838 | Status: TO BE DEFINED (To Do) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | parent: DPD-385 | Last Updated: 2026-03-29T05:30:43.708501+00:00
 **Daily Briefing Summary: DPD-838**
 
@@ -32,47 +112,7 @@ The ticket defines specific acceptance criteria for the transition:
 *   **Assignee:** Michael Bui
 
 
-## [2/58] Dynamic ad slot configuration for Homepage swimlanes
-Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | parent: DPD-710 | Last Updated: 2026-03-28T10:14:09.764459+00:00
-### Daily Briefing Summary: DPD-715 (Dynamic Ad Slot Configuration)
-
-**Current Status:** **IN RELEASE QUEUE** (Resolution: Done). The story is technically complete with UAT signed off and deployed to production. However, a critical race condition involving shared variable overwrites was identified post-deployment on 2026-03-28.
-
-**Key Decisions & Actions Taken:**
-*   **Feature Flag Implementation:** Split configuration logic successfully implemented to dynamically control ad slot indices without code changes. Supports density updates (e.g., `[3, 5, 7]` to `[2, 4, 6, 8, 10]`) and handles empty arrays for organic-only views.
-*   **Environment Updates:**
-    *   **OG Home & Mobile Apps:** Verified SplitIO changes reflect correctly; mobile-specific issues resolved.
-    *   **Omni Home:** Slot positions updated to configured values (e.g., `3, 5, 7`) following production deployment. The previous discrepancy regarding fixed positions at `(1, 3)` has been resolved.
-*   **Production Deployment:** On **2026-03-26**, Michael Bui confirmed successful deployment to PRD with the specific slot configuration: `3, 5, 7, 11, 13, 15`.
-
-**Critical New Findings (Post-Deployment):**
-*   **Race Condition Identified:** On **2026-03-28**, Michael Bui discovered a code defect where a shared variable (`share`) is overwritten during concurrent requests. This specific instance (`pnct=1`) stopped functioning after the initial deployment. The issue was verified as resolved on UAT environments prior to PRD promotion but requires attention in production stability checks.
-
-**Pending Actions & Ownership:**
-*   **Immediate Monitoring:** Given the identified race condition in shared variable handling, close monitoring of concurrent request stability is required across Omni and OG Homepages.
-*   **Root Cause Analysis:** Verify if the `share` variable logic requires a broader code review to prevent potential data integrity issues in high-concurrency scenarios not yet captured in UAT.
-
-**Key Dates & Constraints:**
-*   **Due Date:** 2026-03-17 (Deployment occurred post-due date on 2026-03-26).
-*   **Critical Constraint:** System honors existing stock availability checks; no out-of-stock products are rendered as ads.
-*   **Parent Ticket:** DPD-710 ([RMN] Activate product ads in Omni Home swimlanes).
-
-**Technical Context:**
-*   **Logic:** API requests adapt dynamically to Split configuration counts (e.g., 6 slots = request 6 ads). Fallback defaults (`[1,3]`) apply when the flag is OFF.
-*   **Resilience:** The system gracefully handles Ad Supply Shortages (filling available slots with organic content) and Out-of-Bounds scenarios (ignoring indices exceeding swimlane length, e.g., index 20 in a 10-item list).
-
-**Timeline Update:**
-*   **2026-03-10:** Ticket created by Nikhil Grover defining acceptance criteria for dynamic API requests, fallback defaults, and empty array handling. Features: Dynamic ad slot configuration for Homepage swimlanes.
-*   **2026-03-19:** UAT session conducted by Michael Bui.
-*   **2026-03-25:** Nikhil Grover signed off on UAT and requested specific production config: `3, 5, 7, 11, 13, 15`.
-*   **2026-03-26:** Michael Bui deployed to Production; confirmed functionality.
-*   **2026-03-28:** Michael Bui identified a race condition regarding shared variable overwrites during concurrent requests (`pnct=1`). Verified stable on UAT post-deployment.
-
-**Blockers/Notes:**
-*   **Resolution of Discrepancy:** The previously noted issue where Omni Home swimlanes were stuck at fixed positions has been resolved. Stakeholders confirmed slot positions now match SplitIO flag values.
-
-
-## [3/58] Suppress duplicate BCRS deposit posting via order metadata
+## [4/58] Suppress duplicate BCRS deposit posting via order metadata
 Source: jira | Key: DPD-842 | Status: TESTING IN PREPRODUCTION (In Progress) | Type: Subtask | Priority: High | Assignee: Michael Bui | Reporter: Michael Bui | child: DPD-383 | parent: DPD-383 | work-item-split: DPD-807, DPD-807 | Last Updated: 2026-03-28T03:34:37.903686+00:00
 **Daily Briefing Summary: DPD-842**
 
@@ -103,7 +143,7 @@ The subtask **DPD-842** ("Suppress duplicate BCRS deposit posting via order meta
 *   **Resolution Logic:** The system suppresses duplicate postings by utilizing order metadata.
 
 
-## [4/58] Charge BCRS deposit for re-delivery
+## [5/58] Charge BCRS deposit for re-delivery
 Source: jira | Key: DPD-807 | Status: TO BE DEFINED (To Do) | Type: Story | Priority: High | Reporter: Prajney Sribhashyam | parent: DPD-225 | relates: DPD-383, DPD-383 | work-item-split: DPD-842, DPD-842 | Last Updated: 2026-03-28T03:34:59.700323+00:00
 **Daily Briefing Summary: DPD-807 – Charge BCRS Deposit for Re-delivery**
 
@@ -153,7 +193,7 @@ Source: jira | Key: DPD-807 | Status: TO BE DEFINED (To Do) | Type: Story | Prio
 *   **Blockers:** No assignee is currently linked to the ticket; development cannot commence until ownership is assigned and the Backoffice Custom Field configuration is resolved.
 
 
-## [5/58] Sales posting for BCRS deposit amount
+## [6/58] Sales posting for BCRS deposit amount
 Source: jira | Key: DPD-383 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Prajney Sribhashyam | Due: 2026-02-18 | Resolution: Done | blocks: DPD-551, DPD-551 | child: DPD-590, DPD-842 | parent: DPD-225, DPD-590, DPD-842 | relates: DPD-807, DPD-807 | Last Updated: 2026-03-28T03:35:23.712588+00:00
 **Ticket:** DPD-383 (Sales posting for BCRS deposit amount)
 **Status:** Done | **Category:** In Release Queue | **Priority:** High
@@ -194,7 +234,7 @@ Source: jira | Key: DPD-383 | Status: IN RELASE QUEUE (Done) | Type: Story | Pri
 *   Validation of real-world BCRS orders in Production remains the final step before full operational confirmation.
 
 
-## [6/58] [BCRS] Inform customers on BCRS deposit during Order Placement & Returns/Refunds Process
+## [7/58] [BCRS] Inform customers on BCRS deposit during Order Placement & Returns/Refunds Process
 Source: jira | Key: DPD-225 | Status: IN DEVELOPMENT (In Progress) | Type: Epic | Priority: High | Reporter: Andin Eswarlal Rajesh | Due: 2026-03-26 | discovery---connected: NEDMT-2334 | parent: DPD-807, DPD-383 | polaris-work-item-link: OMNI-1294, OMNI-1294 | relates: DPD-26 | Last Updated: 2026-03-27T21:32:17.122631+00:00
 **Daily Briefing: DPD-225 [BCRS] Inform customers on BCRS deposit during Order Placement & Returns/Refunds Process**
 
@@ -223,7 +263,7 @@ Source: jira | Key: DPD-225 | Status: IN DEVELOPMENT (In Progress) | Type: Epic 
     *   **Connected Discovery:** NEDMT-2334
 
 
-## [7/58] [RMN] Streamline event sync from Segment.io to OSMOS to resolve overage
+## [8/58] [RMN] Streamline event sync from Segment.io to OSMOS to resolve overage
 Source: jira | Key: DPD-644 | Status: Done (Done) | Type: Epic | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-12 | Resolution: Done | parent: DPD-645 | polaris-work-item-link: OMNI-1418 | Last Updated: 2026-03-27T21:32:29.917584+00:00
 **Daily Briefing: Jira Ticket DPD-644**
 
@@ -245,7 +285,7 @@ The high-priority Epic **DPD-644**, titled "[RMN] Streamline event sync from Seg
 The resolution status ("Done") and issue type (Epic) are confirmed in the latest system update. All metadata, including priority levels and assignee details, aligns with the final record.
 
 
-## [8/58] [BCRS Compliance] Phase 2: Order Place & Returns/Refunds Process
+## [9/58] [BCRS Compliance] Phase 2: Order Place & Returns/Refunds Process
 Source: jira | Key: OMNI-1294 | Status: Technical Live (Done) | Type: Idea | Priority: High | Assignee: Prajney Sribhashyam | Reporter: Winson Lim | Labels: bcrs | discovery---connected: NEDMT-2334 | polaris-work-item-link: DPD-225, DPD-225 | Last Updated: 2026-03-27T09:35:20.749795+00:00
 **Ticket:** OMNI-1294 | **[BCRS Compliance] Phase 2: Order Place & Returns/Refunds Process**
 **Status:** Technical Live (Done) | **Risk Level:** High | **Assignee:** Prajney Sribhashyam
@@ -284,7 +324,7 @@ Source: jira | Key: OMNI-1294 | Status: Technical Live (Done) | Type: Idea | Pri
 *   **Discovery - Connected:** NEDMT-2334
 
 
-## [9/58] [OSMOS only] Enable offsite ads integration with Meta on OSMOS
+## [10/58] [OSMOS only] Enable offsite ads integration with Meta on OSMOS
 Source: jira | Key: OMNI-1191 | Status: Define (In Progress) | Type: Idea | Priority: High | Assignee: Nikhil Grover | Reporter: Nikhil Grover | polaris-work-item-link: RM-556 | Last Updated: 2026-03-20T14:44:56.988023+00:00
 **Ticket:** OMNI-1191 | **Status:** Red (Blocked) | **Assignee:** Nikhil Grover | **Priority:** High | **Linked Issue:** RM-556
 
@@ -313,39 +353,6 @@ The initiative to enable offsite ads integration with Meta on OSMOS remains bloc
 
 ### Next Steps
 Immediate focus is on securing Meta's response regarding campaign whitelisting to unblock API testing. Once OSMOS completes testing, they will provide a concrete effort estimate for the remaining development phase.
-
-
-## [10/58] Dynamic ad slots for vertical scroll on omni homepage
-Source: jira | Key: DPD-733 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | parent: DPD-710 | Last Updated: 2026-03-20T14:45:39.703781+00:00
-**Daily Briefing Summary: DPD-733**
-
-**1. Current Status & State**
-*   **Ticket ID:** DPD-733 (Dynamic ad slots for vertical scroll on omni homepage)
-*   **Status:** IN RELASE QUEUE (Parent status: Done).
-*   **Resolution:** The story is completed and awaiting release deployment.
-*   **Priority:** High.
-*   **Type:** Story, part of parent epic DPD-710 ("[RMN] Activate product ads in Omni Home swimlanes").
-
-**2. Actions Pending & Ownership**
-*   **Pending Action:** Deployment to production is required from the release queue.
-*   **Owner:** Michael Bui (Assignee).
-*   **Stakeholder:** Nikhil Grover (Reporter).
-
-**3. Key Decisions & Technical Implementation**
-The feature enables dynamic control of product ad placement and count on the Omni Homepage vertical scroll via a Split feature flag, eliminating the need for code changes or manual API updates.
-*   **Dynamic Logic:** The system requests ads based on configuration arrays (e.g., `[3, 5, 7]`). If enabled and configured to `[3, 5, 7]`, the app requests 3 ads and renders them at those specific indices.
-*   **Fallback Behavior:** If the feature flag is OFF but ads are enabled, the system defaults to slots `[1, 3]` (requesting 2 ads).
-*   **Real-Time Updates:** Updating Split configuration in the dashboard (e.g., to `[2, 4, 6, 8, 10]`) immediately affects new user sessions without code deployment.
-*   **Edge Case Handling:**
-    *   **Empty Config:** If configured as `[]`, the system requests 0 ads; only organic content is displayed.
-    *   **Supply Shortage:** If fewer ads are returned than requested (e.g., config asks for 3, API returns 2), existing slots fill, and remaining slots display organic content.
-    *   **Out-of-Bounds:** Indices exceeding available content range (e.g., index 20 with only 10 items) are ignored; valid ads render within the available range.
-*   **Constraints:** The system strictly honors existing stock availability checks; out-of-stock products cannot be served as ads.
-
-**4. Key Dates & Deadlines**
-*   **Due Date:** March 17, 2026.
-*   **Last Activity:** March 10, 2026 (Status update to "IN RELASE QUEUE").
-*   **Blockers:** None reported; ticket is resolved and in the release queue.
 
 
 ## [11/58] Include swimlane name in the ad request for all Omni Home swimlanes
