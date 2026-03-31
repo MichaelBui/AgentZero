@@ -1,22 +1,8 @@
-[gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:11397) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
-(Use `node --trace-deprecation ...` to show where the warning was created)
-[Fetching 1/5] [JIRA] (DPD-715) Dynamic ad slot configuration for Homepage swimlanes (summarization pending)
-[Fetched 1/5] [JIRA] (DPD-715) Dynamic ad slot configuration for Homepage  - queued for summarization (pipeline running)
-[Fetching 2/5] [JIRA] (DPD-733) Dynamic ad slots for vertical scroll on omni homepage (summarization pending)
-[Fetched 2/5] [JIRA] (DPD-733) Dynamic ad slots for vertical scroll on omn - queued for summarization (pipeline running)
-[Fetching 3/5] [JIRA] Milind Badame mentioned you on DPD-715 (summarization pending)
-[Fetched 3/5] [JIRA] Milind Badame mentioned you on DPD-715 - queued for summarization (pipeline running)
-[Fetching 4/5] [JIRA] Milind Badame mentioned you on DPD-733 (summarization pending)
-[Fetched 4/5] [JIRA] Milind Badame mentioned you on DPD-733 - queued for summarization (pipeline running)
-[Fetching 5/5] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod (summarization pending)
-[Fetched 5/5] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing - queued for summarization (pipeline running)
-
-============================================================
-[gmail_reader] ALL DONE - output file is ready for use.
-Fetched: 5 thread(s) | total scanned: 61
-============================================================
-
+[2026-03-30T22:01:23+0000] [Summarized 30/31] [Opsgenie Alert: [Datadog] [P4] [Triggere]: using cached summary
+[2026-03-30T22:01:23+0000] [Summarized 31/31] [[RAW Overdue] Expired Risk Acceptance & ]: using cached summary
+[2026-03-30T22:01:23+0000] ============================================================
+[2026-03-30T22:01:23+0000] STATUS: COMPLETED - Gmail Reader pipeline finished successfully (31 threads)
+[2026-03-30T22:01:23+0000] ============================================================
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
 
 [SYSTEM: Returning control to agent after 180 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

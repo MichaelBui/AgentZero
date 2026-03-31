@@ -1,51 +1,46 @@
 
 
 ## [1/58] Dynamic ad slot configuration for Homepage swimlanes
-Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | child: DPD-849 | parent: DPD-710 | Last Updated: 2026-03-30T13:31:29.132475+00:00
+Source: jira | Key: DPD-715 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | child: DPD-849 | parent: DPD-710 | Last Updated: 2026-03-30T21:30:46.670732+00:00
 ### Daily Briefing Summary: DPD-715 (Dynamic Ad Slot Configuration)
 
-**Current Status:** **IN RELEASE QUEUE** (Resolution: Done). The story is technically complete, UAT signed off, and deployed to production. A critical race condition involving shared variable overwrites was identified post-deployment on 2026-03-28.
+**Current Status:** **IN RELEASE QUEUE** (Resolution: Done). The story was created by Nikhil Grover on **2026-03-10** to enable dynamic ad placement via Split feature flags without code changes. It is technically complete, UAT signed off, and resolved.
 
 **Key Decisions & Actions Taken:**
-*   **Feature Flag Implementation:** Split configuration logic successfully implemented to dynamically control ad slot indices without code changes. Supports density updates (e.g., `[3, 5, 7]` to `[2, 4, 6, 8, 10]`) and handles empty arrays for organic-only views.
-*   **Test Automation Status:** Milind Badame confirmed on 2026-03-30 that existing E2E tests cover static ad label positions in vertical and horizontal swimlanes. Runtime verification based on Split on/off settings cannot be automated at this time; no updates to E2E suites are required unless specific new position verifications are requested manually.
-*   **Environment Updates:**
-    *   **OG Home & Mobile Apps:** Verified SplitIO changes reflect correctly; mobile-specific issues resolved.
-    *   **Omni Home:** Slot positions updated to configured values (e.g., `3, 5, 7`) following production deployment. The previous discrepancy regarding fixed positions at `(1, 3)` has been resolved.
-*   **Production Deployment:** On **2026-03-26**, Michael Bui confirmed successful deployment to PRD with the specific slot configuration: `3, 5, 7, 11, 13, 15`.
+*   **Feature Flag Implementation:** Logic successfully implemented to control slot indices dynamically (e.g., `[3, 5, 7]` or `[2, 4, 6, 8, 10]`). Supports empty arrays for organic-only views and honors existing stock availability checks.
+*   **Test Automation Status:** Confirmed by Milind Badame on **2026-03-30** that existing E2E tests cover static ad label positions in vertical and horizontal swimlanes. Runtime verification based on Split settings cannot be automated as labels are static; no immediate E2E updates are required unless specific new position verifications are manually requested.
+*   **Environment Updates:** Verified SplitIO changes reflect correctly in OG Home & Mobile Apps. Omni Home slot positions now match configured values (e.g., `3, 5, 7`), resolving previous discrepancies where swimlanes were stuck at fixed positions `(1, 3)`.
 
 **Critical New Findings (Post-Deployment):**
-*   **Race Condition Identified:** On **2026-03-28**, Michael Bui discovered a code defect where a shared variable (`share`) is overwritten during concurrent requests. This specific instance (`pnct=1`) stopped functioning after the initial deployment. The issue was verified as resolved on UAT environments prior to PRD promotion but requires attention in production stability checks.
+*   **Race Condition Identified:** On **2026-03-28**, Michael Bui identified a code defect where a shared variable (`share`) was overwritten during concurrent requests. This specific issue affected `pnct=1` functionality immediately post-deployment. While verified in UAT, it requires attention in production stability checks.
 
 **Pending Actions & Ownership:**
-*   **Immediate Monitoring:** Given the identified race condition in shared variable handling, close monitoring of concurrent request stability is required across Omni and OG Homepages.
-*   **Root Cause Analysis:** Verify if the `share` variable logic requires a broader code review to prevent potential data integrity issues in high-concurrency scenarios not yet captured in UAT.
-*   **E2E Maintenance:** No immediate action required for E2E updates, pending manual verification requests from stakeholders.
-
-**Key Dates & Constraints:**
-*   **Due Date:** 2026-03-17 (Deployment occurred post-due date on 2026-03-26).
-*   **Critical Constraint:** System honors existing stock availability checks; no out-of-stock products are rendered as ads.
-*   **Parent Ticket:** DPD-710 ([RMN] Activate product ads in Omni Home swimlanes).
-*   **Subtask:** DPD-849 ([BE] update layout-service dependency).
+*   **Immediate Monitoring:** Close monitoring of concurrent request stability is required across Omni and OG Homepages due to the shared variable race condition.
+*   **Root Cause Analysis:** Verify if `share` variable logic requires a broader code review to prevent data integrity issues in high-concurrency scenarios not captured in UAT.
+*   **E2E Maintenance:** No action required for E2E updates pending manual verification requests from stakeholders.
 
 **Technical Context:**
 *   **Logic:** API requests adapt dynamically to Split configuration counts (e.g., 6 slots = request 6 ads). Fallback defaults (`[1,3]`) apply when the flag is OFF.
-*   **Resilience:** The system gracefully handles Ad Supply Shortages (filling available slots with organic content) and Out-of-Bounds scenarios (ignoring indices exceeding swimlane length, e.g., index 20 in a 10-item list).
+*   **Resilience:** System handles Ad Supply Shortages by filling available slots with organic content and ignores indices exceeding swimlane length (e.g., index 20 in a 10-item list).
 
 **Timeline Update:**
-*   **2026-03-10:** Ticket created by Nikhil Grover defining acceptance criteria for dynamic API requests, fallback defaults, and empty array handling.
+*   **2026-03-10:** Ticket created by Nikhil Grover defining acceptance criteria for dynamic API requests, fallback defaults, empty array handling, and stock constraints.
 *   **2026-03-19:** UAT session conducted by Michael Bui.
-*   **2026-03-25:** Nikhil Grover signed off on UAT and requested specific production config: `3, 5, 7, 11, 13, 15`.
+*   **2026-03-25:** Nikhil Grover signed off on UAT; requested production config `3, 5, 7, 11, 13, 15`.
 *   **2026-03-26:** Michael Bui deployed to Production; confirmed functionality.
-*   **2026-03-28:** Michael Bui identified a race condition regarding shared variable overwrites during concurrent requests (`pnct=1`).
+*   **2026-03-28:** Michael Bui identified race condition regarding shared variable overwrites during concurrent requests (`pnct=1`).
 *   **2026-03-30:** Milind Badame clarified E2E automation strategy; no test updates required for runtime Split verification.
 
 **Blockers/Notes:**
-*   **Resolution of Discrepancy:** The previously noted issue where Omni Home swimlanes were stuck at fixed positions has been resolved. Stakeholders confirmed slot positions now match SplitIO flag values.
+*   **Resolution of Discrepancy:** The issue regarding fixed positions in Omni Home swimlanes has been resolved. Stakeholders confirmed slot positions now match SplitIO flag values.
+*   **Dependencies:** Parent ticket DPD-710 ([RMN] Activate product ads in Omni Home swimlanes); Subtask DPD-849 ([BE] update layout-service dependency).
+
+**Key Dates & Constraints:**
+*   **Due Date:** 2026-03-17 (Deployment occurred post-due date on 2026-03-26).
 
 
 ## [2/58] Dynamic ad slots for vertical scroll on omni homepage
-Source: jira | Key: DPD-733 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | parent: DPD-710 | Last Updated: 2026-03-30T13:31:46.922287+00:00
+Source: jira | Key: DPD-733 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | Resolution: Done | parent: DPD-710 | Last Updated: 2026-03-30T21:31:05.241607+00:00
 **Daily Briefing Summary: DPD-733**
 
 **1. Current Status & State**
@@ -55,28 +50,33 @@ Source: jira | Key: DPD-733 | Status: IN RELASE QUEUE (Done) | Type: Story | Pri
 *   **Priority:** High.
 *   **Type:** Story.
 *   **Due Date:** March 17, 2026.
+*   **Assignee:** Michael Bui.
+*   **Reporter:** Nikhil Grover.
 
 **2. Actions Pending & Ownership**
-*   **Pending Action:** Deployment from the release queue to production is required. No E2E test updates are currently needed as existing tests verify static label positions; runtime verification for Split settings remains manual if requested.
+*   **Pending Action:** Deployment from the release queue to production is required.
+*   **QA Scope Update:** Existing E2E tests verify static ad label positions for vertical and horizontal swimlanes. Automated runtime verification for Split on/off states is currently not feasible without specific position inputs. No E2E updates are required at this time unless manual position inputs are provided by the team.
 *   **Owner:** Michael Bui (Assignee).
 *   **Stakeholder/Reporter:** Nikhil Grover.
-*   **QA Note:** Milind Badame confirmed that while E2E tests exist for ad label positions, automated runtime verification for Split on/off states is not currently feasible without specific position inputs from the team.
+*   **QA Note:** Milind Badame confirmed that while static label verification exists, runtime verification for Split settings requires explicit input to update tests.
 
 **3. Key Decisions & Technical Implementation**
-The feature enables dynamic control of product ad placement and count via a Split feature flag, eliminating code changes or manual API updates.
+The feature enables dynamic control of product ad placement and count via a Split feature flag, eliminating code changes or manual API updates based on the following acceptance criteria:
 
-*   **Dynamic Logic:** The system requests ads based on configuration arrays (e.g., `[3, 5, 7]`). If enabled, the app requests N ads and renders them at specific indices defined in the config.
+*   **Dynamic Logic:** With the feature flag ON and configuration set (e.g., `[3, 5, 7]`), the app requests N ads matching the array length and renders them at specific indices.
 *   **Fallback Behavior:** If the feature flag is OFF but ads are enabled, the system defaults to slots `[1, 3]` (requesting 2 ads).
 *   **Real-Time Updates:** Updating Split configuration (e.g., to `[2, 4, 6, 8, 10]`) in the dashboard immediately affects new user sessions without code deployment.
 *   **Edge Case Handling:**
-    *   **Empty Config:** If configured as `[]`, the system requests 0 ads; only organic content is displayed.
-    *   **Supply Shortage:** If fewer ads are returned than requested (e.g., config asks for 3, API returns 2), valid slots fill first, and remaining slots display organic content.
-    *   **Out-of-Bounds:** Indices exceeding the available content range (e.g., index 20 with only 10 items) are ignored; ads render only within the valid range.
+    *   **Empty Config:** If configured as `[]`, the system requests 0 ads; only organic content is displayed with no gaps.
+    *   **Supply Shortage:** If the API returns fewer ads than requested (e.g., config asks for 3, API returns 2), valid slots fill first, and remaining slots display organic content.
+    *   **Out-of-Bounds:** Indices exceeding the available content range are ignored; ads render only within the valid range.
 *   **Constraints:** The system strictly honors existing stock availability checks; out-of-stock products cannot be served as ads.
 
 **4. Key Dates & Deadlines**
 *   **Due Date:** March 17, 2026.
-*   **Last Activity:** March 30, 2026 (QA update regarding E2E automation scope). Note: The "IN RELASE QUEUE" status was recorded on March 10, 2026.
+*   **Last Activity:** 
+    *   March 30, 2026: Milind Badame confirmed E2E automation scope (static verification only; no updates needed).
+    *   March 10, 2026: Ticket status updated to "IN RELASE QUEUE".
 *   **Blockers:** None reported; ticket is resolved and awaiting release deployment.
 
 
