@@ -1,24 +1,11 @@
+Tuesday
 [gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:11804) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:11998) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[Fetching 1/7] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod (summarization pending)
-[Fetched 1/7] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing - queued for summarization (pipeline running)
-[Fetching 2/7] [GCP] New Service Account Key Created - 38d52f5f0c7aff77850e3d4cd55bca6616ff6a34 (summarization pending)
-[Fetched 2/7] [GCP] New Service Account Key Created - 38d52f5f0c7aff77850e - queued for summarization (pipeline running)
-[Fetching 3/7] [Dashboard Report] Retail Media - DD Dashboard | Tue 31 Mar 11:00AM +08 (summarization pending)
-[Fetched 3/7] [Dashboard Report] Retail Media - DD Dashboard | Tue 31 Mar  - queued for summarization (pipeline running)
-[Fetching 4/7] [VidiCenter] Weekly Performance Report (summarization pending)
-[Fetched 4/7] [VidiCenter] Weekly Performance Report - queued for summarization (pipeline running)
-[Fetching 5/7] Your NRF 2026 APAC registration is one click away (summarization pending)
-[Fetched 5/7] Your NRF 2026 APAC registration is one click away - queued for summarization (pipeline running)
-[Fetching 6/7] Re: Invitation: G5: Building a Better Workplace Together: Your Feedback M... @ Tue 7 Apr 2026 11am - 11:45am (SGT) (Carol Lee) (summarization pending)
-[Fetched 6/7] Re: Invitation: G5: Building a Better Workplace Together: Yo - queued for summarization (pipeline running)
-[Fetching 7/7] Daily digest: updates from Shiva Kumar Yalagunda Bas (summarization pending)
-[Fetched 7/7] Daily digest: updates from Shiva Kumar Yalagunda Bas - queued for summarization (pipeline running)
 
 ============================================================
 [gmail_reader] ALL DONE - output file is ready for use.
-Fetched: 7 thread(s) | total scanned: 35
+Fetched: 0 thread(s) | total scanned: 37
 ============================================================
 
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
