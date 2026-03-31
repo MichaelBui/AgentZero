@@ -1,6 +1,0 @@
-[2026-03-21T05:05:58+0000] [Summarized 61/62] [Updated invitation: ACNxOsmos: Daily Cad]: using cached summary
-[2026-03-21T05:05:58+0000] [Summarized 62/62] [Delivery Status Notification (Failure)]: using cached summary
-[2026-03-21T05:05:58+0000] ============================================================
-[2026-03-21T05:05:58+0000] STATUS: COMPLETED - Gmail Reader pipeline finished successfully (62 threads)
-[2026-03-21T05:05:58+0000] ============================================================
-(venv) root@80e3e99df9ff:/a0/usr/workdir#

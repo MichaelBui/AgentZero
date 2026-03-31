@@ -1,8 +1,0 @@
-=== Checking Jira Data ===
-[{"key":"DPD-645","id":"587451","title":"Improve event sync to prevent overage","description":"As RMN PM,\nI want the OSMOS PROD destination function in Segment to be optimised for performance\nSo that we can eliminate the significant and recurring monthly cost overage caused by excessively long function execution times.\n\nAcceptance criteria\nScenario 1 - Reduction of execution time\nGiven: transaction and product event data in Segment\nWhen: OSMOS PROD function is syncing events with multiple
-
-=== Checking GChat Data ===
-
-
-=== Checking Gmail Data ===
-[{"subject":"Notes: “BCRS Sales Posting Validation (Finance UAT)” Mar 11, 2026","thread_url":"https://mail.google.com/mail/u/0/#search/newer_than%3A2d/FMfcgzQfCMrlrVbjgCZHXgmJgDzpwjGh","labels":["Inbox"],"priority":null,"senders":[{"name":"Gemini","email":"gemini-notes@google.com"}],"last_date":"Wed, Mar 11, 2026, 8:14 AM","messages":[{"from":"Gemini <gemini-notes@google.com>","to":[{"name":"me","email":"michael.bui@fairpricegroup.sg"}],"cc":[],"date":"Mar 11, 2026, 8:14 AM","body":"Note(venv) root@31432beef7ae:/a0/usr/workdir#

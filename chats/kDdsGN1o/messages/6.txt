@@ -1,6 +1,0 @@
-[2026-03-20T17:15:43+0000] [Summarized 64/65] [You have no events scheduled today.]: using cached summary
-[2026-03-20T17:15:43+0000] [Summarized 65/65] [Webinar: rethink how AI actually drives ]: using cached summary
-[2026-03-20T17:15:43+0000] ============================================================
-[2026-03-20T17:15:43+0000] STATUS: COMPLETED - Gmail Reader pipeline finished successfully (65 threads)
-[2026-03-20T17:15:43+0000] ============================================================
-(venv) root@80e3e99df9ff:/a0/usr/workdir#
