@@ -1,6 +1,228 @@
 
 
-## [1/30] Michael Bui, here is your weekly update for 1 Apr
+## [1/26] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
+Source: gmail | Thread: 19d48b628df6e566 | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Wed, Apr 1, 2026, 11:08 AM | Last Updated: 2026-04-01T14:01:25.146923+00:00
+**Daily Work Briefing: Opsgenie Alert Thread**
+
+**1. Key Participants & Roles**
+*   **System (Opsgenie/Datadog):** Automated alert generator triggering notifications based on metric thresholds.
+*   **Responders:** "DPD Staff Excellence - Retail Media" (Primary team assigned to the incident).
+*   **Notified Channels/Groups:** `@hangouts-dd-dpd-grocery-alert` and `@opsgenie-dpd-grocery-retail-media`.
+*   **Incident Owner:** The thread does not explicitly name an individual engineer, but ownership is assigned to the "DPD Staff Excellence - Retail Media" team.
+
+**2. Main Topic/Request**
+*   **Alert Subject:** [P2] [Warn] High error rate detected on the `marketing-service` in the production environment (`env:prod`).
+*   **Trigger Condition:** The ratio of HTTP request errors to total hits exceeded 5% (`> 0.05`) over a 10-minute window.
+*   **Current Status:** The alert was triggered (sent at 11:03 AM), but the actual metric value recorded at the time of notification was **0.011** (1.1%), which is below the 5% threshold, suggesting a potential transient spike or false positive that requires verification against the runbook.
+
+**3. Pending Actions & Ownership**
+*   **Action:** Investigate the `marketing-service` anomalies immediately.
+*   **Required Steps:**
+    1.  Review Datadog APM metrics for HTTP request resources: [Link](https://app.datadoghq.com/apm/services/marketing-service/operations/http.request/resources?env=prod).
+    2.  Check Kubernetes deployment status in `asia-southeast1` cluster: [Link](https://console.cloud.google.com/kubernetes/deployment/asia-southeast1/fpon-cluster/default/marketing-service/overview?cloudshell=false&project=fponprd).
+    3.  Consult the specific Runbook for remediation steps: [Link](https://ntuclink.atlassian.net/wiki/spaces/DIS/pages/2008167992/marketing-service+-+Run+book).
+*   **Owner:** DPD Staff Excellence - Retail Media (via `@hangouts-dd-dpd-grocery-alert` and `@opsgenie-dpd-grocery-retail-media`).
+
+**4. Decisions Made**
+*   No human decisions or resolutions were recorded in this thread. The content consists entirely of automated system notifications sent within a 5-minute window (11:03 AM, 11:05 AM, 11:08 AM).
+
+**5. Key Dates, Deadlines, & Follow-ups**
+*   **Alert Creation Time:** April 1, 2026, at 7:03:08 PM (UTC+00:00 timestamp in metadata; local notifications sent at 11:03 AM).
+*   **Last Metric Update:** April 1, 2026, 11:02:06 +0000.
+*   **Alert Frequency:** The system re-sent identical alert data three times (11:03, 11:05, and 11:08 AM).
+*   **Monitor ID:** `17447106`.
+*   **Next Step:** Immediate triage required by the Retail Media team to determine if the service stability issue is active or a monitoring artifact. No specific deadline was set by the system other than the standard P2 response SLA implied by the priority level.
+
+
+## [2/26] Re: [## 112603 ##] Sev1 incident: Ad Products per response is low for PLA
+Source: gmail | Thread: 19d2ead5d3ae56a5 | Labels: Inbox | Priority: None | Senders: Nikhil, Osmos | Last Date: Wed, Apr 1, 2026, 11:01 AM | Last Updated: 2026-04-01T14:01:45.718437+00:00
+**Daily Work Briefing: Sev1 Incident #112603 (Final Update)**
+
+**Key Participants & Roles**
+*   **Nikhil Grover** (nikhil.grover@fairpricegroup.sg): Incident coordinator/escalation lead. Confirmed implementation of fixes on the client side.
+*   **Michael Bui**: Technical subject matter expert. Provided advisory support and requested URLs for analysis.
+*   **Osmos Support** (support@onlinesalesai.zohodesk.in): Support team coordinating with Engineering to verify the `pcnt` parameter configuration.
+
+**Main Topic & Request**
+The thread addresses Severity 1 incident [#112603] regarding low volume responses from Ad Products within Programmatic Local Ads (PLA). The root cause was identified as the `pcnt` parameter being set to `1`, limiting responses. Nikhil Grover implemented a fix setting `pcnt = 6`. Osmos Support and Engineering have now verified that this configuration is correctly passed for all PLA product requests.
+
+**Pending Actions & Ownership**
+*   **Action:** Monitor post-fix performance to ensure no discrepancies remain.
+    *   **Owner:** Osmos Support / Nikhil Grover.
+    *   **Status:** Verification complete as of April 1, 2026. No further immediate action required pending routine monitoring.
+
+**Decisions Made & Outcomes**
+*   **Root Cause Confirmed:** Low response volume was caused by the `pcnt` parameter being incorrectly set to `1`.
+*   **Resolution Implemented:** Nikhil Grover confirmed on March 31, 2026, that the fix (`pcnt = 6`) was deployed effective from 3:00 PM Singapore time.
+*   **Engineering Verification:** On April 1, 2026, at 11:01 AM, Osmos Support confirmed via their Engineering team that the FPG configuration update is active and `pcnt = 6` is now correctly passed for all PLA product requests.
+
+**Key Dates & Follow-ups**
+*   **Incident ID:** [#112603]
+*   **Initial Escalation:** March 27, 2026, 9:43 AM (Nikhil Grover requested Michael Bui's support).
+*   **Diagnostic Request:** March 31, 2026, 6:15 AM (Osmos Support requested URLs for "chocolate" and "toothpaste").
+*   **Resolution Confirmation:** March 31, 2026, 7:14 AM (Nikhil Grover confirmed fix implementation).
+*   **Engineering Verification:** April 1, 2026, 11:01 AM (Osmos Support verified `pcnt = 6` is correctly passed).
+
+**Summary of Thread Chronology**
+On March 27, 2026, Nikhil Grover escalated the Sev1 incident to Michael Bui due to URL access limitations hindering troubleshooting for low PLA responses. On March 31, 2026, Osmos Support requested specific ad request URLs to analyze the `pcnt` parameter. Following this, Nikhil Grover confirmed a client-side fix effective from 3:00 PM Singapore time on March 31, setting `pcnt = 6`. Finally, on April 1, 2026, at 11:01 AM, Osmos Support verified with their Engineering team that the FPG configuration update is live and `pcnt = 6` is now correctly passed for all PLA product requests. The incident has been resolved pending routine observation.
+
+
+## [3/26] Re: [Bitbucket] Pull request #919: chore/omni ops monitor (ntuclink/dpd-datadog-monitoring)
+Source: gmail | Thread: 19d2d6690d21cc23 | Labels: Inbox, Updates | Priority: None | Senders: Sun. | Last Date: Wed, Apr 1, 2026, 9:05 AM | Last Updated: 2026-04-01T10:01:14.524350+00:00
+**Daily Work Briefing: Pull Request #919 Summary (Finalized)**
+
+**Key Participants & Roles**
+*   **Sundy Yaputra**: Author and primary contributor. Executed code changes, refactoring monitoring logic, restructuring service locations, merging branches, and coordinating review approvals within the `ntuclink/dpd-datadog-monitoring` repository.
+*   **Madhawa Mallika Arachchige**: Reviewer who validated format and Terraform plans but deferred final approval pending team sign-off due to lack of prior monitor knowledge.
+*   **Daryl Ng**: Final approver who granted explicit approval on April 1, 2026.
+
+**Main Topic/Request**
+The thread concerns Pull Request #919 titled "chore/omni ops monitor." The objective was to reorganize Datadog monitoring configurations for the DPD Omni-Ops team by dividing logic into SLO and monitor components, relocating services, establishing dedicated folder structures, and adding specific service definitions.
+
+**Actions Pending & Ownership**
+*   **Review/Merge**: The PR has been formally approved.
+    *   *Status*: Approved.
+    *   *Owner*: Daryl Ng (Action: Approval granted at 9:05 AM UTC on April 1, 2026).
+*   **Monitoring Implementation & Updates**: Sundy Yaputra completed final iterations of code changes on April 1, 2026. Recent actions included dividing logic into SLOs/monitors, moving services for the DPD Omni-Ops team, copying monitors to the "omni ops folder," and adding "engage journey" and "engage compass" services.
+    *   *Owner*: Sundy Yaputra (Status: Complete).
+
+**Decisions Made**
+No formal business decisions are recorded; however, two critical technical validations occurred on April 1, 2026:
+1.  **Technical Validation**: Madhawa Mallika Arachchige confirmed the overall format was correct and verified that the Terraform plan was clean (Run ID: `run-6uXwa58bXjC4jSRi` via Terraform Cloud).
+2.  **Approval Protocol**: Madhawa requested a primary team member approve the PR before proceeding, noting limited visibility into the specific monitors. This requirement was satisfied by Daryl Ng.
+3.  **Final Approval**: Daryl Ng provided explicit approval for Pull Request #919 at 9:05 AM UTC on April 1, 2026.
+
+**Key Dates & Follow-ups**
+*   **Last Activity Date**: April 1, 2026.
+*   **Timeline of Events (UTC)**:
+    *   **2:16 AM – 2:47 AM**: Sundy Yaputra completed final code updates and merges.
+    *   **8:13 AM**: Madhawa Mallika Arachchige commented, validating the TF plan but requesting a team approval.
+    *   **9:05 AM**: Daryl Ng approved the pull request.
+*   **Latest Commit ID**: `fa21787` (Add service) / `74ede15` (Merge).
+*   **Next Steps**: With Daryl Ng's approval, the PR is ready for merge execution by maintainers or Sundy Yaputra. No further delays are indicated.
+
+**Reference Data**
+*   **Repository**: `ntuclink/dpd-datadog-monitoring`
+*   **Pull Request ID**: #919
+*   **Branch/Topic**: `chore/omni ops monitor`
+*   **Previous Activity**: Significant structural updates occurred on March 26, 2026.
+
+
+## [4/26] 4 strategic shifts defining security in 2026
+Source: gmail | Thread: 19d4849ffb517233 | Labels: Inbox, Updates | Priority: None | Senders: Google Cloud | Last Date: Wed, Apr 1, 2026, 9:05 AM | Last Updated: 2026-04-01T10:01:28.300127+00:00
+**Daily Work Briefing Summary**
+
+**Key Participants & Roles**
+*   **Sender:** Google Cloud Team (specifically the Google Threat Intelligence and Mandiant expert groups). Email: `googlecloud@google.com`.
+*   **Recipient:** Michael.
+*   **Context:** External vendor communication providing industry forecasting and strategic intelligence.
+
+**Main Topic/Request**
+The email announces the publication of the **"2026 Cybersecurity Forecast"** report. The primary objective is to provide Michael with actionable intelligence on four critical security trends expected to dominate the next 12–18 months:
+1.  **AI Arms Race:** Adversary use of AI for rapid attacks versus the implementation of an "Agentic SOC" for defense.
+2.  **Modern Extortion:** Persistent ransomware and data theft threats, including tactics to bypass multi-factor authentication (MFA).
+3.  **Virtualization Frontline:** Increased targeting of core virtualization infrastructure as a critical blind spot.
+4.  **Nation-State Strategies:** Long-term objectives of actors from China, Russia, North Korea, and Iran, specifically regarding supply chain attacks.
+
+**Pending Actions & Ownership**
+*   **Action:** Review the "2026 Cybersecurity Forecast" report.
+*   **Owner:** Michael (Recipient).
+*   **Details:** The email urges the recipient to use the provided intelligence to prioritize resources and build a more resilient defense strategy. No specific deadline for review was set in this communication.
+
+**Decisions Made**
+No internal decisions or strategic approvals were made within this thread, as it is a one-way informational broadcast from Google Cloud.
+
+**Key Dates & Deadlines**
+*   **Email Date:** April 1, 2026, 9:05 AM.
+*   **Report Scope:** Covers trends for the year ahead (specifically the next 12–18 months from the report's publication).
+*   **Reference ID:** Last message ID `19d4849ffb517233`.
+
+**Specific References & Metadata**
+*   **Source Entities:** Google Threat Intelligence, Mandiant.
+*   **Sender Address:** `googlecloud@google.com`.
+*   **Location Reference:** 70 Pasir Panjang Road, #03-71, Mapletree Business City, Singapore 117371 (Google Asia Pacific Pte. Ltd.).
+*   **Labels:** Inbox, Updates.
+
+
+## [5/26] Invitation: You’re Invited! The D&T Power Breakfast is Back! @ Tue Apr 28, 2026 9am - 10:30am (SGT) (Michael Bui)
+Source: gmail | Thread: 19d482a1188a5541 | Labels: Inbox | Priority: None | Senders: Trina Boquiren | Last Date: Wed, Apr 1, 2026, 8:30 AM | Last Updated: 2026-04-01T10:01:42.449736+00:00
+**Daily Work Briefing: D&T Power Breakfast Event**
+
+**1. Key Participants & Roles**
+*   **Organizer:** Trina Boquiren (trina.boquiren@fairpricegroup.sg) – Initiator and host of the event.
+*   **Recipient/Attendee:** Michael Bui (michael.bui@fairpricegroup.sg) – Primary recipient requiring an RSVP response.
+*   **Audience:** The D&T Team (FairPrice Group).
+
+**2. Main Topic & Request**
+Trina Boquiren has issued a formal invitation to the "D&T Power Breakfast," marking the return of this monthly team-building initiative. The event aims to facilitate connection, recharging, and social interaction over food. The specific request is for all D&T Team members to RSVP via the calendar invite by **24 April 2026** to assist with accurate food ordering and waste reduction.
+
+**3. Pending Actions & Ownership**
+*   **Action:** Submit an RSVP response ("Yes," "No," or "Maybe").
+    *   **Owner:** Michael Bui (and other D&T team members).
+    *   **Method:** Click the corresponding button on the Google Calendar invite.
+*   **Action:** Confirm attendance logistics.
+    *   **Owner:** All attendees.
+
+**4. Decisions Made**
+*   **Event Launch:** The "Power Breakfast" series has officially resumed after a hiatus.
+*   **Future Schedule:** Moving forward, these events will be held on the **last Thursday of every month**.
+*   **RSVP Deadline:** Responses are required no later than 24 April to finalize catering numbers.
+
+**5. Key Dates & Logistics**
+*   **Event Date:** Tuesday, 28 April 2026.
+*   **Event Time:** 9:00 AM – 10:30 AM (SGT).
+*   **RSVP Deadline:** 24 April 2026.
+*   **Location:** FairPrice Hub, Level 11, Lobby B Pantry.
+*   **Virtual Options:** A Google Meet link is provided for remote access (`meet.google.com/nbr-mdce-qro`) and phone dial-in details (+1 682-214-3669, PIN: 216437643).
+
+**Summary Note:** Michael Bui needs to confirm attendance status by 24 April. The event serves as the kickoff for a recurring monthly schedule ending on the last Thursday of each month.
+
+
+## [6/26] [JIRA] (DPD-838) Transition to Impression-Based Inventory & Multi-Banner Delivery
+Source: gmail | Thread: 19d2e82fa82f66fe | Labels: Inbox, Updates | Priority: None | Senders: Nikh. | Last Date: Wed, Apr 1, 2026, 6:41 AM | Last Updated: 2026-04-01T10:02:04.833434+00:00
+**Daily Work Briefing: JIRA (DPD-838)**
+
+**Project Context**
+*   **JIRA ID:** DPD-838
+*   **Topic:** Transition to Impression-Based Inventory & Multi-Banner Delivery
+*   **Category:** Ecom/Omni
+*   **Status:** IN DEVELOPMENT (Updated Apr 1, 2026)
+*   **Assignee:** Chee Hoe Leong
+*   **Last Update:** April 1, 2026 (Chee Hoe Leong & Nikhil Grover comments)
+
+**Key Participants**
+*   **Chee Hoe Leong:** DM; Provided definitive answers to technical ambiguities and updated ticket status.
+*   **Nikhil Grover:** Product Manager; Confirmed slot value constraints in reply to Chee Hoe Leong.
+*   **Michael Bui:** Technical Stakeholder (Previously identified blockers).
+
+**Main Topic & Request**
+Following critical clarifications raised by Michael Bui on Mar 28, the team has received definitive responses from the DM (Chee Hoe Leong) regarding scope, logic, and system constraints. The project status has progressed from "TO BE DEFINED" to "IN DEVELOPMENT."
+
+**Resolved Technical Ambiguities & Decisions**
+1.  **Migration Scope:** Confirmed that video support is restricted to **Omni Home** and **FPPay**. Category and Search pages will remain on the legacy MPS service (No migration required).
+2.  **Non-Endemic Identification:** The method uses a Boolean value explicitly labeled **"Endemic"** or **"Non-endemic"**, rather than substring matching logic.
+3.  **OSMOS Capacity Limits:** Support for limits exceeding 10 `pcnt` items is expected by early April; confirmation of on-track delivery is pending Monday verification.
+4.  **Position Tracking & Slot Values:**
+    *   The "position" value is used to exclude multiple banners targeting the same slot (e.g., preventing duplicate 999s), not for sequencing.
+    *   **Constraint:** Values are limited to integers **1–20** or empty (default).
+5.  **Video Behavior:** Auto-play and auto-scroll remain **Front-End managed**. The system only defines the banner sequence. Sales policy limits videos to one per Carousel.
+6.  **Failure Handling:** If no banners are configured, the API returns nothing, causing banners to collapse (managed by Ops). API unavailability results in the same output; an incident will be created for such cases.
+
+**Pending Actions & Ownership**
+*   **Action:** Confirm on-track delivery of OSMOS capacity >10 by early April.
+    *   **Owner:** Chee Hoe Leong / Engineering Lead (Target: Monday).
+*   **Action:** Update SOP to reflect slot logic for excluding duplicate banners and Integer 1-20 constraint.
+    *   **Owner:** Development Team / Ops.
+
+**Key Dates & Follow-ups**
+*   **Last Update Timestamp:** April 1, 2026, at 02:38 PM Singapore Time (Nikhil Grover/Nikolai Chee Hoe Leong comments).
+*   **Status Change:** Moved to "IN DEVELOPMENT" on Apr 1.
+
+**Summary for Executive Review**
+The DPD-838 initiative has resolved prior scope ambiguities and entered development. Key decisions confirm that only Omni Home and FPPay will adopt the new video-enabled multi-banner architecture; legacy MPS remains in place for Category/Search pages. Technical logic is now defined: non-endemic identification uses explicit Boolean labels ("Endemic"/"Non-endemic"), and slot values are integers 1–20 used to prevent duplicate renders rather than sequence ordering. OSMOS capacity expansion (>10 items) is targeted for early April pending Monday confirmation. Failure states result in banner collapse with incident creation, while media behaviors (auto-play/scroll) remain Front-End responsibilities. The ticket is now assigned to Chee Hoe Leong and marked as "IN DEVELOPMENT."
+
+
+## [7/26] Michael Bui, here is your weekly update for 1 Apr
 Source: gmail | Thread: 19d478fc4c185291 | Labels: Inbox, Updates | Priority: None | Senders: Jira | Last Date: Wed, Apr 1, 2026, 5:41 AM | Last Updated: 2026-04-01T06:01:55.701625+00:00
 **Daily Work Briefing for Michael Bui**
 **Date:** April 1, 2026
@@ -39,7 +261,7 @@ Three specific work items have been auto-assigned to **Michael Bui**:
 *   **Footer Address:** 341 George Street, Sydney, NSW, 2000, Australia
 
 
-## [2/30] What is Next – The Agentic Evolution with Workbench
+## [8/26] What is Next – The Agentic Evolution with Workbench
 Source: gmail | Thread: 19d47719f5f0408a | Labels: Inbox | Priority: None | Senders: Sip Khoon Tan | Last Date: Wed, Apr 1, 2026, 5:08 AM | Last Updated: 2026-04-01T06:02:11.078785+00:00
 **Subject:** Daily Briefing: Agentic Evolution with Workbench – Next Steps
 
@@ -74,7 +296,7 @@ To maintain momentum following the initial AI training on 19 March 2026, this co
 *   **Platform URL:** `work.fpg.sg` (Workbench login).
 
 
-## [3/30] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
+## [9/26] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
 Source: gmail | Thread: 19d4650c90bbc3a8 | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Wed, Apr 1, 2026, 3:59 AM | Last Updated: 2026-04-01T06:02:36.407634+00:00
 **Daily Work Briefing: Opsgenie Alert Summary** (Updated)
 
@@ -118,7 +340,7 @@ Source: gmail | Thread: 19d4650c90bbc3a8 | Labels: Inbox, Updates | Priority: No
 *   **Integration:** `dpd-grocery-retail-media-eu` (Datadog).
 
 
-## [4/30] [Dashboard Report] Retail Media - DD Dashboard | Wed 1 Apr 11:00AM +08
+## [10/26] [Dashboard Report] Retail Media - DD Dashboard | Wed 1 Apr 11:00AM +08
 Source: gmail | Thread: 19d46fd8c3c6da1b | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Wed, Apr 1, 2026, 3:01 AM | Last Updated: 2026-04-01T06:02:45.283913+00:00
 **Daily Work Briefing: Retail Media Dashboard Update**
 
@@ -144,46 +366,7 @@ No strategic decisions or approvals were made in this thread; it is a standard o
 *   **Follow-up Required:** None explicitly scheduled; monitoring is implied as an ongoing task.
 
 
-## [5/30] Re: [Bitbucket] Pull request #919: chore/omni ops monitor (ntuclink/dpd-datadog-monitoring)
-Source: gmail | Thread: 19d2d6690d21cc23 | Labels: Inbox, Updates | Priority: None | Senders: Sundy Yaputra | Last Date: Wed, Apr 1, 2026, 2:47 AM | Last Updated: 2026-04-01T06:03:06.182968+00:00
-**Daily Work Briefing: Pull Request #919 Summary (Updated)**
-
-**Key Participants & Roles**
-*   **Sundy Yaputra**: Author and primary contributor. Responsible for executing code changes, refactoring monitoring logic, restructuring service locations, and merging branches within the `ntuclink/dpd-datadog-monitoring` repository.
-
-**Main Topic/Request**
-The thread concerns Pull Request #919 titled "chore/omni ops monitor." The objective is to reorganize Datadog monitoring configurations for the DPD Omni-Ops team, specifically dividing logic into SLO and monitor components, relocating services, establishing dedicated folder structures, and adding specific service definitions.
-
-**Actions Pending & Ownership**
-*   **Review/Merge**: No explicit approval or rejection is noted in the latest email update (April 1, 2026). The PR remains open for review by the team.
-    *   *Owner*: Not specified (Default: Reviewers assigned to the repository).
-*   **Monitoring Implementation & Updates**: Sundy Yaputra has completed multiple iterations of code changes on April 1, 2026. Recent actions include dividing logic into SLOs/monitors, moving services for the DPD Omni-Ops team, copying monitors to the "omni ops folder," and adding "engage journey" and "engage compass" services.
-    *   *Owner*: Sundy Yaputra (Status: Complete/Updated).
-
-**Decisions Made**
-No formal business decisions are recorded. The technical trajectory confirms the architectural restructuring of the monitoring codebase, evidenced by the full commit history including updates on April 1, 2026:
-
-1.  **Modularization**: Initial and subsequent separation of logic into SLO and monitor components (Commits `8ca2912` from Mar 26, `a42edd0` from Apr 1).
-2.  **Service Relocation**: Movement of services to align with the DPD Omni-Ops team structure (Commits `c6b7b50` from Mar 26, `214a537` from Apr 1).
-3.  **Directory Restructure**: Copying monitors specifically to the "omni ops folder" (Commit `87748fe` from Mar 26, `4aeb667` from Apr 1).
-4.  **Service Addition**: Inclusion of "engage journey" and "engage compass" services (Commit `fa21787`).
-5.  **Branch Merging**: Successful merge of the feature branch into the target branch (Commit `74ede15`).
-
-**Key Dates & Follow-ups**
-*   **Last Activity Date**: April 1, 2026.
-*   **Activity Time**: Between 2:16 AM and 2:47 AM UTC.
-*   **Latest Commit ID**: `fa21787` (Add service) / `74ede15` (Merge).
-*   **Previous Activity**: Significant updates also occurred on March 26, 2026, establishing the initial restructure logic.
-*   **Next Steps**: Stakeholders must review the finalized changes (including the new merge and additional services) within Bitbucket to provide feedback or grant merge approval. No specific deadline was set in this notification.
-
-**Reference Data**
-*   **Repository**: `ntuclink/dpd-datadog-monitoring`
-*   **Pull Request ID**: #919
-*   **Branch/Topic**: `chore/omni ops monitor`
-*   **Message ID**: `19d46f0961a538e6` (Latest notification) / `19d2d6690d21cc23` (Previous context).
-
-
-## [6/30] Updated invitation: DPD + Core Product + Picking Team meeting + Light @ Thu Apr 2, 2026 9:30am - 11am (SGT) (Michael Bui)
+## [11/26] Updated invitation: DPD + Core Product + Picking Team meeting + Light @ Thu Apr 2, 2026 9:30am - 11am (SGT) (Michael Bui)
 Source: gmail | Thread: 19d46925b81178e3 | Labels: Inbox | Priority: None | Senders: Alvin Choo | Last Date: Wed, Apr 1, 2026, 1:04 AM | Last Updated: 2026-04-01T02:01:44.032139+00:00
 **Daily Briefing: DPD + Core Product + Picking Team Meeting Update**
 
@@ -219,7 +402,7 @@ Source: gmail | Thread: 19d46925b81178e3 | Labels: Inbox | Priority: None | Send
 **Note:** This is an automated system notification regarding a calendar update. Recipients should verify their attendance status immediately to ensure proper representation from all three teams.
 
 
-## [7/30] Invitation: DPD + Core Product + Picking Team meeting @ Thu Apr 2, 2026 9:30am - 11am (SGT) (Michael Bui)
+## [12/26] Invitation: DPD + Core Product + Picking Team meeting @ Thu Apr 2, 2026 9:30am - 11am (SGT) (Michael Bui)
 Source: gmail | Thread: 19d4691f3863a710 | Labels: Inbox | Priority: None | Senders: Alvin Choo | Last Date: Wed, Apr 1, 2026, 1:04 AM | Last Updated: 2026-04-01T02:02:01.754160+00:00
 **Daily Work Briefing: Meeting Summary**
 
@@ -253,7 +436,7 @@ No final decisions were recorded in this invitation sequence. The meeting is cur
 *   **Email Link (US):** +1 260-758-1044 | PIN: 166296012
 
 
-## [8/30] [RAW Overdue] Expired Risk Acceptance & Waiver Form
+## [13/26] [RAW Overdue] Expired Risk Acceptance & Waiver Form
 Source: gmail | Thread: 19d46907d49aeef1 | Labels: Inbox | Priority: None | Senders: cyberrisk.automation | Last Date: Wed, Apr 1, 2026, 1:02 AM | Last Updated: 2026-04-01T02:02:15.214605+00:00
 **Daily Work Briefing: Expired Risk Acceptance & Waiver (RAW)**
 
@@ -288,7 +471,7 @@ None recorded in this thread; the message is a procedural reminder and directive
 *   **Asset Name:** Signcloud Saas User access management
 
 
-## [9/30] You have no events scheduled today.
+## [14/26] You have no events scheduled today.
 Source: gmail | Thread: 19d45b80d56a7030 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Tue, Mar 31, 2026, 9:06 PM | Last Updated: 2026-03-31T22:01:24.107712+00:00
 **Daily Work Briefing Summary**
 
@@ -317,7 +500,7 @@ No decisions were made or recorded in this thread. The content represents a syst
 *   **Priority**: None assigned
 
 
-## [10/30] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
+## [15/26] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
 Source: gmail | Thread: 19d44f04fe8dfbf2 | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Tue, Mar 31, 2026, 5:33 PM | Last Updated: 2026-03-31T22:01:46.913205+00:00
 **Subject:** Daily Briefing: Opsgenie Alert on `marketing-service` High Error Rate (P2)
 
@@ -358,7 +541,7 @@ Source: gmail | Thread: 19d44f04fe8dfbf2 | Labels: Inbox, Updates | Priority: No
 The `marketing-service` in production triggered three identical P2 alerts between 5:28 PM and 5:33 PM on March 31, 2026. The alert monitors HTTP error rates exceeding 5%. Current logs show a metric value of 4.5%, suggesting the service may be recovering or the alert is flapping. The Retail Media team must review the Datadog APM, K8s deployment status, and runbook immediately to confirm if further intervention is needed.
 
 
-## [11/30] Singapore’s Beverage Container Return Scheme Launches 1 April 2026
+## [16/26] Singapore’s Beverage Container Return Scheme Launches 1 April 2026
 Source: gmail | Thread: 19d4322921d79bb3 | Labels: Inbox, Updates | Priority: None | Senders: iComms | Last Date: Tue, Mar 31, 2026, 9:03 AM | Last Updated: 2026-03-31T10:01:53.381246+00:00
 **Daily Work Briefing: Singapore Beverage Container Return Scheme (BCRS)**
 
@@ -399,42 +582,7 @@ The email announces the official launch of Singapore's Beverage Container Return
 *   Machine Locator: https://returnright.sg
 
 
-## [12/30] Re: [## 112603 ##] Sev1 incident: Ad Products per response is low for PLA
-Source: gmail | Thread: 19d2ead5d3ae56a5 | Labels: Inbox | Priority: None | Senders: Nikhil, Osmos | Last Date: Tue, Mar 31, 2026, 7:14 AM | Last Updated: 2026-03-31T10:02:14.272161+00:00
-**Daily Work Briefing: Sev1 Incident #112603 (Updated)**
-
-**Key Participants & Roles**
-*   **Nikhil Grover** (nikhil.grover@fairpricegroup.sg): Incident coordinator/escalation lead. Previously blocked by access limitations; now implementing fixes on the client side.
-*   **Michael Bui**: Technical subject matter expert. Requested for advisory support regarding incident scope and ad request URL analysis.
-*   **Osmos Support** (support@onlinesalesai.zohodesk.in): Support team providing diagnostic guidance regarding the `pcnt` parameter.
-
-**Main Topic & Request**
-The thread addresses a Severity 1 (Sev1) incident [#112603] concerning low volume responses from Ad Products within Programmatic Local Ads (PLA). Initial analysis suggested that the `pcnt` parameter in ad requests was incorrectly set to `1`, limiting responses to a single product. While Nikhil Grover initially lacked access to specific request URLs, Osmos Support requested Michael Bui provide URLs for keywords "chocolate" and "toothpaste" to verify this parameter.
-
-**Pending Actions & Ownership**
-*   **Action:** Monitor the impact of the client-side fix (`pcnt = 6`) and report on any discrepancies.
-    *   **Owner:** Osmos Support / Nikhil Grover.
-    *   **Deadline:** Update required tomorrow (March 27, 2026 context implies "tomorrow" relative to the March 31 update).
-*   **Action:** Verification of `pcnt` parameter values in ad requests for keywords "chocolate" and "toothpaste."
-    *   **Status:** Resolved by client.
-
-**Decisions Made**
-*   **Root Cause Identified:** The low response volume was attributed to the `pcnt` parameter being set to `1` instead of a higher value.
-*   **Resolution Implemented:** Nikhil Grover confirmed on March 31, 2026, that the issue was fixed on their end by setting `pcnt = 6` for all product ad requests.
-*   **Implementation Time:** The fix is effective starting 3:00 PM Singapore time on March 31, 2026.
-
-**Key Dates & Follow-ups**
-*   **Incident ID:** [#112603]
-*   **Initial Escalation:** March 27, 2026, 9:43 AM (Nikhil Grover requested Michael Bui's support due to URL access issues).
-*   **Diagnostic Request:** March 31, 2026, 6:15 AM (Osmos Support requested specific URLs to verify `pcnt`).
-*   **Resolution Confirmation:** March 31, 2026, 7:14 AM (Nikhil Grover confirmed fix).
-*   **Follow-up Status:** Pending monitoring and update tomorrow regarding discrepancies.
-
-**Summary of Thread Chronology**
-On March 27, 2026, Nikhil Grover escalated the Sev1 incident to Michael Bui due to an inability to access specific request URLs needed for troubleshooting low PLA responses. On March 31, 2026, Osmos Support requested specific ad request URLs for "chocolate" and "toothpaste" from Michael Bui to analyze the `pcnt` parameter. Subsequently, Nikhil Grover informed the team that the issue was resolved on their end. The fix involved setting the `pcnt` value to `6` for all product ad requests, effective from 3:00 PM Singapore time on March 31. The team is now awaiting a monitoring update "tomorrow" to confirm if the discrepancy has been cleared.
-
-
-## [13/30] Your NRF 2026 APAC registration is one click away
+## [17/26] Your NRF 2026 APAC registration is one click away
 Source: gmail | Thread: 19d419ef3264ff6e | Labels: Inbox, Promotions | Priority: None | Senders: NRF 26: Retail's Bi. | Last Date: Tue, Mar 31, 2026, 6:25 AM | Last Updated: 2026-03-31T10:02:33.524139+00:00
 **Daily Work Briefing: NRF 2026 APAC Registration Update**
 
@@ -469,7 +617,7 @@ The email serves as an expedited registration invitation for **NRF 2026: Retail'
 Michael is invited to instantly secure his free Expo Pass via a one-click link, granting full access to the exhibition floor and social events. To unlock C-suite keynotes, strategic breakout sessions (e.g., Agentic AI), and invite-only roundtables, he must upgrade to the Retailer All-Access Pass. By using code `NRFLOYALIST` before the extended Early Bird deadline of April 10, 2026, he can lock in a rate of USD $599, saving USD $900 off the standard price.
 
 
-## [14/30] Your Weekly Digest from Datadog
+## [18/26] Your Weekly Digest from Datadog
 Source: gmail | Thread: 19d4280fdfb0dcd7 | Labels: Inbox, Updates | Priority: None | Senders: Datadog | Last Date: Tue, Mar 31, 2026, 6:07 AM | Last Updated: 2026-03-31T10:02:54.608424+00:00
 **Daily Work Briefing: Datadog Weekly Digest (NTUC Enterprise)**
 
@@ -511,7 +659,7 @@ Weekly operational summary for NTUC Enterprise Datadog instance covering the per
 *   Alerts Recovered: 88.
 
 
-## [15/30] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
+## [19/26] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
 Source: gmail | Thread: 19d41f20431fe72f | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Tue, Mar 31, 2026, 3:36 AM | Last Updated: 2026-03-31T06:01:44.999819+00:00
 ### Daily Work Briefing: Opsgenie Alert Summary
 
@@ -547,7 +695,7 @@ Source: gmail | Thread: 19d41f20431fe72f | Labels: Inbox, Updates | Priority: No
 **Note:** The alert was duplicated in the source log (Sent at 3:31 AM and 3:36 AM). No human response or resolution status has been logged yet.
 
 
-## [16/30] [GCP] New Service Account Key Created - 38d52f5f0c7aff77850e3d4cd55bca6616ff6a34
+## [20/26] [GCP] New Service Account Key Created - 38d52f5f0c7aff77850e3d4cd55bca6616ff6a34
 Source: gmail | Thread: 19d41d98e342213e | Labels: Inbox, Forums | Priority: None | Senders: noreply-sre | Last Date: Tue, Mar 31, 2026, 3:04 AM | Last Updated: 2026-03-31T06:01:58.397438+00:00
 **Daily Work Briefing: GCP Service Account Key Notification**
 
@@ -581,7 +729,7 @@ No human decisions were made in this thread; this is a system-generated notifica
 *   **Email Metadata Labels:** Inbox, Forums
 
 
-## [17/30] [Dashboard Report] Retail Media - DD Dashboard | Tue 31 Mar 11:00AM +08
+## [21/26] [Dashboard Report] Retail Media - DD Dashboard | Tue 31 Mar 11:00AM +08
 Source: gmail | Thread: 19d41d7dc9b98925 | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Tue, Mar 31, 2026, 3:02 AM | Last Updated: 2026-03-31T06:02:09.633408+00:00
 **Daily Work Briefing Summary: Retail Media Dashboard Report**
 
@@ -613,7 +761,7 @@ Source: gmail | Thread: 19d41d7dc9b98925 | Labels: Inbox, Updates | Priority: No
 *   File: "Retail Media - DD Dashboard" (Sent via email body attachment).
 
 
-## [18/30] [VidiCenter] Weekly Performance Report
+## [22/26] [VidiCenter] Weekly Performance Report
 Source: gmail | Thread: 19d41a8d3012e9c6 | Labels: Updates | Priority: None | Senders: Quividi | Last Date: Tue, Mar 31, 2026, 2:11 AM | Last Updated: 2026-03-31T06:02:22.423485+00:00
 **Daily Work Briefing: VidiCenter Weekly Performance Report**
 
@@ -651,7 +799,7 @@ No decisions were recorded in this thread; only an automated diagnostic alert wa
 *   **Labels:** Updates
 
 
-## [19/30] Re: Invitation: G5: Building a Better Workplace Together: Your Feedback M... @ Tue 7 Apr 2026 11am - 11:45am (SGT) (Carol Lee)
+## [23/26] Re: Invitation: G5: Building a Better Workplace Together: Your Feedback M... @ Tue 7 Apr 2026 11am - 11:45am (SGT) (Carol Lee)
 Source: gmail | Thread: 19d417701b5fac61 | Labels: Inbox | Priority: None | Senders: Melissa Hauw | Last Date: Tue, Mar 31, 2026, 1:16 AM | Last Updated: 2026-03-31T06:02:47.734083+00:00
 **Daily Work Briefing: FPG Focus Group Discussion**
 
@@ -679,7 +827,7 @@ No decisions were recorded in this specific email thread; it serves as a reminde
 Melissa Hauw sent a reminder on March 31 regarding the upcoming Focus Group Discussion on April 7, 2026. The session is scheduled for 45 minutes (11:00 AM – 11:45 AM SGT) and focuses on gathering feedback to enhance the workplace experience at FairPrice Group (FPG). Recipients are asked to confirm participation if their schedules permit.
 
 
-## [20/30] Daily digest: updates from Shiva Kumar Yalagunda Bas
+## [24/26] Daily digest: updates from Shiva Kumar Yalagunda Bas
 Source: gmail | Thread: 19d41033c33cb741 | Labels: Inbox, Updates | Priority: None | Senders: Confluence | Last Date: Mon, Mar 30, 2026, 11:10 PM | Last Updated: 2026-03-31T06:03:01.444596+00:00
 ### Daily Work Briefing: Confluence Update Digest
 
@@ -718,7 +866,7 @@ No formal business decisions were recorded in this automated notification. The c
 Shiva Kumar Yalagunda Bas updated the "BCRS Unit Count Sync Recovery" documentation on March 30, 2026. Stakeholders are advised to review these specific changes via the provided Confluence link to confirm the recovery process status.
 
 
-## [21/30] You have no events scheduled today.
+## [25/26] You have no events scheduled today.
 Source: gmail | Thread: 19d40c04e42da577 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Mon, Mar 30, 2026, 9:57 PM | Last Updated: 2026-03-30T22:01:11.161185+00:00
 **Daily Work Briefing Summary**
 
@@ -750,7 +898,7 @@ The email is an automated system notification confirming that the recipient's wo
 The briefing confirms a clear schedule for Michael Bui on March 31, 2026. No immediate action is required unless the user wishes to modify their notification settings via the provided link.
 
 
-## [22/30] How AI is actually changing developer productivity
+## [26/26] How AI is actually changing developer productivity
 Source: gmail | Thread: 19d4065007217075 | Labels: Inbox, Promotions | Priority: None | Senders: Team Atlassian | Last Date: Mon, Mar 30, 2026, 8:17 PM | Last Updated: 2026-03-30T22:01:23.426019+00:00
 **Daily Briefing: AI Productivity Webinar Invitation**
 
@@ -779,306 +927,3 @@ The email invites recipients to a free webinar titled **"Measuring AI's real imp
 *   **Report:** 2025 DORA State of AI-Assisted Software Development (140-page document).
 *   **Topics Covered:** Realistic productivity gains, evaluation metrics, cross-team benchmarking, and leadership prerequisites for AI scale.
 *   **Organization:** Atlassian Pty Ltd, 341 George Street, Sydney, NSW, 2000, Australia.
-
-
-## [23/30] [JIRA] (DPD-715) Dynamic ad slot configuration for Homepage swimlanes
-Source: gmail | Thread: 19cd82204175d296 | Labels: Inbox, Updates | Priority: None | Senders: Nikhil | Last Date: Mon, Mar 30, 2026, 11:15 AM | Last Updated: 2026-03-30T14:02:12.655099+00:00
-**Daily Work Briefing: DPD-715 Dynamic Ad Slot Configuration (Race Condition Identified; E2E Testing Required)**
-
-**Key Participants & Roles**
-*   **Nikhil Grover:** Product Manager.
-*   **Michael Bui:** Development Lead/Manager; executed deployment and identified post-deployment race condition.
-*   **Milind Badame:** Assigned QA/Test lead for new verification steps.
-
-**Main Topic/Request**
-Development of a dynamic ad slot configuration system (Ticket: **DPD-715**) for Omni and OG Homepage swimlanes, enabling Product Managers to control ad placement indices via Split feature flags without code deployments.
-
-**Decisions Made & Status Updates**
-*   **Status Change:** The ticket remains in a critical state following the initial "Done" status on March 25, 2026. A race condition was identified post-launch rendering the `pnct=1` flag ineffective.
-*   **Current State:** As of March 30, 2026 (11:15 AM), the ticket requires execution of an End-to-End (E2E) test to validate the fix before re-deployment. The status is effectively **"Ready for E2E Test."**
-*   **Production Deployment:** Initial deployment occurred on March 25, 2026 (12:02 AM Singapore Time). UAT was signed off by Nikhil Grover at 10:11 PM Singapore Time on the same date with configuration `[3, 5, 7, 11, 13, 15]`.
-*   **Critical Defect Identified:** On March 27, 2026 (03:38 AM Singapore Time), Michael Bui identified a race condition where the `share` variable is overwritten, impacting concurrent requests. This was verified in UAT with evidence provided via screenshot (`image-20260327-193706.png`).
-*   **New Testing Requirement:** Milind Badame has explicitly marked the ticket as requiring E2E testing (`Requires_e2e_test: Yes`) to ensure the race condition is resolved across the full user flow prior to final closure.
-
-**Pending Actions & Ownership**
-*   **Immediate Action Required:** Execute comprehensive E2E tests on the UAT environment to validate that the `share` variable overwrite logic has been corrected and `pnct=1` functions correctly under load.
-*   **Ownership:** Milind Badame is responsible for initiating and executing the E2E test suite. Michael Bui must ensure the codebase is updated with the fix prior to testing.
-*   **Monitoring:** Post-deployment monitoring remains paused pending successful E2E validation and subsequent re-deployment.
-
-**Key Dates & Deadlines**
-*   **Start Date:** March 10, 2026
-*   **UAT Sign-off (Initial):** March 25, 2026 (10:11 PM Singapore Time).
-*   **Production Deployment (Initial):** March 25, 2026 (12:02 AM Singapore Time).
-*   **Issue Discovery:** March 27, 2026 (03:38 AM Singapore Time).
-*   **E2E Test Requirement Added:** March 30, 2026 (11:15 AM) via Jira update by Milind Badame.
-
-**Reference Data**
-*   **Ticket ID:** DPD-715
-*   **Project:** (Ecom/Omni) DPD
-*   **Last Message ID:** 19d3e750cb60c97c (Updated from previous 19d30d7ccd9ed15b)
-*   **New Flag:** `Requires_e2e_test: Yes`
-*   **Attachments:**
-    *   `image-20260325-160055.png` (Visual confirmation of slot changes).
-    *   `ScreenRecording_03-26-2026 00-15-50_1.MP4` (Initial post-deployment validation).
-    *   `image-20260327-193706.png` (Evidence of race condition affecting `pnct=1`).
-
-**Historical Context Retained**
-*   Boundary handling logic remains valid: Configured indices exceeding available content range are ignored; only valid bounds render.
-*   Stock integrity checks remain active: Out-of-stock items cannot be served as ads regardless of slot configuration.
-*   Previous mobile app issues were resolved in the earlier UAT cycle and verified during initial deployment, though the current race condition represents a new code-level defect unrelated to previous mobile fixes.
-
-
-## [24/30] [JIRA] (DPD-733) Dynamic ad slots for vertical scroll on omni homepage
-Source: gmail | Thread: 19d01d9056f39bea | Labels: Inbox, Updates | Priority: None | Senders: Michael | Last Date: Mon, Mar 30, 2026, 11:15 AM | Last Updated: 2026-03-30T14:02:30.023255+00:00
-**Daily Work Briefing: DPD-733 (Dynamic Ad Slots for Vertical Scroll)**
-
-**Key Participants & Roles**
-*   **Michael Bui:** Developer/Project Lead. Previously identified as the sole actor performing updates on this work item within the provided log.
-*   **Milind Badame:** Jira System User. Recently updated the ticket status and testing requirements.
-
-**Main Topic**
-*   **Issue:** [DPD-733] Dynamic ad slots for vertical scroll on omni homepage (Ecom/Omni).
-*   **Objective:** Implement dynamic advertising functionality for vertical scrolling on the Omni homepage.
-
-**Status Timeline & Decisions**
-The following status transitions and updates were executed:
-1.  **Development & Testing Phase:** On March 18, 2026, at 12:37 AM Singapore Time, Michael Bui moved the item from "TO BE DEFINED" through "READY FOR DEVELOPMENT," to "IN DEVELOPMENT," and finally to **"Testing in Preproduction."**
-2.  **Completion Decision (Initial):** On March 18, 2026, at 12:37 AM Singapore Time, Michael Bui marked the item as **Resolution: Done** and updated the status to **"IN RELASE QUEUE"** (retaining the source typo) while retaining pre-production testing context.
-3.  **Updated Testing Requirement:** On March 30, 2026, at 11:15 AM Singapore Time, Milind Badame updated the ticket indicating that **End-to-End (E2E) Testing is Required ("Yes").** This update supersedes the previous indication of completion pending only release execution.
-
-**Pending Actions & Ownership**
-*   **Action:** Conduct required End-to-End (E2E) testing before finalizing the release to production. The item cannot proceed to live deployment until E2E validation is confirmed as "Yes."
-*   **Owner:** Milind Badame flagged this requirement; however, specific assignees for the execution of this new test phase are not explicitly defined in the latest log entry.
-*   **Next Step:** Execute E2E testing protocols. Upon successful completion, proceed with release deployment from the queue to production.
-
-**Key Dates & Deadlines**
-*   **Last Update:** March 30, 2026, at 11:15 AM (E2E requirement update).
-*   **Previous Status Change:** March 18, 2026, at 12:37 AM Singapore Time.
-*   **Current State:** Item is in the release queue but requires E2E verification before final production launch.
-
-**Additional Notes**
-*   The work item includes attachments over 100 KB accessible via the "View work item" link.
-*   Notification settings for Jira Cloud mobile apps (Android/iOS) are referenced in system comments.
-
-
-## [25/30] [JIRA] Milind Badame mentioned you on DPD-715
-Source: gmail | Thread: 19d3e71cd098db63 | Labels: Inbox, Updates | Priority: None | Senders: Milind Badame (Jira) | Last Date: Mon, Mar 30, 2026, 11:12 AM | Last Updated: 2026-03-30T14:02:44.252586+00:00
-**Daily Work Briefing: Email Thread Summary**
-
-**Key Participants & Roles**
-*   **Milind Badame:** Jira User / Test Lead (Represents the testing team).
-*   **Michael Bui:** Recipient of the mention; Stakeholder for test requirements.
-*   **System/JIRA Bot:** Automated notification sender.
-
-**Main Topic/Request**
-Discussion regarding end-to-end (E2E) automation strategies for Jira work item **DPD-715: "Dynamic ad slot configuration for Homepage swimlanes"** within the **(Ecom/Omni) DPD** project. The core issue involves verifying Ad label positions based on split/on/off settings versus static configurations.
-
-**Decisions Made**
-*   **Automation Scope:** It was determined that E2E automation updates are **not required** at this time ("No for now").
-*   **Verification Method:** Runtime verification of labels based on split settings cannot be automated. Verification must remain **static**, which is already covered by existing tests for vertical and horizontal swimlanes.
-
-**Pending Actions & Ownership**
-*   **Action:** Review specific label positions to determine if additional static test updates are needed.
-    *   **Owner:** Michael Bui (implied).
-    *   **Trigger:** If Michael Bui identifies specific positions requiring verification, he must inform the testing team ("If required, You can let us know...").
-*   **Action:** Update E2E tests to include identified positions if requested.
-    *   **Owner:** Milind Badame / Testing Team (conditional on Michael Bui's input).
-
-**Key Dates & Follow-ups**
-*   **Last Communication Date:** March 30, 2026, at 11:12 AM (Singapore Time).
-*   **Work Item Reference:** DPD-715.
-*   **Follow-up Status:** Pending. The testing team is waiting for Michael Bui to confirm if any specific positions need verification before proceeding with test updates. No immediate deadline was set, contingent on the user's input.
-
-**Specific References**
-*   **Jira Issue:** DPD-715
-*   **Project:** (Ecom/Omni) DPD
-*   **Feature:** Dynamic ad slot configuration for Homepage swimlanes
-*   **Existing Coverage:** E2E tests currently verify Ad label positions for vertical and horizontal swimlanes.
-*   **Constraint:** Labels cannot be verified at runtime based on split/on/off settings; verification must be static.
-
-
-## [26/30] [JIRA] Milind Badame mentioned you on DPD-733
-Source: gmail | Thread: 19d3e7152d3e2adf | Labels: Inbox, Updates | Priority: None | Senders: Milind Badame (Jira) | Last Date: Mon, Mar 30, 2026, 11:11 AM | Last Updated: 2026-03-30T14:02:55.060803+00:00
-**Daily Work Briefing: JIRA Notification Summary**
-
-**Key Participants & Roles:**
-*   **Milind Badame:** System/Jira Tester or Developer (Sender). Provided status update on E2E automation feasibility.
-*   **Michael Bui (You):** Recipient of the notification. Requested for input regarding test verification positions.
-
-**Main Topic/Request:**
-Discussion regarding **JIRA work item DPD-733** titled *"Dynamic ad slots for vertical scroll on omni homepage."* The focus is on the feasibility and scope of E2E automation for verifying Ad label positions within vertical and horizontal swimlanes, specifically concerning split/on-off settings.
-
-**Decisions Made:**
-1.  **Automation Limitation Confirmed:** It was established that runtime verification for label positions based on split/on-off settings cannot be automated at this time. Label verification must remain static.
-2.  **E2E Update Status:** No immediate updates to the E2E test suite are required.
-
-**Pending Actions & Ownership:**
-*   **Action:** Provide specific label positions that require verification if additional testing is deemed necessary beyond the current static checks.
-*   **Owner:** Michael Bui (You).
-*   **Context:** Milind Badame has offered to update the tests accordingly should you provide these specific positions.
-
-**Key Dates & References:**
-*   **Date/Time:** March 30, 2026, at 11:11 AM (Sender noted as 7:11 PM Singapore Time).
-*   **Work Item ID:** DPD-733.
-*   **Project Context:** Ecom/Omni / DPD.
-*   **Notification ID:** `19d3e7152d3e2adf`.
-
-**Summary of Technical Stance:**
-Milind confirmed existing E2E coverage for vertical and horizontal swimlanes verifies Ad label positions statically. Since runtime verification for dynamic split settings is not feasible, the current approach stands unless Michael Bui specifies alternative positions to be added to the test suite.
-
-
-## [27/30] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
-Source: gmail | Thread: 19d3bfcc25dc99ae | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Mon, Mar 30, 2026, 10:20 AM | Last Updated: 2026-03-30T14:03:21.700215+00:00
-**Daily Work Briefing: Opsgenie Alert Summary (Updated)**
-
-**1. Key Participants & Roles**
-*   **System/Source:** Opsgenie (Notification Engine), Datadog (Monitoring Source).
-*   **Alert Owner:** DPD Staff Excellence - Retail Media.
-*   **Notify Channels:** `@hangouts-dd-dpd-grocery-alert` (Google Hangouts channel), `@opsgenie-dpd-grocery-retail-media` (Opsgenie responder group).
-*   **Service Owner:** `marketing-service`.
-
-**2. Main Topic/Request**
-*   **Alert Type:** P4 Priority Alert regarding abnormal throughput changes in the production environment (`env:prod`).
-*   **Specific Trigger:** 100% of `sum:trace.http.request.hits{env:prod,service:marketing-service}` values exceeded 3 deviations from predicted values over the last 15 minutes.
-*   **Percent Anomalous:** 100.0%.
-*   **Integration Details:** Source is Datadog via integration `dpd-grocery-retail-media-eu`.
-*   **Request:** Immediate investigation of service health via provided Datadog APM links, Kubernetes (GCP) console, and Runbook documentation.
-
-**3. Pending Actions & Ownership**
-*   **Action:** Investigate throughput anomaly, review metrics graphs, and determine root cause for `marketing-service`.
-*   **Owner:** DPD Staff Excellence - Retail Media (Assigned via Opsgenie responders).
-*   **Required Resources:**
-    *   Datadog APM: [Link to marketing-service operations](https://app.datadoghq.com/apm/services/marketing-service/operations/http.request/resources?env=prod)
-    *   Kubernetes Console: [GCP Cluster Overview](https://console.cloud.google.com/kubernetes/deployment/asia-southeast1/fpon-cluster/default/marketing-service/overview?cloudshell=false&project=fponprd)
-    *   Runbook: [Atlassian Wiki - marketing-service](https://ntuclink.atlassian.net/wiki/spaces/DIS/pages/2008167992/marketing-service+-+Run+book)
-
-**4. Decisions Made**
-*   None recorded in this thread; the alert remains active and awaiting human intervention.
-
-**5. Key Dates, Deadlines & Follow-ups**
-*   **Alert Trigger Time:** Mar 30, 2026, at 11:44 PM UTC (Previous snapshot).
-*   **Latest Status Update:** Mar 30, 2026, at 10:15 AM UTC (Newest notification received).
-    *   *Note:* The "Last Updated" timestamp within the alert payload remains 2026-03-30 10:14:10 +0000.
-*   **Notification Timestamps:**
-    *   Initial Notification Received: Mar 30, 2026, at 6:15:12 PM (Local time noted in metadata as "Created At").
-    *   Latest Status Update: Mar 30, 2026, at 10:15 AM UTC.
-*   **Follow-up Required:** Immediate resolution or status update required by the Retail Media team to clear the P4 alert status.
-
-**Technical Metadata**
-*   **Monitor ID:** 17447110
-*   **Event IDs:** 8565860058801546694 (Initial), 8566119760983702769 (Previous), 8566494225877288340 (Latest).
-*   **Tags:** `env:prod`, `service:marketing-service`, `managed_by:datadog-sync`, `monitor`, `priority:p4`.
-*   **Integration ID:** ff4c0851-ff71-4975-a76e-b9af95297a56-1774865712480 (TinyId: 139298).
-*   **Alert Snapshot Link:** [Datadog Monitor Snapshot](https://app.datadoghq.eu/monitors/17447110?from_ts=1774864750000&to_ts=1774865950000&event_id=8566494225877288340&link_source=monitor_notif&link_monitor_id=17447110&link_event_id=8566494225877288340)
-*   **Event URL:** https://app.datadoghq.eu/monitors/17447110
-
-
-## [28/30] Indirect Procurement Q1 2026 Newsletter
-Source: gmail | Thread: 19d3df93c2c73f8f | Labels: Inbox, Forums | Priority: None | Senders: 'Indirect Procureme. | Last Date: Mon, Mar 30, 2026, 9:00 AM | Last Updated: 2026-03-30T10:01:47.698304+00:00
-**Executive Briefing: Indirect Procurement Q1 2026 Newsletter**
-
-**Key Participants & Roles**
-*   **Sender:** Project Buywell Team (via `grp_fpg_all@fairpricegroup.sg` and `project_buywell@fairpricegroup.sg`).
-*   **Audience:** All FairPrice Group colleagues ("Colleagues").
-*   **Stakeholders:** Indirect Procurement representatives, Finance team, Suppliers, and Subject Matter Experts (SMEs).
-
-**Main Topic**
-The newsletter outlines the final preparation phase for the "Project Buywell" indirect procurement system transition scheduled for Go-Live in Q1 2026. It introduces key features including the new **eInvoice module**, automated **Delegation of Authority (DOA)** streams, and clarifies usage boundaries between **Zycus eProc** and **MyClaims**.
-
-**Pending Actions & Ownership**
-*   **System Testing:** Users must prepare for User Acceptance Testing (UAT) and upcoming Key-User Testing/End-User Training sessions. *Owner: All Employees.*
-*   **Training Compliance:** Employees must review feature spotlights to prepare for a mandatory quiz prior to Go-Live. Winners will receive prizes. *Owner: All Employees.*
-*   **Process Adherence:** Users must stop using MyClaims for non-personal expenses and route such purchases to the correct dedicated systems (e.g., Zycus eProc for assets). *Owner: All Employees.*
-*   **System Confirmation:** Recipients are requested to click a specific link (`https://forms.gle/D6whAz364PKpPznx5`) to confirm they have read the newsletter. *Owner: All Employees.*
-
-**Decisions Made**
-1.  **eInvoice Implementation:** Adoption of a digital-first eInvoice module to replace paper processing, enabling automated 3-way matching (PO, GR, Invoice) and real-time status tracking.
-2.  **DOA Automation:** Approval streams will be automatically routed based on spend type:
-    *   Standard Spend.
-    *   Waiver Approval (Waiver of Competition/Tender).
-    *   SME Approval (mandatory for technical exceptions like IT/Cybersecurity).
-    *   Mobile approvals enabled for approvers.
-3.  **Expense Policy Enforcement:** Strict prohibition on using credit card charge slips; only original itemized receipts are accepted. MyClaims is restricted strictly to personal expenses incurred while working.
-
-**Key Dates & Deadlines**
-*   **Newsletter Date:** March 30, 2026.
-*   **Go-Live:** Imminent (Q1 2026 closure). A quiz will be administered immediately before Go-Live.
-*   **Follow-up:** Training session emails are forthcoming; no specific dates provided yet.
-
-**Specific References**
-*   **Systems Mentioned:** Project Buywell, Zycus eProc, MyClaims, eInvoice module.
-*   **Contact Email:** `project_buywell@fairpricegroup.sg`.
-*   **Quiz Link:** Refer to "Ready for a Quiz?" section (link provided in original email).
-*   **Sustainability Impact:** Digital invoicing cited as saving ~118 trees per 1M invoices and reducing carbon footprint by 63%.
-
-
-## [29/30] [GCP] New Service Account Key Created - 5ef839aab5b8bfe27baf56b662a06e322aa14a8b
-Source: gmail | Thread: 19d3dda3d1f0bd95 | Labels: Inbox, Forums | Priority: None | Senders: noreply-sre | Last Date: Mon, Mar 30, 2026, 8:26 AM | Last Updated: 2026-03-30T10:02:03.110799+00:00
-**Daily Work Briefing: Service Account Notification**
-
-**1. Key Participants & Roles**
-*   **Sender:** `noreply-sre@ntucenterprise.sg` (System Automated Alert / SRE Team)
-*   **Recipient Context:** The email targets the owner or administrator of the service account `fpon-224503/seller-analytics-service@fpon-224503.iam.gserviceaccount.com`. No specific human name is listed in the metadata, but the notification is directed at the entity responsible for this GCP resource.
-
-**2. Main Topic/Request**
-*   **Event:** Generation of a new Service Account Key.
-*   **Key Identifier:** `5ef839aab5b8bfe27baf56b662a06e322aa14a8b`
-*   **Resource:** GCP Service Account `fpon-224503/seller-analytics-service@fpon-224503.iam.gserviceaccount.com`.
-*   **Action Required:** The recipient must download the new key via the provided link to ensure continuity of service access before the current credentials expire or are rotated.
-
-**3. Pending Actions & Ownership**
-*   **Action:** Download and securely store the new service account key `5ef839aab5b8bfe27baf56b662a06e322aa14a8b`.
-*   **Owner:** The system administrator or developer responsible for the `seller-analytics-service` project.
-*   **Urgency:** High; the key expires in 90 days, but immediate download is required to access it (as per standard security protocols for new keys).
-
-**4. Decisions Made**
-*   **System Decision:** A new key was automatically generated by the GCP system on March 30, 2026.
-*   **Expiration Policy:** The new key is configured for a 90-day lifecycle.
-
-**5. Key Dates & Deadlines**
-*   **Creation Date/Time:** March 30, 2026, at 8:26 AM.
-*   **Expiration Date:** June 28, 2026.
-*   **Follow-up Required:** Immediate (Download). No specific follow-up meeting is noted in the thread; however, verification of successful deployment with the new key should occur prior to expiration.
-
-**6. Metadata Context**
-*   **Thread Labels:** Inbox, Forums.
-*   **Priority:** Not set (null).
-*   **Message ID:** `19d3dda3d1f0bd95`.
-
-
-## [30/30] GCP Service Account Key clean UP
-Source: gmail | Thread: 195892088be2d83b | Labels: Inbox | Priority: None | Senders: Mohit, Kyle, Himal | Last Date: Mon, Mar 30, 2026, 7:36 AM | Last Updated: 2026-03-30T10:02:27.546231+00:00
-**Daily Work Briefing: GCP Service Account Key Cleanup (Updated)**
-
-**1. Key Participants & Roles**
-*   **Himal Hewagamage** (himal.hewagamage@fairpricegroup.sg): Initiator and Security Lead; followed up on March 30, 2026, regarding non-production remediation status.
-*   **Kyle Nguyen**: Technical lead coordinating immediate cleanup; assigned Nicholas Tan to assist starting the week of March 30, 2026.
-*   **Nicholas Tan**: New support resource added by Kyle Nguyen to assist with execution and tracking.
-*   **Jazz Tong** (jazz_tong@fairpricegroup.sg): Previously identified as execution lead; role context remains relevant for scope verification.
-*   **Mohit Niranwal** (mohit_niranwal@fairpricegroup.sg): Provided initial context on automated rotation gaps and legacy accounts.
-
-**2. Main Topic/Request**
-The team is addressing security risks associated with legacy GCP Service Account (SA) keys created between 2019–2024. Following the March 24, 2026, directive to remediate 56 keys in non-production environments, a status check on **March 30, 2026**, revealed no prior updates from Kyle's team. Consequently, work is now formally restarting with Nicholas Tan as support. Additionally, Himal confirmed the removal of old Datadog service account keys and updated the tracking sheet accordingly.
-
-**3. Pending Actions & Owners**
-*   **Immediate Remediation (Non-Prod)**: Kyle Nguyen and Nicholas Tan will commence execution for the 56 identified legacy keys starting the week of March 30, 2026.
-*   **Progress Tracking**: Kyle Nguyen has added a "Status" column to the tracking sheet to monitor individual item progress; this is now the primary method for status reporting.
-*   **Documentation Update**: Kyle must update the [GCP][Security] Service Account Key Rotation & Decommission document to reflect project owner information and current remediation status.
-*   **Owner Verification**: Integration of Jazz Tong's previous task (tagging application owners) remains pending under Kyle's documentation responsibility.
-*   **Onboarding Process**: For SAs without keys or those with outdated keys, the team will facilitate onboarding into the automated key rotation process via a specific Google Group.
-
-**4. Decisions Made & Process Changes**
-*   **Execution Strategy (Mar 30, 2026)**: The team confirmed that remediation for non-production environments will proceed immediately with expanded resources (Nicholas Tan).
-*   **Data Hygiene**: Himal Hewagamage has proactively removed old Datadog service account keys and updated the central tracking sheet.
-*   **Communication Channel**: A separate weekly communication channel remains the primary method for status updates regarding key decommissioning.
-*   **Scope & Strategy**: The scope covers `cpd-dp`, `fpg-callisto`, `fpg-jarvis`, `fpg-optimus`, and `fponprd` environments. The strategy prioritizes enabling automated rotation for legacy accounts before decommissioning based on application utility.
-
-**5. Key Dates & Follow-ups**
-*   **Mar 10–24, 2026**: Initial requests, spreadsheet updates, meeting, and directive for immediate remediation of 56 keys issued by Himal.
-*   **Mar 30, 2026 (4:11 AM)**: Himal requested a status update on non-production key removal, noting no response was received.
-*   **Mar 30, 2026 (7:33 AM)**: Kyle confirmed the team will start work that week and added Nicholas Tan to support; tracking sheet updated with a new "Status" column.
-*   **Mar 30, 2026 (7:36 AM)**: Himal confirmed removal of old Datadog keys and offered further support if clarification is needed.
-
-**Links & References**
-*   *Data Source*: https://docs.google.com/spreadsheets/d/1mGBCTRQDcTs0z_w0LjVtywDCtFHZhZfWYIRGqcNglpQ/edit?gid=0#gid=0 (Updated by Himal)
-*   *Documentation*: [GCP][Security] Service Account Key Rotation & Decommission (To be updated by Kyle).

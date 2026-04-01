@@ -1,20 +1,15 @@
-[gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:12423) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(venv) root@80e3e99df9ff:/a0/usr/workdir# (venv) root@80e3e99df9ff:/a0/usr/workdir# Running Gmail sync with DAYS=2
+(venv) root@80e3e99df9ff:/a0/usr/workdir# [gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
+(node:12678) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[Fetching 1/5] Michael Bui, here is your weekly update for 1 Apr (summarization pending)
-[Fetched 1/5] Michael Bui, here is your weekly update for 1 Apr - queued for summarization (pipeline running)
-[Fetching 2/5] What is Next – The Agentic Evolution with Workbench (summarization pending)
-[Fetched 2/5] What is Next – The Agentic Evolution with Workbench - queued for summarization (pipeline running)
-[Fetching 3/5] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod (summarization pending)
-[Fetched 3/5] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing - queued for summarization (pipeline running)
-[Fetching 4/5] [Dashboard Report] Retail Media - DD Dashboard | Wed 1 Apr 11:00AM +08 (summarization pending)
-[Fetched 4/5] [Dashboard Report] Retail Media - DD Dashboard | Wed 1 Apr 1 - queued for summarization (pipeline running)
-[Fetching 5/5] Re: [Bitbucket] Pull request #919: chore/omni ops monitor (ntuclink/dpd-datadog-monitoring) (summarization pending)
-[Fetched 5/5] Re: [Bitbucket] Pull request #919: chore/omni ops monitor (n - queued for summarization (pipeline running)
+[Fetching 1/2] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod (summarization pending)
+[Fetched 1/2] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-serv - queued for summarization (pipeline running)
+[Fetching 2/2] Re: [## 112603 ##] Sev1 incident: Ad Products per response is low for PLA (summarization pending)
+[Fetched 2/2] Re: [## 112603 ##] Sev1 incident: Ad Products per response i - queued for summarization (pipeline running)
 
 ============================================================
 [gmail_reader] ALL DONE - output file is ready for use.
-Fetched: 5 thread(s) | total scanned: 30
+Fetched: 2 thread(s) | total scanned: 26
 ============================================================
 
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
