@@ -1,11 +1,18 @@
-Tuesday
 [gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:11998) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:12314) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
+[Fetching 1/4] Updated invitation: DPD + Core Product + Picking Team meeting + Light @ Thu Apr 2, 2026 9:30am - 11am (SGT) (Michael Bui) (summarization pending)
+[Fetched 1/4] Updated invitation: DPD + Core Product + Picking Team meetin - queued for summarization (pipeline running)
+[Fetching 2/4] Invitation: DPD + Core Product + Picking Team meeting @ Thu Apr 2, 2026 9:30am - 11am (SGT) (Michael Bui) (summarization pending)
+[Fetched 2/4] Invitation: DPD + Core Product + Picking Team meeting @ Thu  - queued for summarization (pipeline running)
+[Fetching 3/4] [RAW Overdue] Expired Risk Acceptance & Waiver Form (summarization pending)
+[Fetched 3/4] [RAW Overdue] Expired Risk Acceptance & Waiver Form - queued for summarization (pipeline running)
+[Fetching 4/4] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod (summarization pending)
+[Fetched 4/4] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing - queued for summarization (pipeline running)
 
 ============================================================
 [gmail_reader] ALL DONE - output file is ready for use.
-Fetched: 0 thread(s) | total scanned: 37
+Fetched: 4 thread(s) | total scanned: 38
 ============================================================
 
 (venv) root@80e3e99df9ff:/a0/usr/workdir#

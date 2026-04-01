@@ -1,56 +1,8 @@
 
 
-## [1/57] Shopping Cart Notification
-Source: gchat | Group: space/AAAAsbHANyc | Messages: 16 | Last Activity: 2026-03-31T14:27:07.446000+00:00 | Last Updated: 2026-03-31T14:35:13.761999+00:00
-**Daily Work Briefing: Shopping Cart Notification Alerts (Update)**
-**Date:** March 31, 2026 (Mid-Day Shift)
-**Space:** `Shopping Cart Notification` (Google Chat)
-**Message Count:** 788
-
-### Key Participants & Roles
-*   **System/Tool:** Datadog App (Automated Monitoring)
-*   **Notification Channel:** `@hangouts-ShoppingCartNotification`
-*   **Ownership Teams:** `dpd-pricing`, `dpd-pricing-cart`.
-
-### Main Topic
-Instability persists in `frontend-gateway` and `st-cart-prod`. Following the critical cascade on March 29, volatility continues through mid-day (March 31). Failure modes include **Checkout** success rate drops, **Cart Update** (`post /api/cart`) anomalies, expanding latency in **Wish List** operations (`put`, `get`), and intermittent availability. The system shows recurring oscillation with peak P99 latencies reaching critical levels on Wish List endpoints.
-
-### Incident Timeline & Actions
-**Previous Context:**
-*   *Extended activity from March 20 through 10:28 UTC.*
-*   *March 30, 21:57 UTC:* P2 Error Budget Alert triggered (94.9% consumed).
-*   *Morning Activity:* Success rate dips on `post /cart` (06:32, 10:14) and Checkout latency spikes (07:00); Wish List volatility recorded at 08:43–08:59 UTC.
-
-**New Activity (Late Morning – Afternoon March 31 UTC)**
-*   **11:26–11:37 UTC:** Checkout success rate dip on `post /api/checkout`. Metric fell to **99.846%** (Monitor ID: `21245708`). Recovered to 100% by 11:37 UTC.
-*   **11:49–11:59 UTC:** Significant Wish List latency spike.
-    *   `put /api/product/{_id}/wish-list`: P99 reached **7.741s** (threshold >6.0s), P90 reached 5.856s. Recovered by 11:59 UTC.
-*   **12:59–13:16 UTC:** Recurring `get /api/wish-list/_id` volatility. Multiple triggers for P90 (>1.7s) and P99 (>3.1s). Peak P90 reached **2.782s**; Peak P99 reached **3.249s**.
-*   **14:18–14:27 UTC:** Severe `put /api/product/{_id}/wish-list` breach. P99 spiked to **11.058s** (threshold >6.0s) before recovering by 14:27 UTC.
-
-### Pending Actions & Ownership
-*   **Owner:** `dpd-pricing-cart` and `dpd-pricing`.
-*   **Critical Risk:** Incident window extended through 14:30 UTC. Recurring patterns show Checkout success rate breaches (99.846%) and extreme Wish List latency spikes (P99 up to 11.058s).
-*   **Immediate Action Required:** Prioritize root cause analysis for the 14:18 UTC `put /api/product/{_id}/wish-list` P99 spike (Event ID: `8568188232833548133`). Investigate correlation between Checkout anomalies (11:26 UTC) and concurrent Wish List latency surges. Trace the 12:59–13:16 UTC window for potential resource exhaustion patterns.
-
-### Decisions Made
-*   **Priority Escalation:** Status remains **"Critical Incident"**. New triggers confirm error budget depletion risks accompanied by expanding endpoint volatility.
-*   **Focus Shift:** Analysis must correlate the 14:18 UTC P99 spike (11.058s) with earlier events to determine if a systemic issue in `frontend-gateway` is driving recurring latency across Wish List operations.
-*   **Metric Update:** Latest recorded peak P99 for `put /api/product/{_id}/wish-list` is **11.058s**. Latest Checkout success rate dip was **99.846%**.
-
-### Key Dates & Follow-ups
-*   **Critical Window:** Extended activity from March 20 through at least March 31, 14:30 UTC.
-*   **Follow-up:** Immediate trace correlation for the 11:26–14:30 UTC window to correlate `st-cart-prod` and `frontend-gateway` availability dips with concurrent latency spikes in Wish List operations.
-
-### References
-*   **Active Monitors:** `21245708` (Checkout Success Rate), `21245701` (Wish List Put P99), `21245720` (Wish List Get P90), `21245725` (Wish List Get P99).
-*   **SLO Monitor:** `8567154411503835973` (Error Budget Alert).
-*   **Service Tags:** `service:frontend-gateway`, `team:dpd-pricing`.
-
-
-## [2/57] #dd-dpd-engage-alert
-Source: gchat | Group: space/AAAAxwwNw2U | Messages: 16 | Last Activity: 2026-03-31T14:19:15.571000+00:00 | Last Updated: 2026-03-31T14:36:48.948606+00:00
-# Daily Work Briefing: #dd-dpd-engage-alert Monitoring Activity (Updated March 31, ~14:20 UTC)
+## [1/57] #dd-dpd-engage-alert
+Source: gchat | Group: space/AAAAxwwNw2U | Messages: 16 | Last Activity: 2026-03-31T22:28:00.561000+00:00 | Last Updated: 2026-03-31T22:33:59.393312+00:00
+# Daily Work Briefing: #dd-dpd-engage-alert Monitoring Activity (Updated March 31, ~22:30 UTC)
 
 **Key Participants**
 *   **System:** Datadog App (Automated Alerting)
@@ -58,103 +10,287 @@ Source: gchat | Group: space/AAAAxwwNw2U | Messages: 16 | Last Activity: 2026-03
 *   **Relevant Squads/Tribes:** Dynamics, Compass, Journey (`squad:dynamics`, `squad:compass`, `squad:journey`, `tribe:engage`).
 
 **Main Topic**
-Instability in the `engage-my-persona-api-go` service persists into the afternoon of March 31. Following a brief recovery window earlier in the morning, a new wave of latency spikes, error rate violations, and success rate drops emerged between **13:50 UTC and 14:20 UTC**, affecting Identity, Android/iOS app views, and Recommendation services across multiple squads.
+Instability in the `engage-my-persona-api-go` service persists into the evening of March 31. Following earlier afternoon spikes, a new wave of errors, latency violations, and success rate drops emerged after **21:35 UTC**, affecting Identity, Gamification, Banner carousel, and Recommendation services (Orchid/Boughtbought).
 
-**Status Summary & Timeline (March 31 Afternoon)**
+**Status Summary & Timeline (March 31 Evening)**
 *   **Identity API Instability (`engage-my-persona-api-go` / Squad Dynamics):**
-    *   *Latency Spike (14:08 UTC):* P99 latency for `post_/pwl/reverify` exceeded 2.6s (Metric: 2.615). Recovered by 14:17 UTC.
-    *   *Error Rate Surge (14:07–14:17 UTC):* Service error rate triggered at **0.168** (threshold >0.1) before recovering.
-    *   *Success Rate Drops:* `get_/user/profile/myinfo` dipped to 99.848% (14:04 UTC); `post_/pwl/reverify` dropped to 95.652% (14:07 UTC).
-*   **App Availability (`ef-android` / `ef-ios` / Squad Compass):**
-    *   *Android View Failures:* Omni home success rate dropped to **99.254%** at 13:55 UTC, recovering by 13:56 UTC.
-    *   *iOS View Failures:* Omni home success rate dropped to **98.889%** at 13:59 UTC, recovering by 14:00 UTC.
-*   **Recommendation Services (`frontend-gateway` / Squad Journey):**
-    *   *Orchid Request Failures:* Success rates dropped below 99.9% twice—first at 13:51 UTC (Metric: 100.0, likely alert noise or transient) and again at **14:14 UTC** (Value: 99.543%).
+    *   *Error Rate Cycles:* Triggered repeatedly between **21:35 UTC and 22:28 UTC**. Notable peaks: 0.116 (21:35), 0.105 (22:07), 0.111 (22:10), and 0.102 (22:28). Recovered briefly to <0.1 between incidents.
+    *   *Latency Spikes:*
+        *   `post_/new-myinfo/confirm`: P90 latency exceeded 1.8s at **22:10 UTC** (Metric: 0.987, indicating 98.7% of requests were slow).
+        *   `post_/new-myinfo/oidc/token`: P90 latency exceeded 1.8s at **22:21 UTC** (Metric: 2.04). Recovered by 22:28 UTC.
 *   **Gamification Service (`engage-gamification-api` / Squad Dynamics):**
-    *   *Error Rate Spike:* High error rate triggered at **14:09 UTC** (Metric: 0.168), recovering by 14:19 UTC.
+    *   *Error Rate Spike:* Triggered at **21:43 UTC** with a critical metric value of **5.882**. Recovered by 21:53 UTC.
+*   **App & Banner Availability (`marketing-personalisation` / Squad Compass):**
+    *   *Banner Carousel Failures:* `post_/banner` success rate dropped below 99.9% at **21:38 UTC** (Metric: 100.0, likely noise/transient). Recovered immediately.
+*   **Recommendation Services (`frontend-gateway` / Squad Journey):**
+    *   *Boughtbought Failures:* Success rate dropped significantly to **85.714%** at **22:23 UTC**.
+    *   *Orchid Failures:* Success rates dipped below 99.9% at **21:43 UTC** (Metric: 100.0) and again at **22:23 UTC** (Value: 99.312%).
 
 **Pending Actions & Ownership**
-*   **Investigate Latency Correlation:** Analyze the recurrence of latency spikes on `post_/new-myinfo/confirm` (09:58) and `post_/pwl/reverify` (14:08) against the error rate surge at 14:07 and 14:09. Owner: **Squad Dynamics**.
-*   **Review App View Stability:** Investigate the transient failure pattern in Android (`ef-android`) and iOS (`ef-ios`) Omni home views observed between 13:55 and 14:00 UTC. Owner: **Squad Compass**.
-*   **Monitor Recommendation Degradation:** Track the return of Orchid request failures (99.543% at 14:14) to ensure stability is maintained post-recovery. Owner: **Squad Journey**.
+*   **Investigate Identity API Correlation:** Analyze the recurrence of error spikes (21:35–22:28 UTC) against latency issues on `post_/new-myinfo/confirm` and `post_/new-myinfo/oidc/token`. Owner: **Squad Dynamics**.
+*   **Diagnose Gamification Crash:** Investigate the severe 5.882 error rate spike at 21:43 UTC for `engage-gamification-api`. Owner: **Squad Dynamics**.
+*   **Monitor Recommendation Degradation:** Address the critical Boughtbought failure (85.714%) and recurring Orchid issues observed at 22:23 UTC. Owner: **Squad Journey**.
 
 **Decisions Made**
-*   **Status Update:** Incident severity remains Critical due to the cyclical nature of failures across Identity, App Views, and Recommendation services within a continuous window from morning through early afternoon (09:58–14:20).
-*   **Pattern Confirmation:** The 14:07 UTC error spike in `engage-my-persona-api-go` and subsequent gamification errors confirm the persistence of the instability cycle.
+*   **Status Update:** Incident severity remains Critical due to continuous, cyclical failures across Identity, Gamification, and Recommendation services extending from the afternoon (09:58–14:20) through late evening (21:35–22:30).
+*   **Pattern Confirmation:** The 21:35 UTC error spike in `engage-my-persona-api-go` and the severe 21:43 UTC gamification error confirm a persistent instability cycle affecting multiple squads simultaneously.
 
 **Key Dates & Follow-ups**
-*   **Active Window:** March 31, 13:50 – 14:20 UTC (Latest Critical Activity).
+*   **Active Window:** March 31, 21:35 – 22:30 UTC (Latest Critical Activity).
 *   **Reference Links (Latest):**
-    *   `post_/pwl/reverify` Latency Monitor #17447618 (Triggered: 14:08)
-    *   `engage-gamification-api` Error Rate Monitor #92939290 (Triggered: 14:09, Value: 0.168)
-    *   `frontend-gateway` Orchid Monitor #17448311 (Triggered: 14:14, Value: 99.543%)
-    *   `ef-android` Success Rate Monitor #63109467 (Triggered: 13:55, Value: 99.254%)
-    *   `ef-ios` Success Rate Monitor #63109468 (Triggered: 13:59, Value: 98.889%)
+    *   `engage-my-persona-api-go` Error Rate Monitor #92965074 (Triggered: 21:35, 22:07, 22:10, 22:28)
+    *   `post_/new-myinfo/oidc/token` Latency Monitor #94562095 (Triggered: 22:21, Value: 2.04s)
+    *   `gamification-api` Error Rate Monitor #92939290 (Triggered: 21:43, Value: 5.882)
+    *   `frontend-gateway` Boughtbought Monitor #17448306 (Triggered: 22:23, Value: 85.714%)
 
 
-## [3/57] #dd-dpd-grocery-alert
-Source: gchat | Group: space/AAAAtxQjB7c | Messages: 16 | Last Activity: 2026-03-31T14:12:08.916000+00:00 | Last Updated: 2026-03-31T14:38:34.625306+00:00
-**Daily Work Briefing: #dd-dpd-grocery-alert** (Updated Mar 31, 14:12 UTC)
+## [2/57] #dd-dpd-grocery-alert
+Source: gchat | Group: space/AAAAtxQjB7c | Messages: 16 | Last Activity: 2026-03-31T21:50:11.560000+00:00 | Last Updated: 2026-03-31T22:34:37.365886+00:00
+**Daily Work Briefing: #dd-dpd-grocery-alert** (Updated Mar 31, 21:50 UTC)
 
 **Key Participants & Roles**
 *   **System:** Datadog (Automated monitoring agent).
-*   **Alert Recipients/Owners:** `@hangouts-dd-dpd-grocery-alert`, `@opsgenie-dpd-grocery-retail-media`.
+*   **Alert Recipients/Owners:** `@hangouts-dd-dpd-grocery-alert`, `@opsgenie-dpd-grocery-retail-media`, `@opsgenie-dpd-grocery-discovery`.
 *   **Escalations:** `@oncall-dpd-staff-excellence-pdm`, `@hangouts-GT-Search-DatadogAlerts`, `@hangouts-GT-Discovery-DatadogAlerts`.
 *   **Service Teams:** DPD Grocery Discovery, Product Data Management (`team:dpd-staff-excellence-pdm`), Retail Media.
 
 **Main Topic**
-**P2 INCIDENT (ACTIVE):** Errors detected for `fp-search-indexer` on `env:prod`.
-*   **Current Status:** Triggered at 07:29 UTC. High urgency due to zero-error tolerance policy.
+**P2 INCIDENT (RESOLVED):** Google PubSub backlog affecting pricing data in DBP via `sap-job-file-plu-subscription`.
+*   **Current Status:** Resolved at 21:50 UTC after auto-recovery. No active P2 incidents remain for this service.
 *   **Incident Timeline:**
-    *   **Triggered:** Mar 31, 07:29 UTC (Metric value: 1.0 error in last 1m).
-    *   **Query:** `sum(last_1m):sum:trace.http.request.errors{env:prod,service:fp-search-indexer}.as_count() > 0`.
-*   **Monitor ID:** `17447691` (Active incident).
+    *   **Triggered:** Mar 31, 20:35 UTC (Oldest unacked message age: 5474s / ~1.5h).
+    *   **Recovered:** Mar 31, 21:50 UTC (Metric value: 0.0).
+*   **Monitor ID:** `91573506`.
 
 **Resolved Incidents**
-*   **`sku-store-attribute`:** P3 intermittent low file count recovered at 01:05 UTC. No new activity since  [retry 1/3] Timeout - retrying in 30s
-  [retry 2/3] Timeout - retrying in 60s
-
-============================================================
-[gchat_reader] ALL DONE - output file is ready for use.
-Fetched: 57 conversation(s) | attempted: 57
-============================================================
-
-14:02 UTC. Monitor ID `91573503`.
-*   **`marketing-service`:** P4 throughput anomaly resolved at 05:00 UTC.
+*   **`marketing-service`:** P2 high error rate triggered at 17:28 UTC (Metric: 4.5%) and resolved automatically at 17:38 UTC.
+    *   *Query:* Error rate > 5% over 10m. Monitor ID `17447106`.
+*   **`go-catalogue-service` (Latency):** P3 latency on `get_/product` triggered at 19:35 UTC (P90: 163ms) and resolved at 19:56 UTC.
+    *   *Query:* P90 > 150ms over 15m. Monitor ID `17447976`.
+*   **`go-catalogue-service` (Latency):** P3 latency on `get_/category/_id` recovered at 14:33 UTC after earlier spikes. Metric value normalized to 0.746s.
+    *   *Query:* P90 > 2.0s over 20m. Monitor ID `17447967`.
 
 **Pending Actions & Ownership**
-*   **Action:** **IMMEDIATE INVESTIGATION (`fp-search-indexer`):** [Status: ACTIVE] Investigate P2 errors on `env:prod`. Check Datadog, K8s, and Runbook immediately.
+*   **Action:** **MONITORING ONLY (`fp-search-indexer`):** [Status: ACTIVE/UNRESOLVED] Investigate P2 errors on `env:prod` (Triggered 07:29 UTC). No new status update in latest logs.
     *   **Owner:** Product Data Management (`team:dpd-staff-excellence-pdm`).
-*   **Action:** **MONITORING ONLY (`sku-global-attribute`):** [Status: CLOSED/VERIFIED] P3 error rate alert resolved automatically at 14:12 UTC. No immediate action required unless recurrence occurs.
-    *   **Owner:** Product Data Management (`team:dpd-staff-excellence-pdm`).
+*   **Action:** **POST-INCIDENT REVIEW (`sap-job-file-plu-subscription`):** [Status: CLOSED] P2 PubSub backlog resolved without manual intervention mentioned in recovery log. Verify if root cause analysis is needed for the 1h+ delay.
+    *   **Owner:** Product Data Management / Discovery Team.
 
 **Decisions Made**
-*   The `fp-search-indexer` incident requires immediate manual intervention; the system does not allow errors on this service.
-*   Previous intent to merely "re-verify" `fp-search-indexer` (Monitor ID `17447691`) has been superseded by an active P2 error trigger.
-*   The `sku-global-attribute` spike was transient and self-resolving; no manual intervention was required for the 100% error rate event at 14:02 UTC.
+*   The `marketing-service` error rate spike was transient and self-resolving within 10 minutes.
+*   The `sap-job-file-plu-subscription` backlog impacted pricing data integrity but recovered automatically at 21:50 UTC; no manual restart was required based on the recovery log.
+*   Previous alerts for `sku-store-attribute`, `sku-global-attribute`, and earlier `go-catalogue-service` latency events remain closed with no further action required.
 
 **Key Dates & Follow-ups (Mar 31, 2026)**
-*   **Service: `fp-search-indexer` (P2 - Product Data Management) [ACTIVE]**
-    *   *Latest Timeline:* Triggered Mar 31, 07:29 UTC.
-    *   *Details:* HTTP request errors > 0 detected over the last minute. Metric value: 1.0.
-    *   *Links:* [Datadog](https://app.datadoghq.eu/monitors/17447691) | [APM](https://app.datadoghq.eu/apm/services/fp-search-indexer/operations/http.request/resources?env=prod) | [K8s](https://console.cloud.google.com/kubernetes/deployment/asia-southeast1/fpon-cluster/default/fp-search-indexer/overview) | [Runbook](https://ntuclink.atlassian.net/wiki/spaces/SR/pages/2001831558/Support+Run+book)
-*   **Service: `sku-global-attribute` (P3 - Product Data Management) [RECOVERED]**
-    *   *Latest Timeline:* Triggered 14:02 UTC (Metric: 100.0%); Recovered 14:12 UTC (Metric: 0.0%).
-    *   *Details:* Error rate exceeded 0.1%. Query: `sum(last_10m): 100* (sum:sku_global_attribute.batch.error_rows{env:prod}.as_count() / sum:sku_global_attribute.batch.processed_rows{env:prod}.as_count()) > 0.1`.
-    *   *Links:* [Datadog](https://app.datadoghq.eu/monitors/91573503)
+*   **Service: `sap-job-file-plu-subscription` (P2 - Product Data Management) [RESOLVED]**
+    *   *Latest Timeline:* Triggered 20:35 UTC; Recovered 21:50 UTC.
+    *   *Details:* Oldest unacked message age exceeded 1.5 hours (5474s). Impact: Pricing data in DBP.
+    *   *Links:* [Datadog](https://app.datadoghq.eu/monitors/91573506) | [PubSub](https://console.cloud.google.com/cloudpubsub/subscription/detail/sap-job-file-plu-subscription?project=fponprd) | [Runbook](https://ntuc.atlassian.net/wiki/spaces/SR/pages/2571632656/Restarting+service+via+deployment)
 *   **Service: `go-catalogue-service` (P3 - Product Data Management) [RECOVERED]**
-    *   *Latest Timeline:* Intermittent latency events between 10:47 UTC and 11:06 UTC. Metric peaked at 3.027s. Fully recovered by 14:12 UTC.
-    *   *Details:* P90 latency > 2.0s on `get_/category/_id`.
-    *   *Links:* [Datadog](https://app.datadoghq.eu/monitors/17447967) | [APM](https://app.datadoghq.eu/apm/services/go-catalogue-service/operations/http.request/resources?env=prod) | [K8s](https://console.cloud.google.com/kubernetes/deployment/asia-southeast1/fpon-cluster/default/go-catalogue-service/overview) | [Runbook](https://ntuc.atlassian.net/wiki/spaces/DIS/pages/2646212686/Catalogue+Service)
-*   **Service: `sku-store-attribute` (P3 - Grocery Discovery) [RECOVERED]**
-    *   *Latest Timeline:* Recovered Mar 31, 01:05 UTC.
+    *   *Latest Timeline:* P90 latency on `get_/product` resolved at 19:56 UTC.
+    *   *Links:* [Datadog](https://app.datadoghq.eu/monitors/17447976) | [Runbook](https://ntuc.atlassian.net/wiki/spaces/DIS/pages/2646212686/Catalogue+Service)
 
 **Reference Links:**
 *   Datadog Space: https://chat.google.com/space/AAAAtxQjB7c
 
 
-## [4/57] BCRS ECOMM SAP POSTING
-Source: gchat | Group: space/AAQA-ICuJRM | Messages: 5 | Last Activity: 2026-03-31T13:40:38.299000+00:00 | Last Updated: 2026-03-31T14:40:04.424440+00:00
+## [3/57] Shopping Cart Notification
+Source: gchat | Group: space/AAAAsbHANyc | Messages: 16 | Last Activity: 2026-03-31T20:10:13.859000+00:00 | Last Updated: 2026-03-31T22:35:24.154886+00:00
+**Daily Work Briefing: Shopping Cart Notification Alerts (Update)**
+**Date:** March 31, 2026 (Late Shift)
+**Space:** `Shopping Cart Notification` (Google Chat)
+**Message Count:** 804
+
+### Key Participants & Roles
+*   **System/Tool:** Datadog App (Automated Monitoring)
+*   **Notification Channel:** `@hangouts-ShoppingCartNotification`
+*   **Ownership Teams:** `dpd-pricing`, `dpd-pricing-cart`.
+
+### Main Topic
+Instability persists in `frontend-gateway` and `st-cart-prod`. While the critical latency spike on Wish List endpoints (`put /api/product/{_id}/wish-list`) recovers by 18:25 UTC, volatility has shifted to **Checkout** success rates and **Cart Update** availability. New incidents show recurring oscillation between triggered alerts and recoveries throughout the late afternoon and evening (17:55–20:10 UTC).
+
+### Incident Timeline & Actions
+**Previous Context:**
+*   *Extended activity from March 20 through 14:30 UTC.*
+*   *March 30, 21:57 UTC:* P2 Error Budget Alert triggered (94.9% consumed).
+
+**New Activity (Late Afternoon – Evening March 31 UTC)**
+*   **17:55–18:14 UTC:** Severe Checkout latency spike followed by recovery.
+    *   `post /api/checkout`: P99 reached **20.242s** (threshold >3.0s). Recovered to 1.775s by 18:14 UTC.
+*   **17:59–18:17 UTC:** Fluctuating availability on List operations.
+    *   `get /api/v2/shopping-list`: Success rate dropped to **98.824%** (threshold <99.9%). Recovered by 18:09 UTC.
+    *   `get /api/wish-list`: Success rate dropped to **99.864%**. Recovered by 18:17 UTC.
+*   **18:07–18:25 UTC:** Cart Update volatility.
+    *   `post /api/cart`: Success rate dipped to **99.783%** (threshold <99.9%). Recovered by 18:18 UTC.
+*   **18:58–19:08 UTC:** Checkout success rate breach.
+    *   `post /api/checkout`: Success rate fell to **99.722%**. Recovered by 19:08 UTC.
+*   **20:00–20:10 UTC:** Latest Checkout success rate breach.
+    *   `post /api/checkout`: Success rate dropped to **99.543%**. Recovered by 20:10 UTC.
+
+### Pending Actions & Ownership
+*   **Owner:** `dpd-pricing-cart` and `dpd-pricing`.
+*   **Critical Risk:** Incident window extended through at least 20:10 UTC. The pattern has shifted from latency-dominant (Wish List) to success-rate dominant (Checkout/Cart).
+*   **Immediate Action Required:** Investigate the correlation between the 17:55 UTC Checkout P99 spike (20.242s) and subsequent success rate dips (lowest 99.543% at 20:00 UTC). Review `frontend-gateway` resource utilization during these recurring 10-minute windows to rule out transient throttling or dependency failures.
+
+### Decisions Made
+*   **Priority Escalation:** Status remains **"Critical Incident"**. The system shows a distinct shift from latency anomalies to availability dips, with multiple new triggers occurring in the last hour alone.
+*   **Focus Shift:** Analysis must prioritize `post /api/checkout` and `get /api/v2/shopping-list` monitors given their recurrence post-17:55 UTC. The previous 14:18 UTC Wish List spike is no longer the active trigger but remains part of the systemic instability profile.
+*   **Metric Update:** Latest recorded Checkout P99 peak was **20.242s**. Lowest recorded success rate was **99.543%** (Checkout).
+
+### Key Dates & Follow-ups
+*   **Critical Window:** Extended activity from March 20 through at least March 31, 20:10 UTC.
+*   **Follow-up:** Immediate trace correlation for the 17:55–20:10 UTC window to identify if `frontend-gateway` is consistently failing under load for Checkout and List endpoints.
+
+### References
+*   **Active Monitors:** `21245705` (Checkout P99), `21245735` (Shopping List Success Rate), `21245714` (Cart Update Success Rate), `21245708` (Checkout Success Rate).
+*   **SLO Monitor:** `8567154411503835973` (Error Budget Alert).
+*   **Service Tags:** `service:frontend-gateway`, `team:dpd-pricing`.
+
+
+## [4/57] fairnex-datadog-notification
+Source: gchat | Group: space/AAAA8dv5lp0 | Messages: 23 | Last Activity: 2026-03-31T17:45:04.488000+00:00 | Last Updated: 2026-03-31T22:36:02.594630+00:00
+**Daily Work Briefing: Datadog Monitoring Alerts (fairnex-datadog-notification)**
+
+**Key Participants & Roles**
+*   **Datadog App:** Automated monitoring system.
+*   **Service Owner(s):** `dpd-fulfilment` / `seller-experience` squad.
+*   **Notification Target:** `@hangouts-fairnex-datadog-notification`.
+
+**Main Topic**
+Production instability in the Mirakl and DBP integrations continues. A significant new incident cluster occurred on **March 31** between **17:39 UTC** and **17:45 UTC**, affecting `fni-order-create` with multiple P2 alerts related to database fetching and API errors. Concurrently, a separate test monitor triggered intermittently for Apple Pay transactions earlier in the afternoon. The `picklist-pregenerator` latency issue remains unresolved.
+
+**Incident Summary & Timeline**
+*   **Service: `fni-order-create` (Cluster of Errors) – Late Afternoon (Mar 31)**
+    *   **Trigger Window:** A cluster of P2 alerts began at **17:39:46 UTC**:
+        *   "Failure occurred during fetching orders from DBP" (`17447925`) triggered at **17:39:46 UTC**.
+        *   "Error while calling APIs" (`17447928`) triggered at **17:39:49 UTC**.
+        *   "Failure occurred during fetching orders" (`17447942`) triggered at **17:40:03 UTC**.
+        *   "Exception Occurred At DBP Route" (`17447943`) triggered at **17:40:04 UTC**.
+    *   **Recovery:** All four monitors returned to normal between **17:44:47 UTC** and **17:45:04 UTC**. Total duration: ~6 minutes.
+
+*   **Service: Test Monitor (Apple Pay) – Mid-Afternoon (Mar 31)**
+    *   **Trigger:** Monitor `29851723` (`formula("a / b").last("1h") > 0.5`) for group `@request.payment_method:APPLE_PAY` triggered at **16:41:45 UTC** and again at **16:51:45 UTC**.
+    *   **Recovery:** Alerts cleared at **16:46:45 UTC** and **17:12:44 UTC**.
+
+*   **Service: `picklist-pregenerator` (Latency Warning) – Late Evening (Mar 29 & Mar 30)**
+    *   **Trigger:** P2 Warning "taking too long to complete." Triggered at 19:01 UTC on Mar 29 (**3609.523s**) and 23:01:23 UTC on Mar 30 (**3608.92s**).
+
+*   **Service: `fpon-seller-sap-picklist-reporter` (P1 Incident) – Evening (Mar 27)**
+    *   **Trigger:** P1 alert "SAP authentication failed" at 19:12:15 UTC. Recovered by 19:17:15 UTC.
+
+**Actions Pending & Ownership**
+*   **Action:** Investigate root cause of the March 31 cluster affecting `fni-order-create` (Monitors `17447925`, `17447928`, `17447942`, `17447943`). Specifically analyze DBP fetching failures and API errors.
+    *   **Owner:** `dpd-fulfilment` / `seller-experience` squad.
+*   **Action:** Investigate intermittent triggers for Monitor `29851723` regarding Apple Pay transaction ratios (`a/b > 0.5`).
+    *   **Owner:** `dpd-fulfilment` / `seller-experience` squad.
+*   **Action:** Address critical latency in `picklist-pregenerator`. Recurrence of >3,600s execution times indicates continuous systemic failure.
+    *   **Owner:** `dpd-fulfilment` / `seller-experience` squad.
+*   **Action:** Analyze underlying causes for the P1 SAP authentication failure on `fpon-seller-sap-picklist-reporter` (Mar 27) to prevent recurrence.
+    *   **Owner:** `dpd-fulfilment` / `seller-experience` squad.
+
+**Decisions Made**
+None. The conversation remains purely alert-driven without human discussion.
+
+**Summary for Leadership**
+Instability in the Mirakl and DBP integrations persists with a new activity cluster on **March 31**. Between **17:39:46 UTC** and **17:45:04 UTC**, `fni-order-create` triggered four distinct P2 alerts, including "Failure occurred during fetching orders from DBP" (`Monitor ID 17447925`) and "Exception Occurred At DBP Route" (`Monitor ID 17447943`). All issues resolved within approximately 6 minutes. Additionally, a test monitor for Apple Pay transactions triggered intermittently between **16:41 UTC** and **17:12 UTC**. Concurrently, the `picklist-pregenerator` service continues to exhibit critical latency, with execution times exceeding 3,600s logged on March 29 and 30. This indicates persistent systemic degradation across the `dpd-fulfilment` and `seller-experience` squads requiring urgent engineering review.
+
+
+## [5/57] [Leads] (Ecom/Omni) Digital Product Development
+Source: gchat | Group: space/AAQAN8mDauE/69o051rSqd4 | Messages: 12 | Last Activity: 2026-03-31T16:01:07.785000+00:00 | Last Updated: 2026-03-31T22:36:30.838076+00:00
+**Daily Work Briefing: Digital Product Development (Leads Ecom/Omni)**
+
+**Key Participants & Roles**
+*   **Daryl Ng:** Initiator; previously tracking deployment status.
+*   **Sneha Parab:** Technical lead/owner; confirmed completion of MP production deployment.
+*   **Shiva:** Tester; concluded validation late yesterday evening (March 30).
+*   **Alvin Choo:** Team member; coordinated BCRS focus and verified final status.
+
+**Main Topic**
+Discussion focused on the finalization of the BCRS deliverable, MP production deployment confirmation, and a subsequent query regarding flag configuration timing.
+
+**Pending Actions & Ownership**
+*   **Deploy Feature (MP):** **COMPLETED.** Sneha Parab deployed pending changes for MP to production as of 10:51 AM on March 31.
+    *   **Owner:** Sneha Parab.
+*   **BCRS Deliverable:** **CONFIRMED COMPLETE.** Alvin Choo verified the status at 10:49 AM, confirming "all okay," and subsequently celebrated the completion with the team.
+*   **Feature Flags Configuration:** **PENDING/UNDETERMINED.** At 16:01 PM on March 31, Daryl Ng raised a question regarding whether flags were scheduled for enabling. No confirmation of scheduling or status was recorded in this update.
+    *   **Owner:** To be determined (Query initiated by Daryl Ng).
+
+**Decisions Made**
+*   **Deployment Timing:** The deployment of MP changes to production was executed on March 31, 2026, following Shiva's successful testing (concluded March 30 evening).
+*   **Daily Focus Priority:** The team successfully prioritized and completed all BCRS tasks by the end of the day.
+*   **Flag Configuration Status:** No decision recorded; status remains pending verification as of 16:01 PM.
+
+**Status Updates & Key Dates**
+*   **Current Date:** March 31, 2026.
+*   **BCRS Status:** Final deliverable confirmed ready and complete as of 10:49 AM. Alvin Choo expressed congratulations to the team at 11:02 AM.
+*   **MP Deployment:** Successfully pushed to production by Sneha Parab at 10:51 AM.
+*   **Critical Deadline:** Met; today (March 31) was the final day for BCRS deliverables and deployment activities.
+*   **New Inquiry:** At 16:01 PM, Daryl Ng queried the scheduling status of feature flags to be enabled following the deployment.
+
+**Reference Links**
+*   Deployment Verification Link: `https://chat.google.com/room/AAQAX9iKYf0/CjKvfZ07Lb4/kIo2WYTccYY?cls=10`
+
+
+## [6/57] #dd-fpg-watchdog-alert
+Source: gchat | Group: space/AAAAnlKPglA | Messages: 6 | Last Activity: 2026-03-31T15:05:23.074000+00:00 | Last Updated: 2026-03-31T22:37:14.901332+00:00
+# Daily Work Briefing: #dd-fpg-watchdog-alert
+
+### Key Participants & Roles
+*   **Datadog App:** Automated monitoring system.
+*   **@hangouts-dd-dpd-watchdog-alert:** Targeted notification channel.
+*   *Note: Interactions remain purely automated.*
+*   **Monitor Tags:** `managed_by:datadog-sync`
+
+### Main Topic
+The channel tracks **P3 [DPD Watchdog] infrastructure incidents** in Production. Logs show recurring transient issues (excluding `tcp_retrans_jump` and `full_disk_forecast`) aggregated by `story_key`. The alert consistently reads: "Datadog is unable to process your request."
+
+### Incident Summary & Status Update
+**Historical Resolved Incidents:**
+1.  **Mar 05–17:** 11 distinct events triggered and recovered within the period.
+2.  **Mar 18/19:** `10aaf170-dac2-5fec-97bf-cfd442f8706b`. (~5.6h). Status: **Resolved**.
+3.  **Mar 20, 2026:** `2787bcd7-d59e-58f0-961a-8f578260cd84`. (~4.4h). Status: **Resolved**.
+4.  **Mar 22, 2026:** `08f5624a-14f1-50e5-9a4a-7418b3602953`. (~3.4h). Status: **Resolved**.
+5.  **Mar 24–25, 2026:** `de0cbb14-ade3-5de2-bfab-cbddd41da779`. (~3h 51m). Status: **Resolved**.
+6.  **Mar 25, 2026:** `978f6328-424c-53dd-83c8-6411c3aa2158`. Recovered 12:09 UTC (~24h). Status: **Resolved**.
+7.  **Mar 26, 2026:** `7b73b037-696a-5016-bca4-5c22e31b6245`. (~3h 22m). Status: **Resolved**.
+8.  **Mar 27, 2026:** `f5d0894a-4a42-515d-985f-d06644833529`. Recovered 17:37 UTC. Status: **Resolved**.
+9.  **Mar 28–30, 2026:** Multiple P3 incidents recovered (Keys: `8874d9ed...`, `784f6ec6...`, `acd815df...`).
+
+**Recent Sequence Update:**
+*   **Mar 31, 2026 (Trigger):** At 11:49:22 UTC, a new P3 incident triggered.
+    *   **Story Key:** `0404fba2-a49b-51a3-a07f-1c4bb6b19362`.
+    *   **Error Message:** "Datadog is unable to process your request."
+*   **Mar 31, 2026 (Resolution):** At **15:05:23 UTC**, the incident `0404fba2-a49b-51a3-a07f-1c4bb6b19362` transitioned to **[P3] Recovered**.
+    *   **Duration:** ~3 hours 16 minutes.
+    *   **Status:** **Resolved**.
+
+*Note: The previously triggered incident on Mar 31 has now self-resolved.*
+
+### Pending Actions & Ownership
+*   **Current Status:** Incident `0404fba2-a49b-51a3-a07f-1c4bb6b19362` is **Resolved** (Recovered at 15:05 UTC).
+*   **Ownership:** Automated monitoring (`managed_by:datadog-sync`).
+*   **Action Required:** None. Incident duration remained below the 6-hour escalation threshold. Continue standard surveillance for new triggers.
+
+### Decisions Made
+*   **Escalation Status:** No escalation required; incident resolved within expected window.
+*   **Protocol:** Standard observation protocol confirmed effective for this sequence.
+
+### Key Dates & Follow-ups
+*   **Latest Event:** March 31, 2026 (Triggered 11:49 UTC → Recovered 15:05 UTC).
+*   **Monitor ID:** 17447511 (Datadog EU).
+*   **Next Steps:** Surveillance ongoing.
+
+### References
+*   **Space URL:** https://chat.google.com/space/AAAAnlKPglA
+*   **Datadog Monitor Link:** [View in Datadog](https://app.datadoghq.eu/monitors/17447511)
+*   **Resolution Event Log:** https://app.datadoghq.eu/monitors/17447511?group=story_key%3A0404fba2-a49b-51a3-a07f-1c4bb6b19362
+
+### Monitor Configuration
+*   **Query:** `events("source:watchdog (story_category:infrastructure -story_type:(tcp_retrans_jump OR full_disk_forecast)) env:(PROD OR production OR prod)").rollup("count").by("story_key").last("30m") > 0`
+
+
+## [7/57] BCRS ECOMM SAP POSTING
+Source: gchat | Group: space/AAQA-ICuJRM | Last Activity: 2026-03-31T13:40:38.299000+00:00 | Last Updated: 2026-03-31T14:40:04.424440+00:00
 **Daily Work Briefing: BCRS ECOMM SAP POSTING & Refunds UAT (Mar 31 Update)**
 
 **Key Participants & Roles**
@@ -200,8 +336,8 @@ UAT progress remains stalled due to GL entry discrepancies in Pre-order and Scan
 **Immediate Follow-up:** Attend the emergency video meeting to clarify GL handling for pre-order refunds, ensure Hendry Tionardi grants environment access ASAP, verify CN API deployment status, and confirm Lai Shu Hui completes the two outstanding e-commerce test cases urgently.
 
 
-## [5/57] BCRS Firefighting Group
-Source: gchat | Group: space/AAQAgT-LpYY | Messages: 14 | Last Activity: 2026-03-31T13:10:28.838000+00:00 | Last Updated: 2026-03-31T14:41:43.048934+00:00
+## [8/57] BCRS Firefighting Group
+Source: gchat | Group: space/AAQAgT-LpYY | Last Activity: 2026-03-31T13:10:28.838000+00:00 | Last Updated: 2026-03-31T14:41:43.048934+00:00
 **Updated Briefing: BCRS Firefighting Group**
 **Date:** March 31, 2026 (Latest activity: ~08:46 AM / New update @ 1:10 PM)
 **Source:** Google Chat Space & Shared UAT Tracker (94 messages total)
@@ -247,49 +383,8 @@ Source: gchat | Group: space/AAQAgT-LpYY | Messages: 14 | Last Activity: 2026-03
 *   Previous Re-delivery flow testing experienced audio issues on March 16; current Production effort aims to resolve logic gaps via grooming and live validation.
 
 
-## [6/57] fairnex-datadog-notification
-Source: gchat | Group: space/AAAA8dv5lp0 | Messages: 16 | Last Activity: 2026-03-31T13:08:40.556000+00:00 | Last Updated: 2026-03-31T14:47:43.217921+00:00
-**Daily Work Briefing: Datadog Monitoring Alerts (fairnex-datadog-notification)**
-
-**Key Participants & Roles**
-*   **Datadog App:** Automated monitoring system.
-*   **Service Owner(s):** `dpd-fulfilment` / `seller-experience` squad.
-*   **Notification Target:** `@hangouts-fairnex-datadog-notification`.
-
-**Main Topic**
-Production instability in the Mirakl integration continues with a confirmed new incident cluster on **March 31**. The `picklist-pregenerator` latency issue remains unresolved. A specific, short-lived incident window occurred early morning **March 31** involving `fni-order-create`, characterized by API errors and Mirakl route exceptions which have now recovered.
-
-**Incident Summary & Timeline**
-*   **Service: `picklist-pregenerator` (Latency Warning) – Late Evening (Mar 29 & Mar 30)**
-    *   **Trigger:** P2 Warning "taking too long to complete."
-    *   **Data:** Triggered at **19:01 UTC** on Mar 29 (Metric: **3609.523s**, Monitor ID `20383097`) and again at **23:01:23 UTC** on Mar 30 (Metric: **3608.92s**, Monitor ID `20383097`). Confirms sustained degradation.
-
-*   **Service: `fpon-seller-sap-picklist-reporter` (P1 Incident) – Evening (Mar 27)**
-    *   **Trigger:** P1 alert "SAP authentication failed" at **19:12:15 UTC**. Recovered by **19:17:15 UTC**.
-
-*   **Service: `fni-order-create` (Cluster of Errors) – Early Morning (Mar 31)**
-    *   **Trigger Window:** A cluster of P2 alerts began at **13:02:50 UTC** (Corrected from previous estimate based on new logs):
-        *   "Error while calling APIs" (Monitor ID `17447928`) triggered at **13:02:50 UTC**.
-        *   "Exception Occurred At Mirakl Route" (Monitor ID `17447918`) triggered at **13:03:40 UTC**.
-    *   **Recovery:** Both monitors returned to normal by **13:07:49 UTC** and **13:08:40 UTC** respectively. Total duration: ~6 minutes.
-
-**Actions Pending & Ownership**
-*   **Action:** Investigate root cause of the March 31 cluster affecting `fni-order-create` (Monitor IDs `17447928`, `17447918`).
-    *   **Owner:** `dpd-fulfilment` / `seller-experience` squad.
-*   **Action:** Address critical latency in `picklist-pregenerator`. Recurrence of >3,600s execution times was logged on both Mar 29 (3609.523s) and Mar 30 (3608.92), indicating continuous systemic failure requiring immediate review.
-    *   **Owner:** `dpd-fulfilment` / `seller-experience` squad.
-*   **Action:** Analyze underlying causes for the P1 SAP authentication failure on `fpon-seller-sap-picklist-reporter` (Mar 27) to prevent recurrence.
-    *   **Owner:** `dpd-fulfilment` / `seller-experience` squad.
-
-**Decisions Made**
-None. The conversation remains purely alert-driven without human discussion.
-
-**Summary for Leadership**
-Instability in the Mirakl integration persists with a new activity cluster on **March 31**. A specific incident window occurred at **13:02:50 UTC**, where `fni-order-create` triggered P2 alerts for "Error while calling APIs" (Monitor ID `17447928`) and "Exception Occurred At Mirakl Route" (Monitor ID `17447918`). All issues resolved by **13:08:40 UTC** within approximately 6 minutes. Concurrently, the `picklist-pregenerator` service continues to exhibit critical latency, with a metric of **3608.92** logged on March 30 following the previous 3609.523s reading. This indicates persistent systemic degradation across the `dpd-fulfilment` and `seller-experience` squads requiring urgent engineering review.
-
-
-## [7/57] [Prod Support] Ecom FFS Ops
-Source: gchat | Group: space/AAAAde_cYKA | Messages: 4 | Last Activity: 2026-03-31T12:25:23.666000+00:00 | Last Updated: 2026-03-31T14:48:18.462568+00:00
+## [9/57] [Prod Support] Ecom FFS Ops
+Source: gchat | Group: space/AAAAde_cYKA | Last Activity: 2026-03-31T12:25:23.666000+00:00 | Last Updated: 2026-03-31T14:48:18.462568+00:00
 **Daily Work Briefing: [Prod Support] Ecom FFS Ops (Updated Mar 31)**
 
 **Key Participants & Roles**
@@ -339,94 +434,6 @@ Source: gchat | Group: space/AAAAde_cYKA | Messages: 4 | Last Activity: 2026-03-
 *   **Active Alert (Mar 30/29):** Packlist quantity (`90M`) significantly exceeds delivered quantity at **Hyper Changi (Store ID 45)**.
 *   **Secondary Active Alert (Mar 28):** Dispatcher app unable to scan new zone at **hvivo**. Video evidence available; requires technical check.
 *   **Tertiary Active Alert (Mar 27):** HCBP "No picking Q" issue escalated by Ler Whye Ling Angel.
-
-
-## [8/57] #dd-fpg-watchdog-alert
-Source: gchat | Group: space/AAAAnlKPglA | Messages: 5 | Last Activity: 2026-03-31T11:49:22.728000+00:00 | Last Updated: 2026-03-31T14:49:00.118972+00:00
-# Daily Work Briefing: #dd-fpg-watchdog-alert
-
-### Key Participants & Roles
-*   **Datadog App:** Automated monitoring system.
-*   **@hangouts-dd-dpd-watchdog-alert:** Targeted notification channel.
-*   *Note: Interactions remain purely automated.*
-*   **Monitor Tags:** `managed_by:datadog-sync`
-
-### Main Topic
-The channel tracks **P3 [DPD Watchdog] infrastructure incidents** in Production. Logs show recurring transient issues (excluding `tcp_retrans_jump` and `full_disk_forecast`) aggregated by `story_key`. The alert consistently reads: "Datadog is unable to process your request."
-
-### Incident Summary & Status Update
-**Historical Resolved Incidents:**
-1.  **Mar 05–17:** 11 distinct events triggered and recovered within the period.
-2.  **Mar 18/19:** `10aaf170-dac2-5fec-97bf-cfd442f8706b`. (~5.6h). Status: **Resolved**.
-3.  **Mar 20, 2026:** `2787bcd7-d59e-58f0-961a-8f578260cd84`. (~4.4h). Status: **Resolved**.
-4.  **Mar 22, 2026:** `08f5624a-14f1-50e5-9a4a-7418b3602953`. (~3.4h). Status: **Resolved**.
-5.  **Mar 24–25, 2026:** `de0cbb14-ade3-5de2-bfab-cbddd41da779`. (~3h 51m). Status: **Resolved**.
-6.  **Mar 25, 2026:** `978f6328-424c-53dd-83c8-6411c3aa2158`. Recovered 12:09 UTC (~24h). Status: **Resolved**.
-7.  **Mar 26, 2026:** `7b73b037-696a-5016-bca4-5c22e31b6245`. (~3h 22m). Status: **Resolved**.
-8.  **Mar 27, 2026:** `f5d0894a-4a42-515d-985f-d06644833529`. Recovered 17:37 UTC. Status: **Resolved**.
-9.  **Mar 28–30, 2026:** Multiple P3 incidents recovered (Keys: `8874d9ed...`, `784f6ec6...`, `acd815df...`).
-
-**Recent Sequence Update:**
-*   **Mar 31, 2026 (New Trigger):** At 11:49:22 UTC, a new P3 incident triggered.
-    *   **Story Key:** `0404fba2-a49b-51a3-a07f-1c4bb6b19362`.
-    *   **Error Message:** "Datadog is unable to process your request."
-    *   **Status:** **[P3] Triggered**.
-
-*Note: The previously resolved incident on Mar 31 (`311ef63f-2e96-5c3a-908f-8f28a843c6a7`, ~3h 8m) is no longer the active event.*
-
-### Pending Actions & Ownership
-*   **Current Status:** Active incident `0404fba2-a49b-51a3-a07f-1c4bb6b19362` detected at 11:49 UTC. No previous resolution status applies to this new key.
-*   **Ownership:** Automated monitoring (`managed_by:datadog-sync`).
-*   **Action Required:** Monitor for self-resolution or escalation; track duration against the 6-hour threshold.
-
-### Decisions Made
-*   **Escalation Status:** Incident just triggered; no decision on escalation yet.
-*   **Protocol:** Await resolution; standard observation continues until status changes to Recovered.
-
-### Key Dates & Follow-ups
-*   **Latest Event:** March 31, 2026, at 11:49:22 UTC (Triggered).
-*   **Monitor ID:** 17447511 (Datadog EU).
-*   **Next Steps:** Surveillance ongoing.
-
-### References
-*   **Space URL:** https://chat.google.com/space/AAAAnlKPglA
-*   **Datadog Monitor Link:** [View in Datadog](https://app.datadoghq.eu/monitors/17447511)
-*   **Current Incident Alert:** https://app.datadoghq.eu/monitors/17447511?group=story_key%3A0404fba2-a49b-51a3-a07f-1c4bb6b19362&from_ts=1774956771000&to_ts=1774957971000&event_id=8568038570951190839
-
-### Monitor Configuration
-*   **Query:** `events("source:watchdog (story_category:infrastructure -story_type:(tcp_retrans_jump OR full_disk_forecast)) env:(PROD OR production OR prod)").rollup("count").by("story_key").last("30m") > 0`
-
-
-## [9/57] [Leads] (Ecom/Omni) Digital Product Development
-Source: gchat | Group: space/AAQAN8mDauE/69o051rSqd4 | Messages: 11 | Last Activity: 2026-03-31T11:02:39.313000+00:00 | Last Updated: 2026-03-31T14:49:18.098469+00:00
-**Daily Work Briefing: Digital Product Development (Leads Ecom/Omni)**
-
-**Key Participants & Roles**
-*   **Daryl Ng:** Initiator; previously tracking deployment status.
-*   **Sneha Parab:** Technical lead/owner; confirmed completion of MP production deployment.
-*   **Shiva:** Tester; concluded validation late yesterday evening (March 30).
-*   **Alvin Choo:** Team member; coordinated BCRS focus and verified final status.
-
-**Main Topic**
-Discussion focused on the finalization of the BCRS deliverable and the deployment of pending changes for MP to production, confirming all tasks are complete.
-
-**Pending Actions & Ownership**
-*   **Deploy Feature (MP):** **COMPLETED.** Sneha Parab deployed pending changes for MP to production as of 10:51 AM on March 31.
-    *   **Owner:** Sneha Parab.
-*   **BCRS Deliverable:** **CONFIRMED COMPLETE.** Alvin Choo verified the status at 10:49 AM, confirming "all okay," and subsequently celebrated the completion with the team.
-
-**Decisions Made**
-*   **Deployment Timing:** The deployment of MP changes to production was executed on March 31, 2026, following Shiva's successful testing (concluded March 30 evening).
-*   **Daily Focus Priority:** The team successfully prioritized and completed all BCRS tasks by the end of the day.
-
-**Status Updates & Key Dates**
-*   **Current Date:** March 31, 2026.
-*   **BCRS Status:** Final deliverable confirmed ready and complete as of 10:49 AM. Alvin Choo expressed congratulations to the team at 11:02 AM.
-*   **MP Deployment:** Successfully pushed to production by Sneha Parab at 10:51 AM.
-*   **Critical Deadline:** Met; today (March 31) was the final day for BCRS deliverables and deployment activities.
-
-**Reference Links**
-*   Deployment Verification Link: `https://chat.google.com/room/AAQAX9iKYf0/CjKvfZ07Lb4/kIo2WYTccYY?cls=10`
 
 
 ## [10/57] BCRS Firefighting Group
