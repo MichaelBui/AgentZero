@@ -1,15 +1,18 @@
-(venv) root@80e3e99df9ff:/a0/usr/workdir# (venv) root@80e3e99df9ff:/a0/usr/workdir# Running Gmail sync with DAYS=2
-(venv) root@80e3e99df9ff:/a0/usr/workdir# [gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:12678) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+[gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
+(node:12987) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[Fetching 1/2] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod (summarization pending)
-[Fetched 1/2] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-serv - queued for summarization (pipeline running)
-[Fetching 2/2] Re: [## 112603 ##] Sev1 incident: Ad Products per response is low for PLA (summarization pending)
-[Fetched 2/2] Re: [## 112603 ##] Sev1 incident: Ad Products per response i - queued for summarization (pipeline running)
+[Fetching 1/4] Introducing our New Enterprise Governance & Compliance Policy and Policy Management Framework (summarization pending)
+[Fetched 1/4] Introducing our New Enterprise Governance & Compliance Polic - queued for summarization (pipeline running)
+[Fetching 2/4] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod (summarization pending)
+[Fetched 2/4] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing - queued for summarization (pipeline running)
+[Fetching 3/4] Declined: [DPD AI Guild] Committee Monthly Meeting @ Monthly from 10am to 10:50am on the first Tuesday (SGT) (Michael Bui) (summarization pending)
+[Fetched 3/4] Declined: [DPD AI Guild] Committee Monthly Meeting @ Monthly - queued for summarization (pipeline running)
+[Fetching 4/4] Daily digest: updates from Kyle Nguyen (summarization pending)
+[Fetched 4/4] Daily digest: updates from Kyle Nguyen - queued for summarization (pipeline running)
 
 ============================================================
 [gmail_reader] ALL DONE - output file is ready for use.
-Fetched: 2 thread(s) | total scanned: 26
+Fetched: 4 thread(s) | total scanned: 27
 ============================================================
 
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
