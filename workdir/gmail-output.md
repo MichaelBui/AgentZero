@@ -1,6 +1,90 @@
 
 
-## [1/25] Accepted: ACNxOsmos: Daily Cadence @ Thu Apr 2, 2026 1:30pm - 2pm (SGT) (michael.bui@fairpricegroup.sg)
+## [1/24] Unlock your potential with FairPrice Group’s Internal Talent Marketplace
+Source: gmail | Thread: 19d4d6c1534ec8e5 | Labels: Inbox, Updates | Priority: None | Senders: HR Announcement | Last Date: Thu, Apr 2, 2026, 9:00 AM | Last Updated: 2026-04-02T10:02:37.849254+00:00
+**Daily Work Briefing: Internal Talent Marketplace Expansion**
+
+**Key Participants & Roles**
+*   **HR Announcement (hr@fairpricegroup.sg):** Issuer of the official policy update regarding talent mobility.
+*   **Eligible Staff:** All Corporate/HQ Non-Executive and Frontline Executive staff at FairPrice Group (FPG).
+*   **Support Contact:** ta@fairpricegroup.sg for clarifications.
+
+**Main Topic**
+Announcement of the expansion of FPG's Internal Talent Marketplace to explicitly include **Corporate/HQ Non-Executive** and **Frontline Executive** staff. This change enables cross-functional mobility, allowing HQ staff to access Frontline Executive roles and all eligible employees to discover internal opportunities for skill development and career growth via the **myTalentHub** portal.
+
+**Eligibility Criteria (Mandatory)**
+To apply for an internal transfer, candidates must meet all of the following:
+*   **Tenure:** Minimum 2 years in current position for Job Grade S/D; minimum 3 years for Job Grade C and above.
+*   **Performance:** Attained at least a "Green" rating in the last 2 to 3 years.
+*   **Discipline:** No recorded Performance Improvement Plan (PIP) or disciplinary actions within the last 2 to 3 years.
+*   **Competency:** Meets minimum competencies for the target role.
+*   **Job Grade:** Current role must be at least the same job grade as the new role applied for.
+
+**Pending Actions & Ownership**
+*   **Action:** Review eligibility and explore opportunities on the portal.
+    *   **Owner:** All eligible staff (Corporate/HQ Non-Executive and Frontline Executive).
+    *   **Instruction:** Click "Click to visit myTalentHub" or download the "HEAR WHAT IT'S LIKE TO MAKE THE MOVE!" resource.
+*   **Action:** Consult step-by-step application guide.
+    *   **Owner:** Prospective applicants.
+    *   **Instruction:** Access the comprehensive guide provided in the email body.
+*   **Action:** Submit inquiries regarding eligibility or process.
+    *   **Owner:** Staff with questions.
+    *   **Contact:** ta@fairpricegroup.sg.
+
+**Decisions Made**
+*   FPG has officially extended the Internal Mobility programme scope to include previously excluded groups (Corporate/HQ Non-Executive and Frontline Executive).
+*   HQ staff are now explicitly authorized to apply for Frontline Executive roles to encourage cross-functional mobility.
+
+**Key Dates & Follow-ups**
+*   **Announcement Date:** April 2, 2026, at 9:00 AM.
+*   **Effective Status:** Immediate ("The doors are officially wide open").
+*   **Application Window:** Open indefinitely until roles are filled; no specific closing deadline stated in the announcement.
+
+
+## [2/24] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
+Source: gmail | Thread: 19d4cfd200d6d7bc | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Thu, Apr 2, 2026, 7:04 AM | Last Updated: 2026-04-02T10:02:57.609786+00:00
+**Daily Work Briefing: Opsgenie Alert Thread**
+
+**Key Participants & Roles**
+*   **Automated Source:** Opsgenie (Notification System) / Datadog (Monitoring Integration).
+*   **Assigned Team:** DPD Staff Excellence - Retail Media (Responders).
+*   **Notified Channels/Groups:** `@hangouts-dd-dpd-grocery-alert`, `@opsgenie-dpd-grocery-retail-media`.
+*   **System Owner:** `dpd-grocery-retail-media-eu` (Datadog Integration).
+
+**Main Topic & Request**
+An automated alert was triggered for the **marketing-service** in the **prod** environment, indicating a high error rate. The system requested immediate investigation into:
+1.  HTTP request error metrics on Datadog APM.
+2.  Kubernetes deployment status (GKE) in cluster `fpon-cluster`.
+3.  Execution of the specific runbook for this service.
+
+**Alert Specifications**
+*   **Trigger Condition:** Error rate > 5% (`0.05`) over the last 10 minutes.
+*   **Current Metric Value:** 0.016 (1.6%), which is currently below the 5% threshold but triggered a P2 alert, likely due to system state persistence or specific aggregation logic at trigger time.
+*   **Priority:** P2.
+*   **Service Tags:** `env:prod`, `service:marketing-service`, `managed_by:datadog-sync`, `monitor`.
+
+**Pending Actions & Ownership**
+*   **Action Required:** Investigate the high error rate, check Datadog APM traces, review K8s deployment health, and follow the provided runbook.
+*   **Owner:** DPD Staff Excellence - Retail Media team (via Opsgenie assignment).
+*   **Status:** Alert remains open with no human acknowledgment or resolution updates recorded in this thread.
+
+**Decisions Made**
+*   No decisions were made within this thread; it contains only automated system notifications.
+
+**Key Dates & References**
+*   **Alert Created:** Apr 2, 2026, 14:59:08 UTC (Note: Email timestamps show 06:59 AM local time).
+*   **Last Updated (Metric):** 2026-04-02 06:58:06 +0000.
+*   **Critical Links:**
+    *   Datadog Monitor: `https://app.datadoghq.eu/monitors/17447106`
+    *   Runbook: `https://ntuclink.atlassian.net/wiki/spaces/DIS/pages/2008167992/marketing-service+-+Run+book`
+    *   K8s Overview: `.../fpon-cluster/default/marketing-service/overview`
+*   **Unique Identifiers:** Alert ID `a8f4a0be-ab4e-45aa-a0fc-8ea63cb490c2-1775113148971`, TinyID `139454`.
+
+**Follow-up Required**
+*   Immediate technical review by the Retail Media team to confirm if the alert is a false positive (given metric 0.016 < threshold 0.05) or requires remediation.
+
+
+## [3/24] Accepted: ACNxOsmos: Daily Cadence @ Thu Apr 2, 2026 1:30pm - 2pm (SGT) (michael.bui@fairpricegroup.sg)
 Source: gmail | Thread: 19d4caaff361b29c | Labels: Inbox | Priority: None | Senders: Shubhangi Agrawal | Last Date: Thu, Apr 2, 2026, 5:29 AM | Last Updated: 2026-04-02T06:01:05.075274+00:00
 **Daily Work Briefing: ACNxOsmos Daily Cadence**
 
@@ -27,7 +111,7 @@ Confirmation of attendance and distribution of the project roadmap for the "FPG 
 *   **Meeting Access:** Google Meet link (`meet.google.com/ise-ydtd-por`) and US dial-in details provided.
 
 
-## [2/25] [JIRA] (DPD-838) Transition to Impression-Based Inventory & Multi-Banner Delivery
+## [4/24] [JIRA] (DPD-838) Transition to Impression-Based Inventory & Multi-Banner Delivery
 Source: gmail | Thread: 19d2e82fa82f66fe | Labels: Inbox, Updates | Priority: None | Senders: Nikhil | Last Date: Thu, Apr 2, 2026, 3:24 AM | Last Updated: 2026-04-02T06:01:30.039228+00:00
 **Daily Work Briefing: JIRA (DPD-838)**
 
@@ -75,7 +159,7 @@ Following critical clarifications raised by Michael Bui on Mar 28, the team rece
 The DPD-838 initiative has resolved prior scope ambiguities and entered development. Key decisions confirm that only Omni Home and FPPay will adopt the new video-enabled multi-banner architecture; legacy MPS remains in place for Category/Search pages. Technical logic is now defined: non-endemic identification uses explicit Boolean labels ("Endemic"/"Non-endemic"), and slot values are integers 1–20 used to prevent duplicate renders rather than sequence ordering. OSMOS capacity expansion (>10 items) is targeted for early April pending Monday confirmation. Failure states result in banner collapse with incident creation, while media behaviors remain Front-End responsibilities. Crucially, on April 2, Milind Badame determined that the new logic **cannot be automated**, updating the `Requires_e2e_test` status to "No." Consequently, QA must proceed with manual E2E testing strategies for this release.
 
 
-## [3/25] [Dashboard Report] Retail Media - DD Dashboard | Thu 2 Apr 11:00AM +08
+## [5/24] [Dashboard Report] Retail Media - DD Dashboard | Thu 2 Apr 11:00AM +08
 Source: gmail | Thread: 19d4c254d1e98e3f | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Thu, Apr 2, 2026, 3:03 AM | Last Updated: 2026-04-02T06:01:42.181692+00:00
 **Daily Work Briefing: Retail Media Data Update**
 
@@ -109,7 +193,7 @@ No strategic decisions or policy changes were documented in this thread. The com
 *   **Company Address (Footer):** 620 8th Avenue, 45th Floor, New York, NY 10018.
 
 
-## [4/25] Introducing our New Enterprise Governance & Compliance Policy and Policy Management Framework
+## [6/24] Introducing our New Enterprise Governance & Compliance Policy and Policy Management Framework
 Source: gmail | Thread: 19d4beb2c8723007 | Labels: Inbox, Updates | Priority: None | Senders: GRC | Last Date: Thu, Apr 2, 2026, 1:59 AM | Last Updated: 2026-04-02T02:01:57.385455+00:00
 **Daily Work Briefing: Enterprise Governance & Compliance Update**
 
@@ -147,7 +231,7 @@ Source: gmail | Thread: 19d4beb2c8723007 | Labels: Inbox, Updates | Priority: No
 *   **Support Channels:** Questions regarding the policy or framework should be directed to `ask_grc@fairpricegroup.sg`. FAQs are available for "Enterprise Governance & Compliance" and "Policy Management."
 
 
-## [5/25] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
+## [7/24] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
 Source: gmail | Thread: 19d4bcf0d759918a | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Thu, Apr 2, 2026, 1:34 AM | Last Updated: 2026-04-02T02:02:13.006556+00:00
 **Daily Work Briefing: Opsgenie Alert Summary**
 
@@ -179,7 +263,7 @@ Source: gmail | Thread: 19d4bcf0d759918a | Labels: Inbox, Updates | Priority: No
 *   **Follow-up Needed:** Immediate investigation by the assigned responder group to determine if the anomaly is a false positive, deployment issue, or traffic spike requiring mitigation.
 
 
-## [6/25] Declined: [DPD AI Guild] Committee Monthly Meeting @ Monthly from 10am to 10:50am on the first Tuesday (SGT) (Michael Bui)
+## [8/24] Declined: [DPD AI Guild] Committee Monthly Meeting @ Monthly from 10am to 10:50am on the first Tuesday (SGT) (Michael Bui)
 Source: gmail | Thread: 19d4bc56d5361681 | Labels: Inbox | Priority: None | Senders: Jazz Tong | Last Date: Thu, Apr 2, 2026, 1:18 AM | Last Updated: 2026-04-02T02:02:25.237497+00:00
 **Daily Work Briefing: [DPD AI Guild] Committee Monthly Meeting**
 
@@ -213,7 +297,7 @@ Regular monthly meeting for the DPD AI Guild Committee. The session is scheduled
 *   **Phone Access:** (US) +1 608-571-6843 | PIN: 490466397
 
 
-## [7/25] Daily digest: updates from Kyle Nguyen
+## [9/24] Daily digest: updates from Kyle Nguyen
 Source: gmail | Thread: 19d4b50123517161 | Labels: Inbox, Updates | Priority: None | Senders: Confluence | Last Date: Wed, Apr 1, 2026, 11:10 PM | Last Updated: 2026-04-02T02:02:36.121677+00:00
 **Daily Work Briefing: Confluence Update Digest**
 
@@ -247,7 +331,7 @@ Source: gmail | Thread: 19d4b50123517161 | Labels: Inbox, Updates | Priority: No
 *   **Message ID Reference:** `19d4b50123517161`.
 
 
-## [8/25] You have no events scheduled today.
+## [10/24] You have no events scheduled today.
 Source: gmail | Thread: 19d4b0a92d907156 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Wed, Apr 1, 2026, 9:54 PM | Last Updated: 2026-04-01T22:01:37.998475+00:00
 **Daily Work Briefing Summary**
 
@@ -277,7 +361,7 @@ No decisions were made or recorded in this thread; it is a system-generated stat
 *   **Calendar Source:** Digital Business Tech Release/Changes
 
 
-## [9/25] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
+## [11/24] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
 Source: gmail | Thread: 19d48b628df6e566 | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Wed, Apr 1, 2026, 11:08 AM | Last Updated: 2026-04-01T14:01:25.146923+00:00
 **Daily Work Briefing: Opsgenie Alert Thread**
 
@@ -311,7 +395,7 @@ Source: gmail | Thread: 19d48b628df6e566 | Labels: Inbox, Updates | Priority: No
 *   **Next Step:** Immediate triage required by the Retail Media team to determine if the service stability issue is active or a monitoring artifact. No specific deadline was set by the system other than the standard P2 response SLA implied by the priority level.
 
 
-## [10/25] Re: [## 112603 ##] Sev1 incident: Ad Products per response is low for PLA
+## [12/24] Re: [## 112603 ##] Sev1 incident: Ad Products per response is low for PLA
 Source: gmail | Thread: 19d2ead5d3ae56a5 | Labels: Inbox | Priority: None | Senders: Nikhil, Osmos | Last Date: Wed, Apr 1, 2026, 11:01 AM | Last Updated: 2026-04-01T14:01:45.718437+00:00
 **Daily Work Briefing: Sev1 Incident #112603 (Final Update)**
 
@@ -344,7 +428,7 @@ The thread addresses Severity 1 incident [#112603] regarding low volume response
 On March 27, 2026, Nikhil Grover escalated the Sev1 incident to Michael Bui due to URL access limitations hindering troubleshooting for low PLA responses. On March 31, 2026, Osmos Support requested specific ad request URLs to analyze the `pcnt` parameter. Following this, Nikhil Grover confirmed a client-side fix effective from 3:00 PM Singapore time on March 31, setting `pcnt = 6`. Finally, on April 1, 2026, at 11:01 AM, Osmos Support verified with their Engineering team that the FPG configuration update is live and `pcnt = 6` is now correctly passed for all PLA product requests. The incident has been resolved pending routine observation.
 
 
-## [11/25] Re: [Bitbucket] Pull request #919: chore/omni ops monitor (ntuclink/dpd-datadog-monitoring)
+## [13/24] Re: [Bitbucket] Pull request #919: chore/omni ops monitor (ntuclink/dpd-datadog-monitoring)
 Source: gmail | Thread: 19d2d6690d21cc23 | Labels: Inbox, Updates | Priority: None | Senders: Sun. | Last Date: Wed, Apr 1, 2026, 9:05 AM | Last Updated: 2026-04-01T10:01:14.524350+00:00
 **Daily Work Briefing: Pull Request #919 Summary (Finalized)**
 
@@ -385,7 +469,7 @@ No formal business decisions are recorded; however, two critical technical valid
 *   **Previous Activity**: Significant structural updates occurred on March 26, 2026.
 
 
-## [12/25] 4 strategic shifts defining security in 2026
+## [14/24] 4 strategic shifts defining security in 2026
 Source: gmail | Thread: 19d4849ffb517233 | Labels: Inbox, Updates | Priority: None | Senders: Google Cloud | Last Date: Wed, Apr 1, 2026, 9:05 AM | Last Updated: 2026-04-01T10:01:28.300127+00:00
 **Daily Work Briefing Summary**
 
@@ -421,7 +505,7 @@ No internal decisions or strategic approvals were made within this thread, as it
 *   **Labels:** Inbox, Updates.
 
 
-## [13/25] Invitation: You’re Invited! The D&T Power Breakfast is Back! @ Tue Apr 28, 2026 9am - 10:30am (SGT) (Michael Bui)
+## [15/24] Invitation: You’re Invited! The D&T Power Breakfast is Back! @ Tue Apr 28, 2026 9am - 10:30am (SGT) (Michael Bui)
 Source: gmail | Thread: 19d482a1188a5541 | Labels: Inbox | Priority: None | Senders: Trina Boquiren | Last Date: Wed, Apr 1, 2026, 8:30 AM | Last Updated: 2026-04-01T10:01:42.449736+00:00
 **Daily Work Briefing: D&T Power Breakfast Event**
 
@@ -455,7 +539,7 @@ Trina Boquiren has issued a formal invitation to the "D&T Power Breakfast," mark
 **Summary Note:** Michael Bui needs to confirm attendance status by 24 April. The event serves as the kickoff for a recurring monthly schedule ending on the last Thursday of each month.
 
 
-## [14/25] Michael Bui, here is your weekly update for 1 Apr
+## [16/24] Michael Bui, here is your weekly update for 1 Apr
 Source: gmail | Thread: 19d478fc4c185291 | Labels: Inbox, Updates | Priority: None | Senders: Jira | Last Date: Wed, Apr 1, 2026, 5:41 AM | Last Updated: 2026-04-01T06:01:55.701625+00:00
 **Daily Work Briefing for Michael Bui**
 **Date:** April 1, 2026
@@ -494,7 +578,7 @@ Three specific work items have been auto-assigned to **Michael Bui**:
 *   **Footer Address:** 341 George Street, Sydney, NSW, 2000, Australia
 
 
-## [15/25] What is Next – The Agentic Evolution with Workbench
+## [17/24] What is Next – The Agentic Evolution with Workbench
 Source: gmail | Thread: 19d47719f5f0408a | Labels: Inbox | Priority: None | Senders: Sip Khoon Tan | Last Date: Wed, Apr 1, 2026, 5:08 AM | Last Updated: 2026-04-01T06:02:11.078785+00:00
 **Subject:** Daily Briefing: Agentic Evolution with Workbench – Next Steps
 
@@ -529,7 +613,7 @@ To maintain momentum following the initial AI training on 19 March 2026, this co
 *   **Platform URL:** `work.fpg.sg` (Workbench login).
 
 
-## [16/25] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
+## [18/24] Opsgenie Alert: [Datadog] [P4] [Triggered] Service marketing-service has an abnormal change in throughput on env:prod
 Source: gmail | Thread: 19d4650c90bbc3a8 | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Wed, Apr 1, 2026, 3:59 AM | Last Updated: 2026-04-01T06:02:36.407634+00:00
 **Daily Work Briefing: Opsgenie Alert Summary** (Updated)
 
@@ -573,7 +657,7 @@ Source: gmail | Thread: 19d4650c90bbc3a8 | Labels: Inbox, Updates | Priority: No
 *   **Integration:** `dpd-grocery-retail-media-eu` (Datadog).
 
 
-## [17/25] [Dashboard Report] Retail Media - DD Dashboard | Wed 1 Apr 11:00AM +08
+## [19/24] [Dashboard Report] Retail Media - DD Dashboard | Wed 1 Apr 11:00AM +08
 Source: gmail | Thread: 19d46fd8c3c6da1b | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Wed, Apr 1, 2026, 3:01 AM | Last Updated: 2026-04-01T06:02:45.283913+00:00
 **Daily Work Briefing: Retail Media Dashboard Update**
 
@@ -599,7 +683,7 @@ No strategic decisions or approvals were made in this thread; it is a standard o
 *   **Follow-up Required:** None explicitly scheduled; monitoring is implied as an ongoing task.
 
 
-## [18/25] Updated invitation: DPD + Core Product + Picking Team meeting + Light @ Thu Apr 2, 2026 9:30am - 11am (SGT) (Michael Bui)
+## [20/24] Updated invitation: DPD + Core Product + Picking Team meeting + Light @ Thu Apr 2, 2026 9:30am - 11am (SGT) (Michael Bui)
 Source: gmail | Thread: 19d46925b81178e3 | Labels: Inbox | Priority: None | Senders: Alvin Choo | Last Date: Wed, Apr 1, 2026, 1:04 AM | Last Updated: 2026-04-01T02:01:44.032139+00:00
 **Daily Briefing: DPD + Core Product + Picking Team Meeting Update**
 
@@ -635,7 +719,7 @@ Source: gmail | Thread: 19d46925b81178e3 | Labels: Inbox | Priority: None | Send
 **Note:** This is an automated system notification regarding a calendar update. Recipients should verify their attendance status immediately to ensure proper representation from all three teams.
 
 
-## [19/25] Invitation: DPD + Core Product + Picking Team meeting @ Thu Apr 2, 2026 9:30am - 11am (SGT) (Michael Bui)
+## [21/24] Invitation: DPD + Core Product + Picking Team meeting @ Thu Apr 2, 2026 9:30am - 11am (SGT) (Michael Bui)
 Source: gmail | Thread: 19d4691f3863a710 | Labels: Inbox | Priority: None | Senders: Alvin Choo | Last Date: Wed, Apr 1, 2026, 1:04 AM | Last Updated: 2026-04-01T02:02:01.754160+00:00
 **Daily Work Briefing: Meeting Summary**
 
@@ -669,7 +753,7 @@ No final decisions were recorded in this invitation sequence. The meeting is cur
 *   **Email Link (US):** +1 260-758-1044 | PIN: 166296012
 
 
-## [20/25] [RAW Overdue] Expired Risk Acceptance & Waiver Form
+## [22/24] [RAW Overdue] Expired Risk Acceptance & Waiver Form
 Source: gmail | Thread: 19d46907d49aeef1 | Labels: Inbox | Priority: None | Senders: cyberrisk.automation | Last Date: Wed, Apr 1, 2026, 1:02 AM | Last Updated: 2026-04-01T02:02:15.214605+00:00
 **Daily Work Briefing: Expired Risk Acceptance & Waiver (RAW)**
 
@@ -704,7 +788,7 @@ None recorded in this thread; the message is a procedural reminder and directive
 *   **Asset Name:** Signcloud Saas User access management
 
 
-## [21/25] You have no events scheduled today.
+## [23/24] You have no events scheduled today.
 Source: gmail | Thread: 19d45b80d56a7030 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Tue, Mar 31, 2026, 9:06 PM | Last Updated: 2026-03-31T22:01:24.107712+00:00
 **Daily Work Briefing Summary**
 
@@ -733,7 +817,7 @@ No decisions were made or recorded in this thread. The content represents a syst
 *   **Priority**: None assigned
 
 
-## [22/25] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
+## [24/24] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
 Source: gmail | Thread: 19d44f04fe8dfbf2 | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Tue, Mar 31, 2026, 5:33 PM | Last Updated: 2026-03-31T22:01:46.913205+00:00
 **Subject:** Daily Briefing: Opsgenie Alert on `marketing-service` High Error Rate (P2)
 
@@ -772,121 +856,3 @@ Source: gmail | Thread: 19d44f04fe8dfbf2 | Labels: Inbox, Updates | Priority: No
 
 **Summary for Briefing:**
 The `marketing-service` in production triggered three identical P2 alerts between 5:28 PM and 5:33 PM on March 31, 2026. The alert monitors HTTP error rates exceeding 5%. Current logs show a metric value of 4.5%, suggesting the service may be recovering or the alert is flapping. The Retail Media team must review the Datadog APM, K8s deployment status, and runbook immediately to confirm if further intervention is needed.
-
-
-## [23/25] Singapore’s Beverage Container Return Scheme Launches 1 April 2026
-Source: gmail | Thread: 19d4322921d79bb3 | Labels: Inbox, Updates | Priority: None | Senders: iComms | Last Date: Tue, Mar 31, 2026, 9:03 AM | Last Updated: 2026-03-31T10:01:53.381246+00:00
-**Daily Work Briefing: Singapore Beverage Container Return Scheme (BCRS)**
-
-**Key Participants & Roles**
-*   **iComms (internal_comms@fairpricegroup.sg):** Internal Communications lead; responsible for disseminating rollout information and FAQs to staff.
-*   **National Environment Agency (NEA):** The governing body driving the national BCRS initiative.
-*   **FPG (FairPrice Group) Teams:** Store, customer-facing, and sustainability teams executing the implementation, including installation of machines and customer training.
-*   **Customers:** End-users required to pay deposits on eligible items and return containers via Return Right machines.
-
-**Main Topic/Request**
-The email announces the official launch of Singapore's Beverage Container Return Scheme (BCRS) effective 1 April 2026. The initiative aims to encourage recycling through a refundable deposit system. FairPrice Group (FPG) is acting as a key implementation partner, having installed infrastructure and completed staff training to support this national effort under the "One FPG" framework.
-
-**Key Dates & Deadlines**
-*   **1 April 2026:** Official launch date for BCRS; stores begin charging $0.10 deposits on eligible items with the Deposit Mark.
-*   **30 September 2026:** End of the six-month transition period. During this window, stores may sell both pre-Deposit Mark and non-Deposit Mark products, but only marked items attract the deposit or are accepted at return machines.
-
-**Decisions Made**
-*   FPG has committed to installing more than **150 Return Right machines** across its store network.
-*   Staff briefings, Standard Operating Procedures (SOPs), and customer-facing training have been finalized.
-*   Point-of-sale systems are configured to apply the $0.10 deposit at checkout for eligible beverages.
-
-**Eligibility & Operational Changes**
-*   **Scope:** Pre-packaged plastic and metal beverage containers ranging from **150ml to 3,000ml** bearing the "Deposit Mark."
-*   **Financial Mechanism:** Customers pay a refundable **$0.10 deposit** at purchase; refunds are issued upon return via Return Right machines.
-*   **Logistics:** Machine locations and availability can be verified at https://returnright.sg.
-
-**Pending Actions & Ownership**
-*   **Staff Familiarization:** All teams must familiarize themselves with the BCRS initiative to assist customers effectively.
-    *   *Owner:* All FPG Store and Customer-Facing Teams.
-*   **Customer Support:** Staff must be prepared to answer queries regarding eligible products, deposit charges, and return procedures.
-    *   *Owner:* Store and customer-facing teams.
-*   **Technical Support:** For unresolved technical or policy questions, staff should contact sustainability@fairpricegroup.sg.
-    *   *Owner:* Sustainability Team / iComms.
-
-**Resources Referenced**
-*   Store FAQs: BCRS FAQs (Link in original email)
-*   National Info: https://bcrs.sg
-*   Machine Locator: https://returnright.sg
-
-
-## [24/25] Your NRF 2026 APAC registration is one click away
-Source: gmail | Thread: 19d419ef3264ff6e | Labels: Inbox, Promotions | Priority: None | Senders: NRF 26: Retail's Bi. | Last Date: Tue, Mar 31, 2026, 6:25 AM | Last Updated: 2026-03-31T10:02:33.524139+00:00
-**Daily Work Briefing: NRF 2026 APAC Registration Update**
-
-**Key Participants & Roles**
-*   **Sender:** NRF 26 Event Team (events@gevme.com), representing the conference organizers.
-*   **Recipient:** Michael, a confirmed past attendee of NRF 2025.
-
-**Main Topic/Request**
-The email serves as an expedited registration invitation for **NRF 2026: Retail's Big Show Asia Pacific**. Leveraging Michael's history as a 2025 attendee, the system has fast-tracked his eligibility for a "1-Click Free Expo Pass," requiring no re-entry of personal details—only an opt-in confirmation. The message simultaneously promotes an upsell to the paid "Retailer All-Access Pass" with exclusive perks and pricing.
-
-**Pending Actions & Ownership**
-*   **Action Required:** Confirm acceptance of the free Expo Pass by clicking the provided redemption button.
-    *   **Owner:** Michael (Recipient).
-*   **Action Required (Optional):** Upgrade to the Retailer All-Access Pass using code `NRFLOYALIST` to access high-level insights.
-    *   **Owner:** Michael (if interested in C-suite keynotes and strategy roundtables).
-
-**Decisions Made**
-*   No formal decision recorded; the email acts as a solicitation awaiting recipient action. The system assumes attendance intent based on prior history but requires explicit confirmation for the free pass.
-
-**Key Dates, Deadlines, & Specific References**
-*   **Event Dates:** June 2–4, 2026.
-*   **Venue:** Marina Bay Sands, APAC region.
-*   **Early Bird Deadline:** April 10, 2026 (pricing extended; previously noted as a standard deadline).
-*   **Discount Code:** `NRFLOYALIST`.
-*   **Pricing Details (All-Access Pass):** Reduced to USD $599 (Regular Price: USD $1,499) with the code. Total savings: USD $900.
-*   **Event Content Highlights:**
-    *   **Expo Pass Inclusions:** Full floor access (300+ exhibitors), 60 "Big Ideas" sessions, NRF Innovators Showcase (top 30 startups), Opening Party & Expo Happy Hour, and networking with 13,000+ attendees from 80+ countries.
-    *   **All-Access Pass Additions:** Keynote sessions featuring C-suite leaders (LVMH North America, Shiseido Japan, Olive Young, Gill Capital, DFI Retail, Lotte Retail, SM Supermalls, AEON360, Nestle), deep-dive breakout sessions on Agentic AI, retail media, and cross-border commerce, plus invite-only Roundtable Luncheons.
-    *   **Add-ons:** Expo Tours & Retail Store Tours available for separate purchase under both pass types.
-
-**Summary**
-Michael is invited to instantly secure his free Expo Pass via a one-click link, granting full access to the exhibition floor and social events. To unlock C-suite keynotes, strategic breakout sessions (e.g., Agentic AI), and invite-only roundtables, he must upgrade to the Retailer All-Access Pass. By using code `NRFLOYALIST` before the extended Early Bird deadline of April 10, 2026, he can lock in a rate of USD $599, saving USD $900 off the standard price.
-
-
-## [25/25] Your Weekly Digest from Datadog
-Source: gmail | Thread: 19d4280fdfb0dcd7 | Labels: Inbox, Updates | Priority: None | Senders: Datadog | Last Date: Tue, Mar 31, 2026, 6:07 AM | Last Updated: 2026-03-31T10:02:54.608424+00:00
-**Daily Work Briefing: Datadog Weekly Digest (NTUC Enterprise)**
-
-**Key Participants & Roles**
-*   **System/Alerts:** Datadog monitoring system.
-*   **On-Call Teams:** @oncall-test-slo-v2-alert, @opsgenie-com-team, @hangouts-test-seller-datadog-notification, @opsgenie-dpd-seller, @hangouts-dd-dpd-pricing-alert, @hangouts-dd-cco-tech-alert, @hangouts-dd-dpd-engage-alert, @oncall-dpd-engage-journey.
-*   **Specific Owners:** Arijit Mondal (arijit.mondal@fairprice.com.sg), FST Notifications team (@hangouts-FSTNotifications).
-
-**Main Topic**
-Weekly operational summary for NTUC Enterprise Datadog instance covering the period since March 23, 2026. The digest highlights system stability, metric alerts, and error budget consumption across various production services (Linkpay, POS, Catalogue, UI).
-
-**Pending Actions & Ownership**
-*   **CRITICAL:** Investigate and resolve high SLO Error Budget burn rate for `slo_cp_linkpay_authorize_capture_transaction`. Burn rates of 9.1 (1h) and 9.11 (5m) were recorded on March 30.
-    *   **Owner:** @oncall-test-slo-v2-alert.
-*   **High Priority:** Review duplicated barcode logic in `fpon-catalogue-job-update-barcode-cache`.
-    *   **Owner:** @opsgenie-com-team.
-*   **Performance:** Analyze latency on the `get inventories` endpoint (Seller Proxy) and `put_/api/pos/transaction/extend` requests (99th percentile > 2.6s).
-    *   **Owners:** @hangouts-test-seller-datadog-notification, @hangouts-dd-dpd-pricing-alert.
-*   **Data Integrity:** Address KPOS data replication failures caused by missing local values (e.g., business branch ID) on device TS3721AP42211.
-    *   **Action:** Fix local data, refresh POS, or reload POS.
-    *   **Owner:** @hangouts-FSTNotifications.
-
-**Decisions Made**
-*   No strategic decisions recorded; this is an automated status digest.
-*   Monitors for `engage-my-persona-api-go` (high error rate) and `slo_grocery_browse_home_page_v2` (error budget consumption at 69.8%) have triggered recovery notifications, indicating temporary incidents are resolved or stabilizing.
-
-**Key Dates & Deadlines**
-*   **Report Date:** March 31, 2026, 6:07 AM.
-*   **Critical Incident Window:** March 30, 2026 (Between 15:47 UTC and 16:03 UTC).
-    *   16:03: SLO Error Budget Alert triggered.
-    *   16:02: Duplicate barcode alert triggered.
-    *   15:59: Inventory endpoint failure.
-    *   15:58: iOS UI component error recovered.
-*   **SLA Requirement:** Resolve the `slo_grocery_browse_home_page_v2` incident within the defined SLA as 69.8% of the 7-day error budget was consumed by March 30, 02:09 UTC.
-
-**Summary Statistics**
-*   Total Events: 104.
-*   Alerts Triggered: 16 (including 1 P1 Critical).
-*   Alerts Recovered: 88.

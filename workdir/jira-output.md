@@ -1,30 +1,109 @@
 
 
-## [1/57] Transition to Impression-Based Inventory & Multi-Banner Delivery
-Source: jira | Key: DPD-838 | Status: IN DEVELOPMENT (In Progress) | Type: Story | Priority: High | Assignee: Chee Hoe Leong | Reporter: Nikhil Grover | parent: DPD-385 | Last Updated: 2026-04-02T05:30:37.598981+00:00
+## [1/57] [BCRS] Inform customers on BCRS deposit during Order Placement & Returns/Refunds Process
+Source: jira | Key: DPD-225 | Status: Done (Done) | Type: Epic | Priority: High | Reporter: Andin Eswarlal Rajesh | Due: 2026-03-26 | Resolution: Done | discovery---connected: NEDMT-2334 | parent: DPD-383 | polaris-work-item-link: OMNI-1294, OMNI-1294 | relates: DPD-26 | Last Updated: 2026-04-02T09:30:47.760397+00:00
+**Daily Briefing: DPD-225 [BCRS] Inform customers on BCRS deposit during Order Placement & Returns/Refunds Process**
+
+*   **Current Status:** **DONE** (High Priority Epic). Resolution is marked "Done." Due date remains **March 26, 2026**.
+    *   *Context:* This initiative successfully integrated Singapore's mandatory $0.10 refundable Beverage Container Return Scheme (BCRS) into core systems ahead of the official launch. While the title references customer notifications, the strategic execution focused on backend data integrity: flagging BCRS products in Mirakl, synchronizing flags to SAP, and updating sales reporting for accurate revenue tracking.
+
+*   **Pending Actions & Ownership:**
+    *   **Documentation Status:** The "Technical Documents" section (Order Experience, Cart/Checkout, Product Catalogue, UAT Products, Feature Flags) remains empty in the source records. However, as the ticket status is now "Done," these gaps likely reflect documentation that was not finalized or required post-completion for this specific epic scope.
+    *   **Design Alignment:** The "Design" reference field remains blank. Specific UI elements (checkboxes/flags for Mirakl product creation) were implemented within the delivered scope despite the lack of a formalized design reference in the metadata.
+    *   **Synchronization Verification:** The automated sync process between Mirakl and SAP has been delivered to ensure BCRS flag consistency.
+    *   **Ownership:** Reported by **Andin Eswarlal Rajesh**. No assignee is currently listed.
+
+*   **Key Decisions & Milestones:**
+    *   **Scope Confirmation:** The project strictly defined three deliverables: (1) A new UI element (checkbox/flag) within the Mirakl product creation/update flow for BCRS products; (2) An automated synchronization process between Mirakl and SAP; and (3) Modifications to existing sales reporting to include dedicated fields/filters for BCRS tracking.
+    *   **Strategic Value:** Deliverables ensure regulatory compliance, operational efficiency by reducing manual entry risks, financial accuracy for auditable BCRS revenue/fee calculations, and improved data integrity.
+    *   **Sub-task Reference:** A related strategic sub-issue, **[BCRS] Marketplace products create and update**, was moved from the main ticket for reference but remains linked to this epic's objectives.
+
+*   **Key Dates & Blockers:**
+    *   **Official Launch Context:** The scheme launches on an upcoming date (specific date TBD), serving as the hard compliance deadline.
+    *   **Last Update:** January 22, 2026.
+    *   **Blockers:** Previously identified blockers regarding missing design specifications and incomplete technical documentation have been superseded by the "Done" status resolution, though the specific documentation fields remain unpopulated in the system records.
+
+*   **Linked Issues:**
+    *   **Polaris Work Item:** OMNI-1294
+    *   **Related:** DPD-26
+    *   **Connected Discovery:** NEDMT-2334
+
+
+## [2/57] Charge BCRS deposit for re-delivery
+Source: jira | Key: DPD-807 | Status: TO BE DEFINED (To Do) | Type: Story | Priority: High | Reporter: Prajney Sribhashyam | child: DPD-847 | relates: DPD-383, DPD-383 | work-item-split: DPD-842, DPD-842 | Last Updated: 2026-04-02T09:31:10.203615+00:00
+**Daily Briefing Summary: DPD-807 – Charge BCRS Deposit for Re-delivery**
+
+**Current Status & State**
+*   **Ticket ID:** DPD-807 (Story)
+*   **Status:** TO BE DEFINED (Category: To Do)
+*   **Priority:** High
+*   **Reporter:** Prajney Sribhashyam
+*   **Assignee:** Unassigned.
+*   **Subtask:** DPD-847 (Create `Deposit posted to SAP` in config service via Backoffice).
+*   **Linked Issues:** Relates to DPD-383; Work item split of DPD-842.
+*   **Creation Date:** 2026-03-24T10:00:53+0800 (Defined by Prajney Sribhashyam).
+*   **Last Activity:** 2026-03-27T15:54:11+0800 (Inquiry regarding Backoffice Custom Fields ownership).
+
+**Decisions Made & Scope Definition**
+*   **Core Feature Logic:** As an Operations Manager, the system must apply BCRS deposit fees (e.g., €0.10/unit) to eligible items (plastic bottles, aluminum cans) in re-delivery orders. Non-eligible items (cardboard, produce) are excluded; no charge is applied. The fee appears as a separate line item.
+*   **Refund/Credit Logic:** If the original deposit was refunded or cancelled, a new charge applies on re-delivery. Otherwise, duplicate charges are suppressed based on payment history verification.
+*   **System Architecture Requirements:**
+    *   **Order Service:** Must maintain metadata flag `Deposit posted to SAP`.
+    *   **Deposit Sales Posting:** Updates this field to `true` only after the first successful posting; consumes this flag to suppress duplicate postings during re-deliveries.
+    *   **RPA Component:** Responsible for charging BCRS deposits to the customer's original payment method and posting sales data.
+
+**Pending Actions & Ownership**
+*   **Custom Field Configuration (Urgent):** The `Deposit posted to SAP` field must be added as a custom field in the Config Service metadata via the Backoffice Production page.
+    *   **Subtask DPD-847:** Explicitly tasked with creating this field in production via the Backoffice.
+    *   *Action:* Identify the owner managing this configuration page.
+    *   *Inquiry:* On 2026-03-27, Wai Ching Chan requested clarification on who manages the "Custom Fields" page to facilitate inserting the metadata field.
+    *   **Owner:** Unassigned (Awaiting identification).
+*   **Technical Implementation:** Develop logic in "Deposit sales posting" to set `metadata.Deposit posted to SAP` correctly and implement filtering for BCRS-eligible items.
+    *   *Owner:* Unassigned.
+
+**Technical References & Evidence**
+*   **API Endpoint for Metadata Update:**
+    `PUT https://api.zs-uat.fairprice.com.sg/order-service/v3/deliveryOrders/{deliveryOrderId}`
+*   **Payload Structure (2026-03-26):**
+    ```json
+    {
+      "metadata": {
+        "Deposit posted to SAP": true
+      },
+      "updateAction": ["UPDATE_ACTION_UPDATE_METADATA"]
+    }
+    ```
+*   **Test Case Reference:** Delivery Order ID `75588070` (URL: `https://admin-uat.fairprice.com.sg/customer-support/delivery-orders/75588070`).
+
+**Key Dates & Deadlines**
+*   **Due Date:** Not defined.
+*   **Blockers:** No assignee is currently linked to the ticket; development cannot commence until ownership is assigned and the Backoffice Custom Field configuration (DPD-847) is resolved.
+
+
+## [3/57] Transition to Impression-Based Inventory & Multi-Banner Delivery
+Source: jira | Key: DPD-838 | Status: IN DEVELOPMENT (In Progress) | Type: Story | Priority: High | Assignee: Chee Hoe Leong | Reporter: Nikhil Grover | parent: DPD-385 | Last Updated: 2026-04-02T09:31:31.206250+00:00
 **Daily Briefing Summary: DPD-838**
 
 **Current Status**
-Ticket **DPD-838** ("Transition to Impression-Based Inventory & Multi-Banner Delivery") is a **High** priority **Story** currently in **"IN DEVELOPMENT"** (In Progress). Assigned to **Chee Hoe Leong** and reported by **Nikhil Grover**, it executes the transition from fixed tenancy to impression-based inventory defined in parent ticket **DPD-385**. The initial target delivery was early April, pending confirmation.
+Ticket **DPD-838** ("Transition to Impression-Based Inventory & Multi-Banner Delivery") is a **High** priority **Story** in **"IN DEVELOPMENT"** (In Progress). Assigned to **Chee Hoe Leong** and reported by **Nikhil Grover**, this story operationalizes the transition from fixed tenancy to impression-based inventory defined in parent ticket **DPD-385**. The original target delivery was early April.
 
 *   **Last Activity:** 2026-04-02T11:15:19+0800 (E2E automation status updated).
-*   **Historical Context:** Scope clarifications and technical specifications were finalized on 2026-04-01.
+*   **Historical Context:** Scope and acceptance criteria were fully defined as of the initial ticket creation on 2026-03-27.
 
 **Pending Actions & Ownership**
-Development scope has been finalized to cover Omni Home, OG Home, O2O Home, Search, Category, and FP Pay receipt pages. Legacy MPS service pages are included in the unified architecture.
-*   **Video Support:** Strictly limited to **Omni Home** and **FP Pay**. Auto-play/auto-scroll logic remains front-end managed. A sales constraint of one video per Carousel applies.
-*   **Automation Status Update:** On 2026-04-02, **Milind Badame** noted that the fallback banner management scenario (Scenario 2.3) **"cannot be automated,"** marking it as **"No for E2E."** This requires manual intervention or alternative handling strategies pending further direction.
+Development scope covers Omni Home, OG Home, O2O Home, Search, Category, and FP Pay receipt pages. Legacy MPS service pages are included in the unified architecture.
+*   **Video Support:** Strictly limited to **Omni Home** and **FP Pay**. A sales constraint of one video per Carousel applies; auto-play/auto-scroll logic remains front-end managed.
+*   **Automation Blocker:** On 2026-04-02, **Milind Badame** explicitly marked the fallback banner management scenario (Scenario 2.3) as **"No for E2E,"** stating it **"cannot be automated."** This requires manual intervention or alternative handling strategies pending further direction.
 
 **Decisions Made & Technical Requirements**
-Technical specifications finalized based on 2026-04-01 discussions and the original description:
+Based on acceptance criteria finalized on 2026-03-27:
 1.  **Unified Request Architecture:** A single batch request for all 20 slots must be sent to OSMOS for Omni, OG, O2O Home, Search, Category, and FP Pay pages. Requests include metadata (User ID, page type/ID, category ID, search keyword).
-2.  **Display Sequence & Slot Logic:** Banners are displayed in the exact sequence returned by OSMOS. The "Slot" parameter is used solely for deduplication; if multiple banners share a slot number (e.g., `[-1,0,1,2,2,5,999]`), only the first instance is passed. Slot values are limited to integers 1-20 or empty.
-3.  **Endemic Prioritization:** If a non-endemic banner occupies Position 1 (identified by Campaign type field: "Endemic" vs "Non-endemic"), the first endemic banner is boosted to Position 1 while maintaining relative order for subsequent items. If no endemic banners exist, the sequence remains unchanged.
+2.  **Display Sequence & Slot Logic:** Banners are displayed in the exact sequence returned by OSMOS. For Scenario 2.3 (duplicate slots), only the first instance of a banner with a duplicate "Slot" number is passed; subsequent instances are dropped. Slot values are limited to integers 1-20 or empty.
+3.  **Endemic Prioritization:** If a non-endemic banner occupies Position 1, the first endemic banner (identified by Campaign type: "Endemic") is boosted to Position 1 while maintaining relative order for subsequent items. If no endemic banners exist, the sequence remains unchanged.
 4.  **Partial Response & Fallback:** If fewer than 20 campaigns are configured (e.g., 12), only available banners are returned; no empty slots are sent. If OSMOS returns no results or is inaccessible, banners collapse (requires Ops incident).
-5.  **Constraints:** A limit of one video per Carousel applies from a sales perspective.
 
 **Key Dates, Deadlines, & Blockers**
-*   **Last Activity:** 2026-04-02T11:15:19+0800 (Milind Badame updated E2E automation status); previously 2026-04-01 for scope/technical clarifications.
+*   **Last Activity:** 2026-04-02T11:15:19+0800 (Milind Badame updated E2E automation status); ticket originally created on 2026-03-27.
 *   **Deadline:** Target was early April; confirmation expected Monday.
 *   **Blockers:** The inability to automate Scenario 2.3 (duplicate slot handling) has been identified as a manual process requirement, potentially impacting the E2E testing strategy and timeline.
 
@@ -32,71 +111,6 @@ Technical specifications finalized based on 2026-04-01 discussions and the origi
 *   **Reporter:** Nikhil Grover
 *   **Assignee:** Chee Hoe Leong
 *   **Contributor:** Milind Badame
-
-
-## [2/57] [Pilot] - 1 to 1 Personalised vouchers for scan at door 
-Source: jira | Key: OMNI-1427 | Status: Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Rajesh Dobariya | polaris-work-item-link: DPD-824 | Last Updated: 2026-04-02T05:30:57.934184+00:00
-**Daily Briefing Summary: OMNI-1427**
-
-**Ticket Overview**
-*   **ID:** OMNI-1427 ([Pilot] - 1 to 1 Personalised vouchers for scan at door)
-*   **Link:** DPD-824 (Polaris work item)
-*   **Status:** Prioritised (To Do)
-*   **Priority:** High
-*   **Assignee/Reporter:** Rajesh Dobariya
-*   **Issue Type:** Idea
-
-**Current State & Decisions Made**
-The ticket is currently in the "Prioritised" status with a focus on finalizing pitch documentation. Key governance and logic updates confirmed:
-1.  **RMN Governance:** During active RMN campaigns, users eligible based on scan sequence/segmentation receive RMN vouchers exclusively, overriding test/control status. The OMNI team retains sole authority over RMN campaign timing (sequence/priority).
-2.  **Segmentation:** Control and Test groups are defined by the CCO team based on specific segments.
-3.  **Issuance Logic:** Upon QR scan:
-    *   **Test Group:** If qualifying for BAU vouchers AND in the Test group, receives LEAP AI suggestions.
-    *   **Control/Non-qualifiers:** Receive standard rule-engine configured vouchers.
-
-**Business Impact & Metrics**
-*   **Problem Context:** Current backoffice rules create complexity at store/campaign levels, hindering spending optimization for specific sponsors and ROI management. Frequent manual updates are required to maintain freshness, relevance, and multi-sponsor accommodation.
-*   **Financial Impact:** Total incremental GMV per monthly campaign confirmed at **$145,762** ($127,650 + $19,012).
-*   **Product Metrics:** AOV is expected to increase from $X to $Y within 6 weeks; Perfect Order rate to rise from X% to Y% in 3 months.
-*   **Effort:** Estimated development effort is **2 weeks**.
-
-**Operational Planning & Timeline**
-*   **Engineering:** Tickets shared with engineers; grooming session scheduled for **March 31st**.
-*   **Start Date:** Development expected to commence in the **first week of April**, running in parallel (confirmed by Daryl).
-*   **Note:** Additional dates will be populated immediately following the March 31st grooming session.
-
-**Proposed Solution Logic**
-The solution addresses rule complexity at store/campaign levels to optimize spending and ROI for multiple sponsors while ensuring customer engagement freshness.
-*   **As a [user]**, **When** scanning the QR code, **I want** to receive LEAP AI-suggested vouchers (if qualifying for BAU and in the Test group) or standard rule-engine vouchers (Control/Non-qualifiers), **So I can** maintain relevance, freshness, and ROI without manual rule updates.
-
-**Pending Actions & Ownership**
-*   **Documentation:** Critical blocker: All pitch components must be completed prior to submission. Specifically: Problem Definition, Goal, Business Plans, Operational Processes, and Metrics Impact.
-*   **Methodology Validation:** Confirm calculation assumptions for redemption rates and upspend stretch factors as requested by Rajesh Dobariya.
-*   **Planning:** Finalize remaining project dates immediately following the March 31st grooming session.
-
-**Key Dates & Blockers**
-*   **Deadlines:** Development start: First week of April. Grooming: March 31st. Pitch submission pending documentation completion.
-*   **Blockers:** Incomplete pitch documentation (Problem Definition, Business Plans, etc.) prevents progression to the next phase.
-
-
-## [3/57] Blocking of specific postal code from allowing customer to select for delivery address
-Source: jira | Key: OMNI-1431 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Koklin Gan | Reporter: Koklin Gan | Last Updated: 2026-04-02T05:31:13.595355+00:00
-**Briefing Summary: OMNI-1431**
-
-*   **Current Status:** The ticket remains in **Backlog (To Do)** but has escalated to an urgent priority. It is classified as an **Idea** with **High** priority. No resolution, due date, or fix versions are assigned yet.
-*   **Ownership & Assignment:** Both the reporter and assignee are **Koklin Gan**. The ticket was created on **2026-03-19T13:50:43+0800** with a request to ensure all template sections are completed before pitching. On **2026-03-19T14:54:21+0800**, **Sathya Murthy Karthik** confirmed adding the item to a tracking list. Most recently, on **2026-04-02T09:38:19+0800**, **Fion Tan** flagged that the ticket has been stagnant in the Backlog and requested an immediate escalation with a clear ETA to solve the issue ASAP.
-*   **Pending Actions:** Immediate action is required to complete the proposal template sections (Opportunity/Problem definition, Solution Summary, Business Impact, Product Metrics, Operational Processes, Business Plans, and Business Rules) prior to advancement. The ticket is currently blocked by the lack of these completed details and the urgent request from leadership for a solution timeline.
-*   **Decisions Made:** The primary decision recorded is the inclusion of this feature into a prioritization list (**Sathya Murthy Karthik**, March 19, 2026). A critical new directive was issued by **Fion Tan** on April 2, 2026, mandating that the item be raised for immediate resolution with a defined ETA.
-*   **Key Dates & Blockers:**
-    *   **Last Activity:** April 2, 2026 (Escalation request and deadline pressure).
-    *   **Blocker:** Incomplete template fields preventing pitch; stalled status in Backlog despite high priority.
-*   **Technical Scope & Logic:**
-    *   **Feature:** Block specific high-risk or restricted postal codes to prevent fraud and operational costs, supporting a "Risk-Based Approach" for money laundering prevention.
-    *   **Required Logic:**
-        1.  Prevent checkouts for newly inputted postal codes in the entry module.
-        2.  Prevent checkouts if a saved address matches a restricted postal code.
-        3.  Block customers immediately at the checkout page if their existing postal code is on the restricted list.
-    *   **Admin Capability:** Administrators must be able to add or remove codes from the restricted list via backoffice settings.
 
 
 ## [4/57] Dynamic ad slot configuration for Homepage swimlanes
@@ -210,57 +224,7 @@ The subtask **DPD-842** ("Suppress duplicate BCRS deposit posting via order meta
 *   **Resolution Logic:** The system suppresses duplicate postings by utilizing order metadata.
 
 
-## [7/57] Charge BCRS deposit for re-delivery
-Source: jira | Key: DPD-807 | Status: TO BE DEFINED (To Do) | Type: Story | Priority: High | Reporter: Prajney Sribhashyam | parent: DPD-225 | relates: DPD-383, DPD-383 | work-item-split: DPD-842, DPD-842 | Last Updated: 2026-03-28T03:34:59.700323+00:00
-**Daily Briefing Summary: DPD-807 – Charge BCRS Deposit for Re-delivery**
-
-**Current Status & State**
-*   **Ticket ID:** DPD-807 (Story)
-*   **Status:** TO BE DEFINED (Category: To Do)
-*   **Priority:** High
-*   **Parent Ticket:** DPD-225 ([BCRS] Inform customers on BCRS deposit during Order Placement & Returns/Refunds Process)
-*   **Reporter:** Prajney Sribhashyam
-*   **Assignee:** Unassigned.
-*   **Linked Issues:** Relates to DPD-383; Work item split of DPD-842.
-*   **Creation Date:** 2026-03-24 (Defined by Prajney Sribhashyam).
-*   **Last Activity:** 2026-03-27T15:54:11+0800 (Inquiry regarding Backoffice Custom Fields ownership).
-
-**Decisions Made & Scope Definition**
-*   **Core Feature Logic:** As an Operations Manager, the system must apply BCRS deposit fees (e.g., €0.10/unit) to eligible items (plastic bottles, aluminum cans) in re-delivery orders. Non-eligible items (cardboard, produce) are excluded; no charge is applied. The fee appears as a separate line item.
-*   **Refund/Credit Logic:** If the original deposit was refunded or cancelled, a new charge applies on re-delivery. Otherwise, duplicate charges are suppressed based on payment history verification.
-*   **System Architecture Requirements:**
-    *   **Order Service:** Must maintain metadata flag `Deposit posted to SAP`.
-    *   **Deposit Sales Posting:** Updates this field to `true` only after the first successful posting; consumes this flag to suppress duplicate postings during re-deliveries.
-    *   **RPA Component:** Responsible for charging BCRS deposits to the customer's original payment method and posting sales data.
-
-**Pending Actions & Ownership**
-*   **Custom Field Configuration (Urgent):** The `Deposit posted to SAP` field must be added as a custom field in the Config Service metadata via the Backoffice Production page.
-    *   *Action:* Identify the owner managing this configuration page.
-    *   *Inquiry:* On 2026-03-27, Wai Ching Chan requested clarification on who manages the "Custom Fields" page to facilitate inserting the metadata field.
-    *   *Owner:* **Unassigned** (Awaiting identification).
-*   **Technical Implementation:** Develop logic in "Deposit sales posting" to set `metadata.Deposit posted to SAP` correctly and implement filtering for BCRS-eligible items.
-    *   *Owner:* Unassigned.
-
-**Technical References & Evidence**
-*   **API Endpoint for Metadata Update:**
-    `PUT https://api.zs-uat.fairprice.com.sg/order-service/v3/deliveryOrders/{deliveryOrderId}`
-*   **Payload Structure (2026-03-26):**
-    ```json
-    {
-      "metadata": {
-        "Deposit posted to SAP": true
-      },
-      "updateAction": ["UPDATE_ACTION_UPDATE_METADATA"]
-    }
-    ```
-*   **Test Case Reference:** Delivery Order ID `75588070` (URL: `https://admin-uat.fairprice.com.sg/customer-support/delivery-orders/75588070`).
-
-**Key Dates & Deadlines**
-*   **Due Date:** Not defined.
-*   **Blockers:** No assignee is currently linked to the ticket; development cannot commence until ownership is assigned and the Backoffice Custom Field configuration is resolved.
-
-
-## [8/57] Sales posting for BCRS deposit amount
+## [7/57] Sales posting for BCRS deposit amount
 Source: jira | Key: DPD-383 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Prajney Sribhashyam | Due: 2026-02-18 | Resolution: Done | blocks: DPD-551, DPD-551 | child: DPD-590, DPD-842 | parent: DPD-225, DPD-590, DPD-842 | relates: DPD-807, DPD-807 | Last Updated: 2026-03-28T03:35:23.712588+00:00
 **Ticket:** DPD-383 (Sales posting for BCRS deposit amount)
 **Status:** Done | **Category:** In Release Queue | **Priority:** High
@@ -301,36 +265,7 @@ Source: jira | Key: DPD-383 | Status: IN RELASE QUEUE (Done) | Type: Story | Pri
 *   Validation of real-world BCRS orders in Production remains the final step before full operational confirmation.
 
 
-## [9/57] [BCRS] Inform customers on BCRS deposit during Order Placement & Returns/Refunds Process
-Source: jira | Key: DPD-225 | Status: IN DEVELOPMENT (In Progress) | Type: Epic | Priority: High | Reporter: Andin Eswarlal Rajesh | Due: 2026-03-26 | discovery---connected: NEDMT-2334 | parent: DPD-807, DPD-383 | polaris-work-item-link: OMNI-1294, OMNI-1294 | relates: DPD-26 | Last Updated: 2026-03-27T21:32:17.122631+00:00
-**Daily Briefing: DPD-225 [BCRS] Inform customers on BCRS deposit during Order Placement & Returns/Refunds Process**
-
-*   **Current Status:** IN DEVELOPMENT (High Priority Epic). Due date is **March 26, 2026**.
-    *   *Context:* This initiative integrates Singapore's mandatory $0.10 refundable Beverage Container Return Scheme (BCRS) into core systems ahead of the scheme's official launch. While the title references customer notifications during order placement and returns/refunds, the strategic objective focuses on backend data integrity: flagging BCRS products in Mirakl, synchronizing flags to SAP, and updating sales reporting for accurate revenue tracking.
-
-*   **Pending Actions & Ownership:**
-    *   **Documentation Completion:** Critical gaps persist in the "Technical Documents" section; fields for Order Experience, Cart/Checkout, Product Catalogue, UAT Products, and Feature Flags remain empty. Action required: Technical Team must populate these to define UI elements and product lists.
-    *   **Design Alignment:** The "Design" reference is currently blank. Specific UI elements (e.g., checkboxes/flags for Mirakl product creation) require formalization before development completion.
-    *   **Synchronization Testing:** Verification of the automated sync process between Mirakl and SAP is required to ensure BCRS flags remain consistent across platforms.
-    *   **Ownership:** Reported by **Andin Eswarlal Rajesh**. No assignee is currently listed.
-
-*   **Key Decisions & Milestones:**
-    *   **Scope Confirmation:** The project strictly defines three deliverables: (1) A new UI element (checkbox/flag) within the Mirakl product creation/update flow for BCRS products; (2) An automated synchronization process between Mirakl and SAP; and (3) Modifications to existing sales reporting to include dedicated fields/filters for BCRS tracking.
-    *   **Strategic Value:** Deliverables ensure regulatory compliance (avoiding penalties), operational efficiency (reducing manual entry risks), financial accuracy (auditable BCRS revenue/fee calculations), and improved data integrity (single source of truth).
-    *   **Sub-task Reference:** A related strategic sub-issue, **[BCRS] Marketplace products create and update**, was moved from the main ticket for reference.
-
-*   **Key Dates & Blockers:**
-    *   **Official Launch Context:** The scheme launches on an upcoming date (specific date TBD), serving as the hard compliance deadline.
-    *   **Last Update:** January 22, 2026.
-    *   **Blockers:** Missing design specifications and incomplete technical documentation are currently preventing full scope validation.
-
-*   **Linked Issues:**
-    *   **Polaris Work Item:** OMNI-1294
-    *   **Related:** DPD-26
-    *   **Connected Discovery:** NEDMT-2334
-
-
-## [10/57] [RMN] Streamline event sync from Segment.io to OSMOS to resolve overage
+## [8/57] [RMN] Streamline event sync from Segment.io to OSMOS to resolve overage
 Source: jira | Key: DPD-644 | Status: Done (Done) | Type: Epic | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-12 | Resolution: Done | parent: DPD-645 | polaris-work-item-link: OMNI-1418 | Last Updated: 2026-03-27T21:32:29.917584+00:00
 **Daily Briefing: Jira Ticket DPD-644**
 
@@ -352,7 +287,7 @@ The high-priority Epic **DPD-644**, titled "[RMN] Streamline event sync from Seg
 The resolution status ("Done") and issue type (Epic) are confirmed in the latest system update. All metadata, including priority levels and assignee details, aligns with the final record.
 
 
-## [11/57] [BCRS Compliance] Phase 2: Order Place & Returns/Refunds Process
+## [9/57] [BCRS Compliance] Phase 2: Order Place & Returns/Refunds Process
 Source: jira | Key: OMNI-1294 | Status: Technical Live (Done) | Type: Idea | Priority: High | Assignee: Prajney Sribhashyam | Reporter: Winson Lim | Labels: bcrs | discovery---connected: NEDMT-2334 | polaris-work-item-link: DPD-225, DPD-225 | Last Updated: 2026-03-27T09:35:20.749795+00:00
 **Ticket:** OMNI-1294 | **[BCRS Compliance] Phase 2: Order Place & Returns/Refunds Process**
 **Status:** Technical Live (Done) | **Risk Level:** High | **Assignee:** Prajney Sribhashyam
@@ -391,7 +326,7 @@ Source: jira | Key: OMNI-1294 | Status: Technical Live (Done) | Type: Idea | Pri
 *   **Discovery - Connected:** NEDMT-2334
 
 
-## [12/57] [OSMOS only] Enable offsite ads integration with Meta on OSMOS
+## [10/57] [OSMOS only] Enable offsite ads integration with Meta on OSMOS
 Source: jira | Key: OMNI-1191 | Status: Define (In Progress) | Type: Idea | Priority: High | Assignee: Nikhil Grover | Reporter: Nikhil Grover | polaris-work-item-link: RM-556 | Last Updated: 2026-03-20T14:44:56.988023+00:00
 **Ticket:** OMNI-1191 | **Status:** Red (Blocked) | **Assignee:** Nikhil Grover | **Priority:** High | **Linked Issue:** RM-556
 
@@ -422,7 +357,7 @@ The initiative to enable offsite ads integration with Meta on OSMOS remains bloc
 Immediate focus is on securing Meta's response regarding campaign whitelisting to unblock API testing. Once OSMOS completes testing, they will provide a concrete effort estimate for the remaining development phase.
 
 
-## [13/57] Include swimlane name in the ad request for all Omni Home swimlanes
+## [11/57] Include swimlane name in the ad request for all Omni Home swimlanes
 Source: jira | Key: DPD-734 | Status: TO BE DEFINED (To Do) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-17 | parent: DPD-710 | Last Updated: 2026-03-20T14:45:50.801862+00:00
 **Daily Briefing Summary: DPD-734**
 
@@ -446,7 +381,7 @@ The ticket **DPD-734** is currently in the **TO BE DEFINED (To Do)** status. It 
 This story supports the broader initiative (**DPD-710**) to activate product ads in Omni Home swimlanes, specifically addressing the data visibility gap for Product Managers regarding ad request origins.
 
 
-## [14/57] Improve event sync to prevent overage
+## [12/57] Improve event sync to prevent overage
 Source: jira | Key: DPD-645 | Status: Done (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-12 | Resolution: Done | blocks: DPD-273, DPD-273 | parent: DPD-644 | Last Updated: 2026-03-20T14:46:17.913487+00:00
 **Jira Briefing: DPD-645 – Improve event sync to prevent overage**
 
@@ -482,7 +417,7 @@ Source: jira | Key: DPD-645 | Status: Done (Done) | Type: Story | Priority: High
 *   **Technical References:** Segment.io, OSMOS PROD destination, BigQuery cross-checks, Function version #56.
 
 
-## [15/57] FP VIPs encounter verification after S&G purchase for fewer reasons, vs other customers
+## [13/57] FP VIPs encounter verification after S&G purchase for fewer reasons, vs other customers
 Source: jira | Key: OPCO-1940 | Status: In release queue (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Ravi Goel | Resolution: Done | Labels: priority:improvement | blocks: OPCO-1956 | Last Updated: 2026-03-20T14:46:38.477862+00:00
 ### Executive Briefing: OPCO-1940 (FP VIP Verification Bypass)
 
@@ -515,7 +450,7 @@ The ticket is **On Hold**. While the development work is complete and UAT was si
 *   Monitoring queries linked to `service:st-verification-service` for manual check counts.
 
 
-## [16/57] Fix RMN pentest Low and optionally Info issues
+## [14/57] Fix RMN pentest Low and optionally Info issues
 Source: jira | Key: DPD-700 | Status: Done (Done) | Type: Chore | Priority: High | Assignee: Michael Bui | Reporter: Michael Bui | Due: 2026-03-20 | Resolution: Done | Labels: priority:improvement | relates: DPD-591, DPD-591 | Last Updated: 2026-03-20T14:47:05.245530+00:00
 **Daily Briefing: DPD-700 (Fix RMN Pentest Low/Info Issues)**
 
@@ -554,7 +489,7 @@ The ticket **DPD-700** is marked as **Done**. Remediation efforts for the RMN pe
 Infrastructure-side security hardening is complete. All Low and optional Info severity headers are active, and rate limiting is enforced. The only remaining item regarding CORS wildcards has been accepted as an application-level dependency and does not block this ticket's completion.
 
 
-## [17/57] Capture SAP Material Number into catalogue service for SAP-related downstream usage
+## [15/57] Capture SAP Material Number into catalogue service for SAP-related downstream usage
 Source: jira | Key: DPD-551 | Status: Done (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Michael Bui | Resolution: Done | blocks: DPD-383, DPD-383 | Last Updated: 2026-03-20T14:47:29.994165+00:00
 **Daily Briefing Summary: DPD-551**
 
@@ -585,7 +520,7 @@ The story regarding the capture of SAP Material Numbers into the catalogue servi
 *   **Test Scope:** RB and MP SKUs (BCRS SKU verified).
 
 
-## [18/57] Setup alerts for Advertima platform
+## [16/57] Setup alerts for Advertima platform
 Source: jira | Key: DPD-631 | Status: Done (Done) | Type: Chore | Priority: High | Assignee: Michael Bui | Reporter: Michael Bui | Resolution: Done | Last Updated: 2026-03-20T14:47:42.666749+00:00
 **Jira Ticket Briefing: DPD-631**
 
@@ -620,7 +555,7 @@ The task is fully completed. The alerting system for the Advertima platform has 
 *   **Blockers:** None reported; the task progressed from initiation to completion without impediments.
 
 
-## [19/57] Fix RMN pentest medium issues
+## [17/57] Fix RMN pentest medium issues
 Source: jira | Key: DPD-591 | Status: Done (Done) | Type: Chore | Priority: High | Assignee: Michael Bui | Reporter: Michael Bui | Due: 2026-03-20 | Resolution: Done | Labels: priority:improvement | relates: RM-669, DPD-700, DPD-700 | Last Updated: 2026-03-20T14:47:54.792440+00:00
 **Jira Ticket Summary: DPD-591**
 
@@ -647,7 +582,7 @@ Source: jira | Key: DPD-591 | Status: Done (Done) | Type: Chore | Priority: High
 *   None. The ticket is closed with no outstanding blockers or pending actions identified in the log.
 
 
-## [20/57] Take over Segment destination functions from OSMOS
+## [18/57] Take over Segment destination functions from OSMOS
 Source: jira | Key: DPD-273 | Status: Done (Done) | Type: Chore | Priority: High | Assignee: Michael Bui | Reporter: Michael Bui | Resolution: Done | blocks: DPD-645, DPD-645 | Last Updated: 2026-03-20T14:48:27.043939+00:00
 **Status:** Done
 **Ticket ID:** DPD-273
@@ -671,7 +606,7 @@ The task to take over Segment destination functions from OSMOS has been complete
 None. The ticket resolution is marked as "Done." All immediate dependencies regarding the handover document have been satisfied.
 
 
-## [21/57] Clean up archived proposals after PRD release
+## [19/57] Clean up archived proposals after PRD release
 Source: jira | Key: DPD-590 | Status: TO BE DEFINED (To Do) | Type: Subtask | Priority: High | Assignee: Michael Bui | Reporter: Michael Bui | Due: 2026-04-24 | child: DPD-383 | parent: DPD-383 | Last Updated: 2026-03-20T14:48:32.369189+00:00
 **Daily Briefing Summary: DPD-590**
 
@@ -682,7 +617,7 @@ Source: jira | Key: DPD-590 | Status: TO BE DEFINED (To Do) | Type: Subtask | Pr
 *   **Blockers/Context:** This subtask (**DPD-590**) supports the parent initiative **DPD-383** ("Sales posting for BCRS deposit amount"). It carries a **High** priority.
 
 
-## [22/57] New project setup for BCRS deposit posting job "ntuclink_bcrs-deposit-posting"
+## [20/57] New project setup for BCRS deposit posting job "ntuclink_bcrs-deposit-posting"
 Source: jira | Key: QE-1105 | Status: Done (Done) | Type: Chore | Priority: High | Reporter: Michael Bui | Resolution: Done | parent: QE-682 | Last Updated: 2026-03-20T14:48:41.349496+00:00
 **Daily Briefing Summary: QE-1105**
 
@@ -715,7 +650,7 @@ The following configuration was established and finalized during this Chore:
 *   **Platform:** SonarCloud.
 
 
-## [23/57] [RMN] Unblock NTP connection for Advertima devices
+## [21/57] [RMN] Unblock NTP connection for Advertima devices
 Source: jira | Key: DPD-519 | Status: Done (Done) | Type: Chore | Priority: Medium | Assignee: Michael Bui | Reporter: Michael Bui | Resolution: Done | Last Updated: 2026-03-20T14:48:50.891725+00:00
 **Daily Work Briefing Summary**
 
@@ -747,7 +682,7 @@ None. All work defined in the scope of DPD-519 is complete.
 *   **Component/Version:** No specific fix versions or components listed in metadata.
 
 
-## [24/57] New SKU Sync Optimisation
+## [22/57] New SKU Sync Optimisation
 Source: jira | Key: DPD-221 | Status: Done (Done) | Type: Epic | Priority: High | Reporter: Michael Bui | Resolution: Done | parent: DPD-220 | Last Updated: 2026-03-20T14:48:58.534921+00:00
 **Daily Briefing Summary: DPD-221 – New SKU Sync Optimisation**
 
@@ -765,7 +700,7 @@ Source: jira | Key: DPD-221 | Status: Done (Done) | Type: Epic | Priority: High 
 Epic DPD-221 is closed. Initiated and reported by Michael Bui with High priority, the "New SKU Sync Optimisation" project reached completion as of September 30, 2025. The item requires no further action or resource allocation.
 
 
-## [25/57] [CDP] Access Request from Retail Media
+## [23/57] [CDP] Access Request from Retail Media
 Source: jira | Key: NEDMT-2288 | Status: Done (Done) | Type: Task | Priority: Blocker | Assignee: Yadear Zhang | Reporter: Michael Bui | Resolution: Done | Last Updated: 2026-03-20T14:49:18.293034+00:00
 **Daily Briefing Summary: Jira Ticket NEDMT-2288**
 
@@ -781,7 +716,7 @@ Source: jira | Key: NEDMT-2288 | Status: Done (Done) | Type: Task | Priority: Bl
 **Summary:** The Blocker access request for Retail Media was resolved immediately on November 17, 2025. Yadear Zhang granted the necessary production environment permissions to vipul.gupta_fp@ntucguest.com as requested by Michael Bui.
 
 
-## [26/57] "Ad" product copy display not consistent at times
+## [24/57] "Ad" product copy display not consistent at times
 Source: jira | Key: DPD-431 | Status: TO BE DEFINED (To Do) | Type: Bug | Priority: Low | Reporter: Vivian Lim Yu Qian | Labels: priority:improvement | Last Updated: 2026-03-20T14:49:49.631570+00:00
 **Jira Ticket Briefing: DPD-431**
 
@@ -815,7 +750,7 @@ The "Ad" product copy display is inconsistent on PROD Android 7.20.0 (build 680.
 *   No hard deadline or due date currently set.
 
 
-## [27/57] B2B Solution: Integration work
+## [25/57] B2B Solution: Integration work
 Source: jira | Key: OMNI-1249 | Status: In Development (In Progress) | Type: Idea | Priority: High | Assignee: Erica Lee | Reporter: Fiona U | blocks: OMNI-1362, OMNI-1362 | discovery---connected: DPD-57 | migration_parent: PAY-7080 | polaris-work-item-link: DPD-682, PAY-7080, DPD-57 | Last Updated: 2026-03-27T21:33:03.967304+00:00
 **Issue:** OMNI-1249 (B2B Solution: Integration work)
 **Assignee:** Erica Lee | **Reporter:** Fiona U | **Status:** In Development (In Progress/AMBER) | **Priority:** High
@@ -862,7 +797,7 @@ The initiative addresses fragmented legacy processes where clients must switch t
 *   **B2B Platform Go-Live:** Contingent on WMS Phase 2; Targeted April 2026.
 
 
-## [28/57] [Decoupling from SAP] Migrate CF apps to DBP to improve MP Consol fulfilment experience
+## [26/57] [Decoupling from SAP] Migrate CF apps to DBP to improve MP Consol fulfilment experience
 Source: jira | Key: OMNI-1363 | Status: UAT (In Progress) | Type: Idea | Priority: High | Assignee: Prajney Sribhashyam | Reporter: Gopalakrishna Dhulipati | polaris-work-item-link: DST-2272, DPD-326, DPD-332, DPD-341, DST-2531, DPD-348 | Last Updated: 2026-03-27T21:33:22.858463+00:00
 **Ticket:** OMNI-1363 | **Status:** UAT (In Progress) | **Priority:** High
 **Assignee:** Prajney Sribhashyam | **Reporter:** Gopalakrishna Dhulipati
@@ -900,7 +835,7 @@ The project to migrate CloudFoundry (CF) apps to DBP for MP Consolidate Fulfilme
 *   **Risk:** Historical data integrity requires a specific contingency plan currently in development.
 
 
-## [29/57] [Decoupling from SAP] Improve order orchestration with integration to WMS Middleware
+## [27/57] [Decoupling from SAP] Improve order orchestration with integration to WMS Middleware
 Source: jira | Key: OMNI-1362 | Status: Paused (To Do) | Type: Idea | Priority: High | Assignee: Gopalakrishna Dhulipati | Reporter: Gopalakrishna Dhulipati | blocks: OMNI-1249, OMNI-1249 | polaris-work-item-link: DPD-184 | relates: OE-3209 | Last Updated: 2026-03-27T21:33:37.168535+00:00
 **Ticket:** OMNI-1362: [Decoupling from SAP] Improve order orchestration with integration to WMS Middleware
 **Current Status:** Paused (To Do) | **Type:** Idea | **Assignee/Reporter:** Gopalakrishna Dhulipati | **Priority:** High
@@ -934,7 +869,7 @@ To be prioritized, the following must be defined:
 *   **Baseline & Outcome:** Current baseline vs. expected outcome values and the target timeline for improvement.
 
 
-## [30/57] Improve seller catalogue compliance to align with FSQ expectations
+## [28/57] Improve seller catalogue compliance to align with FSQ expectations
 Source: jira | Key: OMNI-1407 | Status: UAT (In Progress) | Type: Idea | Priority: High | Assignee: Prajney Sribhashyam | Reporter: Prajney Sribhashyam | polaris-work-item-link: DPD-100 | Last Updated: 2026-03-27T21:33:56.328482+00:00
 **Jira Ticket Summary: OMNI-1407 – Improve Seller Catalogue Compliance (FSQ Alignment)**
 
@@ -969,7 +904,7 @@ The solution enhances **Mirakl** SKU creation forms to enforce mandatory fields 
 The effort is estimated at **Small (30 person-days)**. Current activities focus on creating Mirakl data fields, finalizing extraction logic, and ensuring business teams source compliance data to meet the December milestone. The solution covers specific licenses (HSA, Safety Mark, Vector Control, NEA, IMDA) and certifications (Halal, Organic).
 
 
-## [31/57] [MP Foundational] Sales Breakdown & Seller Payouts
+## [29/57] [MP Foundational] Sales Breakdown & Seller Payouts
 Source: jira | Key: OMNI-1345 | Status: Paused (To Do) | Type: Idea | Priority: High | Assignee: Koklin Gan | Reporter: Prajney Sribhashyam | discovery---connected: OMNI-1178 | polaris-work-item-link: DST-2056, DST-2272, DST-2487, DPD-9 | Last Updated: 2026-03-20T14:53:46.889427+00:00
 **Resource:** OMNI-1345: [MP Foundational] Sales Breakdown & Seller Payouts
 **Current Status:** Paused (To Do) / Blocked since Jan 29, 2026; currently on hold as of Mar 17, 2026.
@@ -1003,7 +938,7 @@ Source: jira | Key: OMNI-1345 | Status: Paused (To Do) | Type: Idea | Priority: 
 *   Logical flow principle established for future designs: Order statement → Invoice → Sales Posting → Seller Reports → Seller Payouts. No re-calculation at any state; data must flow from confirmed previous states.
 
 
-## [32/57] Enhanced Notification Preference Center for Multi-Channel Communication Management
+## [30/57] Enhanced Notification Preference Center for Multi-Channel Communication Management
 Source: jira | Key: OMNI-1296 | Status: In Development (In Progress) | Type: Idea | Priority: High | Assignee: Sip Khoon Tan | Reporter: Sip Khoon Tan | discovery---connected: CORE-304 | polaris-work-item-link: CORE-304 | Last Updated: 2026-03-26T21:31:55.209499+00:00
 **Jira Ticket Summary: OMNI-1296 (Enhanced Notification Preference Center)**
 
@@ -1043,7 +978,7 @@ The current binary unsubscribe mechanism causes total communication loss when a 
 *   **Integration Gap:** Testing remains halted pending the Martech team to link the delivery ticket for integration validation.
 
 
-## [33/57] [1HD] Phase 2 - Build to enable scaling of 1 hour to 100 stores
+## [31/57] [1HD] Phase 2 - Build to enable scaling of 1 hour to 100 stores
 Source: jira | Key: OMNI-1425 | Status: Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Rajesh Dobariya | polaris-work-item-link: DPD-627 | Last Updated: 2026-03-27T13:32:56.725003+00:00
 **Jira Ticket Summary: OMNI-1425**
 **Subject:** [1HD] Phase 2 - Build to enable scaling of 1 hour to 100 stores
@@ -1080,7 +1015,7 @@ Rajesh Dobariya must finalize the following sections based on stakeholder input 
 *   **Context:** The initiative relies on an iterative approach based on Pilot trial discoveries.
 
 
-## [34/57] Integrate personalized gamification challenge with FP app
+## [32/57] Integrate personalized gamification challenge with FP app
 Source: jira | Key: OMNI-1414 | Status: UAT (In Progress) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: James Huang | polaris-work-item-link: DPD-297 | Last Updated: 2026-03-27T13:33:16.219196+00:00
 **Ticket:** OMNI-1414 (Idea) | **Priority:** High | **Assignee:** Rajesh Dobariya | **Reporter:** James Huang
 **Linked Issue:** DPD-297
@@ -1121,7 +1056,7 @@ Backend and Frontend development for the UntieNot gamification integration is **
 *   **Prioritization:** UAT rescheduling indicates resource contention with "Project Light."
 
 
-## [35/57] Transition from fixed-tenancy to impressions-based banner delivery model
+## [33/57] Transition from fixed-tenancy to impressions-based banner delivery model
 Source: jira | Key: OMNI-1421 | Status: In Development (In Progress) | Type: Idea | Priority: High | Assignee: Nikhil Grover | Reporter: Nikhil Grover | polaris-work-item-link: DPD-385 | Last Updated: 2026-04-01T21:31:29.170515+00:00
 **Jira Ticket Briefing: OMNI-1421**
 
@@ -1159,7 +1094,51 @@ The initiative to transition RMN banner delivery from fixed tenancy to an impres
 *   **Prerequisites:** All components must be fully defined before pitching; operational alignment with Ad/Platform Ops is required for scale.
 
 
-## [36/57] FP Pay experience improvements to support new auto apply voucher at IPOS/KPOS 
+## [34/57] [Pilot] - 1 to 1 Personalised vouchers for scan at door 
+Source: jira | Key: OMNI-1427 | Status: Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Rajesh Dobariya | polaris-work-item-link: DPD-824 | Last Updated: 2026-04-02T09:31:48.986349+00:00
+**Daily Briefing Summary: OMNI-1427**
+
+**Ticket Overview**
+*   **ID:** OMNI-1427 ([Pilot] - 1 to 1 Personalised vouchers for scan at door)
+*   **Link:** DPD-824 (Polaris work item)
+*   **Status:** Prioritised (To Do)
+*   **Priority:** High
+*   **Assignee/Reporter:** Rajesh Dobariya
+*   **Issue Type:** Idea
+
+**Current State & Decisions Made**
+The ticket remains in "Prioritised" status. Critical governance and logic updates have been confirmed to address rule complexity at store/campaign levels:
+1.  **RMN Governance:** During active RMN campaigns, users eligible based on scan sequence/segmentation receive RMN vouchers exclusively, overriding test/control status. The OMNI team retains sole authority over RMN campaign timing (sequence/priority).
+2.  **Segmentation:** Control and Test groups are defined by the CCO team based on specific segments.
+3.  **Issuance Logic:** Upon QR scan:
+    *   **Test Group:** If qualifying for BAU vouchers AND in the Test group, receives LEAP AI suggestions.
+    *   **Control/Non-qualifiers:** Receive standard rule-engine configured vouchers.
+
+**Problem Context & Solution**
+Current backoffice rules create complexity at store/campaign levels, hindering spending optimization and ROI management while requiring frequent manual updates to maintain freshness, relevance, and multi-sponsor accommodation.
+*   **Proposed Solution:** The system will leverage LEAP AI for voucher suggestions for qualifying users in the Test group upon QR scan, ensuring relevance without manual rule updates. Control groups receive standard rule-engine vouchers.
+
+**Business Impact & Metrics**
+*   **Financial Metric:** AOV is expected to increase from $X to $Y within 6 weeks.
+*   **Customer Experience Metric:** Perfect Order rate will rise from X% to Y% in 3 months.
+*   **Note:** Specific annual GMV/income figures and exact uplift metrics are currently pending final calculation assumptions (redemption rates, upspend stretch factors).
+
+**Operational Planning & Timeline**
+*   **Engineering:** Tickets shared with engineers; grooming session scheduled for **March 31st**.
+*   **Start Date:** Development expected to commence in the **first week of April**, running in parallel.
+*   **Planning:** Finalize remaining project dates immediately following the March 31st grooming session.
+
+**Pending Actions & Ownership**
+*   **Documentation (Critical Blocker):** All pitch components must be completed prior to submission. Specifically: Problem Definition, Business Plans, Operational Processes, and Metrics Impact.
+*   **Methodology Validation:** Confirm calculation assumptions for redemption rates and upspend stretch factors as requested by Rajesh Dobariya.
+*   **Planning:** Finalize remaining project dates immediately following the March 31st grooming session.
+
+**Key Dates & Blockers**
+*   **Deadlines:** Development start: First week of April. Grooming: March 31st. Pitch submission pending documentation completion.
+*   **Blockers:** Incomplete pitch documentation prevents progression to the next phase.
+
+
+## [35/57] FP Pay experience improvements to support new auto apply voucher at IPOS/KPOS 
 Source: jira | Key: OMNI-1416 | Status: In Development (In Progress) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Rajesh Dobariya | duplicate: CPR-4 | Last Updated: 2026-03-20T14:55:50.937082+00:00
 **Jira Briefing: OMNI-1416 – FP Pay Experience Improvements (Auto-Apply Voucher)**
 
@@ -1190,7 +1169,7 @@ Source: jira | Key: OMNI-1416 | Status: In Development (In Progress) | Type: Ide
 The initiative addresses compliance risks (treating vouchers as payment methods) and poor UX (manual selection, friction). The solution involves Digital Center becoming the canonical offer engine. Currently, the "Interim" state requires FP Pay to fetch eligible offers from DSP for browsing only, while IPOS handles redemption logic.
 
 
-## [37/57] GST Compliance Phase 2 - Refunds and return
+## [36/57] GST Compliance Phase 2 - Refunds and return
 Source: jira | Key: OMNI-1300 | Status: Define (In Progress) | Type: Idea | Priority: High | Assignee: Alvin Choo | Reporter: Sathya Murthy Karthik | Labels: GST | polaris-work-item-link: CORE-51, PAY-6725 | Last Updated: 2026-03-20T14:56:05.624316+00:00
 **Jira Ticket Summary: OMNI-1300 (GST Compliance Phase 2)**
 
@@ -1224,7 +1203,7 @@ Source: jira | Key: OMNI-1300 | Status: Define (In Progress) | Type: Idea | Prio
 *   **Stakeholder Delays:** Previous meetings with Corporate Control, Business, and Finance were cancelled or delayed; alignment remains pending.
 
 
-## [38/57] AI shopping assistant: An engaging experience for customers to build their shopping cart within seconds
+## [37/57] AI shopping assistant: An engaging experience for customers to build their shopping cart within seconds
 Source: jira | Key: OMNI-1235 | Status: Soft Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Koklin Gan | Reporter: Koklin Gan | polaris-merge-work-item-link: OMNI-1237 | polaris-work-item-link: DPD-293 | Last Updated: 2026-03-27T21:34:37.812433+00:00
 **Ticket:** OMNI-1235 (AI shopping assistant: An engaging experience for customers to build their shopping cart within seconds)
 **Current Status:** Soft Prioritised (To Do) | **Priority:** High | **Assignee/Reporter:** Koklin Gan
@@ -1264,7 +1243,7 @@ Source: jira | Key: OMNI-1235 | Status: Soft Prioritised (To Do) | Type: Idea | 
 *   **Platform Limitations:** iOS support remains excluded in current estimates.
 
 
-## [39/57] Enable WhatsApp Marketing Consent at Sign-Up Page and Preference Center to Unlock Better Engagement Opportunities
+## [38/57] Enable WhatsApp Marketing Consent at Sign-Up Page and Preference Center to Unlock Better Engagement Opportunities
 Source: jira | Key: OMNI-1153 | Status: In Development (In Progress) | Type: Idea | Priority: High | Assignee: Ravi Goel | Reporter: Yadear Zhang | Labels: app-engagement | polaris-merge-work-item-link: OMNI-1152 | Last Updated: 2026-03-20T14:57:19.825725+00:00
 **Jira Ticket Summary: OMNI-1153**
 **Subject:** Enable WhatsApp Marketing Consent at Sign-Up Page and Preference Center
@@ -1297,7 +1276,7 @@ The ticket is currently **In Development**. However, recent updates indicate the
 *   **Priority:** High | **Labels:** app-engagement
 
 
-## [40/57] Support the SIT/UAT/Beta/Cut Over for MyInfo and LEAP core system integration
+## [39/57] Support the SIT/UAT/Beta/Cut Over for MyInfo and LEAP core system integration
 Source: jira | Key: OMNI-1246 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Ryne Cheow | Reporter: James Huang | polaris-merge-work-item-link: OMNI-1169 | Last Updated: 2026-03-20T14:57:50.407407+00:00
 **Daily Briefing Summary: OMNI-1246**
 
@@ -1329,7 +1308,7 @@ The following actions require execution to move this idea toward prioritization:
 This initiative supports the MyInfo and LEAP core system integration across SIT, UAT, Beta, and Cutover phases. The goal is to enable SG 60 large family discounts for CHAS members, fast-track onboarding via MyInfo, and ensure system stability during backend updates.
 
 
-## [41/57] Achieve 100% GST compliance for Ecom orders 
+## [40/57] Achieve 100% GST compliance for Ecom orders 
 Source: jira | Key: OMNI-1361 | Status: Discovery (To Do) | Type: Idea | Priority: High | Assignee: Alvin Choo | Reporter: Gopalakrishna Dhulipati | polaris-work-item-link: PAY-6785 | Last Updated: 2026-03-20T14:58:07.295595+00:00
 **Ticket:** OMNI-1361 (Achieve 100% GST compliance for Ecom orders)
 **Assignee:** Alvin Choo | **Reporter:** Gopalakrishna Dhulipati | **Priority:** High
@@ -1361,7 +1340,7 @@ Source: jira | Key: OMNI-1361 | Status: Discovery (To Do) | Type: Idea | Priorit
 *   **Blocker:** Decision on the technical method of posting (Comall Connector vs. Direct) is pending a response from Comall. Finance data requirements for aggregate posting remain outstanding.
 
 
-## [42/57] FPG - Fraud detect and prevention 
+## [41/57] FPG - Fraud detect and prevention 
 Source: jira | Key: OMNI-1227 | Status: Soft Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Aditi Rathi | Reporter: Koklin Gan | discovery---connected: OMNI-1075, OMNI-1134 | polaris-merge-work-item-link: OMNI-1075 | Last Updated: 2026-03-20T14:58:25.942194+00:00
 ### Daily Briefing: OMNI-1227 (FPG - Fraud Detect & Prevention)
 
@@ -1395,7 +1374,7 @@ Source: jira | Key: OMNI-1227 | Status: Soft Prioritised (To Do) | Type: Idea | 
 *   **Ops Cost:** Currently consumes 4-6 hours/week across Ecom Business and CS teams for manual review. Automation aims to reduce this significantly.
 
 
-## [43/57] Mirakl foundational work for scalability
+## [42/57] Mirakl foundational work for scalability
 Source: jira | Key: OMNI-1208 | Status: Discovery (To Do) | Type: Idea | Priority: High | Assignee: Koklin Gan | Reporter: Koklin Gan | blocks: DST-2247 | discovery---connected: OMNI-1178 | polaris-work-item-link: DST-2247, DPD-326, DPD-332, DST-2277, DPD-543, DST-2305 | Last Updated: 2026-03-20T14:58:43.544572+00:00
 **Jira Ticket Briefing: OMNI-1208 (Mirakl Foundational Work)**
 
@@ -1427,7 +1406,7 @@ The ticket **OMNI-1208** is currently in the **"Discovery"** phase with a status
 Despite high priority and detailed problem definitions regarding financial integrity and scalability, the initiative was halted following estimation disputes and pending user story inputs from **KL** and **Aditi**. The ticket is now closed with no further action required on this specific Epic ID.
 
 
-## [44/57] [Pre-order] 'Mark as Paid' for In-Store Preorders
+## [43/57] [Pre-order] 'Mark as Paid' for In-Store Preorders
 Source: jira | Key: OMNI-1242 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Fiona U | Labels: Preorder | polaris-work-item-link: PA-330 | Last Updated: 2026-03-20T14:58:59.120852+00:00
 **Jira Ticket Summary: OMNI-1242 [Pre-order] 'Mark as Paid' for In-Store Preorders**
 
@@ -1461,7 +1440,7 @@ Source: jira | Key: OMNI-1242 | Status: Backlog (To Do) | Type: Idea | Priority:
 *   **Key Personnel:** Fiona U, Rajesh Dobariya, Gopalakrishna Dhulipati, Danielle Lee, Qiuyan Tian, Ravi Goel, Prajney Sribhashyam.
 
 
-## [45/57] Optimising Airway Bill Generation Experience for Seller
+## [44/57] Optimising Airway Bill Generation Experience for Seller
 Source: jira | Key: OMNI-1334 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Prajney Sribhashyam | Reporter: Prajney Sribhashyam | Last Updated: 2026-03-20T14:59:11.894061+00:00
 **Daily Briefing Summary: OMNI-1334**
 
@@ -1491,7 +1470,7 @@ The ticket originally proposed an "Idea" to allow FP Marketplace sellers to gene
 *   **Reviewer:** Koklin Gan
 
 
-## [46/57] [POC] Enabling PalmPay to allow quick checkout
+## [45/57] [POC] Enabling PalmPay to allow quick checkout
 Source: jira | Key: OMNI-1389 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Sathya Murthy Karthik | Reporter: Koklin Gan | Last Updated: 2026-03-20T14:59:18.610134+00:00
 **Daily Briefing: OMNI-1389**
 
@@ -1508,7 +1487,7 @@ Source: jira | Key: OMNI-1389 | Status: Backlog (To Do) | Type: Idea | Priority:
     *   **Labels/Components:** None assigned
 
 
-## [47/57] Project Turbo to support new POS version
+## [46/57] Project Turbo to support new POS version
 Source: jira | Key: OMNI-1390 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Sathya Murthy Karthik | Reporter: Koklin Gan | Last Updated: 2026-03-20T14:59:36.728250+00:00
 **Daily Work Briefing: OMNI-1390**
 
@@ -1524,7 +1503,7 @@ Source: jira | Key: OMNI-1390 | Status: Backlog (To Do) | Type: Idea | Priority:
 The "Project Turbo to support new POS version" initiative (OMNI-1390) originated as a high-priority idea reported by **Koklin Gan**. While initially assigned to **Sathya Murthy Karthik**, the ticket was effectively paused and archived on **2026-01-29** by **Rajesh Dobariya**. The decision to archive confirms that the requirements have been documented in another location, rendering this specific backlog item redundant for active tracking.
 
 
-## [48/57] Integrating Tencent's  Biometric Authentication (Palm Pay) solution with FPG App for member verification  
+## [47/57] Integrating Tencent's  Biometric Authentication (Palm Pay) solution with FPG App for member verification  
 Source: jira | Key: OMNI-1353 | Status: Soft Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Aditi Rathi | Reporter: Gopal Singh | polaris-work-item-link: ENGM-2474 | Last Updated: 2026-03-20T15:00:49.870348+00:00
 **Jira Ticket Briefing: OMNI-1353 (Tencent Palm Pay Integration)**
 
@@ -1558,7 +1537,7 @@ The ticket is marked as **"Soft Prioritised" (To Do)** with **High** priority. H
 *   Key Stakeholders: Aditi Rathi (Assignee), Gopal Singh (Reporter), Koklin Gan, Sip Khoon Tan, Ryne Cheow, Sunny Lim, Aadil Baggia, Danielle Lee, Sathya Murthy Karthik.
 
 
-## [49/57] Compliance - Improving the Cart calculation logic 
+## [48/57] Compliance - Improving the Cart calculation logic 
 Source: jira | Key: OMNI-1179 | Status: Paused (To Do) | Type: Idea | Priority: High | Assignee: Alvin Choo | Reporter: Alvin Choo | Labels: Foundation | polaris-work-item-link: CART-54 | Last Updated: 2026-03-27T21:35:01.115799+00:00
 **Jira Ticket Briefing: OMNI-1179 (Compliance - Improving Cart Calculation Logic)**
 
@@ -1608,7 +1587,7 @@ Source: jira | Key: OMNI-1179 | Status: Paused (To Do) | Type: Idea | Priority: 
 *   **Assumptions Requiring Validation:** A modular architecture will accelerate expansion (Marketplace, Scan & Go) and reduce technical debt from fragmented patchwork fixes.
 
 
-## [50/57] [OSMOS only] Integrate fit-for-purpose digital signage with OSMOS for in-store ad activation (merged into another ticket)
+## [49/57] [OSMOS only] Integrate fit-for-purpose digital signage with OSMOS for in-store ad activation (merged into another ticket)
 Source: jira | Key: OMNI-1247 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Yi Hao Tan | Reporter: Nikhil Grover | polaris-merge-work-item-link: OMNI-1400, OMNI-1400 | Last Updated: 2026-03-20T15:02:19.664289+00:00
 **Daily Briefing Summary: OMNI-1247**
 
@@ -1642,7 +1621,7 @@ Primary success metrics include Fill Rate, Cost Per Mille (CPM), and total ad sl
 Originally assigned to **Yi Hao Tan**, reassignment was noted on 19 Mar 2026 for the ROOH lead, before the ticket was ultimately archived by Yi Hao Tan following the merge into OMNI-1400.
 
 
-## [51/57] Available to Promise 1.0 [MVP] - New Time-based Inventory logic
+## [50/57] Available to Promise 1.0 [MVP] - New Time-based Inventory logic
 Source: jira | Key: OMNI-1391 | Status: Discovery (To Do) | Type: Idea | Priority: High | Assignee: Yi Hao Tan | Reporter: Prajney Sribhashyam | Last Updated: 2026-03-26T21:32:35.809265+00:00
 **Jira Ticket Briefing: OMNI-1391**
 **Topic:** Available to Promise (ATP) 1.0 [MVP] – New Time-based Inventory Logic
@@ -1676,7 +1655,7 @@ The FPG application currently utilizes "Global Reservation Logic," blocking all 
 Progress remains in Discovery pending final technical alignment on inventory referencing. Following the 2026-03-26 meeting, a hybrid approach was agreed upon: utilizing "Mother DC SOH" for Ambient SKUs while retaining manual "Daily Presets" for Fresh/Van categories to prevent stock-outs and wastage. The initiative is scoped strictly to PFC and selected SKUs to rapidly reduce shrinkage and improve Sales-weighted Availability (SWA).
 
 
-## [52/57] Enabling User Consent for customer data
+## [51/57] Enabling User Consent for customer data
 Source: jira | Key: OMNI-1393 | Status: Prioritised (To Do) | Type: Idea | Priority: High | Assignee: Zi Ying Liow | Reporter: Zi Ying Liow | Last Updated: 2026-03-20T15:03:22.292737+00:00
 **Jira Briefing: OMNI-1393**
 
@@ -1708,7 +1687,7 @@ The initiative aimed to implement an opt-in/out consent toggle within the prefer
 Ticket OMNI-1393 is no longer active due to the merge into **OMNI-1394**. The original scope involved high-priority compliance and revenue enablement via user consent mechanisms, with initial technical dependencies identified for a 2-week Martech development cycle.
 
 
-## [53/57] ROOH 2.0 - Sourcing and Implementation of best-in-class In-Store Ad booking, management, attribution platform
+## [52/57] ROOH 2.0 - Sourcing and Implementation of best-in-class In-Store Ad booking, management, attribution platform
 Source: jira | Key: OMNI-1400 | Status: Discovery (To Do) | Type: Idea | Priority: High | Assignee: Yi Hao Tan | Reporter: Nikhil Grover | polaris-merge-work-item-link: OMNI-1247, OMNI-1247 | Last Updated: 2026-03-26T21:32:53.974685+00:00
 **Daily Briefing Summary: OMNI-1400**
 
@@ -1748,7 +1727,7 @@ The initiative addresses the lack of performance benchmarks in current In-Store 
 *   **Vendor Selection:** The "best-in-class" platform has not yet been selected or implemented; the ticket remains in the "Idea" phase.
 
 
-## [54/57] [OSMOS Only] Streamline seller/brand onboarding on OSMOS
+## [53/57] [OSMOS Only] Streamline seller/brand onboarding on OSMOS
 Source: jira | Key: OMNI-1405 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Nikhil Grover | Reporter: Nikhil Grover | Last Updated: 2026-03-20T15:04:19.359510+00:00
 **Daily Briefing Summary: OMNI-1405**
 
@@ -1787,7 +1766,7 @@ Source: jira | Key: OMNI-1405 | Status: Backlog (To Do) | Type: Idea | Priority:
 *   **Current Workflow:** CSV upload -> Vendor mapping (3-day SLA) -> SKU marking in DBP -> BQ data pull -> Hourly catalog sync.
 
 
-## [55/57] [1hd] Phase 2 -  Scaling one hour delivery to more stores (TO REMOVE)
+## [54/57] [1hd] Phase 2 -  Scaling one hour delivery to more stores (TO REMOVE)
 Source: jira | Key: OMNI-1428 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Rajesh Dobariya | polaris-work-item-link: DPD-627 | Last Updated: 2026-03-20T15:04:37.778860+00:00
 **Daily Briefing Summary: OMNI-1428**
 
@@ -1814,6 +1793,29 @@ The ticket **OMNI-1428** [1hd] Phase 2 - Scaling one hour delivery to more store
 
 **Summary**
 The initiative to scale one-hour delivery to more stores via an order amendment feature (OMNI-1428) has been closed out and consolidated into **OMNI-1425**. The detailed requirement template provided in the original description is now subsumed under the merged ticket's scope. No immediate action is required on this specific record.
+
+
+## [55/57] Blocking of specific postal code from allowing customer to select for delivery address
+Source: jira | Key: OMNI-1431 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Koklin Gan | Reporter: Koklin Gan | Last Updated: 2026-04-02T09:32:04.122791+00:00
+**Briefing Summary: OMNI-1431**
+
+*   **Current Status:** The ticket remains in **Backlog (To Do)** but has been escalated to **High** priority following an urgent directive from leadership. It is classified as an **Idea**. As of April 2, 2026, the item requires a clear ETA and immediate resolution; no resolution, due date, or fix versions are currently assigned.
+*   **Ownership & Assignment:** Reported by and assigned to **Koklin Gan** (created March 19, 2026). On March 19, **Sathya Murthy Karthik** confirmed adding the item to a tracking list. Most recently, on April 2, 2026, **Fion Tan** flagged the ticket's stagnation in the Backlog and mandated an immediate solution with a defined timeline.
+*   **Pending Actions:** Immediate action is required to finalize the proposal template sections (Opportunity/Problem definition, Solution Summary, Business Impact, Product Metrics, Operational Processes, Business Plans, and Business Rules) prior to advancement. The ticket is currently blocked by incomplete template fields despite the urgent request for a solution timeline.
+*   **Decisions Made:**
+    1.  Initial inclusion in the prioritization list confirmed by **Sathya Murthy Karthik** (March 19, 2026).
+    2.  Critical directive issued by **Fion Tan** (April 2, 2026) to raise the ticket for immediate resolution with a clear ETA.
+*   **Technical Scope & Logic:**
+    *   **Feature:** Block specific high-risk or restricted postal codes to prevent fraud and operational costs, supporting a "Risk-Based Approach" for money laundering prevention.
+    *   **Required Logic:**
+        1.  Prevent checkout if a newly inputted postal code in the entry module is on the restricted list.
+        2.  Prevent checkout if a customer's saved address matches a restricted postal code.
+        3.  Block customers immediately at the checkout page if their existing postal code is on the restricted list.
+    *   **Admin Capability:** Administrators must be able to add or remove codes from the restricted list via backoffice settings.
+*   **Problem Definition & Goals:** The feature aims to notify users immediately upon entering a high-risk postal code during checkout or address entry. This mitigates fraudulent activity and avoids costs associated with undeliverable orders, fulfilling duties regarding sanctioned entities and fraudulent clusters.
+*   **Key Dates & Blockers:**
+    *   **Last Activity:** April 2, 2026 (Escalation request and deadline pressure).
+    *   **Blocker:** Incomplete template fields preventing pitch; stalled status in Backlog despite high priority.
 
 
 ## [56/57] Adhere to alcohol act compliance 
