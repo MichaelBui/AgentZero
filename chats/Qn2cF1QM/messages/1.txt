@@ -1,10 +1,16 @@
 [gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:13364) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:13764) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
+[Fetching 1/3] [Dashboard Report] Retail Media - DD Dashboard | Fri 3 Apr 11:00AM +08 (summarization pending)
+[Fetched 1/3] [Dashboard Report] Retail Media - DD Dashboard | Fri 3 Apr 1 - queued for summarization (pipeline running)
+[Fetching 2/3] Re: Hyper stores visual - Advertima (summarization pending)
+[Fetched 2/3] Re: Hyper stores visual - Advertima - queued for summarization (pipeline running)
+[Fetching 3/3] Updates to Notion’s Terms (summarization pending)
+[Fetch failed 3/3] Thread 19d50f4f7945d100 - skipped after retry
 
 ============================================================
 [gmail_reader] ALL DONE - output file is ready for use.
-Fetched: 0 thread(s) | total scanned: 24
+Fetched: 2 thread(s) | total scanned: 20
 ============================================================
 
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
