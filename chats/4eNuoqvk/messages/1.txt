@@ -1,13 +1,8 @@
-[2026-04-02T09:31:49+0000] [Summarized 52/57] OMNI-1400: using cached summary
-[2026-04-02T09:31:49+0000] [Summarized 53/57] OMNI-1405: using cached summary
-[2026-04-02T09:31:49+0000] [Summarized 54/57] OMNI-1428: using cached summary
-[2026-04-02T09:31:49+0000] [Summarizing 55/57] OMNI-1431: AI summarizing (2 items, existing_summary=yes)...
-[2026-04-02T09:32:04+0000] [Summarized 55/57] OMNI-1431: done
-[2026-04-02T09:32:04+0000] [Summarized 56/57] OMNI-1432: using cached summary
-[2026-04-02T09:32:04+0000] [Summarized 57/57] OMNI-1433: using cached summary
-[2026-04-02T09:32:04+0000] ============================================================
-[2026-04-02T09:32:04+0000] STATUS: COMPLETED - Jira Reader pipeline finished successfully (57 unique tickets)
-[2026-04-02T09:32:04+0000] ============================================================
+[2026-04-03T13:30:54+0000] [Summarized 56/57] OMNI-1432: using cached summary
+[2026-04-03T13:30:54+0000] [Summarized 57/57] OMNI-1433: using cached summary
+[2026-04-03T13:30:54+0000] ============================================================
+[2026-04-03T13:30:54+0000] STATUS: COMPLETED - Jira Reader pipeline finished successfully (57 unique tickets)
+[2026-04-03T13:30:54+0000] ============================================================
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
 
 [SYSTEM: Returning control to agent after 180 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
