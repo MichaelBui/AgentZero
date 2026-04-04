@@ -1,0 +1,23 @@
+/a0/usr/workdir/jira-output.md 1889 lines
+>>>
+ 1 
+ 2 
+ 3 ## [1/57] [BCRS] Inform customers on BCRS deposit during Order Placement & Returns/Refunds Process
+ 4 Source: jira | Key: DPD-225 | Status: Done (Done) | Type: Epic | Priority: High | Reporter: Andin Eswarlal Rajesh | Due: 2026-03-26 | Resolution: Done | discovery---connected: NEDMT-2334 | parent: DPD-383 | polaris-work-item-link: OMNI-1294, OMNI-1294 | relates: DPD-26 | Last Updated: 2026-04-03T09:30:59.550574+00:00
+ 5 **Daily Briefing: DPD-225 [BCRS] Inform customers on BCRS deposit during Order Placement & Returns/Refunds Process**
+ 6 
+ 7 *   **Current Status:** **DONE** (High Priority Epic). Resolution is "Done." Due date remains **March 26, 2026**.
+ 8     *   *Context:* This initiative successfully integrated Singapore's mandatory $0.10 refundable Beverage Container Return Scheme (BCRS) into core systems ahead of the official launch. While the title references customer notifications, the strategic execution focused on backend data integrity: flagging BCRS products in Mirakl, synchronizing flags to SAP, and updating sales reporting for accurate revenue tracking.
+ 9 
+10 *   **Pending Actions & Ownership:**
+11     *   **Documentation Status:** The "Technical Documents" section (Order Experience, Cart/Checkout, Product Catalogue, UAT Products, Feature Flags) remains empty in the source records.
+12     *   **Design Alignment:** The "Design" reference field remains blank. Specific UI elements (checkboxes/flags for Mirakl product creation) were implemented within the delivered scope despite the lack of a formalized design reference.
+13     *   **Synchronization Verification:** The automated sync process between Mirakl and SAP has been delivered to ensure BCRS flag consistency.
+14     *   **Ownership:** Reported by **Andin Eswarlal Rajesh**. No assignee is currently listed.
+15 
+16 *   **Key Decisions & Milestones:**
+17     *   **Scope Confirmation:** The project strictly defined three deliverables: (1) A new UI element (checkbox/flag) within the Mirakl product creation/update flow for BCRS products; (2) An automated synchronization process between Mirakl and SAP; and (3) Modifications to existing sales reporting to include dedicated fields/filters for BCRS tracking.
+18     *   **Strategic Value:** Deliverables ensure regulatory compliance, operational efficiency by reducing manual entry risks, financial accuracy for auditable BCRS revenue/fee calculations, and improved data integrity.
+19     *   **Sub-task Reference:** A related strategic sub-issue, **[BCRS] Marketplace products create and update**, was moved from the main ticket for reference but remains linked to this epic's objectives.
+20 
+<<<
