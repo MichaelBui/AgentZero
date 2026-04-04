@@ -1,16 +1,12 @@
 [gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:13926) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:14222) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[Fetching 1/3] Issue with Missing UBID (summarization pending)
-[Fetched 1/3] Issue with Missing UBID - queued for summarization (pipeline running)
-[Fetching 2/3] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod (summarization pending)
-[Fetched 2/3] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-serv - queued for summarization (pipeline running)
-[Fetching 3/3] Updates to Notion’s Terms (summarization pending)
-[Fetched 3/3] Updates to Notion’s Terms - queued for summarization (pipeline running)
+[Fetching 1/1] [RAW Overdue] Expired Risk Acceptance & Waiver Form (summarization pending)
+[Fetched 1/1] [RAW Overdue] Expired Risk Acceptance & Waiver Form - queued for summarization (pipeline running)
 
 ============================================================
 [gmail_reader] ALL DONE - output file is ready for use.
-Fetched: 3 thread(s) | total scanned: 17
+Fetched: 1 thread(s) | total scanned: 14
 ============================================================
 
 (venv) root@80e3e99df9ff:/a0/usr/workdir#
