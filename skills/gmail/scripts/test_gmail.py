@@ -629,25 +629,111 @@ def test_format_summary_block(subtests):
                 assert part in result, f"'{part}' not in result: {result}"
 
 
-def test_write_output(subtests, db, tmp_path):
-    _seed_thread(db, "t_out1", n_msgs=1)
-    _seed_thread(db, "t_out2", n_msgs=1)
-    db.upsert_summary("t_out1", "gmail", "High", "High summary",
-                       mention_type="direct", estimated_relevance=9, final_relevance=9)
-    db.upsert_summary("t_out2", "gmail", "Low", "Low summary",
-                       mention_type="none", estimated_relevance=2, final_relevance=2)
+def test_write_output(subtests):
     cases = [
         ("When min_relevance=6 then filters low relevance items",
-         tmp_path / "out1.md", 6, None, 1, "High summary"),
-        ("When min_relevance=0 then includes all",
-         tmp_path / "out2.md", 0, None, 2, "Low summary"),
+         lambda d: (
+             _seed_thread(d, "t_hi", n_msgs=1),
+             _seed_thread(d, "t_lo", n_msgs=1),
+             d.upsert_summary("t_hi", "gmail", "High", "High summary",
+                              {"labels": ["inbox"], "senders": [{"name": "Alice", "email": "a@b.com"}],
+                               "work_items": ["DPD-1"], "people": ["Bob"], "last_message_id": "m1"},
+                              mention_type="direct", estimated_relevance=9, final_relevance=9),
+             d.upsert_summary("t_lo", "gmail", "Low", "Low summary",
+                              mention_type="none", estimated_relevance=2, final_relevance=2),
+         ),
+         6, None, 1,
+         ["High summary", "Relevance: 9/10", "Mention: direct", "Alice", "DPD-1", "Bob"]),
+
+        ("When min_relevance=0 then includes all summaries",
+         lambda d: (
+             _seed_thread(d, "t_all1", n_msgs=1),
+             _seed_thread(d, "t_all2", n_msgs=1),
+             d.upsert_summary("t_all1", "gmail", "First", "First summary",
+                              mention_type="direct", estimated_relevance=9, final_relevance=9),
+             d.upsert_summary("t_all2", "gmail", "Second", "Second summary",
+                              mention_type="none", estimated_relevance=2, final_relevance=2),
+         ),
+         0, None, 2,
+         ["First summary", "Second summary"]),
+
+        ("When since filter provided then excludes old cached items",
+         lambda d: (
+             d.upsert_summary("t_only_sum", "gmail", "Old Thread", "Old summary",
+                              mention_type="indirect", estimated_relevance=7, final_relevance=7),
+             _seed_thread(d, "t_new", n_msgs=1),
+             d.upsert_summary("t_new", "gmail", "New Thread", "New summary",
+                              mention_type="direct", estimated_relevance=8, final_relevance=8),
+         ),
+         1, "2099-01-01", 0,
+         []),
+
+        ("When metadata has AI-generated labels then displays them",
+         lambda d: (
+             _seed_thread(d, "t_labels", n_msgs=1),
+             d.upsert_summary("t_labels", "gmail", "Labels Thread", "Summary with labels",
+                              {"labels": ["team-meeting", "budget-review", "q2-planning",
+                                          "headcount-request", "engineering-ops"]},
+                              mention_type="direct", estimated_relevance=8, final_relevance=8),
+         ),
+         1, None, 1,
+         ["team-meeting", "budget-review"]),
+
+        ("When metadata has gmail labels (non-hyphenated) then shows as Gmail Labels",
+         lambda d: (
+             _seed_thread(d, "t_gmail_labels", n_msgs=1),
+             d.upsert_summary("t_gmail_labels", "gmail", "Gmail Labels", "Summary",
+                              {"labels": ["Inbox", "IMPORTANT"]},
+                              mention_type="indirect", estimated_relevance=6, final_relevance=6),
+         ),
+         1, None, 1,
+         ["Gmail Labels: Inbox, IMPORTANT"]),
+
+        ("When multiple threads then output ordered by sort_ts desc",
+         lambda d: (
+             d.upsert_atomic("gmail", "t_older", "m1", "A", "Older",
+                             "2026-03-01", "2026-03-01"),
+             d.upsert_atomic("gmail", "t_newer", "m2", "B", "Newer",
+                             "2026-04-01", "2026-04-01"),
+             d.upsert_summary("t_older", "gmail", "Older", "Older summary",
+                              mention_type="direct", estimated_relevance=8, final_relevance=8),
+             d.upsert_summary("t_newer", "gmail", "Newer", "Newer summary",
+                              mention_type="direct", estimated_relevance=8, final_relevance=8),
+         ),
+         1, None, 2,
+         ["Newer", "Older"]),
+
+        ("When thread has work_items and people then displays them",
+         lambda d: (
+             _seed_thread(d, "t_entities", n_msgs=1),
+             d.upsert_summary("t_entities", "gmail", "Entity Thread", "Summary with entities",
+                              {"work_items": ["DPD-715", "PR #649", "lt-strudel-api"],
+                               "people": ["Nikhil Grover", "Alvin Choo"],
+                               "labels": ["sprint-review", "release-planning", "api-changes",
+                                          "code-review", "deployment-issue"]},
+                              mention_type="direct", estimated_relevance=9, final_relevance=9),
+         ),
+         1, None, 1,
+         ["DPD-715", "PR #649", "Nikhil Grover", "Alvin Choo", "sprint-review"]),
+
+        ("When no summaries match then creates empty output",
+         lambda d: None,
+         9, None, 0,
+         []),
     ]
-    for scenario, path, min_rel, since, expected_count, expected_text in cases:
+    for scenario, setup_fn, min_rel, since, expected_count, expected_parts in cases:
         with subtests.test(msg=scenario):
-            gmail.write_output(db, path, min_relevance=min_rel, since=since)
-            content = path.read_text()
-            assert content.count("##") == expected_count
-            assert expected_text in content
+            fresh = gmail.open_db(":memory:")
+            if setup_fn:
+                setup_fn(fresh)
+            with tempfile.TemporaryDirectory() as tmp:
+                path = Path(tmp) / "out.md"
+                gmail.write_output(fresh, path, min_relevance=min_rel, since=since)
+                content = path.read_text()
+                assert content.count("##") == expected_count
+                for part in expected_parts:
+                    assert part in content, f"'{part}' not in output"
+            fresh.close()
 
 
 # ═════════════════════════════════════════════════════════════════════
