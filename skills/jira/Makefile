@@ -9,12 +9,10 @@ test-verbose:
 	cd $(SCRIPTS_DIR) && python3 -m pytest test_jira.py -v
 
 coverage:
-	cd $(SCRIPTS_DIR) && python3 -m coverage run --source=jira -m pytest test_jira.py -q && \
-	python3 -m coverage report --show-missing
+	cd $(SCRIPTS_DIR) && python3 -m pytest test_jira.py --cov=jira --cov-report=term-missing -q
 
 coverage-html:
-	cd $(SCRIPTS_DIR) && python3 -m coverage run --source=jira -m pytest test_jira.py -q && \
-	python3 -m coverage html && \
+	cd $(SCRIPTS_DIR) && python3 -m pytest test_jira.py --cov=jira --cov-report=html -q && \
 	echo "HTML report: $(SCRIPTS_DIR)/htmlcov/index.html"
 
 clean:

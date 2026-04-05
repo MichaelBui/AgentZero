@@ -27,7 +27,7 @@ import sys
 import threading
 import time
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
@@ -74,6 +74,11 @@ _WORD_HINTS = {"direct": 200, "indirect": 100, "none": 30}
 
 _DB_OPEN_RETRIES = 3
 _DB_RETRY_DELAY_S = 2
+
+
+def _default_lookback_days() -> int:
+    """Default 14-day lookback window for Jira tickets."""
+    return 14
 
 
 def _now_iso() -> str:
@@ -368,18 +373,29 @@ class SkillDB:
         self._retry(_do)
 
     def get_all_summaries(self, source: Optional[str] = None,
-                          min_relevance: Optional[int] = None) -> list[dict]:
+                          min_relevance: Optional[int] = None,
+                          since: Optional[str] = None) -> list[dict]:
         with self._lock:
             conditions, params = [], []
             if source:
-                conditions.append("source=?")
+                conditions.append("rs.source=?")
                 params.append(source)
             if min_relevance is not None:
-                conditions.append("final_relevance >= ?")
+                conditions.append("rs.final_relevance >= ?")
                 params.append(min_relevance)
+            if since:
+                conditions.append("COALESCE(ac_latest.max_updated, rs.summarized_at) >= ?")
+                params.append(since)
             where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
             rows = self._conn.execute(
-                f"SELECT * FROM resource_summary{where} ORDER BY final_relevance DESC, summarized_at DESC",
+                f"""SELECT rs.*, COALESCE(ac_latest.max_updated, rs.summarized_at) AS sort_ts
+                    FROM resource_summary rs
+                    LEFT JOIN (
+                        SELECT resource_id, MAX(updated_at) AS max_updated
+                        FROM atomic_content GROUP BY resource_id
+                    ) ac_latest ON rs.resource_id = ac_latest.resource_id
+                    {where}
+                    ORDER BY sort_ts DESC""",
                 params,
             ).fetchall()
         return [dict(r) for r in rows]
@@ -633,7 +649,7 @@ def validate_env() -> tuple[str, str]:
     if not email or not api_key:
         log("ERROR: Missing JIRA_EMAIL or JIRA_API_KEY")
         sys.exit(1)
-    log(f"Jira auth: {email}, key={api_key[:3]}...{api_key[-3:]}")
+    log(f"Auth: {email}")
     return email, api_key
 
 
@@ -1020,7 +1036,7 @@ def _summarize_one(db: SkillDB, key: str, force: bool = False,
                 break
 
     mention_type = db.compute_mention_type(key)
-    log(f"[{current}/{total}] {key}: summarizing ({len(items)} items, mention={mention_type})...")
+    log(f"Summarizing [{current}/{total}] {key} ({len(items)} items, {mention_type})")
 
     result = summarize_resource(
         title=f"{key}: {title}" if title else key,
@@ -1045,7 +1061,7 @@ def _summarize_one(db: SkillDB, key: str, force: bool = False,
         estimated_relevance=result.relevance,
         final_relevance=result.relevance,
     )
-    log(f"[{current}/{total}] {key}: done (relevance={result.relevance})")
+    log(f"Done [{current}/{total}] {key} rel={result.relevance}")
 
 
 def _summarize_worker(q: "_queue.Queue", db: SkillDB, force: bool, errors: list) -> None:
@@ -1135,15 +1151,16 @@ def _format_summary_block(db: SkillDB, key: str, s: dict, idx: int, total: int) 
     return f"\n\n## {header}\n{' | '.join(parts)}\n{s.get('summary', '')}"
 
 
-def write_output(db: SkillDB, output_path: Path) -> None:
-    summaries = db.get_all_summaries(source="jira")
+def write_output(db: SkillDB, output_path: Path, min_relevance: int = 6,
+                  since: Optional[str] = None) -> None:
+    summaries = db.get_all_summaries(source="jira", min_relevance=min_relevance, since=since)
     total = len(summaries)
     lines = []
     for idx, s in enumerate(summaries, 1):
         lines.append(_format_summary_block(db, s["resource_id"], s, idx, total))
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text("".join(lines), encoding="utf-8")
-    log(f"Output written: {output_path} ({total} summaries)")
+    log(f"Output: {output_path} ({total} summaries, min_relevance={min_relevance})")
 
 
 # ═════════════════════════════════════════════════════════════════════
@@ -1158,12 +1175,18 @@ def main():
     parser.add_argument("--limit", type=int, default=200, help="Max tickets per source")
     parser.add_argument("--offset", type=int, default=0)
     parser.add_argument("--no-cache", action="store_true", help="Bypass view JQL cache")
-    parser.add_argument("--force", action="store_true", help="Re-fetch and re-summarize everything")
-    parser.add_argument("--cached-only", action="store_true", help="Output from DB only, no API calls")
+    parser.add_argument("--days", type=int, default=None,
+                        help="Lookback days (default: 14)")
+    parser.add_argument("--force", action="store_true", help="Clear summaries and re-summarize (keeps cached content)")
+    parser.add_argument("--cached-only", action="store_true", help="Output from DB only, no API calls or summarization")
+    parser.add_argument("--min-relevance", type=int, default=6, help="Minimum relevance to include in output (default: 6)")
     parser.add_argument("--output", default=str(_WORKDIR / "jira-output.md"), help="Output .md path")
     args = parser.parse_args()
 
     output_path = Path(args.output)
+    days = args.days if args.days is not None else _default_lookback_days()
+    since_dt = datetime.now(_TZ) - timedelta(days=days)
+    since_iso = since_dt.strftime("%Y-%m-%d")
 
     # Ensure no stale output exists while script is running
     if output_path.exists():
@@ -1171,16 +1194,33 @@ def main():
 
     db = open_db()
 
-    if args.force:
-        log("--force: clearing summaries for re-generation (atomic content preserved)")
-        db.clear_all_summaries()
+    log(f"STARTED (days={days}, since={since_iso})")
 
-    log("STARTED - Jira skill")
+    if args.force:
+        count = db.clear_all_summaries()
+        log(f"--force: cleared {count} summaries (cached content preserved)")
 
     try:
         if args.cached_only:
-            write_output(db, output_path)
+            write_output(db, output_path, min_relevance=args.min_relevance, since=since_iso)
             log("COMPLETED (cached-only)")
+            return
+
+        if args.force:
+            resource_ids = db.get_all_resource_ids()
+            log(f"--force: re-summarizing {len(resource_ids)} cached resources (no API fetch)")
+            pipeline = _Pipeline(db, force=True)
+            pipeline.set_total(len(resource_ids))
+            for key in resource_ids:
+                pipeline.put(key)
+            errors = pipeline.finish()
+            if errors:
+                log(f"COMPLETED WITH ERRORS ({len(resource_ids)} resources, {len(errors)} error(s))")
+                for e in errors:
+                    log(f"  ERROR: {e}")
+                sys.exit(1)
+            write_output(db, output_path, min_relevance=args.min_relevance, since=since_iso)
+            log(f"COMPLETED --force ({len(resource_ids)} resources)")
             return
 
         email, api_key = validate_env()
@@ -1200,50 +1240,54 @@ def main():
             log("No sources provided. Use --filter-id, --view-id, or --jql.")
             return
 
-        # Fetch phase
         all_issues: list[tuple[str, list]] = []
         for label, jql in jql_sources:
-            log(f"Fetching: {label}")
             issues, total = fetch_issues(jql, args.limit, args.offset, headers)
-            log(f"  {len(issues)}/{total} issues from {label}")
+            log(f"Fetched {len(issues)}/{total} from {label}")
             all_issues.append((label, issues))
 
-        # Deduplicate and count
         seen: set[str] = set()
         unique_count = 0
+        skipped_old = 0
         for _, issues in all_issues:
             for raw in issues:
                 k = raw.get("key", "")
-                if k and k not in seen:
-                    seen.add(k)
-                    unique_count += 1
-        log(f"Total unique tickets: {unique_count}")
+                if not k or k in seen:
+                    continue
+                seen.add(k)
+                api_updated = raw.get("fields", {}).get("updated", "")
+                if api_updated and api_updated[:10] < since_iso:
+                    skipped_old += 1
+                    continue
+                unique_count += 1
 
-        # Cache and queue for summarization
-        pipeline = _Pipeline(db, force=args.force)
+        pipeline = _Pipeline(db, force=False)
         pipeline.set_total(unique_count)
         seen.clear()
         unchanged: list[str] = []
-        fetch_idx = 0
+        changed_count = 0
 
-        for label, issues in all_issues:
+        for _, issues in all_issues:
             for raw in issues:
                 key = raw.get("key", "")
                 if key in seen:
                     continue
                 seen.add(key)
-                fetch_idx += 1
 
                 api_updated = raw.get("fields", {}).get("updated", "")
-                if not args.force and not db.has_content_changed(key, api_updated):
-                    log(f"[{fetch_idx}/{unique_count}] {key}: unchanged")
+                if api_updated and api_updated[:10] < since_iso:
+                    continue
+
+                if not db.has_content_changed(key, api_updated):
                     unchanged.append(key)
                     continue
 
                 issue = format_issue(raw)
                 cache_issue(db, issue)
-                log(f"[{fetch_idx}/{unique_count}] {key}: cached -> summarize")
+                changed_count += 1
                 pipeline.put(key)
+
+        log(f"Tickets: {unique_count} recent, {changed_count} changed, {len(unchanged)} cached, {skipped_old} older than {since_iso}")
 
         for key in unchanged:
             pipeline.put(key)
@@ -1256,7 +1300,7 @@ def main():
                 log(f"  ERROR: {e}")
             sys.exit(1)
 
-        write_output(db, output_path)
+        write_output(db, output_path, min_relevance=args.min_relevance, since=since_iso)
         log(f"COMPLETED ({len(seen)} tickets)")
 
     except Exception as e:
