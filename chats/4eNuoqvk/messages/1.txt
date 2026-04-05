@@ -1,10 +1,237 @@
-[1] 13004
-(venv) root@9b542f9f414e:/a0/usr/workdir# Jira sync started in background (PID: 13004). Monitoring for completion...
-(venv) root@9b542f9f414e:/a0/usr/workdir# [2026-04-05T05:30:50+0000] [Summarized 56/57] OMNI-1432: using cached summary
-[2026-04-05T05:30:50+0000] [Summarized 57/57] OMNI-1433: using cached summary
-[2026-04-05T05:30:50+0000] ============================================================
-[2026-04-05T05:30:50+0000] STATUS: COMPLETED - Jira Reader pipeline finished successfully (57 unique tickets)
-[2026-04-05T05:30:50+0000] ============================================================
-(venv) root@9b542f9f414e:/a0/usr/workdir#
-
-[SYSTEM: Returning control to agent after 180 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+/a0/usr/workdir/jira-debug.log 239 lines
+>>>
+ 1 [jira_reader] STARTED - fetching and summarizing Jira tickets. Do NOT interrupt or move on.
+ 2 [Fetching 1/57] DPD-225 (summarization pending)
+ 3 [Fetched 1/57] DPD-225: unchanged (cached) - summarization pending
+ 4 [Fetching 2/57] DPD-807 (summarization pending)
+ 5 [Fetched 2/57] DPD-807: unchanged (cached) - summarization pending
+ 6 [Fetching 3/57] DPD-838 (summarization pending)
+ 7 [Fetched 3/57] DPD-838: unchanged (cached) - summarization pending
+ 8 [Fetching 4/57] DPD-715 (summarization pending)
+ 9 [Fetched 4/57] DPD-715: unchanged (cached) - summarization pending
+10 [Fetching 5/57] DPD-733 (summarization pending)
+11 [Fetched 5/57] DPD-733: unchanged (cached) - summarization pending
+12 [Fetching 6/57] DPD-842 (summarization pending)
+13 [Fetched 6/57] DPD-842: unchanged (cached) - summarization pending
+14 [Fetching 7/57] DPD-383 (summarization pending)
+15 [Fetched 7/57] DPD-383: unchanged (cached) - summarization pending
+16 [Fetching 8/57] DPD-644 (summarization pending)
+17 [Fetched 8/57] DPD-644: unchanged (cached) - summarization pending
+18 [Fetching 9/57] OMNI-1294 (summarization pending)
+19 [Fetched 9/57] OMNI-1294: unchanged (cached) - summarization pending
+20 [Fetching 10/57] OMNI-1191 (summarization pending)
+21 [Fetched 10/57] OMNI-1191: unchanged (cached) - summarization pending
+22 [Fetching 11/57] DPD-734 (summarization pending)
+23 [Fetched 11/57] DPD-734: unchanged (cached) - summarization pending
+24 [Fetching 12/57] DPD-645 (summarization pending)
+25 [Fetched 12/57] DPD-645: unchanged (cached) - summarization pending
+26 [Fetching 13/57] OPCO-1940 (summarization pending)
+27 [Fetched 13/57] OPCO-1940: unchanged (cached) - summarization pending
+28 [Fetching 14/57] DPD-700 (summarization pending)
+29 [Fetched 14/57] DPD-700: unchanged (cached) - summarization pending
+30 [Fetching 15/57] DPD-551 (summarization pending)
+31 [Fetched 15/57] DPD-551: unchanged (cached) - summarization pending
+32 [Fetching 16/57] DPD-631 (summarization pending)
+33 [Fetched 16/57] DPD-631: unchanged (cached) - summarization pending
+34 [Fetching 17/57] DPD-591 (summarization pending)
+35 [Fetched 17/57] DPD-591: unchanged (cached) - summarization pending
+36 [Fetching 18/57] DPD-273 (summarization pending)
+37 [Fetched 18/57] DPD-273: unchanged (cached) - summarization pending
+38 [Fetching 19/57] DPD-590 (summarization pending)
+39 [Fetched 19/57] DPD-590: unchanged (cached) - summarization pending
+40 [Fetching 20/57] QE-1105 (summarization pending)
+41 [Fetched 20/57] QE-1105: unchanged (cached) - summarization pending
+42 [Fetching 21/57] DPD-519 (summarization pending)
+43 [Fetched 21/57] DPD-519: unchanged (cached) - summarization pending
+44 [Fetching 22/57] DPD-221 (summarization pending)
+45 [Fetched 22/57] DPD-221: unchanged (cached) - summarization pending
+46 [Fetching 23/57] NEDMT-2288 (summarization pending)
+47 [Fetched 23/57] NEDMT-2288: unchanged (cached) - summarization pending
+48 [Fetching 24/57] DPD-431 (summarization pending)
+49 [Fetched 24/57] DPD-431: unchanged (cached) - summarization pending
+50 [Fetching 25/57] OMNI-1249 (summarization pending)
+51 [Fetched 25/57] OMNI-1249: unchanged (cached) - summarization pending
+52 [Fetching 26/57] OMNI-1363 (summarization pending)
+53 [Fetched 26/57] OMNI-1363: unchanged (cached) - summarization pending
+54 [Fetching 27/57] OMNI-1362 (summarization pending)
+55 [Fetched 27/57] OMNI-1362: unchanged (cached) - summarization pending
+56 [Fetching 28/57] OMNI-1407 (summarization pending)
+57 [Fetched 28/57] OMNI-1407: unchanged (cached) - summarization pending
+58 [Fetching 29/57] OMNI-1345 (summarization pending)
+59 [Fetched 29/57] OMNI-1345: unchanged (cached) - summarization pending
+60 [Fetching 30/57] OMNI-1296 (summarization pending)
+61 [Fetched 30/57] OMNI-1296: unchanged (cached) - summarization pending
+62 [Fetching 31/57] OMNI-1425 (summarization pending)
+63 [Fetched 31/57] OMNI-1425: unchanged (cached) - summarization pending
+64 [Fetching 32/57] OMNI-1414 (summarization pending)
+65 [Fetched 32/57] OMNI-1414: unchanged (cached) - summarization pending
+66 [Fetching 33/57] OMNI-1421 (summarization pending)
+67 [Fetched 33/57] OMNI-1421: unchanged (cached) - summarization pending
+68 [Fetching 34/57] OMNI-1427 (summarization pending)
+69 [Fetched 34/57] OMNI-1427: unchanged (cached) - summarization pending
+70 [Fetching 35/57] OMNI-1416 (summarization pending)
+71 [Fetched 35/57] OMNI-1416: unchanged (cached) - summarization pending
+72 [Fetching 36/57] OMNI-1300 (summarization pending)
+73 [Fetched 36/57] OMNI-1300: unchanged (cached) - summarization pending
+74 [Fetching 37/57] OMNI-1235 (summarization pending)
+75 [Fetched 37/57] OMNI-1235: unchanged (cached) - summarization pending
+76 [Fetching 38/57] OMNI-1153 (summarization pending)
+77 [Fetched 38/57] OMNI-1153: unchanged (cached) - summarization pending
+78 [Fetching 39/57] OMNI-1246 (summarization pending)
+79 [Fetched 39/57] OMNI-1246: unchanged (cached) - summarization pending
+80 [Fetching 40/57] OMNI-1361 (summarization pending)
+81 [Fetched 40/57] OMNI-1361: unchanged (cached) - summarization pending
+82 [Fetching 41/57] OMNI-1227 (summarization pending)
+83 [Fetched 41/57] OMNI-1227: unchanged (cached) - summarization pending
+84 [Fetching 42/57] OMNI-1208 (summarization pending)
+85 [Fetched 42/57] OMNI-1208: unchanged (cached) - summarization pending
+86 [Fetching 43/57] OMNI-1242 (summarization pending)
+87 [Fetched 43/57] OMNI-1242: unchanged (cached) - summarization pending
+88 [Fetching 44/57] OMNI-1334 (summarization pending)
+89 [Fetched 44/57] OMNI-1334: unchanged (cached) - summarization pending
+90 [Fetching 45/57] OMNI-1389 (summarization pending)
+91 [Fetched 45/57] OMNI-1389: unchanged (cached) - summarization pending
+92 [Fetching 46/57] OMNI-1390 (summarization pending)
+93 [Fetched 46/57] OMNI-1390: unchanged (cached) - summarization pending
+94 [Fetching 47/57] OMNI-1353 (summarization pending)
+95 [Fetched 47/57] OMNI-1353: unchanged (cached) - summarization pending
+96 [Fetching 48/57] OMNI-1179 (summarization pending)
+97 [Fetched 48/57] OMNI-1179: unchanged (cached) - summarization pending
+98 [Fetching 49/57] OMNI-1247 (summarization pending)
+99 [Fetched 49/57] OMNI-1247: unchanged (cached) - summarization pending
+100 [Fetching 50/57] OMNI-1391 (summarization pending)
+101 [Fetched 50/57] OMNI-1391: unchanged (cached) - summarization pending
+102 [Fetching 51/57] OMNI-1393 (summarization pending)
+103 [Fetched 51/57] OMNI-1393: unchanged (cached) - summarization pending
+104 [Fetching 52/57] OMNI-1400 (summarization pending)
+105 [Fetched 52/57] OMNI-1400: unchanged (cached) - summarization pending
+106 [Fetching 53/57] OMNI-1405 (summarization pending)
+107 [Fetched 53/57] OMNI-1405: unchanged (cached) - summarization pending
+108 [Fetching 54/57] OMNI-1428 (summarization pending)
+109 [Fetched 54/57] OMNI-1428: unchanged (cached) - summarization pending
+110 [Fetching 55/57] OMNI-1431 (summarization pending)
+111 [Fetched 55/57] OMNI-1431: unchanged (cached) - summarization pending
+112 [Fetching 56/57] OMNI-1432 (summarization pending)
+113 [Fetched 56/57] OMNI-1432: unchanged (cached) - summarization pending
+114 [Fetching 57/57] OMNI-1433 (summarization pending)
+115 [Fetched 57/57] OMNI-1433: unchanged (cached) - summarization pending
+116 
+117 ============================================================
+118 [jira_reader] ALL DONE - output file is ready for use.
+119 Processed: 57 unique tickets
+120 ============================================================
+121 
+122 ched 29/57] OMNI-1345: unchanged - summarization pending
+123 [2026-04-05T13:30:23+0000] [Fetching 30/57] OMNI-1296 (summarization pending)
+124 [2026-04-05T13:30:23+0000] [Fetched 30/57] OMNI-1296: unchanged - summarization pending
+125 [2026-04-05T13:30:23+0000] [Fetching 31/57] OMNI-1425 (summarization pending)
+126 [2026-04-05T13:30:23+0000] [Fetched 31/57] OMNI-1425: unchanged - summarization pending
+127 [2026-04-05T13:30:23+0000] [Fetching 32/57] OMNI-1414 (summarization pending)
+128 [2026-04-05T13:30:23+0000] [Fetched 32/57] OMNI-1414: unchanged - summarization pending
+129 [2026-04-05T13:30:23+0000] [Fetching 33/57] OMNI-1421 (summarization pending)
+130 [2026-04-05T13:30:23+0000] [Fetched 33/57] OMNI-1421: unchanged - summarization pending
+131 [2026-04-05T13:30:23+0000] [Fetching 34/57] OMNI-1427 (summarization pending)
+132 [2026-04-05T13:30:23+0000] [Fetched 34/57] OMNI-1427: unchanged - summarization pending
+133 [2026-04-05T13:30:23+0000] [Fetching 35/57] OMNI-1416 (summarization pending)
+134 [2026-04-05T13:30:23+0000] [Fetched 35/57] OMNI-1416: unchanged - summarization pending
+135 [2026-04-05T13:30:23+0000] [Fetching 36/57] OMNI-1300 (summarization pending)
+136 [2026-04-05T13:30:23+0000] [Fetched 36/57] OMNI-1300: unchanged - summarization pending
+137 [2026-04-05T13:30:23+0000] [Fetching 37/57] OMNI-1235 (summarization pending)
+138 [2026-04-05T13:30:23+0000] [Fetched 37/57] OMNI-1235: unchanged - summarization pending
+139 [2026-04-05T13:30:23+0000] [Fetching 38/57] OMNI-1153 (summarization pending)
+140 [2026-04-05T13:30:23+0000] [Fetched 38/57] OMNI-1153: unchanged - summarization pending
+141 [2026-04-05T13:30:23+0000] [Fetching 39/57] OMNI-1246 (summarization pending)
+142 [2026-04-05T13:30:23+0000] [Fetched 39/57] OMNI-1246: unchanged - summarization pending
+143 [2026-04-05T13:30:23+0000] [Fetching 40/57] OMNI-1361 (summarization pending)
+144 [2026-04-05T13:30:23+0000] [Fetched 40/57] OMNI-1361: unchanged - summarization pending
+145 [2026-04-05T13:30:23+0000] [Fetching 41/57] OMNI-1227 (summarization pending)
+146 [2026-04-05T13:30:23+0000] [Fetched 41/57] OMNI-1227: unchanged - summarization pending
+147 [2026-04-05T13:30:23+0000] [Fetching 42/57] OMNI-1208 (summarization pending)
+148 [2026-04-05T13:30:23+0000] [Fetched 42/57] OMNI-1208: unchanged - summarization pending
+149 [2026-04-05T13:30:23+0000] [Fetching 43/57] OMNI-1242 (summarization pending)
+150 [2026-04-05T13:30:23+0000] [Fetched 43/57] OMNI-1242: unchanged - summarization pending
+151 [2026-04-05T13:30:23+0000] [Fetching 44/57] OMNI-1334 (summarization pending)
+152 [2026-04-05T13:30:23+0000] [Fetched 44/57] OMNI-1334: unchanged - summarization pending
+153 [2026-04-05T13:30:23+0000] [Fetching 45/57] OMNI-1389 (summarization pending)
+154 [2026-04-05T13:30:23+0000] [Fetched 45/57] OMNI-1389: unchanged - summarization pending
+155 [2026-04-05T13:30:23+0000] [Fetching 46/57] OMNI-1390 (summarization pending)
+156 [2026-04-05T13:30:23+0000] [Fetched 46/57] OMNI-1390: unchanged - summarization pending
+157 [2026-04-05T13:30:23+0000] [Fetching 47/57] OMNI-1353 (summarization pending)
+158 [2026-04-05T13:30:23+0000] [Fetched 47/57] OMNI-1353: unchanged - summarization pending
+159 [2026-04-05T13:30:23+0000] [Fetching 48/57] OMNI-1179 (summarization pending)
+160 [2026-04-05T13:30:23+0000] [Fetched 48/57] OMNI-1179: unchanged - summarization pending
+161 [2026-04-05T13:30:23+0000]   OMNI-1191: duplicate, skipping
+162 [2026-04-05T13:30:23+0000] [Fetching 49/57] OMNI-1247 (summarization pending)
+163 [2026-04-05T13:30:23+0000] [Fetched 49/57] OMNI-1247: unchanged - summarization pending
+164 [2026-04-05T13:30:23+0000] [Fetching 50/57] OMNI-1391 (summarization pending)
+165 [2026-04-05T13:30:23+0000] [Fetched 50/57] OMNI-1391: unchanged - summarization pending
+166 [2026-04-05T13:30:23+0000] [Fetching 51/57] OMNI-1393 (summarization pending)
+167 [2026-04-05T13:30:23+0000] [Fetched 51/57] OMNI-1393: unchanged - summarization pending
+168 [2026-04-05T13:30:23+0000] [Fetching 52/57] OMNI-1400 (summarization pending)
+169 [2026-04-05T13:30:23+0000] [Fetched 52/57] OMNI-1400: unchanged - summarization pending
+170 [2026-04-05T13:30:23+0000] [Fetching 53/57] OMNI-1405 (summarization pending)
+171 [2026-04-05T13:30:23+0000] [Fetched 53/57] OMNI-1405: unchanged - summarization pending
+172 [2026-04-05T13:30:23+0000] [Fetching 54/57] OMNI-1428 (summarization pending)
+173 [2026-04-05T13:30:23+0000] [Fetched 54/57] OMNI-1428: unchanged - summarization pending
+174 [2026-04-05T13:30:23+0000] [Fetching 55/57] OMNI-1431 (summarization pending)
+175 [2026-04-05T13:30:23+0000] [Fetched 55/57] OMNI-1431: unchanged - summarization pending
+176 [2026-04-05T13:30:23+0000] [Fetching 56/57] OMNI-1432 (summarization pending)
+177 [2026-04-05T13:30:23+0000] [Fetched 56/57] OMNI-1432: unchanged - summarization pending
+178 [2026-04-05T13:30:23+0000] [Fetching 57/57] OMNI-1433 (summarization pending)
+179 [2026-04-05T13:30:23+0000] [Fetched 57/57] OMNI-1433: unchanged - summarization pending
+180 [2026-04-05T13:30:23+0000] [Summarized 1/57] DPD-225: using cached summary
+181 [2026-04-05T13:30:23+0000] [Summarized 2/57] DPD-807: using cached summary
+182 [2026-04-05T13:30:23+0000] [Summarized 3/57] DPD-838: using cached summary
+183 [2026-04-05T13:30:23+0000] [Summarized 4/57] DPD-715: using cached summary
+184 [2026-04-05T13:30:23+0000] [Summarized 5/57] DPD-733: using cached summary
+185 [2026-04-05T13:30:23+0000] [Summarized 6/57] DPD-842: using cached summary
+186 [2026-04-05T13:30:23+0000] [Summarized 7/57] DPD-383: using cached summary
+187 [2026-04-05T13:30:23+0000] [Summarized 8/57] DPD-644: using cached summary
+188 [2026-04-05T13:30:23+0000] [Summarized 9/57] OMNI-1294: using cached summary
+189 [2026-04-05T13:30:23+0000] [Summarized 10/57] OMNI-1191: using cached summary
+190 [2026-04-05T13:30:23+0000] [Summarized 11/57] DPD-734: using cached summary
+191 [2026-04-05T13:30:23+0000] [Summarized 12/57] DPD-645: using cached summary
+192 [2026-04-05T13:30:23+0000] [Summarized 13/57] OPCO-1940: using cached summary
+193 [2026-04-05T13:30:23+0000] [Summarized 14/57] DPD-700: using cached summary
+194 [2026-04-05T13:30:23+0000] [Summarized 15/57] DPD-551: using cached summary
+195 [2026-04-05T13:30:23+0000] [Summarized 16/57] DPD-631: using cached summary
+196 [2026-04-05T13:30:23+0000] [Summarized 17/57] DPD-591: using cached summary
+197 [2026-04-05T13:30:23+0000] [Summarized 18/57] DPD-273: using cached summary
+198 [2026-04-05T13:30:23+0000] [Summarized 19/57] DPD-590: using cached summary
+199 [2026-04-05T13:30:23+0000] [Summarized 20/57] QE-1105: using cached summary
+200 [2026-04-05T13:30:23+0000] [Summarized 21/57] DPD-519: using cached summary
+201 [2026-04-05T13:30:23+0000] [Summarized 22/57] DPD-221: using cached summary
+202 [2026-04-05T13:30:23+0000] [Summarized 23/57] NEDMT-2288: using cached summary
+203 [2026-04-05T13:30:23+0000] [Summarized 24/57] DPD-431: using cached summary
+204 [2026-04-05T13:30:23+0000] [Summarized 25/57] OMNI-1249: using cached summary
+205 [2026-04-05T13:30:23+0000] [Summarized 26/57] OMNI-1363: using cached summary
+206 [2026-04-05T13:30:23+0000] [Summarized 27/57] OMNI-1362: using cached summary
+207 [2026-04-05T13:30:23+0000] [Summarized 28/57] OMNI-1407: using cached summary
+208 [2026-04-05T13:30:23+0000] [Summarized 29/57] OMNI-1345: using cached summary
+209 [2026-04-05T13:30:23+0000] [Summarized 30/57] OMNI-1296: using cached summary
+210 [2026-04-05T13:30:23+0000] [Summarized 31/57] OMNI-1425: using cached summary
+211 [2026-04-05T13:30:23+0000] [Summarized 32/57] OMNI-1414: using cached summary
+212 [2026-04-05T13:30:23+0000] [Summarized 33/57] OMNI-1421: using cached summary
+213 [2026-04-05T13:30:23+0000] [Summarized 34/57] OMNI-1427: using cached summary
+214 [2026-04-05T13:30:23+0000] [Summarized 35/57] OMNI-1416: using cached summary
+215 [2026-04-05T13:30:23+0000] [Summarized 36/57] OMNI-1300: using cached summary
+216 [2026-04-05T13:30:23+0000] [Summarized 37/57] OMNI-1235: using cached summary
+217 [2026-04-05T13:30:23+0000] [Summarized 38/57] OMNI-1153: using cached summary
+218 [2026-04-05T13:30:23+0000] [Summarized 39/57] OMNI-1246: using cached summary
+219 [2026-04-05T13:30:23+0000] [Summarized 40/57] OMNI-1361: using cached summary
+220 [2026-04-05T13:30:23+0000] [Summarized 41/57] OMNI-1227: using cached summary
+221 [2026-04-05T13:30:23+0000] [Summarized 42/57] OMNI-1208: using cached summary
+222 [2026-04-05T13:30:23+0000] [Summarized 43/57] OMNI-1242: using cached summary
+223 [2026-04-05T13:30:23+0000] [Summarized 44/57] OMNI-1334: using cached summary
+224 [2026-04-05T13:30:23+0000] [Summarized 45/57] OMNI-1389: using cached summary
+225 [2026-04-05T13:30:23+0000] [Summarized 46/57] OMNI-1390: using cached summary
+226 [2026-04-05T13:30:23+0000] [Summarized 47/57] OMNI-1353: using cached summary
+227 [2026-04-05T13:30:23+0000] [Summarized 48/57] OMNI-1179: using cached summary
+228 [2026-04-05T13:30:23+0000] [Summarized 49/57] OMNI-1247: using cached summary
+229 [2026-04-05T13:30:23+0000] [Summarized 50/57] OMNI-1391: using cached summary
+230 [2026-04-05T13:30:23+0000] [Summarized 51/57] OMNI-1393: using cached summary
+231 [2026-04-05T13:30:23+0000] [Summarized 52/57] OMNI-1400: using cached summary
+232 [2026-04-05T13:30:23+0000] [Summarized 53/57] OMNI-1405: using cached summary
+233 [2026-04-05T13:30:23+0000] [Summarized 54/57] OMNI-1428: using cached summary
+234 [2026-04-05T13:30:23+0000] [Summarized 55/57] OMNI-1431: using cached summary
+<<<

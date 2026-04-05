@@ -21,7 +21,7 @@ import requests
 
 from jira_db import get_jira_db as _get_jira_db, SkillDB
 from jira_cleaner import clean_jira_text
-from jira_summarizer import summarize_resource
+from jira_summarizer import summarize_resource, SummaryResult
 
 import argparse as _argparse
 
@@ -395,24 +395,37 @@ def _summarize_one(
                 title = line[7:]
                 break
 
-    eprint(f"{progress}{key}: AI summarizing ({len(items)} items, existing_summary={'yes' if existing_text else 'no'})...")
-    summary_text = summarize_resource(
+    mention_type = db.compute_mention_type(key)
+
+    eprint(f"{progress}{key}: AI summarizing ({len(items)} items, mention={mention_type}, existing_summary={'yes' if existing_text else 'no'})...")
+    result: SummaryResult = summarize_resource(
         title=f"{key}: {title}" if title else key,
         source_type="Jira ticket",
         atomic_items=items,
         metadata=meta,
         existing_summary=existing_text,
+        mention_type=mention_type,
     )
 
-    if not summary_text:
+    if not result.summary:
         raise RuntimeError(f"Summarization returned empty result for {key} - LLM call may have failed")
 
-    db.upsert_summary(key, "jira", title or key, summary_text, meta)
+    enriched_meta = dict(meta)
+    enriched_meta["work_items"] = result.work_items
+    enriched_meta["people"] = result.people
+    enriched_meta["labels"] = result.labels
+
+    db.upsert_summary(
+        key, "jira", title or key, result.summary, enriched_meta,
+        mention_type=mention_type,
+        estimated_relevance=result.relevance,
+        final_relevance=result.relevance,
+    )
     saved = db.get_resource_summary(key)
     if not saved:
         raise RuntimeError(f"{key}: summary generated but DB write failed")
     _print_output(db, key, saved, current=current, total=total)
-    eprint(f"[Summarized {current}/{total}] {key}: done")
+    eprint(f"[Summarized {current}/{total}] {key}: done (relevance={result.relevance}, mention={mention_type})")
 
 
 def summarize_issues(db: SkillDB, ticket_keys: list[str], force: bool = False) -> None:
@@ -503,6 +516,14 @@ def _print_output(db: SkillDB, key: str, summary_row: dict,
     title = summary_row.get("title", "")
 
     meta_parts = ["Source: jira", f"Key: {key}"]
+
+    rel_score = summary_row.get("final_relevance", summary_row.get("estimated_relevance", 0))
+    mt = summary_row.get("mention_type", "none")
+    if rel_score:
+        meta_parts.append(f"Relevance: {rel_score}/10")
+    if mt and mt != "none":
+        meta_parts.append(f"Mention: {mt}")
+
     if meta.get("status"):
         cat = f" ({meta['status_category']})" if meta.get("status_category") else ""
         meta_parts.append(f"Status: {meta['status']}{cat}")

@@ -1,34 +1,116 @@
 # Jira Skill - Architecture
 
-> Combined skill replacing `jira-query-listing`, `jira-filter-listing`, and `jira-view-listing`.
-> Self-contained - all dependencies (DB, cleaner, summarizer) are embedded in `scripts/`.
+> Single-file skill (`jira.py`) with SQLite caching, AI-driven relevance scoring, entity extraction, and adaptive summarization. Self-contained - no external shared modules.
 
-## High-Level Flow
+## Processing Pipeline
 
 ```mermaid
 flowchart TD
-    A["1/ Entry Point Selection"] --> B{"Which mode?"}
-    B -->|"--jql"| C["jira_query.py"]
-    B -->|"--filter-id"| D["jira_filter.py"]
-    B -->|"--viewId"| E["jira_view.py"]
+    A["main()"] --> B["open_db()"]
+    A --> C{"--cached-only?"}
+    C -->|Yes| W["write_output()"]
+    C -->|No| D["validate_env()"]
+    D --> E["Source Resolution"]
 
-    D --> D1["Resolve filter ID to JQL\nGET /rest/api/3/filter/{id}"]
-    E --> E1["Resolve view to JQL\nGraphQL polarisView\n(24h file cache)"]
+    E --> E1["fetch_filter_jql()"]
+    E --> E2["resolve_view_to_jql()"]
+    E --> E3["--jql direct"]
 
-    C --> F["2/ Fetch Issues via REST API\nGET /rest/api/3/search/jql"]
-    D1 --> F
-    E1 --> F
+    E1 --> F["fetch_issues()"]
+    E2 --> F
+    E3 --> F
 
-    F --> G["3/ Timestamp Check\nCompare API updated_at\nvs cached updated_at"]
-    G -->|"Unchanged"| G1["Skip issue entirely"]
-    G -->|"Newer or new"| G2["Format Issue\nADF to text, clean,\nextract full metadata"]
+    F --> G{"has_content_changed()?"}
+    G -->|Unchanged| H["Queue for cached summary check"]
+    G -->|Changed| I["format_issue()"]
+    I --> J["cache_issue()"]
+    J --> K["Pipeline.put()"]
+    H --> K
 
-    G2 --> H["4/ Cache in SQLite\nupsert_atomic per ticket + comment\nFull content, no truncation\nStore relationships"]
+    K --> L["_summarize_one()"]
+    L --> L1["compute_mention_type()"]
+    L1 --> L2["summarize_resource()"]
+    L2 --> L3["parse_llm_response()"]
+    L3 --> L4["upsert_summary()"]
 
-    H --> K["5/ AI Summarization\nOnly for changed tickets\nIncremental: existing summary + new items\n1000 tokens max (configurable)"]
-    G1 --> L["Use cached summary"]
-    K --> M["6/ Stream output\n## jira/{key}: {title}\n{metadata}\n{summary}\nFlush per ticket"]
-    L --> M
+    L4 --> W
+```
+
+## Public Method Dependencies
+
+```mermaid
+flowchart TD
+    subgraph "Entry Point"
+        main
+    end
+
+    subgraph "Database"
+        open_db
+        upsert_atomic["SkillDB.upsert_atomic()"]
+        get_atomic["SkillDB.get_atomic_for_resource()"]
+        get_latest["SkillDB.get_latest_updated_at()"]
+        has_changed["SkillDB.has_content_changed()"]
+        get_ids["SkillDB.get_all_resource_ids()"]
+        get_summary["SkillDB.get_resource_summary()"]
+        needs_resum["SkillDB.needs_resummarize()"]
+        get_since["SkillDB.get_items_since()"]
+        compute_mt["SkillDB.compute_mention_type()"]
+        upsert_sum["SkillDB.upsert_summary()"]
+        get_all_sum["SkillDB.get_all_summaries()"]
+        backfill["SkillDB.backfill_mention_types()"]
+        clear_sum["SkillDB.clear_all_summaries()"]
+        upsert_rel["SkillDB.upsert_relationship()"]
+        get_rels["SkillDB.get_relationships()"]
+        clear_rels["SkillDB.clear_relationships()"]
+        delete_res["SkillDB.delete_resource()"]
+        close["SkillDB.close()"]
+    end
+
+    subgraph "Jira API"
+        validate_env
+        get_auth["get_auth_header()"]
+        fetch_issues
+        format_issue
+        cache_issue
+        adf_to_text
+        clean["clean_jira_text()"]
+    end
+
+    subgraph "Source Resolvers"
+        fetch_filter["fetch_filter_jql()"]
+        resolve_view["resolve_view_to_jql()"]
+    end
+
+    subgraph "AI Summarizer"
+        summarize_res["summarize_resource()"]
+        parse_llm["parse_llm_response()"]
+    end
+
+    subgraph "Output"
+        write_output
+    end
+
+    main --> open_db
+    main --> validate_env
+    main --> get_auth
+    main --> fetch_filter
+    main --> resolve_view
+    main --> fetch_issues
+    main --> has_changed
+    main --> format_issue
+    main --> cache_issue
+    main --> write_output
+    main --> close
+
+    format_issue --> adf_to_text
+    format_issue --> clean
+    cache_issue --> upsert_atomic
+    cache_issue --> clear_rels
+    cache_issue --> upsert_rel
+
+    summarize_res --> parse_llm
+    write_output --> get_all_sum
+    write_output --> get_rels
 ```
 
 ## Data Model
@@ -36,31 +118,34 @@ flowchart TD
 ```mermaid
 erDiagram
     ATOMIC_CONTENT {
-        text id PK "jira:{ticket_key}:{item_id}"
+        text id PK "jira:DPD-645:comment_id"
         text source "jira"
         text resource_id "DPD-645"
         text item_id "ticket key or comment ID"
-        text author "Michael Bui"
+        text author "Person name"
         text content "Full cleaned text"
         text created_at "ISO timestamp"
         text updated_at "ISO timestamp from Jira"
-        text cached_at "When we stored it"
-        text metadata "JSON: status, priority, labels, etc"
+        text cached_at "When stored"
+        text metadata "JSON: assignee, reporter, linked_issues, etc"
     }
 
     RESOURCE_SUMMARY {
         text resource_id PK "DPD-645"
         text source "jira"
-        text title "DPD-645: Ticket title"
+        text title "Ticket title"
         text summary "AI-generated summary"
-        text summarized_at "When summary was generated"
-        text metadata "JSON: full ticket metadata"
+        text summarized_at "When generated"
+        text metadata "JSON: status, work_items, people, labels"
+        text mention_type "direct / indirect / none"
+        int estimated_relevance "AI-scored 1-10"
+        int final_relevance "User-adjustable 1-10"
     }
 
     TICKET_RELATIONSHIPS {
         text source_key "DPD-645"
         text target_key "DPD-644"
-        text relation_type "parent | child | blocks"
+        text relation_type "parent / child / blocks"
         text cached_at "When cached"
     }
 
@@ -68,136 +153,37 @@ erDiagram
     ATOMIC_CONTENT ||--o{ TICKET_RELATIONSHIPS : "has relationships"
 ```
 
-## Change Detection Flow
+## Relevance Scoring
 
-```mermaid
-flowchart TD
-    A["Jira API returns issue listing\nwith updated_at timestamp"] --> B{"issue_needs_fetch:\nCompare API updated_at\nvs cached updated_at"}
-    B -->|"Same timestamp"| C["Skip entirely\nNo format, no cache, no LLM"]
-    B -->|"Newer or new"| D["format_issue:\nADF to text, clean,\nextract full metadata"]
+| Mention Type | Floor | Word Hint | Detection Signals |
+|---|---|---|---|
+| direct | 7 | ~200 words | assignee, reporter, comment author, @mention, name in content, user replied |
+| indirect | 5 | ~100 words | linked issues, same epic, watcher |
+| none | 1 | ~30 words | No user signal detected |
 
-    D --> E["cache_issue:\nupsert ticket body as atomic item\n(item_id = ticket key)"]
-    E --> F["cache_issue:\nupsert each comment\n(item_id = comment ID)"]
-    F --> G["Clear + rebuild relationships\nparent, child, blocks, etc"]
+Strongest signal wins at resource level: 1 direct mention in 20 comments = `direct`.
 
-    G --> H{"needs_resummarize:\nsummarized_at < latest updated_at?"}
-    H -->|"No"| I["Use cached summary"]
-    H -->|"Yes"| J{"Existing summary?"}
-    J -->|"Yes"| K["Incremental summarization:\nexisting summary + items since\nlast summarized_at"]
-    J -->|"No"| L["Full summarization:\nall atomic items for resource"]
-    K --> M["upsert_summary in DB"]
-    L --> M
-```
+## Entity Extraction (stored in `resource_summary.metadata` JSON)
 
-## Incremental Summarization
-
-When a ticket has an existing summary and new/updated content, the system provides both to the LLM:
-1. Retrieves the existing summary text
-2. Fetches only atomic items with `updated_at > summarized_at`
-3. Sends both to the LLM with an "update" prompt that preserves historical context
-
-This ensures old content outside the current API fetch window is not lost.
-
-With `--force`, all atomic items are re-fetched and the full content is re-summarized regardless of timestamps.
-
-## Relationship Tracking
-
-```mermaid
-flowchart TD
-    subgraph "Example Ticket Hierarchy"
-        P["DPD-644\nParent Epic"]
-        T["DPD-645\nCurrent Ticket"]
-        L1["DPD-273\nBlocked Ticket"]
-        L2["OMNI-1418\nPolaris Link"]
-    end
-
-    P -->|"parent"| T
-    T -->|"blocks"| L1
-    P -->|"polaris-work-item-link"| L2
-
-    subgraph "ticket_relationships table"
-        R1["DPD-645 -> DPD-644 (parent)"]
-        R2["DPD-645 -> DPD-273 (blocks)"]
-        R3["DPD-644 -> OMNI-1418 (polaris-work-item-link)"]
-    end
-```
-
-## Output Format
-
-Each ticket is streamed to stdout as it becomes ready (from cache or after LLM returns). Tickets are NOT batched - output is flushed immediately per ticket:
-
-```
-## jira/{key}: {title}
-Source: jira | Key: {key} | Status: {status} ({category}) | Type: {type} | Priority: {priority} | Assignee: {assignee} | Reporter: {reporter} | Due: {date} | {relationships}
-{AI-generated summary - current status, decisions, pending actions, key dates}
-```
-
-- Title in the database is stored without the key prefix (clean title only)
-- Use `PYTHONUNBUFFERED=1 python3 -u` for real-time streaming to file
-- Progress and diagnostics are written to stderr
+| Field | Content |
+|---|---|
+| `work_items` | Jira ticket IDs, PR numbers, project codenames, service names, git repos |
+| `people` | Explicit person names only (no groups/teams) |
+| `labels` | 5 AI-generated 2-word descriptive labels (lowercase, hyphenated) |
 
 ## File Structure
 
 ```
 jira/
-├── SKILL.md                  # Agent-facing documentation
-├── _architecture.md          # This file (human-facing design)
+├── SKILL.md              # Agent-facing documentation
+├── _architecture.md      # This file
+├── Makefile              # make test, make coverage
 ├── data/
-│   └── jira_cache.db         # SQLite (persistent, auto-created at runtime)
+│   └── jira_cache.db     # SQLite (persistent, auto-created)
 └── scripts/
-    ├── jira_common.py        # Core: auth, ADF, format, cache, summarize, output
-    ├── jira_db.py            # Self-contained SQLite DB (SkillDB class)
-    ├── jira_cleaner.py       # Self-contained text cleanup for Jira content
-    ├── jira_summarizer.py    # Self-contained LLM summarization via LiteLLM
-    ├── jira_query.py         # Entry: --jql
-    ├── jira_filter.py        # Entry: --filter-id (resolves JQL via REST)
-    └── jira_view.py          # Entry: --viewId (resolves JQL via GraphQL)
-# Transactional output → /a0/usr/workdir/jira-output.md, jira-debug.log
+    ├── jira.py           # All logic (1278 lines)
+    └── test_jira.py      # BDD test-table unit tests (95% coverage)
 ```
-
-## Module Dependencies
-
-```mermaid
-flowchart TD
-    JQ["jira_query.py"] --> JC["jira_common.py"]
-    JF["jira_filter.py"] --> JC
-    JV["jira_view.py"] --> JC
-
-    JC --> DB["jira_db.py\nSkillDB class"]
-    JC --> CL["jira_cleaner.py\nclean_jira_text"]
-    JC --> SM["jira_summarizer.py\nLiteLLM proxy call"]
-
-    DB --> SQ["SQLite3\n(stdlib)"]
-    SM --> LL["LiteLLM Proxy\nhttps://llm.gigary.com/v1\nModel: local/qwen3.5-35b-a3b:instruct-reasoning"]
-```
-
-## Metadata Captured
-
-| Field | Source | Stored In |
-|---|---|---|
-| status, status_category | fields.status | atomic metadata |
-| assignee, reporter | fields.assignee/reporter.displayName | atomic metadata |
-| priority | fields.priority.name | atomic metadata |
-| issuetype | fields.issuetype.name | atomic metadata |
-| resolution | fields.resolution.name | atomic metadata |
-| duedate | fields.duedate | atomic metadata |
-| labels | fields.labels | atomic metadata |
-| components | fields.components[].name | atomic metadata |
-| fix_versions | fields.fixVersions[].name | atomic metadata |
-| parent_key | fields.parent.key | atomic metadata + relationships |
-| subtask_keys | fields.subtasks[].key | atomic metadata + relationships |
-| linked_issues | fields.issuelinks[].type + key | atomic metadata + relationships |
-
-## Token Reduction Estimates
-
-| Stage | Input | Output | Reduction |
-|---|---|---|---|
-| Raw Jira API response | ~86KB (~22K tokens) | - | - |
-| Layer 1: Deterministic cleanup | 22K tokens | ~12K tokens | ~45% |
-| Layer 2: Skip unchanged (re-run) | 12K tokens | 0 (cached) | 100% |
-| Layer 3: AI summarization | 12K tokens | ~700 tokens (~500 words) | ~94% |
-| **Total (first run)** | **22K tokens** | **~700 tokens** | **~97%** |
-| **Total (re-run, no changes)** | **22K tokens** | **~0 processing** | **~100%** |
 
 ## Environment Variables
 
@@ -205,7 +191,7 @@ flowchart TD
 |---|---|---|---|
 | `JIRA_EMAIL` | Yes | - | Jira authentication email |
 | `JIRA_API_KEY` | Yes | - | Jira API token |
-| `LITELLM_API_KEY` / `API_KEY_OTHER` | Yes | - | LiteLLM proxy auth (set via Terraform) |
+| `API_KEY_OTHER` | Yes | - | LiteLLM proxy auth |
 | `LITELLM_BASE_URL` | No | `https://llm.gigary.com/v1` | LiteLLM proxy endpoint |
-| `SUMMARIZE_MODEL` | No | `local/qwen3.5-35b-a3b:instruct-reasoning` | LLM model for summarization |
-| `MAX_SUMMARY_WORDS` | No | `500` | Max words per summary (in prompt) |
+| `SUMMARIZE_MODEL` | No | `local/qwen3.5-35b-a3b:instruct-reasoning` | LLM model |
+| `JIRA_DB_PATH` | No | `data/jira_cache.db` | Override DB path (NFS workaround) |

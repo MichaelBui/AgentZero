@@ -1,23 +1,26 @@
 ---
 name: jira
-description: Fetch Jira tickets with SQLite caching and AI summarization. Supports three modes - raw JQL query, saved filter by ID, or Polaris view. Always outputs compact text summaries with source, key, metadata, and AI summary. Use when the user asks to search, list, or summarize Jira tickets by JQL, project, status, assignee, labels, sprint, filter, or board view.
-version: 3.0.0
+description: Fetch Jira tickets with SQLite caching, AI-driven relevance scoring, and structured summarization. Supports raw JQL query, saved filter by ID, or Polaris view. Outputs relevance-scored markdown summaries with mention detection, entity extraction, and adaptive detail levels. Use when the user asks to search, list, or summarize Jira tickets.
+version: 4.0.0
 author: Michael
-tags: [jira, jql, search, tickets, query, filter, view, polaris, backlog, sprint, ntuclink, summarize, cache]
+tags: [jira, jql, search, tickets, query, filter, view, polaris, backlog, sprint, ntuclink, summarize, cache, relevance]
 ---
 
 # Jira Skill
 
-Unified Jira skill replacing `jira-query-listing`, `jira-filter-listing`, and `jira-view-listing`. All modes share a single SQLite cache with incremental fetching, timestamp-based skip, relationship tracking, and AI summarization. Self-contained - no external shared modules.
+Single-file Jira skill (`jira.py`) with SQLite caching, incremental fetching, AI-driven relevance scoring, entity extraction, and adaptive summarization. Replaces all previous multi-file scripts. Self-contained - no external shared modules.
 
 ## When to Use
 
-| User Intent | Script |
+| User Intent | Command |
 |---|---|
-| Any combination of JQL, filter, and/or view (preferred) | `jira_reader.py` |
-| Search tickets by JQL only | `jira_query.py` |
-| Fetch tickets from a saved Jira filter only | `jira_filter.py` |
-| Fetch tickets from a Polaris/board view only | `jira_view.py` |
+| Any combination of JQL, filter, and/or view | `python jira.py --jql '...' --filter-id N --view-id N` |
+| Search tickets by JQL only | `python jira.py --jql '...'` |
+| Fetch tickets from a saved Jira filter | `python jira.py --filter-id N` |
+| Fetch tickets from a Polaris/board view | `python jira.py --view-id N` |
+| Default: current user's active tickets | `python jira.py` |
+| Fast report from cache (no API calls) | `python jira.py --cached-only` |
+| Force full re-fetch and re-summarize | `python jira.py --force` |
 
 Do NOT use for: creating/updating tickets, fetching non-NTUC Jira instances.
 
@@ -38,116 +41,93 @@ copy the DB to /tmp first, set JIRA_DB_PATH, run, then sync back:
 ```bash
 python3 -c "import shutil; shutil.copyfile('/Volumes/Apps/AgentZero/usr/skills/jira/data/jira_cache.db', '/tmp/jira_cache.db')"
 export JIRA_DB_PATH=/tmp/jira_cache.db
-python /Volumes/Apps/AgentZero/usr/skills/jira/scripts/jira_query.py
+python /Volumes/Apps/AgentZero/usr/skills/jira/scripts/jira.py
 python3 -c "import shutil; shutil.copyfile('/tmp/jira_cache.db', '/Volumes/Apps/AgentZero/usr/skills/jira/data/jira_cache.db')"
 ```
 
-## Usage
-
-### Unified reader (preferred)
-```bash
-python /a0/usr/skills/jira/scripts/jira_reader.py --jql 'project = DPD AND status = "In Progress"'
-python /a0/usr/skills/jira/scripts/jira_reader.py --filter-id 13811
-python /a0/usr/skills/jira/scripts/jira_reader.py --view-id 10489904
-python /a0/usr/skills/jira/scripts/jira_reader.py --jql '...' --filter-id 13811 --view-id 10489904
-python /a0/usr/skills/jira/scripts/jira_reader.py --cached-only
-```
-
-### Default - current user's active tickets
-```bash
-python /a0/usr/skills/jira/scripts/jira_reader.py
-```
-
-### Force full re-fetch and re-summarize
-```bash
-python /a0/usr/skills/jira/scripts/jira_reader.py --force
-```
-
-### Pagination
-```bash
-python /a0/usr/skills/jira/scripts/jira_reader.py --jql 'project = DPD' --limit 20 --offset 0
-```
-
-### Fast report from cache (no API calls needed)
-```bash
-python /a0/usr/skills/jira/scripts/jira_reader.py --cached-only
-```
-
-## Arguments (all scripts)
+## Arguments
 
 | Argument | Required | Default | Description |
 |---|---|---|---|
-| `--jql` | No (query) | currentUser() active tickets | JQL query string |
-| `--filter-id` | Yes (filter) | - | Jira saved filter ID (numeric) |
-| `--view-id` | Yes (view) | - | Polaris view ID (numeric) |
+| `--jql` | No | currentUser() active tickets | JQL query string |
+| `--filter-id` | No | - | Jira saved filter ID (numeric) |
+| `--view-id` | No | - | Polaris view ID (numeric) |
 | `--limit` | No | 200 | Max tickets to return |
 | `--offset` | No | 0 | Pagination offset |
-| `--cached-only` | No | false | Output cached summaries from DB without API calls (fast, for reports) |
+| `--cached-only` | No | false | Output cached summaries from DB without API calls |
 | `--force` | No | false | Skip timestamp checks, force full fetch + re-summarize |
-| `--output` | No | `workdir/jira-output.md` | Write results to file (clean markdown for AI agents) |
-| `--debug-log` | No | `workdir/jira-debug.log` | Write debug/progress messages to file |
-| `--no-cache` | No (view) | false | Bypass JQL cache for view resolution |
+| `--output` | No | `workdir/jira-output.md` | Write results to file |
+| `--no-cache` | No | false | Bypass JQL cache for view resolution |
 
 ## Output
 
-Text blocks to stdout, one per ticket:
+The output `.md` file is **only created after successful completion** of all fetching and summarization. If any error occurs, no file is created. This prevents AI agents from reading incomplete results.
 
+Progress and diagnostics go to **stdout** (no separate log file).
+
+Output format per ticket:
 ```
 ---
-jira/DPD-645: Improve event sync to prevent overage
-Source: jira | Key: DPD-645 | Status: IN RELASE QUEUE (Done) | Type: Story | Priority: High | Assignee: Michael Bui | Reporter: Nikhil Grover | Due: 2026-03-12 | Resolution: Done | blocks: DPD-273 | parent: DPD-644 | Last Updated: 2026-03-19T13:05:25+08:00
-[AI-generated summary: current status, decisions, pending actions, key dates, blockers]
+[1/N] jira/DPD-645: Improve event sync to prevent overage
+Relevance: 8/10 | Mention: direct
+Source: jira | Key: DPD-645 | Status: IN RELEASE QUEUE (Done) | Priority: High | Assignee: Michael Bui
+Work Items: DPD-645, DPD-273 | People: Nikhil Grover | Labels: event-sync, pricing-pipeline
+blocks: DPD-273 | parent: DPD-644 | Last Updated: 2026-03-19T13:05:25+08:00
+[AI summary with adaptive length based on relevance]
 ---
 ```
 
-`Last Updated` is the timestamp when the AI summary was last generated/refreshed.
+## Key Features
 
-Progress and diagnostics go to stderr.
+### Relevance Scoring (AI-driven)
+Each ticket summary includes a 1-10 relevance score from the AI, guided by:
+- `User.md` context (professional role, domain expertise, priorities)
+- `mention_type` detection (direct/indirect/none)
+- Relevance floors: direct >= 7, indirect >= 5, none >= 1
+- Adaptive summary length: direct ~200 words, indirect ~100 words, none ~30 words
 
-## Monitoring
+### Mention Type Detection
+Automatically classifies each resource as `direct`, `indirect`, or `none`:
+- **Direct**: assignee, reporter, author of comment, @mentioned, user participation (replied)
+- **Indirect**: linked issues, same epic, watcher
+- **None**: no user signal detected
+- Strongest signal wins at resource level (1 direct mention in 20 comments = direct)
 
-The script writes status markers to the debug log (`workdir/jira-debug.log`). Use these to determine if the job is running correctly:
+### Entity Extraction
+AI extracts structured entities alongside the summary (stored in metadata JSON):
+- `work_items`: Jira ticket IDs, PR numbers, project codenames, service names, git repos
+- `people`: Explicit person names only (no groups, teams, distribution lists)
+- `labels`: Exactly 5 AI-generated 2-word descriptive labels (lowercase, hyphenated)
 
-- **Job started:** Look for `STATUS: STARTED` near the **top** of the log with a **recent timestamp** (within the last 5 minutes). If you do NOT see this, the job has not executed properly — wait up to 5 minutes or treat it as failed.
-- **Job completed:** Look for `STATUS: COMPLETED` or `STATUS: COMPLETED WITH ERRORS` near the **bottom** of the log. The script is only considered done when one of these markers appears. A run with only `STATUS: STARTED` but no completion marker is still in progress or failed.
-- **Job completed with errors:** `STATUS: COMPLETED WITH ERRORS` means the run finished but some tickets failed AI summarization (e.g. transient API errors). Those tickets will appear in the output with their cached or empty summary. The error list is shown in the log.
-- **Job failed:** Look for `STATUS: FAILED` in the log, which includes the error message.
-
-Progress messages use explicit phase labels — **fetching and summarization are two distinct phases**:
-- `[Fetching X/Y]` — currently fetching ticket data from the Jira API; **summarization is still pending**
-- `[Fetched X/Y]: unchanged - summarization pending` — cached, no new data; still pending summarization
-- `[Fetched X/Y]: queued for summarization` — newly fetched and cached; queued for AI summarization
-- `[Summarizing X/Y]` — AI is actively generating a summary for this ticket
-- `[Summarized X/Y]` — summary complete and written to output
-
-**Important:** Seeing `[Fetched 76/76]` does NOT mean the job is done. Wait for `STATUS: COMPLETED` at the bottom.
+### JSON Structured Output from LLM
+Uses Qwen 3.5 native `response_format={"type": "json_object"}` for reliable structured responses. Regex fallback parser handles edge cases (think blocks, code fences).
 
 ## Architecture
-- SQLite cache at `data/jira_cache.db` (persistent across sessions)
-- Output and debug logs written to `/a0/usr/workdir/` (transactional, per-session)
-- Timestamp-based skip: compares API `updated` field vs cached - skips unchanged tickets entirely
-- Full content preserved in cache (no truncation); AI summarization handles size reduction
-- 500 word max per summary (configurable via `MAX_SUMMARY_WORDS` env var)
-- Incremental summarization: existing summary + only new/changed items sent to LLM
-- Relationship tracking (parent/child/linked tickets) in `ticket_relationships` table
-- Rich metadata: status, issuetype, priority, assignee, reporter, resolution, duedate, labels, components, fix_versions
-- See `_architecture.md` for detailed design with Mermaid diagrams
+
+### Database Schema
+SQLite cache at `data/jira_cache.db` with three tables:
+- `atomic_content`: Individual items (ticket descriptions, comments) with metadata JSON
+- `resource_summary`: Per-resource summaries with `mention_type`, `estimated_relevance`, `final_relevance`, and metadata JSON (work_items, people, labels)
+- `ticket_relationships`: Parent/child/linked ticket relationships
+
+### Processing Pipeline
+1. **Fetch**: Jira API -> format issues -> cache atomic content (timestamp-based skip for unchanged)
+2. **Summarize** (concurrent thread): For new/changed resources, compute mention_type, call LLM with relevance-scoring prompt, parse JSON response, upsert summary with entities
+3. **Output**: Only after all items complete, write sorted markdown to file
 
 ## Files
 ```
 scripts/
-  jira_reader.py      - Unified entry point: JQL + filter + view (preferred)
-  jira_common.py      - Core: auth, ADF parsing, formatting, caching, summarization, output
-  jira_db.py          - Self-contained SQLite DB (SkillDB class)
-  jira_cleaner.py     - Self-contained text cleanup for Jira content
-  jira_summarizer.py  - Self-contained LLM summarization via LiteLLM proxy
-  jira_query.py       - Entry point: raw JQL query
-  jira_filter.py      - Entry point: saved filter by ID
-  jira_view.py        - Entry point: Polaris view by ID
+  jira.py           - Single consolidated script (all logic)
+  test_jira.py      - Comprehensive unit tests (126 tests)
 data/
-  jira_cache.db              - SQLite cache (persistent, auto-created)
-_architecture.md             - Detailed design documentation
-# Transactional output written to /a0/usr/workdir/:
-#   jira-output.md           - Results output (overwritten each run)
-#   jira-debug.log           - Debug/progress log (overwritten each run)
+  jira_cache.db     - SQLite cache (persistent, auto-created)
+_architecture.md    - Detailed design documentation
 ```
+
+## Testing
+```bash
+cd /Volumes/Apps/AgentZero/usr/skills/jira/scripts
+python test_jira.py
+```
+126 tests covering: text cleaning, ADF parsing, DB schema/migration/CRUD, mention type detection, relevance filtering, LLM response parsing (valid JSON, fallbacks, floor/ceiling), issue formatting, metadata building, caching, output formatting, pipeline (mocked LLM), and integration with real DB.

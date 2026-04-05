@@ -97,6 +97,9 @@ class SkillDB:
                 time.sleep(self._WRITE_RETRY_DELAY_S * (attempt + 1))
         raise last_err  # type: ignore[misc]
 
+    _USER_NAME = "Michael Bui"
+    _USER_EMAIL = "michael.bui@fairpricegroup.sg"
+
     def _init_tables(self) -> None:
         self._conn.executescript("""
             CREATE TABLE IF NOT EXISTS atomic_content (
@@ -143,7 +146,27 @@ class SkillDB:
             CREATE INDEX IF NOT EXISTS idx_rel_target
                 ON ticket_relationships(target_key);
         """)
+        self._migrate_schema()
         self._conn.commit()
+
+    def _migrate_schema(self) -> None:
+        """Add new columns if they don't exist (idempotent migration)."""
+        existing = {
+            row[1] for row in self._conn.execute("PRAGMA table_info(resource_summary)")
+        }
+        migrations = [
+            ("mention_type", "TEXT DEFAULT 'none'"),
+            ("estimated_relevance", "INTEGER DEFAULT 0"),
+            ("final_relevance", "INTEGER DEFAULT 0"),
+        ]
+        for col_name, col_def in migrations:
+            if col_name not in existing:
+                self._conn.execute(
+                    f"ALTER TABLE resource_summary ADD COLUMN {col_name} {col_def}"
+                )
+        self._conn.execute(
+            "CREATE INDEX IF NOT EXISTS idx_summary_relevance ON resource_summary(final_relevance)"
+        )
 
     # ── Atomic Content ──────────────────────────────────────────────
 
@@ -259,6 +282,46 @@ class SkillDB:
             ).fetchall()
         return [dict(r) for r in rows]
 
+    def compute_mention_type(self, resource_id: str) -> str:
+        """Compute the strongest mention_type for a resource by scanning its atomic items.
+
+        Hierarchy: direct > indirect > none.
+        Direct signals: assignee/reporter is Michael, Michael authored a comment,
+                        content @mentions Michael.
+        Indirect signals: linked to a ticket Michael owns.
+        """
+        user_lower = self._USER_NAME.lower()
+
+        with self._lock:
+            items = self._conn.execute(
+                "SELECT author, content, metadata FROM atomic_content WHERE resource_id=?",
+                (resource_id,),
+            ).fetchall()
+
+        strongest = "none"
+
+        for item in items:
+            author = (item["author"] or "").lower()
+            content = (item["content"] or "").lower()
+            meta = json.loads(item["metadata"] or "{}")
+
+            assignee = (meta.get("assignee") or "").lower()
+            reporter = (meta.get("reporter") or "").lower()
+
+            if user_lower in assignee or user_lower in reporter:
+                return "direct"
+            if user_lower in author:
+                return "direct"
+            if f"@{user_lower}" in content or user_lower in content:
+                return "direct"
+
+            if strongest == "none":
+                linked = meta.get("linked_issues", [])
+                if linked:
+                    strongest = "indirect"
+
+        return strongest
+
     def upsert_summary(
         self,
         resource_id: str,
@@ -266,34 +329,77 @@ class SkillDB:
         title: str,
         summary: str,
         metadata: Optional[dict] = None,
+        mention_type: Optional[str] = None,
+        estimated_relevance: int = 0,
+        final_relevance: Optional[int] = None,
     ) -> None:
         def _do():
             meta_json = json.dumps(metadata or {}, separators=(",", ":"), ensure_ascii=False)
+            mt = mention_type or "none"
+            fr = final_relevance if final_relevance is not None else estimated_relevance
             self._conn.execute(
                 """INSERT INTO resource_summary
-                   (resource_id, source, title, summary, summarized_at, metadata)
-                   VALUES (?,?,?,?,?,?)
+                   (resource_id, source, title, summary, summarized_at, metadata,
+                    mention_type, estimated_relevance, final_relevance)
+                   VALUES (?,?,?,?,?,?,?,?,?)
                    ON CONFLICT(resource_id) DO UPDATE SET
                      source=excluded.source, title=excluded.title,
                      summary=excluded.summary,
-                     summarized_at=excluded.summarized_at, metadata=excluded.metadata""",
-                (resource_id, source, title, summary, _now_iso(), meta_json),
+                     summarized_at=excluded.summarized_at, metadata=excluded.metadata,
+                     mention_type=excluded.mention_type,
+                     estimated_relevance=excluded.estimated_relevance,
+                     final_relevance=excluded.final_relevance""",
+                (resource_id, source, title, summary, _now_iso(), meta_json,
+                 mt, estimated_relevance, fr),
             )
             self._conn.commit()
         self._retry(_do)
 
-    def get_all_summaries(self, source: Optional[str] = None) -> list[dict]:
+    def get_all_summaries(self, source: Optional[str] = None,
+                          min_relevance: Optional[int] = None) -> list[dict]:
         with self._lock:
+            conditions = []
+            params: list = []
             if source:
-                rows = self._conn.execute(
-                    "SELECT * FROM resource_summary WHERE source=? ORDER BY summarized_at DESC",
-                    (source,),
-                ).fetchall()
-            else:
-                rows = self._conn.execute(
-                    "SELECT * FROM resource_summary ORDER BY summarized_at DESC"
-                ).fetchall()
+                conditions.append("source=?")
+                params.append(source)
+            if min_relevance is not None:
+                conditions.append("final_relevance >= ?")
+                params.append(min_relevance)
+            where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
+            rows = self._conn.execute(
+                f"SELECT * FROM resource_summary{where} ORDER BY final_relevance DESC, summarized_at DESC",
+                params,
+            ).fetchall()
         return [dict(r) for r in rows]
+
+    def backfill_mention_types(self) -> dict[str, int]:
+        """Compute and store mention_type for all resources. Returns count per type."""
+        counts: dict[str, int] = {"direct": 0, "indirect": 0, "none": 0}
+        resource_ids = self.get_all_resource_ids()
+        for rid in resource_ids:
+            mt = self.compute_mention_type(rid)
+            counts[mt] = counts.get(mt, 0) + 1
+            def _update(rid=rid, mt=mt):
+                self._conn.execute(
+                    "UPDATE resource_summary SET mention_type=? WHERE resource_id=?",
+                    (mt, rid),
+                )
+                self._conn.commit()
+            self._retry(_update)
+        return counts
+
+    def clear_all_summaries(self) -> int:
+        """Clear all summary text and relevance scores for re-summarization. Returns count."""
+        def _do():
+            cursor = self._conn.execute(
+                """UPDATE resource_summary
+                   SET summary=NULL, estimated_relevance=0, final_relevance=0,
+                       summarized_at=NULL"""
+            )
+            self._conn.commit()
+            return cursor.rowcount
+        return self._retry(_do)
 
     # ── Ticket Relationships ────────────────────────────────────────
 
