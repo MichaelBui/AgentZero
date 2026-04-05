@@ -1,0 +1,564 @@
+/a0/usr/workdir/gmail-output.md 561 lines
+>>>
+  1 
+  2 
+  3 ## [1/16] You have no events scheduled today.
+  4 Source: gmail | Thread: 19d5a6ad0efffc5b | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Sat, Apr 4, 2026, 9:34 PM | Last Updated: 2026-04-04T22:01:06.711639+00:00
+  5 **Daily Work Briefing Summary**
+  6 
+  7 *   **Key Participants & Roles:**
+  8     *   **Michael Bui** (Account holder: `michael.bui@fairpricegroup.sg`): Recipient of the daily agenda notification.
+  9     *   **Google Calendar** (`calendar-notification@google.com`): Automated system sender providing schedule status updates.
+ 10     *   **Subscribed Calendars:** "Digital Business Tech Release/Changes."
+ 11 
+ 12 *   **Main Topic & Request:**
+ 13     *   The email is an automated system notification confirming the attendee's daily calendar status for **Sunday, April 5, 2026**. It confirms there are **no events scheduled** on the subscribed calendars ("Digital Business Tech Release/Changes") for this specific date.
+ 14 
+ 15 *   **Pending Actions & Ownership:**
+ 16     *   **Action Required:** None identified. The notification serves as an informational update confirming a clear schedule.
+ 17     *   **Ownership:** N/A (Automated status report).
+ 18 
+ 19 *   **Decisions Made:**
+ 20     *   No business decisions or strategic choices were recorded in this thread; it is solely a system-generated status confirmation.
+ 21 
+ 22 *   **Key Dates, Deadlines & Follow-ups:**
+ 23     *   **Notification Date/Time:** April 4, 2026, at 9:34 PM.
+ 24     *   **Relevant Schedule Date:** Sunday, April 5, 2026 (No events).
+ 25     *   **Follow-up:** None scheduled based on this content.
+ 26 
+ 27 *   **Additional Metadata & References:**
+ 28     *   **Email Labels:** Inbox, Updates.
+ 29     *   **Last Message ID:** `19d5a6ad0efffc5b`.
+ 30     *   **Configuration Link:** https://calendar.google.com/calendar/ (Available if Michael Bui wishes to modify calendar subscription settings).
+ 31     *   **Legal Note:** Email contains confidentiality and privilege warnings.
+ 32 
+ 33 **Executive Summary:**
+ 34 The system has confirmed that executive Michael Bui has a completely open schedule for Sunday, April 5, 2026, regarding the "Digital Business Tech Release/Changes" calendar. No immediate actions or meetings are required.
+ 35 
+ 36 
+ 37 ## [2/16] [Dashboard Report] Retail Media - DD Dashboard | Sat 4 Apr 11:00AM +08
+ 38 Source: gmail | Thread: 19d56716fade7584 | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Sat, Apr 4, 2026, 3:02 AM | Last Updated: 2026-04-04T10:01:20.429618+00:00
+ 39 **Daily Work Briefing: Retail Media Dashboard Update**
+ 40 
+ 41 **1. Key Participants & Roles**
+ 42 *   **Michael:** Primary recipient; owner of the dashboard monitoring activities (implied from "Happy monitoring").
+ 43 *   **Team Datadog / Datadog HQ (<no-reply@dtdg.eu>):** Automated sender providing report distribution and system maintenance support.
+ 44 
+ 45 **2. Main Topic/Request**
+ 46 Distribution of the automated **Retail Media - DD Dashboard** report containing performance data for the preceding three days (April 1, 2026 – April 3, 2026). The email serves as a standard notification to ensure Michael has access to the latest monitoring metrics.
+ 47 
+ 48 **3. Pending Actions & Ownership**
+ 49 *   **Action:** Review the attached dashboard report containing the past 3 days of data.
+ 50 *   **Owner:** Michael.
+ 51 *   **Status:** Report delivered; review is required upon opening. No explicit manual intervention or response was requested by the sender.
+ 52 
+ 53 **4. Decisions Made**
+ 54 No strategic decisions were made during this transaction. The email represents a routine, automated system notification following a scheduled generation time.
+ 55 
+ 56 **5. Key Dates & Follow-ups**
+ 57 *   **Report Generation Date/Time:** Saturday, April 4, 2026, at 11:00 AM +08 (Recipient timezone).
+ 58 *   **Email Sent Timestamp:** Saturday, April 4, 2026, at 3:02 AM.
+ 59 *   **Data Scope:** Past 3 days of data relative to the report generation date.
+ 60 *   **Next Step:** Monitor dashboard metrics for anomalies or trends based on the provided data.
+ 61 
+ 62 **Attachments & References**
+ 63 *   **Subject Line:** Retail Media - DD Dashboard | Sat 4 Apr 11:00AM +08
+ 64 *   **Sender Address:** no-reply@dtdg.eu
+ 65 *   **Metadata Labels:** Inbox, Updates
+ 66 *   **Last Message ID:** 19d56716fade7584
+ 67 
+ 68 
+ 69 ## [3/16] [RAW Overdue] Expired Risk Acceptance & Waiver Form
+ 70 Source: gmail | Thread: 19d56038fde0ac6d | Labels: Inbox | Priority: None | Senders: cyberrisk.automation | Last Date: Sat, Apr 4, 2026, 1:02 AM | Last Updated: 2026-04-04T02:01:23.256433+00:00
+ 71 **Daily Work Briefing: Overdue Risk Acceptance & Waiver (RAW)**
+ 72 
+ 73 **Key Participants & Roles**
+ 74 *   **Sender/Cyber Risk Team:** `cyberrisk.automation@fairpricegroup.sg` / `cyberRisk@ntucenterprise.sg`. Responsible for monitoring waivers, reviewing evidence of remediation, and approving new forms.
+ 75 *   **Technology Governance and Compliance Team:** `techgrc@ntucenterprise.sg`. Required to be shared the draft form during Section A review.
+ 76 *   **Requestor (Entity Owner):** The business owner responsible for "Signcloud Saas User access management" at entity **FPG-Fairprice**. Currently tasked with remediation or submitting a new form.
+ 77 
+ 78 **Main Topic/Request**
+ 79 Notification of an **expired Risk Acceptance and Waiver (RAW)** regarding **Asset Name: Signcloud Saas User access management**. The system lacks user access management by the respective business owner. The previous waiver has expired, requiring immediate action to either prove remediation or submit a new acceptance form.
+ 80 
+ 81 **Pending Actions & Ownership**
+ 82 *   **Action 1:** If residual risks are remediated, provide evidence to `cyberRisk@ntucenterprise.sg` for closure review. (Owner: Requestor/Business Owner).
+ 83 *   **Action 2:** If not remediated, submit a new RAW form immediately via Gsuite/Google Docs. (Owner: Requestor/Business Owner).
+ 84 *   **Process Requirement:** Do not download the template; make a copy to personal drive. Complete Section A and share with `cyberRisk@ntucenterprise.sg` and `techgrc@ntucenterprise.sg` for review *before* obtaining sign-off.
+ 85 *   **Sign-off Protocol:** Full names or initials are accepted, but every sign-off must include an "Approved" or "Signed" comment within the Google Doc.
+ 86 
+ 87 **Decisions Made**
+ 88 No new decisions were made in this thread; the email serves as a mandatory compliance reminder and instruction set. The previous waiver status is confirmed as **expired**.
+ 89 
+ 90 **Key Dates & Deadlines**
+ 91 *   **Original Expiry Date:** May 15, 2025.
+ 92 *   **Reminder Sent:** April 4, 2026.
+ 93 *   **Follow-up Status:** Automated reminders will continue to be sent until a new RAW form is approved.
+ 94 
+ 95 **References**
+ 96 *   **RAW ID:** `RAW-20240306_01-v1.0`
+ 97 *   **Entity:** FPG-Fairprice
+ 98 *   **Risk Description:** Lack of user access management by the respective business owner.
+ 99 *   **Contact for Review/Submission:** `cyberRisk@ntucenterprise.sg`, `techgrc@ntucenterprise.sg`.
+100 
+101 
+102 ## [4/16] You have no events scheduled today.
+103 Source: gmail | Thread: 19d55488549f3608 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Fri, Apr 3, 2026, 9:38 PM | Last Updated: 2026-04-03T22:01:07.280607+00:00
+104 **Daily Work Briefing Summary**
+105 
+106 *   **Key Participants & Roles:**
+107     *   **Michael Bui** (michael.bui@fairpricegroup.sg): Account holder receiving the daily agenda notification.
+108     *   **Google Calendar System** (calendar-notification@google.com): Automated sender providing calendar status updates.
+109 
+110 *   **Main Topic/Request:**
+111     *   Delivery of a standard automated daily agenda notification for the "Digital Business Tech Release/Changes" calendar subscriptions. The message confirms the current state of the user's schedule.
+112 
+113 *   **Pending Actions & Ownership:**
+114     *   No pending actions identified.
+115     *   No ownership assigned.
+116     *   User is informed that no events are scheduled, implying no immediate work commitments or follow-ups required for today based on this notification.
+117 
+118 *   **Decisions Made:**
+119     *   None recorded in this thread; the content is informational only regarding schedule availability.
+120 
+121 *   **Key Dates & Deadlines:**
+122     *   **Notification Date:** April 3, 2026, at 9:38 PM.
+123     *   **Target Date (Relevant to Schedule):** Saturday, April 4, 2026.
+124     *   **Deadline/Status:** The schedule for the target date is confirmed as empty ("no events scheduled").
+125 
+126 *   **Additional Context:**
+127     *   The notification was sent because Michael Bui has subscribed to receive daily agendas specifically for the **"Digital Business Tech Release/Changes"** calendar.
+128     *   If adjustments are needed regarding which calendars trigger these emails, the user must log in to `https://calendar.google.com/calendar/` to modify notification settings per calendar.
+129     *   Standard disclaimer: The email is confidential and may be privileged.
+130 
+131 
+132 ## [5/16] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
+133 Source: gmail | Thread: 19d523ef32e8f816 | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Fri, Apr 3, 2026, 5:40 PM | Last Updated: 2026-04-03T22:01:35.911607+00:00
+134 **Daily Work Briefing: Opsgenie Alert Thread Summary (Updated)**
+135 
+136 **Key Participants & Roles**
+137 *   **System:** Opsgenie (Alert Automation), Datadog (Monitoring Source).
+138 *   **Responder Group:** DPD Staff Excellence - Retail Media.
+139 *   **Notification Channels:** `@hangouts-dd-dpd-grocery-alert`, `@opsgenie-dpd-grocery-retail-media`.
+140 *   **Team Context:** Managed by Datadog-sync; Environment: Production (`env:prod`).
+141 
+142 **Main Topic/Request**
+143 Automated P2 alerts triggered for the `marketing-service` in production due to elevated HTTP error rates. The system requires immediate investigation of service health, Kubernetes deployment status, and adherence to runbooks.
+144 
+145 *   **Alert Criteria:** Error rate > 5% over the last 10 minutes (`sum:trace.http.request.errors / sum:trace.http.request.hits > 0.05`).
+146 *   **Status Update:** The alert state remains "Open." Recent notifications show fluctuating metrics that were previously below the threshold but have now spiked closer to the limit.
+147     *   *Previous Range:* 1% – 2.1%.
+148     *   *New Data Points:* Metric values of **0.014** (4:26 PM) and a significant spike to **0.037** (5:35 PM). While still below the 5% trigger threshold in raw value, these are flagged as P2 warnings indicating rising instability.
+149 
+150 **Pending Actions & Ownership**
+151 *   **Action:** Investigate causes for the rising error rate in `marketing-service` and verify if the spike to 0.037 warrants escalation.
+152 *   **Ownership:** DPD Staff Excellence - Retail Media (Assigned Responder).
+153 *   **Required Steps:**
+154     1.  Review Datadog APM metrics: [Link](https://app.datadoghq.com/apm/services/marketing-service/operations/http.request/resources?env=prod)
+155     2.  Check Kubernetes deployment status in `fpon-cluster` (asia-southeast1): [Link](https://console.cloud.google.com/kubernetes/deployment/asia-southeast1/fpon-cluster/default/marketing-service/overview?cloudshell=false&project=fponprd)
+156     3.  Consult the specific runbook: [Link](https://ntuclink.atlassian.net/wiki/spaces/DIS/pages/2008167992/marketing-service+-+Run+book)
+157 
+158 **Decisions Made**
+159 No human decisions or resolution actions recorded in this thread; it consists entirely of automated system notifications. The alert remains active with no manual acknowledgment or closure noted as of the last update at 5:40 PM on April 3, 2026.
+160 
+161 **Key Dates & Timeline (April 3, 2026)**
+162 *   **Morning Activity:** Alerts triggered between 07:28 UTC and 12:34 UTC with metrics ranging from 0.01 to 0.021.
+163 *   **16:25–16:35 PM (UTC+?):** Alert notifications received at **4:26 PM**, **4:28 PM**, and **4:31 PM**. Metric value recorded as **0.014**.
+164 *   **17:34 PM:** Alert state updated with a metric spike to **0.037**. Notifications sent at **5:35 PM**, **5:37 PM**, and **5:40 PM**.
+165 
+166 **References & Links**
+167 *   **Monitor Event URL:** https://app.datadoghq.eu/monitors/17447106
+168 *   **Snapshot Link (Latest):** https://app.datadoghq.eu/monitors/17447106?from_ts=1775236746000&to_ts=1775237946000&event_id=8572735288418285978
+169 *   **Service:** `marketing-service`
+170 *   **Environment:** `env:prod`
+171 *   **Integration:** `dpd-grocery-retail-media-eu (Datadog)`
+172 
+173 
+174 ## [6/16] Issue with Missing UBID
+175 Source: gmail | Thread: 19d52fdf13c8b0bd | Labels: Inbox | Priority: None | Senders: Rahul, Nikhil, me | Last Date: Fri, Apr 3, 2026, 12:50 PM | Last Updated: 2026-04-03T14:01:46.241463+00:00
+176 **Daily Work Briefing: Resource Issue (Missing UBID)**
+177 
+178 **Key Participants & Roles:**
+179 *   **Rahul Jain** (osmos.ai): Identified the technical discrepancy and provided diagnostic logs.
+180 *   **Nikhil Grover** (fairpricegroup.sg): Recipient of the notification; seeking clarification on ad unit scope. Added Rajesh and Soumya for support.
+181 *   **Michael Bui** (fairpricegroup.sg): Primary point of contact responding to technical clarifications regarding UBID/uclid definitions and customer journey context.
+182 
+183 **Main Topic/Request:**
+184 Rahul Jain flagged a critical tracking configuration issue where the client is failing to send the `UBID` within the `uclid` parameter during event transmission. Consequently, Osmos.ai's system is generating "DUMMY_UBID" values (e.g., `BRAND_AD_TAG|DUMMY_UBID`). The immediate request is for the client to audit their events configuration to ensure proper UBID transmission.
+185 
+186 **Pending Actions & Ownership:**
+187 *   **Action:** Provide specific clarification on what `UBID` and `uclid` refer to in this context, confirm the associated customer journey, and define the scope of impact (platform, page type: banner vs. product ads).
+188     *   **Owner:** Michael Bui (fairpricegroup.sg) / Support Team (Rajesh, Soumya).
+189 *   **Action:** Identify the specific ad unit(s) generating these events (Display only or Product Ads as well).
+190     *   **Owner:** Nikhil Grover (fairpricegroup.sg).
+191 
+192 **Decisions Made:**
+193 No final technical resolution was made in this thread. The discussion remains at the information-gathering phase to understand the scope of the tracking error before configuration changes are implemented.
+194 
+195 **Key Dates & Follow-ups:**
+196 *   **Issue Identified:** April 3, 2026, 10:57 AM (Email from Rahul Jain).
+197 *   **Logs Provided:** Sample logs dated April 1, 2026 (timestamps approx. 18:20 UTC) showing `uclid` parameters containing `DUMMY_UBID`.
+198 *   **Current Status:** Pending clarification response from FairPrice Group to Osmos.ai regarding ad unit specifics and parameter definitions. No deadline set; immediate follow-up required to prevent data integrity issues in funnel tracking.
+199 
+200 
+201 ## [7/16] [Dashboard Report] Retail Media - DD Dashboard | Fri 3 Apr 11:00AM +08
+202 Source: gmail | Thread: 19d514aa8123e26b | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Fri, Apr 3, 2026, 3:02 AM | Last Updated: 2026-04-03T06:01:15.987435+00:00
+203 **Daily Work Briefing: Retail Media Dashboard Report**
+204 
+205 **Key Participants & Roles**
+206 *   **Michael:** Recipient of the report; primary stakeholder for dashboard monitoring.
+207 *   **Team Datadog / Datadog HQ (no-reply@dtdg.eu):** Sender providing automated reporting and support resources.
+208 
+209 **Main Topic & Request**
+210 The sender provided an attachment containing the **"Retail Media - DD Dashboard"** report. The specific scope of this data covers the **past 3 days**. The intent is to ensure Michael has up-to-date metrics for monitoring purposes.
+211 
+212 **Pending Actions & Ownership**
+213 *   **Action:** Review and analyze the attached "Retail Media - DD Dashboard" report covering the last three days.
+214 *   **Owner:** Michael.
+215 
+216 **Decisions Made**
+217 No strategic decisions or approvals were recorded in this thread; this is a standard data delivery notification.
+218 
+219 **Key Dates & Deadlines**
+220 *   **Report Generation Date:** Friday, April 3, 2026.
+221 *   **Transmission Time:** 11:00 AM +08 (Timezone).
+222 *   **Data Scope:** The 3-day period preceding the report generation date (March 31 – April 2, 2026, assuming standard rolling window).
+223 
+224 **Specific References**
+225 *   **File Name:** Retail Media - DD Dashboard.
+226 *   **Sender Email:** no-reply@dtdg.eu.
+227 *   **Support Contact:** Manage reports via the link in the footer; physical address provided is Datadog HQ (620 8th Avenue, 45th Floor, New York, NY 10018).
+228 
+229 **Next Steps**
+230 Michael should verify data integrity and monitor trends within the specified three-day window. No further action from the sender is required unless anomalies are detected during the review.
+231 
+232 
+233 ## [8/16] Re: Hyper stores visual - Advertima
+234 Source: gmail | Thread: 19b6e85f67d0d448 | Labels: Inbox | Priority: None | Senders: Abdel-R., Rajkumar | Last Date: Fri, Apr 3, 2026, 2:44 AM | Last Updated: 2026-04-03T06:01:54.634333+00:00
+235 **Subject:** Daily Briefing: Hyper Stores Visual Management & Campaign Execution (Updated Apr 3)
+236 
+237 **Key Participants:**
+238 *   **Rajkumar Romendro (NTUC Guest):** Client-side Coordinator; submits content, requests schedule changes, and tracks status.
+239 *   **Jan Plojhar (Advertima):** Customer Success Manager; manages scheduling, technical implementation, and final confirmations.
+240 *   **Simone Pici (Advertima):** Customer Operations Manager; handles asset uploads and validates technical compliance.
+241 *   **Christian Bahrendt (Advertima):** Technical Lead; clarified system limitations regarding selective ad slots.
+242 *   **Abdel-Rahman Khater (Advertima):** Director Project Delivery; provided end-of-year content expiration notice.
+243 
+244 **Main Topic:**
+245 Management of digital advertising assets for NTUC Hyper stores (SCO/Cashier, Wall of Value, and Entrance screens), including uploads, technical compliance corrections, schedule updates, campaign replacements, and immediate content termination.
+246 
+247 **Pending Actions & Ownership:**
+248 *   **Urgent Action Required:** As of Apr 3, 2026, at 2:44 AM, Rajkumar Romendro requested the immediate cessation of the NPS content video playback. Status pending confirmation from Advertima.
+249 *   **Active Campaigns:**
+250     *   **Mar 5 – Mar 25, 2026:** "Raya Scan at Entry" is active, replacing the expiring "Scan & Go."
+251     *   **Feb 26 – Mar 4, 2026:** ActiveSg (Briq Pte Ltd) Weeks 1 & 2.
+252 *   **Historical Context:** On Feb 27, Raj confirmed a campaign period change for ActiveSg to Weeks 1 & 2 of March; Jan confirmed these adjustments on Mar 3. All uploads and adjustments between Dec 30, 2025, and Mar 16, 2026, remain marked as completed in the tracking sheet.
+253 
+254 **Key Decisions & Technical Constraints:**
+255 *   **Selective Play Slots:** On Feb 10, Raj requested isolated ads at VivoCity Hyper Cashier for a photo shoot (scheduled Feb 11). Advertima (Christian Bahrendt) declined, citing system architecture that uses one central playlist across all screens. Isolated play requires rewiring and testing, impossible with short notice. Future requests require **one week prior notice**.
+256 *   **Technical Compliance:** Multiple uploads (Feb 9–13) were initially rejected due to non-integer duration/framerate or missing portrait assets. Raj updated specifications:
+257     *   Duration: Integer seconds only (e.g., 15.00).
+258     *   Resolution: 1920x1080 landscape / 1080x1920 portrait.
+259     *   Framerate: 25 or 30 fps integer.
+260 
+261 **Key Dates & Campaign Timelines:**
+262 *   **Dec 31, 2025:** Wall of Value expired (Christmas content). No replacement provided; filler content requested for Jan 1, 2026.
+263 *   **Mar 12 – Apr 30, 2026:** Haleon campaign scheduled.
+264 *   **Mar 16, 2026:** NPS content video set for playback (Evergreen). *Note: Playback requested to be stopped immediately on Apr 3, 2026.*
+265 
+266 **References:**
+267 *   Google Sheet for tracking status: `https://docs.google.com/spreadsheets/d/1w2gA4DlIClJonZ7k3IfrdifyX87DKMwGXqiAlkap2kY/edit`
+268 *   Key Assets updated: NPS, Xtra Play Market, ActiveSg (Briq Pte Ltd), Raya Scan at Entry, Haleon.
+269 
+270 
+271 ## [9/16] Updates to Notion’s Terms
+272 Source: gmail | Thread: 19d50f4f7945d100 | Labels: Inbox, Updates | Priority: None | Senders: Notion Team | Last Date: Fri, Apr 3, 2026, 1:28 AM | Last Updated: 2026-04-03T14:02:25.316103+00:00
+273 ### Executive Briefing: Notion Terms Update
+274 
+275 **Key Participants & Roles**
+276 *   **Sender:** Notion Team (team@mail.notion.so) – Service provider.
+277 *   **Recipient:** Michael – Customer account holder.
+278 
+279 **Main Topic/Request**
+280 Notification of updates to Notion's legal documentation, specifically the Master Subscription Agreement and Notion AI/Credits Supplementary Terms. The primary change involves the introduction of a credit system for "Custom Agents."
+281 
+282 **Pending Actions & Ownership**
+283 *   **Action Required:** None at this time.
+284 *   **Owner:** Michael (Not required to act yet).
+285 *   **Note:** No immediate action is needed prior to May 1, 2026.
+286 
+287 **Decisions Made**
+288 *   Notion has finalized updates requiring credits to run Custom Agents.
+289 *   Credits are designated as an optional add-on for Business and Enterprise plans only.
+290 
+291 **Key Dates & Deadlines**
+292 *   **May 1, 2026:** Updated terms officially take effect.
+293 *   **May 4, 2026:** Notion credits become available as an add-on; this is the date Custom Agents will require credits to operate.
+294 *   **April 3, 2026:** Notification sent (Current status: No changes apply before May 1).
+295 
+296 **Summary of Changes**
+297 Starting May 4, 2026, running Custom Agents will require Notion credits. These credits will be purchasable as an add-on for Business and Enterprise plans on that same date. Until the terms take effect on May 1, 2026, all current operations remain unchanged.
+298 
+299 **References**
+300 *   Full updated terms: [Link provided in email body]
+301 *   Summary overview: [Link provided in email body]
+302 *   Original Message ID: `19d50f4f7945d100`
+303 
+304 
+305 ## [10/16] You have no events scheduled today.
+306 Source: gmail | Thread: 19d5013cda0bfcf5 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Thu, Apr 2, 2026, 9:22 PM | Last Updated: 2026-04-02T22:01:49.118550+00:00
+307 **Daily Work Briefing Summary**
+308 
+309 *   **Key Participants & Roles:**
+310     *   **Michael Bui** (Recipient): Account holder for `michael.bui@fairpricegroup.sg`. Subscribed to daily agenda notifications for the "Digital Business Tech Release/Changes" calendar.
+311     *   **Google Calendar System** (`calendar-notification@google.com`): Automated notification sender.
+312 
+313 *   **Main Topic/Request:**
+314     *   Delivery of a standard automated daily agenda reminder confirming the user's schedule status for the current day.
+315 
+316 *   **Pending Actions & Ownership:**
+317     *   **No actions pending.** The email serves as an informational notification only.
+318     *   No tasks, meetings, or deliverables are assigned to Michael Bui based on this message.
+319 
+320 *   **Decisions Made:**
+321     *   None. This is a system-generated status update confirming the absence of scheduled events.
+322 
+323 *   **Key Dates, Deadlines, & Follow-ups:**
+324     *   **Notification Date/Time:** April 2, 2026, at 9:22 PM.
+325     *   **Relevant Date:** Friday, April 3, 2026 (Current day referenced in the agenda).
+326     *   **Status Confirmation:** No events scheduled for Michael Bui on April 3, 2026.
+327     *   **Follow-up Required:** None.
+328 
+329 *   **Additional Context:**
+330     *   The notification indicates subscription to specific calendar updates ("Digital Business Tech Release/Changes").
+331     *   Settings can be modified by logging into `https://calendar.google.com/calendar/`.
+332     *   Email contains standard confidentiality and privilege disclaimers.
+333 
+334 
+335 ## [11/16] Simplifying Jira's create experience
+336 Source: gmail | Thread: 19d4f67520258079 | Labels: Inbox, Updates | Priority: None | Senders: Atlassian | Last Date: Thu, Apr 2, 2026, 6:14 PM | Last Updated: 2026-04-02T22:02:03.567388+00:00
+337 **Daily Work Briefing: Simplifying Jira's Create Experience**
+338 
+339 **Key Participants & Roles**
+340 *   **Sender:** Atlassian (info@e.atlassian.com) – Product team communicating platform updates.
+341 *   **Audience:** Site Administrators and end-users within the tenant.
+342 
+343 **Main Topic**
+344 Atlassian is rolling out an improved "create experience" for Jira work items (the "big blue button"). The update aims to make creating new tickets quicker, cleaner, and more intelligent by introducing a simplified default interface while retaining access to full forms when necessary.
+345 
+346 **Pending Actions & Ownership**
+347 *   **Action:** No immediate action required from administrators today.
+348 *   **Owner:** Atlassian (for rollout execution); Administrators (optional intervention).
+349 *   **Optional Admin Action:** Administrators who prefer the full-form layout for all users must utilize a new toggle to opt out of the simple default experience. This is not mandatory unless specific team workflows require it.
+350 
+351 **Decisions Made**
+352 *   **Product Strategy:** Atlassian has decided to shift the default create view from the full form to a "compact" window containing essentials (summary, description, required fields, and up to three optional fields).
+353 *   **Configuration Logic:**
+354     *   For team-managed projects: The top three highest-ranked optional fields will be shown.
+355     *   For company-managed projects: The first three optional fields on the create screen will be shown.
+356 *   **Flexibility:** Users can expand the compact window to access the full-form layout at any time. Projects with complex needs (extra required fields, tabs) will automatically default to the full form.
+357 *   **Compatibility:** Existing configurations (required fields, validation rules, workflow requirements, and Forge app modifications) remain fully functional without modification.
+358 
+359 **Key Dates & Follow-ups**
+360 *   **Announcement Date:** April 2, 2026 (18:14).
+361 *   **Rollout Start:** Late April 2026.
+362 *   **Communication Schedule:** Further details and release notes will be shared closer to the launch date.
+363 *   **Adoption Note:** The experience is rolling out gradually; availability may vary by tenant initially.
+364 
+365 **Specific References**
+366 *   **Resource Title:** "Simplifying Jira's create experience" / "An improved Jira create experience is on its way."
+367 *   **Email Metadata Labels:** Inbox, Updates.
+368 *   **Atlassian Contact/Location:** 341 George Street, Sydney, NSW, 2000, Australia.
+369 
+370 
+371 ## [12/16] Unlock your potential with FairPrice Group’s Internal Talent Marketplace
+372 Source: gmail | Thread: 19d4d6c1534ec8e5 | Labels: Inbox, Updates | Priority: None | Senders: HR Announcement | Last Date: Thu, Apr 2, 2026, 9:00 AM | Last Updated: 2026-04-02T10:02:37.849254+00:00
+373 **Daily Work Briefing: Internal Talent Marketplace Expansion**
+374 
+375 **Key Participants & Roles**
+376 *   **HR Announcement (hr@fairpricegroup.sg):** Issuer of the official policy update regarding talent mobility.
+377 *   **Eligible Staff:** All Corporate/HQ Non-Executive and Frontline Executive staff at FairPrice Group (FPG).
+378 *   **Support Contact:** ta@fairpricegroup.sg for clarifications.
+379 
+380 **Main Topic**
+381 Announcement of the expansion of FPG's Internal Talent Marketplace to explicitly include **Corporate/HQ Non-Executive** and **Frontline Executive** staff. This change enables cross-functional mobility, allowing HQ staff to access Frontline Executive roles and all eligible employees to discover internal opportunities for skill development and career growth via the **myTalentHub** portal.
+382 
+383 **Eligibility Criteria (Mandatory)**
+384 To apply for an internal transfer, candidates must meet all of the following:
+385 *   **Tenure:** Minimum 2 years in current position for Job Grade S/D; minimum 3 years for Job Grade C and above.
+386 *   **Performance:** Attained at least a "Green" rating in the last 2 to 3 years.
+387 *   **Discipline:** No recorded Performance Improvement Plan (PIP) or disciplinary actions within the last 2 to 3 years.
+388 *   **Competency:** Meets minimum competencies for the target role.
+389 *   **Job Grade:** Current role must be at least the same job grade as the new role applied for.
+390 
+391 **Pending Actions & Ownership**
+392 *   **Action:** Review eligibility and explore opportunities on the portal.
+393     *   **Owner:** All eligible staff (Corporate/HQ Non-Executive and Frontline Executive).
+394     *   **Instruction:** Click "Click to visit myTalentHub" or download the "HEAR WHAT IT'S LIKE TO MAKE THE MOVE!" resource.
+395 *   **Action:** Consult step-by-step application guide.
+396     *   **Owner:** Prospective applicants.
+397     *   **Instruction:** Access the comprehensive guide provided in the email body.
+398 *   **Action:** Submit inquiries regarding eligibility or process.
+399     *   **Owner:** Staff with questions.
+400     *   **Contact:** ta@fairpricegroup.sg.
+401 
+402 **Decisions Made**
+403 *   FPG has officially extended the Internal Mobility programme scope to include previously excluded groups (Corporate/HQ Non-Executive and Frontline Executive).
+404 *   HQ staff are now explicitly authorized to apply for Frontline Executive roles to encourage cross-functional mobility.
+405 
+406 **Key Dates & Follow-ups**
+407 *   **Announcement Date:** April 2, 2026, at 9:00 AM.
+408 *   **Effective Status:** Immediate ("The doors are officially wide open").
+409 *   **Application Window:** Open indefinitely until roles are filled; no specific closing deadline stated in the announcement.
+410 
+411 
+412 ## [13/16] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
+413 Source: gmail | Thread: 19d4cfd200d6d7bc | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Thu, Apr 2, 2026, 7:04 AM | Last Updated: 2026-04-02T10:02:57.609786+00:00
+414 **Daily Work Briefing: Opsgenie Alert Thread**
+415 
+416 **Key Participants & Roles**
+417 *   **Automated Source:** Opsgenie (Notification System) / Datadog (Monitoring Integration).
+418 *   **Assigned Team:** DPD Staff Excellence - Retail Media (Responders).
+419 *   **Notified Channels/Groups:** `@hangouts-dd-dpd-grocery-alert`, `@opsgenie-dpd-grocery-retail-media`.
+420 *   **System Owner:** `dpd-grocery-retail-media-eu` (Datadog Integration).
+421 
+422 **Main Topic & Request**
+423 An automated alert was triggered for the **marketing-service** in the **prod** environment, indicating a high error rate. The system requested immediate investigation into:
+424 1.  HTTP request error metrics on Datadog APM.
+425 2.  Kubernetes deployment status (GKE) in cluster `fpon-cluster`.
+426 3.  Execution of the specific runbook for this service.
+427 
+428 **Alert Specifications**
+429 *   **Trigger Condition:** Error rate > 5% (`0.05`) over the last 10 minutes.
+430 *   **Current Metric Value:** 0.016 (1.6%), which is currently below the 5% threshold but triggered a P2 alert, likely due to system state persistence or specific aggregation logic at trigger time.
+431 *   **Priority:** P2.
+432 *   **Service Tags:** `env:prod`, `service:marketing-service`, `managed_by:datadog-sync`, `monitor`.
+433 
+434 **Pending Actions & Ownership**
+435 *   **Action Required:** Investigate the high error rate, check Datadog APM traces, review K8s deployment health, and follow the provided runbook.
+436 *   **Owner:** DPD Staff Excellence - Retail Media team (via Opsgenie assignment).
+437 *   **Status:** Alert remains open with no human acknowledgment or resolution updates recorded in this thread.
+438 
+439 **Decisions Made**
+440 *   No decisions were made within this thread; it contains only automated system notifications.
+441 
+442 **Key Dates & References**
+443 *   **Alert Created:** Apr 2, 2026, 14:59:08 UTC (Note: Email timestamps show 06:59 AM local time).
+444 *   **Last Updated (Metric):** 2026-04-02 06:58:06 +0000.
+445 *   **Critical Links:**
+446     *   Datadog Monitor: `https://app.datadoghq.eu/monitors/17447106`
+447     *   Runbook: `https://ntuclink.atlassian.net/wiki/spaces/DIS/pages/2008167992/marketing-service+-+Run+book`
+448     *   K8s Overview: `.../fpon-cluster/default/marketing-service/overview`
+449 *   **Unique Identifiers:** Alert ID `a8f4a0be-ab4e-45aa-a0fc-8ea63cb490c2-1775113148971`, TinyID `139454`.
+450 
+451 **Follow-up Required**
+452 *   Immediate technical review by the Retail Media team to confirm if the alert is a false positive (given metric 0.016 < threshold 0.05) or requires remediation.
+453 
+454 
+455 ## [14/16] Accepted: ACNxOsmos: Daily Cadence @ Thu Apr 2, 2026 1:30pm - 2pm (SGT) (michael.bui@fairpricegroup.sg)
+456 Source: gmail | Thread: 19d4caaff361b29c | Labels: Inbox | Priority: None | Senders: Shubhangi Agrawal | Last Date: Thu, Apr 2, 2026, 5:29 AM | Last Updated: 2026-04-02T06:01:05.075274+00:00
+457 **Daily Work Briefing: ACNxOsmos Daily Cadence**
+458 
+459 **Key Participants & Roles**
+460 *   **Organizer:** Michael Bui (michael.bui@fairpricegroup.sg)
+461 *   **Core Attendees:** Flora Wo, Tanish Nevatia, Vipul Gupta, Barkha Kewalramani (ntucguest.com), Rahul Jain, Tiongsiong Tee, Daryl Ng, Shravan Kankaria, John Henry Mantaring, Artharn Senrit, Nikhil Grover, Aman Khatri, Tanul Mehta, Nabhey Samant, Winson Lim.
+462 *   **Accenture Representatives:** Siddharth Aklujkar, Rachit Sachdeva, Satish Pamidimarthi.
+463 *   **Optional Attendee:** Ravi Goel.
+464 
+465 **Main Topic/Request**
+466 Confirmation of attendance and distribution of the project roadmap for the "FPG Project Plan 2905025." The meeting serves as the designated daily cadence for the ACNxOsmos initiative.
+467 
+468 **Pending Actions & Owners**
+469 *   **Join Meeting:** All listed guests are expected to attend the scheduled slot. No specific pre-meeting action items were identified in this thread; the primary task is participation at the scheduled time.
+470 
+471 **Decisions Made**
+472 *   **Meeting Confirmation:** The invitation was accepted by Shubhangi Agrawal (onlinesales.ai) as confirmed in the earliest log entry.
+473 *   **Schedule Fixed:** The recurring daily cadence is locked for Thursday, April 2, 2026.
+474 
+475 **Key Dates & Follow-ups**
+476 *   **Date:** Thursday, April 2, 2026.
+477 *   **Time:** 1:30 PM – 2:00 PM (Singapore Standard Time).
+478 *   **Reference Document:** "FPG Project Plan 2905025" (Attached to the invitation).
+479 *   **Meeting Access:** Google Meet link (`meet.google.com/ise-ydtd-por`) and US dial-in details provided.
+480 
+481 
+482 ## [15/16] [JIRA] (DPD-838) Transition to Impression-Based Inventory & Multi-Banner Delivery
+483 Source: gmail | Thread: 19d2e82fa82f66fe | Labels: Inbox, Updates | Priority: None | Senders: Nikhil | Last Date: Thu, Apr 2, 2026, 3:24 AM | Last Updated: 2026-04-02T06:01:30.039228+00:00
+484 **Daily Work Briefing: JIRA (DPD-838)**
+485 
+486 **Project Context**
+487 *   **JIRA ID:** DPD-838
+488 *   **Topic:** Transition to Impression-Based Inventory & Multi-Banner Delivery
+489 *   **Category:** Ecom/Omni
+490 *   **Status:** IN DEVELOPMENT (Updated Apr 2, 2026)
+491 *   **Assignee:** Chee Hoe Leong
+492 *   **Last Update:** April 2, 2026 (Milind Badame comment)
+493 
+494 **Key Participants**
+495 *   **Chee Hoe Leong:** DM; Provided definitive answers to technical ambiguities and updated ticket status.
+496 *   **Nikhil Grover:** Product Manager; Confirmed slot value constraints in reply to Chee Hoe Leong.
+497 *   **Michael Bui:** Technical Stakeholder (Previously identified blockers).
+498 *   **Milind Badame:** QA/Test Lead; Determined E2E automation requirements.
+499 
+500 **Main Topic & Request**
+501 Following critical clarifications raised by Michael Bui on Mar 28, the team received definitive responses regarding scope and logic. The project status remains "IN DEVELOPMENT," now updated with final testing constraints from Milind Badame on April 2.
+502 
+503 **Resolved Technical Ambiguities & Decisions**
+504 1.  **Migration Scope:** Confirmed that video support is restricted to **Omni Home** and **FPPay**. Category and Search pages will remain on the legacy MPS service (No migration required).
+505 2.  **Non-Endemic Identification:** The method uses a Boolean value explicitly labeled **"Endemic"** or **"Non-endemic"**, rather than substring matching logic.
+506 3.  **OSMOS Capacity Limits:** Support for limits exceeding 10 `pcnt` items is expected by early April; confirmation of on-track delivery was pending Monday verification (Apr 2 status update required).
+507 4.  **Position Tracking & Slot Values:** The "position" value excludes multiple banners targeting the same slot (e.g., preventing duplicate 999s), not for sequencing. Values are limited to integers **1–20** or empty (default).
+508 5.  **Video Behavior:** Auto-play and auto-scroll remain **Front-End managed**. Sales policy limits videos to one per Carousel.
+509 6.  **Failure Handling:** If no banners are configured, the API returns nothing, causing banners to collapse (managed by Ops). API unavailability results in the same output; an incident will be created.
+510 
+511 **Testing & Automation Decisions**
+512 *   **E2E Automation Status:** Determined as **No**. Milind Badame confirmed on April 2 that this scenario "cannot be automated." The `Requires_e2e_test` flag has been updated to No. Manual testing is required for the new logic.
+513 
+514 **Pending Actions & Ownership**
+515 *   **Action:** Confirm on-track delivery of OSMOS capacity >10 by early April.
+516     *   **Owner:** Chee Hoe Leong / Engineering Lead (Target: Monday).
+517 *   **Action:** Update SOP to reflect slot logic for excluding duplicate banners and Integer 1-20 constraint.
+518     *   **Owner:** Development Team / Ops.
+519 *   **Action:** Execute manual E2E testing protocols (per Milind Badame's determination that automation is not feasible).
+520     *   **Owner:** QA Team / Milind Badame.
+521 
+522 **Key Dates & Follow-ups**
+523 *   **Last Update Timestamp:** April 2, 2026, at 11:15 AM Singapore Time (Milind Badame comment regarding E2E automation).
+524 *   **Status Change:** Moved to "IN DEVELOPMENT" on Apr 1; Automated testing requirement removed on Apr 2.
+525 
+526 **Summary for Executive Review**
+527 The DPD-838 initiative has resolved prior scope ambiguities and entered development. Key decisions confirm that only Omni Home and FPPay will adopt the new video-enabled multi-banner architecture; legacy MPS remains in place for Category/Search pages. Technical logic is now defined: non-endemic identification uses explicit Boolean labels ("Endemic"/"Non-endemic"), and slot values are integers 1–20 used to prevent duplicate renders rather than sequence ordering. OSMOS capacity expansion (>10 items) is targeted for early April pending Monday confirmation. Failure states result in banner collapse with incident creation, while media behaviors remain Front-End responsibilities. Crucially, on April 2, Milind Badame determined that the new logic **cannot be automated**, updating the `Requires_e2e_test` status to "No." Consequently, QA must proceed with manual E2E testing strategies for this release.
+528 
+529 
+530 ## [16/16] [Dashboard Report] Retail Media - DD Dashboard | Thu 2 Apr 11:00AM +08
+531 Source: gmail | Thread: 19d4c254d1e98e3f | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Thu, Apr 2, 2026, 3:03 AM | Last Updated: 2026-04-02T06:01:42.181692+00:00
+532 **Daily Work Briefing: Retail Media Data Update**
+533 
+534 **Key Participants & Roles**
+535 *   **Michael:** Recipient of the report (Action Owner).
+536 *   **Datadog HQ / Team Datadog:** Sender; provided system-generated monitoring reports.
+537 *   **System:** Automated sender interface (`no-reply@dtdg.eu`).
+538 
+539 **Main Topic/Request**
+540 Transmission of the **"Retail Media - DD Dashboard"** report containing aggregated data for the past three days leading up to April 2, 2026. The email serves as an automated notification rather than a specific request requiring immediate intervention beyond review.
+541 
+542 **Pending Actions & Ownership**
+543 *   **Action:** Review the attached "Retail Media - DD Dashboard" report.
+544 *   **Owner:** Michael.
+545 *   **Context:** The report includes three days of historical data for monitoring purposes. No explicit deadline was set in the email, but standard practice implies review within the current business day (April 2).
+546 
+547 **Decisions Made**
+548 No strategic decisions or policy changes were documented in this thread. The communication is purely informational regarding data availability.
+549 
+550 **Key Dates & Follow-ups**
+551 *   **Report Generation Date:** Thursday, April 2, 2026, at 11:00 AM (+08 time zone).
+552 *   **Email Timestamp:** April 2, 2026, at 3:03 AM.
+553 *   **Data Scope:** Past three days relative to the report generation date (approx. March 30 – April 2, 2026).
+554 *   **Upcoming Follow-up:** None scheduled automatically; depends on Michael's analysis of anomalies or trends in the attached data.
+555 
+556 **Specific References & Metadata**
+557 *   **Attachment Filename/Subject:** Retail Media - DD Dashboard.
+558 *   **Sender Email:** `no-reply@dtdg.eu`.
+559 *   **Last Message ID:** `19d4c254d1e98e3f`.
+560 *   **Labels:** Inbox, Updates.
+561 *   **Company Address (Footer):** 620 8th Avenue, 45th Floor, New York, NY 10018.
+<<<

@@ -1,6 +1,40 @@
 
 
-## [1/10] [Dashboard Report] Retail Media - DD Dashboard | Sat 4 Apr 11:00AM +08
+## [1/16] You have no events scheduled today.
+Source: gmail | Thread: 19d5a6ad0efffc5b | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Sat, Apr 4, 2026, 9:34 PM | Last Updated: 2026-04-04T22:01:06.711639+00:00
+**Daily Work Briefing Summary**
+
+*   **Key Participants & Roles:**
+    *   **Michael Bui** (Account holder: `michael.bui@fairpricegroup.sg`): Recipient of the daily agenda notification.
+    *   **Google Calendar** (`calendar-notification@google.com`): Automated system sender providing schedule status updates.
+    *   **Subscribed Calendars:** "Digital Business Tech Release/Changes."
+
+*   **Main Topic & Request:**
+    *   The email is an automated system notification confirming the attendee's daily calendar status for **Sunday, April 5, 2026**. It confirms there are **no events scheduled** on the subscribed calendars ("Digital Business Tech Release/Changes") for this specific date.
+
+*   **Pending Actions & Ownership:**
+    *   **Action Required:** None identified. The notification serves as an informational update confirming a clear schedule.
+    *   **Ownership:** N/A (Automated status report).
+
+*   **Decisions Made:**
+    *   No business decisions or strategic choices were recorded in this thread; it is solely a system-generated status confirmation.
+
+*   **Key Dates, Deadlines & Follow-ups:**
+    *   **Notification Date/Time:** April 4, 2026, at 9:34 PM.
+    *   **Relevant Schedule Date:** Sunday, April 5, 2026 (No events).
+    *   **Follow-up:** None scheduled based on this content.
+
+*   **Additional Metadata & References:**
+    *   **Email Labels:** Inbox, Updates.
+    *   **Last Message ID:** `19d5a6ad0efffc5b`.
+    *   **Configuration Link:** https://calendar.google.com/calendar/ (Available if Michael Bui wishes to modify calendar subscription settings).
+    *   **Legal Note:** Email contains confidentiality and privilege warnings.
+
+**Executive Summary:**
+The system has confirmed that executive Michael Bui has a completely open schedule for Sunday, April 5, 2026, regarding the "Digital Business Tech Release/Changes" calendar. No immediate actions or meetings are required.
+
+
+## [2/16] [Dashboard Report] Retail Media - DD Dashboard | Sat 4 Apr 11:00AM +08
 Source: gmail | Thread: 19d56716fade7584 | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Sat, Apr 4, 2026, 3:02 AM | Last Updated: 2026-04-04T10:01:20.429618+00:00
 **Daily Work Briefing: Retail Media Dashboard Update**
 
@@ -32,7 +66,7 @@ No strategic decisions were made during this transaction. The email represents a
 *   **Last Message ID:** 19d56716fade7584
 
 
-## [2/10] [RAW Overdue] Expired Risk Acceptance & Waiver Form
+## [3/16] [RAW Overdue] Expired Risk Acceptance & Waiver Form
 Source: gmail | Thread: 19d56038fde0ac6d | Labels: Inbox | Priority: None | Senders: cyberrisk.automation | Last Date: Sat, Apr 4, 2026, 1:02 AM | Last Updated: 2026-04-04T02:01:23.256433+00:00
 **Daily Work Briefing: Overdue Risk Acceptance & Waiver (RAW)**
 
@@ -65,7 +99,7 @@ No new decisions were made in this thread; the email serves as a mandatory compl
 *   **Contact for Review/Submission:** `cyberRisk@ntucenterprise.sg`, `techgrc@ntucenterprise.sg`.
 
 
-## [3/10] You have no events scheduled today.
+## [4/16] You have no events scheduled today.
 Source: gmail | Thread: 19d55488549f3608 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Fri, Apr 3, 2026, 9:38 PM | Last Updated: 2026-04-03T22:01:07.280607+00:00
 **Daily Work Briefing Summary**
 
@@ -95,7 +129,7 @@ Source: gmail | Thread: 19d55488549f3608 | Labels: Inbox, Updates | Priority: No
     *   Standard disclaimer: The email is confidential and may be privileged.
 
 
-## [4/10] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
+## [5/16] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
 Source: gmail | Thread: 19d523ef32e8f816 | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Fri, Apr 3, 2026, 5:40 PM | Last Updated: 2026-04-03T22:01:35.911607+00:00
 **Daily Work Briefing: Opsgenie Alert Thread Summary (Updated)**
 
@@ -137,7 +171,7 @@ No human decisions or resolution actions recorded in this thread; it consists en
 *   **Integration:** `dpd-grocery-retail-media-eu (Datadog)`
 
 
-## [5/10] Issue with Missing UBID
+## [6/16] Issue with Missing UBID
 Source: gmail | Thread: 19d52fdf13c8b0bd | Labels: Inbox | Priority: None | Senders: Rahul, Nikhil, me | Last Date: Fri, Apr 3, 2026, 12:50 PM | Last Updated: 2026-04-03T14:01:46.241463+00:00
 **Daily Work Briefing: Resource Issue (Missing UBID)**
 
@@ -164,7 +198,7 @@ No final technical resolution was made in this thread. The discussion remains at
 *   **Current Status:** Pending clarification response from FairPrice Group to Osmos.ai regarding ad unit specifics and parameter definitions. No deadline set; immediate follow-up required to prevent data integrity issues in funnel tracking.
 
 
-## [6/10] [Dashboard Report] Retail Media - DD Dashboard | Fri 3 Apr 11:00AM +08
+## [7/16] [Dashboard Report] Retail Media - DD Dashboard | Fri 3 Apr 11:00AM +08
 Source: gmail | Thread: 19d514aa8123e26b | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Fri, Apr 3, 2026, 3:02 AM | Last Updated: 2026-04-03T06:01:15.987435+00:00
 **Daily Work Briefing: Retail Media Dashboard Report**
 
@@ -196,7 +230,7 @@ No strategic decisions or approvals were recorded in this thread; this is a stan
 Michael should verify data integrity and monitor trends within the specified three-day window. No further action from the sender is required unless anomalies are detected during the review.
 
 
-## [7/10] Re: Hyper stores visual - Advertima
+## [8/16] Re: Hyper stores visual - Advertima
 Source: gmail | Thread: 19b6e85f67d0d448 | Labels: Inbox | Priority: None | Senders: Abdel-R., Rajkumar | Last Date: Fri, Apr 3, 2026, 2:44 AM | Last Updated: 2026-04-03T06:01:54.634333+00:00
 **Subject:** Daily Briefing: Hyper Stores Visual Management & Campaign Execution (Updated Apr 3)
 
@@ -234,7 +268,7 @@ Management of digital advertising assets for NTUC Hyper stores (SCO/Cashier, Wal
 *   Key Assets updated: NPS, Xtra Play Market, ActiveSg (Briq Pte Ltd), Raya Scan at Entry, Haleon.
 
 
-## [8/10] Updates to Notion’s Terms
+## [9/16] Updates to Notion’s Terms
 Source: gmail | Thread: 19d50f4f7945d100 | Labels: Inbox, Updates | Priority: None | Senders: Notion Team | Last Date: Fri, Apr 3, 2026, 1:28 AM | Last Updated: 2026-04-03T14:02:25.316103+00:00
 ### Executive Briefing: Notion Terms Update
 
@@ -268,7 +302,7 @@ Starting May 4, 2026, running Custom Agents will require Notion credits. These c
 *   Original Message ID: `19d50f4f7945d100`
 
 
-## [9/10] You have no events scheduled today.
+## [10/16] You have no events scheduled today.
 Source: gmail | Thread: 19d5013cda0bfcf5 | Labels: Inbox, Updates | Priority: None | Senders: Google Calendar | Last Date: Thu, Apr 2, 2026, 9:22 PM | Last Updated: 2026-04-02T22:01:49.118550+00:00
 **Daily Work Briefing Summary**
 
@@ -298,7 +332,7 @@ Source: gmail | Thread: 19d5013cda0bfcf5 | Labels: Inbox, Updates | Priority: No
     *   Email contains standard confidentiality and privilege disclaimers.
 
 
-## [10/10] Simplifying Jira's create experience
+## [11/16] Simplifying Jira's create experience
 Source: gmail | Thread: 19d4f67520258079 | Labels: Inbox, Updates | Priority: None | Senders: Atlassian | Last Date: Thu, Apr 2, 2026, 6:14 PM | Last Updated: 2026-04-02T22:02:03.567388+00:00
 **Daily Work Briefing: Simplifying Jira's Create Experience**
 
@@ -332,3 +366,196 @@ Atlassian is rolling out an improved "create experience" for Jira work items (th
 *   **Resource Title:** "Simplifying Jira's create experience" / "An improved Jira create experience is on its way."
 *   **Email Metadata Labels:** Inbox, Updates.
 *   **Atlassian Contact/Location:** 341 George Street, Sydney, NSW, 2000, Australia.
+
+
+## [12/16] Unlock your potential with FairPrice Group’s Internal Talent Marketplace
+Source: gmail | Thread: 19d4d6c1534ec8e5 | Labels: Inbox, Updates | Priority: None | Senders: HR Announcement | Last Date: Thu, Apr 2, 2026, 9:00 AM | Last Updated: 2026-04-02T10:02:37.849254+00:00
+**Daily Work Briefing: Internal Talent Marketplace Expansion**
+
+**Key Participants & Roles**
+*   **HR Announcement (hr@fairpricegroup.sg):** Issuer of the official policy update regarding talent mobility.
+*   **Eligible Staff:** All Corporate/HQ Non-Executive and Frontline Executive staff at FairPrice Group (FPG).
+*   **Support Contact:** ta@fairpricegroup.sg for clarifications.
+
+**Main Topic**
+Announcement of the expansion of FPG's Internal Talent Marketplace to explicitly include **Corporate/HQ Non-Executive** and **Frontline Executive** staff. This change enables cross-functional mobility, allowing HQ staff to access Frontline Executive roles and all eligible employees to discover internal opportunities for skill development and career growth via the **myTalentHub** portal.
+
+**Eligibility Criteria (Mandatory)**
+To apply for an internal transfer, candidates must meet all of the following:
+*   **Tenure:** Minimum 2 years in current position for Job Grade S/D; minimum 3 years for Job Grade C and above.
+*   **Performance:** Attained at least a "Green" rating in the last 2 to 3 years.
+*   **Discipline:** No recorded Performance Improvement Plan (PIP) or disciplinary actions within the last 2 to 3 years.
+*   **Competency:** Meets minimum competencies for the target role.
+*   **Job Grade:** Current role must be at least the same job grade as the new role applied for.
+
+**Pending Actions & Ownership**
+*   **Action:** Review eligibility and explore opportunities on the portal.
+    *   **Owner:** All eligible staff (Corporate/HQ Non-Executive and Frontline Executive).
+    *   **Instruction:** Click "Click to visit myTalentHub" or download the "HEAR WHAT IT'S LIKE TO MAKE THE MOVE!" resource.
+*   **Action:** Consult step-by-step application guide.
+    *   **Owner:** Prospective applicants.
+    *   **Instruction:** Access the comprehensive guide provided in the email body.
+*   **Action:** Submit inquiries regarding eligibility or process.
+    *   **Owner:** Staff with questions.
+    *   **Contact:** ta@fairpricegroup.sg.
+
+**Decisions Made**
+*   FPG has officially extended the Internal Mobility programme scope to include previously excluded groups (Corporate/HQ Non-Executive and Frontline Executive).
+*   HQ staff are now explicitly authorized to apply for Frontline Executive roles to encourage cross-functional mobility.
+
+**Key Dates & Follow-ups**
+*   **Announcement Date:** April 2, 2026, at 9:00 AM.
+*   **Effective Status:** Immediate ("The doors are officially wide open").
+*   **Application Window:** Open indefinitely until roles are filled; no specific closing deadline stated in the announcement.
+
+
+## [13/16] Opsgenie Alert: [Datadog] [P2] [Warn] Service marketing-service has a high error rate on env:prod
+Source: gmail | Thread: 19d4cfd200d6d7bc | Labels: Inbox, Updates | Priority: None | Senders: Opsgenie | Last Date: Thu, Apr 2, 2026, 7:04 AM | Last Updated: 2026-04-02T10:02:57.609786+00:00
+**Daily Work Briefing: Opsgenie Alert Thread**
+
+**Key Participants & Roles**
+*   **Automated Source:** Opsgenie (Notification System) / Datadog (Monitoring Integration).
+*   **Assigned Team:** DPD Staff Excellence - Retail Media (Responders).
+*   **Notified Channels/Groups:** `@hangouts-dd-dpd-grocery-alert`, `@opsgenie-dpd-grocery-retail-media`.
+*   **System Owner:** `dpd-grocery-retail-media-eu` (Datadog Integration).
+
+**Main Topic & Request**
+An automated alert was triggered for the **marketing-service** in the **prod** environment, indicating a high error rate. The system requested immediate investigation into:
+1.  HTTP request error metrics on Datadog APM.
+2.  Kubernetes deployment status (GKE) in cluster `fpon-cluster`.
+3.  Execution of the specific runbook for this service.
+
+**Alert Specifications**
+*   **Trigger Condition:** Error rate > 5% (`0.05`) over the last 10 minutes.
+*   **Current Metric Value:** 0.016 (1.6%), which is currently below the 5% threshold but triggered a P2 alert, likely due to system state persistence or specific aggregation logic at trigger time.
+*   **Priority:** P2.
+*   **Service Tags:** `env:prod`, `service:marketing-service`, `managed_by:datadog-sync`, `monitor`.
+
+**Pending Actions & Ownership**
+*   **Action Required:** Investigate the high error rate, check Datadog APM traces, review K8s deployment health, and follow the provided runbook.
+*   **Owner:** DPD Staff Excellence - Retail Media team (via Opsgenie assignment).
+*   **Status:** Alert remains open with no human acknowledgment or resolution updates recorded in this thread.
+
+**Decisions Made**
+*   No decisions were made within this thread; it contains only automated system notifications.
+
+**Key Dates & References**
+*   **Alert Created:** Apr 2, 2026, 14:59:08 UTC (Note: Email timestamps show 06:59 AM local time).
+*   **Last Updated (Metric):** 2026-04-02 06:58:06 +0000.
+*   **Critical Links:**
+    *   Datadog Monitor: `https://app.datadoghq.eu/monitors/17447106`
+    *   Runbook: `https://ntuclink.atlassian.net/wiki/spaces/DIS/pages/2008167992/marketing-service+-+Run+book`
+    *   K8s Overview: `.../fpon-cluster/default/marketing-service/overview`
+*   **Unique Identifiers:** Alert ID `a8f4a0be-ab4e-45aa-a0fc-8ea63cb490c2-1775113148971`, TinyID `139454`.
+
+**Follow-up Required**
+*   Immediate technical review by the Retail Media team to confirm if the alert is a false positive (given metric 0.016 < threshold 0.05) or requires remediation.
+
+
+## [14/16] Accepted: ACNxOsmos: Daily Cadence @ Thu Apr 2, 2026 1:30pm - 2pm (SGT) (michael.bui@fairpricegroup.sg)
+Source: gmail | Thread: 19d4caaff361b29c | Labels: Inbox | Priority: None | Senders: Shubhangi Agrawal | Last Date: Thu, Apr 2, 2026, 5:29 AM | Last Updated: 2026-04-02T06:01:05.075274+00:00
+**Daily Work Briefing: ACNxOsmos Daily Cadence**
+
+**Key Participants & Roles**
+*   **Organizer:** Michael Bui (michael.bui@fairpricegroup.sg)
+*   **Core Attendees:** Flora Wo, Tanish Nevatia, Vipul Gupta, Barkha Kewalramani (ntucguest.com), Rahul Jain, Tiongsiong Tee, Daryl Ng, Shravan Kankaria, John Henry Mantaring, Artharn Senrit, Nikhil Grover, Aman Khatri, Tanul Mehta, Nabhey Samant, Winson Lim.
+*   **Accenture Representatives:** Siddharth Aklujkar, Rachit Sachdeva, Satish Pamidimarthi.
+*   **Optional Attendee:** Ravi Goel.
+
+**Main Topic/Request**
+Confirmation of attendance and distribution of the project roadmap for the "FPG Project Plan 2905025." The meeting serves as the designated daily cadence for the ACNxOsmos initiative.
+
+**Pending Actions & Owners**
+*   **Join Meeting:** All listed guests are expected to attend the scheduled slot. No specific pre-meeting action items were identified in this thread; the primary task is participation at the scheduled time.
+
+**Decisions Made**
+*   **Meeting Confirmation:** The invitation was accepted by Shubhangi Agrawal (onlinesales.ai) as confirmed in the earliest log entry.
+*   **Schedule Fixed:** The recurring daily cadence is locked for Thursday, April 2, 2026.
+
+**Key Dates & Follow-ups**
+*   **Date:** Thursday, April 2, 2026.
+*   **Time:** 1:30 PM – 2:00 PM (Singapore Standard Time).
+*   **Reference Document:** "FPG Project Plan 2905025" (Attached to the invitation).
+*   **Meeting Access:** Google Meet link (`meet.google.com/ise-ydtd-por`) and US dial-in details provided.
+
+
+## [15/16] [JIRA] (DPD-838) Transition to Impression-Based Inventory & Multi-Banner Delivery
+Source: gmail | Thread: 19d2e82fa82f66fe | Labels: Inbox, Updates | Priority: None | Senders: Nikhil | Last Date: Thu, Apr 2, 2026, 3:24 AM | Last Updated: 2026-04-02T06:01:30.039228+00:00
+**Daily Work Briefing: JIRA (DPD-838)**
+
+**Project Context**
+*   **JIRA ID:** DPD-838
+*   **Topic:** Transition to Impression-Based Inventory & Multi-Banner Delivery
+*   **Category:** Ecom/Omni
+*   **Status:** IN DEVELOPMENT (Updated Apr 2, 2026)
+*   **Assignee:** Chee Hoe Leong
+*   **Last Update:** April 2, 2026 (Milind Badame comment)
+
+**Key Participants**
+*   **Chee Hoe Leong:** DM; Provided definitive answers to technical ambiguities and updated ticket status.
+*   **Nikhil Grover:** Product Manager; Confirmed slot value constraints in reply to Chee Hoe Leong.
+*   **Michael Bui:** Technical Stakeholder (Previously identified blockers).
+*   **Milind Badame:** QA/Test Lead; Determined E2E automation requirements.
+
+**Main Topic & Request**
+Following critical clarifications raised by Michael Bui on Mar 28, the team received definitive responses regarding scope and logic. The project status remains "IN DEVELOPMENT," now updated with final testing constraints from Milind Badame on April 2.
+
+**Resolved Technical Ambiguities & Decisions**
+1.  **Migration Scope:** Confirmed that video support is restricted to **Omni Home** and **FPPay**. Category and Search pages will remain on the legacy MPS service (No migration required).
+2.  **Non-Endemic Identification:** The method uses a Boolean value explicitly labeled **"Endemic"** or **"Non-endemic"**, rather than substring matching logic.
+3.  **OSMOS Capacity Limits:** Support for limits exceeding 10 `pcnt` items is expected by early April; confirmation of on-track delivery was pending Monday verification (Apr 2 status update required).
+4.  **Position Tracking & Slot Values:** The "position" value excludes multiple banners targeting the same slot (e.g., preventing duplicate 999s), not for sequencing. Values are limited to integers **1–20** or empty (default).
+5.  **Video Behavior:** Auto-play and auto-scroll remain **Front-End managed**. Sales policy limits videos to one per Carousel.
+6.  **Failure Handling:** If no banners are configured, the API returns nothing, causing banners to collapse (managed by Ops). API unavailability results in the same output; an incident will be created.
+
+**Testing & Automation Decisions**
+*   **E2E Automation Status:** Determined as **No**. Milind Badame confirmed on April 2 that this scenario "cannot be automated." The `Requires_e2e_test` flag has been updated to No. Manual testing is required for the new logic.
+
+**Pending Actions & Ownership**
+*   **Action:** Confirm on-track delivery of OSMOS capacity >10 by early April.
+    *   **Owner:** Chee Hoe Leong / Engineering Lead (Target: Monday).
+*   **Action:** Update SOP to reflect slot logic for excluding duplicate banners and Integer 1-20 constraint.
+    *   **Owner:** Development Team / Ops.
+*   **Action:** Execute manual E2E testing protocols (per Milind Badame's determination that automation is not feasible).
+    *   **Owner:** QA Team / Milind Badame.
+
+**Key Dates & Follow-ups**
+*   **Last Update Timestamp:** April 2, 2026, at 11:15 AM Singapore Time (Milind Badame comment regarding E2E automation).
+*   **Status Change:** Moved to "IN DEVELOPMENT" on Apr 1; Automated testing requirement removed on Apr 2.
+
+**Summary for Executive Review**
+The DPD-838 initiative has resolved prior scope ambiguities and entered development. Key decisions confirm that only Omni Home and FPPay will adopt the new video-enabled multi-banner architecture; legacy MPS remains in place for Category/Search pages. Technical logic is now defined: non-endemic identification uses explicit Boolean labels ("Endemic"/"Non-endemic"), and slot values are integers 1–20 used to prevent duplicate renders rather than sequence ordering. OSMOS capacity expansion (>10 items) is targeted for early April pending Monday confirmation. Failure states result in banner collapse with incident creation, while media behaviors remain Front-End responsibilities. Crucially, on April 2, Milind Badame determined that the new logic **cannot be automated**, updating the `Requires_e2e_test` status to "No." Consequently, QA must proceed with manual E2E testing strategies for this release.
+
+
+## [16/16] [Dashboard Report] Retail Media - DD Dashboard | Thu 2 Apr 11:00AM +08
+Source: gmail | Thread: 19d4c254d1e98e3f | Labels: Inbox, Updates | Priority: None | Senders: Datadog HQ | Last Date: Thu, Apr 2, 2026, 3:03 AM | Last Updated: 2026-04-02T06:01:42.181692+00:00
+**Daily Work Briefing: Retail Media Data Update**
+
+**Key Participants & Roles**
+*   **Michael:** Recipient of the report (Action Owner).
+*   **Datadog HQ / Team Datadog:** Sender; provided system-generated monitoring reports.
+*   **System:** Automated sender interface (`no-reply@dtdg.eu`).
+
+**Main Topic/Request**
+Transmission of the **"Retail Media - DD Dashboard"** report containing aggregated data for the past three days leading up to April 2, 2026. The email serves as an automated notification rather than a specific request requiring immediate intervention beyond review.
+
+**Pending Actions & Ownership**
+*   **Action:** Review the attached "Retail Media - DD Dashboard" report.
+*   **Owner:** Michael.
+*   **Context:** The report includes three days of historical data for monitoring purposes. No explicit deadline was set in the email, but standard practice implies review within the current business day (April 2).
+
+**Decisions Made**
+No strategic decisions or policy changes were documented in this thread. The communication is purely informational regarding data availability.
+
+**Key Dates & Follow-ups**
+*   **Report Generation Date:** Thursday, April 2, 2026, at 11:00 AM (+08 time zone).
+*   **Email Timestamp:** April 2, 2026, at 3:03 AM.
+*   **Data Scope:** Past three days relative to the report generation date (approx. March 30 – April 2, 2026).
+*   **Upcoming Follow-up:** None scheduled automatically; depends on Michael's analysis of anomalies or trends in the attached data.
+
+**Specific References & Metadata**
+*   **Attachment Filename/Subject:** Retail Media - DD Dashboard.
+*   **Sender Email:** `no-reply@dtdg.eu`.
+*   **Last Message ID:** `19d4c254d1e98e3f`.
+*   **Labels:** Inbox, Updates.
+*   **Company Address (Footer):** 620 8th Avenue, 45th Floor, New York, NY 10018.
