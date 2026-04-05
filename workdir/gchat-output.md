@@ -1,8 +1,8 @@
 
 
 ## [1/24] #dd-dpd-engage-alert
-Source: gchat | Group: space/AAAAxwwNw2U | Messages: 16 | Last Activity: 2026-04-05T01:43:17.141000+00:00 | Last Updated: 2026-04-05T01:57:18.408446+00:00
-# Daily Work Briefing: #dd-dpd-engage-alert Monitoring Activity (Updated April 5, ~01:43 UTC)
+Source: gchat | Group: space/AAAAxwwNw2U | Messages: 16 | Last Activity: 2026-04-05T06:30:16.402000+00:00 | Last Updated: 2026-04-05T06:35:16.569053+00:00
+# Daily Work Briefing: #dd-dpd-engage-alert Monitoring Activity (Updated April 5, ~06:31 UTC)
 
 **Key Participants**
 *   **System:** Datadog App (Automated Alerting)
@@ -10,65 +10,112 @@ Source: gchat | Group: space/AAAAxwwNw2U | Messages: 16 | Last Activity: 2026-04
 *   **Relevant Squads/Tribes:** Dynamics, Compass, Journey (`squad:dynamics`, `squad:compass`, `squad:journey`, `tribe:engage`).
 
 **Main Topic**
-Cyclical instability persists from the April 1 onset into early morning of April 5 (00:57–01:43 UTC). The incident remains active with recurring failures affecting Identity (`engage-my-persona-api-go`), Gamification, Orchid frontend services, and iOS links. While specific latency spikes have recovered, high error rates and intermittent success rate dips continue to trigger alerts across multiple squads.
+Cyclical instability persists from April 1 through the early morning of April 5 (~06:31 UTC). The incident remains active with recurring failures affecting Identity (`engage-my-persona-api-go`), Gamification, Orchid frontend services, and Android app linkpoints. While specific latency spikes have recovered, high error rates and intermittent success rate dips continue to trigger alerts across multiple squads, indicating widespread degradation in the Engage tribe's services.
 
-**Status Summary & Timeline (Updated: ~01:43 UTC)**
+**Status Summary & Timeline (Updated: ~06:31 UTC)**
 *   **Identity API Instability (`squad:dynamics`):**
-    *   *Verify Success Rate:* Significant drops triggered at **00:57 UTC** (Value: 71.429%) and **01:23 UTC** (Value: 66.667%), both recovering by 01:33 UTC.
-    *   *Latency:* P90 latency spikes (>1.8s) on `post_/new-myinfo/confirm` triggered at **01:21 UTC** (Value: 1.836s), recovering by 01:22 UTC.
-    *   *Error Rate:* High error rates (>0.1%) triggered repeatedly, including **01:29 UTC** (Value: 0.112), recovering at 01:36 UTC.
+    *   *Error Rate:* High error rates (>0.1%) triggered repeatedly between 05:59 and 06:30 UTC, with values ranging from 0.101 to 0.108. Most recent triggers occurred at **05:59** (0.108), **06:03** (0.100), **06:21** (0.106), and **06:29** (0.101). All triggered alerts recovered shortly after within the 06:00–06:30 window.
+    *   *Latency:* P90 latency spikes (>1.8s) on `post_/new-myinfo/confirm` triggered at **06:07 UTC** (Value: 1.544s in recovered state, indicating a prior spike), recovering by **06:08 UTC**.
 *   **Orchid Frontend (`squad:journey`):**
-    *   *Success Rate:* Intermittent dips (<99.9%) triggered at **00:58 UTC** (Value: 99.816%), **01:17 UTC** (Value: 99.829%), and **01:43 UTC** (Value: 99.806%). All subsequent triggers recovered shortly after.
-*   **iOS App (`squad:compass`):**
-    *   *Linkpoints:* Success rate dip triggered at **01:15 UTC** (Value: 99.029%), recovering by 01:16 UTC.
-*   **Scratch Card Claim (`squad:journey`):**
-    *   *Latency:* P99 latency spikes (>1.8s) on `get_/v1/scan-door/store` triggered at **01:20 UTC** (Value: 2.009s), recovering by 01:27 UTC.
+    *   *Success Rate:* Intermittent dips (<99.9%) triggered at **01:43 UTC** (Value: 99.806%) and again at **06:30 UTC** (Value: 99.894%).
+*   **Android App (`squad:compass`):**
+    *   *Linkpoints:* Success rate dips (<99.9%) triggered at **01:15 UTC** (Value: 99.029%), **06:13 UTC** (Value: 99.747%), and **06:27 UTC** (Value: 99.692%). All subsequent triggers recovered shortly after.
+*   **Gamification/LT Gateway (`squad:dynamics`):**
+    *   *Latency:* P99 latency spikes (>1.8s) on `get_/rms/me/campaigns` triggered at **06:19 UTC** (Value: 1.978s), recovering by **06:26 UTC**.
 
 **Pending Actions & Ownership**
-*   **Investigate Identity Service Fluctuations:** Continue analyzing recurring high error rates (~0.1%) and intermittent verify success rate drops (<70%) on `engage-my-persona-api-go`. Owner: **Squad Dynamics**.
-*   **Monitor Gamification API Spike:** Investigate the severe error rate spike (0.345) recorded on April 3 at 14:12 UTC for root cause analysis, as systemic instability persists. Owner: **Squad Dynamics**.
-*   **Track Orchid & iOS Stability:** Monitor cyclical success rate dips in `frontend-gateway` (Orchid) and `ef-ios`. Owner: **Squad Journey** and **Squad Compass**.
+*   **Investigate Identity Service Fluctuations:** Continue analyzing recurring high error rates (~0.1%) on `engage-my-persona-api-go`. The pattern shows frequent triggers and recoveries (e.g., 05:59–06:30 UTC). Owner: **Squad Dynamics**.
+*   **Monitor Gamification API Spike:** Investigate the severe error rate spike (0.345) recorded on April 3 at 14:12 UTC for root cause analysis. Owner: **Squad Dynamics**.
+*   **Track Android & Orchid Stability:** Monitor cyclical success rate dips in `ef-android` and `frontend-gateway`. Owner: **Squad Compass** and **Squad Journey**.
 
 **Decisions Made**
-*   **Status Update:** Incident severity remains Critical. The continuity of failures from April 1 through the April 5 early morning window confirms systemic instability affecting multiple squads simultaneously.
-*   **Pattern Confirmation:** Recurrence involves Identity verify success rates dropping below 70%, Orchid success dips, and iOS linkpoint failures, indicating widespread degradation in the Engage tribe's services.
+*   **Status Update:** Incident severity remains Critical. The continuity of failures from April 1 through the April 5 morning window (latest activity ~06:31 UTC) confirms systemic instability affecting multiple squads simultaneously.
+*   **Pattern Confirmation:** Recurrence involves Identity error rates hovering just above 0.1%, Orchid success dips, and Android linkpoint failures, indicating widespread degradation in the Engage tribe's services.
 
 **Key Dates & Follow-ups**
-*   **Active Window:** April 1, 09:58 – April 5, 01:43 UTC (Latest Activity).
+*   **Active Window:** April 1, 09:58 – April 5, 06:31 UTC (Latest Activity).
 *   **Reference Links (Latest):**
-    *   `engage-my-persona-api-go` Verify Monitor #17447667 (Triggered: 01:23 UTC, Value: 66.667%)
-    *   `frontend-gateway` (Orchid) Success Rate Monitor #17448311 (Latest Trigger: 01:43 UTC)
-    *   `ef-ios` RUM Monitor #63109468 (Triggered: 01:15 UTC, Value: 99.029%)
-    *   `engage-my-persona-api-go` Error Rate Monitor #92965074 (Triggered: 01:29 UTC)
+    *   `engage-my-persona-api-go` Error Rate Monitor #92965074 (Most Recent Trigger: 06:29 UTC, Value: 0.101)
+    *   `frontend-gateway` (Orchid) Success Rate Monitor #17448311 (Latest Trigger: 06:30 UTC, Value: 99.894%)
+    *   `ef-android` RUM Monitor #63109467 (Latest Trigger: 06:27 UTC, Value: 99.692%)
+    *   `lt-gateway-app` P99 Latency Monitor #17447532 (Triggered: 06:19 UTC, Value: 1.978s)
 
 
-## [2/24] RMN Notification
-Source: gchat | Group: space/AAQA85dw4So | Messages: 27 | Last Activity: 2026-04-05T01:05:04.476000+00:00 | Last Updated: 2026-04-05T01:57:41.126918+00:00
+## [3/24] #dd-fpg-watchdog-alert
+Source: gchat | Group: space/AAAAnlKPglA | Messages: 8 | Last Activity: 2026-04-05T03:37:22.592000+00:00 | Last Updated: 2026-04-05T06:57:57.106775+00:00
+# Daily Work Briefing: #dd-fpg-watchdog-alert
+
+### Key Participants & Roles
+*   **Datadog App:** Automated monitoring system.
+*   **@hangouts-dd-dpd-watchdog-alert:** Targeted notification channel.
+*   *Note: Interactions remain purely automated.*
+*   **Monitor Tags:** `managed_by:datadog-sync`
+
+### Main Topic
+The channel tracks **P3 [DPD Watchdog] infrastructure incidents** in Production. Logs show recurring transient issues (excluding `tcp_retrans_jump` and `full_disk_forecast`) aggregated by `story_key`. The consistent alert message reads: "Datadog is unable to process your request."
+
+### Incident Summary & Status Update
+**Historical Resolved Incidents:**
+*   **Mar 05–31, 2026:** Multiple incidents (e.g., Keys `10aaf170...`, `2787bcd7...`, `de0cbb14...`) resolved within typical transient windows. All Status: **Resolved**.
+*   **Apr 1–2, 2026:** Incidents (`c6d476e4...`, `fa62ae68...`) triggered and recovered. All Status: **[P3] Recovered**.
+
+**Active Incident Timeline (Updated):**
+*   **Incident #1:** `story_key: 21a5a729-dfbb-5206-a97e-047fe5903e51`
+    *   Triggered: Apr 3, 2026 at 14:28:22 UTC.
+    *   **Recovered:** Apr 3, 2026 at 17:53:23 UTC (~3h 25m). Status: **[P3] Recovered**.
+*   **Incident #2 (Resolved):** `story_key: 211807e9-ab64-599b-959a-7ce890e78c22`
+    *   Triggered: Apr 4, 2026 at 17:04:22 UTC.
+    *   **Recovered:** Apr 5, 2026 at 03:37:22 UTC (~10h 33m). Status: **[P3] Recovered**.
+*   **Incident #3 (Resolved):** `story_key: f1f4de4a-77e2-55e6-9946-e28bfbb18621`
+    *   Triggered: Apr 4, 2026 at 18:00:22 UTC.
+    *   **Recovered:** Apr 5, 2026 at 03:37:22 UTC (~9h 37m). Status: **[P3] Recovered**.
+
+### Pending Actions & Ownership
+*   **Ownership:** Automated monitoring (`managed_by:datadog-sync`).
+*   **Action Required:** No manual intervention required. Both incidents triggered on Apr 4 resolved simultaneously on Apr 5 at 03:37:22 UTC. Duration exceeded the typical ~3–4 hour window (~10 hours), but resolution is confirmed. Continue standard surveillance for new triggers.
+
+### Decisions Made
+*   **Escalation Status:** Closed/Resolved. The previous protocol to monitor for a 6-hour threshold was superseded by actual recovery at the ~10-hour mark. No escalation was triggered as incidents resolved autonomously.
+*   **Protocol:** Maintain monitoring of `story_key` groups. If future incidents exceed 12 hours without resolution, review for potential process anomalies.
+
+### Key Dates & Follow-ups
+*   **Latest Event:** Recovery notification received Apr 5, 2026 at 03:37:22 UTC for both active incident keys.
+*   **Monitor ID:** 17447511 (Datadog EU).
+*   **Next Steps:** Monitor `@hangouts-dd-dpd-watchdog-alert` for subsequent alerts.
+
+### References
+*   **Space URL:** https://chat.google.com/space/AAAAnlKPglA
+*   **Monitor Query:** `events("source:watchdog (story_category:infrastructure -story_type:(tcp_retrans_jump OR full_disk_forecast)) env:(PROD OR production OR prod)").rollup("count").by("story_key").last("30m") > 0`
+*   **Recovery Links (Apr 5):**
+    *   Key `211807e9...`: [View](https://app.datadoghq.eu/monitors/17447511?group=story_key%3A211807e9-ab64-599b-959a-7ce890e78c22&from_ts=1775359251000&to_ts=1775360451000&event_id=8574791062233039453)
+    *   Key `f1f4de4a...`: [View](https://app.datadoghq.eu/monitors/17447511?group=story_key%3Af1f4de4a-77e2-55e6-9946-e28bfbb18621&from_ts=1775359251000&to_ts=1775360451000&event_id=8574791062203702124)
+
+
+## [4/24] RMN Notification
+Source: gchat | Group: space/AAQA85dw4So | Messages: 27 | Last Activity: 2026-04-05T03:20:42.015000+00:00 | Last Updated: 2026-04-05T06:59:03.617895+00:00
 **Daily Work Briefing: Automated Test Results Summary (RMN Notification)**
 
 **Key Participants & Roles**
 *   **Collection Runner App:** Automated testing agent executing API suites.
-*   **Webhook Bot:** Reporting mechanism; consistently returning "unable to process your request" on all notifications from March 12 through at least April 5, 2026.
+*   **Webhook Bot:** Reporting mechanism; consistently returning "unable to process your request" on all notifications from March 12 through April 5, 2026.
 *   **Parties Involved:** System-generated notification log only.
 
 **Main Topic/Discussion**
 Automated nightly API test executions across `promo-service`, `marketing-personalization-service`, and `marketing-service` in the **staging** environment. Monitoring period spans March 12 through **April 5, 2026**. Execution windows occur at approximately 01:05 UTC (morning), 02:31 UTC (midnight), and **03:21 UTC** (early morning).
 
 **Test Execution Status & Anomalies**
-*   **`marketing-service`:** Regression confirmed for consecutive days.
-    *   **April 4, 01:05 UTC:** Contract tests passed (20 Passed / 0 Failed), but API Tests failed (44 Passed / **3 Failed**).
-    *   **April 5, 01:05 UTC:** Identical failure pattern observed. Contract tests passed (20 Passed / 0 Failed); API Tests failed again with **3 failures** (44 Passed).
-    *   **Context:** This confirms a persistent instability issue, extending the problematic window previously seen March 17–25 and April 2–3. The service has now failed on three consecutive mornings at 01:05 UTC (April 3, 4, and 5).
-*   **`promo-service`:** Confirmed stable on April 4 at **02:30:37 UTC**.
-    *   **API Contract Tests:** 6 Passed / 0 Failed.
-    *   **API Tests:** 10 Passed / 0 Failed.
-*   **`marketing-personalization-service`:** Confirmed stable on April 4 at **03:21:28 UTC**.
+*   **`marketing-service`:** Regression confirmed.
+    *   **April 5, 01:05 UTC:** Contract tests passed (20 Passed / 0 Failed); API Tests failed with **3 failures** (44 Passed). This confirms a persistent instability issue extending the problematic window previously seen March 17–25 and April 2–3. The service has now failed on consecutive mornings at 01:05 UTC (April 3, 4, and 5).
+*   **`promo-service`:** Confirmed stable on **April 5 at 02:31:20 UTC**.
+    *   **[API Contract Tests]:** 6 Passed / 0 Failed / 0 Skipped (Total Requests: 3).
+    *   **[API Tests]:** 10 Passed / 0 Failed / 0 Skipped.
+*   **`marketing-personalization-service`:** Confirmed stable on **April 5 at 03:20:42 UTC**.
     *   **[API Contract Tests]:** 125 Passed / 0 Failed / 0 Skipped (Total Requests: 21).
-    *   **[API Tests]:** 96 Passed / 0 Failed / 0 Skipped (Total Requests: 21).
+    *   **[API Tests]:** 96 Passed / 0 Failed / 0 Skipped.
 
 **Pending Actions & Ownership**
-*   **Webhook Bot Remediation (High Priority):** The bot failed to process requests in every notification cycle from March 12 through the latest log on **April 5 at 01:05 UTC**. Immediate attention is required from DevOps or Automation Infrastructure.
-*   **Investigate `marketing-service` Regression:** Engineering must analyze the root cause of the recurring API test failures (3 failures) observed on April 4 and April 5 at 01:05 UTC. The issue persists without resolution since the previous failure window, indicating a critical systemic or code regression that has not been addressed.
+*   **Webhook Bot Remediation (High Priority):** The bot failed to process requests in every notification cycle from March 12 through the latest log on **April 5**. Immediate attention is required from DevOps or Automation Infrastructure to resolve the persistent "unable to process" error.
+*   **Investigate `marketing-service` Regression:** Engineering must analyze the root cause of the recurring API test failures (3 failures) observed on April 4 and **April 5** at 01:05 UTC. The issue persists without resolution, indicating a critical systemic or code regression.
 
 **Decisions Made**
 *   No human decisions recorded; all entries are automated system outputs.
@@ -77,17 +124,17 @@ Automated nightly API test executions across `promo-service`, `marketing-persona
 *   **Failure Window (Historical):** Instability noted March 12–13 and persistently from **March 17 through March 25**. Recent recurrence began April 2, continuing through **April 5**.
 *   **Current Status:** Continuous failure in `marketing-service` API tests on April 4 and 5. Other services remain stable.
     *   `marketing-service`: Failed API tests at 01:05 UTC on both April 4 and April 5.
-    *   `promo-service`: Passed at 02:30 UTC on April 4.
-    *   `marketing-personalization-service`: Fully successful run recorded at 03:21 UTC on April 4.
+    *   `promo-service`: Passed at 02:31 UTC on April 5 (previously noted as April 4).
+    *   `marketing-personalization-service`: Fully successful run recorded at 03:20 UTC on April 5 (previously noted as April 4).
 *   **Monitoring Period:** Data covers runs from **March 12, 2026**, through **April 5, 2026**.
 
 **Resource Info**
-*   **Message Count:** Updated to reflect notifications through April 5 (Total: 231+).
+*   **Message Count:** Updated to reflect notifications through April 5 (Total: 237).
 *   **URL:** https://chat.google.com/space/AAQA85dw4So
 
 
-## [3/24] #dd-dpd-grocery-alert
-Source: gchat | Group: space/AAAAtxQjB7c | Messages: 16 | Last Activity: 2026-04-05T01:03:10.245000+00:00 | Last Updated: 2026-04-05T01:58:13.599183+00:00
+## [5/24] #dd-dpd-grocery-alert
+Source: gchat | Group: space/AAAAtxQjB7c | Last Activity: 2026-04-05T01:03:10.245000+00:00 | Last Updated: 2026-04-05T01:58:13.599183+00:00
 **Daily Work Briefing: #dd-dpd-grocery-alert** (Updated Apr 5, 01:03 UTC)
 
 **Key Participants & Roles**
@@ -136,8 +183,8 @@ Source: gchat | Group: space/AAAAtxQjB7c | Messages: 16 | Last Activity: 2026-04
 *   **Runbook:** https://ntuclink.atlassian.net/wiki/spaces/DIS/pages/2008167992/marketing-service+-+Run+book
 
 
-## [4/24] 📅 Daily summary
-Source: gchat | Group: space/AAQAP-kMoqY | Messages: 3 | Last Activity: 2026-04-05T00:03:08.414000+00:00 | Last Updated: 2026-04-05T01:58:40.864051+00:00
+## [6/24] 📅 Daily summary
+Source: gchat | Group: space/AAQAP-kMoqY | Last Activity: 2026-04-05T00:03:08.414000+00:00 | Last Updated: 2026-04-05T01:58:40.864051+00:00
 **Daily Work Briefing Summary (Updated: April 5, 2026)**
 
 **Main Topics & Discussions**
@@ -180,8 +227,8 @@ Source: gchat | Group: space/AAQAP-kMoqY | Messages: 3 | Last Activity: 2026-04-
 **Note on New Content:** Updates from Workspace Studio dated April 4 and April 5 (00:03 UTC) confirm the inbox remains clear of urgent action items across all categories (**Urgent Action Items**, **High-Volume Themes**, **Meeting Updates**, **FYI**). No changes to pending actions or decisions were required based on these updates; historical context regarding project statuses and deadlines remains valid.
 
 
-## [5/24] fairnex-datadog-notification
-Source: gchat | Group: space/AAAA8dv5lp0 | Messages: 16 | Last Activity: 2026-04-04T23:01:23.161000+00:00 | Last Updated: 2026-04-05T01:59:04.472140+00:00
+## [7/24] fairnex-datadog-notification
+Source: gchat | Group: space/AAAA8dv5lp0 | Last Activity: 2026-04-04T23:01:23.161000+00:00 | Last Updated: 2026-04-05T01:59:04.472140+00:00
 **Daily Work Briefing: Datadog Monitoring Alerts (fairnex-datadog-notification)**
 
 **Key Participants & Roles**
@@ -224,71 +271,8 @@ None. The conversation remains purely alert-driven without human discussion.
 On April 3, the system experienced two distinct critical events: a transient P1 SAP authentication failure in `fpon-seller-sap-picklist-reporter` (resolved in ~5 minutes) and a persistent latency crisis in `picklist-pregenerator`. The latter shows no recovery, with execution times exceeding 3,610s on both April 3 and April 4. Additionally, connectivity issues affecting `fni-order-create` have persisted for three consecutive days (April 1–3), driven by Mirakl/DBP integration failures. Urgent engineering review is required to address the recurring order processing failures and resolve the critical latency in seller experience workflows which has now spanned multiple 24-hour cycles.
 
 
-## [6/24] #dd-fpg-watchdog-alert
-Source: gchat | Group: space/AAAAnlKPglA | Messages: 6 | Last Activity: 2026-04-04T18:00:22.842000+00:00 | Last Updated: 2026-04-05T01:59:43.563686+00:00
-# Daily Work Briefing: #dd-fpg-watchdog-alert
-
-### Key Participants & Roles
-*   **Datadog App:** Automated monitoring system.
-*   **@hangouts-dd-dpd-watchdog-alert:** Targeted notification channel.
-*   *Note: Interactions remain purely automated.*
-*   **Monitor Tags:** `managed_by:datadog-sync`
-
-### Main Topic
-The channel tracks **P3 [DPD Watchdog] infrastructure incidents** in Production. Logs show recurring transient issues (excluding `tcp_retrans_jump` and `full_disk_forecast`) aggregated by `story_key`. The alert consistently reads: "Datadog is unable to process your request."
-
-### Incident Summary & Status Update
-**Historical Resolved Incidents:**
-1.  **Mar 05–17:** 11 distinct events triggered and recovered within the period.
-2.  **Mar 18/19:** `10aaf170...` (~5.6h). Status: **Resolved**.
-3.  **Mar 20, 2026:** `2787bcd7...` (~4.4h). Status: **Resolved**.
-4.  **Mar 22, 2026:** `08f5624a...` (~3.4h). Status: **Resolved**.
-5.  **Mar 24–25, 2026:** `de0cbb14...` (~3h 51m). Status: **Resolved**.
-6.  **Mar 25, 2026:** `978f6328...`. Recovered 12:09 UTC (~24h). Status: **Resolved**.
-7.  **Mar 26, 2026:** `7b73b037...` (~3h 22m). Status: **Resolved**.
-8.  **Mar 27, 2026:** `f5d0894a...`. Recovered 17:37 UTC. Status: **Resolved**.
-9.  **Mar 28–30, 2026:** Multiple P3 incidents recovered (Keys: `8874d9ed...`, `784f6ec6...`, `acd815df...`).
-10. **Mar 31, 2026:** Incident `0404fba2...` triggered at 11:49 UTC and resolved at 15:05 UTC (~3h 16m). Status: **Resolved**.
-
-**Recent Sequence Update (Apr 1–2):**
-*   **Apr 1, 2026:** Three incidents (`c6d476e4...`, `f28ed3be...`, `ba9617bc...`) triggered and recovered within ~1h 19m to 3h 26m. All Status: **[P3] Recovered**.
-*   **Apr 2, 2026:** Incident `fa62ae68...` triggered at 06:58:23 UTC and recovered at 10:52:23 UTC (~3h 54m). Status: **[P3] Recovered**.
-
-**Active Incident Timeline (New Updates):**
-*   **Incident #1:** `story_key: 21a5a729-dfbb-5206-a97e-047fe5903e51`
-    *   Triggered: Apr 3, 2026 at 14:28:22 UTC.
-    *   **Recovered:** Apr 3, 2026 at 17:53:23 UTC (~3h 25m). Status: **[P3] Recovered**.
-
-*   **Incident #2 (New):** `story_key: 211807e9-ab64-599b-959a-7ce890e78c22`
-    *   Triggered: Apr 4, 2026 at 17:04:22 UTC.
-    *   **Current Status:** **[P3] Triggered**.
-
-*   **Incident #3 (New):** `story_key: f1f4de4a-77e2-55e6-9946-e28bfbb18621`
-    *   Triggered: Apr 4, 2026 at 18:00:22 UTC.
-    *   **Current Status:** **[P3] Triggered**.
-
-### Pending Actions & Ownership
-*   **Ownership:** Automated monitoring (`managed_by:datadog-sync`).
-*   **Action Required:** No manual intervention required yet. Two distinct incidents triggered on Apr 4, 2026 (approx. 56 mins apart). Duration data is pending; monitor against the established transient pattern (~3–4 hours). Continue standard surveillance.
-
-### Decisions Made
-*   **Escalation Status:** Pending. No escalation triggered for the two active incidents as they are within typical resolution windows.
-*   **Protocol:** Maintain monitoring of `story_key:211807e9-ab64-599b-959a-7ce890e78c22` and `story_key:f1f4de4a-77e2-55e6-9946-e28bfbb18621`. If resolution does not occur within 6 hours of their respective triggers, review for potential process anomalies.
-
-### Key Dates & Follow-ups
-*   **Latest Event:** Triggered Apr 4, 2026 at 18:00:22 UTC (Incident `f1f4de4a...`).
-*   **Monitor ID:** 17447511 (Datadog EU).
-*   **Next Steps:** Monitor for recovery notifications in `@hangouts-dd-dpd-watchdog-alert`.
-
-### References
-*   **Space URL:** https://chat.google.com/space/AAAAnlKPglA
-*   **Datadog Monitor Link (Incident #2):** [View](https://app.datadoghq.eu/monitors/17447511?group=story_key%3A211807e9-ab64-599b-959a-7ce890e78c22&from_ts=1775321271000&to_ts=1775322471000&event_id=8574153866522150298)
-*   **Datadog Monitor Link (Incident #3):** [View](https://app.datadoghq.eu/monitors/17447511?group=story_key%3Af1f4de4a-77e2-55e6-9946-e28bfbb18621&from_ts=1775324631000&to_ts=1775325831000&event_id=8574210242958863889)
-*   **Recovery Log:** Pending for current active incidents.
-
-
-## [7/24] Digital Product Development {DPD}
-Source: gchat | Group: space/AAAAx50IkHw/vpSecvgp02o | Messages: 3 | Last Activity: 2026-04-04T11:23:12.639000+00:00 | Last Updated: 2026-04-05T01:59:59.866708+00:00
+## [8/24] Digital Product Development {DPD}
+Source: gchat | Group: space/AAAAx50IkHw/vpSecvgp02o | Last Activity: 2026-04-04T11:23:12.639000+00:00 | Last Updated: 2026-04-05T01:59:59.866708+00:00
 **Daily Work Briefing: Digital Product Development (DPD)**
 
 **Key Participants & Roles**
@@ -317,8 +301,8 @@ The team discussed a new approach to system design centered around Markdown (MD)
 *   **Space URL:** https://chat.google.com/space/AAAAx50IkHw
 
 
-## [8/24] Nikhil, Nicole Soh, Yap Chye Soon, Anwar, Owen, ...
-Source: gchat | Group: space/AAAAJ8ygRqY | Messages: 2 | Last Activity: 2026-04-04T09:44:57.766000+00:00 | Last Updated: 2026-04-05T02:00:11.617019+00:00
+## [9/24] Nikhil, Nicole Soh, Yap Chye Soon, Anwar, Owen, ...
+Source: gchat | Group: space/AAAAJ8ygRqY | Last Activity: 2026-04-04T09:44:57.766000+00:00 | Last Updated: 2026-04-05T02:00:11.617019+00:00
 **Daily Work Briefing: Google Chat Summary**
 
 **1. Key Participants & Roles**
@@ -345,8 +329,8 @@ No formal decisions were recorded in this specific 2-message log segment. The in
 The provided log represents a high-level notification event rather than a substantive debate. The critical takeaway for Gopalakrishna Dhulipati is to review the content viewed by Yap Chye Soon Adrian and determine if further engagement or action is required from his end. No other participants in the resource list (Nikhil, Nicole Soh, Anwar, Owen) are referenced in this specific timestamped exchange.
 
 
-## [9/24] 📢 COM Notifications
-Source: gchat | Group: space/AAAAu4WIubc | Messages: 8 | Last Activity: 2026-04-04T09:22:30.861000+00:00 | Last Updated: 2026-04-05T02:01:14.328151+00:00
+## [10/24] 📢 COM Notifications
+Source: gchat | Group: space/AAAAu4WIubc | Last Activity: 2026-04-04T09:22:30.861000+00:00 | Last Updated: 2026-04-05T02:01:14.328151+00:00
 **Daily Work Briefing: SonarCloud Quality Monitoring**
 
 **Key Participants & Roles**
@@ -388,8 +372,8 @@ Automated SonarCloud quality gate scans for `catalogue-service`, `seller-picklis
     *   **09:22 UTC**: `seller-picklist-reporter` PR-2335 PASSED (ver. `76047ac`) with **0%** new code coverage; associated webhook error persists.
 
 
-## [10/24] Digital Product Development {DPD}
-Source: gchat | Group: space/AAAAx50IkHw | Messages: 2 | Last Activity: 2026-04-04T07:46:28.110000+00:00 | Last Updated: 2026-04-05T02:02:22.987531+00:00
+## [11/24] Digital Product Development {DPD}
+Source: gchat | Group: space/AAAAx50IkHw | Last Activity: 2026-04-04T07:46:28.110000+00:00 | Last Updated: 2026-04-05T02:02:22.987531+00:00
 **Daily Work Briefing: Digital Product Development (DPD)**
 
 **Key Participants & Roles**
@@ -457,8 +441,8 @@ Source: gchat | Group: space/AAAAx50IkHw | Messages: 2 | Last Activity: 2026-04-
 *   Upcoming DPD BBQ announced by Kyle Nguyen ("We come first, see you!").
 
 
-## [11/24] [Prod Support] Marketplace
-Source: gchat | Group: space/AAAAs0DTvmA | Messages: 10 | Last Activity: 2026-04-04T07:18:01.061000+00:00 | Last Updated: 2026-04-05T02:03:16.241440+00:00
+## [12/24] [Prod Support] Marketplace
+Source: gchat | Group: space/AAAAs0DTvmA | Last Activity: 2026-04-04T07:18:01.061000+00:00 | Last Updated: 2026-04-05T02:03:16.241440+00:00
 **Daily Work Briefing: [Prod Support] Marketplace**
 
 **Key Participants & Roles**
@@ -500,8 +484,8 @@ Discussions continue to focus on operational blockers regarding seller onboardin
 *   **2026-03-30:** Muhammad Sufi Hakim Bin Safarudin reported picklist generation failures for Order #258155683 and Postponed Order #256653797.
 
 
-## [12/24] DPD AI Guild
-Source: gchat | Group: space/AAQA5_B3lZQ | Messages: 1 | Last Activity: 2026-04-04T02:02:36.582000+00:00 | Last Updated: 2026-04-05T02:03:48.171213+00:00
+## [13/24] DPD AI Guild
+Source: gchat | Group: space/AAQA5_B3lZQ | Last Activity: 2026-04-04T02:02:36.582000+00:00 | Last Updated: 2026-04-05T02:03:48.171213+00:00
 ### Daily Work Briefing: DPD AI Guild
 
 **1. Key Participants & Roles**
@@ -549,7 +533,7 @@ The discussion centered on leveraging **Mistral Small 4** to optimize local know
 **Thread Status:** Active (Last reply noted recently relative to briefing generation).
 
 
-## [13/24] QE <-> All Tribes
+## [14/24] QE <-> All Tribes
 Source: gchat | Group: space/AAAAS7vPcKs | Last Activity: 2026-04-03T09:49:31.896000+00:00 | Last Updated: 2026-04-03T10:34:26.752010+00:00
 **Daily Work Briefing: QE <-> All Tribes** (Updated)
 
@@ -598,7 +582,7 @@ Source: gchat | Group: space/AAAAS7vPcKs | Last Activity: 2026-04-03T09:49:31.89
 *   **2026-04-02 04:48 - 05:13:** Escalation regarding DC membership payment failures and backend enrollment blockage.
 
 
-## [14/24] [Prod Support] Ecom FFS Ops
+## [15/24] [Prod Support] Ecom FFS Ops
 Source: gchat | Group: space/AAAAde_cYKA | Last Activity: 2026-04-03T08:16:40.717000+00:00 | Last Updated: 2026-04-03T10:35:39.118240+00:00
 **Daily Work Briefing: [Prod Support] Ecom FFS Ops (Updated Apr 3)**
 
@@ -648,7 +632,7 @@ Source: gchat | Group: space/AAAAde_cYKA | Last Activity: 2026-04-03T08:16:40.71
 *   **Secondary Active Alert (Mar 28):** Dispatcher app unable to scan new zone at **hvivo**.
 
 
-## [15/24] Digital Product Development {DPD}
+## [16/24] Digital Product Development {DPD}
 Source: gchat | Group: space/AAAAx50IkHw/GnX6VGfkaJk | Last Activity: 2026-04-03T04:32:06.459000+00:00 | Last Updated: 2026-04-03T06:36:02.710134+00:00
 **Daily Work Briefing: Digital Product Development (DPD)**
 **Source:** Google Chat Space | **Date Range:** April 2 – April 3, 2026
@@ -689,7 +673,7 @@ The discussion centers on mandatory updates to the Employee Code of Conduct rega
 The DPD team was initially informed of strict new AI governance rules effective April 2, with a directive stating **Gemini** is the sole approved platform. However, on April 3, Tan Nhu Duong confirmed that while the updated Code of Conduct is accessible via Polly (`work.fpg.sg`), the document text itself does not explicitly list the approved AI tool. This has created an ambiguity between the verbal "Gemini-only" instruction and the written policy. Consequently, a new action item requires identifying the authoritative source for the approved tool designation. Additionally, the conflict regarding the Front Office's use of **Claude Code** remains unresolved pending official clarification.
 
 
-## [16/24] Digital & Tech - General
+## [17/24] Digital & Tech - General
 Source: gchat | Group: space/AAAAP63CaPo | Last Activity: 2026-04-03T03:52:45.781000+00:00 | Last Updated: 2026-04-03T06:37:02.555295+00:00
 **Daily Work Briefing: Digital & Tech (D&T) General**
 
@@ -731,7 +715,7 @@ Source: gchat | Group: space/AAAAP63CaPo | Last Activity: 2026-04-03T03:52:45.78
 The transition to digital access marks a significant milestone in the "Tech made easy" initiative, driven by cross-functional collaboration between D&T, HR, and operations teams.
 
 
-## [17/24] Alvin, Gopalakrishna
+## [18/24] Alvin, Gopalakrishna
 Source: gchat | Group: space/AAQAMGrBBNE | Last Activity: 2026-04-03T03:56:30.110000+00:00 | Last Updated: 2026-04-03T06:37:21.071532+00:00
 **Daily Work Briefing: Google Chat Summary (Updated)**
 
@@ -771,7 +755,7 @@ The discussion addresses a violation of the **Employee Code of Conduct** concern
 *   **Chat URL:** https://chat.google.com/space/AAQAMGrBBNE
 
 
-## [18/24] Nikhil Grover
+## [19/24] Nikhil Grover
 Source: gchat | Group: dm/t3wf6EAAAAE | Last Activity: 2026-04-02T14:36:56.701000+00:00 | Last Updated: 2026-04-02T22:37:27.483091+00:00
 **Daily Work Briefing: Nikhil Grover & Michael Bui (Updated)**
 
@@ -807,7 +791,7 @@ Source: gchat | Group: dm/t3wf6EAAAAE | Last Activity: 2026-04-02T14:36:56.70100
 The conversation initially focused on technical scope: video content restricted to Omni Home/FP Pay, OSMOS `pcnt` limits set at 10 (expansion expected early April), and slot values being optional for uniqueness. On March 30, the focus shifted to a critical incident where intermittent rendering persisted despite troubleshooting. By April 2, with Michael's departure approaching, priorities expanded to include **RMN** discussions within **Project Light**. While Nikhil initially cited a $1,250/day impact (clarified as part of overall drops excluding specific advertiser campaign losses), the immediate operational focus remains on resolving the ad race condition and clearing RMN queries before April 6.
 
 
-## [19/24] Project Light Attack and Defence Leads
+## [20/24] Project Light Attack and Defence Leads
 Source: gchat | Group: space/AAQAsFyLso4/yI8UlY4--fY | Last Activity: 2026-04-02T11:07:37.842000+00:00 | Last Updated: 2026-04-02T22:37:59.836478+00:00
 **Daily Work Briefing: Project Light Attack and Defence Leads**
 
@@ -846,7 +830,7 @@ Clarification of "homework" deliverables due early next week (targeting April 7,
 *   Michael Bui to initiate alignment with Nikhil immediately upon returning from the EA sharing session mentioned by Alvin Choo.
 
 
-## [20/24] Project Light Attack and Defence Leads
+## [21/24] Project Light Attack and Defence Leads
 Source: gchat | Group: space/AAQAsFyLso4 | Last Activity: 2026-04-02T11:02:51.709000+00:00 | Last Updated: 2026-04-02T22:38:39.808939+00:00
 **Daily Work Briefing: Project Light Attack and Defence Leads**
 
@@ -901,7 +885,7 @@ Following the transition to active strategic planning ("Room 2") on March 24, th
 *   **March 30:** "No Data Migration" strategy proposed by Alvin Choo.
 
 
-## [21/24] Project Light Attack and Defence Leads
+## [22/24] Project Light Attack and Defence Leads
 Source: gchat | Group: space/AAQAsFyLso4/jPGy0nmdYfc | Last Activity: 2026-04-02T10:50:51.840000+00:00 | Last Updated: 2026-04-02T22:40:47.648949+00:00
 **Daily Work Briefing: Project Light Attack and Defence Leads**
 
@@ -934,7 +918,7 @@ The conversation highlighted a temporary information gap where internal recall w
 *   **URL:** https://chat.google.com/space/AAQAsFyLso4
 
 
-## [22/24] [Leads] (Ecom/Omni) Digital Product Development
+## [23/24] [Leads] (Ecom/Omni) Digital Product Development
 Source: gchat | Group: space/AAQAN8mDauE/9KYZsmc-670 | Last Activity: 2026-04-02T10:02:11.714000+00:00 | Last Updated: 2026-04-02T10:46:03.489055+00:00
 **Daily Work Briefing: S&G Store Enablement Discussion (Updated)**
 
@@ -975,7 +959,7 @@ Assessment of effort and timeline for a temporary "Pop-up S&G" store setup at Je
 *   Current Setup Doc (v3.0): https://ntuclink.atlassian.net/wiki/spaces/DIS/pages/2008160308/Store+setup+doc+v3.0
 
 
-## [23/24] RMN Leadership
+## [24/24] RMN Leadership
 Source: gchat | Group: space/AAAAQQGZSZU/PYIHH8s-2LQ | Last Activity: 2026-04-02T09:54:24.246000+00:00 | Last Updated: 2026-04-02T10:46:21.723634+00:00
 **Daily Work Briefing: RMN Leadership Space**
 
@@ -1016,43 +1000,3 @@ No new policy decisions were made. The discussion clarified that the directive o
 **Reference Data**
 *   **Space URL:** https://chat.google.com/space/AAAAQQGZSZU
 *   **Sources:** HR Email (Code of Conduct updates), Wilson's message on MT chat.
-
-
-## [24/24] RMN Leadership
-Source: gchat | Group: space/AAAAQQGZSZU | Last Activity: 2026-04-02T02:37:49.662000+00:00 | Last Updated: 2026-04-01T06:45:51.125189+00:00
-**Daily Briefing Summary: RMN Leadership Space (Updated Apr 1)**
-
-**Key Participants & Roles**
-*   **Bryan Choong:** Confirmed commitment to Saurabh regarding the **May 1 timeline** for delivering PLA Targeting and Uplift measurement. Disseminated an article from *The Drum* (Zitcha/Troy Townsend) on moving beyond ROAS in commerce media. Continuing preparation for Vipul's lunch with SPH CEO.
-*   **Vipul:** Meeting SPH CEO next week to discuss revenue, agreements, and strategic propositions.
-*   **Pauline Tan:** Leading "Product Launch Solution" inquiry (3 replies pending); investigating sampling spend.
-*   **Rajiv Kumar Singh:** Coordinating SOAC planning; evaluating BCRS campaign digital screen placement options (dedicated vs. internal). Tasked with SPH radio insights and survey execution.
-*   **Allen Umali:** Leading SignCloud cleanup; on MC. Requested allocation for BCRS campaign on Digital Screens starting today (Apr 1).
-*   **Serene Tan Si Lin & Raymond Kam:** Sourcing THPZ Australia Fair intelligence and coordinating SPH news broadcast surveys, respectively.
-*   **Emerald:** Developing playbook for campaign assets in the app.
-
-**Main Topics**
-1.  **PLA Targeting & Uplift Measurement:** Bryan Choong secured a verbal commitment from Saurabh to deliver PLA Targeting and Uplift measurement by **May 1**. Previous discussions concluded with a clear message that future conversations will focus solely on this timeline adherence.
-2.  **BCRS Campaign Activation:** The BCRS campaign runs from Apr 1–Sep 30, 2026. Allen Umali requested a dedicated Digital Screen slot starting today (Apr 1). Rajiv Kumar Singh is evaluating whether to use a dedicated or internal slot based on launch capacity.
-3.  **SPH Strategic Discussion:** Bryan Choong prepares briefing points for Vipul's upcoming lunch to address revenue performance, agreement timelines, and potential joint business plans. Key data points include 2024/2025 revenue and 2026 YTD figures for In-Screen Reselling and Radio.
-4.  **Market Intelligence:** Shared *The Drum* analysis by Zitcha's Troy Townsend on the shift from ROAS to broader commerce media value.
-
-**Pending Actions & Owners**
-*   **PLA Targeting Delivery:** Ensure Saurabh meets the **May 1** commitment for PLA Targeting and Uplift measurement. *Owner: Bryan Choong.*
-*   **BCRS Campaign Slot Allocation:** Decide if the BCRS campaign requires a dedicated Digital Screen slot or utilizes an internal slot. *Owner: Rajiv Kumar Singh, Bryan Choong.*
-*   **SPH Revenue & Data Gathering:** Compile 2024/2025 revenue and 2026 YTD figures for In-Screen Reselling and Radio. *Owner: Team (Bryan, Rajiv, Raymond).*
-*   **Agreement Terms Analysis:** Identify the specific offer declined by SPH in reselling and confirm the official end date of the current agreement (estimated Oct 2026). *Owner: Bryan Choong.*
-*   **Radio Strategy & Survey:** Draft response for news broadcast updates; initiate customer survey planning with SPH. *Owner: Rajiv Kumar Singh, Raymond Kam.*
-*   **Sampling Solution Investigation:** Obtain quotes from Grenadier and other agencies; analyze spend/traffic impact at THPZ. *Owners: Serene Tan Si Lin, Pauline Tan.*
-
-**Decisions Made**
-*   **SLA Enforcement:** Bryan Choong has established a hard deadline (May 1) for PLA Targeting delivery with Saurabh, limiting future discussions to commitment tracking.
-*   **Survey Execution:** Formalize plan to conduct customer survey on news broadcasts in collaboration with SPH.
-*   **Sampling Strategy:** Accelerate solution development; verify Grenadier quotes and explore alternatives for THPZ model.
-
-**Key Dates & Deadlines**
-*   **May 1, 2026:** Commitment deadline for PLA Targeting and Uplift measurement delivery (Saurabh).
-*   **Next Week (Apr):** Vipul lunch with SPH CEO.
-*   **Apr 1 – Sep 30, 2026:** BCRS Campaign duration (launching today).
-*   **Oct 2026:** Estimated end date for current In-Screen Radio agreement.
-*   **End of March:** Deadline to finalize SOAC targets.
