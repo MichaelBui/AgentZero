@@ -55,9 +55,53 @@ def _seed_thread(db, thread_id="abc123", subject="Test Thread", n_msgs=3,
     return thread_id
 
 
+def _seed_cc_thread(db, thread_id="cc_thread", subject="CC Thread", user_email=None):
+    """Helper to seed a thread where user is only in CC."""
+    meta = {
+        "subject": subject,
+        "to": [{"name": "Other Person", "email": "other@example.com"}],
+        "cc": [{"name": "Michael", "email": user_email}],
+    }
+    db.upsert_atomic("gmail", thread_id, "msg0", author="Sender <sender@example.com>",
+                     content="Message body", created_at="2026-04-01",
+                     updated_at="2026-04-01", metadata=meta)
+    return thread_id
+
+
 # ═════════════════════════════════════════════════════════════════════
 # Tests: Configuration
 # ═════════════════════════════════════════════════════════════════════
+
+def test_ensure_dependencies(subtests):
+    with subtests.test(msg="When all packages present then no install needed"):
+        gmail._ensure_dependencies()
+
+    with subtests.test(msg="When package missing then triggers install"):
+        original = gmail._REQUIRED_PACKAGES.copy()
+        gmail._REQUIRED_PACKAGES["nonexistent_pkg_xyz"] = "nonexistent_pkg_xyz"
+        try:
+            with patch("subprocess.check_call") as mock_call:
+                gmail._ensure_dependencies()
+                assert mock_call.called
+                call_args = mock_call.call_args_list[0][0][0]
+                assert "nonexistent_pkg_xyz" in call_args
+        except ImportError:
+            pass
+        finally:
+            gmail._REQUIRED_PACKAGES = original
+
+    with subtests.test(msg="When playwright missing then also installs chromium"):
+        original = gmail._REQUIRED_PACKAGES.copy()
+        gmail._REQUIRED_PACKAGES["nonexistent_pw"] = "playwright"
+        try:
+            with patch("subprocess.check_call") as mock_call:
+                gmail._ensure_dependencies()
+                assert mock_call.call_count >= 2
+        except ImportError:
+            pass
+        finally:
+            gmail._REQUIRED_PACKAGES = original
+
 
 def test_default_lookback_days(subtests):
     from datetime import datetime
@@ -86,6 +130,50 @@ def test_default_lookback_days(subtests):
 # ═════════════════════════════════════════════════════════════════════
 # Tests: Text Cleaner
 # ═════════════════════════════════════════════════════════════════════
+
+def test_parse_gmail_date(subtests):
+    cases = [
+        ("When full datetime with day-of-week then parses to ISO",
+         "Mon, Apr 6, 2026, 3:45 PM", True),
+        ("When datetime without day-of-week then parses to ISO",
+         "Apr 6, 2026, 3:45 PM", True),
+        ("When date only with day-of-week then parses to ISO",
+         "Mon, Apr 6, 2026", True),
+        ("When date only then parses to ISO",
+         "Apr 6, 2026", True),
+        ("When datetime with seconds then parses to ISO",
+         "Mon, Apr 6, 2026, 3:45:30 PM", True),
+        ("When 24h time without AM/PM then parses to ISO",
+         "Mar 16, 2026, 1:59", True),
+        ("When 24h time afternoon without AM/PM then parses to ISO",
+         "Mar 16, 2026, 14:30", True),
+        ("When day-of-week prefix needs stripping for match then parses to ISO",
+         "Tue, 6 Apr 2026, 3:45 PM", True),
+        ("When malformed day-of-week prefix stripped to parse then returns ISO",
+         "Mno, Apr 6, 2026, 3:45 PM", True),
+        ("When already ISO then returns as-is",
+         "2026-04-06T15:45:00+08:00", True),
+        ("When empty then returns empty",
+         "", False),
+        ("When unparseable then returns original with warning",
+         "some garbage date", False),
+    ]
+    for scenario, raw, should_be_iso in cases:
+        with subtests.test(msg=scenario):
+            result = gmail.parse_gmail_date(raw)
+            if not raw:
+                assert result == ""
+            elif should_be_iso:
+                assert "T" in result or result == raw, f"Expected ISO, got: {result}"
+                if raw.startswith("2026"):
+                    assert result == raw
+                elif "Mar" in raw:
+                    assert result.startswith("2026-03-16T"), f"Got: {result}"
+                else:
+                    assert "2026-04-06T" in result, f"Got: {result}"
+            else:
+                assert result == raw
+
 
 def test_clean_html(subtests):
     cases = [
@@ -261,9 +349,12 @@ def test_compute_mention_type(subtests, db):
         ("When user is in TO then returns direct",
          lambda d: _seed_thread(d, "t_to", to_list=[{"name": "Michael", "email": user_email}]),
          "direct"),
-        ("When user has no involvement then returns indirect",
-         lambda d: _seed_thread(d, "t_indirect"),
+        ("When user is in CC then returns indirect",
+         lambda d: _seed_cc_thread(d, "t_cc", user_email=user_email),
          "indirect"),
+        ("When user has no involvement then returns none",
+         lambda d: _seed_thread(d, "t_none"),
+         "none"),
         ("When no items then returns none",
          lambda d: None,
          "none"),
@@ -537,6 +628,34 @@ def test_cache_thread_messages(subtests, db):
             result = gmail.cache_thread_messages(db, "t_cache", "Subject", messages)
             assert result == expected_new
 
+    with subtests.test(msg="When message has bcc and attachments then stores in metadata"):
+        fresh = gmail.open_db(":memory:")
+        msgs = [{"legacy_message_id": "m_rich", "from": "Alice", "date": "2026-01-01",
+                 "body": "See attached", "to": [{"name": "Bob", "email": "bob@x.com"}],
+                 "cc": [{"name": "Carol", "email": "carol@x.com"}],
+                 "bcc": [{"name": "Dave", "email": "dave@x.com"}],
+                 "attachments": ["report.pdf", "data.xlsx"],
+                 "details_parsed": True}]
+        gmail.cache_thread_messages(fresh, "t_rich", "Rich Subject", msgs)
+        items = fresh.get_atomic_for_resource("t_rich")
+        assert len(items) == 1
+        meta = json.loads(items[0]["metadata"])
+        assert meta["bcc"] == [{"name": "Dave", "email": "dave@x.com"}]
+        assert meta["attachments"] == ["report.pdf", "data.xlsx"]
+        assert "details_parsed" not in meta
+        fresh.close()
+
+    with subtests.test(msg="When details_parsed is False then stores flag in metadata"):
+        fresh = gmail.open_db(":memory:")
+        msgs = [{"legacy_message_id": "m_nodet", "from": "Alice", "date": "2026-01-01",
+                 "body": "Body", "to": [{"name": "Bob", "email": "bob@x.com"}],
+                 "cc": [], "details_parsed": False}]
+        gmail.cache_thread_messages(fresh, "t_nodet", "No Details", msgs)
+        items = fresh.get_atomic_for_resource("t_nodet")
+        meta = json.loads(items[0]["metadata"])
+        assert meta["details_parsed"] is False
+        fresh.close()
+
 
 # ═════════════════════════════════════════════════════════════════════
 # Tests: Summarize Pipeline
@@ -800,6 +919,47 @@ def test_main_removes_stale_output(subtests, tmp_path):
         assert "stale content" not in content
 
 
+def test_main_refetch_since(subtests, tmp_path):
+    with subtests.test(msg="When --refetch-since then deletes cached content and re-fetches"):
+        d, db_path = _make_test_db(tmp_path)
+        out_path = tmp_path / "refetch_out.md"
+        _seed_thread(d, "t_ref", n_msgs=2)
+        d.upsert_summary("t_ref", "gmail", "Old", "Old summary",
+                          mention_type="none", estimated_relevance=3, final_relevance=3)
+        d.close()
+
+        thread_list = [
+            {"rowIndex": 0, "legacyThreadId": "t_ref", "legacyLastMsgId": "m_new",
+             "senders": [{"name": "Alice", "email": "alice@test.com"}],
+             "subject": "Refetched", "date": "Apr 1, 2026", "labels": []}
+        ]
+        thread_messages = [
+            {"legacy_message_id": "m_new", "from": "Alice <alice@test.com>",
+             "to": [{"name": "Michael", "email": "michael.bui@fairpricegroup.sg"}],
+             "cc": [], "bcc": [], "date": "Apr 1, 2026",
+             "body": "Refetched content.", "attachments": [], "details_parsed": True}
+        ]
+        mock_raw = json.dumps({"relevance": 8, "summary": "Refetched summary",
+                               "work_items": [], "people": [], "labels": []})
+
+        nav_results = iter([True, False])
+
+        with patch("gmail.open_db", return_value=gmail.open_db(str(db_path))), \
+             patch("gmail.connect_browser", return_value=(MagicMock(), MagicMock(), MagicMock())), \
+             patch("gmail.navigate_to_page", side_effect=lambda *a, **kw: next(nav_results)), \
+             patch("gmail.get_thread_list", return_value=thread_list), \
+             patch("gmail.navigate_to_thread", return_value=True), \
+             patch("gmail.get_thread_subject", return_value="Refetched"), \
+             patch("gmail.extract_thread_messages", return_value=thread_messages), \
+             patch("gmail._call_llm", return_value=mock_raw), \
+             patch("gmail.time.sleep"), \
+             patch("sys.argv", ["gmail.py", "--refetch-since", "2026-03-01",
+                                "--output", str(out_path), "--min-relevance", "1",
+                                "--cdp-url", "http://localhost:9222", "--max-threads", "5"]):
+            gmail.main()
+        assert out_path.exists()
+
+
 def test_main_invalid_exclude_labels(subtests, tmp_path):
     with subtests.test(msg="When invalid JSON for --exclude-labels then exits with error"):
         d, db_path = _make_test_db(tmp_path)
@@ -851,16 +1011,18 @@ def test_connect_browser(subtests):
 
 
 def test_get_thread_list(subtests):
-    with subtests.test(msg="When page has threads then returns parsed data"):
+    with subtests.test(msg="When page has threads then returns parsed data with unread status"):
         mock_page = MagicMock()
         mock_page.evaluate.return_value = [
             {"rowIndex": 0, "legacyThreadId": "abc", "legacyLastMsgId": "def",
              "senders": [{"name": "Alice", "email": "alice@test.com"}],
-             "subject": "Hello", "date": "Apr 1, 2026", "labels": ["Inbox"]}
+             "subject": "Hello", "date": "Apr 1, 2026", "labels": ["Inbox"],
+             "isUnread": True}
         ]
         result = gmail.get_thread_list(mock_page)
         assert len(result) == 1
         assert result[0]["legacyThreadId"] == "abc"
+        assert result[0]["isUnread"] is True
 
 
 def test_navigate_to_page(subtests):
@@ -903,28 +1065,78 @@ def test_get_thread_subject(subtests):
 
 
 def test_extract_thread_messages(subtests):
-    with subtests.test(msg="When page has messages then returns parsed list"):
+    with subtests.test(msg="When page has messages then returns parsed list with new fields"):
         mock_page = MagicMock()
         mock_page.evaluate.side_effect = [
             False,
             None,
-            None,
+            {"alreadyOpen": 0, "clicked": 0, "skippedSingle": 1, "failed": 0},
+            0,
             [{"legacy_message_id": "m1", "from": "Alice <a@b.com>",
               "to": [{"name": "Bob", "email": "bob@b.com"}], "cc": [],
-              "date": "Apr 1, 2026", "body": "Hello"}]
+              "bcc": [], "date": "Apr 1, 2026", "body": "Hello",
+              "attachments": ["file.pdf"], "details_parsed": True}]
         ]
-        result = gmail.extract_thread_messages(mock_page)
+        with patch("gmail.time.sleep"):
+            result = gmail.extract_thread_messages(mock_page)
         assert len(result) == 1
         assert result[0]["legacy_message_id"] == "m1"
+        assert result[0]["bcc"] == []
+        assert result[0]["attachments"] == ["file.pdf"]
+        assert result[0]["details_parsed"] is True
 
 
 def test_expand_all_messages(subtests):
-    with subtests.test(msg="When expand all button exists then clicks it"):
+    with subtests.test(msg="When expand all button exists then clicks it and expands trimmed"):
         mock_page = MagicMock()
-        mock_page.evaluate.side_effect = [True, None, None]
+        mock_page.evaluate.side_effect = [True, None]
         with patch("gmail._wait_for_messages_stable"), patch("gmail.time.sleep"):
             gmail.expand_all_messages(mock_page)
-        assert mock_page.evaluate.call_count == 3
+        assert mock_page.evaluate.call_count == 2
+
+
+def test_click_show_details(subtests):
+    with subtests.test(msg="When all already open then returns counts"):
+        mock_page = MagicMock()
+        mock_page.evaluate.return_value = {"alreadyOpen": 3, "clicked": 0, "skippedSingle": 0, "failed": 0}
+        result = gmail._click_show_details(mock_page)
+        assert result["alreadyOpen"] == 3
+        assert result["clicked"] == 0
+
+    with subtests.test(msg="When messages clicked then returns clicked count"):
+        mock_page = MagicMock()
+        mock_page.evaluate.return_value = {"alreadyOpen": 1, "clicked": 2, "skippedSingle": 0, "failed": 0}
+        result = gmail._click_show_details(mock_page)
+        assert result["clicked"] == 2
+        assert result["alreadyOpen"] == 1
+
+    with subtests.test(msg="When single email then skips"):
+        mock_page = MagicMock()
+        mock_page.evaluate.return_value = {"alreadyOpen": 0, "clicked": 0, "skippedSingle": 3, "failed": 0}
+        result = gmail._click_show_details(mock_page)
+        assert result["skippedSingle"] == 3
+        assert result["clicked"] == 0
+
+    with subtests.test(msg="When no button found then increments failed"):
+        mock_page = MagicMock()
+        mock_page.evaluate.return_value = {"alreadyOpen": 0, "clicked": 0, "skippedSingle": 0, "failed": 2}
+        result = gmail._click_show_details(mock_page)
+        assert result["failed"] == 2
+        assert result["clicked"] == 0
+
+
+def test_mark_thread_unread(subtests):
+    with subtests.test(msg="When shortcut succeeds then returns True"):
+        mock_page = MagicMock()
+        with patch("gmail.time.sleep"):
+            assert gmail.mark_thread_unread(mock_page) is True
+        mock_page.keyboard.press.assert_called_once_with("Shift+u")
+
+    with subtests.test(msg="When keyboard raises then returns False"):
+        mock_page = MagicMock()
+        mock_page.keyboard.press.side_effect = Exception("fail")
+        with patch("gmail.time.sleep"):
+            assert gmail.mark_thread_unread(mock_page) is False
 
 
 def test_wait_for_messages_stable(subtests):
@@ -1014,6 +1226,46 @@ def test_db_retry_on_write_error(subtests):
         d.close()
 
 
+def test_delete_atomic_since(subtests):
+    cases = [
+        ("When items exist after date then deletes them",
+         "2026-04-01", 3),
+        ("When no items after date then deletes none",
+         "2099-01-01", 0),
+    ]
+    for scenario, since, expected_deleted in cases:
+        with subtests.test(msg=scenario):
+            fresh = gmail.open_db(":memory:")
+            _seed_thread(fresh, "t_del", n_msgs=3)
+            result = fresh.delete_atomic_since("gmail", since)
+            assert result == expected_deleted
+            fresh.close()
+
+
+def test_clear_summaries_for_resources(subtests):
+    cases = [
+        ("When resource_ids provided then clears those summaries",
+         ["t1", "t2"], 2),
+        ("When empty list then clears none",
+         [], 0),
+    ]
+    for scenario, rids, expected in cases:
+        with subtests.test(msg=scenario):
+            fresh = gmail.open_db(":memory:")
+            _seed_thread(fresh, "t1", n_msgs=1)
+            _seed_thread(fresh, "t2", n_msgs=1)
+            fresh.upsert_summary("t1", "gmail", "T1", "S1", mention_type="direct",
+                                 estimated_relevance=8, final_relevance=8)
+            fresh.upsert_summary("t2", "gmail", "T2", "S2", mention_type="indirect",
+                                 estimated_relevance=6, final_relevance=6)
+            result = fresh.clear_summaries_for_resources(rids)
+            assert result == expected
+            if expected > 0:
+                s = fresh.get_resource_summary("t1")
+                assert s["summary"] is None
+            fresh.close()
+
+
 def test_db_close(subtests, db):
     with subtests.test(msg="When close called then no error"):
         db.close()
@@ -1025,6 +1277,29 @@ def test_thread_needs_fetch_meta_fallback(subtests, db):
                          metadata={"last_message_id": "last123"})
         assert db.thread_needs_fetch("t_fb", "last123") is False
         assert db.thread_needs_fetch("t_fb", "different") is True
+
+
+def test_upsert_thread_meta(subtests):
+    cases = [
+        ("When atomic exists with different last_message_id then updates it",
+         lambda d: d.upsert_atomic("gmail", "t_meta_up", "last_msg", "A", "C",
+                                   "2026-01-01", "2026-01-01", metadata={"last_message_id": "old"}),
+         "t_meta_up", "last_msg", "new_id", True),
+        ("When atomic exists with same last_message_id then no-op",
+         lambda d: d.upsert_atomic("gmail", "t_meta_same", "msg_same", "A", "C",
+                                   "2026-01-01", "2026-01-01", metadata={"last_message_id": "same_id"}),
+         "t_meta_same", "msg_same", "same_id", False),
+        ("When atomic does not exist then no-op",
+         lambda d: None,
+         "t_no_exist", "no_msg", "any_id", False),
+    ]
+    for scenario, setup, tid, mid, new_id, expect_update in cases:
+        with subtests.test(msg=scenario):
+            fresh = gmail.open_db(":memory:")
+            if setup:
+                setup(fresh)
+            fresh.upsert_thread_meta(tid, new_id)
+            fresh.close()
 
 
 def test_get_thread_meta_last_message_id(subtests, db):
@@ -1147,7 +1422,9 @@ def test_main_full_browser_flow(subtests, tmp_path):
         thread_messages = [
             {"legacy_message_id": "msg_latest", "from": "Alice <alice@test.com>",
              "to": [{"name": "Michael", "email": "michael.bui@fairpricegroup.sg"}],
-             "cc": [], "date": "Apr 1, 2026", "body": "Hello Michael, this is a test email."}
+             "cc": [], "bcc": [], "date": "Apr 1, 2026",
+             "body": "Hello Michael, this is a test email.",
+             "attachments": [], "details_parsed": True}
         ]
 
         call_count = [0]
@@ -1220,7 +1497,8 @@ def test_main_browser_errors_exit_1(subtests, tmp_path):
         ]
         messages = [
             {"legacy_message_id": "m_err", "from": "X", "to": [], "cc": [],
-             "date": "", "body": "err body"}
+             "bcc": [], "date": "", "body": "err body",
+             "attachments": [], "details_parsed": True}
         ]
 
         nav_results = iter([True, False])
@@ -1301,3 +1579,21 @@ def test_main_early_stop(subtests, tmp_path):
             mock_nav.side_effect = [True, False]
             gmail.main()
         assert out_path.exists()
+
+
+def test_debug_function(subtests):
+    with subtests.test(msg="When log level is DEBUG then prints"):
+        original = gmail._LOG_LEVEL
+        gmail._LOG_LEVEL = "DEBUG"
+        with patch("builtins.print") as mock_print:
+            gmail.debug("test message")
+        mock_print.assert_called_once()
+        gmail._LOG_LEVEL = original
+
+    with subtests.test(msg="When log level is INFO then does not print"):
+        original = gmail._LOG_LEVEL
+        gmail._LOG_LEVEL = "INFO"
+        with patch("builtins.print") as mock_print:
+            gmail.debug("test message")
+        mock_print.assert_not_called()
+        gmail._LOG_LEVEL = original

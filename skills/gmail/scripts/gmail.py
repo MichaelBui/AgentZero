@@ -30,8 +30,35 @@ from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
 
-import requests
-from playwright.sync_api import sync_playwright, TimeoutError as PwTimeout
+_REQUIRED_PACKAGES = {
+    "requests": "requests",
+    "playwright": "playwright",
+}
+
+
+def _ensure_dependencies():
+    missing = []
+    for import_name, pip_name in _REQUIRED_PACKAGES.items():
+        try:
+            __import__(import_name)
+        except ImportError:
+            missing.append(pip_name)
+    if missing:
+        import subprocess
+        print(f"[gmail] Installing missing packages: {', '.join(missing)}", flush=True)
+        subprocess.check_call(
+            [sys.executable, "-m", "pip", "install", "--quiet"] + missing
+        )
+        if "playwright" in missing:
+            subprocess.check_call(
+                [sys.executable, "-m", "playwright", "install", "chromium"]
+            )
+
+
+_ensure_dependencies()
+
+import requests  # noqa: E402
+from playwright.sync_api import sync_playwright, TimeoutError as PwTimeout  # noqa: E402
 
 # ═════════════════════════════════════════════════════════════════════
 # Configuration
@@ -42,6 +69,8 @@ GMAIL_BASE = "https://mail.google.com"
 GMAIL_USER_EMAIL = os.environ.get("GMAIL_USER_EMAIL", "michael.bui@fairpricegroup.sg")
 
 DEFAULT_EXCLUDE = '["❌ ai-exclusion", "🪣 Bitbucket"]'
+
+DETAIL_TABLE_SEL = "table.ajC, table.ajB"
 
 LITELLM_BASE = os.environ.get("LITELLM_BASE_URL", "https://llm.gigary.com/v1")
 SUMMARIZE_MODEL = os.environ.get("SUMMARIZE_MODEL", "local/qwen3.5-35b-a3b:instruct-reasoning")
@@ -81,8 +110,16 @@ def _ts() -> str:
     return datetime.now(_TZ).strftime("%Y-%m-%dT%H:%M:%S%z")
 
 
+_LOG_LEVEL = os.environ.get("GMAIL_LOG_LEVEL", "INFO").upper()
+
+
 def log(*a, **kw):
     print(f"[{_ts()}]", *a, flush=True, **kw)
+
+
+def debug(*a, **kw):
+    if _LOG_LEVEL == "DEBUG":
+        print(f"[{_ts()}] DEBUG:", *a, flush=True, **kw)
 
 
 # ═════════════════════════════════════════════════════════════════════
@@ -106,6 +143,54 @@ _SIGNATURE_PATTERNS = [
     re.compile(r"\nSent from my (?:iPhone|iPad|Galaxy|Android|device).*", re.DOTALL | re.IGNORECASE),
     re.compile(r"\nGet Outlook for (?:iOS|Android).*", re.DOTALL | re.IGNORECASE),
 ]
+
+_GMAIL_DATE_FORMATS = [
+    "%a, %b %d, %Y, %I:%M %p",
+    "%b %d, %Y, %I:%M %p",
+    "%a, %b %d, %Y, %I:%M:%S %p",
+    "%b %d, %Y, %I:%M:%S %p",
+    "%b %d, %Y, %H:%M",
+    "%a, %b %d, %Y, %H:%M",
+    "%a, %b %d, %Y",
+    "%b %d, %Y",
+    "%a, %d %b %Y, %I:%M %p",
+    "%d %b %Y, %I:%M %p",
+    "%d %b %Y, %H:%M",
+    "%a, %d %b %Y",
+    "%d %b %Y",
+    "%Y-%m-%dT%H:%M:%S",
+    "%Y-%m-%d",
+]
+
+
+def parse_gmail_date(raw: str) -> str:
+    """Parse Gmail display date to ISO 8601. Returns original string if unparseable."""
+    if not raw:
+        return ""
+    raw = raw.strip()
+    if re.match(r"^\d{4}-\d{2}-\d{2}T", raw):
+        return raw
+    for fmt in _GMAIL_DATE_FORMATS:
+        try:
+            dt = datetime.strptime(raw, fmt)
+            if dt.year < 2000:
+                dt = dt.replace(year=datetime.now(_TZ).year)
+            return dt.replace(tzinfo=_TZ).isoformat()
+        except ValueError:
+            continue
+    no_dow = re.sub(r"^[A-Za-z]{3},\s*", "", raw)
+    if no_dow != raw:
+        for fmt in _GMAIL_DATE_FORMATS:
+            try:
+                dt = datetime.strptime(no_dow, fmt)
+                if dt.year < 2000:
+                    dt = dt.replace(year=datetime.now(_TZ).year)
+                return dt.replace(tzinfo=_TZ).isoformat()
+            except ValueError:
+                continue
+    log(f"WARNING: Could not parse Gmail date: {raw}")
+    return raw
+
 
 _FOOTER_NOISE_PATTERNS = [
     re.compile(r"This email and any (?:files|attachments) .{50,500}(?:privileged|confidential).*", re.DOTALL | re.IGNORECASE),
@@ -366,10 +451,12 @@ class SkillDB:
             for recipient in meta.get("to", []):
                 if isinstance(recipient, dict) and user_email == (recipient.get("email") or "").lower():
                     return "direct"
+        for item in items:
+            meta = json.loads(item.get("metadata", "{}"))
             for recipient in meta.get("cc", []):
                 if isinstance(recipient, dict) and user_email == (recipient.get("email") or "").lower():
-                    return "direct"
-        return "indirect"
+                    return "indirect"
+        return "none"
 
     # ── Resource Summary ──
 
@@ -453,6 +540,33 @@ class SkillDB:
             query += " ORDER BY sort_ts DESC"
             rows = self._conn.execute(query, params).fetchall()
         return [dict(r) for r in rows]
+
+    def delete_atomic_since(self, source: str, since: str) -> int:
+        """Delete all atomic_content for a source cached on or after `since` (YYYY-MM-DD)."""
+        def _do():
+            cursor = self._conn.execute(
+                "DELETE FROM atomic_content WHERE source=? AND cached_at >= ?",
+                (source, since),
+            )
+            self._conn.commit()
+            return cursor.rowcount
+        return self._retry(_do)
+
+    def clear_summaries_for_resources(self, resource_ids: list[str]) -> int:
+        """Clear summaries for specific resource_ids to force re-summarization."""
+        if not resource_ids:
+            return 0
+        def _do():
+            placeholders = ",".join("?" for _ in resource_ids)
+            cursor = self._conn.execute(
+                f"UPDATE resource_summary SET summary=NULL, summarized_at=NULL, "
+                f"mention_type='none', estimated_relevance=0, final_relevance=0 "
+                f"WHERE resource_id IN ({placeholders})",
+                resource_ids,
+            )
+            self._conn.commit()
+            return cursor.rowcount
+        return self._retry(_do)
 
     def clear_all_summaries(self) -> int:
         def _do():
@@ -716,9 +830,12 @@ def get_thread_list(page) -> list[dict]:
             const labelEls = tds[5].querySelectorAll('div.at');
             const labels = [];
             for (const l of labelEls) labels.push(l.getAttribute('title') || l.textContent.trim());
+            const isUnread = tr.classList.contains('zE')
+                || window.getComputedStyle(tds[5]).fontWeight >= 700
+                || tds[5].querySelector('b, span[style*="font-weight"]') !== null;
             threads.push({
                 rowIndex: i, legacyThreadId, legacyLastMsgId,
-                senders, subject, date, labels
+                senders, subject, date, labels, isUnread
             });
         }
         return threads;
@@ -768,13 +885,6 @@ def expand_all_messages(page):
         _wait_for_messages_stable(page)
     page.evaluate("""
     () => {
-        const detailBtns = document.querySelectorAll('img[aria-label="Show details"], span.ajy, div.ajz');
-        for (const btn of detailBtns) { try { btn.click(); } catch(e) {} }
-    }
-    """)
-    time.sleep(1)
-    page.evaluate("""
-    () => {
         const trimmers = document.querySelectorAll('[aria-label="Show trimmed content"]');
         for (const el of trimmers) { try { el.click(); } catch(e) {} }
     }
@@ -782,8 +892,52 @@ def expand_all_messages(page):
     time.sleep(0.5)
 
 
+def _click_show_details(page) -> dict:
+    """Open 'Show details' on messages via JS dispatchEvent.
+    Playwright click doesn't trigger Gmail's handler; full pointer event sequence does.
+    Skips messages with only 1 email address. Returns diagnostic dict."""
+    detail_sel = DETAIL_TABLE_SEL
+    return page.evaluate(f"""
+    () => {{
+        const DETAIL_SEL = '{detail_sel}';
+        const cs = document.querySelectorAll('[data-message-id]');
+        let alreadyOpen = 0, clicked = 0, skippedSingle = 0, failed = 0;
+        for (const c of cs) {{
+            if (c.querySelector(DETAIL_SEL)) {{ alreadyOpen++; continue; }}
+            const emails = c.querySelectorAll('span[email]');
+            if (emails.length <= 1) {{ skippedSingle++; continue; }}
+            const btn = c.querySelector('div.ajy[role="button"]')
+                     || c.querySelector('[role="button"][aria-label="Show details"]')
+                     || c.querySelector('div.ajy');
+            if (btn) {{
+                btn.dispatchEvent(new PointerEvent('pointerdown', {{bubbles:true}}));
+                btn.dispatchEvent(new PointerEvent('pointerup', {{bubbles:true}}));
+                btn.dispatchEvent(new MouseEvent('click', {{bubbles:true}}));
+                clicked++;
+            }} else {{
+                failed++;
+            }}
+        }}
+        return {{ alreadyOpen, clicked, skippedSingle, failed }};
+    }}
+    """)
+
+
 def extract_thread_messages(page) -> list[dict]:
     expand_all_messages(page)
+
+    detail_result = _click_show_details(page)
+    if detail_result.get("clicked", 0) > 0:
+        time.sleep(2.0)
+    tables_after = page.evaluate(
+        f"() => document.querySelectorAll('[data-message-id] {DETAIL_TABLE_SEL.split(',')[0].strip()}').length"
+    )
+    debug(f"  Show details: open={detail_result.get('alreadyOpen', 0)}, "
+          f"clicked={detail_result.get('clicked', 0)}, "
+          f"single={detail_result.get('skippedSingle', 0)}, "
+          f"failed={detail_result.get('failed', 0)}, "
+          f"tables_after={tables_after}")
+
     return page.evaluate("""
     () => {
         const messages = [];
@@ -807,35 +961,65 @@ def extract_thread_messages(page) -> list[dict]:
                     if (title.match(/\\d{1,2},?\\s*\\d{4}/)) { date = title; break; }
                 }
             }
-            const allEmailSpans = container.querySelectorAll('span[email]');
+
             const fromEmail = fromEl ? fromEl.getAttribute('email') : '';
             const toList = [];
             const ccList = [];
-            const detailTable = container.querySelector('table.ajB');
+            const bccList = [];
+            let detailsParsed = false;
+
+            const detailTable = container.querySelector('table.ajC') || container.querySelector('table.ajB');
             if (detailTable) {
                 const dtRows = detailTable.querySelectorAll('tr');
                 for (const row of dtRows) {
                     const label = row.querySelector('td.aGb');
                     const value = row.querySelector('td.ajA');
-                    if (label && value) {
-                        const labelText = label.textContent.trim().toLowerCase();
-                        const emailEls = value.querySelectorAll('span[email]');
-                        for (const e of emailEls) {
-                            const recipient = { name: e.getAttribute('name') || e.textContent.trim(), email: e.getAttribute('email') || '' };
-                            if (labelText.startsWith('to')) toList.push(recipient);
-                            else if (labelText.startsWith('cc')) ccList.push(recipient);
-                        }
+                    if (!label || !value) continue;
+                    const labelText = label.textContent.trim().toLowerCase();
+                    const emailEls = value.querySelectorAll('span[email]');
+                    for (const e of emailEls) {
+                        const recipient = {
+                            name: e.getAttribute('name') || e.textContent.trim(),
+                            email: e.getAttribute('email') || ''
+                        };
+                        if (labelText.startsWith('to')) toList.push(recipient);
+                        else if (labelText.startsWith('cc')) ccList.push(recipient);
+                        else if (labelText.startsWith('bcc')) bccList.push(recipient);
                     }
                 }
+                if (toList.length > 0) detailsParsed = true;
             }
-            if (toList.length === 0 && ccList.length === 0) {
+
+            if (!detailsParsed) {
+                const allEmailSpans = container.querySelectorAll('span[email]');
                 let foundFrom = false;
                 for (const s of allEmailSpans) {
                     const email = s.getAttribute('email') || '';
                     if (email === fromEmail && !foundFrom) { foundFrom = true; continue; }
-                    toList.push({ name: s.getAttribute('name') || s.textContent.trim(), email: email });
+                    toList.push({
+                        name: s.getAttribute('name') || s.textContent.trim(),
+                        email: email,
+                        _unverified: true
+                    });
                 }
             }
+
+            const attachments = [];
+            const attachEls = container.querySelectorAll(
+                'div.aQH span.aV3, div.aZo, span.aZo, div[data-tooltip][class*="aQ"]'
+            );
+            for (const el of attachEls) {
+                const fname = el.getAttribute('data-tooltip') || el.textContent.trim();
+                if (fname && !attachments.includes(fname)) attachments.push(fname);
+            }
+            if (attachments.length === 0) {
+                const downloadLinks = container.querySelectorAll('a.aQy, a[download]');
+                for (const a of downloadLinks) {
+                    const fname = a.getAttribute('download') || a.textContent.trim();
+                    if (fname && !attachments.includes(fname)) attachments.push(fname);
+                }
+            }
+
             let body = '';
             const bodySelectors = ['div.a3s.aiL', 'div.a3s', 'div[dir="ltr"]'];
             for (const sel of bodySelectors) {
@@ -849,11 +1033,32 @@ def extract_thread_messages(page) -> list[dict]:
                 body = clone.innerText ? clone.innerText.trim() : clone.textContent.trim();
             }
             body = body.replace(/\\n{3,}/g, '\\n\\n').trim();
-            messages.push({ legacy_message_id: legacyMsgId, from: sender, to: toList, cc: ccList, date: date, body: body });
+
+            messages.push({
+                legacy_message_id: legacyMsgId,
+                from: sender,
+                to: toList,
+                cc: ccList,
+                bcc: bccList,
+                date: date,
+                body: body,
+                attachments: attachments,
+                details_parsed: detailsParsed
+            });
         }
         return messages;
     }
     """)
+
+
+def mark_thread_unread(page) -> bool:
+    """Mark the currently open thread as unread using Shift+U shortcut."""
+    try:
+        page.keyboard.press("Shift+u")
+        time.sleep(0.5)
+        return True
+    except Exception:
+        return False
 
 
 def get_thread_subject(page) -> str:
@@ -882,8 +1087,20 @@ def cache_thread_messages(db: SkillDB, thread_id: str, subject: str,
             continue
         body = clean_email_body(msg.get("body", ""))
         author = msg.get("from", "Unknown")
-        date = msg.get("date", "")
-        meta = {"to": msg.get("to", []), "cc": msg.get("cc", []), "subject": subject}
+        date = parse_gmail_date(msg.get("date", ""))
+        meta: dict = {
+            "to": msg.get("to", []),
+            "cc": msg.get("cc", []),
+            "subject": subject,
+        }
+        bcc = msg.get("bcc", [])
+        if bcc:
+            meta["bcc"] = bcc
+        attachments = msg.get("attachments", [])
+        if attachments:
+            meta["attachments"] = attachments
+        if not msg.get("details_parsed", True):
+            meta["details_parsed"] = False
         if db.upsert_atomic("gmail", thread_id, msg_id, author=author,
                             content=body, created_at=date, updated_at=date,
                             metadata=meta):
@@ -1052,12 +1269,24 @@ def main():
                         help="Stop after N consecutive cached threads (default: 5, 0=disabled)")
     parser.add_argument("--cached-only", action="store_true", help="Output from DB only, no browser or summarization")
     parser.add_argument("--force", action="store_true", help="Clear summaries and re-summarize (keeps cached content)")
+    parser.add_argument("--refetch-since", default=None,
+                        help="Delete cached content since YYYY-MM-DD and re-fetch from browser (e.g. 2026-03-01)")
     parser.add_argument("--min-relevance", type=int, default=6, help="Minimum relevance for output (default: 6)")
+    parser.add_argument("--log-level", default="INFO", choices=["DEBUG", "INFO"],
+                        help="Log level (default: INFO, use DEBUG for diagnostics)")
     parser.add_argument("--output", default=str(_WORKDIR / "gmail-output.md"), help="Output .md path")
     args = parser.parse_args()
 
+    global _LOG_LEVEL
+    _LOG_LEVEL = args.log_level.upper()
+
     output_path = Path(args.output)
-    days = args.days if args.days is not None else _default_lookback_days()
+    if args.refetch_since and args.days is None:
+        refetch_dt = datetime.strptime(args.refetch_since, "%Y-%m-%d").replace(tzinfo=_TZ)
+        days = (datetime.now(_TZ) - refetch_dt).days + 1
+        log(f"Auto-calculated --days={days} from --refetch-since={args.refetch_since}")
+    else:
+        days = args.days if args.days is not None else _default_lookback_days()
     since_dt = datetime.now(_TZ) - timedelta(days=days)
     since_iso = since_dt.strftime("%Y-%m-%d")
 
@@ -1066,6 +1295,15 @@ def main():
 
     db = open_db()
     log(f"STARTED (days={days}, since={since_iso}, user={GMAIL_USER_EMAIL})")
+
+    if args.refetch_since:
+        affected_before = db.get_all_resource_ids(source="gmail")
+        deleted = db.delete_atomic_since("gmail", args.refetch_since)
+        affected_after = db.get_all_resource_ids(source="gmail")
+        orphaned = set(affected_before) - set(affected_after)
+        cleared = db.clear_summaries_for_resources(list(set(affected_before)))
+        log(f"--refetch-since {args.refetch_since}: deleted {deleted} cached messages, "
+            f"cleared {cleared} summaries, {len(orphaned)} threads fully removed")
 
     if args.force:
         count = db.clear_all_summaries()
@@ -1153,6 +1391,7 @@ def main():
                     "thread_id": thread_id, "subject": subject, "labels": labels,
                     "senders": row.get("senders", []), "date": row.get("date", ""),
                     "last_msg_id": last_msg_id, "fetched": False,
+                    "is_unread": row.get("isUnread", False),
                 }
 
                 if early_stop_triggered or (not db.thread_needs_fetch(thread_id, last_msg_id)):
@@ -1173,8 +1412,10 @@ def main():
                 break
             page_num += 1
 
+        unread_count = sum(1 for t in threads_to_fetch if t.get("is_unread"))
         log(f"Phase 1: {len(thread_infos)} threads (excluded={skipped_excluded}, "
-            f"unchanged={skipped_unchanged}, to-fetch={len(threads_to_fetch)})")
+            f"unchanged={skipped_unchanged}, to-fetch={len(threads_to_fetch)}, "
+            f"unread={unread_count})")
 
         # ── Phase 2+3: Fetch and summarize in pipeline ──
         pipeline = _Pipeline(db, force=False)
@@ -1200,6 +1441,10 @@ def main():
             if new_count > 0:
                 log(f"  -> {new_count} new message(s) cached")
             db.upsert_thread_meta(thread_id, last_msg_id)
+
+            if info.get("is_unread", False):
+                if mark_thread_unread(page):
+                    log(f"  -> restored unread status")
 
             info["subject"] = thread_subject
             info["fetched"] = True

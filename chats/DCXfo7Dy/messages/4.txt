@@ -1,0 +1,190 @@
+/a0/usr/workdir/gchat-debug.log 187 lines
+>>>
+  1 [2026-04-06T02:34:22+0000] ============================================================
+  2 [2026-04-06T02:34:22+0000] STATUS: STARTED - GChat Reader
+  3 [2026-04-06T02:34:22+0000] output=/a0/usr/workdir/gchat-output.md, debug=/a0/usr/workdir/gchat-debug.log
+  4 [2026-04-06T02:34:22+0000] ============================================================
+  5 [2026-04-06T02:34:22+0000] Connecting to browser at http://192.168.1.11:9223...
+  6 [2026-04-06T02:34:22+0000] Connecting to Chrome at http://192.168.1.11:9223...
+  7 [2026-04-06T02:34:22+0000] Connected (124.0.6367.78), 2 tab(s)
+  8 [2026-04-06T02:34:22+0000] Reusing tab: https://chat.google.com/app/home
+  9 [2026-04-06T02:34:22+0000] Browser connected.
+ 10 [2026-04-06T02:34:27+0000] Feed: 30 item(s) within 4 day(s)
+ 11 [2026-04-06T02:34:27+0000] 
+ 12 Processing (target: 200, feed: 30, early-stop: 3)...
+ 13 
+ 14 [2026-04-06T02:34:27+0000] [Fetching 1/30] [Leads] (Ecom/Omni) Digital Product Development... (summarization pending)
+ 15 [2026-04-06T02:34:32+0000]   16 message container(s)
+ 16 [2026-04-06T02:34:50+0000]   Reached cutoff after 0 scroll(s)
+ 17 [2026-04-06T02:34:50+0000]   -> 1 message(s) within 4 day(s)
+ 18 [2026-04-06T02:34:50+0000]   -> 1 new message(s) cached
+ 19 [2026-04-06T02:34:50+0000] [Fetched 1/30] [Leads] (Ecom/Omni) Digital Product Development - queued for summarization
+ 20 [2026-04-06T02:34:50+0000] [Fetching 2/30] #dd-dpd-engage-alert... (summarization pending)
+ 21 [2026-04-06T02:34:56+0000]   16 message container(s)
+ 22 [2026-04-06T02:35:19+0000]   Hit scroll limit (5)
+ 23 [2026-04-06T02:35:19+0000]   -> 17 message(s) within 4 day(s)
+ 24 [2026-04-06T02:35:20+0000]   -> 17 new message(s) cached
+ 25 [2026-04-06T02:35:20+0000] [Fetched 2/30] #dd-dpd-engage-alert - queued for summarization
+ 26 [2026-04-06T02:35:20+0000] [Fetching 3/30] RMN Notification... (summarization pending)
+ 27 [2026-04-06T02:35:27+0000]   18 message container(s)
+ 28 [2026-04-06T02:35:47+0000]   Scroll early-stop: 18 consecutive cached messages
+ 29 [2026-04-06T02:35:47+0000]   -> 36 message(s) within 4 day(s)
+ 30 [2026-04-06T02:35:47+0000]   -> 6 new message(s) cached
+ 31 [2026-04-06T02:35:47+0000] [Fetched 3/30] RMN Notification - queued for summarization
+ 32 [2026-04-06T02:35:47+0000] [Fetching 4/30] [Internal] (Ecom/Omni) Digital Product Development... (summarization pending)
+ 33 [2026-04-06T02:35:53+0000]   3 message container(s) (thread: 8zAYSPGGpFE)
+ 34 [2026-04-06T02:35:54+0000]   Reached top after 0 scroll(s)
+ 35 [2026-04-06T02:35:54+0000]   -> 3 message(s) within 4 day(s)
+ 36 [2026-04-06T02:35:55+0000]   -> 3 new message(s) cached
+ 37 [2026-04-06T02:35:55+0000] [Fetched 4/30] [Internal] (Ecom/Omni) Digital Product Development - queued for summarization
+ 38 [2026-04-06T02:35:55+0000] [Fetching 5/30] Akash Gupta... (summarization pending)
+ 39 [2026-04-06T02:36:01+0000]   20 message container(s)
+ 40 [2026-04-06T02:36:18+0000]   Reached cutoff after 0 scroll(s)
+ 41 [2026-04-06T02:36:18+0000]   -> 6 message(s) within 4 day(s)
+ 42 [2026-04-06T02:36:18+0000]   -> 6 new message(s) cached
+ 43 [2026-04-06T02:36:18+0000] [Fetched 5/30] Akash Gupta - queued for summarization
+ 44 [2026-04-06T02:36:18+0000] [Fetching 6/30] @ecom-ops #standup - Apr 6... (summarization pending)
+ 45 [2026-04-06T02:36:24+0000]   3 message container(s)
+ 46 [2026-04-06T02:36:43+0000]   Reached top after 1 scroll(s)
+ 47 [2026-04-06T02:36:43+0000]   -> 1 message(s) within 4 day(s)
+ 48 [2026-04-06T02:36:43+0000]   -> 1 new message(s) cached
+ 49 [2026-04-06T02:36:43+0000] [Fetched 6/30] @ecom-ops #standup - Apr 6 - queued for summarization
+ 50 [2026-04-06T02:36:43+0000] [Fetching 7/30] [Internal] (Ecom/Omni) Digital Product Development... (summarization pending)
+ 51 [2026-04-06T02:36:49+0000]   16 message container(s)
+ 52 [2026-04-06T02:37:06+0000]   Reached cutoff after 0 scroll(s)
+ 53 [2026-04-06T02:37:06+0000]   -> 6 message(s) within 4 day(s)
+ 54 [2026-04-06T02:37:06+0000]   -> 3 new message(s) cached
+ 55 [2026-04-06T02:37:06+0000] [Fetched 7/30] [Internal] (Ecom/Omni) Digital Product Development - queued for summarization
+ 56 [2026-04-06T02:37:06+0000] [Fetching 8/30] Jacob, Sathya, Daryl, Tiong Siong, ...... (summarization pending)
+ 57 [2026-04-06T02:37:12+0000]   15 message container(s)
+ 58 [2026-04-06T02:37:33+0000]   Reached top after 3 scroll(s)
+ 59 [2026-04-06T02:37:33+0000]   -> 1 message(s) within 4 day(s)
+ 60 [2026-04-06T02:37:33+0000]   -> 1 new message(s) cached
+ 61 [2026-04-06T02:37:33+0000] [Fetched 8/30] Jacob, Sathya, Daryl, Tiong Siong, ... - queued for summarization
+ 62 [2026-04-06T02:37:33+0000] [Fetching 9/30] @omni-ops #standup - Apr 6... (summarization pending)
+ 63 [2026-04-06T02:37:39+0000]   7 message container(s)
+ 64 [2026-04-06T02:37:57+0000]   Reached top after 1 scroll(s)
+ 65 [2026-04-06T02:37:57+0000]   -> 5 message(s) within 4 day(s)
+ 66 [2026-04-06T02:37:58+0000]   -> 5 new message(s) cached
+ 67 [2026-04-06T02:37:58+0000] [Fetched 9/30] @omni-ops #standup - Apr 6 - queued for summarization
+ 68 [2026-04-06T02:37:58+0000] [Fetching 10/30] [Internal] (Ecom/Omni) Digital Product Development... (summarization pending)
+ 69 [2026-04-06T02:38:04+0000]   3 message container(s) (thread: YLE78JhUjDM)
+ 70 [2026-04-06T02:38:07+0000]   Reached top after 1 scroll(s)
+ 71 [2026-04-06T02:38:07+0000]   Expanded 1 bar(s)
+ 72 [2026-04-06T02:38:07+0000]   -> 16 message(s) within 4 day(s)
+ 73 [2026-04-06T02:38:07+0000]   -> 16 new message(s) cached
+ 74 [2026-04-06T02:38:07+0000] [Fetched 10/30] [Internal] (Ecom/Omni) Digital Product Development - queued for summarization
+ 75 [2026-04-06T02:38:07+0000] [Fetching 11/30] Digital Product Development {DPD}... (summarization pending)
+ 76 [2026-04-06T02:38:13+0000]   3 message container(s) (thread: mrSGCifSoS8)
+ 77 [2026-04-06T02:38:16+0000]   Reached top after 1 scroll(s)
+ 78 [2026-04-06T02:38:16+0000]   -> 6 message(s) within 4 day(s)
+ 79 [2026-04-06T02:38:16+0000]   -> 6 new message(s) cached
+ 80 [2026-04-06T02:38:16+0000] [Fetched 11/30] Digital Product Development {DPD} - queued for summarization
+ 81 [2026-04-06T02:38:16+0000] [Fetching 12/30] Digital Signage - Network and StoreTech... (summarization pending)
+ 82 [2026-04-06T02:38:23+0000]   16 message container(s)
+ 83 [2026-04-06T02:38:40+0000]   Reached cutoff after 0 scroll(s)
+ 84 [2026-04-06T02:38:40+0000]   -> 3 message(s) within 4 day(s)
+ 85 [2026-04-06T02:38:40+0000]   -> 3 new message(s) cached
+ 86 [2026-04-06T02:38:40+0000] [Fetched 12/30] Digital Signage - Network and StoreTech - queued for summarization
+ 87 [2026-04-06T02:38:40+0000] [Fetching 13/30] Shopping Cart Notification... (summarization pending)
+ 88 [2026-04-06T02:38:46+0000]   16 message container(s)
+ 89 [2026-04-06T02:39:09+0000]   Hit scroll limit (5)
+ 90 [2026-04-06T02:39:09+0000]   -> 16 message(s) within 4 day(s)
+ 91 [2026-04-06T02:39:12+0000]   -> 16 new message(s) cached
+ 92 [2026-04-06T02:39:12+0000] [Fetched 13/30] Shopping Cart Notification - queued for summarization
+ 93 [2026-04-06T02:39:12+0000] [Fetching 14/30] DPD x Platform Engineering... (summarization pending)
+ 94 [2026-04-06T02:39:18+0000]   16 message container(s)
+ 95 [2026-04-06T02:39:36+0000]   Reached cutoff after 0 scroll(s)
+ 96 [2026-04-06T02:39:36+0000]   -> 3 message(s) within 4 day(s)
+ 97 [2026-04-06T02:39:36+0000]   -> 1 new message(s) cached
+ 98 [2026-04-06T02:39:36+0000] [Fetched 14/30] DPD x Platform Engineering - queued for summarization
+ 99 [2026-04-06T02:39:36+0000] [Fetching 15/30] PDM Notification... (summarization pending)
+100 [2026-04-06T02:39:42+0000]   16 message container(s)
+101 [2026-04-06T02:40:00+0000]   Reached cutoff after 0 scroll(s)
+102 [2026-04-06T02:40:00+0000]   -> 12 message(s) within 4 day(s)
+103 [2026-04-06T02:40:00+0000]   -> 3 new message(s) cached
+104 [2026-04-06T02:40:00+0000] [Fetched 15/30] PDM Notification - queued for summarization
+105 [2026-04-06T02:40:00+0000] [Fetching 16/30] Digital Product Development {DPD}... (summarization pending)
+106 [2026-04-06T02:40:06+0000]   16 message container(s)
+107 [2026-04-06T02:40:23+0000]   Reached cutoff after 0 scroll(s)
+108 [2026-04-06T02:40:23+0000]   -> 3 message(s) within 4 day(s)
+109 [2026-04-06T02:40:24+0000]   -> 1 new message(s) cached
+110 [2026-04-06T02:40:24+0000] [Fetched 16/30] Digital Product Development {DPD} - queued for summarization
+111 [2026-04-06T02:40:24+0000] [Fetching 17/30] Nikhil Grover... (summarization pending)
+112 [2026-04-06T02:40:29+0000]   20 message container(s)
+113 [2026-04-06T02:40:47+0000]   Reached cutoff after 0 scroll(s)
+114 [2026-04-06T02:40:47+0000]   -> 8 message(s) within 4 day(s)
+115 [2026-04-06T02:40:47+0000]   -> 3 new message(s) cached
+116 [2026-04-06T02:40:47+0000] [Fetched 17/30] Nikhil Grover - queued for summarization
+117 [2026-04-06T02:40:47+0000] [Fetching 18/30] #dd-dpd-grocery-alert... (summarization pending)
+118 [2026-04-06T02:40:53+0000]   17 message container(s)
+119 [2026-04-06T02:41:17+0000]   Hit scroll limit (5)
+120 [2026-04-06T02:41:17+0000]   -> 17 message(s) within 4 day(s)
+121 [2026-04-06T02:41:17+0000]   -> 3 new message(s) cached
+122 [2026-04-06T02:41:17+0000] [Fetched 18/30] #dd-dpd-grocery-alert - queued for summarization
+123 [2026-04-06T02:41:17+0000] [Fetching 19/30] 📅 Daily summary... (summarization pending)
+124 [2026-04-06T02:41:23+0000]   16 message container(s)
+125 [2026-04-06T02:41:41+0000]   Reached cutoff after 0 scroll(s)
+126 [2026-04-06T02:41:41+0000]   -> 4 message(s) within 4 day(s)
+127 [2026-04-06T02:41:41+0000]   -> 1 new message(s) cached
+128 [2026-04-06T02:41:41+0000] [Fetched 19/30] 📅 Daily summary - queued for summarization
+129 [2026-04-06T02:41:41+0000] [Fetching 20/30] fairnex-datadog-notification... (summarization pending)
+130 [2026-04-06T02:41:47+0000]   16 message container(s)
+131 [2026-04-06T02:42:10+0000]   Hit scroll limit (5)
+132 [2026-04-06T02:42:10+0000]   -> 16 message(s) within 4 day(s)
+133 [2026-04-06T02:42:10+0000]   -> 1 new message(s) cached
+134 [2026-04-06T02:42:10+0000] [Fetched 20/30] fairnex-datadog-notification - queued for summarization
+135 [2026-04-06T02:42:10+0000] [Fetching 21/30] Michael Bui... (summarization pending)
+136 [2026-04-06T02:42:10+0000] [Fetch skipped 21/30] Michael Bui - unchanged (summarization pending)
+137 [2026-04-06T02:42:10+0000] [Fetching 22/30] [Prod Support] Ecom FFS Ops... (summarization pending)
+138 [2026-04-06T02:42:10+0000] [Fetch skipped 22/30] [Prod Support] Ecom FFS Ops - unchanged (summarization pending)
+139 [2026-04-06T02:42:10+0000] [Fetching 23/30] DPD AI Guild... (summarization pending)
+140 [2026-04-06T02:42:10+0000] [Fetch skipped 23/30] DPD AI Guild - unchanged (summarization pending)
+141 [2026-04-06T02:42:10+0000] 
+142   Early stop: 3 consecutive cached conversations. Skipping fetches, continuing scan...
+143 [2026-04-06T02:42:10+0000] [Fetching 24/30] #dd-fpg-watchdog-alert... (summarization pending)
+144 [2026-04-06T02:42:10+0000] [Fetch skipped 24/30] #dd-fpg-watchdog-alert - unchanged (summarization pending)
+145 [2026-04-06T02:42:10+0000] [Fetching 25/30] Digital Product Development {DPD}... (summarization pending)
+146 [2026-04-06T02:42:10+0000] [Fetch skipped 25/30] Digital Product Development {DPD} - unchanged (summarization pending)
+147 [2026-04-06T02:42:10+0000] [Fetching 26/30] Nikhil, Nicole Soh, Yap Chye Soon, Anwar, ...... (summarization pending)
+148 [2026-04-06T02:42:10+0000] [Fetch skipped 26/30] Nikhil, Nicole Soh, Yap Chye Soon, Anwar, ... - unchanged (summarization pending)
+149 [2026-04-06T02:42:10+0000] [Fetching 27/30] 📢 COM Notifications... (summarization pending)
+150 [2026-04-06T02:42:10+0000] [Fetch skipped 27/30] 📢 COM Notifications - unchanged (summarization pending)
+151 [2026-04-06T02:42:10+0000] [Fetching 28/30] [Prod Support] Marketplace... (summarization pending)
+152 [2026-04-06T02:42:10+0000] [Fetch skipped 28/30] [Prod Support] Marketplace - unchanged (summarization pending)
+153 [2026-04-06T02:42:10+0000] [Fetching 29/30] QE <-> All Tribes... (summarization pending)
+154 [2026-04-06T02:42:10+0000] [Fetch skipped 29/30] QE <-> All Tribes - unchanged (summarization pending)
+155 [2026-04-06T02:42:10+0000] [Fetching 30/30] Digital Product Development {DPD}... (summarization pending)
+156 [2026-04-06T02:42:10+0000] [Fetch skipped 30/30] Digital Product Development {DPD} - unchanged (summarization pending)
+157 [2026-04-06T02:42:10+0000] 
+158 Fetch done: 30 conversation(s) from 30 attempted (unchanged: 10, focus-skip: 0, errors: 0, early-stopped)
+159 [2026-04-06T02:42:10+0000] 
+160 Queuing 30 conversations for summarization (20 fetched, 10 unchanged)...
+161 [2026-04-06T02:42:10+0000] [Summarizing 1/30] [[Leads] (Ecom/Omni) Digital Product Deve]: AI summarizing (1 messages)...
+162 [2026-04-06T02:42:42+0000] [Summarized 1/30] [[Leads] (Ecom/Omni) Digital Product Deve]: done
+163 [2026-04-06T02:42:42+0000] [Summarizing 2/30] [#dd-dpd-engage-alert]: AI summarizing (17 messages)...
+164 [2026-04-06T02:43:16+0000] [Summarized 2/30] [#dd-dpd-engage-alert]: done
+165 [2026-04-06T02:43:16+0000] [Summarizing 3/30] [RMN Notification]: AI summarizing (6 messages)...
+166 [2026-04-06T02:43:50+0000] [Summarized 3/30] [RMN Notification]: done
+167 [2026-04-06T02:43:50+0000] [Summarizing 4/30] [[Internal] (Ecom/Omni) Digital Product D]: AI summarizing (3 messages)...
+168 [2026-04-06T02:44:10+0000] [Summarized 4/30] [[Internal] (Ecom/Omni) Digital Product D]: done
+169 [2026-04-06T02:44:10+0000] [Summarizing 5/30] [Akash Gupta]: AI summarizing (6 messages)...
+170 [2026-04-06T02:44:26+0000] [Summarized 5/30] [Akash Gupta]: done
+171 [2026-04-06T02:44:26+0000] [Summarizing 6/30] [@ecom-ops #standup - Apr 6]: AI summarizing (1 messages)...
+172 [2026-04-06T02:44:36+0000] [Summarized 6/30] [@ecom-ops #standup - Apr 6]: done
+173 [2026-04-06T02:44:36+0000] [Summarizing 7/30] [[Internal] (Ecom/Omni) Digital Product D]: AI summarizing (3 messages)...
+174 [2026-04-06T02:45:13+0000] [Summarized 7/30] [[Internal] (Ecom/Omni) Digital Product D]: done
+175 [2026-04-06T02:45:13+0000] [Summarizing 8/30] [Jacob, Sathya, Daryl, Tiong Siong, ...]: AI summarizing (1 messages)...
+176 [2026-04-06T02:45:32+0000] [Summarized 8/30] [Jacob, Sathya, Daryl, Tiong Siong, ...]: done
+177 [2026-04-06T02:45:32+0000] [Summarizing 9/30] [@omni-ops #standup - Apr 6]: AI summarizing (5 messages)...
+178 [2026-04-06T02:45:45+0000] [Summarized 9/30] [@omni-ops #standup - Apr 6]: done
+179 [2026-04-06T02:45:45+0000] [Summarizing 10/30] [[Internal] (Ecom/Omni) Digital Product D]: AI summarizing (16 messages)...
+180 [2026-04-06T02:45:58+0000] [Summarized 10/30] [[Internal] (Ecom/Omni) Digital Product D]: done
+181 [2026-04-06T02:45:58+0000] [Summarizing 11/30] [Digital Product Development {DPD}]: AI summarizing (6 messages)...
+182 [2026-04-06T02:46:13+0000] [Summarized 11/30] [Digital Product Development {DPD}]: done
+183 [2026-04-06T02:46:13+0000] [Summarizing 12/30] [Digital Signage - Network and StoreTech]: AI summarizing (3 messages)...
+184 [2026-04-06T02:46:36+0000] [Summarized 12/30] [Digital Signage - Network and StoreTech]: done
+185 [2026-04-06T02:46:36+0000] [Summarizing 13/30] [Shopping Cart Notification]: AI summarizing (16 messages)...
+186 [2026-04-06T02:47:08+0000] [Summarized 13/30] [Shopping Cart Notification]: done
+187 [2026-04-06T02:47:08+0000] [Summarizing 14/30] [DPD x Platform Engineering]: AI summarizing (1 messages)...
+<<<

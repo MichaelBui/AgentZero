@@ -1,4 +1,8 @@
-.PHONY: test test-verbose coverage coverage-html clean
+.PHONY: install test test-verbose coverage coverage-html clean
+
+install:
+	pip install playwright requests pytest pytest-subtests pytest-cov
+	python -m playwright install chromium
 
 test:
 	cd scripts && python -m pytest test_gmail.py -q

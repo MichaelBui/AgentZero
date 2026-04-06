@@ -1,0 +1,90 @@
+/a0/usr/workdir/gchat-output.md 87 lines
+>>>
+ 1 
+ 2 
+ 3 ## [1/30] [Leads] (Ecom/Omni) Digital Product Development
+ 4 Source: gchat | Group: space/AAQAN8mDauE | Messages: 1 | Last Activity: 2026-04-06T02:34:20.549000+00:00 | Last Updated: 2026-04-06T02:42:42.388605+00:00
+ 5 **Daily Work Briefing: Leads (Ecom/Omni) Digital Product Development**
+ 6 
+ 7 **Key Participants & Roles**
+ 8 *   **Sneha Parab:** Lead/Manager; coordinating cross-team support, SAP/API integration blockers. Recently queried B2B user blocking logic for migrated customers.
+ 9 *   **Michael Bui:** Engineering/RMN Architect; identified root cause for RMN incident and preparing UAT verification. Seeking alignment on opening the "Project Light" Confluence space widely.
+10 *   **Daryl Ng:** Investigating store network ownership and Omni Home data discrepancies. Flagged Linkpoints eligibility issue (April 1). Inquired about learning budget (Sundy's course) and S&G Store Enabling SOP adherence. Currently replying to B2B blocking use case discussion.
+11 *   **Alvin Choo:** Leadership; addressing approval workflows for weekend deployments. Consulted regarding Sundy's training budget inquiry and Project Light alignment.
+12 *   **Gopalakrishna Dhulipati:** On Child Care Leave until Wednesday (April 2). Will reach out individually if assistance is required to rep tasks.
+13 
+14 **Main Topics & Updates**
+15 1.  **RMN Incident & Deployment Status:** Michael Bui identified the root cause and implemented a fix. Daryl Ng confirmed active inquiry regarding deployment status on March 31 (01:44 UTC). Immediate guidance remains required on weekend (Sat/Sun) deployment protocols, requiring an approval request to Hui Hui.
+16 2.  **Project Light Confluence Access (New):** On April 6 at 02:34 UTC, Michael Bui requested guidance from Alvin Choo and Gopalakrishna Dhulipati regarding whether the "Project Light" Confluence space (`https://ntuclink.atlassian.net/wiki/spaces/LIGHT/overview`) should be opened widely or aligned internally first.
+17 3.  **Linkpoints Eligibility Issue:** On April 1 at 03:13 UTC, Daryl Ng flagged that Wei Sing's team enabled "Linkpoints eligible" in SAP, but it remains disabled in DBP. Investigation is underway.
+18 4.  **Search Performance Drop:** Investigation continues regarding the severe 60–70% impression decline since March 18/19. The RMN root cause fix may correlate with these symptoms; release timing remains contingent on this investigation and UAT success.
+19 
+20 **Pending Actions & Owners**
+21 *   **Project Light Access Decision:** Determine if the Confluence space should be opened widely or aligned internally first. (Owner: Alvin Choo/Gopalakrishna Dhulipati; Coordinator: Michael Bui)
+22 *   **RMN Deployment Verification:** Confirm if the fix has been deployed following Daryl Ng's inquiry and proceed with UAT verification. Send approval request to Hui Hui for weekend deployment if applicable. (Owner: Michael Bui; Coordination: Alvin Choo/Hui Hui/Daryl Ng)
+23 *   **Linkpoints Investigation:** Verify why "Linkpoints eligible" is disabled in DBP despite SAP enablement by Wei Sing's team. Follow up with Daryl Ng/Sneha Parab. (Owner: To be assigned/Wei Sing's team; Coordination: Sneha Parab/Daryl Ng)
+24 *   **B2B Logic Feasibility:** Evaluate technical possibility of blocking migrated users from B2B orders based on identification logic. (Owner: Engineering Team; Discussion Owner: Daryl Ng/Sneha Parab)
+25 *   **SOP Adherence Confirmation:** Clarify current status of the S&G Store Enabling SOP to address Daryl Ng's query. (Owner: To be assigned; Coordination: Sneha Parab/Daryl Ng)
+26 *   **Training Budget Check:** Confirm availability of learning budget for Sundy's course request. (Owner: Alvin Choo/Sundeep's team lead)
+27 *   **Epic Closure Validation:** Determine if DPD-710 can be closed given the March 19 live date discrepancy. (Owner: Michael Bui; Requestor: Sneha Parab)
+28 *   **SIT Delivery Assessment:** Evaluate KT feasibility to complete SIT before April 6/7. (Owners: Michael Bui/Daryl Ng)
+29 *   **Store Network Ownership:** Confirm scope under Data COE vs. Miguel's team regarding `Omni Home` store ID mismatch (OMNI-1157). (Owner: Daryl Ng/Michael Bui)
+30 *   **SAP Timeline Resolution:** Resolve deposit SKU data integration blockers. *Note: Gopalakrishna Dhulipati is on leave until Wednesday; individual rep requests will be made if needed.* (Owners: Sneha Parab/Alvin Choo/Gopalakrishna Dhulipati)
+31 *   **RAW Forms Review:** Complete Risk Register review for DPD RAW forms; confirm handovers and renew expired forms by Tomorrow EOD. (Owner: All Leads/Sazali Bin Mohammed Ali's team)
+32 
+33 **Decisions Made & Status Changes**
+34 *   **RMN Deployment Inquiry:** Daryl Ng raised a query on March 31 regarding the deployment status of the RMN fix, indicating active monitoring of the release phase.
+35 *   **Linkpoints Discrepancy (New):** SAP enablement by Wei Sing's team does not reflect in DBP status; root cause analysis required.
+36 *   **Release Strategy:** Regular app release status remains pending the search performance investigation and confirmation of the current deployment status (per Daryl Ng's check).
+37 *   **Architecture Updates:** Michael Bui has updated current, future, and transition architecture diagrams.
+38 *   **Confluence Access Request (New):** Awaiting leadership decision on Project Light space visibility as of April 6.
+39 *   **Staffing Update:** Gopalakrishna Dhulipati is on Child Care Leave until Wednesday; active engagement for task reassignment will be initiated by him directly.
+40 
+41 **Key Dates & Deadlines**
+42 *   **RAW Forms Review:** Due Tomorrow EOD.
+43 *   **Gopalakrishna Dhulipati Leave:** Until Wednesday, April 2 (Child Care Leave).
+44 *   **Adrian Redelivery Block:** Unavailable Apr 1–7 due to duplicate posting risks.
+45 *   **SIT Target:** Potential delivery by April 6/7 contingent on KT success.
+46 *   **Chee Hoe Support:** Effective end of March for Product Catalogue/MarTech scope.
+47 *   **DPD-710 Live Date:** March 19, 2026 (Subject to validation).
+48 
+49 
+50 ## [2/30] #dd-dpd-engage-alert
+51 Source: gchat | Group: space/AAAAxwwNw2U | Messages: 17 | Last Activity: 2026-04-06T02:32:57.314000+00:00 | Last Updated: 2026-04-06T02:43:16.150825+00:00
+52 # Daily Work Briefing: #dd-dpd-engage-alert Monitoring Activity (Updated April 6, ~02:35 UTC)
+53 
+54 **Key Participants**
+55 *   **System:** Datadog App (Automated Alerting)
+56 *   **Target Audience:** `@hangouts-dd-dpd-engage-alert`, `@oncall-dpd-engage-journey`, `@oncall-dpd-engage-dynamics`
+57 *   **Relevant Squads/Tribes:** Dynamics, Compass, Journey (`squad:dynamics`, `squad:compass`, `squad:journey`, `tribe:engage`).
+58 
+59 **Main Topic**
+60 Cyclical instability continues from April 1 through early morning on April 6. The incident remains active with a sharp increase in frequency overnight (April 5 ~22:30 to April 6 ~02:35 UTC). Failures now affect Identity (`engage-my-persona-api-go`), Orchid frontend, and newly impacted Gamification services, alongside persistent latency spikes in identity update endpoints.
+61 
+62 **Status Summary & Timeline (Updated: ~02:35 UTC)**
+63 *   **Identity API Instability (`squad:dynamics`):**
+64     *   *Error Rate:* Recurring high error rates (>0.1%) triggered frequently between 01:25 and 02:35 UTC. Notable triggers occurred at **01:35** (0.102%), **01:42** (0.104%), **02:01** (0.121%), and **02:26** (0.101%).
+65     *   *Latency:* P90 latency for `patch_/user/profile` spiked to **1.948s** (threshold >1.8s) at **02:09 UTC**. P90 latency for `post_/new-myinfo/confirm` breached threshold (**1.802s**) at **02:32 UTC**. Previous spikes noted at 21:42 UTC (phone update).
+66 *   **Orchid Frontend (`squad:journey`):**
+67     *   *Success Rate:* Intermittent dips (<99.9%) triggered repeatedly between 01:25 and 02:35 UTC. Recent values include **01:42** (99.679%) and **02:26** (99.875%).
+68 *   **Gamification Service (`squad:dynamics`):**
+69     *   *Error Rate:* New instability detected with a high error rate trigger at **02:15 UTC** (Value: 0.917%), resolving by 02:25 UTC.
+70 *   **Android App (`squad:compass`):**
+71     *   No new triggers reported in the latest window; stability remains consistent since last alert on April 5 at 13:54 UTC.
+72 
+73 **Pending Actions & Ownership**
+74 *   **Investigate Identity Service Fluctuations:** Analyze rapid recurrence of error rates (~0.1–0.12%) and latency spikes on `engage-my-persona-api-go` (specifically profile updates and MyInfo confirmations). Owner: **Squad Dynamics**.
+75 *   **Monitor Orchid Stability:** Investigate recurring success rate dips for `frontend-gateway`. Owner: **Squad Journey**.
+76 *   **Investigate Gamification Errors:** Analyze the cause of the 0.917% error spike on `gamification-api` at 02:15 UTC to prevent recurrence. Owner: **Squad Dynamics**.
+77 
+78 **Decisions Made**
+79 *   **Status Update:** Incident severity remains Critical. The timeline has extended into April 6 with intensified activity in the last two hours, characterized by a "burst" pattern of alerts across multiple services.
+80 *   **Pattern Confirmation:** Error rate triggers for `engage-my-persona-api-go` are now occurring every ~5–10 minutes (vs. 15–20 mins previously), and latency thresholds have shifted from phone updates to profile/MyInfo endpoints.
+81 
+82 **Key Dates & Follow-ups**
+83 *   **Active Window:** April 1, 09:58 – April 6, ~02:35 UTC (Latest Activity).
+84 *   **Reference Links (Latest):**
+85     *   `gamification-api` Error Rate Monitor #92939290 (Triggered: 02:15 UTC, Value: 0.917)
+86     *   `engage-my-persona-api-go` P90 Latency Monitor #17447638 (Triggered: 02:09 UTC, Value: 1.948s)
+87     *   `frontend-gateway` Orchid Success Rate Monitor #17448311 (Latest Trigger: 02:26 UTC, Value: 99.875%)
+<<<

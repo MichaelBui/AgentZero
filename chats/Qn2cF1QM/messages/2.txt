@@ -1,0 +1,20 @@
+[2026-04-06T02:04:37+0000] ============================================================
+[2026-04-06T02:04:37+0000] STATUS: STARTED - Gmail Reader
+[2026-04-06T02:04:37+0000] output=/a0/usr/workdir/gmail-output.md, debug=/a0/usr/workdir/gmail-debug.log
+[2026-04-06T02:04:37+0000] ============================================================
+[2026-04-06T02:04:37+0000] Connecting to browser at http://192.168.1.11:9223...
+[2026-04-06T02:04:37+0000] Connecting to Chrome at http://192.168.1.11:9223...
+[2026-04-06T02:04:38+0000] Connected. Browser version: 124.0.6367.78
+[2026-04-06T02:04:38+0000] Found 2 open tab(s)
+[2026-04-06T02:04:38+0000] Reusing existing Gmail tab
+[2026-04-06T02:04:38+0000] Browser connected.
+[2026-04-06T02:04:38+0000]
+Phase 1: Scanning listing (target: 200, scan limit: 500, early-stop: 5)...
+[2026-04-06T02:04:38+0000] Navigating to Gmail search (page 1, last 4 days)...
+[2026-04-06T02:05:03+0000]   WARN: Page 1 did not load threads within timeout
+[2026-04-06T02:05:03+0000] FATAL: 0 threads found - Gmail DOM selectors may need updating.
+---THREAD COUNT---
+0
+(venv) root@9b542f9f414e:/a0/usr/workdir#
+
+[SYSTEM: Returning control to agent after 180 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
