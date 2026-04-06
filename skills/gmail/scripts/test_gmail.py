@@ -174,6 +174,25 @@ def test_parse_gmail_date(subtests):
             else:
                 assert result == raw
 
+    with subtests.test(msg="When browser_tz=UTC then converts to storage_tz=SGT"):
+        from zoneinfo import ZoneInfo
+        result = gmail.parse_gmail_date(
+            "Apr 6, 2026, 3:45 PM",
+            browser_tz=ZoneInfo("UTC"),
+            storage_tz=ZoneInfo("Asia/Singapore"))
+        assert result == "2026-04-06T23:45:00+08:00"
+
+    with subtests.test(msg="When _BROWSER_TZ set then parses as browser TZ and converts to _TZ"):
+        original = gmail._BROWSER_TZ
+        try:
+            from zoneinfo import ZoneInfo
+            gmail._BROWSER_TZ = ZoneInfo("UTC")
+            result = gmail.parse_gmail_date("Apr 6, 2026, 3:45 PM")
+            assert "+08:00" in result
+            assert result == "2026-04-06T23:45:00+08:00"
+        finally:
+            gmail._BROWSER_TZ = original
+
 
 def test_clean_html(subtests):
     cases = [
@@ -1070,7 +1089,7 @@ def test_extract_thread_messages(subtests):
         mock_page.evaluate.side_effect = [
             False,
             None,
-            {"alreadyOpen": 0, "clicked": 0, "skippedSingle": 1, "failed": 0},
+            {"alreadyOpen": 0, "clicked": 0, "skippedFew": 1, "failed": 0},
             0,
             [{"legacy_message_id": "m1", "from": "Alice <a@b.com>",
               "to": [{"name": "Bob", "email": "bob@b.com"}], "cc": [],
@@ -1098,28 +1117,28 @@ def test_expand_all_messages(subtests):
 def test_click_show_details(subtests):
     with subtests.test(msg="When all already open then returns counts"):
         mock_page = MagicMock()
-        mock_page.evaluate.return_value = {"alreadyOpen": 3, "clicked": 0, "skippedSingle": 0, "failed": 0}
+        mock_page.evaluate.return_value = {"alreadyOpen": 3, "clicked": 0, "skippedFew": 0, "failed": 0}
         result = gmail._click_show_details(mock_page)
         assert result["alreadyOpen"] == 3
         assert result["clicked"] == 0
 
     with subtests.test(msg="When messages clicked then returns clicked count"):
         mock_page = MagicMock()
-        mock_page.evaluate.return_value = {"alreadyOpen": 1, "clicked": 2, "skippedSingle": 0, "failed": 0}
+        mock_page.evaluate.return_value = {"alreadyOpen": 1, "clicked": 2, "skippedFew": 0, "failed": 0}
         result = gmail._click_show_details(mock_page)
         assert result["clicked"] == 2
         assert result["alreadyOpen"] == 1
 
-    with subtests.test(msg="When single email then skips"):
+    with subtests.test(msg="When few recipients (to+cc<=1) then skips"):
         mock_page = MagicMock()
-        mock_page.evaluate.return_value = {"alreadyOpen": 0, "clicked": 0, "skippedSingle": 3, "failed": 0}
+        mock_page.evaluate.return_value = {"alreadyOpen": 0, "clicked": 0, "skippedFew": 3, "failed": 0}
         result = gmail._click_show_details(mock_page)
-        assert result["skippedSingle"] == 3
+        assert result["skippedFew"] == 3
         assert result["clicked"] == 0
 
     with subtests.test(msg="When no button found then increments failed"):
         mock_page = MagicMock()
-        mock_page.evaluate.return_value = {"alreadyOpen": 0, "clicked": 0, "skippedSingle": 0, "failed": 2}
+        mock_page.evaluate.return_value = {"alreadyOpen": 0, "clicked": 0, "skippedFew": 0, "failed": 2}
         result = gmail._click_show_details(mock_page)
         assert result["failed"] == 2
         assert result["clicked"] == 0

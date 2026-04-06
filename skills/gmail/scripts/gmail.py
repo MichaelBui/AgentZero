@@ -84,6 +84,7 @@ DB_PATH = Path(os.environ.get("GMAIL_DB_PATH", str(_DEFAULT_DB_PATH)))
 _USER_MD_PATH = Path(__file__).resolve().parents[3] / "User.md"
 
 _TZ = ZoneInfo(os.environ.get("TZ", "Asia/Singapore"))
+_BROWSER_TZ = None
 
 _RELEVANCE_FLOORS = {"direct": 7, "indirect": 5, "none": 1}
 _WORD_HINTS = {"direct": 200, "indirect": 100, "none": 30}
@@ -163,19 +164,24 @@ _GMAIL_DATE_FORMATS = [
 ]
 
 
-def parse_gmail_date(raw: str) -> str:
-    """Parse Gmail display date to ISO 8601. Returns original string if unparseable."""
+def parse_gmail_date(raw: str, browser_tz: ZoneInfo | None = None,
+                     storage_tz: ZoneInfo | None = None) -> str:
+    """Parse Gmail display date to ISO 8601, converting from browser timezone to storage timezone.
+    Browser dates are in the Chrome instance's local timezone (detected at connect).
+    Storage timezone defaults to _TZ (Asia/Singapore)."""
     if not raw:
         return ""
     raw = raw.strip()
     if re.match(r"^\d{4}-\d{2}-\d{2}T", raw):
         return raw
+    src_tz = browser_tz or _BROWSER_TZ or _TZ
+    dst_tz = storage_tz or _TZ
     for fmt in _GMAIL_DATE_FORMATS:
         try:
             dt = datetime.strptime(raw, fmt)
             if dt.year < 2000:
-                dt = dt.replace(year=datetime.now(_TZ).year)
-            return dt.replace(tzinfo=_TZ).isoformat()
+                dt = dt.replace(year=datetime.now(src_tz).year)
+            return dt.replace(tzinfo=src_tz).astimezone(dst_tz).isoformat()
         except ValueError:
             continue
     no_dow = re.sub(r"^[A-Za-z]{3},\s*", "", raw)
@@ -184,8 +190,8 @@ def parse_gmail_date(raw: str) -> str:
             try:
                 dt = datetime.strptime(no_dow, fmt)
                 if dt.year < 2000:
-                    dt = dt.replace(year=datetime.now(_TZ).year)
-                return dt.replace(tzinfo=_TZ).isoformat()
+                    dt = dt.replace(year=datetime.now(src_tz).year)
+                return dt.replace(tzinfo=src_tz).astimezone(dst_tz).isoformat()
             except ValueError:
                 continue
     log(f"WARNING: Could not parse Gmail date: {raw}")
@@ -846,16 +852,15 @@ def get_thread_list(page) -> list[dict]:
 def navigate_to_thread(page, thread_id: str) -> bool:
     url = f"{GMAIL_BASE}/mail/u/0/#all/{thread_id}"
     page.goto(url, wait_until="domcontentloaded", timeout=20000)
-    time.sleep(2)
     try:
         page.wait_for_selector('[data-message-id], div.adn, table.Bs, h2.hP', timeout=15000)
-        time.sleep(1.5)
+        time.sleep(0.5)
         return True
     except PwTimeout:
         return False
 
 
-def _wait_for_messages_stable(page, max_wait: float = 30.0, poll_interval: float = 1.0):
+def _wait_for_messages_stable(page, max_wait: float = 30.0, poll_interval: float = 0.3):
     prev_count = 0
     stable_rounds = 0
     elapsed = 0.0
@@ -889,23 +894,23 @@ def expand_all_messages(page):
         for (const el of trimmers) { try { el.click(); } catch(e) {} }
     }
     """)
-    time.sleep(0.5)
 
 
 def _click_show_details(page) -> dict:
     """Open 'Show details' on messages via JS dispatchEvent.
     Playwright click doesn't trigger Gmail's handler; full pointer event sequence does.
-    Skips messages with only 1 email address. Returns diagnostic dict."""
+    Skips messages where combined to+cc (excluding from) has at most 1 address.
+    Returns diagnostic dict."""
     detail_sel = DETAIL_TABLE_SEL
     return page.evaluate(f"""
     () => {{
         const DETAIL_SEL = '{detail_sel}';
         const cs = document.querySelectorAll('[data-message-id]');
-        let alreadyOpen = 0, clicked = 0, skippedSingle = 0, failed = 0;
+        let alreadyOpen = 0, clicked = 0, skippedFew = 0, failed = 0;
         for (const c of cs) {{
             if (c.querySelector(DETAIL_SEL)) {{ alreadyOpen++; continue; }}
             const emails = c.querySelectorAll('span[email]');
-            if (emails.length <= 1) {{ skippedSingle++; continue; }}
+            if (emails.length <= 2) {{ skippedFew++; continue; }}
             const btn = c.querySelector('div.ajy[role="button"]')
                      || c.querySelector('[role="button"][aria-label="Show details"]')
                      || c.querySelector('div.ajy');
@@ -918,7 +923,7 @@ def _click_show_details(page) -> dict:
                 failed++;
             }}
         }}
-        return {{ alreadyOpen, clicked, skippedSingle, failed }};
+        return {{ alreadyOpen, clicked, skippedFew, failed }};
     }}
     """)
 
@@ -927,14 +932,24 @@ def extract_thread_messages(page) -> list[dict]:
     expand_all_messages(page)
 
     detail_result = _click_show_details(page)
-    if detail_result.get("clicked", 0) > 0:
-        time.sleep(2.0)
-    tables_after = page.evaluate(
-        f"() => document.querySelectorAll('[data-message-id] {DETAIL_TABLE_SEL.split(',')[0].strip()}').length"
-    )
+    clicked = detail_result.get("clicked", 0)
+    tables_after = 0
+    if clicked > 0:
+        expected = detail_result.get("alreadyOpen", 0) + clicked
+        sel = DETAIL_TABLE_SEL.split(",")[0].strip()
+        for _ in range(10):
+            time.sleep(0.3)
+            tables_after = page.evaluate(
+                f"() => document.querySelectorAll('[data-message-id] {sel}').length")
+            if tables_after >= expected:
+                break
+    else:
+        tables_after = page.evaluate(
+            f"() => document.querySelectorAll('[data-message-id] {DETAIL_TABLE_SEL.split(',')[0].strip()}').length"
+        )
     debug(f"  Show details: open={detail_result.get('alreadyOpen', 0)}, "
           f"clicked={detail_result.get('clicked', 0)}, "
-          f"single={detail_result.get('skippedSingle', 0)}, "
+          f"skipped={detail_result.get('skippedFew', 0)}, "
           f"failed={detail_result.get('failed', 0)}, "
           f"tables_after={tables_after}")
 
@@ -953,7 +968,7 @@ def extract_thread_messages(page) -> list[dict]:
             }
             let date = '';
             const dateEl = container.querySelector('span.g3[title]');
-            if (dateEl) date = dateEl.getAttribute('title') || dateEl.textContent.trim();
+            if (dateEl) date = dateEl.getAttribute('title') || '';
             if (!date) {
                 const fallbackDate = container.querySelectorAll('span[title]');
                 for (const d of fallbackDate) {
@@ -972,8 +987,8 @@ def extract_thread_messages(page) -> list[dict]:
             if (detailTable) {
                 const dtRows = detailTable.querySelectorAll('tr');
                 for (const row of dtRows) {
-                    const label = row.querySelector('td.aGb');
-                    const value = row.querySelector('td.ajA');
+                    const label = row.querySelector('td.aGb') || row.querySelector('td.gG');
+                    const value = row.querySelector('td.ajA') || row.querySelector('td.gL');
                     if (!label || !value) continue;
                     const labelText = label.textContent.trim().toLowerCase();
                     const emailEls = value.querySelectorAll('span[email]');
@@ -1055,7 +1070,7 @@ def mark_thread_unread(page) -> bool:
     """Mark the currently open thread as unread using Shift+U shortcut."""
     try:
         page.keyboard.press("Shift+u")
-        time.sleep(0.5)
+        time.sleep(0.2)
         return True
     except Exception:
         return False
@@ -1343,7 +1358,16 @@ def main():
         # ── Phase 1: Scan listing pages ──
         log(f"Connecting to browser at {args.cdp_url}...")
         pw, browser, page = connect_browser(args.cdp_url)
-        log("Browser connected.")
+        global _BROWSER_TZ
+        try:
+            tz_name = page.evaluate("() => Intl.DateTimeFormat().resolvedOptions().timeZone")
+            if tz_name:
+                _BROWSER_TZ = ZoneInfo(tz_name)
+                log(f"Browser connected. Browser timezone: {tz_name}")
+            else:
+                log(f"Browser connected. Could not detect timezone, using {_TZ}")
+        except Exception:
+            log(f"Browser connected. Timezone detection failed, using {_TZ}")
 
         thread_infos: list[dict] = []
         threads_to_fetch: list[dict] = []
