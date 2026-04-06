@@ -148,8 +148,8 @@ Ticket OMNI-1362 tracks the strategic decoupling of SAP to improve order orchest
 
 
 ## [28/57] Improve seller catalogue compliance to align with FSQ expectations
-Source: jira | Key: OMNI-1407 | Relevance: 7/10 | Mention: indirect | Status: UAT (In Progress) | Type: Idea | Priority: High | Assignee: Prajney Sribhashyam | Reporter: Prajney Sribhashyam | Labels: compliance-audit, retail-platform, risk-mitigation, catalogue-management, schedule-slippage | polaris-work-item-link: DPD-100 | Last Updated: 2026-04-06T13:30:53.520755+00:00
-Jira ticket OMNI-1407 addresses critical seller catalogue compliance failures affecting $2.5M GMV by automating mandatory certification checks (HSA, Halal, Organic) and enforcing SKU disablement upon expiry in Mirakl. While the project is currently in UAT with 'Green' status, recent updates reveal schedule slippage from late 2025 to mid-March 2026 due to dependencies on BCRS work. Stakeholders Sathya Murthy Karthik and Koklin Gan are applying timeline pressure for a go-live that was previously targeted for end-of-year compliance. As the leader governing this e-commerce capability, Michael requires visibility into these delays to mitigate potential production impact and audit risks associated with non-compliant SKUs.
+Source: jira | Key: OMNI-1407 | Relevance: 8/10 | Mention: indirect | Status: UAT (In Progress) | Type: Idea | Priority: High | Assignee: Prajney Sribhashyam | Reporter: Prajney Sribhashyam | Labels: compliance-audit, catalogue-management, marketplace-risk, timeline-slippage, regulatory-framework | polaris-work-item-link: DPD-100 | Last Updated: 2026-04-06T17:06:37.981135+00:00
+Jira ticket OMNI-1407 addresses critical seller catalogue compliance failures affecting $2.5M GMV by automating mandatory certification checks (HSA, Halal, Organic) in Mirakl. The project is currently in UAT with 'Green' status but has slipped from a late 2025 target to mid-March 2026 due to dependencies on BCRS work item DPD-100. Stakeholders Sathya Murthy Karthik and Koklin Gan are applying pressure for an earlier go-live (previously targeted end-of-year). As the engineering leader governing this e-commerce capability, Michael requires visibility into these delays to mitigate audit risks associated with non-compliant SKUs and potential production impact.
 
 
 ## [29/57] [MP Foundational] Sales Breakdown & Seller Payouts
@@ -278,8 +278,8 @@ Jira ticket OMNI-1405 proposes automating SKU tagging and onboarding in OSMOS to
 
 
 ## [54/57] [1hd] Phase 2 -  Scaling one hour delivery to more stores (TO REMOVE)
-Source: jira | Key: OMNI-1428 | Relevance: 3/10 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Rajesh Dobariya | Labels: retail-delivery, idea-template, order-orchestration, business-metrics, process-governance | Last Updated: 2026-04-06T13:31:24.323102+00:00
-Jira ticket OMNI-1428 is a high-priority 'Idea' for scaling one-hour delivery, owned by Rajesh Dobariya. The content is a generic template requesting problem definitions and business metrics rather than specific technical architecture or implementation details relevant to Michael Bui's engineering governance domain. The ticket was archived on March 19, 2026, merged with OMNI-1425, and required no direct input from Michael.
+Source: jira | Key: OMNI-1428 | Relevance: 4/10 | Status: Backlog (To Do) | Type: Idea | Priority: High | Assignee: Rajesh Dobariya | Reporter: Rajesh Dobariya | Labels: retail-logistics, delivery-scaling, idea-template, backlog-item, archived-ticket | Last Updated: 2026-04-06T17:06:43.752728+00:00
+Jira ticket OMNI-1428 is a high-priority 'Idea' for scaling one-hour delivery owned by Rajesh Dobariya. The content is a generic template for problem definition and business metrics rather than specific technical architecture or implementation details relevant to Michael Bui's engineering governance domain.
 
 
 ## [55/57] Blocking of specific postal code from allowing customer to select for delivery address
