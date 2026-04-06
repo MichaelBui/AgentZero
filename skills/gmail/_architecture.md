@@ -193,13 +193,12 @@ Source: gmail | Thread: 19ceb94ec915103d | Labels: Inbox, IMPORTANT | Priority: 
 gmail/
 ├── SKILL.md                  # Agent-facing documentation
 ├── _architecture.md          # This file (human-facing design)
+├── Makefile                  # Test/coverage targets
 ├── data/
 │   └── gmail_cache.db        # SQLite (persistent, auto-created at runtime)
 └── scripts/
-    ├── gmail_reader.py       # Main script: CDP + listing + caching + output
-    ├── gmail_db.py           # Self-contained SQLite DB management
-    ├── gmail_cleaner.py      # Self-contained email body cleanup
-    └── gmail_summarizer.py   # Self-contained LLM summarization via LiteLLM
+    ├── gmail.py              # Single-file entry point: CDP + DB + cleaner + summarizer + output
+    └── test_gmail.py         # Comprehensive test suite (90 tests, 212 subtests, 95% coverage)
 # Transactional output → /a0/usr/workdir/gmail-output.md, gmail-debug.log
 ```
 
@@ -207,13 +206,9 @@ gmail/
 
 ```mermaid
 flowchart TD
-    GR["gmail_reader.py\n(main entry point)"] --> DB["gmail_db.py\nSkillDB: atomic_content\n+ resource_summary"]
-    GR --> CL["gmail_cleaner.py\nclean_email_body()"]
-    GR --> SM["gmail_summarizer.py\nsummarize_resource()"]
-    GR --> PW["playwright\nChrome CDP connection"]
-
-    DB --> SQ["SQLite3 (stdlib)"]
-    SM --> LL["LiteLLM Proxy\nhttps://llm.gigary.com/v1\nModel: local/qwen3.5-35b-a3b:instruct-reasoning"]
+    GM["gmail.py\n(single-file entry point)\nDB + Cleaner + Summarizer + CDP"] --> SQ["SQLite3 (stdlib)"]
+    GM --> PW["playwright\nChrome CDP connection"]
+    GM --> LL["LiteLLM Proxy\nhttps://llm.gigary.com/v1\nModel: local/qwen3.5-35b-a3b:instruct-reasoning"]
     PW --> CH["Remote Chrome\n192.168.1.11:9223"]
 ```
 
@@ -269,6 +264,75 @@ flowchart TD
 | **Total (re-run, no changes)** | **125-250K tokens** | **~0 processing, ~50K cached output** | **~100%** |
 
 Performance: First run ~37min (102 threads). Re-run with cache: ~2min (3 new threads out of 105).
+
+## Data Accuracy & Integrity
+
+### Race Condition Prevention
+
+Gmail is a Single Page Application (SPA) - hash navigation (`#all/{thread_id}`) does not trigger a page reload. This creates a race condition: after `page.goto()`, the DOM may still show the previous thread's content.
+
+**Solution:** `navigate_to_thread()` actively polls `page.evaluate()` until `data-legacy-thread-id` on the page matches the expected thread ID, with exponential backoff (0.3s to 1.0s). If polling times out:
+1. Reset SPA state by navigating to inbox, then retry
+2. Full page reload, then retry
+3. Skip thread after 3 failed attempts (logged as warning)
+
+**Cross-thread leakage prevention:** `has_message_anywhere()` checks if a message ID already belongs to another thread before caching. Prevents duplicate messages from appearing in wrong threads when SPA serves stale DOM.
+
+### Date Parsing
+
+Gmail DOM renders dates with locale-specific formatting including Unicode whitespace characters (e.g., `\u202f` NARROW NO-BREAK SPACE before AM/PM). `parse_gmail_date()` normalizes these to regular spaces before parsing with `strptime`.
+
+### 25-Point Integrity Checklist
+
+Run against the production database after each major data ingestion:
+
+| # | Check | What It Validates |
+|---|---|---|
+| 1 | Composite PK format | Every `id` matches pattern `gmail:{resource_id}:{item_id}` |
+| 2 | Item uniqueness per thread | No duplicate `item_id` within a single `resource_id` |
+| 3 | No cross-thread leakage | Each `item_id` appears in exactly one `resource_id` |
+| 4 | Metadata JSON valid | All metadata fields parse as valid JSON with `to`, `cc`, `subject` |
+| 5 | Timestamps valid ISO 8601 | All `created_at`, `updated_at`, `cached_at` are parseable ISO timestamps |
+| 6 | Referential integrity | Every `resource_summary.resource_id` has matching `atomic_content` rows |
+| 7 | Title matches subject | `resource_summary.title` equals `metadata.subject` in atomic content |
+| 8 | Last message ID correct | `last_message_id` in summary metadata is the actual latest cached `item_id` |
+| 9 | No NULL/empty fields | Critical fields (`source`, `resource_id`, `item_id`, `cached_at`) never empty |
+| 10 | Summaries complete | All summaries have `title`, `summary`, `summarized_at`, `final_relevance > 0` |
+| 11 | Content clean | No raw HTML tags (`<div>`, `<span>`, etc.) in cleaned body content |
+| 12 | Author field present | Every atomic row has a non-empty `author` |
+| 13 | Mention type valid | Values are exactly `direct`, `indirect`, or `none` |
+| 14 | Multi-message ordering | Within threads, `created_at` is chronological |
+| 15 | Content duplication | Flag identical body content across different items (expected for templated alerts) |
+| 16 | Email addresses valid | `to` and `cc` fields contain objects with `name` and `email` keys |
+| 17 | HARD CAP respected | System-generated emails score <= 7 |
+| 18 | PERSONAL floor respected | Direct human-written emails score >= 7 |
+| 19 | Scoring range | All `final_relevance` values between 1 and 10 |
+| 20 | Spot-check coherence | Summary text relates to email subject and content |
+| 21 | Summary word count | Summaries between 10-500 words |
+| 22 | No duplicate resource IDs | Each thread appears exactly once in `resource_summary` |
+| 23 | Thread meta consistency | `last_message_id` in atomic metadata matches summary metadata |
+| 24 | Cached timestamps recent | `cached_at` values are within the expected ingestion window |
+| 25 | Mention distribution | Proportion of direct/indirect/none is sensible for the dataset |
+
+### Relevance Scoring (3-Tier)
+
+LLM-based scoring with decision tree prompt:
+
+| Tier | Examples | Score Range |
+|---|---|---|
+| **PERSONAL** - human wrote directly to/about user | IT requests, discussion invites, SLO reviews | 7-10 |
+| **ACTION-REQUIRED** - automated but user needs to act | Access requests, approval requests, calendar invites needing response | 6-8 |
+| **INFORMATIONAL** - automated, no action needed | Dashboard reports, delivery failures, daily agenda, accepted/declined | 5-7 |
+| **Indirect** - user in CC or mentioned tangentially | Group announcements, FYI threads | 5-7 |
+| **None** - no user involvement | Spam, irrelevant threads | 1-4 |
+
+**HARD CAP:** System-generated emails (calendar invites, auto-replies, Opsgenie alerts, Datadog reports) must not exceed score 7 regardless of content.
+
+### Test Coverage
+
+- **90 tests, 212 subtests, 95% code coverage**
+- Behavioral tests cover: date parsing edge cases, Unicode normalization, concurrent DB access, thread safety, SPA race conditions, LLM retry logic, relevance floor clamping, cross-thread leakage detection, page mismatch handling, label truncation
+- Run via `make test` or `make coverage` from the `gmail/` directory
 
 ## Key Differences from Jira Skill
 

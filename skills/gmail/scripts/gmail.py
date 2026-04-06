@@ -171,7 +171,7 @@ def parse_gmail_date(raw: str, browser_tz: ZoneInfo | None = None,
     Storage timezone defaults to _TZ (Asia/Singapore)."""
     if not raw:
         return ""
-    raw = raw.strip()
+    raw = re.sub(r"[\u00a0\u202f\u2009\u200a\u2007]", " ", raw).strip()
     if re.match(r"^\d{4}-\d{2}-\d{2}T", raw):
         return raw
     src_tz = browser_tz or _BROWSER_TZ or _TZ

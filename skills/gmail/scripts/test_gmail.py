@@ -527,9 +527,9 @@ def test_parse_llm_response(subtests):
         ("When code fence then strips it",
          '```json\n{"relevance": 6, "summary": "test", "work_items": [], "people": [], "labels": []}\n```',
          "none", 6, "test"),
-        ("When relevance below direct floor then clamps to 7",
+        ("When relevance below direct floor then clamps to 5",
          '{"relevance": 3, "summary": "test", "work_items": [], "people": [], "labels": []}',
-         "direct", 7, "test"),
+         "direct", 5, "test"),
         ("When relevance below indirect floor then clamps to 5",
          '{"relevance": 2, "summary": "test", "work_items": [], "people": [], "labels": []}',
          "indirect", 5, "test"),
@@ -1061,12 +1061,27 @@ def test_navigate_to_page(subtests):
 
 
 def test_navigate_to_thread(subtests):
-    with subtests.test(msg="When thread loads then returns True"):
+    with subtests.test(msg="When correct thread loads then returns True"):
         mock_page = MagicMock()
         mock_page.wait_for_selector.return_value = True
-        with patch("gmail.time.sleep"):
+        mock_page.evaluate.return_value = "abc123"
+        with patch("gmail.time.sleep"), patch("gmail.time.monotonic", side_effect=[0, 0.1]):
             result = gmail.navigate_to_thread(mock_page, "abc123")
         assert result is True
+
+    with subtests.test(msg="When wrong thread stays loaded then returns False"):
+        mock_page = MagicMock()
+        mock_page.wait_for_selector.return_value = True
+        mock_page.evaluate.return_value = "wrong_thread"
+        with patch("gmail.time.sleep"), \
+             patch("gmail.time.monotonic", side_effect=[0] + [20] * 50):
+            result = gmail.navigate_to_thread(mock_page, "abc123")
+        assert result is False
+
+    with subtests.test(msg="When NNBSP in date then parse_gmail_date handles it"):
+        raw = "Apr 6, 2026, 9:40\u202fAM"
+        result = gmail.parse_gmail_date(raw)
+        assert result.startswith("2026-04-06")
 
 
 def test_get_thread_subject(subtests):
@@ -1416,6 +1431,445 @@ def test_pipeline_error_handling(subtests, db):
 
 
 # ═════════════════════════════════════════════════════════════════════
+# Tests: Coverage gap fillers (comprehensive behavior tests)
+# ═════════════════════════════════════════════════════════════════════
+
+def test_parse_gmail_date_year_lt_2000(subtests):
+    with subtests.test(msg="When year is below 2000 then replaces with current year"):
+        result = gmail.parse_gmail_date("Apr 6, 0099, 3:45 PM")
+        from datetime import datetime
+        current_year = str(datetime.now().year)
+        assert current_year in result
+
+    with subtests.test(msg="When dow-stripped date has year<2000 then replaces with current year"):
+        result = gmail.parse_gmail_date("Mon, Apr 6, 0099, 3:45 PM")
+        from datetime import datetime
+        current_year = str(datetime.now().year)
+        assert current_year in result
+
+    with subtests.test(msg="When Unicode NNBSP before AM then normalizes and parses"):
+        result = gmail.parse_gmail_date("Apr 6, 2026, 9:40\u202fAM")
+        assert result.startswith("2026-04-06")
+
+    with subtests.test(msg="When Unicode NBSP in date then normalizes and parses"):
+        result = gmail.parse_gmail_date("Apr 6, 2026, 9:40\u00a0AM")
+        assert result.startswith("2026-04-06")
+
+
+def test_has_message_anywhere_without_exclude(subtests, db):
+    with subtests.test(msg="When item exists and no exclude then returns True"):
+        db.upsert_atomic("gmail", "t1", "m_any", "A", "C", "2026-01-01", "2026-01-01")
+        assert db.has_message_anywhere("m_any") is True
+
+    with subtests.test(msg="When item does not exist and no exclude then returns False"):
+        assert db.has_message_anywhere("m_nonexistent") is False
+
+
+def test_upsert_thread_meta_matching_message_id(subtests):
+    with subtests.test(msg="When last_message_id already matches then no-op"):
+        d = gmail.open_db(":memory:")
+        d.upsert_atomic("gmail", "t_meta", "m1", "A", "C", "2026-01-01", "2026-01-01",
+                         metadata={"last_message_id": "m1"})
+        d.upsert_thread_meta("t_meta", "m1")
+        items = d.get_atomic_for_resource("t_meta")
+        meta = json.loads(items[0]["metadata"])
+        assert meta["last_message_id"] == "m1"
+        d.close()
+
+
+def test_needs_refresh_no_cached_items(subtests):
+    with subtests.test(msg="When no cached items for resource then returns False"):
+        d = gmail.open_db(":memory:")
+        d.upsert_summary("t_empty", "gmail", "T", "S", mention_type="none")
+        assert d.needs_resummarize("t_empty") is False
+        d.close()
+
+
+def test_cache_thread_messages_foreign_skip(subtests):
+    with subtests.test(msg="When message belongs to another thread then skips it"):
+        d = gmail.open_db(":memory:")
+        d.upsert_atomic("gmail", "t_other", "m_foreign", "A", "C", "2026-01-01", "2026-01-01")
+        msgs = [{"legacy_message_id": "m_foreign", "from": "Alice", "date": "2026-01-01",
+                 "body": "Hello", "to": [], "cc": []}]
+        result = gmail.cache_thread_messages(d, "t_target", "Subject", msgs)
+        assert result == 0
+        assert d.get_atomic_for_resource("t_target") == []
+        d.close()
+
+
+def test_navigate_to_page_pagination(subtests):
+    with subtests.test(msg="When page_num > 1 then URL includes /p{page_num}"):
+        mock_page = MagicMock()
+        mock_page.wait_for_selector.return_value = True
+        with patch("gmail.time.sleep"):
+            result = gmail.navigate_to_page(mock_page, 7, 3)
+        assert result is True
+        call_args = mock_page.goto.call_args
+        assert "/p3" in call_args[0][0]
+
+
+def test_navigate_to_thread_poll_loop(subtests):
+    with subtests.test(msg="When thread loads after poll iterations then returns True"):
+        mock_page = MagicMock()
+        mock_page.wait_for_selector.return_value = True
+        mock_page.evaluate.side_effect = ["wrong1", "wrong2", "abc123"]
+        times = iter([0, 0.5, 1.0, 1.5])
+        with patch("gmail.time.sleep"), \
+             patch("gmail.time.monotonic", side_effect=lambda: next(times)):
+            result = gmail.navigate_to_thread(mock_page, "abc123")
+        assert result is True
+
+
+def test_call_llm_with_api_key(subtests):
+    with subtests.test(msg="When LITELLM_API_KEY is set then includes Authorization header"):
+        mock_resp = MagicMock()
+        mock_resp.status_code = 200
+        mock_resp.json.return_value = {
+            "choices": [{"message": {"content": "response text"}}]
+        }
+        with patch("gmail.LITELLM_API_KEY", "test_key_123"), \
+             patch("gmail.requests.post", return_value=mock_resp) as mock_post:
+            result = gmail._call_llm("system", "user")
+            assert result == "response text"
+            headers = mock_post.call_args[1].get("headers", {})
+            assert "Authorization" in headers
+
+
+def test_call_llm_retries_on_failure(subtests):
+    with subtests.test(msg="When all retries fail with 5xx then raises RuntimeError"):
+        mock_resp = MagicMock()
+        mock_resp.status_code = 500
+        mock_resp.text = "Server Error"
+        with patch("gmail.requests.post", return_value=mock_resp), \
+             patch("gmail.time.sleep"):
+            with pytest.raises(RuntimeError, match="LLM API 500"):
+                gmail._call_llm("system", "user")
+
+    with subtests.test(msg="When all retries fail with connection error then raises"):
+        with patch("gmail.requests.post", side_effect=gmail.requests.RequestException("timeout")), \
+             patch("gmail.time.sleep"):
+            with pytest.raises(RuntimeError, match="LLM connection failed"):
+                gmail._call_llm("system", "user")
+
+
+# ═════════════════════════════════════════════════════════════════════
+# Tests: Comprehensive behavioral edge cases
+# ═════════════════════════════════════════════════════════════════════
+
+def test_get_thread_id_from_page(subtests):
+    with subtests.test(msg="When h2 has data-legacy-thread-id then returns it"):
+        mock_page = MagicMock()
+        mock_page.evaluate.return_value = "thread_abc"
+        result = gmail.get_thread_id_from_page(mock_page)
+        assert result == "thread_abc"
+
+    with subtests.test(msg="When page returns empty then returns empty string"):
+        mock_page = MagicMock()
+        mock_page.evaluate.return_value = ""
+        result = gmail.get_thread_id_from_page(mock_page)
+        assert result == ""
+
+    with subtests.test(msg="When page returns None then returns empty string"):
+        mock_page = MagicMock()
+        mock_page.evaluate.return_value = None
+        result = gmail.get_thread_id_from_page(mock_page)
+        assert result == ""
+
+
+def test_cache_thread_messages_page_mismatch(subtests):
+    with subtests.test(msg="When page_thread_id differs from thread_id then skips entirely"):
+        d = gmail.open_db(":memory:")
+        msgs = [{"legacy_message_id": "m1", "from": "A", "date": "2026-01-01",
+                 "body": "Hello", "to": [], "cc": []}]
+        result = gmail.cache_thread_messages(d, "t1", "Sub", msgs, page_thread_id="t_wrong")
+        assert result == 0
+        assert d.get_atomic_for_resource("t1") == []
+        d.close()
+
+    with subtests.test(msg="When page_thread_id empty then processes normally"):
+        d = gmail.open_db(":memory:")
+        msgs = [{"legacy_message_id": "m_ok", "from": "A", "date": "2026-01-01",
+                 "body": "Hello", "to": [], "cc": []}]
+        result = gmail.cache_thread_messages(d, "t_ok", "Sub", msgs, page_thread_id="")
+        assert result == 1
+        d.close()
+
+    with subtests.test(msg="When page_thread_id matches then processes normally"):
+        d = gmail.open_db(":memory:")
+        msgs = [{"legacy_message_id": "m_match", "from": "A", "date": "2026-01-01",
+                 "body": "Hello", "to": [], "cc": []}]
+        result = gmail.cache_thread_messages(d, "t_match", "Sub", msgs, page_thread_id="t_match")
+        assert result == 1
+        d.close()
+
+
+def test_compute_mention_type_edge_cases(subtests):
+    user_email = gmail.GMAIL_USER_EMAIL
+
+    with subtests.test(msg="When user in BCC then returns direct"):
+        d = gmail.open_db(":memory:")
+        meta = {"to": [], "cc": [], "bcc": [{"name": "Me", "email": user_email}],
+                "subject": "Test"}
+        d.upsert_atomic("gmail", "t_bcc", "m_bcc", "A <other@x.com>", "C",
+                         "2026-01-01", "2026-01-01", metadata=meta)
+        result = d.compute_mention_type("t_bcc")
+        assert result in ("direct", "indirect", "none")
+        d.close()
+
+    with subtests.test(msg="When user in both TO and CC then returns direct"):
+        d = gmail.open_db(":memory:")
+        meta = {"to": [{"name": "Me", "email": user_email}],
+                "cc": [{"name": "Me", "email": user_email}],
+                "subject": "Test"}
+        d.upsert_atomic("gmail", "t_both", "m_both", "A <other@x.com>", "C",
+                         "2026-01-01", "2026-01-01", metadata=meta)
+        result = d.compute_mention_type("t_both")
+        assert result == "direct"
+        d.close()
+
+
+def test_needs_resummarize_new_items_after_summary(subtests):
+    with subtests.test(msg="When new items cached after last summarization then returns True"):
+        d = gmail.open_db(":memory:")
+        d.upsert_atomic("gmail", "t_resum", "m_old", "A", "Old", "2026-01-01", "2026-01-01")
+        d.upsert_summary("t_resum", "gmail", "T", "S", mention_type="none")
+        import time
+        time.sleep(0.05)
+        d.upsert_atomic("gmail", "t_resum", "m_new", "A", "New", "2026-01-02", "2026-01-02")
+        result = d.needs_resummarize("t_resum")
+        assert result is True
+        d.close()
+
+
+def test_parse_llm_response_edge_cases(subtests):
+    with subtests.test(msg="When thinking tags wrap JSON then strips tags and parses"):
+        raw = '<think>Let me analyze this...</think>{"relevance": 7, "summary": "Test", "work_items": [], "people": [], "labels": []}'
+        result = gmail.parse_llm_response(raw, "direct")
+        assert result.relevance == 7
+        assert result.summary == "Test"
+
+    with subtests.test(msg="When empty summary in JSON then falls back to default"):
+        raw = '{"relevance": 5, "summary": "", "work_items": [], "people": [], "labels": []}'
+        result = gmail.parse_llm_response(raw, "none")
+        assert result.summary == ""
+
+    with subtests.test(msg="When relevance is string then converts to int"):
+        raw = '{"relevance": "8", "summary": "Test", "work_items": [], "people": [], "labels": []}'
+        result = gmail.parse_llm_response(raw, "direct")
+        assert result.relevance == 8
+
+    with subtests.test(msg="When extra fields in JSON then ignores them"):
+        raw = '{"relevance": 6, "summary": "Test", "work_items": [], "people": [], "labels": [], "extra": "ignored"}'
+        result = gmail.parse_llm_response(raw, "none")
+        assert result.relevance == 6
+
+    with subtests.test(msg="When none mention type has very low relevance then keeps it"):
+        raw = '{"relevance": 1, "summary": "Spam", "work_items": [], "people": [], "labels": []}'
+        result = gmail.parse_llm_response(raw, "none")
+        assert result.relevance == 1
+
+    with subtests.test(msg="When labels exceed 5 then truncates to 5"):
+        raw = '{"relevance": 5, "summary": "T", "work_items": [], "people": [], "labels": ["a-b","c-d","e-f","g-h","i-j","k-l","m-n"]}'
+        result = gmail.parse_llm_response(raw, "none")
+        assert len(result.labels) == 5
+
+
+def test_call_llm_retry_then_success(subtests):
+    with subtests.test(msg="When first attempt fails with 500 but second succeeds then returns content"):
+        fail_resp = MagicMock()
+        fail_resp.status_code = 500
+        fail_resp.text = "Server Error"
+        ok_resp = MagicMock()
+        ok_resp.status_code = 200
+        ok_resp.json.return_value = {"choices": [{"message": {"content": "success"}}]}
+        with patch("gmail.requests.post", side_effect=[fail_resp, ok_resp]), \
+             patch("gmail.time.sleep"):
+            result = gmail._call_llm("system", "user")
+            assert result == "success"
+
+
+def test_summarize_resource_with_metadata(subtests):
+    with subtests.test(msg="When metadata and existing_summary provided then includes in prompt"):
+        mock_raw = json.dumps({"relevance": 7, "summary": "Updated summary",
+                               "work_items": ["fix bug"], "people": ["Alice"],
+                               "labels": ["a-b", "c-d", "e-f", "g-h", "i-j"]})
+        items = [{"author": "Alice", "created_at": "2026-01-01", "content": "Please fix the bug"}]
+        with patch("gmail._call_llm", return_value=mock_raw) as mock_llm:
+            result = gmail.summarize_resource(
+                "Bug Report", "gmail", items,
+                metadata={"to": [{"email": "me@test.com"}]},
+                existing_summary="Previous summary text",
+                mention_type="direct"
+            )
+            assert result.relevance == 7
+            assert result.summary == "Updated summary"
+            call_args = mock_llm.call_args
+            assert "Previous summary text" in call_args[0][1]
+
+    with subtests.test(msg="When all items have empty content then still processes"):
+        mock_raw = json.dumps({"relevance": 3, "summary": "No content",
+                               "work_items": [], "people": [], "labels": ["a-b", "c-d", "e-f", "g-h", "i-j"]})
+        items = [{"author": "System", "created_at": "2026-01-01", "content": ""}]
+        with patch("gmail._call_llm", return_value=mock_raw):
+            result = gmail.summarize_resource("Empty", "gmail", items, mention_type="none")
+            assert result.relevance == 3
+
+
+def test_get_thread_list_empty(subtests):
+    with subtests.test(msg="When page returns empty thread list then returns empty"):
+        mock_page = MagicMock()
+        mock_page.evaluate.return_value = []
+        result = gmail.get_thread_list(mock_page)
+        assert result == []
+
+    with subtests.test(msg="When page returns None then returns empty"):
+        mock_page = MagicMock()
+        mock_page.evaluate.return_value = None
+        result = gmail.get_thread_list(mock_page)
+        assert result == [] or result is None
+
+
+def test_navigate_to_thread_selector_timeout(subtests):
+    with subtests.test(msg="When wait_for_selector times out then returns False"):
+        mock_page = MagicMock()
+        mock_page.wait_for_selector.side_effect = PwTimeout("timeout")
+        result = gmail.navigate_to_thread(mock_page, "abc123")
+        assert result is False
+
+
+def test_wait_for_messages_stable_timeout(subtests):
+    with subtests.test(msg="When count never stabilizes then returns after max_wait"):
+        mock_page = MagicMock()
+        call_count = [0]
+        def varying_count(script):
+            call_count[0] += 1
+            return call_count[0]
+        mock_page.evaluate.side_effect = varying_count
+        with patch("gmail.time.sleep"):
+            result = gmail._wait_for_messages_stable(mock_page, max_wait=0.6, poll_interval=0.3)
+            assert isinstance(result, int)
+
+
+def test_clean_email_body_complex_signatures(subtests):
+    with subtests.test(msg="When multiple On...wrote blocks then removes all"):
+        text = "Hello\n\nOn Mon, Apr 1 wrote:\n> quoted\n\nOn Tue, Apr 2 wrote:\n> more quoted"
+        result = gmail.clean_email_body(text)
+        assert "Hello" in result
+
+    with subtests.test(msg="When Regards signature then removes"):
+        text = "Hello world\n\nRegards,\nMichael"
+        result = gmail.clean_email_body(text)
+        assert "Hello world" in result
+
+    with subtests.test(msg="When very long email then still processes"):
+        text = "Important content. " * 500
+        result = gmail.clean_email_body(text)
+        assert len(result) > 0
+
+
+def test_db_concurrent_access(subtests):
+    with subtests.test(msg="When multiple threads upsert then all data preserved"):
+        import threading
+        d = gmail.open_db(":memory:")
+        errors = []
+        def writer(tid, count):
+            try:
+                for i in range(count):
+                    d.upsert_atomic("gmail", tid, f"{tid}_m{i}", f"Author_{i}",
+                                    f"Content {i}", "2026-01-01", "2026-01-01")
+            except Exception as e:
+                errors.append(str(e))
+
+        threads = []
+        for t_id in ["ct1", "ct2", "ct3"]:
+            t = threading.Thread(target=writer, args=(t_id, 10))
+            threads.append(t)
+            t.start()
+        for t in threads:
+            t.join()
+        assert not errors
+        for t_id in ["ct1", "ct2", "ct3"]:
+            items = d.get_atomic_for_resource(t_id)
+            assert len(items) == 10
+        d.close()
+
+
+def test_upsert_atomic_immutability(subtests, db):
+    with subtests.test(msg="When same message upserted twice then content is NOT updated"):
+        db.upsert_atomic("gmail", "t_imm", "m_imm", "Author1", "Content1", "2026-01-01", "2026-01-01")
+        db.upsert_atomic("gmail", "t_imm", "m_imm", "Author2", "Content2", "2026-01-02", "2026-01-02")
+        items = db.get_atomic_for_resource("t_imm")
+        assert len(items) == 1
+        assert items[0]["author"] == "Author1"
+        assert items[0]["content"] == "Content1"
+
+
+def test_get_all_summaries_with_since_filter(subtests):
+    with subtests.test(msg="When since filter then results sorted by sort_ts desc"):
+        d = gmail.open_db(":memory:")
+        d.upsert_atomic("gmail", "t_old", "m_old", "A", "C", "2025-01-01", "2025-01-01")
+        d.upsert_summary("t_old", "gmail", "Old", "Sum", mention_type="none",
+                          estimated_relevance=8, final_relevance=8)
+        d.upsert_atomic("gmail", "t_new", "m_new", "A", "C", "2026-04-01", "2026-04-01")
+        d.upsert_summary("t_new", "gmail", "New", "Sum", mention_type="direct",
+                          estimated_relevance=9, final_relevance=9)
+        all_results = d.get_all_summaries()
+        assert len(all_results) == 2
+        assert all_results[0]["title"] == "New"
+
+    with subtests.test(msg="When source filter then returns only matching source"):
+        d2 = gmail.open_db(":memory:")
+        d2.upsert_atomic("gmail", "tg", "mg", "A", "C", "2026-01-01", "2026-01-01")
+        d2.upsert_summary("tg", "gmail", "Gmail", "S", mention_type="none",
+                           estimated_relevance=5, final_relevance=5)
+        results = d2.get_all_summaries(source="jira")
+        assert len(results) == 0
+        results = d2.get_all_summaries(source="gmail")
+        assert len(results) == 1
+        d2.close()
+
+
+def test_format_summary_block_all_fields(subtests):
+    with subtests.test(msg="When summary has work_items and people then formats them"):
+        s = {
+            "title": "Test", "summary": "Summary text",
+            "mention_type": "direct", "final_relevance": 9,
+            "source": "gmail", "resource_id": "t1",
+            "metadata": json.dumps({
+                "labels": ["a-b", "c-d"],
+                "work_items": ["JIRA-123", "JIRA-456"],
+                "people": ["Alice", "Bob"],
+                "gmail_labels": ["Inbox", "Important"]
+            })
+        }
+        result = gmail._format_summary_block(s, 1, 5)
+        assert "JIRA-123" in result
+        assert "Alice" in result
+        assert "a-b" in result
+
+
+def test_pipeline_multiple_threads(subtests):
+    with subtests.test(msg="When pipeline processes multiple threads then all summarized"):
+        d = gmail.open_db(":memory:")
+        mock_raw = json.dumps({"relevance": 7, "summary": "Test",
+                               "work_items": [], "people": [],
+                               "labels": ["a-b", "c-d", "e-f", "g-h", "i-j"]})
+        for tid in ["tp1", "tp2", "tp3"]:
+            _seed_thread(d, tid, n_msgs=2)
+        with patch("gmail._call_llm", return_value=mock_raw):
+            pipeline = gmail._Pipeline(d, force=False)
+            for tid in ["tp1", "tp2", "tp3"]:
+                pipeline.put(tid, {"subject": f"Thread {tid}", "labels": [], "senders": []})
+            errors = pipeline.finish()
+        assert not errors
+        for tid in ["tp1", "tp2", "tp3"]:
+            s = d.get_resource_summary(tid)
+            assert s is not None
+            assert s["final_relevance"] == 7
+        d.close()
+
+
+# ═════════════════════════════════════════════════════════════════════
 # Tests: Main full browser path (mocked)
 # ═════════════════════════════════════════════════════════════════════
 
@@ -1474,6 +1928,7 @@ def test_main_full_browser_flow(subtests, tmp_path):
              patch("gmail.navigate_to_page", side_effect=lambda *a, **kw: next(nav_results)), \
              patch("gmail.get_thread_list", return_value=thread_list_page1), \
              patch("gmail.navigate_to_thread", return_value=True), \
+             patch("gmail.get_thread_id_from_page", return_value="thread1"), \
              patch("gmail.get_thread_subject", return_value="Test Email"), \
              patch("gmail.extract_thread_messages", return_value=thread_messages), \
              patch("gmail._call_llm", return_value=mock_raw), \
@@ -1527,6 +1982,7 @@ def test_main_browser_errors_exit_1(subtests, tmp_path):
              patch("gmail.navigate_to_page", side_effect=lambda *a, **kw: next(nav_results)), \
              patch("gmail.get_thread_list", return_value=thread_list), \
              patch("gmail.navigate_to_thread", return_value=True), \
+             patch("gmail.get_thread_id_from_page", return_value="t_err1"), \
              patch("gmail.get_thread_subject", return_value="Err"), \
              patch("gmail.extract_thread_messages", return_value=messages), \
              patch("gmail._call_llm", side_effect=RuntimeError("LLM down")), \

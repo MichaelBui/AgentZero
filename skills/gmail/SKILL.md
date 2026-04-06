@@ -26,27 +26,27 @@ Do NOT use for: sending emails (read-only), calendar events, non-Gmail providers
 
 ### Default - read last 3 days, up to 200 threads
 ```bash
-python /a0/usr/skills/gmail/scripts/gmail_reader.py
+python /a0/usr/skills/gmail/scripts/gmail.py
 ```
 
 ### Custom time window and thread limit
 ```bash
-python /a0/usr/skills/gmail/scripts/gmail_reader.py --days 14 --max-threads 100
+python /a0/usr/skills/gmail/scripts/gmail.py --days 14 --max-threads 100
 ```
 
 ### Force re-fetch and re-summarize everything
 ```bash
-python /a0/usr/skills/gmail/scripts/gmail_reader.py --force
+python /a0/usr/skills/gmail/scripts/gmail.py --force
 ```
 
 ### Disable early-stop for full scan
 ```bash
-python /a0/usr/skills/gmail/scripts/gmail_reader.py --early-stop 0
+python /a0/usr/skills/gmail/scripts/gmail.py --early-stop 0
 ```
 
 ### Fast report from cache (no browser needed)
 ```bash
-python /a0/usr/skills/gmail/scripts/gmail_reader.py --cached-only
+python /a0/usr/skills/gmail/scripts/gmail.py --cached-only
 ```
 
 ## Arguments
@@ -57,10 +57,12 @@ python /a0/usr/skills/gmail/scripts/gmail_reader.py --cached-only
 | `--max-threads` | No | 200 | Max non-excluded threads to process |
 | `--max-scan` | No | 500 | Max total threads to scan across all pages (safety cap) |
 | `--early-stop` | No | 5 | Stop fetching after N consecutive cached threads; scan continues, output includes all (0=disabled) |
+| `--min-relevance` | No | 7 | Minimum relevance score to include in output (1-10) |
 | `--exclude-labels` | No | `["❌ ai-exclusion", ...]` | JSON array of labels to skip |
 | `--priority-labels` | No | `["⚠️IMPORTANT", ...]` | JSON array of priority labels |
 | `--cached-only` | No | false | Output cached summaries from DB without browser (fast, for reports) |
 | `--force` | No | false | Bypass change detection, re-fetch and re-summarize all |
+| `--refetch-since` | No | - | Re-fetch all threads cached on or after this date (YYYY-MM-DD) |
 | `--output` | No | `workdir/gmail-output.md` | Write results to file (clean markdown for AI agents) |
 | `--debug-log` | No | `workdir/gmail-debug.log` | Write debug/progress messages to file |
 
@@ -104,24 +106,28 @@ Progress messages use explicit phase labels — **fetching and summarization are
 **Important:** Seeing `[Fetched 128/128]` does NOT mean the job is done. Wait for `STATUS: COMPLETED` at the bottom.
 
 ## Architecture
+- **Single-file design**: All logic (DB, cleaner, summarizer, CDP) in `scripts/gmail.py`
 - **Two-phase extraction**: Phase 1 scans listing pages (URL-based pagination via `/pN`), Phase 2 fetches details by direct thread URL navigation
-- Self-contained: all modules (DB, cleaner, summarizer) embedded in `scripts/`
-- SQLite cache at `data/gmail_cache.db` (persistent across sessions)
+- **SPA race condition handling**: Active polling for correct `data-legacy-thread-id` after navigation, with 3-tier retry strategy
+- SQLite cache at `data/gmail_cache.db` (persistent across sessions, thread-safe with `threading.Lock`)
 - Output and debug logs written to `/a0/usr/workdir/` (transactional, per-session)
 - Change detection via `data-legacy-last-non-draft-message-id` comparison at listing level
 - Email bodies are immutable; only new messages in threads trigger re-caching
 - Early-stop optimization: halts scanning after N consecutive cached threads
+- **3-tier relevance scoring**: PERSONAL (7-10), ACTION-REQUIRED (6-8), INFORMATIONAL (5-7)
 - AI summarization via LiteLLM proxy (configurable via `MAX_SUMMARY_WORDS` env var, default 500)
-- See `_architecture.md` for detailed design with Mermaid diagrams
+- **Cross-thread leakage prevention**: `has_message_anywhere()` guards against SPA DOM residue
+- **Unicode date normalization**: Handles `\u202f` and other Unicode whitespace in Gmail dates
+- See `_architecture.md` for detailed design with Mermaid diagrams and 25-point integrity checklist
 
 ## Files
 ```
-scripts/gmail_reader.py      - Main script (CDP + caching + summarization)
-scripts/gmail_db.py          - SQLite database management
-scripts/gmail_cleaner.py     - Email body cleanup (deterministic)
-scripts/gmail_summarizer.py  - LLM summarization via LiteLLM
+scripts/gmail.py             - Single-file entry point (CDP + DB + cleaner + summarizer + output)
+scripts/test_gmail.py        - Comprehensive test suite (90 tests, 212 subtests, 95% coverage)
+Makefile                     - Test/coverage targets (make test, make coverage)
 data/gmail_cache.db          - SQLite cache (persistent, auto-created)
 _architecture.md             - Detailed design documentation
+SKILL.md                     - This file (agent-facing)
 # Transactional output written to /a0/usr/workdir/:
 #   gmail-output.md          - Results output (overwritten each run)
 #   gmail-debug.log          - Debug/progress log (overwritten each run)
