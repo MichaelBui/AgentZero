@@ -1,7 +1,7 @@
 ---
 name: gmail
 description: Read Gmail email threads using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check emails, read recent threads, get email conversations, or prepare a daily briefing. Supports label-based exclusion and priority tagging.
-version: 3.1.0
+version: 3.2.0
 author: Michael
 tags: [gmail, email, chrome, cdp, devtools, inbox, threads, conversations, summarize, cache]
 ---
@@ -63,18 +63,17 @@ python /a0/usr/skills/gmail/scripts/gmail.py --min-relevance 8
 | Argument | Required | Default | Description |
 |---|---|---|---|
 | `--cdp-url` | No | `http://192.168.1.11:9223` | Chrome DevTools Protocol endpoint |
-| `--days` | No | 3 | Days to look back |
+| `--days` | No | 3 (Tue-Sat), 4 (Sun), 5 (Mon) | Days to look back |
 | `--max-threads` | No | 200 | Max non-excluded threads to process |
 | `--max-scan` | No | 500 | Max total threads to scan across all pages (safety cap) |
 | `--early-stop` | No | 5 | Stop fetching after N consecutive cached threads (0=disabled) |
 | `--min-relevance` | No | 7 | Minimum relevance score to include in output (1-10) |
 | `--exclude-labels` | No | `["❌ ai-exclusion", ...]` | JSON array of labels to skip |
-| `--priority-labels` | No | `["⚠️IMPORTANT", ...]` | JSON array of priority labels |
 | `--cached-only` | No | false | Output cached summaries from DB without browser (fast, for reports) |
 | `--force` | No | false | Bypass change detection, re-fetch and re-summarize all |
 | `--refetch-since` | No | - | Re-fetch all threads cached on or after this date (YYYY-MM-DD) |
 | `--output` | No | `workdir/gmail-output.md` | Write results to file |
-| `--debug-log` | No | `workdir/gmail-debug.log` | Write debug/progress messages to file |
+| `--log-level` | No | INFO | Log level (DEBUG for diagnostics) |
 
 ## Required Environment Variables
 | Variable | Required | Default | Purpose |
@@ -86,34 +85,33 @@ python /a0/usr/skills/gmail/scripts/gmail.py --min-relevance 8
 
 ## Output
 
-Streams text blocks per thread to stdout:
+The output `.md` file is **only created after successful completion** of all fetching and summarization. If any error occurs before completion, no output file is created. This prevents AI agents from reading incomplete results.
+
+Threads are ordered chronologically (most recent first). Relevance scoring is used for filtering (via `--min-relevance`), not ordering.
+
+Output format per thread:
 ```
 ## gmail/19ceb94ec915103d: Re: Project update
-Source: gmail | Thread: 19ceb94ec915103d | Labels: Inbox, IMPORTANT | Priority: IMPORTANT | Senders: Jane Doe | Last Date: Mon, Mar 9, 2026, 3:30 PM | Last Updated: 2026-03-19T13:05:25+08:00
+Source: gmail | Thread: 19ceb94ec915103d | Labels: Inbox, IMPORTANT | Senders: Jane Doe | Last Date: Mon, Mar 9, 2026, 3:30 PM | Last Updated: 2026-03-19T13:05:25+08:00
 [AI-generated summary of thread]
 ```
 
 `Last Updated` is the timestamp when the AI summary was last generated/refreshed.
 
-Progress and diagnostics go to stderr. Use `PYTHONUNBUFFERED=1 python3 -u` for real-time streaming to file.
+Progress and diagnostics go to stderr.
 
 ## Monitoring
 
-The script writes status markers to the debug log (`workdir/gmail-debug.log`):
+The script writes log messages to stderr. Key markers to look for:
 
-- **Job started:** Look for `STATUS: STARTED` near the **top** of the log with a **recent timestamp** (within the last 5 minutes). If you do NOT see this, the job has not executed properly - wait up to 5 minutes or treat it as failed.
-- **Job completed:** Look for `STATUS: COMPLETED` or `STATUS: COMPLETED WITH ERRORS` near the **bottom** of the log. The script is only considered done when one of these markers appears.
-- **Job completed with errors:** `STATUS: COMPLETED WITH ERRORS` means the run finished but some threads failed AI summarization. Most output is available; failed threads are listed in the log.
-- **Job failed:** Look for `STATUS: FAILED` in the log, which includes the error message.
+- **Job started:** `STARTED (days=..., since=..., user=...)` near the top with a recent timestamp
+- **Fetching progress:** `[Fetching X/Y] subject...` - currently loading this thread from Gmail via browser
+- **Summarizing progress:** `Summarizing [X/Y] subject... (N msgs, mention_type)` - AI is generating a summary
+- **Job completed:** `COMPLETED (N threads, fetched=M)` at the end of the log
+- **Job completed with errors:** `COMPLETED WITH ERRORS (N threads, M error(s))` - run finished but some threads failed AI summarization
+- **Job failed:** `FAILED: error message` - fatal error
 
-Progress messages use explicit phase labels:
-- `[Fetching X/Y]` - currently fetching this thread from Gmail via browser; summarization is still pending
-- `[Fetched X/Y]` - fetched and cached, queued for AI summarization
-- `[Fetch failed X/Y]` - thread could not be loaded (skipped, does not block other threads)
-- `[Summarizing X/Y]` - AI is actively generating a summary for this thread
-- `[Summarized X/Y]` - summary complete and written to output
-
-**Important:** Seeing `[Fetched 128/128]` does NOT mean the job is done. Wait for `STATUS: COMPLETED` at the bottom.
+**Important:** The output file is only written after ALL summarization completes. Individual `Summarizing` messages do not mean the output is ready. Wait for `COMPLETED` before reading the output file.
 
 ## Relevance Scoring
 
@@ -126,14 +124,7 @@ Each thread summary includes a 1-10 relevance score from the AI:
 
 ## Handling Results
 - Output file is at `--output` path (default: `workdir/gmail-output.md`)
-- Higher relevance threads appear first
+- Threads are ordered chronologically (most recent first)
 - Each thread block includes: subject, labels, senders, AI summary, relevance score, mention type
 - Use `--min-relevance` to filter noise (default 7 excludes most automated emails)
 - Use `--cached-only` for fast re-reads without browser
-
-## Files
-```
-scripts/gmail.py         - Main script (run this)
-data/gmail_cache.db      - SQLite cache (persistent, auto-created)
-_architecture.md         - Detailed internal design documentation
-```

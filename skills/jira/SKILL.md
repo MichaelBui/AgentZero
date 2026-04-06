@@ -27,20 +27,6 @@ Do NOT use for: creating/updating tickets, fetching non-NTUC Jira instances.
 JIRA_EMAIL    - michael.bui@fairpricegroup.sg
 JIRA_API_KEY  - loaded via secrets (never log full value)
 API_KEY_OTHER - LiteLLM proxy authentication (set via Terraform, or LLAMA_TOKEN)
-JIRA_DB_PATH  - (optional) Override SQLite DB path. Use when running from host Mac
-                (NFS mount: /Volumes/Apps/...) since WAL mode fails on NFS.
-                Set to a local path e.g. /tmp/jira_cache.db, copy the DB there
-                first, then copy back after the run.
-```
-
-## Running from Host Mac (NFS workaround)
-SQLite WAL mode is incompatible with NFS. When running outside Docker (host Mac),
-copy the DB to /tmp first, set JIRA_DB_PATH, run, then sync back:
-```bash
-python3 -c "import shutil; shutil.copyfile('/Volumes/Apps/AgentZero/usr/skills/jira/data/jira_cache.db', '/tmp/jira_cache.db')"
-export JIRA_DB_PATH=/tmp/jira_cache.db
-python /Volumes/Apps/AgentZero/usr/skills/jira/scripts/jira.py
-python3 -c "import shutil; shutil.copyfile('/tmp/jira_cache.db', '/Volumes/Apps/AgentZero/usr/skills/jira/data/jira_cache.db')"
 ```
 
 ## Arguments
@@ -60,6 +46,8 @@ python3 -c "import shutil; shutil.copyfile('/tmp/jira_cache.db', '/Volumes/Apps/
 ## Output
 
 The output `.md` file is **only created after successful completion** of all fetching and summarization. If any error occurs, no file is created. This prevents AI agents from reading incomplete results.
+
+Tickets are ordered chronologically (most recently updated first). Relevance scoring is used for filtering, not ordering.
 
 Progress and diagnostics go to **stdout** (no separate log file).
 
@@ -93,13 +81,6 @@ Automatically classifies each resource as `direct`, `indirect`, or `none`:
 
 ## Handling Results
 - Output file is at `--output` path (default: `workdir/jira-output.md`)
-- Higher relevance tickets appear first
+- Tickets are ordered chronologically (most recently updated first)
 - Each ticket block includes: key, status, priority, assignee, AI summary, relevance score, mention type, work items, people, labels, relationships
 - Use `--cached-only` for fast re-reads without API calls
-
-## Files
-```
-scripts/jira.py          - Main script (run this)
-data/jira_cache.db       - SQLite cache (persistent, auto-created)
-_architecture.md         - Detailed internal design documentation
-```
