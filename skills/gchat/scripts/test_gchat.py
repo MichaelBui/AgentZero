@@ -1210,14 +1210,41 @@ def test_go_home(subtests):
 
 
 def test_snapshot_feed(subtests):
-    with subtests.test(msg="When page has feed items then returns parsed data"):
+    with subtests.test(msg="When all items visible on first snapshot then returns without scrolling"):
         page = MagicMock()
-        page.evaluate.return_value = [
-            {"group_id": "g1", "topic_id": "t1", "display_ts": 1000, "name": "Chat 1"},
+        items = [{"group_id": "g1", "topic_id": "t1", "display_ts": 1000, "name": "Chat 1", "is_unread": False}]
+        with patch.object(gchat, "_snapshot_feed_once", return_value=items):
+            with patch.object(gchat, "scroll_feed_down") as mock_scroll:
+                result = gchat.snapshot_feed(page, 0, max_scrolls=5)
+                assert len(result) == 1
+                assert result[0]["group_id"] == "g1"
+                assert mock_scroll.call_count >= 3
+
+    with subtests.test(msg="When scrolling reveals more items then accumulates all"):
+        page = MagicMock()
+        batch1 = [{"group_id": "g1", "topic_id": "", "display_ts": 2000, "name": "A", "is_unread": False}]
+        batch2 = [
+            {"group_id": "g1", "topic_id": "", "display_ts": 2000, "name": "A", "is_unread": False},
+            {"group_id": "g2", "topic_id": "", "display_ts": 1000, "name": "B", "is_unread": True},
         ]
-        result = gchat.snapshot_feed(page, 0)
-        assert len(result) == 1
-        assert result[0]["group_id"] == "g1"
+        with patch.object(gchat, "_snapshot_feed_once", side_effect=[batch1, batch2, batch2, batch2, batch2]):
+            with patch.object(gchat, "scroll_feed_down"):
+                result = gchat.snapshot_feed(page, 0, max_scrolls=10)
+                assert len(result) == 2
+                assert result[0]["display_ts"] == 2000
+                assert result[1]["display_ts"] == 1000
+
+    with subtests.test(msg="When result is sorted by display_ts descending"):
+        page = MagicMock()
+        items = [
+            {"group_id": "g1", "topic_id": "", "display_ts": 100, "name": "Old", "is_unread": False},
+            {"group_id": "g2", "topic_id": "", "display_ts": 300, "name": "New", "is_unread": False},
+            {"group_id": "g3", "topic_id": "", "display_ts": 200, "name": "Mid", "is_unread": False},
+        ]
+        with patch.object(gchat, "_snapshot_feed_once", return_value=items):
+            with patch.object(gchat, "scroll_feed_down"):
+                result = gchat.snapshot_feed(page, 0, max_scrolls=5)
+                assert [r["display_ts"] for r in result] == [300, 200, 100]
 
 
 def test_click_feed_item(subtests):
@@ -1714,13 +1741,15 @@ def test_mark_conversation_unread(subtests):
 def test_snapshot_feed_unread(subtests):
     with subtests.test(msg="When feed items have is_unread then includes it"):
         page = MagicMock()
-        page.evaluate.return_value = [
-            {"group_id": "g1", "topic_id": "", "display_ts": 1000, "name": "Chat", "is_unread": True},
-            {"group_id": "g2", "topic_id": "", "display_ts": 2000, "name": "Chat2", "is_unread": False},
+        items = [
+            {"group_id": "g1", "topic_id": "", "display_ts": 2000, "name": "Chat", "is_unread": True},
+            {"group_id": "g2", "topic_id": "", "display_ts": 1000, "name": "Chat2", "is_unread": False},
         ]
-        result = gchat.snapshot_feed(page, 0)
-        assert result[0]["is_unread"] is True
-        assert result[1]["is_unread"] is False
+        with patch.object(gchat, "_snapshot_feed_once", return_value=items):
+            with patch.object(gchat, "scroll_feed_down"):
+                result = gchat.snapshot_feed(page, 0, max_scrolls=5)
+                assert result[0]["is_unread"] is True
+                assert result[1]["is_unread"] is False
 
 
 

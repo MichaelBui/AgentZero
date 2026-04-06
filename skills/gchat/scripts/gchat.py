@@ -756,7 +756,7 @@ def go_home(page):
         log("WARN: Home feed not loaded within 15s")
 
 
-def snapshot_feed(page, cutoff_ms):
+def _snapshot_feed_once(page, cutoff_ms):
     return page.evaluate("""({sel, cutoff}) => {
         const feed = [];
         for (const el of document.querySelectorAll(sel)) {
@@ -776,6 +776,42 @@ def snapshot_feed(page, cutoff_ms):
         }
         return feed;
     }""", {"sel": SEL_FEED, "cutoff": cutoff_ms})
+
+
+def snapshot_feed(page, cutoff_ms, max_scrolls=30):
+    """Progressive feed scanner: scrolls down the left panel to load all items within the cutoff."""
+    seen_keys: set[str] = set()
+    feed: list[dict] = []
+    stable_rounds = 0
+
+    def _merge():
+        items = _snapshot_feed_once(page, cutoff_ms)
+        new_count = 0
+        for item in items:
+            key = f"{item['group_id']}|{item.get('topic_id', '')}|{item['display_ts']}"
+            if key not in seen_keys:
+                seen_keys.add(key)
+                feed.append(item)
+                new_count += 1
+        return new_count
+
+    _merge()
+    debug(f"Feed initial: {len(feed)} items")
+
+    for scroll in range(max_scrolls):
+        scroll_feed_down(page)
+        new_count = _merge()
+        if new_count == 0:
+            stable_rounds += 1
+            if stable_rounds >= 3:
+                debug(f"Feed scroll {scroll+1}: stable for 3 rounds - done ({len(feed)} total)")
+                break
+        else:
+            stable_rounds = 0
+            debug(f"Feed scroll {scroll+1}: +{new_count} new ({len(feed)} total)")
+
+    feed.sort(key=lambda x: x["display_ts"], reverse=True)
+    return feed
 
 
 def click_feed_item(page, gid, dts):
@@ -959,6 +995,16 @@ def extract_messages(page, cutoff_ms, topic_id=""):
                     urls.push(h);
             }
             if (urls.length) text += "\\n[links] " + [...new Set(urls)].join(" ");
+            let imgCount = 0;
+            for (const img of grp.querySelectorAll("img")) {
+                const src = img.getAttribute("src") || "";
+                if (src.includes("get_attachment_url") || src.includes("content_type=im"))
+                    imgCount++;
+            }
+            if (imgCount > 0 && !text.trim())
+                text = "[" + imgCount + " image" + (imgCount > 1 ? "s" : "") + " attached]";
+            else if (imgCount > 0)
+                text += "\\n[" + imgCount + " image" + (imgCount > 1 ? "s" : "") + " attached]";
             return text.replace(/\\n{3,}/g, "\\n\\n");
         }
         const out = [];
