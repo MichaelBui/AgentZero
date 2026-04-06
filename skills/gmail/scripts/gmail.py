@@ -876,15 +876,34 @@ def get_thread_list(page) -> list[dict]:
     """)
 
 
-def navigate_to_thread(page, thread_id: str) -> bool:
+def navigate_to_thread(page, thread_id: str, max_wait: float = 15.0) -> bool:
+    """Navigate to a Gmail thread and wait until the correct thread_id is loaded.
+    Gmail is a SPA - hash navigation doesn't reload the page, so we must poll
+    until data-legacy-thread-id matches the expected value."""
     url = f"{GMAIL_BASE}/mail/u/0/#all/{thread_id}"
     page.goto(url, wait_until="domcontentloaded", timeout=20000)
     try:
-        page.wait_for_selector('[data-message-id], div.adn, table.Bs, h2.hP', timeout=15000)
-        time.sleep(0.5)
-        return True
+        page.wait_for_selector('h2.hP, [data-message-id]', timeout=10000)
     except PwTimeout:
         return False
+
+    deadline = time.monotonic() + max_wait
+    poll = 0.3
+    while time.monotonic() < deadline:
+        loaded_id = page.evaluate("""
+        () => {
+            const h2 = document.querySelector('div[role="main"] h2.hP[data-legacy-thread-id]');
+            if (h2) return h2.getAttribute('data-legacy-thread-id') || '';
+            const span = document.querySelector('div[role="main"] span[data-legacy-thread-id]');
+            if (span) return span.getAttribute('data-legacy-thread-id') || '';
+            return '';
+        }
+        """) or ""
+        if loaded_id == thread_id:
+            return True
+        time.sleep(poll)
+        poll = min(poll * 1.3, 1.0)
+    return False
 
 
 def _wait_for_messages_stable(page, max_wait: float = 30.0, poll_interval: float = 0.3):
@@ -1512,17 +1531,25 @@ def main():
             last_msg_id = info.get("last_msg_id", "")
             log(f"[Fetching {idx}/{len(threads_to_fetch)}] {subject[:55]}")
 
-            if not navigate_to_thread(page, thread_id):
+            loaded = navigate_to_thread(page, thread_id)
+            if not loaded:
+                log(f"  Retry: resetting SPA state via inbox...")
+                page.goto(f"{GMAIL_BASE}/mail/u/0/#inbox",
+                          wait_until="domcontentloaded", timeout=15000)
+                time.sleep(1)
+                loaded = navigate_to_thread(page, thread_id)
+            if not loaded:
+                log(f"  Retry 2: full page reload...")
+                page.reload(wait_until="domcontentloaded", timeout=20000)
                 time.sleep(2)
-                if not navigate_to_thread(page, thread_id):
-                    log(f"  WARN: {thread_id} failed to load, skipping")
-                    continue
+                loaded = navigate_to_thread(page, thread_id)
+            if not loaded:
+                page_thread_id = get_thread_id_from_page(page)
+                log(f"  WARN: {thread_id} failed after 3 attempts "
+                    f"(page shows {page_thread_id}), skipping")
+                continue
 
             page_thread_id = get_thread_id_from_page(page)
-            if page_thread_id and page_thread_id != thread_id:
-                log(f"  WARN: Thread mismatch! Expected {thread_id}, "
-                    f"page loaded {page_thread_id}. Skipping fetch.")
-                continue
 
             thread_subject = get_thread_subject(page) or subject
             messages = extract_thread_messages(page)
