@@ -8,8 +8,6 @@ tags: [jira, jql, search, tickets, query, filter, view, polaris, backlog, sprint
 
 # Jira Skill
 
-Single-file Jira skill (`jira.py`) with SQLite caching, incremental fetching, AI-driven relevance scoring, entity extraction, and adaptive summarization. Replaces all previous multi-file scripts. Self-contained - no external shared modules.
-
 ## When to Use
 
 | User Intent | Command |
@@ -77,57 +75,31 @@ blocks: DPD-273 | parent: DPD-644 | Last Updated: 2026-03-19T13:05:25+08:00
 ---
 ```
 
-## Key Features
+## Relevance Scoring
 
-### Relevance Scoring (AI-driven)
 Each ticket summary includes a 1-10 relevance score from the AI, guided by:
 - `User.md` context (professional role, domain expertise, priorities)
 - `mention_type` detection (direct/indirect/none)
 - Relevance floors: direct >= 7, indirect >= 5, none >= 1
 - Adaptive summary length: direct ~200 words, indirect ~100 words, none ~30 words
 
-### Mention Type Detection
+## Mention Type Detection
+
 Automatically classifies each resource as `direct`, `indirect`, or `none`:
 - **Direct**: assignee, reporter, author of comment, @mentioned, user participation (replied)
 - **Indirect**: linked issues, same epic, watcher
 - **None**: no user signal detected
 - Strongest signal wins at resource level (1 direct mention in 20 comments = direct)
 
-### Entity Extraction
-AI extracts structured entities alongside the summary (stored in metadata JSON):
-- `work_items`: Jira ticket IDs, PR numbers, project codenames, service names, git repos
-- `people`: Explicit person names only (no groups, teams, distribution lists)
-- `labels`: Exactly 5 AI-generated 2-word descriptive labels (lowercase, hyphenated)
-
-### JSON Structured Output from LLM
-Uses Qwen 3.5 native `response_format={"type": "json_object"}` for reliable structured responses. Regex fallback parser handles edge cases (think blocks, code fences).
-
-## Architecture
-
-### Database Schema
-SQLite cache at `data/jira_cache.db` with three tables:
-- `atomic_content`: Individual items (ticket descriptions, comments) with metadata JSON
-- `resource_summary`: Per-resource summaries with `mention_type`, `estimated_relevance`, `final_relevance`, and metadata JSON (work_items, people, labels)
-- `ticket_relationships`: Parent/child/linked ticket relationships
-
-### Processing Pipeline
-1. **Fetch**: Jira API -> format issues -> cache atomic content (timestamp-based skip for unchanged)
-2. **Summarize** (concurrent thread): For new/changed resources, compute mention_type, call LLM with relevance-scoring prompt, parse JSON response, upsert summary with entities
-3. **Output**: Only after all items complete, write sorted markdown to file
+## Handling Results
+- Output file is at `--output` path (default: `workdir/jira-output.md`)
+- Higher relevance tickets appear first
+- Each ticket block includes: key, status, priority, assignee, AI summary, relevance score, mention type, work items, people, labels, relationships
+- Use `--cached-only` for fast re-reads without API calls
 
 ## Files
 ```
-scripts/
-  jira.py           - Single consolidated script (all logic)
-  test_jira.py      - Comprehensive unit tests (126 tests)
-data/
-  jira_cache.db     - SQLite cache (persistent, auto-created)
-_architecture.md    - Detailed design documentation
+scripts/jira.py          - Main script (run this)
+data/jira_cache.db       - SQLite cache (persistent, auto-created)
+_architecture.md         - Detailed internal design documentation
 ```
-
-## Testing
-```bash
-cd /Volumes/Apps/AgentZero/usr/skills/jira/scripts
-python test_jira.py
-```
-126 tests covering: text cleaning, ADF parsing, DB schema/migration/CRUD, mention type detection, relevance filtering, LLM response parsing (valid JSON, fallbacks, floor/ceiling), issue formatting, metadata building, caching, output formatting, pipeline (mocked LLM), and integration with real DB.
