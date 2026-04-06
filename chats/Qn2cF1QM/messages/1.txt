@@ -1,28 +1,16 @@
 [gmail_reader] STARTED - processing Gmail threads. Do NOT interrupt or move on - this takes 5-15 minutes.
-(node:23572) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(node:25327) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[Fetching 1/9] Re: Invitation: G5: Building a Better Workplace Together: Your Feedback M... @ Tue 7 Apr 2026 11am - 11:45am (SGT) (Carol Lee) (summarization pending)
-[Fetched 1/9] Re: Invitation: G5: Building a Better Workplace Together: Yo - queued for summarization (pipeline running)
-[Fetching 2/9] Invitation: BCRS SKU Posting for Express Delivery @ Mon Apr 6, 2026 3:30pm - 4pm (SGT) (Michael Bui) (summarization pending)
-[Fetched 2/9] Invitation: BCRS SKU Posting for Express Delivery @ Mon Apr  - queued for summarization (pipeline running)
-[Fetching 3/9] Notes: “ACNxOsmos: Daily Cadence” Apr 6, 2026 (summarization pending)
-[Fetched 3/9] Notes: “ACNxOsmos: Daily Cadence” Apr 6, 2026 - queued for summarization (pipeline running)
-[Fetching 4/9] Delivery Status Notification (Failure) (summarization pending)
-[Fetched 4/9] Delivery Status Notification (Failure) - queued for summarization (pipeline running)
-[Fetching 5/9] Delivery Status Notification (Failure) (summarization pending)
-[Fetched 5/9] Delivery Status Notification (Failure) - queued for summarization (pipeline running)
-[Fetching 6/9] Updated invitation: ACNxOsmos: Daily Cadence @ Mon Apr 6, 2026 12:30pm - 1pm (SGT) (artharn.senrit@accenture.com) (summarization pending)
-[Fetched 6/9] Updated invitation: ACNxOsmos: Daily Cadence @ Mon Apr 6, 20 - queued for summarization (pipeline running)
-[Fetching 7/9] Updated invitation: ACNxOsmos: Daily Cadence @ Mon Apr 6, 2026 12:30pm - 1pm (SGT) (tanul.mehta@accenture.com) (summarization pending)
-[Fetched 7/9] Updated invitation: ACNxOsmos: Daily Cadence @ Mon Apr 6, 20 - queued for summarization (pipeline running)
-[Fetching 8/9] Updated invitation: ACNxOsmos: Daily Cadence @ Mon Apr 6, 2026 12:30pm - 1pm (SGT) (Artharn Senrit) (summarization pending)
-[Fetched 8/9] Updated invitation: ACNxOsmos: Daily Cadence @ Mon Apr 6, 20 - queued for summarization (pipeline running)
-[Fetching 9/9] Updated invitation: ACNxOsmos: Daily Cadence @ Mon Apr 6, 2026 12:30pm - 1pm (SGT) (satish.pamidimarthi@accenture.com) (summarization pending)
-[Fetched 9/9] Updated invitation: ACNxOsmos: Daily Cadence @ Mon Apr 6, 20 - queued for summarization (pipeline running)
+[Fetching 1/3] Invitation:  D&T International Food Day! @ Thu Apr 30, 2026 12pm - 2pm (SGT) (Michael Bui) (summarization pending)
+[Fetched 1/3] Invitation:  D&T International Food Day! @ Thu Apr 30, 2026  - queued for summarization (pipeline running)
+[Fetching 2/3] [Action Required] Service Account Key Expiring, Renewal Required - aa003fb613da95c20d5009d28e84c111cd64b291 (summarization pending)
+[Fetched 2/3] [Action Required] Service Account Key Expiring, Renewal Requ - queued for summarization (pipeline running)
+[Fetching 3/3] Notes: Meeting Apr 6, 2026 at 5:00 PM GMT+08:00 (summarization pending)
+[Fetched 3/3] Notes: Meeting Apr 6, 2026 at 5:00 PM GMT+08:00 - queued for summarization (pipeline running)
 
 ============================================================
 [gmail_reader] ALL DONE - output file is ready for use.
-Fetched: 9 thread(s) | total scanned: 32
+Fetched: 3 thread(s) | total scanned: 43
 ============================================================
 
 (venv) root@9b542f9f414e:/a0/usr/workdir#

@@ -1,0 +1,19 @@
+STDOUT:
+============================================================
+Backing up: /a0/usr
+============================================================
+  📋 Branch: main
+  📦 Staging changes...
+  ❌ Failed to stage changes: fatal: confused by unstable object source data for 3e209280372bf1b931d7996787a8e462d2ec3c78
+
+{"summary":{"successful":0,"failed":1},"dry_run":false,"results":[{"path":"/a0/usr","success":false}]}
+
+STDERR: Backup paths configured: 1
+  - /a0/usr
+
+Backup complete: 0 succeeded, 1 failed
+
+Return code: 1
+(venv) root@9b542f9f414e:/a0/usr/workdir#
+
+[SYSTEM: Returning control to agent after 180 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
