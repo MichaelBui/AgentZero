@@ -778,8 +778,12 @@ def _snapshot_feed_once(page, cutoff_ms):
     }""", {"sel": SEL_FEED, "cutoff": cutoff_ms})
 
 
-def snapshot_feed(page, cutoff_ms, max_scrolls=30):
-    """Progressive feed scanner: scrolls down the left panel to load all items within the cutoff."""
+def snapshot_feed(page, cutoff_ms, max_scrolls=30, stable_threshold=5):
+    """Progressive feed scanner: scrolls down the left panel to load all items within the cutoff.
+
+    GChat lazily loads feed items - a single scroll may not immediately produce new DOM elements.
+    We scroll and wait up to `stable_threshold` consecutive rounds with no new items before stopping.
+    """
     seen_keys: set[str] = set()
     feed: list[dict] = []
     stable_rounds = 0
@@ -803,8 +807,8 @@ def snapshot_feed(page, cutoff_ms, max_scrolls=30):
         new_count = _merge()
         if new_count == 0:
             stable_rounds += 1
-            if stable_rounds >= 3:
-                debug(f"Feed scroll {scroll+1}: stable for 3 rounds - done ({len(feed)} total)")
+            if stable_rounds >= stable_threshold:
+                debug(f"Feed scroll {scroll+1}: stable for {stable_threshold} rounds - done ({len(feed)} total)")
                 break
         else:
             stable_rounds = 0
@@ -846,18 +850,14 @@ def click_feed_item(page, gid, dts):
 
 
 def scroll_feed_down(page):
+    """Scroll the left feed panel down to trigger lazy-loading of older items."""
     page.evaluate("""() => {
         const items = document.querySelectorAll('span[role="listitem"][data-group-id]');
         if (!items.length) return;
-        let el = items[0].closest("div");
-        while (el && el !== document.body) {
-            if (el.scrollHeight > el.clientHeight + 50 && el.clientHeight > 200) {
-                el.scrollTop += 400; return;
-            }
-            el = el.parentElement;
-        }
+        const last = items[items.length - 1];
+        last.scrollIntoView({block: "end", behavior: "instant"});
     }""")
-    time.sleep(1)
+    time.sleep(2)
 
 
 def left_panel_visible(page):
@@ -1562,8 +1562,11 @@ def main():
             f"unchanged={skipped_unchanged}, to-fetch={len(threads_to_fetch)}, "
             f"unread={unread_count})")
 
-        # ── Phase 2: Fetch conversations ──
+        # ── Phase 2+3: Fetch and summarize in pipeline ──
+        pipeline = _Pipeline(db, force=False)
+        pipeline.set_total(len(convo_infos))
         fetched_ids: set[str] = set()
+
         for idx, info in enumerate(threads_to_fetch, 1):
             rid = info["resource_id"]
             gid = info["group_id"]
@@ -1622,15 +1625,9 @@ def main():
             if "/app/home" not in page.url:
                 go_home(page)
 
+            pipeline.put(rid, info)
+
         log(f"Phase 2: fetched {len(fetched_ids)}/{len(threads_to_fetch)} conversations")
-
-        # ── Phase 3: Summarize ──
-        pipeline = _Pipeline(db, force=False)
-        pipeline.set_total(len(convo_infos))
-
-        for info in convo_infos:
-            if info["resource_id"] in fetched_ids:
-                pipeline.put(info["resource_id"], info)
 
         for info in convo_infos:
             if info["resource_id"] not in fetched_ids:

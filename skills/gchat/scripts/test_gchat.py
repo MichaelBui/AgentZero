@@ -1210,12 +1210,12 @@ def test_go_home(subtests):
 
 
 def test_snapshot_feed(subtests):
-    with subtests.test(msg="When all items visible on first snapshot then returns without scrolling"):
+    with subtests.test(msg="When all items visible on first snapshot then returns after stable threshold"):
         page = MagicMock()
         items = [{"group_id": "g1", "topic_id": "t1", "display_ts": 1000, "name": "Chat 1", "is_unread": False}]
         with patch.object(gchat, "_snapshot_feed_once", return_value=items):
             with patch.object(gchat, "scroll_feed_down") as mock_scroll:
-                result = gchat.snapshot_feed(page, 0, max_scrolls=5)
+                result = gchat.snapshot_feed(page, 0, max_scrolls=10, stable_threshold=3)
                 assert len(result) == 1
                 assert result[0]["group_id"] == "g1"
                 assert mock_scroll.call_count >= 3
@@ -1229,7 +1229,7 @@ def test_snapshot_feed(subtests):
         ]
         with patch.object(gchat, "_snapshot_feed_once", side_effect=[batch1, batch2, batch2, batch2, batch2]):
             with patch.object(gchat, "scroll_feed_down"):
-                result = gchat.snapshot_feed(page, 0, max_scrolls=10)
+                result = gchat.snapshot_feed(page, 0, max_scrolls=10, stable_threshold=3)
                 assert len(result) == 2
                 assert result[0]["display_ts"] == 2000
                 assert result[1]["display_ts"] == 1000
@@ -1243,7 +1243,7 @@ def test_snapshot_feed(subtests):
         ]
         with patch.object(gchat, "_snapshot_feed_once", return_value=items):
             with patch.object(gchat, "scroll_feed_down"):
-                result = gchat.snapshot_feed(page, 0, max_scrolls=5)
+                result = gchat.snapshot_feed(page, 0, max_scrolls=10, stable_threshold=3)
                 assert [r["display_ts"] for r in result] == [300, 200, 100]
 
 
@@ -1747,7 +1747,7 @@ def test_snapshot_feed_unread(subtests):
         ]
         with patch.object(gchat, "_snapshot_feed_once", return_value=items):
             with patch.object(gchat, "scroll_feed_down"):
-                result = gchat.snapshot_feed(page, 0, max_scrolls=5)
+                result = gchat.snapshot_feed(page, 0, max_scrolls=10, stable_threshold=3)
                 assert result[0]["is_unread"] is True
                 assert result[1]["is_unread"] is False
 
@@ -1946,6 +1946,67 @@ def test_main_thread_with_topic_id(subtests, db, tmp_path):
                                                     with patch.object(gchat, "_USER_CONTEXT", "test"):
                                                         with patch("sys.argv", ["gchat.py", "--output", str(output)]):
                                                             gchat.main()
+        finally:
+            db.close = restore
+
+
+# ═════════════════════════════════════════════════════════════════════
+# Tests: Pipeline starts concurrently with fetching
+# ═════════════════════════════════════════════════════════════════════
+
+def test_main_pipeline_interleaves_with_fetch(subtests, db, tmp_path):
+    with subtests.test(msg="When fetching then pipeline.put is called inside the fetch loop (not after)"):
+        output = tmp_path / "output.md"
+        feed = [
+            {"group_id": "g1", "topic_id": "", "display_ts": 9999999999999, "name": "Chat 1"},
+            {"group_id": "g2", "topic_id": "", "display_ts": 9999999999998, "name": "Chat 2"},
+        ]
+        put_order = []
+        original_pipeline_init = gchat._Pipeline.__init__
+        original_pipeline_put = gchat._Pipeline.put
+
+        def tracking_put(self, resource_id, convo_info):
+            put_order.append(("put", resource_id))
+            original_pipeline_put(self, resource_id, convo_info)
+
+        wrapped, restore = _make_nonclosing_db(db)
+
+        fetch_calls = []
+        original_click = gchat.click_feed_item
+
+        def tracking_click(page, gid, dts):
+            fetch_calls.append(("click", gid))
+            return True
+
+        try:
+            with patch.object(gchat, "open_db", return_value=wrapped):
+                with patch.object(gchat, "connect_browser", return_value=(MagicMock(), MagicMock(), MagicMock())):
+                    with patch.object(gchat, "go_home"):
+                        with patch.object(gchat, "snapshot_feed", return_value=feed):
+                            with patch.object(gchat, "click_feed_item", side_effect=tracking_click):
+                                with patch.object(gchat, "left_panel_visible", return_value=True):
+                                    with patch.object(gchat, "wait_for_messages", return_value=3):
+                                        with patch.object(gchat, "scroll_to_bottom"):
+                                            with patch.object(gchat, "scroll_and_expand", return_value=[
+                                                {"data_id": "m1", "sender": "A", "epoch_ms": 1712000000000,
+                                                 "body": "Hello", "timestamp": "10:00 AM"},
+                                            ]):
+                                                mock_resp = MagicMock()
+                                                mock_resp.status_code = 200
+                                                mock_resp.json.return_value = {"choices": [{"message": {"content": '{"relevance": 7, "summary": "OK"}'}}]}
+                                                with patch("requests.post", return_value=mock_resp):
+                                                    with patch.object(gchat, "_USER_CONTEXT", "test"):
+                                                        with patch.object(gchat._Pipeline, "put", tracking_put):
+                                                            with patch("sys.argv", ["gchat.py", "--days", "3", "--output", str(output)]):
+                                                                gchat.main()
+
+            assert len(put_order) == 2
+            assert put_order[0] == ("put", "g1")
+            assert put_order[1] == ("put", "g2")
+
+            assert len(fetch_calls) == 2
+            assert fetch_calls[0] == ("click", "g1")
+            assert fetch_calls[1] == ("click", "g2")
         finally:
             db.close = restore
 
