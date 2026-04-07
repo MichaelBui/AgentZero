@@ -1,0 +1,283 @@
+/a0/usr/workdir/Daily Work Report 2026-04-07.md written 280 lines
+>>>
+  1 # Daily Work Report - April 7, 2026
+  2 **Generated:** 2026-04-07 17:05 SGT  
+  3 **Sources:** Jira (22 items), Gmail (12 items), Google Chat (32 items)  
+  4 **Total Items Analyzed:** 66 high-relevance items
+  5 
+  6 ---
+  7 
+  8 ## Section 1: Executive Summary
+  9 
+ 10 ### Critical Highlights Since Last Briefing
+ 11 - **BCRS Compliance & Finance**: Multiple critical discussions on BCRS PRD deployment resource allocation; Brian/Shiva identified as alternatives to blocked resources for April 9 deadline. Direct chat involvement with Rajesh, Prajney, and Daryl regarding finance approval blocking launch.
+ 12 - **Retail Media Network (RMN) Acceleration**: Sprint 1 RMN spec request from Alvin Choo requiring EOD delivery; Carrier-Based Targeting meeting with Nikhil Grover on Singtel/M1 data sync integration; Project Light x Comall vendor collaboration documentation urgently needed.
+ 13 - **Architectural Governance Gaps**: DPD-838 (Impression-Based Ad Model) requires scope clarification from Chee Hoe Leong; OMNI-1421 (Impression-based revenue model) progressing but needs Michael's governance validation on video support and endemic banner logic ambiguities.
+ 14 - **Operational Status**: Michael WFH on April 7 due to digestive disorder symptoms; confirmed 1-2 weeks leave window between late June-August 2026 impacting resource planning.
+ 15 
+ 16 ### Data Source Counts
+ 17 | Source | Items Processed | High-Relevance (>7) | Direct Assignments |
+ 18 |--------|-----------------|---------------------|--------------------|
+ 19 | Jira   | 56 tickets      | 22                  | DPD-842, DPD-715  |
+ 20 | Gmail  | 59 threads      | 12                  | RMN Invoicing Fields, Missing UBID Alert |
+ 21 | Chat   | 71 conversations| 32                  | Gautam (RTI Doc), Alvin (Specs) |
+ 22 
+ 23 ### Overall Status of Key Work Streams
+ 24 - **🟢 On Track**: DPD-644 (RMN data sync overage resolved), DPD-807/551 dependencies cleared
+ 25 - **🟡 At Risk**: BCRS PRD deployment resource allocation (deadline April 9), Project Light vendor documentation gaps, Alvin's visa/travel coordination delays
+ 26 - **🔴 Critical**: Missing UBID incident escalation, expired risk waiver form alert, postal code blocking ETA pending review
+ 27 
+ 28 ---
+ 29 
+ 30 ## Section 2: Action Items (Michael Needs to Respond or Decide)
+ 31 
+ 32 | # | Action Required | Source | Urgency | Full Context |
+ 33 |---|-----------------|--------|---------|--------------|
+ 34 | 1 | **Share RTI Document** | Gautam Singh DM (Chat) | Today | Direct message request for "RTI" document. Gautam needs this for peer collaboration/collaboration review. Locate and share immediately. |
+ 35 | 2 | **Deliver Sprint 1 RMN Spec** | Alvin Choo Chat Space | Today | Alvin explicitly requested RMN spec for Sprint 1. Michael committed to sharing by EOD April 7. Critical for vendor coordination and operational readiness. Include API design progress status. |
+ 36 | 3 | **Provide Ad Tech Documentation** | [Tech] Light x Comall Vendor Collaboration (Chat) | Today | Alvin Choo tagged Michael + 4 others requesting ad tech documentation for FairPrice/Comall collaboration. Requires immediate access to relevant specs and governance docs. |
+ 37 | 4 | **RSVP to Carrier-Based Targeting Meeting** | Nikhil Grover Gmail Invite | This Week | April 7, 11:45 AM meeting on syncing mobile carrier data (Singtel/M1) into Segment for RMN. Requires technical validation input on data integration feasibility and privacy compliance. |
+ 38 | 5 | **Review DPD-838 Ambiguities** | Jira/Chat Context | This Week | Michael identified critical ambiguities on video support, endemic banner logic, and OSMOS capacity (April 1). Chee Hoe Leong provided clarifications - need to validate if scope is fully resolved before proceeding. |
+ 39 | 6 | **Assign BCRS PRD Developer** | Chat Resource Discussion | Today (Deadline April 9) | Urgent need to assign Brian or Shiva for BCRS PRD deployment due to blocked resources. Sneha Parab, Wai Ching, Daryl Ng discussed capacity constraints. Confirm assignment and communicate to deployment team. |
+ 40 | 7 | **Confirm Visa Invitation Letter** | Alvin Choo DM (Travel) | This Week | CoMall business trip visa application delayed due to leave period. Waiting for Alvin to secure invitation letter. Coordinate timeline with travel logistics. |
+ 41 | 8 | **Review OMNI-1431 Postal Code Blocking ETA** | Jira/Chat Escalation | This Week | Fion Tan escalated for ETA on postal code blocking (fraud prevention). Koklin Gan assigned; Michael needs to provide architectural review input and timeline expectations. |
+ 42 | 9 | **Finalize Project Light Confluence Access Decision** | Chat Governance Discussion | When Possible | Michael initiated discussion on org-wide vs request-based access. Gopalakrishna concluded "request basis" - ensure this governance decision is implemented and documented in Confluence space settings. |
+ 43 | 10 | **Address Expired Risk Waiver Form** | Gmail Automated Alert | This Week | RAW Overdue alert for expired risk acceptance & waiver form. Requires immediate attention to security governance compliance. Locate responsible party and re-execute waiver process. |
+ 44 
+ 45 ---
+ 46 
+ 47 ## Section 3: Follow-ups (Michael is Waiting on Others)
+ 48 
+ 49 | # | Requested From | Last Known Status | Next Action/Deadline |
+ 50 |---|----------------|-------------------|---------------------|
+ 51 | 1 | **Nikhil Grover** (Project Light Tech Specs) | Michael will consult Nikhil to define business requirements before finalizing As-Is/To-Be indexer data flow tech spec. Nikhil shared analytics reports and agenda items for review. | Confirm meeting slot this week; finalize spec by April 10 |
+ 52 | 2 | **Alvin Choo** (China Visa Invitation Letter) | Alvin noted delays due to Michael's leave period; waiting for CoMall business invitation letter to speed up visa application process. | Follow up on letter status; coordinate travel dates |
+ 53 | 3 | **Gopalakrishna Dhulipati** (Confluence Access Implementation) | Governance decision concluded "request basis" but implementation status unclear. Michael initiated the discussion and needs confirmation it's applied. | Verify Confluence space settings by April 10 |
+ 54 | 4 | **Koklin Gan** (OMNI-1431 ETA Response) | Fion Tan escalated for timeline on postal code blocking feature. Koklin assigned but no ETA provided yet. | Request formal ETA from Koklin; validate feasibility |
+ 55 | 5 | **Chee Hoe Leong** (DPD-838 Scope Clarification) | Chee provided clarifications after Michael's April 1 concerns about video support, endemic banner logic, OSMOS capacity. Need validation of completeness. | Review clarification docs; confirm no remaining ambiguities |
+ 56 | 6 | **Jacob Yeo & Nikhil Grover** (Project Light Feasibility) | Shared analytics reports and agenda items for Project Light; Michael needs to provide technical feasibility review on pipeline infrastructure alignment. | Schedule tech review session this week |
+ 57 
+ 58 ---
+ 59 
+ 60 ## Section 4: Work Stream Summaries
+ 61 
+ 62 ### 🏗️ Project Light & Retail Media Network (RMN)
+ 63 **Status**: 🟡 Active with multiple dependencies requiring immediate attention  
+ 64 **Key Changes This Week**:
+ 65 - Sprint 1 RMN spec request from Alvin Choo (EOD deadline April 7)
+ 66 - Carrier-Based Targeting meeting scheduled for Singtel/M1 data integration
+ 67 - Project Light x Comall vendor collaboration documentation urgently needed
+ 68 - Akash Gupta created Confluence space; Michael must review Design/API specs
+ 69 
+ 70 **Current Status & Recent Changes**:
+ 71 - **API Design**: In progress; Alvin confirmed spec delivery commitment by EOD April 7
+ 72 - **Vendor Coordination**: FairPrice/Comall integration requires immediate documentation sharing (Alvin's request)
+ 73 - **Analytics Pipeline**: Jacob Yeo and Nikhil Grover shared project Light analytics reports; technical feasibility review pending from Michael
+ 74 - **Confluence Governance**: Access control decision made (request basis) but implementation verification needed
+ 75 
+ 76 **Key Decisions Made/Pending**:
+ 77 - ✅ Confluence access = request basis (pending implementation)
+ 78 - ⏳ RMN sprint 1 spec delivery confirmation (due EOD April 7)
+ 79 - ⏳ Carrier data integration feasibility validation (meeting scheduled)
+ 80 
+ 81 **Blockers/Risks**:
+ 82 - Documentation gaps for vendor collaboration slowing onboarding
+ 83 - Resource constraints affecting deployment timelines
+ 84 - Technical scope ambiguities in ad-tech pipeline architecture
+ 85 
+ 86 **Cross-References**:
+ 87 - **Jira**: OMNI-1421 (Impression-based revenue model), DPD-838 (Ad inventory transition)
+ 88 - **Gmail**: RMN Invoicing Fields thread (Nikhil Grover), Carrier targeting meeting invite
+ 89 - **Chat**: Multiple discussions in "Project Light Attack and Defence Leads" space
+ 90 
+ 91 ---
+ 92 
+ 93 ### 💰 BCRS & Financial Compliance (SAP Integration)
+ 94 **Status**: 🔴 Critical resource allocation required for April 9 deadline  
+ 95 **Key Changes This Week**:
+ 96 - Direct chat involvement with Rajesh, Prajney, Daryl on BCRS fix and finance approval blocking launch
+ 97 - Resource discussion identified Brian/Shiva as alternatives to blocked resources
+ 98 - DPD-842 (Suppress duplicate BCRS deposit) in Testing Preproduction phase
+ 99 
+100 **Current Status & Recent Changes**:
+101 - **DPD-383 (Sales posting)**: Status "IN RELASE QUEUE (Done)" - blocks DPD-551, relates to DPD-807
+102 - **DPD-842 (Suppress duplicate posting)**: Michael assigned; testing in preproduction; critical for SAP reconciliation
+103 - **Resource Allocation**: Urgent need to assign developer for April 9 PRD deployment deadline
+104 - **Compliance Focus**: BCRS compliance phase 2 (order placement/refunds) marked "Technical Live (Done)"
+105 
+106 **Key Decisions Made/Pending**:
+107 - ✅ Brian/Shiva identified as alternative developers for deployment
+108 - ⏳ Final resource assignment confirmation needed before April 9 deadline
+109 - ⏳ Duplicate posting prevention validation during preproduction testing
+110 
+111 **Blockers/Risks**:
+112 - Resource constraints delaying critical BCRS PRD deployment
+113 - Finance approval blocking launch path
+114 - Potential duplicate SAP postings if DPD-842 not fully validated
+115 
+116 **Cross-References**:
+117 - **Jira**: DPD-383, DPD-842, OMNI-1294 (BCRS Phase 2)
+118 - **Gmail**: Missing UBID incident alert (related to ad-tech financial tracking)
+119 - **Chat**: Rajesh/Prajney/Daryl group discussion on BCRS fix
+120 
+121 ---
+122 
+123 ### 🏛️ Architecture Governance & Platform Engineering
+124 **Status**: 🟡 Active with governance gaps requiring validation  
+125 **Key Changes This Week**:
+126 - DPD AI Guild discussion on AI tool limitations and observability gaps
+127 - SLO updates session invite received; Michael must review migration plans
+128 - Cost optimization chat regarding Project Nova/fpg-retail-pos-prod service ownership
+129 
+130 **Current Status & Recent Changes**:
+131 - **DPD-644 (RMN data sync)**: Status "Done" - resolved Segment.io/OSMOS overage issue
+132 - **OMNI-1362 (SAP decoupling)**: Status "Paused (To Do)" - blocks OMNI-1363 migration
+133 - **Observability**: Gap identified in AI inference scripts failing to log summarization progress
+134 - **Cloud Migration**: OMNI-1363 (CF apps to DBP) in UAT phase
+135 
+136 **Key Decisions Made/Pending**:
+137 - ✅ SLO updates session scheduled for review
+138 - ⏳ Observability framework implementation pending from AI Guild
+139 - ⏳ SAP decoupling timeline depends on B2B integration completion (OMNI-1249)
+140 
+141 **Blockers/Risks**:
+142 - Architectural ambiguities in ad-tech pipeline (DPD-838)
+143 - Observability gaps creating operational confusion for long-running tasks
+144 - Cloud migration dependencies blocking fulfillment improvements
+145 
+146 **Cross-References**:
+147 - **Jira**: DPD-644, OMNI-1362, OMNI-1363
+148 - **Gmail**: SLO updates session invite
+149 - **Chat**: DPD AI Guild discussions, cost optimization chats
+150 
+151 ---
+152 
+153 ### 🤝 Vendor Collaboration & External Partnerships
+154 **Status**: 🟡 Active with coordination delays  
+155 **Key Changes This Week**:
+156 - Alvin Choo's visa/travel logistics for CoMall trip delayed due to leave period
+157 - FairPrice/Comall collaboration documentation urgently needed
+158 - Vendor velocity discussion on AI agents ("fast game") requiring coordination management
+159 
+160 **Current Status & Recent Changes**:
+161 - **CoMall Trip**: Visa application pending invitation letter; travel around April 6, 2026
+162 - **Vendor Coordination**: Alvin requested Michael's team be added to FairPrice/Comall chat and documentation shared
+163 - **AI Agent Velocity**: Team using AI agents rapidly; need coordination to manage during Sprint 1
+164 
+165 **Key Decisions Made/Pending**:
+166 - ✅ Travel timeline confirmed (late June-August 2026 leave window)
+167 - ⏳ Invitation letter status from CoMall pending
+168 - ⏳ Vendor documentation sharing schedule needed
+169 
+170 **Blockers/Risks**:
+171 - Visa delays impacting travel plans and vendor collaboration kickoff
+172 - Documentation gaps slowing onboarding for external partners
+173 - AI agent velocity requiring careful coordination to prevent scope creep
+174 
+175 **Cross-References**:
+176 - **Jira**: DPD-838 (OSMOS capacity discussion)
+177 - **Gmail**: ACNxOsmos meeting updates
+178 - **Chat**: Project Light vendor collaboration space, Alvin Choo DMs
+179 
+180 ---
+181 
+182 ### 👥 Team Operations & Personnel Management
+183 **Status**: 🟢 Stable with planned leave notifications  
+184 **Key Changes This Week**:
+185 - Michael WFH on April 7 due to digestive disorder symptoms
+186 - Confirmed 1-2 weeks leave window between late June-August 2026
+187 - Resource allocation discussions for critical deployments (DPD-898, BCRS, 1HD)
+188 
+189 **Current Status & Recent Changes**:
+190 - **Personal Availability**: WFH today; April 7 absence noted in team group chat
+191 - **Leave Planning**: Mid-2026 leave schedule confirmed - impacts engineering resource planning
+192 - **Team Communication**: Multiple group chats on resource allocation and deployment capacity
+193 - **AI Policy Enforcement**: Reinforced warnings against using unapproved AI platforms (Gemini only approved)
+194 
+195 **Key Decisions Made/Pending**:
+196 - ✅ Leave window confirmed for late June-August 2026
+197 - ⏳ Resource assignment decisions pending for April 9 deadline
+198 - ⏳ Team absence coverage planning needed around leave period
+199 
+200 **Blockers/Risks**:
+201 - Personal health affecting today's availability (WFH)
+202 - Leave period creating resource gaps in mid-2026
+203 - AI tool usage policy enforcement requiring ongoing monitoring
+204 
+205 **Cross-References**:
+206 - **Jira**: No direct assignments this week
+207 - **Gmail**: Calendar invites for meetings
+208 - **Chat**: Team lead group chats, DPD space discussions
+209 
+210 ---
+211 
+212 ### ⚠️ Compliance & Risk Mitigation
+213 **Status**: 🔴 Multiple alerts requiring immediate action  
+214 **Key Changes This Week**:
+215 - Expired risk waiver form alert (RAW Overdue)
+216 - Missing UBID incident escalation in ad-tech pipeline
+217 - Postal code blocking feature ETA pending review
+218 - Unit pricing compliance for Singapore retail regulations
+219 
+220 **Current Status & Recent Changes**:
+221 - **OMNI-1433 (Unit Pricing)**: Status "For Pitching (To Do)" - regulatory compliance for SG retail
+222 - **OMNI-1407 (Seller Compliance)**: Status "UAT (In Progress)" - assigned to Prajney Sribhashyam
+223 - **OMNI-1431 (Postal Code Blocking)**: High priority fraud prevention; ETA pending review
+224 - **Risk Waiver**: Automated alert for expired form requiring immediate re-execution
+225 
+226 **Key Decisions Made/Pending**:
+227 - ✅ Seller compliance audit in UAT phase
+228 - ⏳ Risk waiver re-execution required immediately
+229 - ⏳ Postal code blocking timeline validation needed
+230 
+231 **Blockers/Risks**:
+232 - Expired risk waiver creating security governance violation
+233 - UBID missing incident indicating tracking integrity gaps
+234 - Regulatory compliance deadlines for unit pricing implementation
+235 
+236 **Cross-References**:
+237 - **Jira**: OMNI-1433, OMNI-1407, OMNI-1431
+238 - **Gmail**: Missing UBID alert thread, risk waiver automated notification
+239 - **Chat**: Compliance discussions in DPD space
+240 
+241 ---
+242 
+243 ## Section 5: Patterns and Observations
+244 
+245 ### Recurring Themes Across All Sources
+246 1. **Resource Constraint Crisis**: Multiple work streams (BCRS PRD deployment, Project Light vendor onboarding, RMN sprint delivery) all competing for limited developer capacity. Brian/Shiva identified as alternatives but assignment confirmation pending.
+247 2. **Documentation Gaps**: Repeated requests for technical specs, API documentation, and architecture reviews across Project Light, Comall collaboration, and AI observability discussions.
+248 3. **Vendor Velocity Management**: Teams using AI agents rapidly ("fast game") without sufficient coordination, creating scope creep risks and operational confusion.
+249 4. **Governance Decision Lag**: Multiple architectural decisions made in chat but not implemented or documented (Confluence access policy, RMN spec delivery tracking).
+250 
+251 ### Items Stalling or At Risk
+252 - **BCRS PRD Deployment**: April 9 deadline critical; resource assignment confirmation pending despite multiple discussions
+253 - **Alvin's China Visa**: Invitation letter delays creating travel timeline uncertainty
+254 - **DPD-838 Scope Clarification**: Michael's April 1 concerns not fully resolved; waiting on Chee Hoe Leong follow-up
+255 - **Project Light Technical Specs**: Nikhil consultation needed before finalizing As-Is/To-Be documentation
+256 
+257 ### Upcoming Deadlines/Milestones (Next 7 Days)
+258 | Date | Milestone | Owner | Status |
+259 |------|-----------|-------|--------|
+260 | April 7 EOD | Sprint 1 RMN Spec Delivery | Michael Bui | 🟡 Pending |
+261 | April 7 | Carrier-Based Targeting Meeting RSVP | Michael Bui | 🟡 Pending |
+262 | April 9 | BCRS PRD Deployment Deadline | Brian/Shiva (Michael coordinating) | 🔴 Critical |
+263 | April 10 | Project Light Tech Spec Finalization | Nikhil/Michael | 🟡 Pending |
+264 
+265 ### Opportunities & Unflagged Risks
+266 **Opportunities**:
+267 - **AI Guild Insights**: DPD AI Guild discussions reveal team awareness of AI tool limitations - potential to formalize governance framework
+268 - **Vendor Collaboration Model**: Light x Comall collaboration could establish new partnership template for future vendor integrations
+269 - **Observability Framework**: Gap identified in AI inference logging presents opportunity to build standardized monitoring solution
+270 
+271 **Unflagged Risks**:
+272 - **UBID Tracking Integrity**: Missing UBID incident suggests systemic tracking gaps beyond single-thread issue
+273 - **Cost Optimization Blind Spots**: Chat discussions on Project Nova/fpg-retail-pos-prod ownership may indicate unmonitored resource consumption
+274 - **Leave Period Coverage**: Mid-2026 leave window creates potential capacity gap for critical deployments if not planned proactively
+275 
+276 ---
+277 
+278 **Report Generated:** 2026-04-07 17:05 SGT  
+279 **Next Briefing:** April 8, 2026  
+280 **Data Sources:** Jira (22 items), Gmail (12 items), Google Chat (32 items)
+<<<

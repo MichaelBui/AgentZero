@@ -1,52 +1,80 @@
-/a0/usr/workdir/gmail-output.md 49 lines
->>>
- 1 
- 2 
- 3 ## [1/12] [JIRA] (DPD-838) Transition to Impression-Based Inventory & Multi-Banner Delivery
- 4 Source: gmail | Thread: 19d2e82fa82f66fe | Relevance: 9/10 | Mention: direct | Updated: 2026-04-02T11:24:00+08:00 | Labels: ad-architecture, banner-delivery, osmos-integration, technical-scrum, feature-development | Senders: Nikhil | Work Items: DPD-838 | People: Nikhil Grover, Michael Bui, Chee Hoe Leong, Milind Badame
- 5 Michael Bui is the assignee and active participant in Jira ticket DPD-838 regarding the transition to an impression-based ad inventory model. The thread details a shift from fixed-slot tenancy to a multi-banner delivery system integrated with OSMOS. Michael identified critical architectural ambiguities on April 1st, specifically questioning scope (video support limits), logic for non-endemic banner identification, OSMOS capacity constraints, and fallback behaviors. Chee Hoe Leong responded with clarifications: video is limited to Omni Home/FP Pay, endemic status is a boolean flag, OSMOS capacity updates are expected by early April, and slot values (-1 to 999) are handled by filtering duplicates rather than strict sequencing. The ticket moved from 'To Be Defined' to 'In Development'. Milind Badame subsequently noted that the feature requires manual E2E testing due to complex visual scenarios.
- 6 
- 7 ## [2/12] Issue with Missing UBID
- 8 Source: gmail | Thread: 19d52fdf13c8b0bd | Relevance: 9/10 | Mention: direct | Updated: 2026-04-03T20:50:00+08:00 | Labels: ad-tech-incident, vendor-escalation, tracking-integrity, ubid-missing, architecture-review | Senders: Rahul, Nikhil, me | People: Rahul Jain, Nikhil Grover, Michael Bui, Rajesh, Soumya
- 9 On April 3, 2026, vendor partner Rahul Jain (Osmos) flagged a critical data integrity issue in the retail media advertising pipeline. The vendor identified that the FairPriceGroup systems are not sending the required User Browsing ID (UBID) within the 'uclid' parameter during funnel impression events. Consequently, Osmos is assigning dummy UBIDs, which compromises tracking accuracy for display and product ads. Michael Bui directly responded to this escalation by requesting clarification on the definitions of UBID and uclid, the specific customer journey context, and the scope of impact (platform, page, ad type). Nikhil Grover also engaged to identify the specific ad units involved. This email constitutes a direct technical escalation requiring immediate architectural review and configuration correction to restore SLO compliance for impression tracking.
-10 
-11 ## [3/12] Hengky Sucanda requested access to your space
-12 Source: gmail | Thread: 19d60df9559bf07b | Relevance: 7/10 | Mention: direct | Updated: 2026-04-06T11:39:00+08:00 | Labels: access-request, confluence-space, governance-task, system-alert, approval-needed | Senders: Hengky Sucanda | Work Items: Project LIGHT | People: Hengky Sucanda
-13 Hengky Sucanda has requested access to the 'Project LIGHT' Confluence space. This notification is a system-generated action item requiring manual approval or management by Michael Bui. As an engineering leader governing platform architecture and project spaces, Michael must review this request to ensure proper access controls for staff-level personnel working on retail e-commerce initiatives.
-14 
-15 ## [4/12] Invitation: [Session 1] Sharing on SLO updates @ Tue Apr 7, 2026 4pm - 4:30pm (SGT) (Michael Bui)
-16 Source: gmail | Thread: 19d60ea98665d1a9 | Relevance: 8/10 | Mention: direct | Updated: 2026-04-06T11:51:00+08:00 | Labels: slo-framework, architecture-review, migration-plan, engineering-governance, meeting-invite | Senders: Dodla Gopi Krishna | Work Items: DPD-3294298118 | People: Dodla Gopi Krishna
-17 Dodla Gopi Krishna sent a direct invitation for 'Session 1: Sharing on SLO updates' scheduled for Tue Apr 7, 2026, at 4 PM SGT. As an engineering leader governing backend architecture standards and SLO targets, Michael Bui is the intended audience for this discussion on transitioning from the current SLO V1 framework to the proposed SLO V2 Framework. The agenda covers critical topics including limitations of the existing framework, new architectural design, impact on developers, migration planning, and a Q&A session. A reference link to NTUCLink guidelines is provided. Michael needs to attend to provide technical judgment on the architecture changes and approve or guide the migration plan.
-18 
-19 ## [5/12] Invitation: BCRS SKU Posting for Express Delivery @ Mon Apr 6, 2026 3:30pm - 4pm (SGT) (Michael Bui)
-20 Source: gmail | Thread: 19d6125aded53d7f | Relevance: 7/10 | Mention: direct | Updated: 2026-04-06T12:55:00+08:00 | Labels: meeting-invite, calendar-notification, retail-systems, delivery-logistics, attendance-required | Senders: Rajesh Dobariya | Work Items: BCRS | People: Rajesh Dobariya, Prajney Sribhashyam, Daryl Ng, Michael Bui, Olivia
-21 This is a system-generated Google Calendar invitation for a meeting titled 'BCRS SKU Posting for Express Delivery' scheduled for Monday, April 6, 2026, from 3:30 PM to 4:00 PM SGT. The organizer is Rajesh Dobariya, and the guest list includes Prajney Sribhashyam, Daryl Ng, Michael Bui, and Olivia. As a direct attendee, Michael's presence is required for this session focused on SKU posting capabilities within the Express Delivery domain. The email provides Google Meet join details and phone dial-in options. A response (Yes/No/Maybe) is requested from Michael to confirm attendance.
-22 
-23 ## [6/12] Updated invitation: ACNxOsmos: Daily Cadence @ Mon Apr 6, 2026 12:30pm - 1pm (SGT) (satish.pamidimarthi@accenture.com)
-24 Source: gmail | Thread: 19d6124e23b98a90 | Relevance: 7/10 | Mention: direct | Updated: 2026-04-06T12:55:00+08:00 | Labels: calendar-update, vendor-cadence, project-planning, meeting-organizer, stakeholder-sync | Senders: me | Work Items: FPG Project Plan 2905025 | People: Michael Bui, Flora Wo Ke, Vipul Gupta, Barkha Kewalramani, Rahul Jain, Tiong Siong Tee, Daryl Ng, John Henji Mantaring, Artharn Senrit, Nikhil Grover, Aman Khatri, Tanul Mehta, Satish Pamidimarthi, Shravan Kankaria, Ravi Goel
-25 Michael Bui updated a recurring daily cadence meeting (ACNxOsmos) scheduled for Monday, April 6, 2026, from 12:30 PM to 1:00 PM SGT. The update involved modifying the attachments associated with the calendar event, specifically adding or changing 'FPG Project Plan 2905025'. This meeting serves as a key stakeholder cadence involving Michael and multiple external vendors (Accenture) and partners (OnlineSales.ai), including Flora Wo Ke, Vipul Gupta, Barkha Kewalramani, Rahul Jain, Daryl Ng, John Henji Mantaring, Artharn Senrit, Nikhil Grover, Aman Khatri, Tanul Mehta, Shravan Kankaria, Ravi Goel, and Satish Pamidimarthi. As the organizer, Michael manages this session to align on project progress, likely covering retail media or platform engineering topics given his governance role.
-26 
-27 ## [7/12] NED-254147 [General Service request] Add OSMOS system to IT Helpdesk for user onboarding process and access changes
-28 Source: gmail | Thread: 199c705ee4529c98 | Relevance: 9/10 | Mention: direct | Updated: 2026-04-06T14:01:00+08:00 | Labels: it-service-request, access-governance, retail-media-nexus, jira-ticket-resolution, system-onboarding | Senders: NE | Work Items: NED-254147, OSMOS Portal | People: Michael Bui, Jeffrey Tan, Rafael Guerta, Winson Lim, Allen Umali, Maeves Goh
-29 Michael Bui received a request to add the 'OSMOS Portal' to the IT Helpdesk for user onboarding and access changes within the Retail Media (RMN) domain. The conversation involved Jira ticket NED-254147, where Rafael Guerta from IT Helpdesk sought clarification on the system category and requested a specific individual email for the 'System Owner' rather than a group address. Michael provided the necessary delegation details (dpd-staff-excellence-rmn@fairpricegroup.sg), leading to the configuration update. The request specified a three-tier approval flow: requester submission, Cost Center Authorization Manager approval, and System Owner approval before routing to Allen Umali for access grants. Rafael confirmed the implementation was successful on October 22, and the ticket was marked resolved in April 2026. As an Engineering Governance lead owning backend architecture standards and vendor/system integrations, Michael's direct involvement in defining the governance model for this platform is critical.
-30 
-31 ## [8/12] Notes: “B2b discussion” Apr 6, 2026
-32 Source: gmail | Thread: 19d61a77ab00d0ed | Relevance: 8/10 | Mention: direct | Updated: 2026-04-06T15:17:00+08:00 | Labels: infrastructure-governance, vendor-evaluation, cost-analysis, cloud-migration, action-required | Senders: Gemini | Work Items: B2C core infrastructure costs, DBP catalog service | People: Michael Bui, Kyle Nguyen, Alvin Choo
-33 System-generated meeting notes from a 'B2b discussion' on April 6, 2026. The team discussed shifting B2C infrastructure management from hands-on operations to a vendor governance model based on SLAs. Key decisions involved retaining core identity and communication services on GCP while evaluating other services for migration. Michael Bui is explicitly assigned two action items: calculate B2C core infrastructure costs (including AWS Identity/Communication, catalog, and FPM Pro components) and identify the specific data source for the DBP catalog service product enrichment. The group must compile performance data (RPS, storage, cache) to validate vendor proposals before a scheduled follow-up with Huawei.
-34 
-35 ## [9/12] Notes: “BCRS SKU Posting for Express Delivery” Apr 6, 2026
-36 Source: gmail | Thread: 19d61da362615067 | Relevance: 7/10 | Mention: direct | Updated: 2026-04-06T16:13:00+08:00 | Labels: retail-finance, system-integration, cost-center-mapping, deposit-logic, meeting-summary | Senders: Gemini | Work Items: BCIS, DBD3, BCRS | People: Rajesh Dobariya, Prajney Sribhashyam, Michael Bui
-37 Automated meeting notes from April 6, 2026, summarize a discussion on aligning Barcode Carton Return Scheme (BCRS) deposit postings for one-hour delivery orders to specific store cost centers. The team identified a discrepancy where deposits currently default to cost center 004 instead of the required store-specific mapping. A technical solution was agreed upon: retrieving store identification directly from the order service during System Integration Testing. While Michael Bui is explicitly listed in the 'Suggested next steps' section with the action to 'Share details of the original BCIS ticket,' the content itself is an auto-generated summary rather than a direct human request. The decision involves Finance validation and Jira ticket creation (related to DBD3), indicating this falls under Medium Relevance as it pertains to governance, architecture implementation, and stakeholder alignment in Michael's domain.
-38 
-39 ## [10/12] Spreadsheet shared with you: "RMN Invoicing - Fields requirement"
-40 Source: gmail | Thread: 19d621a83c12208d | Relevance: 9/10 | Mention: direct | Updated: 2026-04-06T17:23:00+08:00 | Labels: retail-media, invoice-requirements, engineering-governance, data-fields, ad-tech | Senders: Nikhil Grover (via . | Work Items: RMN
-41 A spreadsheet titled "RMN Invoicing - Fields requirement" has been shared with you. This document details the specific data fields and requirements necessary for invoicing related to the RMN (Retail Media Network) project. Given your dual mandate over Retail Media/Ad Technology and Engineering Governance, understanding these precise field definitions is critical for validating backend architecture standards, ensuring correct data orchestration for programmatic advertising and campaign management, and verifying that financial reporting aligns with engineering delivery. As a direct participant in this thread, immediate review is likely required to confirm technical feasibility or provide architectural input on how these fields map to your existing microservices and event-driven systems.
-42 
-43 ## [11/12] Invitation: Carrier based targeting - requirements check @ Tue Apr 7, 2026 11:45am - 12pm (SGT) (Michael Bui)
-44 Source: gmail | Thread: 19d65c01ab98b4d9 | Relevance: 9/10 | Mention: direct | Updated: 2026-04-07T02:23:00+00:00 | Labels: retail-media, targeting-strategy, planning-meeting, data-integration, architecture-review | Senders: Nikhil Grover | Work Items: RMN, Segment | People: Nikhil Grover, Michael Bui, Yadear Zhang
-45 Nikhil Grover invited Michael Bui to a meeting on Tuesday, April 7, 2026 (11:45 AM – 12 PM SGT) regarding carrier-based targeting capabilities for the retail media network (RMN). The session aims to resolve specific technical requirements for syncing user data from mobile carriers (e.g., Singtel, M1) into the Segment platform to enable precise audience segmentation. As the engineering leader responsible for Retail Media and Platform Architecture, Michael's input is critical for validating the technical feasibility of this integration and defining the synchronization strategy. The meeting includes Michael, Nikhil Grover, and Yadear Zhang. A Google Meet link and dial-in details are provided. Immediate action required: RSVP to confirm attendance.
-46 
-47 ## [12/12] [RAW Overdue] Expired Risk Acceptance & Waiver Form
-48 Source: gmail | Thread: 19d65769960dcea9 | Relevance: 7/10 | Mention: direct | Updated: 2026-04-07T09:02:00+08:00 | Labels: compliance-alert, risk-waiver, access-management, automation-reminder, security-governance | Senders: cyberrisk.automation | Work Items: RAW-20240306_01-v1.0
-49 Automated reminder regarding an expired Risk Acceptance & Waiver (RAW-20240306_01-v1.0) for the 'Signcloud SaaS User access management' asset at FPG-Fairprice. The waiver expired on May 15, 2025, due to a lack of user access management by the business owner. Michael Bui is explicitly listed in the recipient field (Direct mention). If residual risks remain unremediated, a new RAW form must be submitted via Gsuite/Google Docs immediately. The process requires Section A completion, review by Cybersecurity Risk Team, and sign-off from Technology Governance and Compliance. Failure to remediate or submit updates will result in continued automated reminders.
-<<<
+[2026-04-07T14:03:10+0000]   -> 1 new message(s) cached
+[2026-04-07T14:03:14+0000]   -> restored unread status
+[2026-04-07T14:03:14+0000] [Fetching 2/3] [GCP] New Service Account Key Created - 3702f174e82e5c2
+[2026-04-07T14:03:15+0000] Summarizing [1/63] Re: Hyper stores visual - Advertima (1 msgs, indirect)
+[2026-04-07T14:03:23+0000] Done [1/63] 19b6e85f67d0d448 rel=6
+[2026-04-07T14:03:31+0000]   Retry: resetting SPA state via inbox...
+[2026-04-07T14:03:45+0000]   -> 1 new message(s) cached
+[2026-04-07T14:03:46+0000]   -> restored unread status
+[2026-04-07T14:03:46+0000] [Fetching 3/3] [DPD Postmortem] [2026-01-08] (P1) - High error rate re
+[2026-04-07T14:03:47+0000] Summarizing [2/63] [GCP] New Service Account Key Created - 3702f174e8 (1 msgs, none)
+[2026-04-07T14:03:49+0000]   -> 1 new message(s) cached
+[2026-04-07T14:03:50+0000]   -> restored unread status
+[2026-04-07T14:03:53+0000] Done [2/63] 19d6787ca3ccfa4d rel=2
+[2026-04-07T14:03:54+0000] Summarizing [3/63] [DPD Postmortem] [2026-01-08] (P1) - High error ra (1 msgs, none)
+[2026-04-07T14:04:04+0000] Done [3/63] 19d6783af6ea0ba8 rel=8
+[2026-04-07T14:04:04+0000] [4/63] 19ce6ebdc3530d4d: cached (rel=9)
+[2026-04-07T14:04:05+0000] [5/63] 19d672be6a91c380: cached (rel=5)
+[2026-04-07T14:04:06+0000] [6/63] 19d67245db53ca1b: cached (rel=7)
+[2026-04-07T14:04:06+0000] [7/63] 19d6719504136f8a: cached (rel=2)
+[2026-04-07T14:04:07+0000] [8/63] 19d66f807d1405a6: cached (rel=6)
+[2026-04-07T14:04:08+0000] [9/63] 19d66d7e31c1ac16: cached (rel=2)
+[2026-04-07T14:04:08+0000] [10/63] 19d660bc43a37f42: cached (rel=6)
+[2026-04-07T14:04:09+0000] [11/63] 19d66143e8e46613: cached (rel=6)
+[2026-04-07T14:04:09+0000] [12/63] 19d65f4952e2cfc0: cached (rel=6)
+[2026-04-07T14:04:10+0000] [13/63] 19d65e3d5852eb79: cached (rel=5)
+[2026-04-07T14:04:11+0000] [14/63] 19d65c01ab98b4d9: cached (rel=9)
+[2026-04-07T14:04:11+0000] [15/63] 19d65b55725f1d83: cached (rel=6)
+[2026-04-07T14:04:12+0000] [16/63] 19d6597810a255c5: cached (rel=6)
+[2026-04-07T14:04:12+0000] [17/63] 19d65769960dcea9: cached (rel=7)
+[2026-04-07T14:04:12+0000] [18/63] 19d65352232a22b1: cached (rel=2)
+[2026-04-07T14:04:12+0000] [19/63] 19d650f971623851: cached (rel=5)
+[2026-04-07T14:04:12+0000] [20/63] 19d64c63e4aa1cdf: cached (rel=5)
+[2026-04-07T14:04:12+0000] [21/63] 19d63d75ba794dbc: cached (rel=5)
+[2026-04-07T14:04:12+0000] [22/63] 19d626f73d5d1fd1: cached (rel=5)
+[2026-04-07T14:04:12+0000] [23/63] 19d626134135e75b: cached (rel=2)
+[2026-04-07T14:04:12+0000] [24/63] 19d623fae78f5cc6: cached (rel=6)
+[2026-04-07T14:04:12+0000] [25/63] 19d622a7f5dbff9b: cached (rel=6)
+[2026-04-07T14:04:12+0000] [26/63] 19d622a74576bd1d: cached (rel=6)
+[2026-04-07T14:04:12+0000] [27/63] 19d6229f40254382: cached (rel=6)
+[2026-04-07T14:04:12+0000] [28/63] 19d6222a912f2e16: cached (rel=2)
+[2026-04-07T14:04:12+0000] [29/63] 19d621a83c12208d: cached (rel=9)
+[2026-04-07T14:04:12+0000] [30/63] 19d61da362615067: cached (rel=7)
+[2026-04-07T14:04:12+0000] [31/63] 19d61b084b1e4ddb: cached (rel=5)
+[2026-04-07T14:04:12+0000] [32/63] 19d61acc92d7b67f: cached (rel=6)
+[2026-04-07T14:04:12+0000] [33/63] 19d61a77ab00d0ed: cached (rel=8)
+[2026-04-07T14:04:12+0000] [34/63] 199c705ee4529c98: cached (rel=9)
+[2026-04-07T14:04:12+0000] [35/63] 19d417701b5fac61: cached (rel=5)
+[2026-04-07T14:04:12+0000] [36/63] 19d6125aded53d7f: cached (rel=7)
+[2026-04-07T14:04:12+0000] [37/63] 19d6125a03414160: cached (rel=5)
+[2026-04-07T14:04:12+0000] [38/63] 19d6124e9d10e456: cached (rel=5)
+[2026-04-07T14:04:12+0000] [39/63] 19d6124e822fe166: cached (rel=6)
+[2026-04-07T14:04:12+0000] [40/63] 19d6124e3f92afe7: cached (rel=6)
+[2026-04-07T14:04:12+0000] [41/63] 19d6124e3bd4c895: cached (rel=6)
+[2026-04-07T14:04:12+0000] [42/63] 19d6124e2c4785eb: cached (rel=6)
+[2026-04-07T14:04:12+0000] [43/63] 19d6124e23b98a90: cached (rel=7)
+[2026-04-07T14:04:12+0000] [44/63] 19d60ea98665d1a9: cached (rel=8)
+[2026-04-07T14:04:12+0000] [45/63] 19d60df9559bf07b: cached (rel=7)
+[2026-04-07T14:04:12+0000] [46/63] 19d60c9b6f2aff29: cached (rel=6)
+[2026-04-07T14:04:13+0000] [47/63] 19d60c25c835f548: cached (rel=6)
+[2026-04-07T14:04:14+0000] [48/63] 19d60c1af41a24e6: cached (rel=6)
+[2026-04-07T14:04:14+0000] [49/63] 19d60bec530e19f3: cached (rel=6)
+[2026-04-07T14:04:15+0000] [50/63] 19d6088a3c73d81e: cached (rel=6)
+[2026-04-07T14:04:15+0000] [51/63] 19d5f8e35c1f9faa: cached (rel=5)
+[2026-04-07T14:04:16+0000] [52/63] 19d5f05bc6066c48: cached (rel=6)
+[2026-04-07T14:04:16+0000] [53/63] 19d5b97fdedf8d5d: cached (rel=5)
+[2026-04-07T14:04:17+0000] [54/63] 19d5a6ad0efffc5b: cached (rel=5)
+[2026-04-07T14:04:17+0000] [55/63] 19d56716fade7584: cached (rel=6)
+[2026-04-07T14:04:17+0000] [56/63] 19d56038fde0ac6d: cached (rel=6)
+[2026-04-07T14:04:17+0000] [57/63] 19d55488549f3608: cached (rel=5)
+[2026-04-07T14:04:19+0000] [58/63] 19d523ef32e8f816: cached (rel=3)
+[2026-04-07T14:04:19+0000] [59/63] 19d52fdf13c8b0bd: cached (rel=9)
+[2026-04-07T14:04:20+0000] [60/63] 19d514aa8123e26b: cached (rel=6)
+[2026-04-07T14:04:20+0000] [61/63] 19d50f4f7945d100: cached (rel=2)
+[2026-04-07T14:04:21+0000] [62/63] 19d5013cda0bfcf5: cached (rel=5)
+[2026-04-07T14:04:21+0000] [63/63] 19d4f67520258079: cached (rel=5)
+[2026-04-07T14:04:25+0000] Output: /a0/usr/workdir/gmail-output.md (15 summaries, min_relevance=7)
+[2026-04-07T14:04:25+0000] COMPLETED (63 threads, fetched=3)
+(venv) root@9b542f9f414e:/a0/usr/workdir#
+
+[SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
