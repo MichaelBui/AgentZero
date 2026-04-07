@@ -1,1 +1,1 @@
-{"code_exec_first_output_timeout": 60, "code_exec_between_output_timeout": 180, "code_exec_max_exec_timeout": 600, "code_exec_dialog_timeout": 10, "output_first_output_timeout": 60, "output_between_output_timeout": 180, "output_max_exec_timeout": 600, "output_dialog_timeout": 10}
+{"code_exec_first_output_timeout": 10, "code_exec_between_output_timeout": 30, "code_exec_max_exec_timeout": 300, "code_exec_dialog_timeout": 10, "output_first_output_timeout": 10, "output_between_output_timeout": 30, "output_max_exec_timeout": 288, "output_dialog_timeout": 10}

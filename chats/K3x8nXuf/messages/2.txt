@@ -1,0 +1,17 @@
+✅ **JIRA Fetch Completed Successfully**
+
+### Results Summary
+| Metric | Count |
+|--------|-------|
+| **Tickets Fetched** | 56 total (23 from filter `13811` + 34 from view `10489904`) |
+| **Recent Tickets Processed** | 25 unique tickets within last 14 days |
+| **Summaries Generated** | 22 (filtered by min_relevance=6) |
+| **Output File** | ✅ `/a0/usr/workdir/jira-output.md` written successfully |
+
+### Key Observations
+- All summaries were from cache (no new AI generation needed)
+- Relevance scores ranged from 5-10, with 22 tickets meeting the threshold of ≥6
+- Tickets span both DPD and OMNI projects
+- Output ordered chronologically (most recently updated first)
+
+**Output file ready for review:** `/a0/usr/workdir/jira-output.md`

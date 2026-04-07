@@ -1,0 +1,32 @@
+## Gmail Fetch Result
+
+**Status:** ❌ Failed before completion (fatal)
+
+### Metrics
+- **Threads fetched:** 0
+- **Summaries generated:** 0
+- **Output file:** `workdir/gmail-output.md` — **NOT written** (script failed before output generation)
+
+### Exact Error
+```
+[2026-04-07T08:45:10+0000] FATAL: 0 threads found
+```
+
+### Root Cause Analysis
+The script connected successfully to the Chrome DevTools endpoint (`http://192.168.1.11:9223`) and authenticated to Gmail as `michael.bui@fairpricegroup.sg`, but **no email threads were retrieved** in the auto-detected lookback window (5 days since 2026-04-02).
+
+Possible reasons:
+1. **No matching emails:** Your inbox may have zero threads with new activity in the last 5 days after applying exclusion filters.
+2. **Session expiry:** Gmail session/token may have expired or been invalidated during the run.
+3. **Gmail UI changes:** Recent Gmail layout/API changes could break the browser automation layer.
+4. **Label filtering too aggressive:** Default exclusions (e.g., `❌ ai-exclusion`) may be hiding all threads.
+
+### Next Steps
+Run with diagnostics to isolate the cause:
+```bash
+python /a0/usr/skills/gmail/scripts/gmail.py --log-level DEBUG --early-stop 0 --max-scan 1000
+```
+Or try a manual verification:
+- Confirm Gmail session is active via browser on `michael.bui@fairpricegroup.sg`.
+- Check if recent emails exist outside the default exclusion labels.
+- Consider using `--cached-only` to verify DB state first.
