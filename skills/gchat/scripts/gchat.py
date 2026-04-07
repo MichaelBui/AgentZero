@@ -89,6 +89,16 @@ _WORD_HINTS = {"direct": 200, "indirect": 100, "none": 30}
 _DB_OPEN_RETRIES = 3
 _DB_RETRY_DELAY_S = 2
 
+def _default_lookback_days() -> int:
+    """Always cover 3 weekdays: 5 (Mon-Tue), 4 (Sun), 3 (Wed-Sat)."""
+    weekday = datetime.now(_TZ).weekday()
+    if weekday in (0, 1):
+        return 5
+    if weekday == 6:
+        return 4
+    return 3
+
+
 SEL_FEED = 'span[role="listitem"][data-group-id][data-is-unread]'
 SEL_MSG = "c-wiz[data-topic-id]"
 
@@ -1389,8 +1399,8 @@ def main():
     )
     ap.add_argument("--cdp-url", default=DEFAULT_CDP,
                     help=f"CDP endpoint (default: {DEFAULT_CDP})")
-    ap.add_argument("--days", type=int, default=3,
-                    help="Days to look back (default: 3)")
+    ap.add_argument("--days", type=int, default=None,
+                    help="Lookback days (default: 3 Wed-Sat, 4 Sun, 5 Mon-Tue)")
     ap.add_argument("--max-threads", type=int, default=200,
                     help="Max conversations to process (default: 200)")
     ap.add_argument("--max-scan", type=int, default=500,
@@ -1423,7 +1433,8 @@ def main():
     _LOG_LEVEL = args.log_level.upper()
 
     output_path = Path(args.output)
-    since_dt = datetime.now(_TZ) - timedelta(days=args.days)
+    days = args.days if args.days is not None else _default_lookback_days()
+    since_dt = datetime.now(_TZ) - timedelta(days=days)
     since_iso = since_dt.strftime("%Y-%m-%d")
 
     cutoff_ms = int(since_dt.timestamp() * 1000)
@@ -1432,7 +1443,7 @@ def main():
         output_path.unlink()
 
     db = open_db()
-    log(f"STARTED (days={args.days}, since={since_iso}, user={GCHAT_USER_NAME})")
+    log(f"STARTED (days={days}, since={since_iso}, user={GCHAT_USER_NAME})")
 
     if args.refetch_since:
         try:
@@ -1499,7 +1510,7 @@ def main():
             sys.exit(0)
 
         feed = snapshot_feed(page, cutoff_ms)
-        log(f"Feed: {len(feed)} item(s) within {args.days} day(s)")
+        log(f"Feed: {len(feed)} item(s) within {days} day(s)")
         if not feed:
             log("FATAL: 0 feed items - run --debug-dom to inspect.")
             sys.exit(2)

@@ -64,7 +64,7 @@ python /a0/usr/skills/gchat/scripts/gchat.py --min-relevance 8
 | Argument | Required | Default | Description |
 |---|---|---|---|
 | `--cdp-url` | No | `http://192.168.1.11:9223` | Chrome DevTools Protocol endpoint |
-| `--days` | No | 3 | Days to look back |
+| `--days` | No | 3 (Wed-Sat), 4 (Sun), 5 (Mon-Tue) | Days to look back (auto-detects to always cover 3 weekdays) |
 | `--max-threads` | No | 200 | Max conversations to process |
 | `--max-scan` | No | 500 | Max feed items to scan (safety cap) |
 | `--max-scroll` | No | 5 | Max scroll-up iterations per thread |

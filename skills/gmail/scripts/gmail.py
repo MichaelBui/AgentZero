@@ -94,9 +94,9 @@ _DB_RETRY_DELAY_S = 2
 
 
 def _default_lookback_days() -> int:
-    """3 weekdays coverage: 3 (Tue-Sat), 4 (Sun), 5 (Mon)."""
+    """Always cover 3 weekdays: 5 (Mon-Tue), 4 (Sun), 3 (Wed-Sat)."""
     weekday = datetime.now(_TZ).weekday()
-    if weekday == 0:
+    if weekday in (0, 1):
         return 5
     if weekday == 6:
         return 4
@@ -1355,7 +1355,7 @@ def main():
     parser = argparse.ArgumentParser(description="Gmail Skill - fetch, cache, and summarize email threads")
     parser.add_argument("--cdp-url", default=DEFAULT_CDP, help=f"Chrome DevTools endpoint (default: {DEFAULT_CDP})")
     parser.add_argument("--days", type=int, default=None,
-                        help="Lookback days (default: 3 Tue-Sat, 4 Sun, 5 Mon)")
+                        help="Lookback days (default: 3 Wed-Sat, 4 Sun, 5 Mon-Tue)")
     parser.add_argument("--max-threads", type=int, default=200, help="Max threads to read (default: 200)")
     parser.add_argument("--max-scan", type=int, default=500, help="Max total threads to scan (default: 500)")
     parser.add_argument("--exclude-labels", default=DEFAULT_EXCLUDE, help="JSON array of labels to exclude")

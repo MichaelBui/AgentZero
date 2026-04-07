@@ -63,7 +63,7 @@ python /a0/usr/skills/gmail/scripts/gmail.py --min-relevance 8
 | Argument | Required | Default | Description |
 |---|---|---|---|
 | `--cdp-url` | No | `http://192.168.1.11:9223` | Chrome DevTools Protocol endpoint |
-| `--days` | No | 3 (Tue-Sat), 4 (Sun), 5 (Mon) | Days to look back |
+| `--days` | No | 3 (Wed-Sat), 4 (Sun), 5 (Mon-Tue) | Days to look back (auto-detects to always cover 3 weekdays) |
 | `--max-threads` | No | 200 | Max non-excluded threads to process |
 | `--max-scan` | No | 500 | Max total threads to scan across all pages (safety cap) |
 | `--early-stop` | No | 5 | Stop fetching after N consecutive cached threads (0=disabled) |
