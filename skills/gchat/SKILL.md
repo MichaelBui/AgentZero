@@ -16,13 +16,6 @@ tags: [gchat, google-chat, chrome, cdp, devtools, conversations, messages, chat,
 
 Do NOT use for: sending messages (read-only), Gmail emails (use gmail skill), Slack/Teams.
 
-## Prerequisites
-- Running Chrome/Chromium instance with remote debugging at `192.168.1.11:9223`
-- Active Google Chat session in Chrome (already logged in)
-- Google Chat must be in **3-panel view** (nav left, feed middle, conversation right)
-- `playwright` Python package installed
-- `API_KEY_OTHER` or `LLAMA_TOKEN` environment variable set for LLM summarization
-
 ## Usage
 
 ### Default - read last 3 days, up to 200 conversations
@@ -76,14 +69,6 @@ python /a0/usr/skills/gchat/scripts/gchat.py --min-relevance 8
 | `--output` | No | `workdir/gchat-output.md` | Write results to file |
 | `--min-relevance` | No | 7 | Minimum relevance score for output (1-10) |
 | `--debug-dom` | No | false | Dump Home feed DOM to stderr and exit |
-
-## Required Environment Variables
-| Variable | Required | Default | Purpose |
-|---|---|---|---|
-| `API_KEY_OTHER` / `LLAMA_TOKEN` | Yes | - | LiteLLM proxy auth (set via Terraform) |
-| `LITELLM_BASE_URL` | No | `https://llm.gigary.com/v1` | LiteLLM proxy endpoint |
-| `SUMMARIZE_MODEL` | No | `local/qwen3.5-35b-a3b:instruct-reasoning` | LLM model for summarization |
-| `MAX_SUMMARY_WORDS` | No | `500` | Max words per summary |
 
 ## Output
 

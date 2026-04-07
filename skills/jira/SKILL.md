@@ -9,28 +9,46 @@ tags: [jira, jql, search, tickets, query, filter, view, polaris, backlog, sprint
 # Jira Skill
 
 ## When to Use
-
-| User Intent | Command |
-|---|---|
-| Any combination of JQL, filter, and/or view | `python jira.py --jql '...' --filter-id N --view-id N` |
-| Search tickets by JQL only | `python jira.py --jql '...'` |
-| Fetch tickets from a saved Jira filter | `python jira.py --filter-id N` |
-| Fetch tickets from a Polaris/board view | `python jira.py --view-id N` |
-| Default: current user's active tickets | `python jira.py` |
-| Fast report from cache (no API calls) | `python jira.py --cached-only` |
-| Force full re-fetch and re-summarize | `python jira.py --force` |
+- User asks to search, list, or summarize Jira tickets
+- User wants ticket summaries for daily briefing
+- User needs to review active tickets, sprint backlogs, or saved filters
+- User asks about recent Jira activity or ticket status
 
 Do NOT use for: creating/updating tickets, fetching non-NTUC Jira instances.
 
-## Required Environment Variables
+## Usage
+
+### Default - current user's active tickets
+```bash
+python /a0/usr/skills/jira/scripts/jira.py
 ```
-JIRA_EMAIL    - michael.bui@fairpricegroup.sg
-JIRA_API_KEY  - loaded via secrets (never log full value)
-API_KEY_OTHER - LiteLLM proxy authentication (set via Terraform, or LLAMA_TOKEN)
+
+### Fetch from saved filter and/or Polaris view
+```bash
+python /a0/usr/skills/jira/scripts/jira.py --filter-id 13811 --view-id 10489904
+```
+
+### Search tickets by JQL
+```bash
+python /a0/usr/skills/jira/scripts/jira.py --jql 'project = DPD AND status = "In Progress"'
+```
+
+### Any combination of JQL, filter, and view
+```bash
+python /a0/usr/skills/jira/scripts/jira.py --jql '...' --filter-id N --view-id N
+```
+
+### Force re-fetch and re-summarize everything
+```bash
+python /a0/usr/skills/jira/scripts/jira.py --force
+```
+
+### Fast report from cache (no API calls)
+```bash
+python /a0/usr/skills/jira/scripts/jira.py --cached-only
 ```
 
 ## Arguments
-
 | Argument | Required | Default | Description |
 |---|---|---|---|
 | `--jql` | No | currentUser() active tickets | JQL query string |
@@ -62,6 +80,18 @@ blocks: DPD-273 | parent: DPD-644 | Last Updated: 2026-03-19T13:05:25+08:00
 [AI summary with adaptive length based on relevance]
 ---
 ```
+
+## Monitoring
+
+The script writes progress to stdout. Key markers to look for:
+
+- **Fetching progress:** `[Fetching X/Y]` - currently loading tickets from Jira API
+- **Summarizing progress:** `Summarizing [X/Y]` - AI is generating a summary for a ticket
+- **Job completed:** `COMPLETED (N tickets, fetched=M)` at the end
+- **Job completed with errors:** `COMPLETED WITH ERRORS (N tickets, M error(s))` - run finished but some tickets failed AI summarization
+- **Job failed:** `FAILED: error message` - fatal error
+
+**Important:** The output file is only written after ALL summarization completes. Wait for `COMPLETED` before reading the output file.
 
 ## Relevance Scoring
 

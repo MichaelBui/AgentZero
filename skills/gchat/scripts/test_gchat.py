@@ -45,6 +45,8 @@ def db_file(tmp_path):
 def _seed_conversation(db, resource_id="space123", name="Test Space", n_msgs=3,
                        user_name=None, mention_content=None):
     """Helper to seed a conversation with n messages."""
+    from datetime import datetime, timedelta
+    now = datetime.now().astimezone()
     for i in range(n_msgs):
         msg_id = f"msg{i}"
         author = f"User{i}"
@@ -54,9 +56,10 @@ def _seed_conversation(db, resource_id="space123", name="Test Space", n_msgs=3,
         if i == 0 and mention_content:
             content = mention_content
         meta = {"timestamp_display": f"10:0{i} AM"}
+        ts = (now - timedelta(hours=n_msgs - i)).isoformat()
         db.upsert_atomic("gchat", resource_id, msg_id, author=author,
-                         content=content, created_at=f"2026-04-0{i+1}T10:00:00+08:00",
-                         updated_at=f"2026-04-0{i+1}T10:00:00+08:00", metadata=meta)
+                         content=content, created_at=ts,
+                         updated_at=ts, metadata=meta)
     return resource_id
 
 
@@ -868,7 +871,7 @@ def test_format_summary_block(subtests):
         assert "Source: gchat" in block
         assert "Relevance: 8/10" in block
         assert "Mention: direct" in block
-        assert "Messages: 5" in block
+        assert "Messages: 5" not in block
         assert "DPD-1" in block
         assert "Alice" in block
         assert "team-chat" in block

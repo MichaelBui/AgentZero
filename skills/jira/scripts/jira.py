@@ -388,14 +388,16 @@ class SkillDB:
                 params.append(since)
             where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
             rows = self._conn.execute(
-                f"""SELECT rs.*, COALESCE(ac_latest.max_updated, rs.summarized_at) AS sort_ts
+                f"""SELECT rs.*,
+                       COALESCE(ac_latest.max_updated, rs.summarized_at) AS sort_ts,
+                       ac_latest.max_updated AS last_updated
                     FROM resource_summary rs
                     LEFT JOIN (
                         SELECT resource_id, MAX(updated_at) AS max_updated
                         FROM atomic_content GROUP BY resource_id
                     ) ac_latest ON rs.resource_id = ac_latest.resource_id
                     {where}
-                    ORDER BY sort_ts DESC""",
+                    ORDER BY sort_ts ASC""",
                 params,
             ).fetchall()
         return [dict(r) for r in rows]
@@ -1119,6 +1121,10 @@ def _format_summary_block(db: SkillDB, key: str, s: dict, idx: int, total: int) 
         parts.append(f"Relevance: {rel}/10")
     if mt and mt != "none":
         parts.append(f"Mention: {mt}")
+
+    last_updated = s.get("last_updated")
+    if last_updated:
+        parts.append(f"Updated: {last_updated}")
 
     for field_name, label in [
         ("status", "Status"), ("issuetype", "Type"), ("priority", "Priority"),

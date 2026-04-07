@@ -490,7 +490,7 @@ def test_get_all_summaries(subtests, db):
         ("When since filter then excludes older resources", {"since": "2026-01-02"}, 2, None),
         ("When since filter with min_relevance then applies both",
          {"since": "2026-01-02", "min_relevance": 5}, 2, None),
-        ("When results returned then ordered chronologically (newest first)", {}, 3, ["K-2", "K-3", "K-1"]),
+        ("When results returned then ordered chronologically (oldest first)", {}, 3, ["K-1", "K-3", "K-2"]),
     ]
     for scenario, kwargs, expected_count, expected_order in cases:
         with subtests.test(msg=scenario):
@@ -1044,7 +1044,7 @@ def test_write_output_multiple_items_filtering_and_ordering(subtests):
         ("When both filters then only K-MID and K-NEW remain",
          {"min_relevance": 6, "since": "2026-01-01"},
          {"present": ["Mid summary", "New summary"], "absent": ["Old summary", "Low summary"]}),
-        ("When no filters then all items included in chronological order (newest first)",
+        ("When no filters then all items included in chronological order (oldest first)",
          {"min_relevance": 1, "since": None},
          {"present": ["Old summary", "Mid summary", "New summary", "Low summary"], "absent": []}),
     ]
@@ -1059,12 +1059,12 @@ def test_write_output_multiple_items_filtering_and_ordering(subtests):
                 assert s not in content
             output.unlink()
 
-    with subtests.test(msg="When output generated then newest items appear first"):
+    with subtests.test(msg="When output generated then oldest items appear first"):
         output = Path(tempfile.mktemp(suffix=".md"))
         write_output(d, output, min_relevance=1)
         content = output.read_text()
-        assert content.index("New summary") < content.index("Mid summary")
-        assert content.index("Mid summary") < content.index("Old summary")
+        assert content.index("Old summary") < content.index("Mid summary")
+        assert content.index("Mid summary") < content.index("New summary")
         output.unlink()
 
     _cleanup_db(d, path)

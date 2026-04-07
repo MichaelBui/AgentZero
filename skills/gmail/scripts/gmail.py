@@ -537,10 +537,13 @@ class SkillDB:
         with self._lock:
             query = """
                 SELECT rs.*,
-                       COALESCE(ac_latest.max_cached, rs.summarized_at) AS sort_ts
+                       COALESCE(ac_latest.last_updated, rs.summarized_at) AS sort_ts,
+                       ac_latest.last_updated
                 FROM resource_summary rs
                 LEFT JOIN (
-                    SELECT resource_id, MAX(cached_at) AS max_cached
+                    SELECT resource_id,
+                           MAX(cached_at) AS max_cached,
+                           MAX(updated_at) AS last_updated
                     FROM atomic_content GROUP BY resource_id
                 ) ac_latest ON ac_latest.resource_id = rs.resource_id
                 WHERE 1=1
@@ -553,9 +556,9 @@ class SkillDB:
                 query += " AND rs.final_relevance >= ?"
                 params.append(min_relevance)
             if since:
-                query += " AND COALESCE(ac_latest.max_cached, rs.summarized_at) >= ?"
+                query += " AND COALESCE(ac_latest.last_updated, rs.summarized_at) >= ?"
                 params.append(since)
-            query += " ORDER BY sort_ts DESC"
+            query += " ORDER BY sort_ts ASC"
             rows = self._conn.execute(query, params).fetchall()
         return [dict(r) for r in rows]
 
@@ -1313,6 +1316,10 @@ def _format_summary_block(s: dict, idx: int, total: int) -> str:
         parts.append(f"Relevance: {rel}/10")
     if mt and mt != "none":
         parts.append(f"Mention: {mt}")
+
+    last_updated = s.get("last_updated")
+    if last_updated:
+        parts.append(f"Updated: {last_updated}")
 
     labels = meta.get("labels", [])
     if isinstance(labels, list) and labels and isinstance(labels[0], str) and "-" in labels[0]:

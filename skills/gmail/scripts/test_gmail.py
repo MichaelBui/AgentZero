@@ -109,7 +109,7 @@ def test_default_lookback_days(subtests):
     tz = ZoneInfo("Asia/Singapore")
     cases = [
         ("When Monday then returns 5", 0, 5),
-        ("When Tuesday then returns 3", 1, 3),
+        ("When Tuesday then returns 5", 1, 5),
         ("When Wednesday then returns 3", 2, 3),
         ("When Thursday then returns 3", 3, 3),
         ("When Friday then returns 3", 4, 3),
@@ -1805,7 +1805,7 @@ def test_upsert_atomic_immutability(subtests, db):
 
 
 def test_get_all_summaries_with_since_filter(subtests):
-    with subtests.test(msg="When since filter then results sorted by sort_ts desc"):
+    with subtests.test(msg="When since filter then results sorted by sort_ts asc"):
         d = gmail.open_db(":memory:")
         d.upsert_atomic("gmail", "t_old", "m_old", "A", "C", "2025-01-01", "2025-01-01")
         d.upsert_summary("t_old", "gmail", "Old", "Sum", mention_type="none",
@@ -1815,7 +1815,7 @@ def test_get_all_summaries_with_since_filter(subtests):
                           estimated_relevance=9, final_relevance=9)
         all_results = d.get_all_summaries()
         assert len(all_results) == 2
-        assert all_results[0]["title"] == "New"
+        assert all_results[0]["title"] == "Old"
 
     with subtests.test(msg="When source filter then returns only matching source"):
         d2 = gmail.open_db(":memory:")

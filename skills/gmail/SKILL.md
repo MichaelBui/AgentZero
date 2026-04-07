@@ -16,12 +16,6 @@ tags: [gmail, email, chrome, cdp, devtools, inbox, threads, conversations, summa
 
 Do NOT use for: sending emails (read-only), calendar events, non-Gmail providers.
 
-## Prerequisites
-- Running Chrome/Chromium instance with remote debugging at `192.168.1.11:9223`
-- Active Gmail session in Chrome (already logged in)
-- `playwright` Python package installed
-- `API_KEY_OTHER` or `LLAMA_TOKEN` environment variable set for LLM summarization
-
 ## Usage
 
 ### Default - read last 3 days, up to 200 threads
@@ -74,14 +68,6 @@ python /a0/usr/skills/gmail/scripts/gmail.py --min-relevance 8
 | `--refetch-since` | No | - | Re-fetch all threads cached on or after this date (YYYY-MM-DD) |
 | `--output` | No | `workdir/gmail-output.md` | Write results to file |
 | `--log-level` | No | INFO | Log level (DEBUG for diagnostics) |
-
-## Required Environment Variables
-| Variable | Required | Default | Purpose |
-|---|---|---|---|
-| `API_KEY_OTHER` / `LLAMA_TOKEN` | Yes | - | LiteLLM proxy auth (set via Terraform) |
-| `LITELLM_BASE_URL` | No | `https://llm.gigary.com/v1` | LiteLLM proxy endpoint |
-| `SUMMARIZE_MODEL` | No | `local/qwen3.5-35b-a3b:instruct-reasoning` | LLM model for summarization |
-| `MAX_SUMMARY_WORDS` | No | `500` | Max words per summary |
 
 ## Output
 
