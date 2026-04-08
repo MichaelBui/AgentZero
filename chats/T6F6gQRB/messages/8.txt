@@ -1,0 +1,39 @@
+Go Microservices Architecture: Patterns and Best Practices 2026
+https://reintech.io/blog/go-microservices-architecture-patterns-best-practices-2026
+Learn battle-tested Go microservices patterns for 2026: circuit breakers, event-driven architecture, distributed tracing, and deployment strategies that work in production.
+
+AI without spaghetti: Clean architecture in the age of AI - JAVAPRO
+https://javapro.io/2026/03/17/ai-without-spaghetti-clean-architecture-in-the-age-of-ai/
+Mar 17, 2026 ... Clean architecture organizes software into clear layers so that the core business logic remains independent from frameworks, databases, and ...
+
+Go Microservices Architecture — Patterns That Actually Work
+https://appetizers.io/en/blog/golang-microservices-architecture/
+How to structure Go microservices for production. Service boundaries, communication patterns, error propagation, and the tooling that keeps it manageable.
+
+How I'd Architect a .NET Monolith in 2026 That's Ready to Split Later
+https://medium.com/@antonellosemeraro/how-id-architect-a-net-monolith-in-2026-that-s-ready-to-split-later-a86738878914
+Mar 20, 2026 ... I've done this three times. Three greenfield projects where the first architecture decision was “microservices,” and in every case, the team ...
+
+Architecting a Maintainable Go Microservice: Structure, Logging, and ...
+https://dev.to/sagarmaheshwary/go-microservices-boilerplate-series-from-hello-world-to-production-part-1-46k5
+The repository is meant to be a reusable boilerplate for spinning up new Go microservices, giving you a clean, production-ready starting point for any project. The master branch contains a clean, production-ready setup, while the examples branch includes all the working examples and demos featured throughout the series.
+
+AI-Powered Backend Systems Guide (2026) - TurboDocx
+https://www.turbodocx.com/blog/ai-powered-backend-systems
+Mar 25, 2026 ... This guide covers the eight patterns that production AI backends rely on in 2026. Whether you are building intelligent document APIs or adding ...
+
+AI Microservices: Architecture & Automation Guide
+https://vife.ai/blog/building-ai-microservices-architecture-automation
+Learn how to build scalable AI microservices. Explore architecture patterns, automation strategies, and best practices for modern AI development.
+
+Best AI for Go Development: Ship Production-Ready Golang Code ...
+https://www.jenova.ai/en/resources/best-ai-for-go-development
+Mar 1, 2026 ... Over 47,000 developers have used this AI assistant to accelerate their Go projects—from startups shipping their first microservice to enterprise ...
+
+Building Resilient Go Microservices: 5 Proven Patterns for Production ...
+https://jsschools.com/golang/building-resilient-go-microservices-5-proven-patt/
+Building Resilient Go Microservices: 5 Proven Patterns for Production Systems Learn Go microservices best practices: circuit breaking, graceful shutdown, health checks, rate limiting, and distributed tracing. Practical code samples to build resilient, scalable distributed systems with Golang.
+
+End-to-End Testing for Microservices: A 2026 Guide | Bunnyshell
+https://www.bunnyshell.com/blog/end-to-end-testing-for-microservices-a-2025-guide/
+Mar 16, 2026 ... There's truth to that: if done poorly, E2E tests can become brittle, flaky, and a bottleneck that reduces your deployment frequency. Yet, in ...

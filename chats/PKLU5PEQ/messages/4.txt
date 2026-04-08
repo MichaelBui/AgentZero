@@ -1,0 +1,8 @@
+The Jira fetch and summarization job completed successfully.
+
+**Results:**
+- **Tickets Fetched:** 56 tickets (23 from filter 13811, 34 from view 10489904; 25 recent/active were processed for summarization).
+- **Summaries Generated:** 22 summaries (filtered by `min_relevance=6`).
+- **Output File:** Confirmed written to `/a0/usr/workdir/jira-output.md` (93 lines).
+
+The job ran from 05:52:54 to 05:54:47 UTC, processing tickets with AI-driven relevance scoring and caching. The output file contains structured markdown summaries for high-relevance tickets relevant to Michael Bui's domains (Retail Media, Order Management, Compliance, etc.).

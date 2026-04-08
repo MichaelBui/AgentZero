@@ -1,0 +1,39 @@
+Four Trends in AI Experimentation, Adoption, and Transformation
+https://hbr.org/sponsored/2026/03/four-trends-in-ai-experimentation-adoption-and-transformation
+Organizations must learn how to empower people to adapt, build trust in AI experiences, and embrace a culture of fast-paced experimentation and intentional change.
+
+Building An Elite AI Engineering Culture In 2026 | Chris Roth
+https://cjroth.com/blog/2026-02-18-building-an-elite-engineering-culture
+AI accelerates high-performing orgs and unravels struggling ones.
+
+PDF the-state-of-engineering-ai-2026
+https://explore.simscale.com/hubfs/resources/reports/state-of-engineering-ai-2026.pdf
+The results of our 2026 survey show that meaningful progress is now underway, but adoption remains uneven. More engineering organizations are experimenting with AI-driven workflows, and measurable gains are beginning to appear, from faster engineering response times to dramatically expanded design exploration. At the same time, scaling these capabilities across complex engineering environments ...
+
+Where AI is moving beyond experimentation, according to leaders
+https://www.weforum.org/stories/2026/03/where-is-ai-moving-beyond-experimentation-leaders-scaling/
+Mar 25, 2026 ... ... engineering workflows. The World Economic ... It is a story about organisational redesign, cultural trust and solid data foundations.
+
+Why AI Will Quietly Rewrite Power, Trust, and Culture in 2026
+https://www.linkedin.com/pulse/why-ai-quietly-rewrite-power-trust-culture-2026-anthony-conti-wfwyc
+It arrives as a behavior change, and culture only shows up later, when leaders realize people are thinking, preparing, and deciding differently than the organization was designed to handle.
+
+AI Is Creating Culture Debt In Organizations - Forbes
+https://www.forbes.com/sites/niritcohen/2026/03/04/ai-is-creating-culture-debt-in-organizations/
+Nirit Cohen covers the Future of Work, bridging trends with solutions. Follow Author. Mar 04, 2026, 05:39pm EST. -:-- / -:--.
+
+AI Will Reshape More Jobs Than It Replaces | BCG
+https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces
+Over the next two to three years, 50% to 55% of jobs in the US will be reshaped by AI. For many employees, this will mean that they retain the same or a similar role but face radically new expectations for how they work and what they produce. For company leaders, it will require a clear vision for how the transformation is managed, including a scaled, strategic approach to upskilling and ...
+
+Powering the new age of AI-led engineering in IT at Microsoft
+https://www.microsoft.com/insidetrack/blog/powering-the-new-age-of-ai-led-engineering-in-it-at-microsoft/
+Mar 5, 2026 ... Embracing AI in our IT engineering organization is helping us transform our culture, upskill our teams, and empower our engineers.
+
+Evolving into an AI-First Engineering Organization - 5 Structural ...
+https://codenote.net/en/posts/ai-first-engineering-org-evolution-2026/
+In 2026, engineering organizations are rapidly evolving through AI tool adoption. Drawing from moves by Block, Meta, and Atlassian, this article identifies 5 structural shifts: lean teams, AI-based metrics, knowledge institutionalization, org flattening, and AI infrastructure investment, with actionable steps to replicate them.
+
+AI Transformation Lead Role Grows 8.6x in 1 Year - LinkedIn
+https://www.linkedin.com/posts/matt-schulman-15911861_the-ai-transformation-role-barely-existed-activity-7439768394565926913-HWSH
+Mar 17, 2026 ... By March 2026: 2.16%. ... They'll be the ones whose leaders treated AI readiness as an engineering culture problem, not an HR problem.

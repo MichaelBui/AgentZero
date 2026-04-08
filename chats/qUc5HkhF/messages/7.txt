@@ -1,0 +1,39 @@
+DORA | DORA's software delivery performance metrics
+https://dora.dev/guides/dora-metrics/
+DORA has identified five software delivery performance metrics that provide an effective way of measuring the outcomes of the software delivery process. DORA's research shows that these performance metrics predict better organizational performance and well-being for team members.
+
+Performance Metrics for Software Developers - Axify
+https://axify.io/blog/performance-metrics-software-development
+Learn how performance metrics for software developers reveal delivery bottlenecks, improve engineering decisions, and turn workflow data ...
+
+PDF DORA e-book 2024 - new branding - EN
+https://axify.io/hubfs/Axify%20-%20DORA%20e-book/DORA%20E-book%202024%20-%20EN.pdf
+This guide delves into the four core DORA metrics: Deployment Frequency, Lead Time for Changes, Failed Deployment Recovery Time, and Change Failure Rate. We aim to empower your teams to measure, analyze, and improve their software delivery performance by explai-ning each metric in depth.
+
+DevOps & DORA Metrics: The Complete Guide - Splunk
+https://www.splunk.com/en_us/blog/learn/devops-metrics.html
+DevOps metrics for a variety of practices DevOps metrics are data that enable organizations to assess the effectiveness of their DevOps practices and how they contribute to the achievement of organizational goals. The four key DevOps Metrics include Change Failure Rate, Deployment Frequency, Lead Time To Change, and Mean Time To Restore Services.
+
+DORA metrics: How to measure Open DevOps success - Atlassian
+https://www.atlassian.com/devops/frameworks/dora-metrics
+These metrics provide information about how quickly DevOps can respond to changes, the average time to deploy code, the frequency of iterations, and insight into failures. This guide overviews the four DORA metrics, their importance, and how teams can use Open DevOps to measure performance.
+
+Top 15 DORA Metric Tools for DevOps Success in 2026 - CodeAnt AI
+https://www.codeant.ai/blogs/top-dora-metric-tools
+Learn DORA metrics and compare 15 tools to improve deployment frequency, lead time, failure rate, and MTTR. Pick the right platform for your ...
+
+Engineering Effectiveness: AI-Aware DORA Metrics for 2026
+https://blog.exceeds.ai/engineering-effectiveness-developer-productivity-2026/
+Key Takeaways Engineering effectiveness in 2026 depends on extending DORA metrics with AI-specific measures like AI adoption rates and code-level cycle times to prove ROI. AI tools deliver 55% faster task completion but also increase PR review times by 91% and raise bug-fix volume, so teams need code-level analytics to see the real impact.
+
+A Leader's Guide to Software Development Metrics in the Age of AI
+https://medium.com/@justhamade/beyond-the-hype-a-leaders-guide-to-software-development-metrics-in-the-age-of-ai-129cd6d2fa7b
+Scenario A: Six months later, their DORA dashboard shows Deployment Frequency and Lead Time for Changes have improved. ... engineer (at team level) ...
+
+Another way to gauge your DevOps performance according to DORA | Google ...
+https://cloud.google.com/blog/products/devops-sre/another-way-to-gauge-your-devops-performance-according-to-dora
+These metrics can be used to evaluate the effectiveness of your organization's software development and delivery pipelines over time as well as help you evaluate your performance amongst the greater DevOps community.
+
+2026 Guide to Software Development KPIs - Hivel
+https://www.hivel.ai/sei/software-development-kpi
+DORA Metrics as Software Engineering KPIs: Strengths and Limits ... Always balance speed metrics (Lead Time) with stability metrics (CFR) to ...

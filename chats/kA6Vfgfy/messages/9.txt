@@ -1,0 +1,39 @@
+DORA Metrics: A Practical Guide for Engineering Leaders
+https://typoapp.io/blog/dora-metrics-for-engineering-leaders
+Understanding DORA metrics is critical for modern software delivery because they provide a proven, data-driven framework for measuring both the speed and stability of your engineering processes. By leveraging these metrics, organizations can drive better business outcomes, improve team performance, and build more resilient systems.
+
+Engineering Metrics That Matter (And Ones to Avoid) - EM Tools
+https://www.em-tools.io/engineering-metrics
+Mar 30, 2026 ... DORA Metrics. Deployment Frequency. Deployment frequency measures how often your team deploys code to production. It is a proxy for batch size ...
+
+Engineering Metrics: Reading DORA and DevEx as System Signal - LinkedIn
+https://www.linkedin.com/pulse/engineering-metrics-2026reading-dora-devex-system-signals-shah-qhsef
+DORA and DevEx are widely used but often misread. What these metrics reveal, where they fall short, and how to read them as system signals.
+
+The Great Developer Lie: Why Measuring Output is Killing Your ...
+https://medium.com/@wernerotto/the-great-developer-lie-why-measuring-output-is-killing-your-engineering-teams-productivity-6d1c5c5e2fc3
+Mar 13, 2026 ... This is where DORA metrics come in. Developed by the DevOps Research ... Tracking these friction points allows engineering leadership ...
+
+DORA Metrics 2026: How Elite Software Delivery Teams Measure ...
+https://www.programming-helper.com/tech/dora-metrics-2026-software-delivery-performance
+The DORA research program enters its eleventh year with new insights into software delivery performance. As platform engineering transforms how organizations build software, the four key metrics remain the gold standard for measuring engineering excellence. This analysis explores the latest DORA findings, how AI amplifies delivery capabilities, and why Python has become essential for measuring ...
+
+Using DORA Metrics and Process Behavior Charts - InfoQ
+https://www.infoq.com/articles/DORA-metrics-PBCs/
+Dec 29, 2025 ... ... from real signals, turning delivery metrics into a reliable decision-making tool. ... engineering culture and outcomes. Egor enjoys ...
+
+DORA | DORA's software delivery performance metrics
+https://dora.dev/guides/dora-metrics/
+DORA has identified five software delivery performance metrics that provide an effective way of measuring the outcomes of the software delivery process. DORA's research shows that these performance metrics predict better organizational performance and well-being for team members.
+
+How DX accelerates engineering leader onboarding
+https://getdx.com/blog/how-dx-accelerates-engineering-leader-onboarding/
+Mar 31, 2026 ... You need reliable metrics, a coherent story, and the ability to tie engineering activity to outcomes that matter to the business. In 2026, that ...
+
+DORA Metrics for Engineering Teams: Guide & Benchmarks
+https://www.em-tools.io/frameworks/dora-metrics
+Implement DORA metrics in your engineering team. Covers deployment frequency, lead time, change failure rate, benchmarks, and how to improve each metric.
+
+What the 2025 DORA Report Teaches Us About Observability
+https://www.honeycomb.io/blog/what-2025-dora-report-teaches-us-about-observability-platform-quality
+Oct 2, 2025 ... The 2025 DORA State of AI-Assisted Software Development Report delivers a critical insight for technology leaders: AI is fundamentally an ...

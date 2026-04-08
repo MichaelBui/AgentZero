@@ -1,0 +1,39 @@
+Model Context Protocol (MCP) Security Risks Explained - Veeam
+https://www.veeam.com/blog/model-context-protocol-security-risks.html
+Key Takeaways: Model Context Protocol (MCP) is a standard way for an AI app/agent to access tools, resources, and prompts exposed by an MCP server. The big new security risk MCP brings into the enterprise model is prompt injection/context manipulation that can steer an agent into unsafe tool use (including unintended access or data exfiltration). Many other risks (e.g., token theft or server ...
+
+Model Context Protocol (MCP): A Technical Deep Dive
+https://dasroot.net/posts/2026/04/model-context-protocol-mcp-technical-deep-dive/
+This deep dive examines the Model Context Protocol (MCP) version 2.1, released in 2026, focusing on its architecture and implementation details. We'll explore the runtime architecture, security and trust framework, and performance characteristics, including message serialization, context management, and distributed execution models.
+
+Comprehensive Guide to Model Context Protocol (MCP) in 2026
+https://explore.n1n.ai/blog/comprehensive-guide-to-model-context-protocol-mcp-2026-2026-04-06
+An in-depth technical exploration of the Model Context Protocol (MCP), covering its 2026 architecture, Streamable HTTP transport, OAuth 2.1 security, and enterprise implementation strategies for AI agents.
+
+MCP Server Security Risks: What Development Teams Need to ...
+https://www.pomerium.com/blog/mcp-server-security-risks-what-development-teams-need-to-know-in-2026
+MCP Server Security Risks: What Development Teams Need to Know in 2026 ... Model Context Protocol (MCP): A specification that standardizes how ...
+
+Model Context Protocol (MCP) 2026: Complete Integration & Security ...
+https://iterathon.tech/blog/model-context-protocol-implementation-2026-integration-security-guide
+Build production MCP servers for AI integration. Complete guide: protocol spec, Claude Desktop setup, security best practices, and Python implementation examples.
+
+Protecting AI conversations at Microsoft with Model Context Protocol ...
+https://www.microsoft.com/insidetrack/blog/protecting-ai-conversations-at-microsoft-with-model-context-protocol-security-and-governance/
+Feb 12, 2026 ... If you're implementing MCP security, consider these key actions to ... Security and risk management. Recent. April 2, 2026. |. Matthew Cooke ...
+
+MCP Security Checklist: Complete Protection Guide 2026
+https://www.networkintelligence.ai/blogs/model-context-protocol-mcp-security-checklist/
+Comprehensive security checklist for Model Context Protocol (MCP) covering 50+ vulnerabilities, CVEs, and mitigation strategies for AI-system integration.
+
+MCP isn't a protocol problem. It's an identity crisis nobody is treating.
+https://www.scworld.com/perspective/mcp-isnt-a-protocol-problem-its-an-identity-crisis-nobody-is-treating
+... 2026. Share. By Nik Kale. MCP Model Context Protocol Digital Concept. (Adobe Stock). Microsoft released a patch on March 10, 2026, for CVE-2026 ...
+
+The 2026 MCP Roadmap | Model Context Protocol Blog
+https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/
+The updated Model Context Protocol roadmap for 2026: transport scalability, agent communication, governance maturation, and enterprise readiness, plus guidance on SEP prioritization and how to get involved.
+
+MCP security: The current situation - Red Hat
+https://www.redhat.com/en/blog/mcp-security-current-situation
+Feb 25, 2026 ... ... Model Context Protocol (MCP) integration. To execute this attack, a ... In June 2025, researchers analyzing publicly exposed MCP servers ...

@@ -1,0 +1,39 @@
+Singapore firms advancing AI adoption: survey | The Straits Times
+https://www.straitstimes.com/business/ai-adoption-southeast-asia-progress-challenges-edb-report
+Singapore is among the regional leaders in AI adoption, with firms making progress towards scaling use, a study by McKinsey, EDB and Tech in Asia finds.
+
+Avnet Insights Survey: APAC Engineers Accelerate AI Adoption ... - LinkedIn
+https://www.linkedin.com/pulse/avnet-insights-survey-apac-engineers-accelerate-ai-adoption-0me0c
+SINGAPORE - February 5, 2026 - Artificial intelligence (AI) is increasingly embedded in products and solutions across Asia-Pacific, as engineers advance adoption while addressing operational ...
+
+Industrializing AI in Asia/Pacific: From Experimentation to Enterprise ...
+https://www.idc.com/resource-center/blog/industrializing-ai-in-asia-pacific-from-experimentation-to-enterprise-scale/
+Asia/Pacific enterprises are entering a new phase of artificial intelligence adoption as experimentation gives way to industrialization. Generative and agentic AI systems are no longer side projects or productivity add-ons; they are becoming the backbone of how organizations automate work, make decisions, and compete in volatile markets. Industrializing AI means treating AI as an enterprise ...
+
+AI Adoption in APAC: What CTOs Are Doing in 2026
+https://appscale.blog/en/blog/ai-adoption-singapore-japan-anz-what-ctos-are-doing-2026
+How CTOs across Singapore, Japan, Hong Kong, Australia and New Zealand are architecting enterprise AI platforms in 2026. Region-specific regulation, governance, and production architecture strategies for APAC leadership.
+
+APAC Special Report – Singapore AI Transition Window | LinkedIn
+https://economicgraph.linkedin.com/content/dam/me/economicgraph/en-us/PDF/apac-special-report-singapore-ai-transition-window.pdf
+Hiring in software engineering - a role with high AI exposure - is ... Companies must find their balance between AI adoption and organisational ...
+
+AI adoption in South-east Asia: Report - The Business Times
+https://www.businesstimes.com.sg/companies-markets/southeast-asia-ai-adoption-outpaces-global-average-edb-report
+With 81 per cent of South-east Asian companies already piloting and scaling AI-powered projects, Singapore can become the centre of regional ...
+
+Breaking The AI Adoption Paradox In APAC - forrester.com
+https://www.forrester.com/blogs/breaking-the-ai-adoption-paradox-in-apac/
+Despite widespread adoption of AI tools by individual employees, most APAC organizations remain stuck in pilot mode. Forrester's Technology & Innovation Summit APAC 2025 revealed how four leading companies are breaking through this paradox — lessons that CIOs and CTOs can apply in their companies.
+
+[#Csuite2026] As margins tighten, AI has become APAC's go‑to ...
+https://www.facebook.com/ForvisMazarsinThailand/posts/csuite2026-as-margins-tighten-ai-has-become-apacs-goto-lever-for-efficiency-and-/1411192851039329/
+Dive into the insights in our APAC C‑suite Barometer 2026: https://www.forvismazars. com/th/en/insights/forvis-mazars-news/apac-c-suite- ...
+
+New McKinsey-EDB-Tech In Asia report: AI adoption in Southeast Asia is ...
+https://www.edb.gov.sg/en/business-insights/insights/new-mckinsey-edb-tech-in-asia-report-ai-adoption-in-southeast-asia-is-outpacing-the-global-average.html
+Discover how Singapore's unique strengths can help your organisation turn common AI adoption barriers into opportunities for growth in Southeast Asia.
+
+McKinsey: AI Adoption in Southeast Asia Surpasses Global Average
+https://fintechnews.sg/127112/ai/mckinsey-ai-adoption-in-southeast-asia-surpasses-global-average/
+A new McKinsey study, which polled more than 2,000 respondents from companies worldwide, found that nearly half (46%) of Southeast Asian firms ...

@@ -1,0 +1,39 @@
+The State of AI in the Enterprise - 2026 AI report | Deloitte US
+https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html
+Compared to last year, more companies (42%) believe their strategy is highly prepared for AI adoption—but they feel less prepared in terms of infrastructure, data, risk, and talent.
+
+The State of AI Enterprise Adoption in 2026 - The State of AI Enterprise Adoption in 2026
+https://codewave.com/insights/ai-enterprise-adoption-2026/
+ollowing it are financial services and banking, which use AI for risk management, fraud detection, and customer analytics. While AI tools are increasingly used, challenges such as poor infrastructure, data issues, and inadequate oversight hold ...
+
+Four Trends in AI Experimentation, Adoption, and Transformation - SPONSOR CONTENT FROM CAPTECH
+https://hbr.org/sponsored/2026/03/four-trends-in-ai-experimentation-adoption-and-transformation
+The challenge isn’t whether AI can deliver; it’s whether organizations can harness its potential, adapt to its constant evolution, and lead in a world where AI is foundational. AI isn’t just changing software engineering; it’s fundamentally changing traditional end-to-end processes.
+
+Enterprise AI Adoption Challenges: Why AI Fails & How Leaders Can Scale It
+https://rtslabs.com/enterprise-ai-adoption-challenges/
+A report by IDC finds that 46% of enterprises report a shortage of AI-skilled talent as one of the top barriers to adoption. Enterprises often have data scientists and analysts, but not the production engineers needed to turn notebooks into ...
+
+The starkly uneven reality of enterprise AI adoption | InfoWorld
+https://www.infoworld.com/article/4151572/the-starkly-uneven-reality-of-enterprise-ai-adoption.html
+They come from reworking roles, workflows, and the full product development system. That’s a much harder organizational challenge than buying licenses for a coding assistant. Let’s go back to my conversations in London.
+
+Enterprise AI in 2026: Adoption Trends, Gaps & Strategic Insights | Lucidworks
+https://lucidworks.com/blog/enterprise-ai-adoption-in-2026-trends-gaps-and-strategic-insights
+Based on Lucidworks’ 2025 AI Benchmark Study of 1,600+ AI leaders and autonomous analysis of 1,100+ companies Heading into 2026, enterprise AI has entered what you might call a stage of cautious maturity. The enthusiasm is still there, but organizations are realizing that scaling AI is far more complicated than launching a pilot.
+
+Enterprise AI adoption in 2026: Why 79% face challenges despite high investment - WRITER
+https://writer.com/blog/enterprise-ai-adoption-2026/
+Last year’s theme was tension — budgets climbing, pilots multiplying, but progress messy. In 2026, that tension has evolved into something much more consequential: it’s now cultural, organizational, and deeply structural.
+
+AI Adoption Trends in the Enterprise 2026
+https://www.techrepublic.com/article/ai-adoption-trends-enterprise/
+Additionally, integrating new AI solutions with existing legacy systems is a major pain point, nearly 60% of AI leaders say legacy integration is a primary adoption challenge when implementing advanced AI like agentic AI.
+
+Enterprise AI Adoption 2026: Trends, Benchmarks, and Best Practices for Scalable Success - StackAI · AI Agents for the Enterprise
+https://www.stackai.com/insights/enterprise-ai-adoption-2026-trends-benchmarks-and-best-practices-for-scalable-success
+“AI pilots to production” becomes the defining challenge. Enterprises are learning that production AI is mostly operational discipline. How many AI use cases are in production vs pilot, and how many are used weekly by the target team?
+
+10 AI Adoption Challenges: Insights From Our 30+ Clients
+https://www.instinctools.com/blog/ai-adoption-challenges/
+Feb 9, 2026 ... 1. No clear AI strategy or use cases · 2. Shaky data foundation · 3. Culture and change management · 4. The tightrope of data security, safety, and ...

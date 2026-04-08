@@ -1,0 +1,39 @@
+Multi-Agent AI Systems Guide 2026 | AI Workflow Lab
+https://aiworkflowlab.dev/article/building-multi-agent-ai-systems-2026-architecture-patterns-mcp-production-orchestration
+How to Build Multi-Agent AI Systems in 2026: Architecture Patterns, MCP, and Production Orchestration A hands-on guide to building production-ready multi-agent AI systems in 2026 — covering architecture patterns, MCP, A2A protocols, framework comparisons, and best practices with Python code examples.
+
+Google's Eight Essential Multi-Agent Design Patterns - InfoQ
+https://www.infoq.com/news/2026/01/multi-agent-design-patterns/
+Multi-Agent Systems (MAS) allow you to build the AI equivalent of a microservices architecture. By assigning specific roles (a Parser, a ...
+
+How to Build Multi-Agent Systems: Complete 2026 Guide
+https://dev.to/eira-wexford/how-to-build-multi-agent-systems-complete-2026-guide-1io6
+Building intelligent systems has reached a turning point. By 2026, 40% of enterprise applications... Tagged with agents, ai, architecture, tutorial.
+
+How to Build a Multi-Agent AI System 2026 | Multi AI
+https://multi-ai.ai/en/blog/how-to-build-a-multi-agent-ai-system-architecture-en
+Learn how to build a multi-agent AI system with this detailed architecture guide for 2026. Explore patterns, components, and best practices.
+
+AI Architectures in 2026: Components, Patterns, and Practical Code
+https://medium.com/@angelosorte1/ai-architectures-in-2026-components-patterns-and-practical-code-1df838dab854
+Multi‑agent frameworks for large pipelines. 1.4 Interface Layer. How users or other systems interact with the AI: APIs and microservices; Real‑ ...
+
+Multi-Agent Systems: How AI Agents Work Together (2026 Guide)
+https://whatisagentic.ai/learn/multi-agent-systems/
+Learn how multi-agent AI systems work: architecture patterns, communication protocols, and real-world examples of AI agent teams collaborating on complex tasks in 2026.
+
+Developer's guide to multi-agent patterns in ADK
+https://developers.googleblog.com/developers-guide-to-multi-agent-patterns-in-adk/
+Move beyond monolithic agents. Discover 8 design patterns for Multi-Agent Systems ... AI equivalent of a microservices architecture. By assigning ...
+
+AI Agent Architecture (2026): A Deep Research Guide for Building ...
+https://koows.com/@Tech_article/ai-agent-architecture-(2026):-a-deep-research-guide-for-building-autonomous-ai-systems
+Explore AI Agent Architecture in 2026, including core components, design patterns, multi-agent systems, tools, and best practices for building scalable enterprise AI agents.
+
+Best multi agent ai systems for enterprise deployment | Towards AI
+https://pub.towardsai.net/multi-agent-ai-systems-architecture-patterns-for-enterprise-deployment-b24946527221
+Multi-Agent AI Systems: Architecture Patterns for Enterprise Deployment. Pratik K Rupareliya. Follow. 16 min read. ·. Mar 18, 2026.
+
+AI Agent Orchestration Patterns - Azure Architecture Center
+https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns
+Instead, these systems use multi-agent orchestrations to handle complex, collaborative tasks reliably. This guide covers fundamental orchestration patterns for multi-agent architectures and helps you choose the approach that fits your specific requirements.

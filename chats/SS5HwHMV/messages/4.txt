@@ -1,0 +1,39 @@
+RAG Benchmarks: Embedding Models, Vector DBs, Agentic RAG
+https://aimultiple.com/rag
+RAG improves LLM reliability with external data sources. We benchmark the entire RAG pipeline: leading embedding models, top vector databases, and the latest agentic frameworks, all evaluated on their real-world performance.
+
+ColPali for RAG (2025): Theory, implementation, and production tips
+https://medium.com/@intuitivedl/rag-with-colpali-everything-you-need-to-know-46b7bd50901b
+In this article I'll walk you through the ColPali model, a multimodal embedding model released in 2024, and the pros and cons of choosing it for your Retrieval-Augmented Generation (RAG) pipeline.
+
+irpapers: A Visual Document Benchmark for Scientific Retrieval and ...
+https://arxiv.org/html/2602.17687v1
+... performance of the ColPali and ColQwen2 multi-vector image embeddings models. ... evaluation to late-interaction multi-vector methods and ...
+
+RAG 2.0 : Hybrid Retrieval, Rerankers & Evaluation Guide
+https://first-tech-blog.hashnode.dev/rag-20-hybrid-retrieval-rerankers-and-evaluation-guide
+The big shift behind "RAG 2.0" is that quality is now driven less by swapping embedding models and more by system design: hybrid retrieval (dense + sparse + graph), rerankers, context compression, and evaluation that matches real usage.
+
+RAG Production 2026: Pinecone vs Qdrant vs Weaviate Latency, Chunking ...
+https://pooya.blog/blog/rag-pipelines-production-vector-databases-2026/
+This article covers the vector database benchmarks, the chunking strategies that actually improve retrieval quality, and the hybrid search data that explains why 72% of production systems combine dense and sparse retrieval. Vector Database Latency at Scale Four databases dominate production RAG: Pinecone, Qdrant, Weaviate, and ChromaDB.
+
+Benchmarking Multimodal RAG embeddings and techniques - Medium
+https://medium.com/@vishwa.jith360/benchmarking-multimodal-rag-embeddings-and-techniques-31ad01fdec15
+Evaluation Setup. Retrieval Benchmarks Using a retrieval evaluation script, each model was scored. - `recall@1`, `recall@3` ...
+
+GitHub - illuin-tech/vidore-benchmark: Vision Document Retrieval ...
+https://github.com/illuin-tech/vidore-benchmark
+Pipeline evaluation allows you to evaluate complete end-to-end retrieval systems on the ViDoRe v3 benchmark datasets. Unlike traditional retriever evaluation that focuses on individual model components, pipeline evaluation lets you test: Multi-stage retrieval systems (e.g., retrieve + rerank) Hybrid approaches (e.g., dense + sparse retrieval ...
+
+Best Embedding Models for RAG in 2026: A Comparison Guide
+https://www.stackai.com/insights/best-embedding-models-for-rag-in-2026-a-comparison-guide
+This guide compares the best embedding models for RAG in 2026 across retrieval quality, latency, cost, multilingual performance, and operational ...
+
+RAG Manager's Guide - Vespa.ai
+https://vespa.ai/rag-managers-guide/
+In contrast, a keyword-based or sparse vector search would show results only ... Visual retrieval such as ColPali will continue to increase in popularity and ...
+
+RAG Chunking Strategies: The 2026 Benchmark Guide
+https://blog.premai.io/rag-chunking-strategies-the-2026-benchmark-guide/
+RAG Chunking Strategies: The 2026 Benchmark Guide Quick answer: Recursive character splitting at 512 tokens with 50 to 100 tokens of overlap is the benchmark-validated default for most RAG applications. It scored 69% accuracy in the largest real-document test of 2026, requires zero model calls, and outperformed every more expensive alternative.

@@ -1,0 +1,39 @@
+2026 Global Human Capital Trends | Deloitte Insights
+https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends.html
+In our 2026 Global Human Capital Trends survey, 7 in 10 business leaders say their primary competitive strategy over the next three years is to be fast and nimble—to quickly adapt to and capitalize on changing business, customer or market needs.
+
+Top Engineering Productivity Trends Shaping Software Teams in 2026
+https://www.leiga.com/post/top-engineering-productivity-trends-software-teams-2026
+Explore the top engineering productivity trends in 2026—from AI and DX to async work and smarter planning—and how modern teams ship better, not harder.
+
+The Challenge of Measuring Productivity in Engineering Teams - Medium
+https://medium.com/@ganeshmoorthy5999/the-challenge-of-measuring-productivity-in-engineering-teams-space-framework-4dcdbd789d7d
+The SPACE productivity framework is important for software development teams because it provides an in-depth understanding of productivity, significantly improving both team dynamics and software ...
+
+Director of Engineering and Work Life Balance Strategies | MoldStud
+https://moldstud.com/articles/p-the-role-of-a-director-of-engineering-navigating-work-life-balance-effectively
+Explore the vital role of a Director of Engineering in balancing workplace demands and personal life, offering strategies for maintaining harmony and productivity.
+
+Top 7 Learning and Development Trends for 2026 - Degreed
+https://degreed.com/experience/blog/learning-and-development-trends-for-2026/
+Dec 15, 2025 ... Learning is more business-critical than ever, as companies race to keep up with AI, balance ever-evolving workplace goals, and prepare for the ...
+
+SPACE: An Engineering Productivity Framework Focused on the ... - Artera
+https://innovation.artera.io/blog/space-an-engineering-productivity-framework-focused-on-the-human-elements/
+Engineering organizations often look for ways to measure productivity and velocity, but it isn't always easy to find the right framework that can be adopted with success or even embraced by the engineering teams. In this blog, we will share how we landed on the SPACE framework, our plans to implement, and how we rolled out this vision to the engineering organization. Motivation for having an ...
+
+A Framework for Building Scalable Engineering | K2 Staffing
+https://k2staffinginc.com/a-framework-for-building-scalable-engineering-teams-across-multiple-markets/
+Feb 16, 2026 ... Cultural preferences for work-life balance. Document these insights into market-specific playbooks that your recruitment teams can reference.
+
+SPACE Framework: 9 Best Practices for Engineering Productivity
+https://pensero.ai/blog/space-framework
+Ultimately, the SPACE framework provides a shared language for productivity balancing quantitative data with qualitative context so engineering leaders can make smarter, evidence-based decisions while maintaining a healthy team culture.
+
+What is the SPACE framework and when should you use it? - DX
+https://getdx.com/blog/space-metrics/
+Jul 30, 2025 ... Most engineering leaders agree that developer productivity matters. ... Work-life balance and stress levels; Technology satisfaction and tool ...
+
+Reimagined: Learning & development in the future of work
+https://www.mckinsey.com/featured-insights/people-in-progress/reimagined-learning-and-development-in-the-future-of-work
+Supporting development more holistically may require leaders to redesign work in ways that ease administrative load and free up mental bandwidth for deeper engagement and learning. They can also help foster curiosity and growth by assigning employees to projects that offer relevant, real-time learning opportunities.

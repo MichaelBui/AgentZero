@@ -1,0 +1,39 @@
+AI Productivity Metrics Guide for Engineering Leaders 2026
+https://blog.exceeds.ai/ai-productivity-metrics-engineering/
+Learn how engineering leaders can measure AI productivity impact, prove ROI, and scale development outcomes. Get actionable insights with Exceeds AI.
+
+How Leadership Changes When Software Writes Software - Forbes
+https://www.forbes.com/councils/forbestechcouncil/2026/03/11/leading-through-the-ai-inflection-how-leadership-changes-when-software-writes-software/
+Mar 11, 2026 ... Engineering leadership has traditionally emphasized productivity. Progress was measured through velocity, delivery timelines and output. AI- ...
+
+Engineering's AI Reality Check: Why 2026 Will Force Engineering Leaders ...
+https://www.linkedin.com/pulse/engineerings-ai-reality-check-why-2026-force-engineering-leaders-zpudc
+The Real Productivity Question for 2026 Most organisations still frame AI productivity in terms of speed: more story points, more tickets, higher deployment frequency. That misses the bigger question:
+
+What This Year Taught Me About Engineering Leadership
+https://newsletter.eng-leadership.com/p/what-this-year-taught-me-about-engineering
+Dec 24, 2025 ... A lot of things have changed due to the rise in the popularity of AI and AI tools. It seems like new AI tools have come out on a daily basis, ...
+
+AI Productivity Guide for Engineering Leaders - linearb.io
+https://linearb.io/resources/ai-productivity-guide-for-engineering-leaders
+Discover how to track and drive AI productivity impact across your entire engineering organization.
+
+From Sprint Manager to AI Orchestrator: The New Job of ... - Medium
+https://medium.com/@gbpnkans/from-sprint-manager-to-ai-orchestrator-the-new-job-of-engineering-leadership-4146483dc986
+Mar 13, 2026 ... From Sprint Manager to AI Orchestrator: The New Job of Engineering Leadership In the agentic AI era, the bottleneck is no longer writing ...
+
+Is AI Productivity a Mirage? Engineering Leaders Face the 2026 Reality ...
+https://standupify.medium.com/is-ai-productivity-a-mirage-engineering-leaders-face-the-2026-reality-check-0cea0b117df2
+The article, Engineering's AI reality check, emphasizes the growing need for engineering leaders to validate AI spend with verifiable data. Boards and CFOs now require a direct correlation between AI investments and improved outcomes, moving beyond vague promises.
+
+The 2026 Skills on the Rise Report: Why Leadership + Prompt ...
+https://www.linkedin.com/pulse/2026-skills-rise-report-why-leadership-prompt-engineering-das-hg6pc
+Mar 14, 2026 ... Third, AI extends far beyond coding: technical and strategic AI skills, including prompt engineering and large language model deployment, have ...
+
+PDF Engineering and R&D Pulse 2026 - Capgemini
+https://www.capgemini.com/wp-content/uploads/2026/02/CAPGEMINI_ERD-Pulse-Report-2026_sm.pdf
+This report is primarily intended for senior decision-makers in engineering and R&D functions - including chief R&D officers, VPs and heads of engineering or product development, chief technology officers (CTOs), and innovation directors - who are navigating today's challenging business landscape. It provides an overview of the strategic evolution of engineering and R&D functions in ...
+
+AI Will Reshape More Jobs Than It Replaces | BCG
+https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces
+Output expands and overall job volume may remain stable or grow, even as the productivity of individual engineers rises, because humans continue ...

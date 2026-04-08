@@ -1,0 +1,39 @@
+Running 122B-Parameter LLMs Locally on AMD Strix Halo for ... - LinkedIn
+https://www.linkedin.com/pulse/running-122b-parameter-llms-locally-amd-strix-halo-deep-pellegrini-33cjc
+Over the past few months, I've been building a local LLM inference stack on an AMD Ryzen AI Max+ 395 (Strix Halo) — a chip with 128GB of unified LPDDR5X memory shared between CPU and GPU. My ...
+
+Llama.cpp/vLLM Toolboxes for LLM inference on Strix Halo
+https://community.frame.work/t/llama-cpp-vllm-toolboxes-for-llm-inference-on-strix-halo/74916
+4 Sept 2025 ... I just wanted to share the toolboxes I've been working on together with folks at https://strixhalo-homelab.d7.wtf/.
+
+What's the realistic "entry point" for a good local LLM experience ...
+https://www.reddit.com/r/LocalLLaMA/comments/1prjldr/whats_the_realistic_entry_point_for_a_good_local/
+AMD and Intel restrict CPUs with more than 4 memory channels to servers ... strix halo and qwen 80b next is the first somewhat "big llm ...
+
+GitHub - kyuz0/amd-strix-halo-toolboxes
+https://github.com/kyuz0/amd-strix-halo-toolboxes
+AMD Strix Halo Llama.cpp Toolboxes This project provides pre-built containers ("toolboxes") for running LLMs on AMD Ryzen AI Max "Strix Halo" integrated GPUs. Toolbx is the standard developer container system in Fedora (and now works on Ubuntu, openSUSE, Arch, etc).
+
+Strix Halo Mini PCs for Local LLM Inference: A Practical Guide to ...
+https://www.starryhope.com/minipcs/strix-halo-local-llm-inference-2026/
+The fundamental appeal of Strix Halo for local LLM work comes down to one thing: memory bandwidth determines inference speed, and these chips can access a massive pool of unified memory without the bottlenecks that plague discrete GPU setups.
+
+AMD Strix Halo system optimization — ROCm Documentation
+https://rocm.docs.amd.com/en/latest/how-to/system-optimization/strixhalo.html
+This document provides guidance for optimizing systems powered by AMD Ryzen AI MAX and MAX+ processors (codenamed Strix Halo). These APUs combine high-performance CPU cores with integrated RDNA 3.5 graphics and support up to 128GB of unified LPDDR5X-8000 memory, making them particularly well-suited for: LLM development and inference systems High-performance workstations Virtualization hosts ...
+
+a fast and open source local LLM server using GPU and NPU
+https://news.ycombinator.com/item?id=47612724
+I have been using lemonade for nearly a year already. On Strix Halo I am using nothing else - although kyuz0's toolboxes are also nice ...
+
+I optimized my Strix Halo for local LLMs: Here are the benchmarks and ...
+https://www.hardware-corner.net/strix-halo-llm-optimization/
+Trying to optimize Strix Halo for local LLMs? Learn the critical command to boost ROCm speed and discover the best backend for every task with my definitive benchmarks and cheat sheet.
+
+Running vLLM on Strix Halo (AMD Ryzen AI MAX) + ... - YouTube
+https://www.youtube.com/watch?v=wAIzlGwEAO0
+This video is divided into two parts: a technical guide on running vLLM on the AMD Ryzen AI MAX (Strix Halo) and an update on the local AI ...
+
+Optimizing VRAM and Memory Allocation on Strix Halo for Local LLMs
+https://lilting.ch/en/articles/strix-halo-vram-memory-optimization
+How to configure VRAM/main memory split on the GMKtec EVO-X2 (Strix Halo) for local LLM inference. A 29.6GB model ran fine with just 8GB of dedicated VRAM.

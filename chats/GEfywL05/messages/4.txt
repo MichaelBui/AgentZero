@@ -1,0 +1,39 @@
+Effective context engineering for AI agents \ Anthropic
+https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+Context engineering vs. prompt engineering At Anthropic, we view context engineering as the natural progression of prompt engineering. Prompt engineering refers to methods for writing and organizing LLM instructions for optimal outcomes (see our docs for an overview and useful prompt engineering strategies).
+
+Prompt, Context, Skill Engineering: Production LLM System Design
+https://kishanakbari.medium.com/prompt-context-skill-engineering-production-llm-system-design-b782cdd7ca62
+Prompt engineering gets you started. Context and skill engineering get you to production. These three disciplines form the backbone of scalable LLM applications — from single-turn chatbots to multi-agent RAG pipelines. This guide breaks them down with LangChain/LangGraph examples, Groq integration patterns, and when to layer them for reliability at scale. Prompt Engineering: Token-Level ...
+
+State of Context Engineering in 2026 | by Kushal Banda - Medium
+https://medium.com/@kushalbanda/state-of-context-engineering-in-2026-cf92d010eab1
+LLM routing understands nuance, rule-based misses anything outside expected patterns. ... In a production agent system, you layer them ...
+
+Context Engineering Guide 2026: GPT-5, Claude 4.6, Gemini ...
+https://www.the-ai-corner.com/p/context-engineering-guide-2026
+Andrej Karpathy said it in June 2025: the LLM is a CPU, the context window is RAM, and you are the operating system responsible for loading ...
+
+Context Engineering: Why Your AI Agent Fails and Your Prompts Cannot ...
+https://fordelstudios.com/research/context-engineering-production-ai-2026
+Prompt engineering gets you a demo. Context engineering gets you a production system. Over 70% of errors in modern LLM applications stem not from insufficient model capability but from incomplete, irrelevant, or poorly structured context. This article breaks down what context engineering actually is, why it replaced prompt engineering as the discipline that matters, and how to implement it in ...
+
+Context Engineering: The Core Skill Behind Production AI Agents
+https://jangwook.net/en/blog/en/context-engineering-production-ai-agents/
+Why context engineering has become the defining skill for production AI agents in 2026 — 4 critical failure patterns and 5 core techniques, from an Engineering Manager perspective.
+
+What Is Prompt Engineering? [2026] - Atlan
+https://atlan.com/know/what-is-prompt-engineering/
+Every agent inherits the change. Whatever stage your team is at — learning prompts, scaling templates, or moving toward context engineering — ...
+
+Awesome Context Engineering - GitHub
+https://github.com/Meirtz/Awesome-Context-Engineering
+🔥 Comprehensive survey on Context Engineering: from prompt engineering to production-grade AI systems. hundreds of papers, frameworks, and implementation guides for LLMs and AI agents. - Meirtz/A...
+
+Context Engineering vs Prompt Engineering for AI Agents - Firecrawl
+https://www.firecrawl.dev/blog/context-engineering
+People associate prompts with short task descriptions you'd give an LLM in your day-to-day use. When in every industrial-strength LLM app, ...
+
+Context Engineering: The 6 Techniques That Actually Matter in 2026 ( A ...
+https://pub.towardsai.net/context-engineering-the-6-techniques-that-actually-matter-in-2026-90bb0272ae85
+Your RAG system returns perfect chunks. Your prompt is beautifully crafted But The LLM still hallucinates. You ask for the latest refund policy. The system dumps 50 pages of documents from 2018 to 2026 into the context. The LLM sees contradictory policies, gets confused, and makes up an answer. You added more documents. The response got worse.This isn't a prompt problem, It's a context ...

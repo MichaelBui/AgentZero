@@ -1,0 +1,39 @@
+RAG Evaluation: 2026 Metrics and Benchmarks for Enterprise AI Systems | Label Your Data
+https://labelyourdata.com/articles/llm-fine-tuning/rag-evaluation
+An LLM generates answers based only on patterns learned during training. A RAG system pairs an LLM with a retriever that fetches relevant documents at query time. This reduces hallucinations, keeps outputs current, and makes it possible to adapt models to enterprise data without retraining.
+
+A Survey of Multimodal Retrieval-Augmented Generation for ... - arXiv
+https://arxiv.org/html/2510.15253v2
+Bach (2025) ↑ Hierarchical patch compression for colpali: efficient multi-vector ... Appendix B then presents evaluation metrics for multimodal ...
+
+Multimodal RAG: 8 Chunking Calls That Matter | by Praxen - Medium
+https://medium.com/@Praxen/multimodal-rag-8-chunking-calls-that-matter-3b177253d32c
+So do not stop at “page as image.” For screenshots, add subregion chunks when the content is dense. 4. Pair screenshot crops with local text and ...
+
+RAG Evaluation is Hard: Here's What We Learned
+https://www.reddit.com/r/Rag/comments/1jocrkf/rag_evaluation_is_hard_heres_what_we_learned/
+I like llm as a judge. Notes on what I found useful: * Giving the llm judge space to think, not to solve the riddle in a single cycle (token). * Examples with proper reasoning on how to judge the answer. * Semi-structured output in markdown, unload cognitive load of structure to a parser. More on reddit.com
+
+RAG Evaluation: RAGAS Metrics for Production Systems 2026
+https://markaicode.com/rag-evaluation-ragas-metrics-production/
+Evaluate RAG pipelines with RAGAS metrics—faithfulness, answer relevancy, context precision, and recall. Tested on Python 3.12, LangChain, and OpenAI.
+
+Building Computer Vision & Visual RAG Systems at Scale
+https://www.gaussalgo.com/knowledge-base/the-roi-of-ai-sight-building-reliable-computer-vision-and-visual-rag-systems-at-scale-in-2026
+It demands a confrontation with hard engineering realities: the bandwidth costs of 24/7 streaming, the hallucinatory risks of probabilistic ...
+
+Evaluation Metrics for Retrieval-Augmented Generation (RAG) Systems
+https://www.geeksforgeeks.org/nlp/evaluation-metrics-for-retrieval-augmented-generation-rag-systems/
+Retrieval Augmented Generation (RAG) is LLM framework that combines information retrieval and text generation to produce more accurate, factual and context rich responses. Evaluation metrics help check if the system retrieves relevant information, gives accurate answers and meets performance goals while also guiding improvements and model comparisons. Evaluation Metrics Steps to Evaluate RAG ...
+
+unless you use Muvera. A dataset with 1M… | Victoria Slocum
+https://www.linkedin.com/posts/victorialslocum_everyone-talks-about-how-good-multivector-activity-7440019780725522432-z_6x
+Everyone talks about how good multivector models like ColPali and ColBERT are. But it always comes up that they also require lots more ...
+
+EncouRAGe: Evaluating RAG Local, Fast, and Reliable
+https://arxiv.org/pdf/2511.04696
+EncouRAGe We introduce , a comprehensive Python framework designed to streamline the development and evaluation of Retrieval-Augmented Generation (RAG) systems using Large Language Models (LLMs) and Embedding Type Manifest RAG Factory Inference Models. EncouRAGe comprises five modular and extensible components: , , , Vector Store Metrics , and , facilitating flexible experimentation and ...
+
+RAG Evaluation | DeepEval by Confident AI - The LLM Evaluation Framework
+https://deepeval.com/guides/guides-rag-evaluation
+Together, the retriever and generator forms your RAG pipeline. Since a satisfactory LLM output depends entirely on the quality of the retriever and generator, RAG evaluation focuses on evaluating the retriever and generator in your RAG pipeline separately. This also allows for easier debugging and to pinpoint issues on a component level.

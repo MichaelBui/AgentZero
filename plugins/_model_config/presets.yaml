@@ -2,7 +2,6 @@
   chat:
     provider: other
     name: local/qwen3.5-35b-a3b:instruct-reasoning
-    api_key: ''
     api_base: https://llm.gigary.com/v1
     ctx_length: 262144
     ctx_history: 0.7
@@ -12,10 +11,10 @@
     rl_output: 0
     kwargs: {}
     browser_http_headers: {}
+    max_embeds: 10
   utility:
     provider: other
     name: local/qwen3.5-35b-a3b:instruct-reasoning
-    api_key: ''
     api_base: https://llm.gigary.com/v1
     ctx_length: 262146
     ctx_input: 0.7
@@ -27,7 +26,6 @@
   chat:
     provider: other
     name: f/gemini-3-flash-preview
-    api_key: ''
     api_base: https://llm.gigary.com/v1
     ctx_length: 262144
     ctx_history: 0.7
@@ -37,10 +35,10 @@
     rl_output: 0
     kwargs: {}
     browser_http_headers: {}
+    max_embeds: 10
   utility:
     provider: other
     name: f/gemini-3-flash-preview
-    api_key: ''
     api_base: https://llm.gigary.com/v1
     ctx_length: 262148
     ctx_input: 0.7
@@ -52,7 +50,6 @@
   chat:
     provider: other
     name: local/qwen3.5-122b-a10b:instruct-coding
-    api_key: ''
     api_base: https://llm.gigary.com/v1
     ctx_length: 262140
     ctx_history: 0.7
@@ -62,10 +59,10 @@
     rl_output: 0
     kwargs: {}
     browser_http_headers: {}
+    max_embeds: 10
   utility:
     provider: other
-    name: local/qwen3.5-122b-a10b:instruct-coding
-    api_key: ''
+    name: local/qwen3.5-35b-a3b:instruct-reasoning
     api_base: https://llm.gigary.com/v1
     ctx_length: 262141
     ctx_input: 0.7

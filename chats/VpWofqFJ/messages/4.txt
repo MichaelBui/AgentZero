@@ -1,0 +1,39 @@
+DORA Metrics | Datadog
+https://www.datadoghq.com/product/platform/dora-metrics/
+Datadog DORA Metrics enables engineering leaders to easily capture, analyze, and act on the four key software delivery performance indicators (deployment frequency, lead time for changes, change failure rate, time to restore) to continuously improve development stability and velocity across all teams. By collecting and analyzing metrics from across your tooling, Datadog DORA Metrics allows you ...
+
+DORA Metrics Engineering Effectiveness: AI Impact in 2026
+https://blog.exceeds.ai/dora-metrics-engineering-effectiveness/
+The 5 Key DORA Metrics Explained for 2026 Teams DORA's software delivery performance framework centers on five core metrics that measure engineering effectiveness across throughput and stability. These benchmarks give engineering leaders a shared language for evaluating team performance in 2026.
+
+Cooper Simmons - Engineering Leader | LinkedIn
+https://ca.linkedin.com/in/coopersimmons
+Engineering Manager, Cloud Operations & Infrastructure. BCI. Aug 2024 - Present 1 year 9 months. Victoria, British Columbia, Canada.
+
+What is DORA metrics? Meaning, Architecture, Examples, Use Cases, and ...
+https://www.xopsschool.com/tutorials/dora-metrics/
+DORA metrics refers to four specific software delivery performance metrics standardized to assess and improve engineering effectiveness: Lead Time for Changes, Deployment Frequency, Change Failure Rate, and Mean Time to Restore (MTTR). It is a measurement framework, not a silver-bullet process or a replacement for qualitative assessment.
+
+DORA Metrics: A Practical Guide for Engineering Leaders
+https://typoapp.io/blog/dora-metrics-for-engineering-leaders
+Understanding DORA metrics is critical for modern software delivery because they provide a proven, data-driven framework for measuring both the speed and stability of your engineering processes. By leveraging these metrics, organizations can drive better business outcomes, improve team performance, and build more resilient systems.
+
+DevOps Research and Assessment (DORA) metrics - GitLab Docs
+https://docs.gitlab.com/user/analytics/dora_metrics/
+Next, you should consider: Adding automated testing. Adding automated code validation. Breaking the changes down into smaller iterations. Lead time for changes.
+
+Top DORA Metrics Tools for Datadog in 2026
+https://slashdot.org/software/dora-metrics/for-datadog/
+With Faros AI, engineering leaders can scale their operations in a more data-informed way — using data to identify bottlenecks, measure progress towards organizational goals, better support teams with the right resources, and accurately assess the impact of interventions over time. DORA Metrics come standard in Faros AI, and the platform is extensible to allow organizations to build their own custom dashboards and metrics so they can get deep insights into their engineering operations and take intelligent action in a data-driven manner.
+
+How to Implement DORA Metrics: A Step-by-Step Guide
+https://axify.io/blog/how-to-implement-dora-metrics
+Learn how to implement DORA metrics to improve DevOps efficiency, reduce bottlenecks, and deliver faster, more reliable software releases in this comprehensive guide.
+
+What are DORA Metrics and How to Unlock Elite Engineering ...
+https://linearb.io/blog/dora-metrics
+The four DORA Metrics–deployment frequency, change lead time, change failure percentage, and failed deployment recovery time—help DevOps ...
+
+DORA Metrics - Datadog Docs
+https://docs.datadoghq.com/dora_metrics/
+Overview ; Deployment frequency: How often an organization successfully releases to production. ; Change lead time: The amount of time it takes a commit to get ...

@@ -1,0 +1,39 @@
+GitHub - ggml-org/llama.cpp: LLM inference in C/C++
+https://github.com/ggml-org/llama.cpp
+The main goal of llama.cpp is to enable LLM inference with minimal setup and state-of-the-art performance on a wide range of hardware - locally and in the cloud. Plain C/C++ implementation without any dependencies Apple silicon is a first-class citizen - optimized via ARM NEON, Accelerate and Metal frameworks AVX, AVX2, AVX512 and AMX support for x86 architectures RVV, ZVFH, ZFH, ZICBOP and ...
+
+Trillion-Parameter LLM on an AMD Ryzen™ AI Max+ Cluster
+https://www.amd.com/en/developer/resources/technical-articles/2026/how-to-run-a-one-trillion-parameter-llm-locally-an-amd.html
+Step-by-step guide to clustering AMD Ryzen™ AI Max+ systems for local one trillion-parameter LLM inference using llama.cpp RPC and ROCm.
+
+llama.cpp on ROCm installation — ROCm installation (Linux)
+https://rocm.docs.amd.com/projects/install-on-linux/en/docs-7.1.1/install/3rd-party/llama-cpp-install.html
+llama.cpp is an open-source framework for Large Language Model (LLM) inference that runs on both central processing units (CPUs) and graphics processing units (GPUs). This topic covers setup instructions and the necessary files to build, test, and run llama.cpp with ROCm support in a Docker environment. To learn more about llama.cpp on ROCm, including its use cases, recommendations, as well as ...
+
+AMD Rolls Out Gemma 4 Model Support Across Full Range of GPUs ...
+https://wccftech.com/amd-rolls-out-gemma-4-model-support-across-full-range-of-gpus-cpus/
+Gemma 4 can be deployed on AMD GPUs using vLLM to take advantage of the many optimizations in this inference framework, particularly relating to ...
+
+llama.cpp: Fast Local LLM Inference, Hardware Choices & Tuning
+https://www.clarifai.com/blog/ilama.cpp
+llama.cpp: The Complete Guide to Fast Local LLM Inference Local large‑language‑model (LLM) inference has become one of the most exciting frontiers in AI. As of 2026, powerful consumer GPUs such as NVIDIA's RTX 5090 and Apple's M4 Ultra enable state‑of‑the‑art models to run on a desk‑side machine rather than a remote data center. This shift isn't just about speed; it touches ...
+
+AMD vs NVIDIA Gemma 4 Support: What's Different? | CodeX
+https://medium.com/@mayhemcode/gemma-4-landed-on-amd-and-nvidia-hardware-simultaneously-heres-why-that-matters-36600c8e78a0
+... inference is heading in 2026 and who's best positioned to capture it. ... optimized for local deployment via Unsloth Studio. If you need to ...
+
+llama.cpp: High-Performance LLM Inference on Your Local Machine
+https://www.antlatt.com/blog/llama-cpp/
+Run powerful language models locally with minimal resources. A complete guide to llama.cpp, from setup to advanced optimizations.
+
+AI Model Serving Architecture: Building Scalable Inference APIs for ...
+https://www.runpod.io/articles/guides/ai-model-serving-architecture-building-scalable-inference-apis-for-production-applications
+... production LLM workloads in 2026, based on deployment volume and community adoption: Llama 4 (April 2025) fields three Mixture of Experts ...
+
+Mastering llama.cpp: A Comprehensive Guide to Local LLM Inference
+https://martinuke0.github.io/posts/2026-01-07-mastering-llamacpp-a-comprehensive-guide-to-local-llm-inference/
+llama.cpp is a lightweight, high-performance C/C++ library for running large language models (LLMs) locally on diverse hardware, from CPUs to GPUs, enabling efficient inference without heavy dependencies.[7] This detailed guide covers everything from setup and building to advanced usage, Python integration, and optimization techniques, drawing from official documentation and community ...
+
+TurboQuant - Extreme KV Cache Quantization · ggml-org llama.cpp
+https://github.com/ggml-org/llama.cpp/discussions/20969
+spiritbuun has their own separate CUDA fork with different optimizations (which is what i believedentity007 is using?). I've been collaborating ...

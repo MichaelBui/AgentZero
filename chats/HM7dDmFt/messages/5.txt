@@ -1,0 +1,39 @@
+Running 122B-Parameter LLMs Locally on AMD Strix Halo for ... - LinkedIn
+https://www.linkedin.com/pulse/running-122b-parameter-llms-locally-amd-strix-halo-deep-pellegrini-33cjc
+Over the past few months, I've been building a local LLM inference stack on an AMD Ryzen AI Max+ 395 (Strix Halo) — a chip with 128GB of unified LPDDR5X memory shared between CPU and GPU. My ...
+
+Benchmarked the main GPU options for local LLM inference in 2026
+https://www.reddit.com/r/LocalLLaMA/comments/1rk5ftz/benchmarked_the_main_gpu_options_for_local_llm/
+... (128GB unified RAM = runs 80B+ without quantization). Full breakdown with VRAM requirements, bandwidth numbers, and cost-per-1K-tokens ...
+
+AMD Strix Halo system optimization — ROCm Documentation
+https://rocm.docs.amd.com/en/latest/how-to/system-optimization/strixhalo.html
+This document provides guidance for optimizing systems powered by AMD Ryzen AI MAX and MAX+ processors (codenamed Strix Halo). These APUs combine high-performance CPU cores with integrated RDNA 3.5 graphics and support up to 128GB of unified LPDDR5X-8000 memory, making them particularly well-suited for: LLM development and inference systems
+
+Best GPU for Local LLMs in 2026 — Tested by Budget
+https://www.decodesfuture.com/articles/best-gpu-for-local-llms-2026-guide
+The AMD Strix Halo (Ryzen AI Max 395+) is a revolutionary APU designed for AI workloads. It features up to 128GB of unified LPDDR5X memory and a ...
+
+Strix Halo Mini PCs for Local LLM Inference: A Practical Guide to ...
+https://www.starryhope.com/minipcs/strix-halo-local-llm-inference-2026/
+AMD's Strix Halo mini PCs pack 128GB of unified memory that both the CPU and GPU can access, enough to run 70-billion-parameter language models locally, all in a box that fits on your desk and draws less power than a gaming PC.
+
+Best GPUs for Local LLM Inference (2026 Benchmarks) - Core Lab
+https://corelab.tech/llmgpu/
+In 2025, that is finally, thankfully no longer the case. AMD (ROCm): The Power User's Choice ... Apple Mac Studio M1 Ultra. 128GB Unified RAM, Renewed,. Check ...
+
+AMD Ryzen AI Halo: Local LLM Inference Platform Analysis
+https://reading.torqsoftware.com/notes/hardware/ai/2026-01-21-amd-ryzen-ai-halo-local-llm-inference-platform/
+AMD Ryzen AI Halo Product Page AMD CES 2026 Press Release ROCm 7.1.1 Compatibility Documentation AMD MLPerf Client Benchmark Article Independent Strix Halo LLM Benchmark AMD Ryzen AI Max LM Studio Blog Apple M2 Ultra Announcement llama.cpp Apple Silicon Benchmarks M2 Ultra LLM Benchmark Data Summary ... Hardware Specifications Ryzen AI Max+ 395 ...
+
+Mac Mini M4 vs AMD Mini PCs for Local AI - Medium
+https://medium.com/@tentenco/mac-mini-m4-vs-amd-mini-pcs-for-local-ai-a-hardware-buyers-guide-by-budget-tier-46955a45b4c5
+... AMD Ryzen AI Max ... Local LLM Inference? On unified memory architectures, GPU acceleration has a significant impact on inference speed.
+
+Strix Halo, Unleashed: Real LLM Workflows on 128GB Ryzen AI ... - Medium
+https://medium.com/@orami98/strix-halo-unleashed-real-llm-workflows-on-128gb-ryzen-ai-max-395-mini-pcs-and-laptops-5dabdd3fcae3
+AMD's Strix Halo APU, paired with 128GB of high-speed memory, proves that workstation-class LLM performance is no longer the exclusive domain of the cloud or expensive, power-hungry desktops.
+
+Buying advice local llm - Beginners - Hugging Face Forums
+https://discuss.huggingface.co/t/buying-advice-local-llm/174730
+MacBook Pro 16 with M5 Max and 128GB unified memory if your main goal is running bigger local LLMs on a laptop with the least friction around ...

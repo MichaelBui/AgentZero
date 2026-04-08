@@ -1,0 +1,39 @@
+Avoiding Developer Burnout: The Engineering Leader's Playbook for ...
+https://www.globalsoftwarecompanies.com/developer-burnout
+Developer burnout affects 83% of engineers — and wellness programs aren't fixing it. This guide provides the SPACE framework and structural interventions engineering leaders need to redesign work systems, not just treat symptoms.
+
+Tech worker burnout: causes, impact & solutions for HR & leadership
+https://www.circles.com/resources/tech-worker-burnout-causes-impact-solutions-for-hr-leadership
+Dec 9, 2025 ... When developers bounce between tasks, productivity falls, stress rises and burnout accelerates. ... Work-life balance support drives productivity ...
+
+Engineering Productivity Without Burnout: A CTO Playbook for Throughput
+https://logiciel.io/blog/engineering-productivity-without-burnout
+This playbook breaks down how CTOs can improve engineering productivity without burnout by focusing on throughput, flow efficiency, and system-level design. You will learn how to measure productivity correctly, which metrics actually matter, how modern engineering productivity tools fit into the picture, and why culture and architecture matter ...
+
+Building High-Performance Engineering Teams for 2026 - LinkedIn
+https://www.linkedin.com/pulse/building-high-performance-engineering-teams-2026-l1knf
+Dec 15, 2025 ... Sustainable engineering practices - Focus on work-life balance, preventing burnout, preventing technical debt accumulation, and building ...
+
+Engineering Work-Life Harmony: How Engineers Can Excel Professionally ...
+https://engineeringmanagementinstitute.org/engineering-work-life-harmony-how-engineers-can-excel-professionally-and-personally/
+Engineering work-life harmony is not a luxury for engineering leaders; it is a leadership strategy that elevates performance, strengthens relationships, and supports long-term success. When leaders prioritize intentionally, honor healthy boundaries, and design systems that nurture their well-being, they do more than avoid burnout.
+
+Burnout and work-life balance: the generational points of view - PMC
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12953827/
+Mar 2, 2026 ... The differing perceptions of work-life balance across generations—ranging from Baby Boomers to Gen Z—reveal not only contrasting priorities but ...
+
+Help Your Team Prevent Burnout: 9 Proven Steps for Architecture ...
+https://monograph.com/blog/prevent-burnout-architecture-engineering-leaders
+Help Your Team Prevent Burnout: 9 Proven Steps for Architecture & Engineering Leaders Discover 9 research-backed strategies to prevent burnout in A&E firms. Learn early warning signs, workload management, and proven methods that protect your team while improving project delivery.
+
+10 Ways To Improve Utilization Rates Without Burning Out Staff
+https://www.mosaicapp.com/post/10-ways-to-improve-utilization-rates-without-burning-out-staff
+One fundamental step is changing organizational culture to foster support from leadership. Leaders should model a healthy work-life balance, openly discuss ...
+
+Addressing Burnout In Engineering Teams - LinkedIn
+https://www.linkedin.com/top-content/engineering/effective-team-leadership-in-engineering-projects/addressing-burnout-in-engineering-teams/
+Manage mental health and prevent burnout by setting clear boundaries and promoting work-life balance. Create a supportive environment for a sustainable…
+
+The Influence of Work-Life Balance and Organizational Support on ...
+https://www.researchgate.net/publication/403225191_The_Influence_of_Work-Life_Balance_and_Organizational_Support_on_Organizational_Citizenship_Behavior_Moderated_by_Burnout
+Mar 30, 2026 ... Burnout also significantly weakens the positive effects of WLB and POS on OCB, indicating that employees are less likely to engage in extra-role ...
