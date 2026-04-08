@@ -1,3 +1,7 @@
+total 26
+drwxrwxr-x+ 2 3000 950     3 Feb 26 06:51 .
+drwxrwxr-x+ 3 3000 950     4 Feb 26 06:51 ..
+-rw-rw-r--+ 1 3000 950 12656 Mar 10 16:43 backup.py
 #!/usr/bin/env python3
 """
 Git Backup Script
