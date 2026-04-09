@@ -1,81 +1,12 @@
-[2026-04-09T02:30:33+0000] STARTED (days=3, since=2026-04-06, user=Michael Bui)
-[2026-04-09T02:30:33+0000] Connecting to browser at http://192.168.1.11:9223...
-(node:10465) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+[2026-04-09T06:30:47+0000] STARTED (days=3, since=2026-04-06, user=Michael Bui)
+[2026-04-09T06:30:47+0000] Connecting to browser at http://192.168.1.11:9223...
+(node:11387) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[2026-04-09T02:30:34+0000] Reusing tab: https://chat.google.com/app/home
-[2026-04-09T02:30:53+0000] Feed: 71 item(s) within 3 day(s)
-[2026-04-09T02:30:53+0000]   Early stop: 3 consecutive cached
-[2026-04-09T02:30:53+0000] Phase 1: 70 conversations (focus-skip=0, unchanged=52, to-fetch=18, unread=12)
-[2026-04-09T02:30:53+0000] [Fetching 1/18] RMN Notification
-[2026-04-09T02:31:23+0000]   Scroll early-stop: 15 consecutive cached messages
-[2026-04-09T02:31:23+0000]   -> 36 message(s)
-[2026-04-09T02:31:24+0000]   -> 12 new cached
-[2026-04-09T02:31:27+0000]   WARN: could not restore unread status
-[2026-04-09T02:31:27+0000] [Fetching 2/18] #dd-dpd-engage-alert
-[2026-04-09T02:31:27+0000] Summarizing [1/70] RMN Notification (12 msgs, none)
-[2026-04-09T02:31:32+0000] Done [1/70] space/AAQA85dw4So rel=2
-[2026-04-09T02:31:56+0000]   Hit scroll limit (5)
-[2026-04-09T02:31:56+0000]   -> 16 message(s)
-[2026-04-09T02:31:58+0000]   -> 16 new cached
-[2026-04-09T02:32:02+0000]   -> restored unread status
-[2026-04-09T02:32:02+0000] [Fetching 3/18] 📢 COM Notifications
-[2026-04-09T02:32:02+0000] Summarizing [2/70] #dd-dpd-engage-alert (16 msgs, none)
-[2026-04-09T02:32:15+0000] Done [2/70] space/AAAAxwwNw2U rel=2
-[2026-04-09T02:32:30+0000]   Scroll early-stop: 30 consecutive cached messages
-[2026-04-09T02:32:30+0000]   -> 47 message(s)
-[2026-04-09T02:32:31+0000]   -> 2 new cached
-[2026-04-09T02:32:35+0000]   -> restored unread status
-[2026-04-09T02:32:35+0000] [Fetching 4/18] Shopping Cart Notification
-[2026-04-09T02:32:35+0000] Summarizing [3/70] 📢 COM Notifications (2 msgs, none)
-[2026-04-09T02:32:39+0000]   SKIP: item not found in DOM
-[2026-04-09T02:32:39+0000] [Fetching 5/18] [Leads] (Ecom/Omni) Digital Product Development
-[2026-04-09T02:32:39+0000] Done [3/70] space/AAAAu4WIubc rel=2
-[2026-04-09T02:32:47+0000]   Reached top after 0 scroll(s)
-[2026-04-09T02:32:47+0000]   -> 3 message(s)
-[2026-04-09T02:32:47+0000]   -> 3 new cached
-[2026-04-09T02:32:47+0000] [Fetching 6/18] @omni-ops #standup - Apr 9
-[2026-04-09T02:32:47+0000] Summarizing [4/70] [Leads] (Ecom/Omni) Digital Product Development (3 msgs, none)
-[2026-04-09T02:32:52+0000] Done [4/70] space/AAQAN8mDauE/uPAtRJhaE_k rel=3
-[2026-04-09T02:33:12+0000]   Reached top after 1 scroll(s)
-[2026-04-09T02:33:12+0000]   -> 2 message(s)
-[2026-04-09T02:33:12+0000]   -> 2 new cached
-[2026-04-09T02:33:12+0000]   WARN: could not restore unread status
-[2026-04-09T02:33:12+0000] [Fetching 7/18] FPG Everyone - General
-[2026-04-09T02:33:12+0000] Summarizing [5/70] @omni-ops #standup - Apr 9 (2 msgs, none)
-[2026-04-09T02:33:15+0000] Done [5/70] space/AAQA5A_i2vA rel=2
-[2026-04-09T02:33:36+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-09T02:33:36+0000]   -> 11 message(s)
-[2026-04-09T02:33:36+0000]   -> 1 new cached
-[2026-04-09T02:33:41+0000]   -> restored unread status
-[2026-04-09T02:33:41+0000] [Fetching 8/18] [Prod Support] Ecom FFS Ops
-[2026-04-09T02:33:41+0000] Summarizing [6/70] FPG Everyone - General (1 msgs, none)
-[2026-04-09T02:33:45+0000] Done [6/70] space/AAAAjDYVcBU rel=2
-[2026-04-09T02:34:05+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-09T02:34:05+0000]   -> 2 message(s)
-[2026-04-09T02:34:05+0000]   -> 1 new cached
-[2026-04-09T02:34:10+0000]   -> restored unread status
-[2026-04-09T02:34:10+0000] [Fetching 9/18] [Light] Project Light Attack and Defence Leads
-[2026-04-09T02:34:10+0000] Summarizing [7/70] [Prod Support] Ecom FFS Ops (1 msgs, none)
-[2026-04-09T02:34:16+0000] Done [7/70] space/AAAAde_cYKA rel=2
-[2026-04-09T02:34:20+0000]   Reached top after 1 scroll(s)
-[2026-04-09T02:34:20+0000]   -> 9 message(s)
-[2026-04-09T02:34:20+0000]   -> 9 new cached
-[2026-04-09T02:34:20+0000] [Fetching 10/18] Hengky Sucanda
-[2026-04-09T02:34:20+0000] Summarizing [8/70] [Light] Project Light Attack and Defence Leads (9 msgs, direct)
-[2026-04-09T02:34:28+0000] Done [8/70] space/AAQAsFyLso4/B9GTutiT1Kg rel=7
-[2026-04-09T02:34:46+0000]   Scroll early-stop: 30 consecutive cached messages
-[2026-04-09T02:34:46+0000]   -> 50 message(s)
-[2026-04-09T02:34:47+0000]   -> 2 new cached
-[2026-04-09T02:34:47+0000] [Fetching 11/18] fairnex-datadog-notification
-[2026-04-09T02:34:47+0000] Summarizing [9/70] Hengky Sucanda (2 msgs, direct)
-[2026-04-09T02:34:54+0000] Done [9/70] dm/_gwJCgAAAAE rel=8
-[2026-04-09T02:35:16+0000]   Hit scroll limit (5)
-[2026-04-09T02:35:16+0000]   -> 16 message(s)
-[2026-04-09T02:35:17+0000]   -> 5 new cached
-[2026-04-09T02:35:21+0000]   -> restored unread status
-[2026-04-09T02:35:21+0000] [Fetching 12/18] Email to BQ pipeline automation
-[2026-04-09T02:35:21+0000] Summarizing [10/70] fairnex-datadog-notification (5 msgs, none)
-[2026-04-09T02:35:27+0000] Done [10/70] space/AAAA8dv5lp0 rel=2
+[2026-04-09T06:30:47+0000] Reusing tab: https://chat.google.com/app/home
+[2026-04-09T06:31:02+0000] Feed: 72 item(s) within 3 day(s)
+[2026-04-09T06:31:02+0000]   Early stop: 3 consecutive cached
+[2026-04-09T06:31:02+0000] Phase 1: 72 conversations (focus-skip=0, unchanged=52, to-fetch=20, unread=18)
+[2026-04-09T06:31:02+0000] [Fetching 1/20] #dd-dpd-engage-alert
 
 
-[SYSTEM: Returning control to agent after 300 seconds of execution. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+[SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

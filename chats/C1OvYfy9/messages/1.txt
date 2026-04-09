@@ -1,95 +1,53 @@
-total 26
-drwxrwxr-x+ 2 3000 950     3 Feb 26 06:51 .
-drwxrwxr-x+ 3 3000 950     4 Feb 26 06:51 ..
--rw-rw-r--+ 1 3000 950 12656 Mar 10 16:43 backup.py
-# Git Backup Skill
-
-## Description
-Automated git backup skill that commits and pushes local paths to a remote git repository. Prioritizes local changes over remote changes while preserving remote content in git history for easy recovery.
-
-## Features
-- **Configurable backup paths**: Define multiple directories/files to backup
-- **Conflict resolution**: Prioritizes local changes using `-X ours` merge strategy
-- **History preservation**: Remote content is preserved in git history for recovery
-- **Automatic staging**: Handles new files, modifications, and deletions
-- **Error handling**: Comprehensive error messages and status reporting
-
-## Configuration
-
-### Backup Paths
-Edit the `BACKUP_PATHS` list at the top of the script:
-
-```python
-BACKUP_PATHS = [
-    "/a0/usr",
-    # Add more paths as needed
-]
-```
-
-### Remote Repository
-The script expects each backup path to be a git repository with a configured remote.
-
-```bash
-cd /your/backup/path
-git remote add origin <your-repo-url>
-```
-
-## Usage
-
-### Basic Usage
-```bash
-python /a0/usr/skills/git-backup/scripts/backup.py
-```
-
-### With Custom Commit Message
-```bash
-python /a0/usr/skills/git-backup/scripts/backup.py --message "Manual backup before changes"
-```
-
-### Dry Run (Preview Changes)
-```bash
-python /a0/usr/skills/git-backup/scripts/backup.py --dry-run
-```
-
-### YAML output
-```bash
-python /a0/usr/skills/git-backup/scripts/backup.py --format yaml
-```
-
-## Arguments
-| Argument | Required | Default | Description |
-|----------|----------|---------|-------------|
-| `--message` / `-m` | No | — | Custom commit message prefix |
-| `--format` | No | `json` | Output format: `json` or `yaml` |
-| `--dry-run` | No | false | Preview changes without executing |
-| `--paths` | No | BACKUP_PATHS | Override configured backup paths |
-
-## Git Strategy
-
-The script uses a strategy that **prioritizes local changes** while **preserving remote history**:
-
-1. **Stage all changes**: `git add -A` (includes new, modified, and deleted files)
-2. **Commit locally**: Creates a timestamped commit with all local changes
-3. **Fetch remote**: Gets the latest remote state without merging
-4. **Merge with local priority**: `git merge origin/<branch> -X ours`
-   - The `-X ours` flag resolves conflicts by preferring local changes
-   - Remote content is preserved in the merge commit history
-5. **Push to remote**: Uploads the merged result
-
-### Recovery
-If the script overwrites something important from remote:
-1. Check `git log` to find the commit before the merge
-2. Use `git show <commit>:<file>` to view the old content
-3. Restore with `git checkout <commit> -- <file>` or cherry-pick
-
-## Requirements
-- Git installed and configured
-- Python 3.x
-- Git repositories initialized in backup paths
-- Remote origin configured for each repository
-
-## Files
-- `scripts/backup.py` - Main backup script
-(venv) root@9b542f9f414e:/a0/usr/workdir#
-
-[SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+/a0/usr/skills/git-backup/scripts/backup.py 397 lines
+>>>
+ 1 #!/usr/bin/env python3
+ 2 """
+ 3 Git Backup Script
+ 4 
+ 5 Backs up specified paths to their configured git remotes.
+ 6 Prioritizes local changes over remote while preserving remote history.
+ 7 """
+ 8 
+ 9 import subprocess
+10 import argparse
+11 import json
+12 import sys
+13 from datetime import datetime
+14 from pathlib import Path
+15 
+16 # ============================================================================
+17 # CONFIGURATION - Edit this list to change backup paths
+18 # ============================================================================
+19 BACKUP_PATHS = [
+20     "/a0/usr",
+21 ]
+22 # ============================================================================
+23 
+24 
+25 def run_command(cmd, cwd, dry_run=False, check=True):
+26     """Run a shell command and return the result."""
+27     if dry_run:
+28         print(f"  [DRY-RUN] Would run: {' '.join(cmd)}")
+29         return subprocess.CompletedProcess(cmd, 0, b"", b"")
+30     
+31     result = subprocess.run(
+32         cmd,
+33         cwd=cwd,
+34         capture_output=True,
+35         text=True
+36     )
+37     
+38     if check and result.returncode != 0:
+39         raise subprocess.CalledProcessError(
+40             result.returncode, cmd, result.stdout, result.stderr
+41         )
+42     
+43     return result
+44 
+45 
+46 def is_git_repo(path):
+47     """Check if a directory is a git repository."""
+48     git_dir = Path(path) / ".git"
+49     return git_dir.exists()
+50 
+<<<
