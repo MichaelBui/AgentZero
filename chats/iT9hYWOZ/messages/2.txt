@@ -1,39 +1,39 @@
-Agentic Workflows in 2026: The ultimate guide - Vellum AI
-https://www.vellum.ai/blog/agentic-workflows-emerging-architectures-and-design-patterns
-Agentic workflows powered by LLMs are all that is new and exciting when it comes to AI. But since they’re so new — and quite complex to build — there's no standardized way of building them today. Luckily, the field is evolving extremely fast, and we're beginning to see some design patterns emerge. In this article, we’ll explore these emerging design patterns and frequent architectures, along with the challenges and lessons learned from companies building LLM agents in 2024.
+2026 Prediction: Engineers Ramp Up Learning in the AI Era
+https://www.electronicdesign.com/technologies/eda/article/55363756/electronic-design-ai-for-engineers-why-continuous-learning-degrees-and-certifications-matter-in-2026
+As AI reshapes engineering work, continuous education is becoming the clearest path to staying relevant and indispensable.
 
-Agentic AI: A Comprehensive Survey of Architectures, Applications, and ...
-https://arxiv.org/pdf/2510.25445
-It highlights the Transformer architecture as the pivotal enabling technology for large language models (LLMs), which in turn powered the generative AI revolution and provided the substrate for contemporary agentic systems.
+The demise of software engineering jobs has been greatly ... - CNN
+https://www.cnn.com/2026/04/08/tech/ai-software-developer-jobs
+Rank and file workers are scrambling to adjust to the AI era. At the pace AI is evolving, they'll likely have to continue to learn new skills ...
 
-AI Agents in 2026: LangGraph vs CrewAI vs Smolagents with Real ...
-https://pooya.blog/blog/ai-agents-frameworks-local-llm-2026/
-Mar 19, 2026 ... Framework Architecture Breakdown. Agent Framework Comparison: March 2026. Framework, Org, Version, Stars, Approach, Local LLM ...
+Will AI Replace Software Engineers in 2026? Job Market Data + Career ...
+https://www.sundeepteki.org/advice/impact-of-ai-on-the-2025-software-engineering-job-market
+AI/ML job postings have grown 21x since 2012 - engineers who add AI fluency now command $20K-$50K salary premiums over peers. The Stanford AI Index 2025 documents the fastest sustained growth in any technical specialisation on record. The salary gap between AI-fluent and non-AI engineers is widening each year.
 
-GitHub Copilot with Ollama: Agentic AI Models Running Locally in Your ...
-https://dev.to/pooyagolchian/github-copilot-with-ollama-agentic-ai-models-running-locally-in-your-ide-5ap7
-GitHub shipped Ollama integration for Copilot in March 2026. Every code suggestion, chat prompt, and agentic workflow can now route to local models running on your machine. No API keys. No telemetry. No per-token charges. The shift is structural, not incremental. For the first time, enterprise developers working under NDA, security researchers handling classified code, and solo builders who ...
+AI Will Reshape More Jobs Than It Replaces | BCG
+https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces
+... engineers rises, because humans continue to play a meaningful role. The continued growth of software engineering headcount in the years ...
 
-Every AI Agent Architecture in One Place | by Vinayak Talikot - Medium
-https://medium.com/@vinayak.talikot/every-ai-agent-architecture-in-one-place-595ba68d49cd
-Mar 4, 2026 ... Orchestration Patterns (Wiring LLM Calls Together). These come primarily from Anthropic's influential “Building Effective Agents” guide and ...
+Software Engineering in 2026: The Importance of Continuous Learning for ...
+https://www.refontelearning.com/blog/software-engineering-in-2026-the-importance-of-continuous-learning-for-career-growth
+Discover why continuous learning is essential for software engineers in 2026 and how upskilling drives career growth in a fast-evolving tech landscape.
 
-Karpathy said “there is room for an incredible new product” for LLM knowledge bases. I built it as a Claude Code skill
-https://www.reddit.com/r/AI_Agents/comments/1sdbfou/karpathy_said_there_is_room_for_an_incredible_new/
-This is interesting, but I think most of these systems hit the same wall: they’re great at building the graph, but weak at maintaining correctness over time. Once you start merging new inputs, things drift: duplicated nodes broken relationships stale assumptions Curious if you’re enforcing any kind of validation or consistency layer, or if it's mostly best-effort clustering. More on reddit.com
+The Software Engineering Job Market Is Collapsing in 2026 - Medium
+https://medium.com/@gaddamnaveen192/the-software-engineering-job-market-is-collapsing-in-2026-heres-why-4900e0da5c24
+Mar 24, 2026 ... Data from 2025 shows that employment rate for early career workers aged 22 to 25 in AI exposed occupations declined by 13%. So what exactly ...
 
-The Evolution of Open-Source LLMs in 2026: A Developer Guide
-https://stormap.ai/post/evolution-of-open-source-llms-a-march-2026-developer-guide
-Mar 18, 2026 ... Discover the evolution of open-source LLMs in 2026. Learn why developers are shifting from expensive APIs to cost-effective local AI models.
+Developing a Career Roadmap for Software Engineers in 2026
+https://www.resumly.ai/blog/developing-a-career-roadmap-for-growth-for-software-engineers-in-2026
+A step‑by‑step guide that helps software engineers map out growth, skill gaps, and job‑search strategies for 2026 using AI‑powered tools.
 
-Agentic Artificial Intelligence (AI): Architectures, Taxonomies, and Evaluation of Large Language Model Agents
-https://arxiv.org/html/2601.12560v1
-The Model Context Protocol provides ... patterns such as allowlists and audit logging at the protocol boundary [34, 35]. Existing surveys on LLM based agents and agentic AI have mainly taken four complementary perspectives: (i) broad overviews of LLM based autonomous agents and their applications [18, 63], (ii) conceptual and definition oriented treatments of agentic AI that go beyond LLMs [5], (iii) ...
+The "AI is replacing software engineers" narrative was a lie. MIT just ...
+https://www.reddit.com/r/ArtificialInteligence/comments/1s493x7/the_ai_is_replacing_software_engineers_narrative/
+Mar 26, 2026 ... 2.3K votes, 471 comments. Since 2022, the tech industry has been running a coordinated narrative. AI will replace 80 to 90% of software ...
 
-Implementing local-first agentic AI: A practical guide
-https://blog.logrocket.com/local-first-agentic-ai-guide/
-A practical guide to building privacy-first, local-first AI agents using small language models, with a real-world HR triage system and deployable architecture.
+Software developers are the vanguard of how AI is redefining work
+https://www.weforum.org/stories/2026/01/software-developers-ai-work/
+Software developers' adaptive stance on AI should serve as an example to all knowledge workers. New research in the sector shows that AI is expanding, not replacing, skilled roles. Self-directed AI upskilling, rather than topdown learning, is fast becoming a key talent strategy in the new era.
 
-Agentic AI: a comprehensive survey of architectures, applications, and future directions | Artificial Intelligence Review | Springer Nature Link
-https://link.springer.com/article/10.1007/s10462-025-11422-4
-Agentic AI represents a transformative shift in artificial intelligence, but its rapid advancement has led to a fragmented understanding, often conflating modern neural systems with outdated symbolic models—a practice known as conceptual retrofitting. This survey cuts through this confusion by introducing a novel dual-paradigm framework that categorizes agentic systems into two distinct ...
+Skills Every Software Engineer Must Learn to Survive in the AI Era ...
+https://www.linkedin.com/pulse/skills-every-software-engineer-must-learn-survive-ai-era-2026-ctgmc
+Mar 10, 2026 ... The software engineering landscape faces a massive structural crisis in 2026. Artificial intelligence tools now write functional syntax and ...

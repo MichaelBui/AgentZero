@@ -1,22 +1,39 @@
-=== PUBLISHED POSTS ===
-- Fun Things To Do With Self-Hosted Generative AI
-- The GPS Framework for Productivity
-- I Built 2 Multi-Agent Systems - Here's What I Learned About the Architecture
-- Less Is More - How My Tech Stack Got Leaner and Meaner
-- MCP Explained from Inside Out
-- Scaled Agile Framework
-- Tech Debt: From a Technical Jargon to Real-World Impacts
-- The Hard Truth About OpenClaw
-- The Modern Leader
-- The Three Layers of AI Transformation
-- To Vibe or Not To Vibe
-- Transforming Industries with Text and Image Generative AI
-- Unleashing the Power of Collaborative AIs
-- What Can We Do With Self-Hosted ChatGPT
+The Evolution of Software Engineering Productivity
+https://newsletter.eng-leadership.com/p/the-evolution-of-software-engineering
+The productive engineer of 2026 moves up in the value ladder. They shift from writing code to writing requirements and prompts as code. They focus on reviewing behavior rather than syntax.
 
-=== SEARCH DATE RANGE ===
-Search for topics trending in: March 2026 and April 2026
-⚠️ CRITICAL: All search queries must end with " since March 2026" keywords
-(venv) root@9b542f9f414e:/a0/usr/workdir#
+Top Engineering Productivity Trends Shaping Software Teams in 2026
+https://www.leiga.com/post/top-engineering-productivity-trends-software-teams-2026
+Explore the top engineering productivity trends in 2026—from AI and DX to async work and smarter planning—and how modern teams ship better, not harder.
 
-[SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+The Productivity Trick That Senior Engineers Use (But Never Talk ...
+https://medium.com/@optimzationking2/the-productivity-trick-that-senior-engineers-use-but-never-talk-about-5549af0078f9
+Mar 4, 2026 ... Another productivity habit senior engineers guard fiercely is deep work. ... Productivity in software engineering isn't about working harder.
+
+Best Productivity Tips for Software Engineer in 2026
+https://app.forget.work/blog/productivity/software-engineer/2026
+Discover the best productivity tips for Software Engineer in 2026. Learn how to overcome common challenges and boost your efficiency.
+
+Is Software Engineering Cooked? Not Yet. But Maybe.
+https://dev.to/aws/is-software-engineering-cooked-not-yet-but-maybe-5e0j
+Mar 3, 2026 ... Developers who are deep into these tools can ... This kind of judgment is what separates working code from production-ready software.
+
+AI Productivity Gains in Software Engineering: 2026 Data
+https://blog.exceeds.ai/ai-productivity-gains-software-engineering/
+AI tools now deliver measurable productivity gains in software engineering, yet capturing these benefits requires code-level measurement, risk management, and structured adoption strategies.
+
+Coding After Coders: The End of Computer Programming as We ...
+https://www.nytimes.com/2026/03/12/magazine/ai-coding-programming-jobs-claude-chatgpt.html
+Mar 12, 2026 ... In the era of A.I. agents, many Silicon Valley programmers are now barely programming. Instead, what they're doing is deeply, deeply weird.
+
+Google Engineering Productivity: SWE and Test Engineer (TE)
+https://landing.google.com/engprod/
+“Engineering Productivity uses infrastructure, systems expertise, metrics and insights to build efficiency and effectiveness in our developer workflow.
+
+Many say that software development is no longer and will ... - Reddit
+https://www.reddit.com/r/cscareers/comments/1olb0sh/many_say_that_software_development_is_no_longer/
+Nov 1, 2025 ... computer scientists/ai engineers will be the next one. most software engineers are just like the factory workers of the industrial revolution.
+
+The biggest obstacle for engineer productivity in 2026
+https://strategizeyourcareer.com/p/this-ai-problem-is-the-biggest-risk-for-software-engineers-in-2026
+I have faced this challenge at work, where I check Slack while AI generates. Since using AI in your IDE, your days have become more fragmented, and that’s a risk for your productivity. Being a productive engineer is about impact, not the volume of lines produced. It depends on sustained deep work and architectural thinking.
