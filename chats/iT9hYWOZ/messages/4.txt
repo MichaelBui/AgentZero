@@ -1,0 +1,39 @@
+Architectural Patterns for LLM Adoption in Agentic AI | Springer Nature Link
+https://link.springer.com/chapter/10.1007/979-8-8688-1542-3_3
+To fully realize the potential of LLMs as autonomous, Agentic AI systems, enterprises must invest in architectural patterns that support scalability, security, multi-agent coordination, and adaptive decision-making.
+
+Agentic AI Architectures And Design Patterns | by Anil Jain | AI / ML Architect | Data Architect | Medium
+https://medium.com/@anil.jain.baba/agentic-ai-architectures-and-design-patterns-288ac589179a
+These frameworks enable developers to build agentic systems by providing abstractions for perception, decision-making, and action, with tools like vector stores (e.g., Pinecone, Chroma) and LLMs (e.g., OpenAI, LLaMA), as seen in Langflow | Low-code ...
+
+Agentic AI Architecture: Types, Components, and Best Practices
+https://www.exabeam.com/explainers/agentic-ai/agentic-ai-architecture-types-components-best-practices/
+Historical analysis: The system reviews its past actions and decisions to identify patterns that led to success or failure. Continuous optimization: Algorithms adjust internal models and parameters to improve performance with each iteration. This self-improving capability is central to the long-term effectiveness of agentic AI.
+
+What Is the AI Agent Loop? The Core Architecture Behind Autonomous AI Systems | developers
+https://blogs.oracle.com/developers/what-is-the-ai-agent-loop-the-core-architecture-behind-autonomous-ai-systems
+The canonical pattern is ReAct: reasoning interleaved with acting. The model does not simply select a tool. It reasons about why that tool is appropriate, executes the call, processes the result, and reasons again.
+
+Top Agentic LLM Models & Frameworks for 2026 | Adaline
+https://www.adaline.ai/blog/top-agentic-llm-models-frameworks-for-2026
+Released March 11, 2025, the OpenAI Agents SDK represents the "closer to the metal" counter-movement. It's not trying to be everything. It's trying to be production-ready for the 80% of agent patterns that actually matter. The architecture is deliberately minimal: Agents (LLMs with instructions, tools, and guardrails), Handoffs (specialized tool calls for transferring control between agents), Sessions (automatic conversation history management), and Tracing (built-in debugging with one-line enablement).
+
+AI Agent Architecture Diagram: 2026 Complete Guide
+https://a-listware.com/blog/ai-agent-architecture-diagram
+Master AI agent architecture diagrams with patterns, components, and real-world implementations. Learn orchestration, reasoning layers, and production design.
+
+5 AI Agent Design Patterns to Master by 2026 | Enterprise Unified LLM API Gateway (One Key for All Models) | n1n.ai
+https://explore.n1n.ai/blog/5-ai-agent-design-patterns-master-2026-2026-03-21
+Discover the five essential AI agent design patterns—ReAct, Plan-and-Execute, Multi-Agent Collaboration, Reflection, and Tool Use—that will define enterprise software architecture by 2026.
+
+What Is Agentic AI Architecture? Common Patterns and When to Use Them - Graph Database & Analytics
+https://neo4j.com/blog/agentic-ai/agentic-architecture/
+An agentic AI system has these foundational components in its architecture: agent(s) with access to models, tools, and memory to complete tasks; orchestration to coordinate multiple agents; and guardrails to keep agent actions bounded and safe.
+
+Agentic Workflows in 2026: The ultimate guide - Vellum AI
+https://www.vellum.ai/blog/agentic-workflows-emerging-architectures-and-design-patterns
+Agentic workflows powered by LLMs are all that is new and exciting when it comes to AI. But since they’re so new — and quite complex to build — there's no standardized way of building them today. Luckily, the field is evolving extremely fast, and we're beginning to see some design patterns emerge. In this article, we’ll explore these emerging design patterns and frequent architectures, along with the challenges and lessons learned from companies building LLM agents in 2024.
+
+Agentic AI: A Comprehensive Survey of Architectures, Applications, and ...
+https://arxiv.org/pdf/2510.25445
+It highlights the Transformer architecture as the pivotal enabling technology for large language models (LLMs), which in turn powered the generative AI revolution and provided the substrate for contemporary agentic systems.

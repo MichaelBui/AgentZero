@@ -1,0 +1,39 @@
+Agentic Workflows in 2026: The ultimate guide - Vellum AI
+https://www.vellum.ai/blog/agentic-workflows-emerging-architectures-and-design-patterns
+Agentic workflows powered by LLMs are all that is new and exciting when it comes to AI. But since they’re so new — and quite complex to build — there's no standardized way of building them today. Luckily, the field is evolving extremely fast, and we're beginning to see some design patterns emerge. In this article, we’ll explore these emerging design patterns and frequent architectures, along with the challenges and lessons learned from companies building LLM agents in 2024.
+
+Agentic AI: A Comprehensive Survey of Architectures, Applications, and ...
+https://arxiv.org/pdf/2510.25445
+It highlights the Transformer architecture as the pivotal enabling technology for large language models (LLMs), which in turn powered the generative AI revolution and provided the substrate for contemporary agentic systems.
+
+AI Agents in 2026: LangGraph vs CrewAI vs Smolagents with Real ...
+https://pooya.blog/blog/ai-agents-frameworks-local-llm-2026/
+Mar 19, 2026 ... Framework Architecture Breakdown. Agent Framework Comparison: March 2026. Framework, Org, Version, Stars, Approach, Local LLM ...
+
+GitHub Copilot with Ollama: Agentic AI Models Running Locally in Your ...
+https://dev.to/pooyagolchian/github-copilot-with-ollama-agentic-ai-models-running-locally-in-your-ide-5ap7
+GitHub shipped Ollama integration for Copilot in March 2026. Every code suggestion, chat prompt, and agentic workflow can now route to local models running on your machine. No API keys. No telemetry. No per-token charges. The shift is structural, not incremental. For the first time, enterprise developers working under NDA, security researchers handling classified code, and solo builders who ...
+
+Every AI Agent Architecture in One Place | by Vinayak Talikot - Medium
+https://medium.com/@vinayak.talikot/every-ai-agent-architecture-in-one-place-595ba68d49cd
+Mar 4, 2026 ... Orchestration Patterns (Wiring LLM Calls Together). These come primarily from Anthropic's influential “Building Effective Agents” guide and ...
+
+Karpathy said “there is room for an incredible new product” for LLM knowledge bases. I built it as a Claude Code skill
+https://www.reddit.com/r/AI_Agents/comments/1sdbfou/karpathy_said_there_is_room_for_an_incredible_new/
+This is interesting, but I think most of these systems hit the same wall: they’re great at building the graph, but weak at maintaining correctness over time. Once you start merging new inputs, things drift: duplicated nodes broken relationships stale assumptions Curious if you’re enforcing any kind of validation or consistency layer, or if it's mostly best-effort clustering. More on reddit.com
+
+The Evolution of Open-Source LLMs in 2026: A Developer Guide
+https://stormap.ai/post/evolution-of-open-source-llms-a-march-2026-developer-guide
+Mar 18, 2026 ... Discover the evolution of open-source LLMs in 2026. Learn why developers are shifting from expensive APIs to cost-effective local AI models.
+
+Agentic Artificial Intelligence (AI): Architectures, Taxonomies, and Evaluation of Large Language Model Agents
+https://arxiv.org/html/2601.12560v1
+The Model Context Protocol provides ... patterns such as allowlists and audit logging at the protocol boundary [34, 35]. Existing surveys on LLM based agents and agentic AI have mainly taken four complementary perspectives: (i) broad overviews of LLM based autonomous agents and their applications [18, 63], (ii) conceptual and definition oriented treatments of agentic AI that go beyond LLMs [5], (iii) ...
+
+Implementing local-first agentic AI: A practical guide
+https://blog.logrocket.com/local-first-agentic-ai-guide/
+A practical guide to building privacy-first, local-first AI agents using small language models, with a real-world HR triage system and deployable architecture.
+
+Agentic AI: a comprehensive survey of architectures, applications, and future directions | Artificial Intelligence Review | Springer Nature Link
+https://link.springer.com/article/10.1007/s10462-025-11422-4
+Agentic AI represents a transformative shift in artificial intelligence, but its rapid advancement has led to a fragmented understanding, often conflating modern neural systems with outdated symbolic models—a practice known as conceptual retrofitting. This survey cuts through this confusion by introducing a novel dual-paradigm framework that categorizes agentic systems into two distinct ...

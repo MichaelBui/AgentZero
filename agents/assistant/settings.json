@@ -1,5 +1,4 @@
 {
     "chat_model_name": "local/qwen3.5-35b-a3b:instruct-reasoning",
-    "util_model_name": "local/qwen3.5-35b-a3b:instruct-reasoning",
-    "browser_model_name": "local/qwen3.5-35b-a3b:instruct-reasoning"
+    "util_model_name": "local/qwopus3.5-9B-v3:instruct-reasoning"
 }

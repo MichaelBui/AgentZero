@@ -1,0 +1,39 @@
+AI Adoption Risk | When Your Engineering Team Won't Adapt - Ideaware
+https://ideaware.co/blog/ai-adoption-risk-team-resistance/
+AI adoption in engineering teams is stalling. Timelines double while competitors ship faster. Here's what CTOs are doing about it. Andres Max ·March 17, 2026 ·12 min read
+
+Four Trends in AI Experimentation, Adoption, and Transformation
+https://hbr.org/sponsored/2026/03/four-trends-in-ai-experimentation-adoption-and-transformation
+Lagging employee adoption, consumer distrust, ineffective change management, and compliance paralysis are barriers to AI transformation that undermine its success.
+
+AI and future of IT function | Deloitte Insights
+https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends/2026/ai-future-it-function.html
+The era of incremental technology change is over. In the span of a few years, artificial intelligence has leapt from automating tasks to dismantling and rebuilding the very structure of the technology organization. 1 Consider that 78% of tech leaders anticipate broad, targeted, or transformational integration of AI agents into architecture workflows over the next five years, according to ...
+
+State of AI trust in 2026: Shifting to the agentic era
+https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era
+March 25, 2026 AI adoption is accelerating rapidly, with organizations moving beyond experimentation toward scaled deployment of gen AI and, increasingly, agentic AI across core business functions. But as AI systems take on greater autonomy—making recommendations, triggering actions, and interacting with other systems—the consequences of failure grow materially. In this environment, AI ...
+
+Why Your AI Adoption Strategy Is Stalling—And What to Do Instead
+https://time.com/charter/7383490/why-your-ai-adoption-strategy-is-stalling-and-what-to-do-instead/
+Mar 24, 2026 ... Yet real change—and real adoption—happens somewhere in the middle. My conversations with executives show that the team is the unit of AI ...
+
+6 Change Management Strategies to Scale AI Adoption in Engineering Teams
+https://www.augmentcode.com/guides/6-change-management-strategies-to-scale-ai-adoption-in-engineering-teams
+Learn six change management strategies to scale AI adoption in engineering teams while maintaining productivity, trust, and architectural consistency.
+
+First Strategy Piece of Enterprise AI: The Change Management ...
+https://medium.com/@community_md101/first-strategy-piece-of-enterprise-ai-the-change-management-framework-8d501e01c7af
+Mar 26, 2026 ... AI success is 20% model performance and 80% organisational adoption. Stakeholder Mapping and Influence Analysis. Every AI transformation begins ...
+
+Resistance to AI Adoption in the Workplace: Why Change Management ...
+https://www.themindfinders.com/2026/02/16/resistance-to-ai-adoption-in-the-workplace-why-change-management-determines-success/
+Failing to see AI productivity gains? Discover why 90% of AI barriers are cultural and how change management turns resistance into success. Read our 2026 guide.
+
+Organizational Transformation in the Age of AI: How Organizations ...
+https://reports.weforum.org/docs/WEF_Organizational_Transformation_in_the_Age_of_AI_How_Organizations_Maximize_AI's_Potential_2026.pdf
+Mar 18, 2026 ... Across industries, organizations can now point to measurable gains from AI adoption. ... to change resistance and risk concerns. This shift ...
+
+AI Tool Adoption Patterns: Engineering Teams Guide 2026
+https://blog.exceeds.ai/ai-adoption-patterns-engineering-teams/
+The 2026 AI adoption landscape varies sharply by company size, team seniority, and preferred tools. High performing engineering teams achieve 60 to 70% weekly AI tool adoption when they measure usage and improve workflows regularly, yet these same practices look different in startups, mid-market companies, and large enterprises.
