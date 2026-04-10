@@ -1,0 +1,39 @@
+Evolving into an AI-First Engineering Organization - 5 Structural Shifts Happening in 2026 and How to Replicate Them
+https://codenote.net/en/posts/ai-first-engineering-org-evolution-2026/
+In 2026, engineering organizations are rapidly evolving through AI tool adoption. Drawing from moves by Block, Meta, and Atlassian, this article identifies 5 structural shifts: lean teams, AI-based metrics, knowledge institutionalization, org flattening, and AI infrastructure investment, with actionable steps to replicate them.
+
+How Leadership Drives Platform Engineering Success in 2026
+https://www.ai-infra-link.com/how-leadership-drives-platform-engineering-success-in-2026/
+Leaders who replicate this approach see 3x higher adoption rates than those who mandate platform usage without collaboration. Executive sponsorship is a critical differentiator. Organizations with CIO or VP-level platform champions report: 50% ...
+
+AI comes of age: Deloitte's 17th Annual Tech Trends report reveals how ...
+https://www.deloitte.com/us/en/about/press-room/deloitte-tech-trends-2026.html
+AI is reshaping the tech organization, not replacing it: As AI is driving convergence across traditional back office, front office and product/digital offerings, the tech function is evolving from service delivery to strategic leadership with new capabilities and operating models.
+
+On AI-Readying Engineering Organizations - Jens Oliver Meiert
+https://meiert.com/blog/ai-readying-engineering-organizations/
+Mar 10, 2026 ... AI is here and AI is here to stay. While in general, we need criticism to train and use AI more responsibly and sustainably, we as engineering ...
+
+Organizational Transformation in the Age of AI: How Organizations ...
+https://www.weforum.org/publications/organizational-transformation-in-the-age-of-ai-how-organizations-maximize-ais-potential/
+In 2026, artificial intelligence has moved beyond curiosity and early experimentation. Across industries, organizations can point to measurable gains from adoption and are beginning to integrate AI into core enterprise workflows. AI works. The opportunity now is to realize its full value by rethinking how work is performed, how decisions are made and how operating models are designed.
+
+AI Adoption: Key Takeaways from March 16 Roundtable - LinkedIn
+https://www.linkedin.com/posts/edbatista_takeaways-from-todays-ai-implementation-activity-7439443153625178112-4lzD
+Mar 16, 2026 ... Takeaways from today's AI Implementation Roundtable, March 16, 2026: • Employees are responding to AI in radically different and sometimes ...
+
+Organizational Readiness for AI Adoption in 2026: A ... - LinkedIn
+https://www.linkedin.com/pulse/organizational-readiness-ai-adoption-2026-leaders-guide-bretzfield-concc
+Organizational readiness for AI adoption reflects an organization's capability to adopt, integrate, scale, and benefit from artificial intelligence technologies.
+
+In 2026, AI Is Redefining How Engineers Work
+https://etcjournal.com/2026/02/11/in-2026-ai-is-redefining-how-engineers-work/
+Feb 11, 2026 ... By Jim Shimabukuro (assisted by ChatGPT)Editor In the United States in 2026, artificial intelligence is no longer a far-off force looming on ...
+
+The AI shift in engineering: Moving from individual effort to ...
+https://www.colabsoftware.com/research/the-ai-shift-in-engineering-moving-from-individual-effort-to-organizational-adoption
+Manufacturing companies believe full AI adoption is critical within the next 12-24 months, with company survival listed as a prominent driver, according to a CoLab survey of 250 engineering leaders. The survey data makes clear: AI adoption among engineers has shifted from experimental, individual use to a need for manufacturing organizations to transform their processes. Drawing and design ...
+
+Four Trends in AI Experimentation, Adoption, and Transformation - SPONSOR CONTENT FROM CAPTECH
+https://hbr.org/sponsored/2026/03/four-trends-in-ai-experimentation-adoption-and-transformation
+Mar 27, 2026 ... The future of innovation depends on executives' ability to lead through this transformation. Organizations must learn how to empower people to ...

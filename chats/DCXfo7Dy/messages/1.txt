@@ -1,41 +1,12 @@
-[2026-04-10T06:31:07+0000] STARTED (days=3, since=2026-04-07, user=Michael Bui)
-[2026-04-10T06:31:07+0000] Connecting to browser at http://192.168.1.11:9223...
-(node:2411) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+[2026-04-10T14:31:06+0000] STARTED (days=3, since=2026-04-07, user=Michael Bui)
+[2026-04-10T14:31:06+0000] Connecting to browser at http://192.168.1.11:9223...
+(node:4190) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[2026-04-10T06:31:09+0000] Reusing tab: https://chat.google.com/app/home
-[2026-04-10T06:31:28+0000] Feed: 75 item(s) within 3 day(s)
-[2026-04-10T06:31:28+0000]   Early stop: 3 consecutive cached
-[2026-04-10T06:31:28+0000] Phase 1: 75 conversations (focus-skip=0, unchanged=55, to-fetch=20, unread=12)
-[2026-04-10T06:31:28+0000] [Fetching 1/20] RMN Notification
-[2026-04-10T06:31:58+0000]   Scroll early-stop: 30 consecutive cached messages
-[2026-04-10T06:31:58+0000]   -> 51 message(s)
-[2026-04-10T06:31:59+0000]   -> 12 new cached
-[2026-04-10T06:32:04+0000]   -> restored unread status
-[2026-04-10T06:32:04+0000] [Fetching 2/20] Tiong Siong Tee
-[2026-04-10T06:32:04+0000] Summarizing [1/75] RMN Notification (12 msgs, none)
-[2026-04-10T06:32:10+0000] Done [1/75] space/AAQA85dw4So rel=2
-[2026-04-10T06:32:27+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-10T06:32:27+0000]   -> 14 message(s)
-[2026-04-10T06:32:29+0000]   -> 14 new cached
-[2026-04-10T06:32:29+0000] [Fetching 3/20] #dd-dpd-engage-alert
-[2026-04-10T06:32:29+0000] Summarizing [2/75] Tiong Siong Tee (14 msgs, direct)
-[2026-04-10T06:32:33+0000]   SKIP: item not found in DOM
-[2026-04-10T06:32:33+0000] [Fetching 4/20] Shopping Cart Notification
-[2026-04-10T06:32:37+0000] Done [2/75] dm/700U4cAAAAE rel=8
-[2026-04-10T06:33:03+0000]   Hit scroll limit (5)
-[2026-04-10T06:33:03+0000]   -> 16 message(s)
-[2026-04-10T06:33:05+0000]   -> 16 new cached
-[2026-04-10T06:33:09+0000]   -> restored unread status
-[2026-04-10T06:33:09+0000] [Fetching 5/20] [Light] Project Light Attack and Defence Leads
-[2026-04-10T06:33:09+0000] Summarizing [3/75] Shopping Cart Notification (16 msgs, none)
-[2026-04-10T06:33:16+0000]   Reached top after 0 scroll(s)
-[2026-04-10T06:33:16+0000]   -> 2 message(s)
-[2026-04-10T06:33:17+0000]   -> 2 new cached
-[2026-04-10T06:33:20+0000]   WARN: could not restore unread status
-[2026-04-10T06:33:20+0000] [Fetching 6/20] [Light] Project Light Attack and Defence Leads
-[2026-04-10T06:33:22+0000] Done [3/75] space/AAAAsbHANyc rel=2
-[2026-04-10T06:33:22+0000] Summarizing [4/75] [Light] Project Light Attack and Defence Leads (2 msgs, direct)
-[2026-04-10T06:33:29+0000] Done [4/75] space/AAQAsFyLso4/F_D6L8z4ZSk rel=8
+[2026-04-10T14:31:07+0000] Reusing tab: https://chat.google.com/app/home
+[2026-04-10T14:31:30+0000] Feed: 74 item(s) within 3 day(s)
+[2026-04-10T14:31:30+0000]   Early stop: 3 consecutive cached
+[2026-04-10T14:31:30+0000] Phase 1: 74 conversations (focus-skip=0, unchanged=68, to-fetch=6, unread=6)
+[2026-04-10T14:31:30+0000] [Fetching 1/6] #dd-dpd-engage-alert
 
 
 [SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

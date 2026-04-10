@@ -1,0 +1,39 @@
+Trillion-Parameter LLM on an AMD Ryzen™ AI Max+ Cluster
+https://www.amd.com/en/developer/resources/technical-articles/2026/how-to-run-a-one-trillion-parameter-llm-locally-an-amd.html
+or many prototyping, research, and enterprise use cases, self-hosted clusters like this four-node Ryzen AI Max+ provide a cost-effective, privacy-preserving complement to paid cloud services, giving teams a place to exploreone trillion-parameter models, prototype distributed inference strategies, and validate workloads before scaling into larger cloud or production environments. ... How Dayhoff Health used AMD ROCm™ and a Radeon AI PRO 9700 to move genomic analysis from CPUs to GPUs, boosting microbiome, WGS, and single-cell workloads.
+
+AMD Strix Halo system optimization — ROCm Documentation
+https://rocm.docs.amd.com/en/latest/how-to/system-optimization/strixhalo.html
+This document provides guidance for optimizing systems powered by AMD Ryzen AI MAX and MAX+ processors (codenamed Strix Halo). These APUs combine high-performance CPU cores with integrated RDNA 3.5 graphics and support up to 128GB of unified LPDDR5X-8000 memory, making them particularly well-suited for: LLM development and inference systems High-performance workstations Virtualization hosts ...
+
+AMD Ryzen AI Halo: Local LLM Inference Platform Analysis - Reading List
+https://reading.torqsoftware.com/notes/hardware/ai/2026-01-21-amd-ryzen-ai-halo-local-llm-inference-platform/
+While the platform delivers lower raw throughput than the M2 Ultra (which achieves ~94 TPS on 7B Q4 models due to its 800 GB/s memory bandwidth) and dedicated GPUs (150-220+ TPS on RTX 5090), it offers significant advantages in power efficiency, MoE model optimization, cross-platform support (Windows/Linux), and expected cost-effectiveness. The accompanying ROCm 7.1.1 software stack provides PyTorch 2.9 support, though llama.cpp compatibility remains in experimental stages. The Ryzen AI Halo utilizes AMD’s flagship Strix Halo APU with the following specifications:
+
+Running 122B-Parameter LLMs Locally on AMD Strix Halo for ... - LinkedIn
+https://www.linkedin.com/pulse/running-122b-parameter-llms-locally-amd-strix-halo-deep-pellegrini-33cjc
+Over the past few months, I've been building a local LLM inference stack on an AMD Ryzen AI Max+ 395 (Strix Halo) — a chip with 128GB of unified LPDDR5X memory shared between CPU and GPU. My ...
+
+ROCm GPU Compute Performance With AMD Ryzen AI MAX+ "Strix Halo"
+https://www.phoronix.com/review/amd-strix-halo-rocm-benchmarks
+At Computex AMD talked up ROCm for Strix Halo and RDNA4 GPUs and indeed with the ROCm 6.4.1 release shortly thereafter is advertised RDNA4 support. I have tested ROCm 6.4.1 with Strix Halo for today's testing and it works though not officially advertised within the ROCm documentation.
+
+What would a good local LLM setup cost in 2026? - Reddit
+https://www.reddit.com/r/LocalLLM/comments/1r0x3kn/what_would_a_good_local_llm_setup_cost_in_2026/
+Feb 10, 2026 ... Best GPUs for local LLM inference in 2026. Top LLMs to consider in ... And why from Nvidia and not from amd like halo Strix? LSU_Tiger.
+
+Local LLMs on Strix Halo 128GB Shared Ram: My Tests
+https://blog.t1m.me/blog/local-llms-on-strix-halo-128gb-shared-ram
+Local LLMs on Strix Halo; AMD Ryzen™ AI MAX+ 395 with 128GB Shared Ram: My Tests LLMs are sometimes stupid, sometimes impressive, often unpredictable and almost never private.
+
+This is how SLOW Local LLMs Are On My Framework 13 AMD Strix Point | Miguel Filipe
+https://msf.github.io/blogpost/local-llm-performance-framework13.html
+This is Part 2 of my local LLM benchmarking. Part 1 was about whether local models can write Go. This one is about why my Framework 13 gets the numbers it gets, what the hard ceiling is, and how to verify all of this yourself. I went down this rabbit hole because I wanted to try ROCm instead of Vulkan, hoping to make things faster. Spoiler: it didn’t for the workload that matters. But I learned a lot about what actually determines inference speed on an AMD APU.
+
+Join the Lemonade Developer Challenge - AMD
+https://www.amd.com/en/developer/resources/technical-articles/2026/join-the-lemonade-developer-challenge.html
+Feb 15, 2026 ... ... and speech, and monitoring local inference from one place. Lemonade ... Leveraging AMD AI Workbench to Scale LLM Inference for Optimal Resource ...
+
+What to Buy for Local LLMs (April 2026) | by Julien Simon | Apr, 2026 | Medium
+https://julsimon.medium.com/what-to-buy-for-local-llms-april-2026-a4946a381a6a
+[23] DGX Spark: 128GB LPDDR5x, 273 GB/s, NVIDIA Grace Blackwell. $4,699 (increased from $3,999 at launch due to memory-shortage surcharge). [24] EXO Labs, “Combining NVIDIA DGX Spark + Apple Mac Studio for 4x Faster LLM Inference,” October 2025.
