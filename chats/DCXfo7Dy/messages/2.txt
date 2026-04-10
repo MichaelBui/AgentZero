@@ -1,71 +1,81 @@
-[2026-04-10T02:31:56+0000]   Scroll early-stop: 27 consecutive cached messages
-[2026-04-10T02:31:56+0000]   -> 48 message(s)
-[2026-04-10T02:31:56+0000]   -> 12 new cached
-[2026-04-10T02:32:03+0000]   -> restored unread status
-[2026-04-10T02:32:03+0000] [Fetching 2/11] #dd-dpd-engage-alert
-[2026-04-10T02:32:03+0000] Summarizing [1/74] RMN Notification (12 msgs, none)
-[2026-04-10T02:32:10+0000] Done [1/74] space/AAQA85dw4So rel=2
-[2026-04-10T02:32:35+0000]   Hit scroll limit (5)
-[2026-04-10T02:32:35+0000]   -> 16 message(s)
-[2026-04-10T02:32:36+0000]   -> 16 new cached
-[2026-04-10T02:32:42+0000]   -> restored unread status
-[2026-04-10T02:32:42+0000] [Fetching 3/11] Technical Deep Dive for Sprint 1 - Apr 10
-[2026-04-10T02:32:42+0000] Summarizing [2/74] #dd-dpd-engage-alert (16 msgs, none)
-[2026-04-10T02:32:55+0000] Done [2/74] space/AAAAxwwNw2U rel=2
-[2026-04-10T02:33:09+0000]   Reached top after 2 scroll(s)
-[2026-04-10T02:33:09+0000]   -> 20 message(s)
-[2026-04-10T02:33:11+0000]   -> 20 new cached
-[2026-04-10T02:33:16+0000]   -> restored unread status
-[2026-04-10T02:33:16+0000] [Fetching 4/11] Shopping Cart Notification
-[2026-04-10T02:33:16+0000] Summarizing [3/74] Technical Deep Dive for Sprint 1 - Apr 10 (20 msgs, direct)
-[2026-04-10T02:33:24+0000] Done [3/74] space/AAQAJLl3Vow rel=7
-[2026-04-10T02:33:47+0000]   Hit scroll limit (5)
-[2026-04-10T02:33:47+0000]   -> 16 message(s)
-[2026-04-10T02:33:47+0000]   -> 3 new cached
-[2026-04-10T02:33:53+0000]   -> restored unread status
-[2026-04-10T02:33:53+0000] [Fetching 5/11] Algolia Again - Apr 9
-[2026-04-10T02:33:53+0000] Summarizing [4/74] Shopping Cart Notification (3 msgs, none)
-[2026-04-10T02:33:59+0000] Done [4/74] space/AAAAsbHANyc rel=2
-[2026-04-10T02:34:21+0000]   Scroll early-stop: 26 consecutive cached messages
-[2026-04-10T02:34:21+0000]   -> 42 message(s)
-[2026-04-10T02:34:22+0000]   -> 15 new cached
-[2026-04-10T02:34:28+0000]   -> restored unread status
-[2026-04-10T02:34:28+0000] [Fetching 6/11] [Prod Support] Marketplace
-[2026-04-10T02:34:28+0000] Summarizing [5/74] Algolia Again - Apr 9 (15 msgs, direct)
-[2026-04-10T02:34:37+0000] Done [5/74] space/AAQA4rDgC4Q rel=9
-[2026-04-10T02:34:52+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-10T02:34:52+0000]   -> 4 message(s)
-[2026-04-10T02:34:53+0000]   -> 1 new cached
-[2026-04-10T02:34:58+0000]   -> restored unread status
-[2026-04-10T02:34:58+0000] [Fetching 7/11] @omni-ops #standup - Apr 10
-[2026-04-10T02:34:58+0000] Summarizing [6/74] [Prod Support] Marketplace (1 msgs, none)
-[2026-04-10T02:35:02+0000] Done [6/74] space/AAAAs0DTvmA rel=2
-[2026-04-10T02:35:25+0000]   Reached top after 1 scroll(s)
-[2026-04-10T02:35:25+0000]   -> 1 message(s)
-[2026-04-10T02:35:25+0000]   -> 1 new cached
-[2026-04-10T02:35:31+0000]   -> restored unread status
-[2026-04-10T02:35:31+0000] [Fetching 8/11] [Internal] (Ecom/Omni) Digital Product Development
-[2026-04-10T02:35:31+0000] Summarizing [7/74] @omni-ops #standup - Apr 10 (1 msgs, none)
-[2026-04-10T02:35:35+0000] Done [7/74] space/AAQApPkrGsc rel=2
-[2026-04-10T02:35:56+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-10T02:35:56+0000]   -> 11 message(s)
-[2026-04-10T02:35:56+0000]   -> 1 new cached
-[2026-04-10T02:35:56+0000] [Fetching 9/11] #dd-dpd-grocery-alert
-[2026-04-10T02:35:56+0000] Summarizing [8/74] [Internal] (Ecom/Omni) Digital Product Development (1 msgs, direct)
-[2026-04-10T02:36:03+0000] Done [8/74] space/AAQAUbi9szY rel=6
-[2026-04-10T02:36:25+0000]   Hit scroll limit (5)
-[2026-04-10T02:36:25+0000]   -> 16 message(s)
-[2026-04-10T02:36:25+0000]   -> 3 new cached
-[2026-04-10T02:36:29+0000]   -> restored unread status
-[2026-04-10T02:36:29+0000] [Fetching 10/11] 📅 Daily summary
-[2026-04-10T02:36:29+0000] Summarizing [9/74] #dd-dpd-grocery-alert (3 msgs, none)
-[2026-04-10T02:36:35+0000] Done [9/74] space/AAAAtxQjB7c rel=2
-[2026-04-10T02:36:52+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-10T02:36:52+0000]   -> 3 message(s)
-[2026-04-10T02:36:52+0000]   -> 1 new cached
-[2026-04-10T02:36:56+0000]   -> restored unread status
-[2026-04-10T02:36:56+0000] [Fetching 11/11] fairnex-datadog-notification
-[2026-04-10T02:36:56+0000] Summarizing [10/74] 📅 Daily summary (1 msgs, none)
+[2026-04-10T06:34:01+0000]   Reached cutoff after 0 scroll(s)
+[2026-04-10T06:34:01+0000]   -> 15 message(s)
+[2026-04-10T06:34:01+0000]   -> 3 new cached
+[2026-04-10T06:34:01+0000] [Fetching 7/20] [Tech] Light x Comall
+[2026-04-10T06:34:01+0000] Summarizing [5/75] [Light] Project Light Attack and Defence Leads (3 msgs, direct)
+[2026-04-10T06:34:09+0000]   Reached top after 0 scroll(s)
+[2026-04-10T06:34:09+0000]   -> 2 message(s)
+[2026-04-10T06:34:09+0000]   -> 2 new cached
+[2026-04-10T06:34:09+0000] [Fetching 8/20] [Tech] Light x Comall
+[2026-04-10T06:34:18+0000] Done [5/75] space/AAQAsFyLso4 rel=8
+[2026-04-10T06:34:18+0000] Summarizing [6/75] [Tech] Light x Comall (2 msgs, direct)
+[2026-04-10T06:34:25+0000] Done [6/75] space/AAQAxUYxclM/0mV2K_gF5wM rel=9
+[2026-04-10T06:34:53+0000]   Reached top after 2 scroll(s)
+[2026-04-10T06:34:53+0000]   -> 6 message(s)
+[2026-04-10T06:34:53+0000]   -> 2 new cached
+[2026-04-10T06:34:53+0000] [Fetching 9/20] [Internal] (Ecom/Omni) Digital Product Development
+[2026-04-10T06:34:53+0000] Summarizing [7/75] [Tech] Light x Comall (2 msgs, direct)
+[2026-04-10T06:35:00+0000] Done [7/75] space/AAQAxUYxclM rel=9
+[2026-04-10T06:35:21+0000]   Scroll early-stop: 3 consecutive cached messages
+[2026-04-10T06:35:21+0000]   -> 19 message(s)
+[2026-04-10T06:35:23+0000]   -> 8 new cached
+[2026-04-10T06:35:28+0000]   -> restored unread status
+[2026-04-10T06:35:28+0000] [Fetching 10/20] [Light] Project Light Attack and Defence Leads
+[2026-04-10T06:35:28+0000] Summarizing [8/75] [Internal] (Ecom/Omni) Digital Product Development (8 msgs, direct)
+[2026-04-10T06:35:36+0000] Done [8/75] space/AAQAUbi9szY rel=8
+[2026-04-10T06:35:38+0000]   Reached top after 1 scroll(s)
+[2026-04-10T06:35:38+0000]   Expanded 1 bar(s)
+[2026-04-10T06:35:38+0000]   -> 18 message(s)
+[2026-04-10T06:35:40+0000]   -> 18 new cached
+[2026-04-10T06:35:40+0000] [Fetching 11/20] Team Starship
+[2026-04-10T06:35:40+0000] Summarizing [9/75] [Light] Project Light Attack and Defence Leads (18 msgs, direct)
+[2026-04-10T06:35:51+0000] Done [9/75] space/AAQAsFyLso4/b7oMLBmImKs rel=9
+[2026-04-10T06:36:03+0000]   Reached cutoff after 0 scroll(s)
+[2026-04-10T06:36:03+0000]   -> 4 message(s)
+[2026-04-10T06:36:03+0000]   -> 1 new cached
+[2026-04-10T06:36:09+0000]   WARN: could not restore unread status
+[2026-04-10T06:36:09+0000] [Fetching 12/20] QE <-> All Tribes
+[2026-04-10T06:36:09+0000] Summarizing [10/75] Team Starship (1 msgs, none)
+[2026-04-10T06:36:14+0000] Done [10/75] space/AAQAX9iKYf0 rel=2
+[2026-04-10T06:36:33+0000]   Reached cutoff after 0 scroll(s)
+[2026-04-10T06:36:33+0000]   -> 8 message(s)
+[2026-04-10T06:36:33+0000]   -> 2 new cached
+[2026-04-10T06:36:37+0000]   -> restored unread status
+[2026-04-10T06:36:37+0000] [Fetching 13/20] Technical Deep Dive for Sprint 1 - Apr 10
+[2026-04-10T06:36:37+0000] Summarizing [11/75] QE <-> All Tribes (2 msgs, none)
+[2026-04-10T06:36:42+0000] Done [11/75] space/AAAAS7vPcKs rel=6
+[2026-04-10T06:37:05+0000]   Reached top after 3 scroll(s)
+[2026-04-10T06:37:05+0000]   -> 35 message(s)
+[2026-04-10T06:37:08+0000]   -> 35 new cached
+[2026-04-10T06:37:08+0000] [Fetching 14/20] Andin Eswarlal Rajesh
+[2026-04-10T06:37:08+0000] Summarizing [12/75] Technical Deep Dive for Sprint 1 - Apr 10 (35 msgs, direct)
+[2026-04-10T06:37:18+0000] Done [12/75] space/AAQA81Hp3f4 rel=9
+[2026-04-10T06:37:34+0000]   Scroll early-stop: 14 consecutive cached messages
+[2026-04-10T06:37:34+0000]   -> 34 message(s)
+[2026-04-10T06:37:34+0000]   -> 4 new cached
+[2026-04-10T06:37:34+0000] [Fetching 15/20] [Prod Support] Marketplace
+[2026-04-10T06:37:34+0000] Summarizing [13/75] Andin Eswarlal Rajesh (4 msgs, direct)
+[2026-04-10T06:37:40+0000] Done [13/75] dm/pTMl_AAAAAE rel=9
+[2026-04-10T06:37:58+0000]   Reached cutoff after 0 scroll(s)
+[2026-04-10T06:37:58+0000]   -> 5 message(s)
+[2026-04-10T06:37:58+0000]   -> 1 new cached
+[2026-04-10T06:38:02+0000]   -> restored unread status
+[2026-04-10T06:38:02+0000] [Fetching 16/20] #dd-fpg-watchdog-alert
+[2026-04-10T06:38:02+0000] Summarizing [14/75] [Prod Support] Marketplace (1 msgs, none)
+[2026-04-10T06:38:07+0000] Done [14/75] space/AAAAs0DTvmA rel=2
+[2026-04-10T06:38:26+0000]   Reached cutoff after 0 scroll(s)
+[2026-04-10T06:38:26+0000]   -> 10 message(s)
+[2026-04-10T06:38:26+0000]   -> 1 new cached
+[2026-04-10T06:38:30+0000]   -> restored unread status
+[2026-04-10T06:38:30+0000] [Fetching 17/20] Algolia Again - Apr 9
+[2026-04-10T06:38:30+0000] Summarizing [15/75] #dd-fpg-watchdog-alert (1 msgs, none)
+[2026-04-10T06:38:35+0000] Done [15/75] space/AAAAnlKPglA rel=2
+[2026-04-10T06:38:57+0000]   Scroll early-stop: 28 consecutive cached messages
+[2026-04-10T06:38:57+0000]   -> 44 message(s)
+[2026-04-10T06:38:57+0000]   -> 2 new cached
+[2026-04-10T06:39:02+0000]   -> restored unread status
+[2026-04-10T06:39:02+0000] [Fetching 18/20] Digital Product Development {DPD}
+[2026-04-10T06:39:02+0000] Summarizing [16/75] Algolia Again - Apr 9 (2 msgs, direct)
 
 
 [SYSTEM: Returning control to agent after 288 seconds of execution. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
