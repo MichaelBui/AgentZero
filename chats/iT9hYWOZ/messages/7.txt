@@ -1,39 +1,39 @@
-Burnout Is Back: How Organisations Can Reset for a Healthier, More ...
-https://www.hrdconnect.com/2025/12/04/burnout-is-back-how-organisations-can-reset-for-a-healthier-more-sustainable-2026/
-Burnout is rising again. Discover how organisations can redesign work, use AI thoughtfully and strengthen leadership to build a healthier, more sustainable 2026.
+Your practical guide to DORA metrics | Swarmia
+https://www.swarmia.com/blog/dora-metrics/
+oin us on April 16: How to build a metrics culture that engineers actually trust → ... DORA metrics have evolved since they were first introduced in 2014, but they remain the gold standard for measuring software delivery performance. This guide, first published in 2022 and updated in 2026, covers both the current five-metric model and the context you need to use it effectively.
 
-Tech worker burnout: causes, impact & solutions for HR & leadership
-https://www.circles.com/resources/tech-worker-burnout-causes-impact-solutions-for-hr-leadership
-Dec 9, 2025 ... When you treat burnout as a strategic alarm, you shift from reaction to prevention. ... March 31, 2026. Work Design article: Measuring the ...
+DORA Metrics: A Practical Guide for Engineering Leaders
+https://typoapp.io/blog/dora-metrics-for-engineering-leaders
+As of 2026, DORA metrics have expanded to a five-metric model to account for modern development practices and the impact of AI tools, with Reliability emerging as a fifth signal, particularly for organizations with mature SRE practices.
 
-AI Productivity Without Burnout (2026): A Sustainable System for Busy ...
-https://workproductiveai.com/ai-productivity-without-burnout-2026/
-Discover how to use AI for productivity without burnout. Learn a sustainable AI productivity system designed for busy professionals who want long-term focus, clarity, and performance.
+Engineering Metrics That Matter (And Ones to Avoid) - EM Tools
+https://www.em-tools.io/engineering-metrics
+Mar 30, 2026 ... It is organised into four categories: DORA metrics for delivery performance, delivery metrics for workflow efficiency, quality metrics for ...
 
-Preventing Developer Burnout: From Reactive Fixes to a Proactive ...
-https://blogs.embarcadero.com/preventing-developer-burnout-from-reactive-fixes-to-a-proactive-approach-to-well-being/
-Oct 6, 2025 ... The foundation of sustainable engineering culture is psychological ... March 25, 2026. Announcing the Availability of RAD Studio 13 ...
+What is DORA metrics? Meaning, Architecture, Examples, Use Cases, and How to Measure It (2026 Guide) - XOps Tutorials!!!
+https://www.xopsschool.com/tutorials/dora-metrics/
+DORA metrics are four engineering performance measures tracking software delivery throughput and stability. Analogy: like a car’s speed, fuel efficiency, crash rate, and repair time, they reveal how fast and reliably teams deliver. Formal: four quantitative metrics for delivery performance ...
 
-Burnout Is Not Inevitable: The AllOne Consulting Approach to ...
-https://allonehealth.com/insights/burnout-is-not-inevitable-the-allone-consulting-approach-to-sustainable-success/
-The AllOne Consulting Four-Part Approach to Sustainable Success AllOne Consulting has worked with hundreds of organizations across industries and developed an evidence-based, four-part approach to preventing burnout and fostering resilience.
+DORA Metrics for Engineering Teams: Guide & Benchmarks
+https://www.em-tools.io/frameworks/dora-metrics
+Implement DORA metrics in your engineering team. Covers deployment frequency, lead time, change failure rate, benchmarks, and how to improve each metric.
 
-Burnout Isn't a Capacity Problem. It's a Leadership Systems Problem.
-https://www.linkedin.com/pulse/burnout-isnt-capacity-problem-its-leadership-systems-jaime-taets-ksvuc
-Feb 17, 2026 ... Burnout is what happens when we mistake momentum for sustainability and activity for performance. Leaders don't stall because they lack capacity ...
+3 AI Trends Reshaping Software Engineering in 2026 - LinkedIn
+https://www.linkedin.com/pulse/3-ai-trends-reshaping-software-engineering-2026-jellyfish-co-o3nce
+Jan 14, 2026 ... DORA has done surveys strictly around AI for the last two years, and the first year saw some negative results around throughput and how much ...
 
-Workplace Wellness Blueprint: Burnout Prevention—Strategies for ...
-https://www.linkedin.com/pulse/workplace-wellness-blueprint-burnout-sustainable-success-booker-3vpie
-By addressing the root causes of burnout and implementing evidence-based solutions, organizations can create a culture where employees thrive and success is truly sustainable.
+DORA Metrics: the Right Answer to measuring engineering team performance
+https://www.reddit.com/r/programming/comments/196mevj/dora_metrics_the_right_answer_to_measuring/
+Only way to measure a development team is by having competent managers that understand the problem space and technology. All other approaches can and will be manipulated. More on reddit.com
 
-How to Avoid Burnout in Tech Using the ARMOR Method
-https://www.thedrivegroup.com.au/how-to-avoid-burnout-in-tech/
-Jun 23, 2025 ... In this post, we'll break ARMOR down, step-by-step, so that whether you're a software engineer, project manager, or hiring lead, you can use ...
+The essential software engineering checklist for scaling in 2026
+https://meduzzen.com/blog/software-engineering-checklist-scaling-2026/
+Apr 2, 2026 ... Discover the essential software engineering checklist for scaling in 2026. Covering AI adoption, platform engineering, code review, ...
 
-Toward a socially sustainable workforce in service operations ...
-https://www.sciencedirect.com/science/article/pii/S2667344425000040
-Employee burnout presents a critical challenge to achieving sustainable service operations. Sustainable workforces prioritize employee well-being and long-term productivity, fundamentally at odds with the detrimental effects of burnout [1]. Characterized by emotional exhaustion, depersonalization, and a diminished sense of accomplishment [2], burnout erodes employee well-being and undermines ...
+What Are DORA Metrics? The Complete Guide for Engineering Leaders (2026 ...
+https://www.gitrecap.com/blog/what-are-dora-metrics
+Learn what DORA metrics are, how to measure them, and why elite engineering teams track deployment frequency, lead time, change failure rate, and MTTR. Includes benchmarks from 39,000+ teams.
 
-Workforce Optimization in 2026: Why WEM Is Replacing WFO
-https://www.cxtoday.com/workforce-engagement-management/why-workforce-optimization-wfo-is-no-longer-enough-for-modern-contact-centers/
-Mar 31, 2026 ... Workforce optimization is evolving. Discover why contact centers are shifting from WFO to WEM, addressing hybrid work and burnout.
+DORA Metrics 2026: How Elite Software Delivery Teams Measure Performance | Programming Helper Tech
+https://www.programming-helper.com/tech/dora-metrics-2026-software-delivery-performance
+The DORA research program enters its eleventh year with new insights into software delivery performance. As platform engineering transforms how organizations build software, the four key metrics remain the gold standard for measuring engineering excellence. This analysis explores the latest DORA findings, how AI amplifies delivery capabilities, and why Python has become essential for measuring and visualizing performance data.
