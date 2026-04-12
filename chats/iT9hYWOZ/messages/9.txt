@@ -1,89 +1,39 @@
-[
-  {
-    "title": "The 5th DORA Metric: Why Reliability Beats Velocity in the AI Era",
-    "pillar": "Technology",
-    "score": 9,
-    "angle": "DORA's expansion to a 5-metric model (adding Reliability) in 2026 directly challenges velocity-focused cultures. Michael can share how his SLO >98% culture emerged from trying to balance speed with stability, plus practical implementation of the new fifth metric.",
-    "trending_signal": "DORA updated guide April 2026 (Swarmia), EM Tools May 30 article on expanded model, Jellyfish survey on AI impact throughputs",
-    "expertise": [
-      "DORA metrics",
-      "SLO management",
-      "engineering culture"
-    ]
-  },
-  {
-    "title": "From Chatbots to Agents: The Operational Shift Every Engineering Leader Must Make",
-    "pillar": "Technology",
-    "score": 8,
-    "angle": "Google Cloud's March 26 insight on shifting from chatbots to agents isn't just technical\u2014it's operational. Michael can detail the orchestration patterns and governance he built for his two production multi-agent systems.",
-    "trending_signal": "Google Cloud AI Agent Trends report (March 26, 2026), Deloitte's \"agent reality check\", IBM's prediction that 2026 is when multi-agent moves to production",
-    "expertise": [
-      "Multi-agent orchestration",
-      "Agent Zero framework",
-      "operational governance"
-    ]
-  },
-  {
-    "title": "Strix Halo vs. GPU Clusters: A Practical Guide to Local LLM Inference at Scale",
-    "pillar": "Technology",
-    "score": 10,
-    "angle": "Julien Simon's April 2026 finding that llama.cpp outperforms ROCm on Strix Halo is counterintuitive. Michael can share his hands-on benchmarks with 128GB unified memory, quantization strategies, and cost-vs-performance tradeoffs versus cloud GPU clusters.",
-    "trending_signal": "Julien Simon Medium article \"What to Buy for Local LLMs (April 2026)\", AMD's trillion-parameter inference guide, vLLM v0.16.0 ROCm expansion",
-    "expertise": [
-      "AMD Strix Halo server",
-      "local LLM inference",
-      "cost optimization"
-    ]
-  },
-  {
-    "title": "MCP in Production: Lessons from 28% Fortune 500 Adoption Rate",
-    "pillar": "Technology",
-    "score": 7,
-    "angle": "While Michael covered MCP basics, this dives into enterprise pain points: 97M SDK downloads but only 28% Fortune 500 adoption. He can share real integration challenges from his homelab and retail systems.",
-    "trending_signal": "David Soria Parra's March 9 roadmap, Synvestable's enterprise guide (March 13), Reddit discussion on MCP complexity",
-    "expertise": [
-      "MCP implementation",
-      "enterprise integration",
-      "vendor evaluation"
-    ]
-  },
-  {
-    "title": "Engineering Trust at Scale: The Missing Link in Remote AI Transformation",
-    "pillar": "Leadership",
-    "score": 9,
-    "angle": "With remote teams scaling to 100% AI adoption, trust becomes the bottleneck. Michael can share his experience leading 14-person cross-functional teams through organizational change while maintaining psychological safety.",
-    "trending_signal": "WEF's 450-executive report on AI transformation, Microsoft's Frontier Transformation framework, LinkedIn articles on high-trust remote teams",
-    "expertise": [
-      "Team leadership",
-      "AI adoption at scale",
-      "organizational change"
-    ]
-  },
-  {
-    "title": "Sustainable Engineering Productivity: Preventing Burnout While Scaling AI Workflows",
-    "pillar": "Life",
-    "score": 8,
-    "angle": "McKinsey's finding that wellbeing integration boosts productivity by 20-25% is critical. Michael can share his systems approach to workload management, drawing from his homelab power reduction (30%) and team scaling experience.",
-    "trending_signal": "McKinsey Health Institute data on wellbeing ROI, Guardian's 26 burnout-proof strategies, Logiciel's CTO playbook",
-    "expertise": [
-      "Engineering culture",
-      "workload management",
-      "systems thinking"
-    ]
-  },
-  {
-    "title": "The Agent Reality Check: Why 15% Autonomous Decisions Isn't Enough (Yet)",
-    "pillar": "Technology",
-    "score": 7,
-    "angle": "Gartner's 15% autonomous decisions by 2028 is optimistic. Michael can critique the gap between pilot and production, drawing from his two multi-agent system deployments and the brittleness challenges discussed in Reddit threads.",
-    "trending_signal": "Deloitte's agent reality check, Gartner predictions (15% autonomous decisions by 2028), Reddit r/AI_Agents discussion on measurement limits",
-    "expertise": [
-      "Multi-agent systems",
-      "production deployment",
-      "failure anticipation"
-    ]
-  }
-]
-(venv) root@6381e6d53b40:/a0/usr/workdir#
+2026's Fastest-Growing Skills and Top Learning Trends From 2025
+https://blog.coursera.org/2026s-fastest-growing-skills-and-top-learning-trends-from-2025/
+Dec 16, 2025 ... A typical day saw 150,000 enrollments, 14 enrollments every minute in GenAI courses, and the launch of 10 new pieces of content. Coursera ...
 
-[SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+Why 2026 is the Right Time to Learn AI and Build Future-Ready Skills
+https://www.usaii.org/ai-insights/why-2026-is-the-right-time-to-learn-ai-and-build-future-ready-skills
+Jan 9, 2026 ... Artificial intelligence is no longer a future skill; it's a requirement for 2026 and beyond. While AI, platforms, and automation continue to ...
+
+New Research: How AI Transforms $400 Billion Of Corporate Learning
+https://joshbersin.com/2026/02/new-research-how-ai-transforms-400-billion-of-corporate-learning/
+Feb 11, 2026 ... Generative AI, by nature of its dynamic content generation, is the perfect technology for learning. Rather than manually design, build, and ...
+
+Why Do Professional Certifications in 2026: The Post-AI Era Guide
+https://learntube.ai/blog/uncategorized/professional-certifications-2026-post-ai-guide/
+Jan 6, 2026 ... This creates two outcomes: massive opportunities for certified professionals, and rapid obsolescence for those who don't upskill. The data is ...
+
+AI Changes Learning Pathways for Students and Professionals
+https://www.linkedin.com/posts/montyalger_%F0%9D%97%9A%F0%9D%97%B6%F0%9D%97%B4%F0%9D%98%80-%F0%9D%97%94-%F0%9D%97%A1%F0%9D%97%B2%F0%9D%98%84-%F0%9D%97%AA%F0%9D%97%AE%F0%9D%98%86-%F0%9D%97%B3%F0%9D%97%BC%F0%9D%97%BF-%F0%9D%97%A6%F0%9D%98%81%F0%9D%98%82-activity-7436142629605609472-w4ku
+Mar 7, 2026 ... They have repositioned from training software engineers to upskilling teams in AI skills. They recognised their unfair advantage as an ...
+
+Introducing the New Alteryx Academy: Personalized Learning to ...
+https://www.prnewswire.com/news-releases/introducing-the-new-alteryx-academy-personalized-learning-to-upskill-in-modern-era-of-ai-and-data-analytics-302715291.html
+Mar 17, 2026 ... Introducing the New Alteryx Academy: Personalized Learning to Upskill in Modern Era of AI and Data Analytics ... Designed with continuous learning ...
+
+How to Stay Relevant and Upskill in 2026 Without Burning Out
+https://www.womentech.net/blogvtwo/how-stay-relevant-and-upskill-in-2026-without-burning-out
+Mar 31, 2026 ... ... personalized preparation strategies, simulate interviews, and ... For example, structured learning tracks (e.g., “AI for Product Engineers ...
+
+2026 AI, Automation, and the Future of Curriculum & Instruction ...
+https://research.com/advice/ai-automation-and-the-future-of-curriculum-and-instruction-degree-careers
+Feb 19, 2026 ... Higher Education: Universities and colleges rapidly integrate AI to create personalized learning pathways and enhance curriculum development, ...
+
+r/singularity on Reddit: Continual Learning In 2026. What does ...
+https://www.reddit.com/r/singularity/comments/1q6attw/continual_learning_in_2026_what_does_continual/
+Jan 7, 2026 ... 60 votes, 59 comments. People keep saying "continual learning" for 2026-era models, but that phrase can mean very different things.
+
+The State of Tech Talent 2026: How organizations can survive and ...
+https://generalassemb.ly/blog/state-of-tech-talent-2026/
+Feb 25, 2026 ... But many still lack a clear system for translating the AI training and learning into sustained performance. Surviving in the AI era will ...

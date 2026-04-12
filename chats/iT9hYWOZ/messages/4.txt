@@ -1,39 +1,39 @@
-Agentic AI strategy | Deloitte Insights
-https://www.deloitte.com/us/en/insights/topics/technology-management/tech-trends/2026/agentic-ai-strategy.html
-The agent reality check Agentic AI has captured the attention of enterprises with its compelling promises of autonomous operation and intelligent execution. The momentum is undeniable: Gartner predicts that 15% of day-to-day work decisions will be made autonomously through agentic AI by 2028, up from none in 2024, while 33% of enterprise software applications will include agentic AI by the ...
+What is mentorship engineering growth and why is it important?
+https://engineeringmanagementinstitute.org/tcep-310-mentorship-strategies-for-engineering-growth/
+Mentorship engineering growth involves guiding engineers through technical and career development to build their confidence, skills, and leadership potential. It is important because it helps professionals navigate complex technical challenges and career transitions, leading to better performance and long-term success.
 
-How are low-code platforms changing AI agent deployment?
-https://www.salesmate.io/blog/future-of-ai-agents/
-Low-code platforms are democratizing AI agent development, allowing non-technical users to create sophisticated agents without coding. This has led to faster development cycles, lower implementation costs, and reduced dependency on scarce technical talent, enabling organizations to rapidly scale their AI agent deployments.
+The importance of mentoring in engineering leadership — part 1 | by Sebastiano Armeli | Medium
+https://sebarmeli.medium.com/the-importance-of-mentoring-in-engineering-leadership-part-1-063736154a5f
+Mentoring is a structured and ongoing relationship in which a mentor with expertise and experience in a specific domain voluntarily shares their knowledge, insights, and wisdom with a mentee. For example, in engineering leadership, mentorship could target strategies around career growth.
 
-AI Agent Trends in 2026 | SS&C Blue Prism
-https://www.blueprism.com/resources/blog/future-ai-agents-trends/
-In 2026, the rise of agentic automation will mark the true democratization of AI, where every company can wield intelligence at scale, but only those with the right governance foundation will transform availability into advantage.
+Mentoring Trends 2026: The Future of Employee Development and Learning
+https://www.qooper.io/blog/mentoring-trends
+ganizations are investing in mentoring software and mentorship platforms to scale these initiatives effectively. AI simplifies mentor mapping, automates communication, and personalizes mentoring sessions based on skills and goals. It allows L&D leaders to focus on professional growth and career progression while ensuring consistent mentoring support across all employees. Effective mentoring improves employee engagement, strengthens leadership skills, increases retention rates, and supports knowledge sharing.
 
-The trends that will shape AI and tech in 2026 | IBM
-https://www.ibm.com/think/news/ai-tech-trends-predictions-2026
-It’s been just a year since Anthropic launched MCP, alongside IBM’s ACP and Google’s A2A. If 2025 was the year of the agent, 2026 should be the year where all multi-agent systems move into production, IBM’s Kate Blair told IBM Think ...
+Engineering Manager Mentorship Program - The Mentoring Club
+https://www.mentoring-club.com/lp/engineering-manager-mentorship-program
+It’s a lot to navigate, especially if you’re new to leadership. How do you foster psychological safety and innovation? What’s the best way to manage performance reviews or guide engineers through meaningful career growth? How do you make confident technical decisions under pressure, or steer projects through Agile or Scrum frameworks without losing sight of the big picture? Mentorship from seasoned engineering leaders can make the difference between feeling overwhelmed and leading with clarity.
 
-Agentic AI Takes Over — 11 Shocking 2026 Predictions
-https://www.forbes.com/sites/markminevich/2025/12/31/agentic-ai-takes-over-11-shocking-2026-predictions/
-Agentic and multi-agent AI systems will manage entire workflows once controlled by humans, while humanoid and physical robotics advance from demonstrations to targeted pilots in factories, warehouses and labs marking the dawn of physical AI.
+Engineering Mentorship: Building Future Engineering Leaders
+https://engineeringmanagementinstitute.org/the-mentorship-loop-how-engineering-mentorship-builds-future-leaders/
+It’s about moving forward—together. The students will build their robots and write their code, and maybe even pursue engineering degrees. That matters. But you’ll build something too.
 
-AI agent trends 2026 report | Google Cloud
-https://cloud.google.com/resources/content/ai-agent-trends-2026
-The era of simple prompts is over. We're witnessing the agent leap—where AI orchestrates complex, end-to-end workflows semi-autonomously. For enterprises struggling with speed-to-value, this is the defining opportunity of 2026.
+Coaches and Mentors for Engineering Managers and Engineering Leaders - The Pragmatic Engineer
+https://blog.pragmaticengineer.com/coaches-and-mentors-for-engineering-managers/
+Edward Taylor – formerly worked with Ed at Skyscanner, where he hired me and was my first manager. He is currently mentoring CTOs, VPEs, EMs and senior engineering managers. In his words: "I have particular experience in mentoring those who have prematurely leapt a few rungs on the leadership ladder, now thrown in at the deep end.
 
-150+ AI Agent Statistics [2026]
-https://masterofcode.com/blog/ai-agent-statistics
-Automated SDRs research leads, personalize outreach, and boost meeting conversions – 4x faster than manual efforts. Key Takeaways: Across all sources, one trend is clear: agentic artificial intelligence is moving from pilot to production.
+Mentorship Reimagined as Engine for Women’s Career Growth - The Women Globe
+https://thewomenglobe.com/mentorship-reimagined-as-engine-for-womens-career-growth/
+Research and leadershipcoaching firms report that women who receive structured mentorship are more likely to seek promotions, speak up in strategy meetings, and transition into seniormanagement and boardlevel roles.
 
-7 Agentic AI Trends to Watch in 2026 - MachineLearningMastery.com
-https://machinelearningmastery.com/7-agentic-ai-trends-to-watch-in-2026/
-Industry analysts project the market will surge from $7.8 billion today to over \$52 billion by 2030, while Gartner predicts that 40% of enterprise applications will embed AI agents by the end of 2026, up from less than 5% in 2025.
+The Mentor Definition for 2026 and the Future of Mentorship for Leaders | Chronus
+https://chronus.com/blog/the-mentor-definition-for-2026-and-the-future-of-mentorship-for-leaders
+Companies might create mentorship programs specifically to tackle skills gaps, to build the leadership pipeline, or to improve management engagement. Ask 50 different experts to define mentorship, and you’ll get 50 different answers. But the National Academies of Science, Engineering, and Medicine (NASEM, 2019) offers a solid definition for mentoring in 2026: “Mentorship is a professional, working alliance in which individuals work together over time to support the personal and professional growth, development, and success of the relational partners through the provision of career and psychosocial support.”
 
-Agentic AI & Multi-Agent Systems: 2026 Guide
-https://stackviv.ai/blog/agentic-ai-multi-agent-systems-guide
-Master agentic AI and multi-agent systems. Learn frameworks, orchestration patterns, real-world use cases, and how to build autonomous AI agents in 2026.
+The Ultimate Guide to Early Career Mentoring in 2026
+https://www.qooper.io/blog/early-career-mentoring
+Your needs determine whether you should look for technical expertise, strategic career guidance, leadership development, or confidence-building support. You can still build organic mentor relationships through colleagues, alumni networks, LinkedIn, industry events, and professional communities. Many of the most impactful mentorships start informally.
 
-5 insights to build your agentic AI advantage in 2026 - Google Cloud
-https://cloud.google.com/transform/5-insights-to-build-your-agentic-ai-advantage-in-2026
-Mar 26, 2026 ... Shifting from chatbots to AI agents automates complex workflows and secures a competitive edge through a collaborative, AI-fluent workforce.
+Rokt Career Growth & Development 2026 | Built In Calgary
+https://builtincalgary.org/company/rokt/faq/career-growth-development
+Quarterly Promotion Reviews: For L1–L4 roles, promotion decisions are made quarterly, enabling fast recognition of impact and timely progression. Senior promotions (L5+) are reviewed semi-annually, with peer feedback and rigorous calibration to ensure fairness. Internal Mobility & Rotations: Employees are encouraged to make lateral or cross-functional moves. This builds well-rounded skill sets, strengthens succession planning, and accelerates leadership readiness. Apprenticeship & Mentorship: Juniors are paired with experienced mentors from day one.

@@ -1,39 +1,39 @@
-Four Trends in AI Experimentation, Adoption, and Transformation - SPONSOR CONTENT FROM CAPTECH
-https://hbr.org/sponsored/2026/03/four-trends-in-ai-experimentation-adoption-and-transformation
-People ensure accountability, accuracy, and adaptability, turning algorithms into trusted partners rather than unchecked engines. As AI evolves, so will the role of humans in its evolution.
+State of AI trust in 2026: Shifting to the agentic era
+https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era
+RAI maturity continues to improve, yet strategy, governance, and agentic AI controls lag behind, with only about 30 percent of organizations reaching a maturity level of three or higher in these dimensions. RAI maturity varies by industry and region: Asia–Pacific leads globally, and technology, media, and telecommunications and financial services outperform other sectors. Investment in RAI is strongly associated with higher RAI maturity and realized value. Increased adoption or consideration of adoption is leading to more risks and challenges as well as declined confidence in handling these risks:
 
-Organizational Transformation in the Age of AI: How Organizations ...
-https://reports.weforum.org/docs/WEF_Organizational_Transformation_in_the_Age_of_AI_How_Organizations_Maximize_AI's_Potential_2026.pdf
-Mar 18, 2026 ... Across industries, organizations can now point to measurable gains from AI adoption. ... – Shift ownership from individual strategy teams to ...
+Dealing with AI's cultural debt - Deloitte
+https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends/2026/ai-cultural-debt.html
+Mar 4, 2026 ... In fact, 42% of workers in Deloitte's 2026 Global Human Capital Trends survey report that their organization rarely evaluates the impact of AI ...
 
-Evolving into an AI-First Engineering Organization - 5 Structural ...
-https://codenote.net/en/posts/ai-first-engineering-org-evolution-2026/
-In 2026, engineering organizations are rapidly evolving through AI tool adoption. Drawing from moves by Block, Meta, and Atlassian, this article identifies 5 structural shifts: lean teams, AI-based metrics, knowledge institutionalization, org flattening, and AI infrastructure investment, with actionable steps to replicate them.
+PDF the-state-of-engineering-ai-2026
+https://explore.simscale.com/hubfs/resources/reports/state-of-engineering-ai-2026.pdf
+The results of our 2026 survey show that meaningful progress is now underway, but adoption remains uneven. More engineering organizations are experimenting with AI-driven workflows, and measurable gains are beginning to appear, from faster engineering response times to dramatically expanded design exploration. At the same time, scaling these capabilities across complex engineering environments ...
 
-First Strategy Piece of Enterprise AI: The Change Management ...
-https://medium.com/@community_md101/first-strategy-piece-of-enterprise-ai-the-change-management-framework-8d501e01c7af
-Mar 26, 2026 ... AI success is 80% organizational adoption. Master the enterprise AI change management framework to bridge the gap between data and human ...
+AI Is Creating Culture Debt In Organizations - Forbes
+https://www.forbes.com/sites/niritcohen/2026/03/04/ai-is-creating-culture-debt-in-organizations/
+Mar 4, 2026 ... A majority of leaders believe their organizational culture needs significant change because of AI transformation, yet very few say they are ...
 
-AI Adoption Roadmap for Engineering Teams 2026 - chiefviews.com
-https://chiefviews.com/ai-adoption-roadmap-for-engineering-teams-2026/
-Explore the ultimate AI adoption roadmap for engineering teams 2026: phased steps, agentic AI trends, tools, and metrics to scale from pilots to production impact fast.
-
-Why Your AI Adoption Strategy Is Stalling—And What to Do Instead
-https://time.com/charter/7383490/why-your-ai-adoption-strategy-is-stalling-and-what-to-do-instead/
-Mar 24, 2026 ... Most of the conversations happening today about AI focus on either end of the workplace spectrum: How the organization at large will adopt ...
-
-AI Decision Brief: How leaders can drive Frontier Transformation
-https://www.microsoft.com/en-us/microsoft-cloud/blog/2026/03/31/ai-decision-brief-how-leaders-can-drive-frontier-transformation/
-Microsoft leaders share how to drive Frontier Transformation—scaling AI for real business impact across workflows, decisions, governance, and growth.
+Enterprise AI Adoption, Trust Frameworks And The Rise Of Agentic AI
+https://www.forbes.com/sites/deloitte/2026/03/05/enterprise-ai-adoption-trust-frameworks-and-the-rise-of-agentic-ai/
+At the World Economic Forum (WEF), Deloitte's Nitin Mittal stressed that successful enterprise AI adoption hinges on building trust, fostering organizational readiness, and managing change. He ...
 
 The State of Organizations 2026 | McKinsey
 https://www.mckinsey.com/~/media/mckinsey/business%20functions/people%20and%20organizational%20performance/our%20insights/the%20state%20of%20organizations/2026/the-state-of-organizations-2026.pdf
-to adoption and push for a double transformation: both technological and organizational. ... sponsorship, and dedicated teams as key enablers of AI adoption.
+their organizations are not prepared to adopt AI in day-to-day operations. One in six organizations have no clear. C-level owner for AI adoption. The top ...
 
-Organizational Readiness for AI Adoption in 2026: A ... - LinkedIn
-https://www.linkedin.com/pulse/organizational-readiness-ai-adoption-2026-leaders-guide-bretzfield-concc
-Organizational readiness for AI adoption refers to a comprehensive state of preparedness across strategy, data, and infrastructure, governance, culture, and people that enables companies to adopt ...
+84% of Developers Use AI. Only 29% Trust It. Here's What That Gap Is ...
+https://stepto.net/blog/ai-trust-verification-gap-engineering-2026
+Virtually every developer on your team is using AI tools. Barely a third of them trust the output. And nearly half are committing AI-generated code they haven't reviewed. A new Stack Overflow survey of 49,000 developers reveals the adoption-trust paradox — and the silent quality crisis it's creating inside engineering organizations.
 
-Organizational Transformation in the Age of AI: How Organizations Maximize AI's Potential | World Economic Forum
-https://www.weforum.org/publications/organizational-transformation-in-the-age-of-ai-how-organizations-maximize-ais-potential/
-Organizational Transformation in the Age of AI: How Organizations Maximize AI's Potential examines how leading organizations are embedding AI across customer experience, operations, R&D, strategic planning and talent. Drawing on insights from more than 450 executives in the World Economic Forum's AI Transformation of Industries community, it highlights a shift from isolated use cases to ...
+Where AI is moving beyond experimentation, according to leaders
+https://www.weforum.org/stories/2026/03/where-is-ai-moving-beyond-experimentation-leaders-scaling/
+Mar 25, 2026 ... Discussions at the meeting underscored the scale of the challenge: around three-quarters of companies have yet to generate meaningful value from ...
+
+AI Changed the Code. Engineering Didn't Change the System ... - LinkedIn
+https://www.linkedin.com/pulse/ai-changed-code-engineering-didnt-change-system-why-delivery-ilyas-f--zsfjc
+Three years into the generative AI era, most engineering leaders have shipped at least one AI pilot. Some have shipped a dozen.
+
+Four Trends in AI Experimentation, Adoption, and Transformation - SPONSOR CONTENT FROM CAPTECH
+https://hbr.org/sponsored/2026/03/four-trends-in-ai-experimentation-adoption-and-transformation
+Mar 27, 2026 ... Organizations must learn how to empower people to adapt, build trust in AI experiences, and embrace a culture of fast-paced experimentation and ...

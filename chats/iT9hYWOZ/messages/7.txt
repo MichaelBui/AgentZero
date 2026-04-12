@@ -1,39 +1,39 @@
-Your practical guide to DORA metrics | Swarmia
-https://www.swarmia.com/blog/dora-metrics/
-oin us on April 16: How to build a metrics culture that engineers actually trust → ... DORA metrics have evolved since they were first introduced in 2014, but they remain the gold standard for measuring software delivery performance. This guide, first published in 2022 and updated in 2026, covers both the current five-metric model and the context you need to use it effectively.
+DORA metrics in the age of AI-driven delivery | Future Processing
+https://www.future-processing.com/blog/dora-devops-metrics/
+Key takeaways The 2025 State of AI-Assisted Software Development report marks a shift in focus from traditional DevOps performance to AI-driven delivery practices. The DORA framework has evolved beyond the four classic DevOps metrics, now including a new one, Rework Rate, and a quasi-metric, Reliability.
 
-DORA Metrics: A Practical Guide for Engineering Leaders
-https://typoapp.io/blog/dora-metrics-for-engineering-leaders
-As of 2026, DORA metrics have expanded to a five-metric model to account for modern development practices and the impact of AI tools, with Reliability emerging as a fifth signal, particularly for organizations with mature SRE practices.
+DORA | Get Better at Getting Better
+https://dora.dev/
+Get better at getting better DORA is the largest and longest running research program of its kind, that seeks to understand the capabilities that drive software delivery and operations performance. DORA helps teams apply those capabilities, leading to better organizational performance.
 
-Engineering Metrics That Matter (And Ones to Avoid) - EM Tools
-https://www.em-tools.io/engineering-metrics
-Mar 30, 2026 ... It is organised into four categories: DORA metrics for delivery performance, delivery metrics for workflow efficiency, quality metrics for ...
+Engineering Effectiveness: AI-Aware DORA Metrics for 2026
+https://blog.exceeds.ai/engineering-effectiveness-developer-productivity-2026/
+Key Takeaways Engineering effectiveness in 2026 depends on extending DORA metrics with AI-specific measures like AI adoption rates and code-level cycle times to prove ROI. AI tools deliver 55% faster task completion but also increase PR review times by 91% and raise bug-fix volume, so teams need code-level analytics to see the real impact.
 
-What is DORA metrics? Meaning, Architecture, Examples, Use Cases, and How to Measure It (2026 Guide) - XOps Tutorials!!!
-https://www.xopsschool.com/tutorials/dora-metrics/
-DORA metrics are four engineering performance measures tracking software delivery throughput and stability. Analogy: like a car’s speed, fuel efficiency, crash rate, and repair time, they reveal how fast and reliably teams deliver. Formal: four quantitative metrics for delivery performance ...
+Value-Stream Mapping Is Your Missing AI Superpower
+https://www.lean.org/the-lean-post/articles/value-stream-mapping-is-your-missing-ai-superpower/
+Feb 4, 2026 ... AI amplifies what you already have—strong systems or dysfunction. DORA's 2025 research reveals why value-stream management is critical for ...
 
-DORA Metrics for Engineering Teams: Guide & Benchmarks
-https://www.em-tools.io/frameworks/dora-metrics
-Implement DORA metrics in your engineering team. Covers deployment frequency, lead time, change failure rate, benchmarks, and how to improve each metric.
+2025 DORA Report: State of AI-Assisted Software Development
+https://www.reddit.com/r/programming/comments/1o1n25o/2025_dora_report_state_of_aiassisted_software/
+The report reveals a key insight: AI doesn't fix a team; it amplifies what's already there. Strong teams use AI to become even better and more efficient. Struggling teams will find that AI only highlights and intensifies their existing problems. The greatest return comes not from the AI tools themselves, but from a strategic focus on the quality of internal platforms, the clarity of workflows, and the alignment of teams. More on reddit.com
 
 3 AI Trends Reshaping Software Engineering in 2026 - LinkedIn
 https://www.linkedin.com/pulse/3-ai-trends-reshaping-software-engineering-2026-jellyfish-co-o3nce
 Jan 14, 2026 ... DORA has done surveys strictly around AI for the last two years, and the first year saw some negative results around throughput and how much ...
 
-DORA Metrics: the Right Answer to measuring engineering team performance
-https://www.reddit.com/r/programming/comments/196mevj/dora_metrics_the_right_answer_to_measuring/
-Only way to measure a development team is by having competent managers that understand the problem space and technology. All other approaches can and will be manipulated. More on reddit.com
+AI in Software Development in 2026: Data, Tools & Risks - ALM Corp
+https://almcorp.com/blog/ai-in-software-development/
+Mar 19, 2026 ... It analyzes deployment history, identifies patterns in failures, suggests safer rollout strategies, and reduces the time between an incident ...
 
-The essential software engineering checklist for scaling in 2026
-https://meduzzen.com/blog/software-engineering-checklist-scaling-2026/
-Apr 2, 2026 ... Discover the essential software engineering checklist for scaling in 2026. Covering AI adoption, platform engineering, code review, ...
+AI Coding Adoption at Enterprise Scale Is Harder Than Anyone Admits
+https://medium.com/@EnterpriseToolingInsights/ai-coding-adoption-at-enterprise-scale-is-harder-than-anyone-admits-90cd5f3e7db3
+Mar 4, 2026 ... The enterprise metric is safe, boring, repeatable production change. Why Enterprises Slow The Rollout. From the outside, enterprise caution ...
 
-What Are DORA Metrics? The Complete Guide for Engineering Leaders (2026 ...
-https://www.gitrecap.com/blog/what-are-dora-metrics
-Learn what DORA metrics are, how to measure them, and why elite engineering teams track deployment frequency, lead time, change failure rate, and MTTR. Includes benchmarks from 39,000+ teams.
+Developer Productivity Metrics 2026: From DORA to DevEx and Beyond
+https://zylos.ai/research/2026-02-07-developer-productivity-metrics
+Comprehensive guide to measuring software engineering productivity in 2026, covering DORA, SPACE, DX Core 4, flow metrics, and the impact of AI on code quality and developer effectiveness
 
-DORA Metrics 2026: How Elite Software Delivery Teams Measure Performance | Programming Helper Tech
-https://www.programming-helper.com/tech/dora-metrics-2026-software-delivery-performance
-The DORA research program enters its eleventh year with new insights into software delivery performance. As platform engineering transforms how organizations build software, the four key metrics remain the gold standard for measuring engineering excellence. This analysis explores the latest DORA findings, how AI amplifies delivery capabilities, and why Python has become essential for measuring and visualizing performance data.
+DORA metrics tools in 2026: What to measure, and what's missing
+https://getdx.com/blog/dora-metrics-tools/
+The DX AI Measurement Framework addresses the second, providing research-backed metrics for tracking AI adoption, impact, and cost alongside Core 4. This article covers the best DORA metrics tools in 2026, how each fits into a more complete ...
