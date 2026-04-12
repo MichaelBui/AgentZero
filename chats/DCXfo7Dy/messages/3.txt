@@ -1,0 +1,16 @@
+[2026-04-12T02:34:42+0000]   Hit scroll limit (5)
+[2026-04-12T02:34:42+0000]   -> 16 message(s)
+[2026-04-12T02:34:42+0000]   -> 3 new cached
+[2026-04-12T02:34:51+0000]   -> restored unread status
+[2026-04-12T02:34:51+0000] [Fetching 8/11] DPD AI Guild
+[2026-04-12T02:34:51+0000] Summarizing [6/71] #dd-dpd-grocery-alert (3 msgs, none)
+[2026-04-12T02:34:58+0000] Done [6/71] space/AAAAtxQjB7c rel=2
+[2026-04-12T02:35:02+0000]   Reached top after 0 scroll(s)
+[2026-04-12T02:35:02+0000]   -> 2 message(s)
+[2026-04-12T02:35:02+0000]   -> 2 new cached
+[2026-04-12T02:35:02+0000] [Fetching 9/11] DPD AI Guild
+[2026-04-12T02:35:02+0000] Summarizing [7/71] DPD AI Guild (2 msgs, none)
+[2026-04-12T02:35:07+0000] Done [7/71] space/AAQA5_B3lZQ/_f5z7k2HUXg rel=2
+
+
+[SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
