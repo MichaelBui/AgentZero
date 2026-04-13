@@ -106,11 +106,10 @@ erDiagram
 | Method | Path | Purpose | Response |
 |---|---|---|---|
 | `POST` | `/v1/ingest` | Multipart: JSON metadata + optional files (PDF/DOCX) | `202` (queued) |
-| `POST` | `/v1/query` | Hybrid search (chunks + tasks + profile) | `200` |
+| `POST` | `/v1/query` | Hybrid search (chunks + tasks) | `200` |
 | `POST` | `/v1/job/gchat` | Trigger Google Chat sync (n8n cron) | `202` |
 | `POST` | `/v1/job/gmail` | Trigger Gmail sync (n8n cron) | `202` |
 | `POST` | `/v1/job/jira` | Trigger Jira sync (n8n cron) | `202` |
-| `PUT` | `/v1/profile` | Update user profile | `200` |
 | `GET` | `/health` | Liveness check | `200` |
 
 ## Ingestion Pipeline
@@ -170,11 +169,11 @@ Every query searches BOTH chunks and tasks in parallel (always-on dual search, ~
 All top-N values are configurable via settings (defaults shown):
 
 1. Embed query (1024d, shared)
-2. Parallel: Chunk hybrid (dense top 50 + BM25 top 50 -> RRF) | Task hybrid (top 20 + 20 -> RRF) | Profile lookup
+2. Parallel: Chunk hybrid (dense top 50 + BM25 top 50 -> RRF) | Task hybrid (top 20 + 20 -> RRF)
 3. Re-rank: chunks top 50 -> 20, tasks top 20 -> 20
 4. Lost-in-Middle reorder chunks
 5. Task relevance threshold filter (accuracy >= 0, relevancy >= 0)
-6. Compose: separate sections (Context / Tasks / Profile)
+6. Compose: separate sections (Context / Tasks)
 
 ## Scheduling
 
@@ -220,7 +219,7 @@ Job endpoints run source-specific sync logic internally (fetch from APIs using s
 | 0: Infrastructure | PG17, Qwen3 4B models, LiteLLM | **COMPLETE** |
 | 1: Foundation | API server, schema, worker, first job | **COMPLETE** |
 | 2: Sensors | gchat/gmail/jira jobs + n8n | **COMPLETE** |
-| 3: Agent Integration | A0 search tool, task labels, profile | Pending |
+| 3: Agent Integration | A0 search tool, task labels | Pending |
 | 4: Quality | 50 test queries, tune, Phase 2 techniques | Pending |
 | 5: Expansion | Confluence, PDF/DOCX, Cursor MCP | Pending |
 
