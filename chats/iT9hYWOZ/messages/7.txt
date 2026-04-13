@@ -1,39 +1,39 @@
-DORA metrics in the age of AI-driven delivery | Future Processing
-https://www.future-processing.com/blog/dora-devops-metrics/
-Key takeaways The 2025 State of AI-Assisted Software Development report marks a shift in focus from traditional DevOps performance to AI-driven delivery practices. The DORA framework has evolved beyond the four classic DevOps metrics, now including a new one, Rework Rate, and a quasi-metric, Reliability.
+How agentic AI will reshape engineering workflows in 2026 | CIO
+https://www.cio.com/article/4134741/how-agentic-ai-will-reshape-engineering-workflows-in-2026.html
+In 2026, agentic AI won't just help engineers code — it'll run first drafts of the SDLC, leaving humans to steer, review and think bigger.
 
-DORA | Get Better at Getting Better
-https://dora.dev/
-Get better at getting better DORA is the largest and longest running research program of its kind, that seeks to understand the capabilities that drive software delivery and operations performance. DORA helps teams apply those capabilities, leading to better organizational performance.
+Is AI Productivity a Mirage? Engineering Leaders Face the 2026 Reality Check | by Standupify Team | Medium
+https://medium.com/@standupify/is-ai-productivity-a-mirage-engineering-leaders-face-the-2026-reality-check-0cea0b117df2
+As explored in The AI-Powered Standup: Revolutionizing Team Productivity in 2026, integrating AI into daily workflows is increasingly crucial. Ultimately, AI’s success in engineering depends on leaders embracing data-driven decision-making and continuous improvement.
 
-Engineering Effectiveness: AI-Aware DORA Metrics for 2026
-https://blog.exceeds.ai/engineering-effectiveness-developer-productivity-2026/
-Key Takeaways Engineering effectiveness in 2026 depends on extending DORA metrics with AI-specific measures like AI adoption rates and code-level cycle times to prove ROI. AI tools deliver 55% faster task completion but also increase PR review times by 91% and raise bug-fix volume, so teams need code-level analytics to see the real impact.
+Engineering in the Age of AI: 2026 Benchmark Report - Key Findings | Cortex
+https://www.cortex.io/post/ai-is-making-engineering-faster-but-not-better-state-of-ai-benchmark-2026
+The full Engineering in the Age of AI: 2026 Benchmark Report provides the detailed data, peer insights, and actionable frameworks to help you navigate this shift.
 
-Value-Stream Mapping Is Your Missing AI Superpower
-https://www.lean.org/the-lean-post/articles/value-stream-mapping-is-your-missing-ai-superpower/
-Feb 4, 2026 ... AI amplifies what you already have—strong systems or dysfunction. DORA's 2025 research reveals why value-stream management is critical for ...
+A 2026 Guide on How to Use AI for Developer Productivity
+https://axify.io/blog/use-ai-for-developer-productivity
+The question for engineering leaders is no longer whether AI exists, but whether it is improving delivery outcomes. Increased activity does not automatically translate into higher productivity. Faster code generation can introduce rework. Automated reviews can shift bottlenecks downstream. Without clear measurement, it is difficult to determine whether AI is improving flow, quality, or predictability. This guide provides a practical framework for using AI in developer workflows.
 
-2025 DORA Report: State of AI-Assisted Software Development
-https://www.reddit.com/r/programming/comments/1o1n25o/2025_dora_report_state_of_aiassisted_software/
-The report reveals a key insight: AI doesn't fix a team; it amplifies what's already there. Strong teams use AI to become even better and more efficient. Struggling teams will find that AI only highlights and intensifies their existing problems. The greatest return comes not from the AI tools themselves, but from a strategic focus on the quality of internal platforms, the clarity of workflows, and the alignment of teams. More on reddit.com
+In 2026, AI Is Merging With Platform Engineering. Are You Ready? - The New Stack
+https://thenewstack.io/in-2026-ai-is-merging-with-platform-engineering-are-you-ready/
+“Existing software engineering ... traditional project management tools, but 2026 will likely welcome a new era of fully integrated, end-to-end software delivery life cycle tools, “providing all-in-one environments for AI-powered ...
 
-3 AI Trends Reshaping Software Engineering in 2026 - LinkedIn
-https://www.linkedin.com/pulse/3-ai-trends-reshaping-software-engineering-2026-jellyfish-co-o3nce
-Jan 14, 2026 ... DORA has done surveys strictly around AI for the last two years, and the first year saw some negative results around throughput and how much ...
+The State of Engineering AI 2026 | SimScale
+https://www.simscale.com/the-state-of-engineering-ai-2026/
+This is no longer just an internal ... outcome · The 2026 report shows where Engineering AI is already creating value and what separates teams that are scaling from those that are still stuck in pilot mode....
 
-AI in Software Development in 2026: Data, Tools & Risks - ALM Corp
-https://almcorp.com/blog/ai-in-software-development/
-Mar 19, 2026 ... It analyzes deployment history, identifies patterns in failures, suggests safer rollout strategies, and reduces the time between an incident ...
+AI-Driven Developer Productivity in 2026: Key Lessons from 2025
+https://enreap.com/ai-driven-developer-productivity-in-2026-key-lessons-from-2025-for-engineering-leaders/
+Whether your focus is improving cycle times, enhancing quality, or scaling AI adoption responsibly across engineering teams, Enreap provides the consulting, integration, and training support to help you realise the full productivity potential of these platforms. Developer productivity in 2025 was defined by the practical application of AI within toolchains and workflows. GitLab’s AI features improved coding velocity, JFrog strengthened secure governance of software supply chains and SonarSource provided automated quality enforcement. In 2026, success will not be about individual tools, but about how organisations integrate, govern, and measure AI-driven work across the entire development lifecycle.
 
-AI Coding Adoption at Enterprise Scale Is Harder Than Anyone Admits
-https://medium.com/@EnterpriseToolingInsights/ai-coding-adoption-at-enterprise-scale-is-harder-than-anyone-admits-90cd5f3e7db3
-Mar 4, 2026 ... The enterprise metric is safe, boring, repeatable production change. Why Enterprises Slow The Rollout. From the outside, enterprise caution ...
+How AI will shape software engineering in 2026 - LeadDev
+https://leaddev.com/ai/how-ai-will-shape-engineering-in-2026
+“The work moves faster at the start of the lifecycle, but the pressure has simply relocated to QA, validation, and oversight,” he continued. “We’re also seeing higher cognitive load when developers rely on AI-generated code they didn’t fully write, which can slow debugging and long-term maintenance.” · Plus, as a security company, he said the necessary extra governance around tool usage and data handling adds to operational overhead. Enterprises are feeling these bumps in the road to production too.
 
-Developer Productivity Metrics 2026: From DORA to DevEx and Beyond
-https://zylos.ai/research/2026-02-07-developer-productivity-metrics
-Comprehensive guide to measuring software engineering productivity in 2026, covering DORA, SPACE, DX Core 4, flow metrics, and the impact of AI on code quality and developer effectiveness
+The Future of AI Engineering in 2026 | BEON.tech
+https://beon.tech/blog/future-ai-engineering/
+The AI Engineering Stack is the new framework for building intelligent systems. It spans: Infrastructure: compute, orchestration, data pipelines, MLOps. Models: training, fine-tuning, evaluation of AI models.
 
-DORA metrics tools in 2026: What to measure, and what's missing
-https://getdx.com/blog/dora-metrics-tools/
-The DX AI Measurement Framework addresses the second, providing research-backed metrics for tracking AI adoption, impact, and cost alongside Core 4. This article covers the best DORA metrics tools in 2026, how each fits into a more complete ...
+2026 Engineering Productivity Benchmarks Report - plandek.com
+https://plandek.com/resources/2026-software-delivery-benchmark-report/
+The 2026 Engineering Productivity Benchmarks analyze real delivery data across four core pillars: Focus, Speed, Predictability, and Quality. The report quantifies performance gaps between top and bottom quartile teams and examines the measurable impact of AI-augmented engineering.

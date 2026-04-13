@@ -1,12 +1,5 @@
-[2026-04-13T06:31:08+0000] STARTED (days=5, since=2026-04-08, user=Michael Bui)
-[2026-04-13T06:31:08+0000] Connecting to browser at http://192.168.1.11:9223...
-(node:13872) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
-(Use `node --trace-deprecation ...` to show where the warning was created)
-[2026-04-13T06:31:11+0000] Reusing tab: https://chat.google.com/app/home
-[2026-04-13T06:31:32+0000] Feed: 72 item(s) within 5 day(s)
-[2026-04-13T06:31:32+0000]   Early stop: 3 consecutive cached
-[2026-04-13T06:31:32+0000] Phase 1: 72 conversations (focus-skip=0, unchanged=49, to-fetch=23, unread=6)
-[2026-04-13T06:31:32+0000] [Fetching 1/23] #dd-dpd-engage-alert
+Skills matching 'gchat google chat conversations' (2):
+- gchat: Read Google Chat conversations using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check chat messages, read…
+- gmail: Read Gmail email threads using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check emails, read recent threa…
 
-
-[SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+Tip: use skills_tool method=load skill_name=<name> to load full instructions.

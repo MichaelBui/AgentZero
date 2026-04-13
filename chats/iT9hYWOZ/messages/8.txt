@@ -1,39 +1,39 @@
-AI & Burnout Are Rising: Digital Wellness Day May 1st 2026 Offers a Path to Balance in a Hyper-Digital World - PR.com
-https://www.pr.com/press-release/965061
-"In an era of AI-accelerated output, Digital Wellness Day is a reminder that real productivity and connection come from balance, not just more speed," says Nina Hersher, Co-founder of Digital Wellness Day.
+When Using AI Leads to "Brain Fry" - Harvard Business Review
+https://hbr.org/2026/03/when-using-ai-leads-to-brain-fry
+As firms increasingly incentivize employees to build and oversee complex teams of agents—for example, by measuring and rewarding token consumption as a proxy for performance—people are finding themselves pushed to their cognitive limits.
 
-Executive Work-Life Balance in 2026: How AI Creates Boundaries (Not ...
-https://consul.so/blog/executive-work-life-balance-ai-boundaries-2026
-Discover how AI assistants help executives achieve genuine work-life balance by creating protective boundaries, automating after-hours triage, and enabling true disconnection. Research-backed strategies for sustainable leadership.
+Why Gen AI Feels So Threatening to Workers
+https://hbr.org/2026/03/why-gen-ai-feels-so-threatening-to-workers
+As generative AI begins to handle more cognitive, creative, and interpersonal tasks, many employees perceive it to be a threat to their competence, ...
 
-AI Could Help Make Work Even More Flexible And Productive - Forbes
-https://www.forbes.com/sites/rogertrapp/2026/02/28/ai-could-help-make-work-even-more-flexible-and-productive/
-Feb 28, 2026 ... ... balance between work and rest and recovery. ... Acknowledging that technology is blurring the boundary between employees' work and personal lives ...
+Is AI Helping Burnout or Quietly Making It Worse? - HRD
+https://www.hrdconnect.com/2026/03/16/is-ai-helping-burnout-or-quietly-making-it-worse/
+AI promises to reduce workplace burnout by automating routine tasks, but emerging research suggests it may also intensify workload and cognitive pressure. What should HR leaders watch for?
 
-Embracing Digital This Week | 2026-3-30 | AI Burnout & Transformation ...
-https://www.embracingdigital.org/en/briefs/edw-160/
-This Week at a Glance This week, the spotlight is on the critical theme of Digital Transformation, with significant developments in Artificial Intelligence, Cybersecurity, and Data Management. Concerns around mental burnout from heavy AI tool usage are prompting leaders to rethink their strategies, emphasizing the need for sustainable work-life balance and effective team dynamics. Architect ...
+AI Use in Workplace Linked to Cognitive Fatigue and Burnout
+https://www.linkedin.com/posts/mizink_ai-workplace-oversight-activity-7446083524467757057-LTYx
+Apr 3, 2026 ... With all the talk about #AI productivity gains in the #workplace, I've been curious about the effects this might have on employees.
 
-2026 Global Human Capital Trends | Deloitte Insights
-https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends.html
-Mar 4, 2026 ... The boundaries between humans and machines are blurring. ... AI is accelerating how work happens, and advantage is shifting from ...
+AI at work leads to 10x productivity, but also burnout (HBR study)
+https://www.reddit.com/r/ArtificialInteligence/comments/1r0hhgp/ai_at_work_leads_to_10x_productivity_but_also/
+so workers were more productive because the felt empowered to take on more work, but they also worked longer. Seems like less of an improvement and more a way to get people to overcommit. More on reddit.com
 
-Work-Life Balance in the Digital Age: Setting Boundaries for Mental ...
-https://happy.kindintheshell.com/2026/03/12/work-life-balance-in-the-digital-age-setting-boundaries-for-mental-wellness-3/
-Micro-Boundaries: The Architecture of Interruption The solution isn't a week-long digital detox or a vague promise to «unplug more.» Sustainable boundary-setting in the digital age requires *micro-boundaries*—specific, defensible perimeters drawn around units of time and space.
+AI promises to free workers from grunt work, but psychologists say ...
+https://www.aol.com/articles/ai-promises-free-workers-grunt-080100847.html
+“Use the time it saves you for rest, not more work,” said Siddhant. “AI collapses the 'doing' part, which used to be a natural cognitive break ...
 
-The 2026 Remote Work Well-Being Survey - CoworkingCafe
-https://www.coworkingcafe.com/blog/remote-work-well-being-survey-2026/
-Feb 5, 2026 ... To find out, we surveyed 1,140 remote and hybrid workers about their mental health, work-life balance, productivity and how they feel about ...
+AI Acceleration, Cognitive Load, Burnout, and Work-Time Design in Tech
+https://cognist.substack.com/p/ai-acceleration-cognitive-load-burnout
+Problem Space Being Explored Rising burnout and stress signals in tech (2023-2026) AI-enabled workflow acceleration Cognitive load and supervisory burden in probabilistic systems Ethical and organizational implications of sustained high-intensity cycles Reduced-hour models (e.g., 4-day week) as structural interventions
 
-AI transformation in working life: A systematic review of usage and ...
-https://www.sciencedirect.com/science/article/pii/S2666954425000572
-Marketers and communications professionals reported that such AI tools increased their efficiency and knowledge support through allowing greater flexibility in working schedule and work arrangement, which was associated with improved work-life balance (Wang, Lin and Shao, 2023).
+AI Intensifies Workload, Increases Burnout: Harvard Study - LinkedIn
+https://www.linkedin.com/posts/turrin_bombshell-ai-doesnt-reduce-work-but-fosters-activity-7430602630818582528-pVcn
+Feb 20, 2026 ... The mental fatigue that can result from excessive use of AI tools has been dubbed 'AI brain fry', with workers reporting an inability to think ...
 
-Job demands, resources, and Work–Life balance - ScienceDirect
-https://www.sciencedirect.com/science/article/pii/S2451958825003392
-Artificial intelligence (AI) is rapidly transforming organisational life, shifting from automation to collaborative partnerships with employees, and reshaping ...
+This research explores the paradox of "workload creep ... - Instagram
+https://www.instagram.com/reel/DVZoUF_jsnX/
+Mar 2, 2026 ... However, the reality is intensification. Unmanaged AI adoption increases work intensity. Leaving employees rather than empowered. Data shows the ...
 
-From AI to On-Demand Learning: 10 Workplace Wellbeing Trends for 2026
-https://stretchingthecity.com/blog/workplace-wellbeing-trends-2026/
-AI tools will increasingly be integrated into HR platforms and wellbeing apps. Employers must balance automation with empathy — ensuring tech supports, rather than replaces, human connection.
+More AI tools, more burnout! New research explains why - Help Net Security
+https://www.helpnetsecurity.com/2026/03/09/harvard-business-review-ai-workplace-fatigue-report/
+Roles requiring sustained monitoring of AI systems demanded greater mental effort and produced higher levels of fatigue and information overload. Employees who said AI tools increased their workload also reported heavier cognitive strain.

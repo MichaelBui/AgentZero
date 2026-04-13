@@ -1,39 +1,39 @@
-What is mentorship engineering growth and why is it important?
-https://engineeringmanagementinstitute.org/tcep-310-mentorship-strategies-for-engineering-growth/
-Mentorship engineering growth involves guiding engineers through technical and career development to build their confidence, skills, and leadership potential. It is important because it helps professionals navigate complex technical challenges and career transitions, leading to better performance and long-term success.
+How to Build Multi-Agent Systems: Complete 2026 Guide - DEV Community
+https://dev.to/eira-wexford/how-to-build-multi-agent-systems-complete-2026-guide-1io6
+This guide walks you through building production-ready multi-agent systems using frameworks like CrewAI, LangGraph, and Google's Agent Development Kit. You'll discover proven architectures, avoid common pitfalls, and learn from real implementations transforming supply chains and customer service today.
 
-The importance of mentoring in engineering leadership — part 1 | by Sebastiano Armeli | Medium
-https://sebarmeli.medium.com/the-importance-of-mentoring-in-engineering-leadership-part-1-063736154a5f
-Mentoring is a structured and ongoing relationship in which a mentor with expertise and experience in a specific domain voluntarily shares their knowledge, insights, and wisdom with a mentee. For example, in engineering leadership, mentorship could target strategies around career growth.
+Multi-Agent Systems (MAS) - Medium
+https://medium.com/@linz07m/multi-agent-systems-mas-05c8dbbb574e
+Feb 16, 2026 ... Multi-Agent Systems (MAS) This is the continuation of going over the research paper: A Comprehensive Survey of Self-Evolving AI Agents A ...
 
-Mentoring Trends 2026: The Future of Employee Development and Learning
-https://www.qooper.io/blog/mentoring-trends
-ganizations are investing in mentoring software and mentorship platforms to scale these initiatives effectively. AI simplifies mentor mapping, automates communication, and personalizes mentoring sessions based on skills and goals. It allows L&D leaders to focus on professional growth and career progression while ensuring consistent mentoring support across all employees. Effective mentoring improves employee engagement, strengthens leadership skills, increases retention rates, and supports knowledge sharing.
+2026 will be the Year of Multi-agent Systems
+https://aiagentsdirectory.com/blog/2026-will-be-the-year-of-multi-agent-systems
+ulti-agent systems are moving from demos to production. Here’s the evidence—from Anthropic’s multi-agent research system to Salesforce Agentforce orchestration, Google’s A2A interoperability protocol, and enterprise forecasts—plus practical architecture patterns for 2026.
 
-Engineering Manager Mentorship Program - The Mentoring Club
-https://www.mentoring-club.com/lp/engineering-manager-mentorship-program
-It’s a lot to navigate, especially if you’re new to leadership. How do you foster psychological safety and innovation? What’s the best way to manage performance reviews or guide engineers through meaningful career growth? How do you make confident technical decisions under pressure, or steer projects through Agile or Scrum frameworks without losing sight of the big picture? Mentorship from seasoned engineering leaders can make the difference between feeling overwhelmed and leading with clarity.
+Multi-Agent AI in Production: 4-Week Pilot Guide [2026]
+https://www.kunalganglani.com/blog/multi-agent-ai-systems-production
+Ready to move multi-agent AI beyond demos? Learn how to ship a document-processing pipeline in under 4 weeks — architecture, orchestration, and real lessons included.
 
-Engineering Mentorship: Building Future Engineering Leaders
-https://engineeringmanagementinstitute.org/the-mentorship-loop-how-engineering-mentorship-builds-future-leaders/
-It’s about moving forward—together. The students will build their robots and write their code, and maybe even pursue engineering degrees. That matters. But you’ll build something too.
+What's new in Copilot Studio: Updates to multi-agent systems
+https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/new-and-improved-multi-agent-orchestration-connected-experiences-and-faster-prompt-iteration/
+Apr 1, 2026 ... These features will be fully available to all eligible customers as of April 2026. Three capabilities, one outcome: agents that can operate ...
 
-Coaches and Mentors for Engineering Managers and Engineering Leaders - The Pragmatic Engineer
-https://blog.pragmaticengineer.com/coaches-and-mentors-for-engineering-managers/
-Edward Taylor – formerly worked with Ed at Skyscanner, where he hired me and was my first manager. He is currently mentoring CTOs, VPEs, EMs and senior engineering managers. In his words: "I have particular experience in mentoring those who have prematurely leapt a few rungs on the leadership ladder, now thrown in at the deep end.
+What kind of agents are we building in March 2026? 🛠️
+https://www.reddit.com/r/AI_Agents/comments/1rxxab9/what_kind_of_agents_are_we_building_in_march_2026/
+Thank you for your submission, for any questions regarding AI, please check out our wiki at https://www.reddit.com/r/ai_agents/wiki (this is currently in test and we are actively adding to the wiki) I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns. More on reddit.com
 
-Mentorship Reimagined as Engine for Women’s Career Growth - The Women Globe
-https://thewomenglobe.com/mentorship-reimagined-as-engine-for-womens-career-growth/
-Research and leadershipcoaching firms report that women who receive structured mentorship are more likely to seek promotions, speak up in strategy meetings, and transition into seniormanagement and boardlevel roles.
+Building Production-Ready Multi-Agent AI Systems in 2026
+https://devstarsj.github.io/2026/02/21/ai-agents-multi-agent-systems-production/
+The real frontier is multi-agent systems — networks of specialized AI agents that collaborate, delegate, and self-correct to accomplish complex tasks that no single prompt could handle. The teams shipping real value in 2026 are the ones who've figured out how to run these systems reliably in production.
 
-The Mentor Definition for 2026 and the Future of Mentorship for Leaders | Chronus
-https://chronus.com/blog/the-mentor-definition-for-2026-and-the-future-of-mentorship-for-leaders
-Companies might create mentorship programs specifically to tackle skills gaps, to build the leadership pipeline, or to improve management engagement. Ask 50 different experts to define mentorship, and you’ll get 50 different answers. But the National Academies of Science, Engineering, and Medicine (NASEM, 2019) offers a solid definition for mentoring in 2026: “Mentorship is a professional, working alliance in which individuals work together over time to support the personal and professional growth, development, and success of the relational partners through the provision of career and psychosocial support.”
+The Rise of Multi-Agent Teams. AI Agents at Work in 2026 - LinkedIn
+https://www.linkedin.com/pulse/rise-multi-agent-teams-ai-agents-work-2026-elizaveta-zabrodskaya-9denf
+Mar 10, 2026 ... check each other's outputs; run workflows end-to-end. Think less AI tool, more AI productivity system.
 
-The Ultimate Guide to Early Career Mentoring in 2026
-https://www.qooper.io/blog/early-career-mentoring
-Your needs determine whether you should look for technical expertise, strategic career guidance, leadership development, or confidence-building support. You can still build organic mentor relationships through colleagues, alumni networks, LinkedIn, industry events, and professional communities. Many of the most impactful mentorships start informally.
+Multi-Agent AI Systems Guide 2026 | AI Workflow Lab
+https://aiworkflowlab.dev/article/building-multi-agent-ai-systems-2026-architecture-patterns-mcp-production-orchestration
+How to Build Multi-Agent AI Systems in 2026: Architecture Patterns, MCP, and Production Orchestration A hands-on guide to building production-ready multi-agent AI systems in 2026 — covering architecture patterns, MCP, A2A protocols, framework comparisons, and best practices with Python code examples.
 
-Rokt Career Growth & Development 2026 | Built In Calgary
-https://builtincalgary.org/company/rokt/faq/career-growth-development
-Quarterly Promotion Reviews: For L1–L4 roles, promotion decisions are made quarterly, enabling fast recognition of impact and timely progression. Senior promotions (L5+) are reviewed semi-annually, with peer feedback and rigorous calibration to ensure fairness. Internal Mobility & Rotations: Employees are encouraged to make lateral or cross-functional moves. This builds well-rounded skill sets, strengthens succession planning, and accelerates leadership readiness. Apprenticeship & Mentorship: Juniors are paired with experienced mentors from day one.
+What kind of infrastructure does a production-level multi-agent system need?
+https://www.truefoundry.com/blog/multi-agent-architecture
+Product Engineering and DevOps: Agent systems monitor pull requests, run code review, perform web searches for dependency issues, generate tests, and trigger CI/CD pipelines without human initiation. Customer Support: A triage AI agent routes tickets, a resolution agent drafts responses drawing on a knowledge base, and an escalation agent surfaces unresolved cases with full context for customer service teams. In practice, many multi-agent systems that work well in demos begin to fail once they reach production scale.

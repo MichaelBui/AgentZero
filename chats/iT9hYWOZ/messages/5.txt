@@ -1,39 +1,39 @@
-Beyond Porting: How vLLM Orchestrates High-Performance Inference on AMD ROCm | vLLM Blog
-https://blog.vllm.ai/2026/02/27/rocm-attention-backend.html
-We provide transparent benchmarks ... (Multi-Head Latent Attention) backends deliver 1.2-4.4x higher throughput (TPS) through AMD's AITER primitives and vLLM's kernel orchestration....
+Ollama Pricing 2026: Benchmarks, Cloud Costs, and Hardware Requirements ...
+https://pooya.blog/blog/local-ai-ollama-benchmarks-cost-2026/
+Ollama hit 52 million monthly downloads in Q1 2026. That is a 520x increase from 100K in Q1 2023. HuggingFace hosts 135,000 GGUF-formatted models optimized for local inference, up from 200 three years ago. The llama.cpp project that powers most of this infrastructure crossed 73,000 GitHub stars. Those numbers describe an industry shift, not a hobby. Local inference on consumer hardware ...
 
-Run OpenClaw Locally On AMD Ryzen™ AI Max+ Processors and ...
-https://www.amd.com/en/resources/articles/run-openclaw-locally-on-amd-ryzen-ai-max-and-radeon-gpus.html
-Mar 13, 2026 ... ... unified memory is available from various AMD partners. Browse options here: Agent Computers ... Performance > Tuning > Variable Graphics Memory ...
+Local LLM Inference in 2026: The Complete Guide to Tools, Hardware & Open-Weight Models - DEV Community
+https://dev.to/starmorph/local-llm-inference-in-2026-the-complete-guide-to-tools-hardware-open-weight-models-2iho
+Benchmarks with Marlin kernels: AWQ achieves 741 tok/s, GPTQ achieves 712 tok/s. vLLM v0.16.0 (February 2026) expanded multi-GPU and multi-platform support to NVIDIA, AMD ROCm, Intel XPU, and TPU.
 
-r/ROCm on Reddit: vLLM Now Supports Running GGUF on AMD Radeon/Instinct GPU
-https://www.reddit.com/r/ROCm/comments/1h6a6o3/vllm_now_supports_running_gguf_on_amd/
-I replicated the vLLM testing on a W7900 (also gfx1100) w/ my own docker build (same recipe). I got slightly lower numbers since both MBW and PL is lower on the W7900 but I also tested the same card against llama.cpp ROCm HEAD (b4276) for the GGUF - for bs=1, for almost every metric, llama.cpp still is faster (and more memory efficient ofc) for me. GGUF on vLLM does run a lot faster than FP16 and INT8 (which doesn't increase speed at all). Sadly no FP8 or bitsandbytes support in vLLM for gfx1100 atm. I also ran ExLlamaV2, which is sort of an interesting comparison. Note, with that I did run some tests w/ putting the AOTriton 0.8b vs the PyTorch upstream so saw about a 15% speed bump (but the kernel still has some SDPA masking support issues). The Triton FA kernel doesn't work w/ SWA so vLLM w/ Qwen2.5 is actually much slower than llama.cpp (over 2X slower in my single test on a Q8_0 GGUF). Also, it looks like the docker build falls back to hipBLAS vs hipBLASlt (no gfx1100 kernels). You might be able to build that (hence why I prefer to use my dev env vs docker, but vLLM is still very fussy for building in my mamba envs for some reason). Metric | vLLM FP16 | vLLM INT8 | vLLM Q5_K_M | llama.cpp Q5_K_M | ExLlamaV2 5.0bpw | Weights in Memory | 14.99GB | 8.49GB | 5.33GB | 5.33GB | 5.5GB? | Benchmark duration (s) | 311.26 | 367.50 | 125.00 | 249.14 | 347.96 | Total input tokens | 6449 | 6449 | 6449 | 6449 | 6449 | Total generated tokens | 6544 | 6552 | 6183 | 16365 | 16216 | Request throughput (req/s) | 0.10 | 0.09 | 0.26 | 0.13 | 0.09 | Output token throughput (tok/s) | 21.02 | 17.83 | 49.46 | 65.69 | 46.60 | Total Token throughput (tok/s) | 41.74 | 35.38 | 101.06 | 91.57 | 65.14 | Mean TTFT (ms) | 159.58 | 232.78 | 327.56 | 114.67 | 160.39 | Median TTFT (ms) | 111.76 | 162.86 | 128.24 | 85.94 | 148.70 | P99 TTFT (ms) | 358.99 | 477.17 | 2911.16 | 362.63 | 303.35 | Mean TPOT (ms) | 48.34 | 55.95 | 18.97 | 14.81 | 19.31 | Median TPOT (ms) | 46.94 | 55.21 | 18.56 | 14.77 | 18.47 | P99 TPOT (ms) | 78.78 | 73.44 | 28.75 | 15.88 | 27.35 | Mean ITL (ms) | 46.99 | 55.20 | 18.60 | 15.03 | 21.18 | Median ITL (ms) | 46.99 | 55.20 | 18.63 | 14.96 | 19.80 | P99 ITL (ms) | 48.35 | 56.56 | 19.43 | 16.47 | 38.79 More on reddit.com
+Local LLMs vs Cloud APIs: 2026 Total Cost of Ownership Analysis
+https://www.sitepoint.com/local-llms-vs-cloud-api-cost-analysis-2026/
+Mar 5, 2026 ... Local LLM Hardware Costs in 2026: What You Actually Need; The Costs ... from the zero-marginal-cost nature of local inference. Cloud ...
 
-What to Buy for Local LLMs (April 2026) | by Julien Simon - Medium
-https://julsimon.medium.com/what-to-buy-for-local-llms-april-2026-a4946a381a6a
-Apr 3, 2026 ... [19] Apple removed the 512GB memory option from Mac Studio in March 2026 and raised the 256GB upgrade price. ... [33] AMD ROCm training: Unsloth ...
+Local AI in 2026: Ollama Benchmarks, $0 Inference, and the End of ...
+https://dev.to/pooyagolchian/local-ai-in-2026-ollama-benchmarks-0-inference-and-the-end-of-per-token-pricing-32e7
+Those numbers describe an industry shift, not a hobby. Local inference on consumer hardware delivers 70-85% of frontier model quality at zero ...
 
-Buying advice local llm - Beginners - Hugging Face Forums
-https://discuss.huggingface.co/t/buying-advice-local-llm/174730
-Mar 28, 2026 ... MacBook Pro 16 with M5 Max and 128GB unified memory if your main goal is running bigger local LLMs on a laptop with the least friction around ...
+Hardware Accelerators Demystified: Local LLM Deployment in 2026
+https://medium.com/@vinitpithadiya/hardware-accelerators-demystified-local-llm-deployment-in-2026-a407c5ffea4c
+A practical guide to CPUs, GPUs, ASICs, and NPUs for local LLM deployment in 2026—covering performance, cost, energy efficiency, and hardware trade-offs.
 
-Benchmarked the main GPU options for local LLM inference in 2026
-https://www.reddit.com/r/LocalLLaMA/comments/1rk5ftz/benchmarked_the_main_gpu_options_for_local_llm/
-Mar 3, 2026 ... Been running local models for a while and got tired of vague answers on GPU recommendations, so I put together a proper breakdown with ...
+Running Open Source LLMs Locally: Hardware Guide 2026 | Apatero Blog ...
+https://apatero.com/blog/running-open-source-llms-locally-hardware-guide-2026
+Running Open Source LLMs Locally: Complete Hardware and Setup Guide 2026 Everything you need to run LLMs on your own machine. GPU requirements, RAM needs, quantization explained, Ollama and llama.cpp setup, plus budget and high-end build recommendations.
 
-Trillion-Parameter LLM on an AMD Ryzen™ AI Max+ Cluster
-https://www.amd.com/en/developer/resources/technical-articles/2026/how-to-run-a-one-trillion-parameter-llm-locally-an-amd.html
-Feb 25, 2026 ... Step-by-step guide to clustering AMD Ryzen™ AI Max+ systems for local one trillion-parameter LLM inference using llama.cpp RPC and ROCm.
+Why AI Inference Efficiency Is the New Battleground in 2026 - LinkedIn
+https://www.linkedin.com/pulse/long-context-low-cost-why-ai-inference-efficiency-new-battleground-y4grc
+Jan 28, 2026 ... The cutting edge in 2026 is making long-context models efficient, combining algorithmic innovation, software optimization, and advanced hardware ...
+
+Best GPUs for Local AI & LLM in 2026: RTX 50 & Others
+https://www.hostrunway.com/blog/the-2026-local-llm-boom-why-speed-and-privacy-matter-now/
+Best GPUs for local AI & LLM inference 2026: RTX 5090 for daily 70B use, smart H200 rentals, real tokens/sec benchmarks, quantization & VRAM guide.
 
 llama.cpp: Fast Local LLM Inference, Hardware Choices & Tuning
 https://www.clarifai.com/blog/ilama.cpp
-Mar 17, 2026 ... This includes evaluating VRAM/unified memory and ... To navigate the trade‑offs between model size, output quality and inference efficiency, ...
+March 17, 2026. llama.cpp: Fast Local LLM ... Start exploring these capabilities with the free credit signup and experiment with mixing local and hosted ...
 
-AMD Ryzen AI Halo: Local LLM Inference Platform Analysis - Reading List
-https://reading.torqsoftware.com/notes/hardware/ai/2026-01-21-amd-ryzen-ai-halo-local-llm-inference-platform/
-Memory advantage: The 128 GB unified memory capacity enables running quantized 70-100B+ parameter models that exceed the VRAM capacity of consumer discrete GPUs (24-32 GB) Economic break-even: For moderate-to-high usage scenarios (>10M tokens/month), local deployment on Ryzen AI Halo achieves ...
-
-What is OpenClaw AMD? Is it the same as ROCm?
-https://www.kunalganglani.com/blog/amd-rocm-vs-cuda-local-ai-open-source-guide
-That shift matters if you're interested in running LLMs locally. A Radeon RX 7900 XTX with 24GB of VRAM costs significantly less than an RTX 4090, and it can now run models like Llama 2 7B and Mistral 7B at viable inference speeds for local development. On the enterprise side, ROCm 7.2.0 supports AMD's MI350 Series Instinct accelerators alongside the MI300X.
+Local LLM Inference in 2026: The Complete Guide to Tools, Hardware & Open-Weight Models
+https://blog.starmorph.com/blog/local-llm-inference-tools-guide
+Benchmarks with Marlin kernels: AWQ achieves 741 tok/s, GPTQ achieves 712 tok/s. vLLM v0.16.0 (February 2026) expanded multi-GPU and multi-platform support to NVIDIA, AMD ROCm, Intel XPU, and TPU.

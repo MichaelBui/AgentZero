@@ -1,39 +1,39 @@
-2026 Agentic Coding Trends Report How coding agents are reshaping
-https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf
-chitectures use an orchestrator to coordinate specialized agents working in parallel—each · with dedicated context—then synthesize results into integrated output. ... Engineers describe developing intuitions for AI delegation over time.
+Building a High-Trust Engineering Culture: Lessons From ... - LinkedIn
+https://www.linkedin.com/pulse/building-high-trust-engineering-culture-lessons-from-leading-naikar-aiy8e
+📌 Introduction: Trust Is the Multiplier of Engineering Excellence Every engineering leader talks about speed, quality, innovation, and delivery. But over the years leading Dev, QA, CloudOps ...
 
-7 Agentic AI Trends to Watch in 2026 - MachineLearningMastery.com
-https://machinelearningmastery.com/7-agentic-ai-trends-to-watch-in-2026/
-st as monolithic applications ... teams of specialized agents. Gartner reported a staggering 1,445% surge in multi-agent system inquiries from Q1 2024 to Q2 2025, signaling a shift in how systems are designed....
+Council Post: The Neuroscience Of Authority: Engineering Trust In Modern Leadership
+https://www.forbes.com/councils/forbescoachescouncil/2026/04/07/the-neuroscience-of-authority-engineering-trust-in-modern-leadership/
+Authority is built through repetition. Research on how people learn demonstrates that practice solidifies neural connections, and leadership communications are no different. Repeatedly and calmly emphasizing your contributions helps others solidify ...
 
-12 Best AI Agent Frameworks in 2026 | Data Science Collective
-https://medium.com/data-science-collective/the-best-ai-agent-frameworks-for-2026-tier-list-b3a4362fac0d
-Jan 27, 2026 ... The Best AI Agent Frameworks for 2026 · 4–AutoGen (Microsoft). Agents that argue with each other. One proposes, another critiques, they iterate.
+Change Management Competencies in 2026: The Skills That ...
+https://thechangeleadership.com/change-management-competencies-in-2026-the-skills-that-separate-good-leaders-from-great-ones
+Mar 4, 2026 ... In 2026, the most effective change leaders act as capacity engineers. They treat organizational attention, energy, and focus as finite resources ...
 
-Agentic AI Orchestration in 2026: Automating Workflows at Scale
-https://onereach.ai/blog/agentic-ai-orchestration-enterprise-workflow-automation/
-Imagine a customer request coming in. Instead of bouncing through seven different systems and five different people, an orchestrated workflow takes care of it seamlessly. An AI agent picks up the request, routes it to the right systems, pulls data from multiple sources, makes decisions based on business rules, and brings humans in when their judgment is needed. The orchestration platform coordinates all these moving parts in real time. Agents talk to each other, hand off work smoothly, and adapt when things don’t go according to plan. So what makes 2026 different? Speed and intelligence. AI
+Trust Is Trending: Teams Looking To Cultivate 'Count On Me ... - Forbes
+https://www.forbes.com/councils/forbescoachescouncil/2026/03/25/trust-is-trending-why-teams-are-looking-to-cultivate-count-on-me-cultures-in-2026/
+Trust is rapidly becoming the new high-performance metric as teams continue to work in hybrid environments.
 
-2025 Was the Era of AI Agents. 2026 Will Be the Era of AI Organizations. (Here Are 5 SaaS Ideas That Prove It)
-https://www.reddit.com/r/Startup_Ideas/comments/1rg1f8e/2025_was_the_era_of_ai_agents_2026_will_be_the/
-I am building in the AI regulatory/compliance space. It's hairy stuff... More on reddit.com
+Building High-Performance Engineering Teams for 2026 - LinkedIn
+https://www.linkedin.com/pulse/building-high-performance-engineering-teams-2026-l1knf
+Dec 15, 2025 ... TL;DR Building a high-performance engineering team in 2026 demands more than hiring top coders, it requires a culture of trust, clear goals, ...
 
-5 insights to build your agentic AI advantage in 2026 - Google Cloud
-https://cloud.google.com/transform/5-insights-to-build-your-agentic-ai-advantage-in-2026
-Mar 26, 2026 ... Shifting from chatbots to AI agents automates complex workflows and secures a competitive edge through a collaborative, AI-fluent workforce.
+Engineering Culture 3.0 - Key Principles for 2026 Teams
+https://www.techtalent.ro/engineering-culture-3-0-key-principles-for-2026-teams/
+As 2026 approaches, engineering organizations are navigating a significant transition. The past decade brought new work models, rising customer expectations, and greater product complexity. Technical skill remains essential, but what now defines a team's ability to innovate and deliver consistently is the culture behind the work and how people communicate, collaborate, and make decisions ...
 
-Best AI Agent Frameworks for 2026 - Airbyte
-https://airbyte.com/agentic-data/best-ai-agent-frameworks-2026
-Mar 5, 2026 ... MCP standardization through the Agentic AI Foundation — with backing from Anthropic, OpenAI, Google, Microsoft, AWS, and others — is creating ...
+Dealing with AI's cultural debt - Deloitte
+https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends/2026/ai-cultural-debt.html
+Mar 4, 2026 ... Culture is built on a foundation of trust, and AI is breaking that trust in many ways, as reflected by the statistic from our 2026 survey that ...
 
-What is your full AI Agent stack in 2026? : r/AI_Agents - Reddit
-https://www.reddit.com/r/AI_Agents/comments/1rqnv3a/what_is_your_full_ai_agent_stack_in_2026/
-Mar 11, 2026 ... For our internal AI agent stack, beyond just orchestration frameworks like LangChain, our big focus for 2026 is making them genuinely reliable ...
+PDF Conference 2026 Leadership Engineering - schulich.ucalgary.ca
+https://schulich.ucalgary.ca/sites/default/files/teams/4/Engineering%20Leadership%20Conference%202026%20Program.pdf
+dynamic, in-person event on Saturday, March 21, 2026, to explore inspiring presentations on career growth, professionalism, career readiness, engineering trends and the vital role of leadership in engineering.
 
-Unlocking exponential value with AI agent orchestration - Deloitte
-https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/ai-agent-orchestration.html
-Nov 18, 2025 ... According to an estimate, more than 40% of today's agentic AI projects could be cancelled by 2027, due to unanticipated cost, complexity of ...
+The State of Organizations 2026 | McKinsey
+https://www.mckinsey.com/~/media/mckinsey/business%20functions/people%20and%20organizational%20performance/our%20insights/the%20state%20of%20organizations/2026/the-state-of-organizations-2026.pdf
+Executives and senior leaders need to support and mandate, champion AI adoption, and foster a culture of iteration and learning along with cross- functional ...
 
-Top 9 AI Agent Frameworks as of March 2026 | Shakudo
-https://www.shakudo.io/blog/top-9-ai-agent-frameworks
-Unlike traditional agent frameworks that require developers to wire up tools and orchestration logic manually, Kaji runs as a full computing environment with its own file system, CPU, and memory — all deployed inside your private cloud or on-prem infrastructure so sensitive data never leaves your perimeter. It connects to 200+ production data sources out of the box and executes complex, multi-step workflows end to end with minimal human intervention.
+Top Engineering Leaders in 2026: What They All Have in Common | South
+https://www.hireinsouth.com/post/engineering-leaders-what-they-have-in-common
+Practice explaining complex concepts to non-technical audiences and actively seek feedback on your leadership style. The engineering world is full of change: new frameworks, new markets, new ways of working.
