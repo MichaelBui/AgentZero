@@ -1,39 +1,39 @@
-Building a High-Trust Engineering Culture: Lessons From ... - LinkedIn
-https://www.linkedin.com/pulse/building-high-trust-engineering-culture-lessons-from-leading-naikar-aiy8e
-📌 Introduction: Trust Is the Multiplier of Engineering Excellence Every engineering leader talks about speed, quality, innovation, and delivery. But over the years leading Dev, QA, CloudOps ...
-
 Council Post: The Neuroscience Of Authority: Engineering Trust In Modern Leadership
 https://www.forbes.com/councils/forbescoachescouncil/2026/04/07/the-neuroscience-of-authority-engineering-trust-in-modern-leadership/
 Authority is built through repetition. Research on how people learn demonstrates that practice solidifies neural connections, and leadership communications are no different. Repeatedly and calmly emphasizing your contributions helps others solidify ...
 
-Change Management Competencies in 2026: The Skills That ...
-https://thechangeleadership.com/change-management-competencies-in-2026-the-skills-that-separate-good-leaders-from-great-ones
-Mar 4, 2026 ... In 2026, the most effective change leaders act as capacity engineers. They treat organizational attention, energy, and focus as finite resources ...
+Building a High-Trust Engineering Culture: Lessons From ... - LinkedIn
+https://www.linkedin.com/pulse/building-high-trust-engineering-culture-lessons-from-leading-naikar-aiy8e
+📌 Introduction: Trust Is the Multiplier of Engineering Excellence Every engineering leader talks about speed, quality, innovation, and delivery. But over the years leading Dev, QA, CloudOps ...
 
-Trust Is Trending: Teams Looking To Cultivate 'Count On Me ... - Forbes
-https://www.forbes.com/councils/forbescoachescouncil/2026/03/25/trust-is-trending-why-teams-are-looking-to-cultivate-count-on-me-cultures-in-2026/
-Trust is rapidly becoming the new high-performance metric as teams continue to work in hybrid environments.
+RCA-Driven Leadership: The Leadership Discipline of Looking ...
+https://medium.com/operational-sympathy/rca-driven-leadership-the-leadership-discipline-of-looking-beyond-symptoms-3987b3700f1c
+Mar 22, 2026 ... Mar 22, 2026. 290. 6 ... Blameless Culture Is a Leadership Discipline. Many leaders champion blameless postmortems during incident reviews but ...
 
-Building High-Performance Engineering Teams for 2026 - LinkedIn
-https://www.linkedin.com/pulse/building-high-performance-engineering-teams-2026-l1knf
-Dec 15, 2025 ... TL;DR Building a high-performance engineering team in 2026 demands more than hiring top coders, it requires a culture of trust, clear goals, ...
+27 casserole dinners that hold up for tomorrow without falling apart - MSN
+https://www.msn.com/en-us/lifestyle/career/mj-engineerings-michael-panichelli-swears-by-communication-connected-culture-teamwork/ar-AA20HJdJ
+The 2026 Top Workplaces leadership award winner says face-to-face conversations, trust and team culture help keep 175 employees engaged and growing.
 
-Engineering Culture 3.0 - Key Principles for 2026 Teams
-https://www.techtalent.ro/engineering-culture-3-0-key-principles-for-2026-teams/
-As 2026 approaches, engineering organizations are navigating a significant transition. The past decade brought new work models, rising customer expectations, and greater product complexity. Technical skill remains essential, but what now defines a team's ability to innovate and deliver consistently is the culture behind the work and how people communicate, collaborate, and make decisions ...
+Trust Is the New Tech | Psychology Today
+https://www.psychologytoday.com/us/blog/decisions-decisions/202512/trust-is-the-new-tech
+Jan 5, 2026 ... AI fails when trust fails—culture determines whether technology gets used or quietly abandoned. Trust is triangular: leadership, employees, and ...
 
-Dealing with AI's cultural debt - Deloitte
-https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends/2026/ai-cultural-debt.html
-Mar 4, 2026 ... Culture is built on a foundation of trust, and AI is breaking that trust in many ways, as reflected by the statistic from our 2026 survey that ...
+Incident Postmortem Framework: A Complete Guide for Engineering ...
+https://www.em-tools.io/frameworks/incident-postmortem
+Learn how to run effective incident postmortems for engineering teams. Covers blameless culture, structured formats, action tracking, and continuous improvement.
 
-PDF Conference 2026 Leadership Engineering - schulich.ucalgary.ca
-https://schulich.ucalgary.ca/sites/default/files/teams/4/Engineering%20Leadership%20Conference%202026%20Program.pdf
-dynamic, in-person event on Saturday, March 21, 2026, to explore inspiring presentations on career growth, professionalism, career readiness, engineering trends and the vital role of leadership in engineering.
+by Gergely Orosz - The Pragmatic Engineer in 2025
+https://newsletter.pragmaticengineer.com/p/the-pragmatic-engineer-in-2025
+Dec 23, 2025 ... As of today, the newsletter has 1,073,929 readers, of whom more than 200,000 have joined in the past year alone. Special thanks to paying ...
 
-The State of Organizations 2026 | McKinsey
-https://www.mckinsey.com/~/media/mckinsey/business%20functions/people%20and%20organizational%20performance/our%20insights/the%20state%20of%20organizations/2026/the-state-of-organizations-2026.pdf
-Executives and senior leaders need to support and mandate, champion AI adoption, and foster a culture of iteration and learning along with cross- functional ...
+Engineering a "Resilience-First" Culture: Beyond the Blameless Post-Mortem
+https://datacust.blogspot.com/2026/02/engineering-resilience-first-culture.html
+The Takeaway A truly resilient organization understands that culture is your ultimate firewall. You can have the best tech, the smartest people, and the most robust systems, but if your culture incentivizes fragility over foresight, you're building on quicksand. Engineering a resilience-first culture means celebrating prevention, rewarding robustness, and transforming the fear of failure into ...
 
-Top Engineering Leaders in 2026: What They All Have in Common | South
-https://www.hireinsouth.com/post/engineering-leaders-what-they-have-in-common
-Practice explaining complex concepts to non-technical audiences and actively seek feedback on your leadership style. The engineering world is full of change: new frameworks, new markets, new ways of working.
+The Week I Disappeared and Nothing Moved | Checkr Engineering
+https://medium.com/checkr/the-week-i-disappeared-and-nothing-moved-330be935cca8
+Mar 19, 2026 ... Mar 19, 2026. 2. 1. Listen ... I've spent the years since then, across multiple leadership roles ...
+
+Trust is the ultimate driver of engineering excellence - LeadDev
+https://leaddev.com/culture/trust-ultimate-driver-engineering-excellence
+According to the most recent State of DevOps Report (SODR), organizations with high-trust cultures deploy code 208 times more frequently and recover from incidents 2,604 times faster compared to low-trust organizations.

@@ -1,39 +1,39 @@
-When Using AI Leads to "Brain Fry" - Harvard Business Review
-https://hbr.org/2026/03/when-using-ai-leads-to-brain-fry
-As firms increasingly incentivize employees to build and oversee complex teams of agents—for example, by measuring and rewarding token consumption as a proxy for performance—people are finding themselves pushed to their cognitive limits.
+AI Will Reshape More Jobs Than It Replaces | BCG
+https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces
+This includes amplified and rebalanced roles, where AI augments work; remaining roles in substituted and divergent categories, where workers will need significant upskilling; and enabled roles with more than 25% automation potential, where task exposure is high enough to alter day-to-day responsibilities.
 
-Why Gen AI Feels So Threatening to Workers
-https://hbr.org/2026/03/why-gen-ai-feels-so-threatening-to-workers
-As generative AI begins to handle more cognitive, creative, and interpersonal tasks, many employees perceive it to be a threat to their competence, ...
+AI for Engineers: Why Continuous Learning, Degrees, and Certifications Matter in 2026 | Electronic Design
+https://www.electronicdesign.com/technologies/eda/article/55363756/electronic-design-ai-for-engineers-why-continuous-learning-degrees-and-certifications-matter-in-2026
+We’re in the business of creativity, progress, advancement, and innovation. It’s what we do. To paraphrase my favorite reporter: We bought the ticket, we take the ride. Workplaces are using AI to automate tasks that humans have worked on forever.
 
-Is AI Helping Burnout or Quietly Making It Worse? - HRD
-https://www.hrdconnect.com/2026/03/16/is-ai-helping-burnout-or-quietly-making-it-worse/
-AI promises to reduce workplace burnout by automating routine tasks, but emerging research suggests it may also intensify workload and cognitive pressure. What should HR leaders watch for?
+What are some ethical considerations engineers must keep in mind when working with AI and automation?
+https://research.com/advice/ai-automation-and-the-future-of-engineering-degree-careers
+Engineers must consider the ethical implications of AI systems, including bias, transparency, and accountability. Ensuring that AI technologies are designed and implemented fairly, without discrimination, is critical. Additionally, engineers need to evaluate the potential social impact and privacy concerns related to automated systems.
 
-AI Use in Workplace Linked to Cognitive Fatigue and Burnout
-https://www.linkedin.com/posts/mizink_ai-workplace-oversight-activity-7446083524467757057-LTYx
-Apr 3, 2026 ... With all the talk about #AI productivity gains in the #workplace, I've been curious about the effects this might have on employees.
+Invest in the workforce for the AI age: A blueprint for scale, skills and responsible growth | World Economic Forum
+https://www.weforum.org/stories/2026/01/ai-roadmap-transforming/
+Through its Reskilling Revolution initiative, the World Economic Forum estimates that around 1.1 billion jobs could be transformed by technology over the next decade. Its Future of Jobs Report 2025 suggests that AI and information processing ...
 
-AI at work leads to 10x productivity, but also burnout (HBR study)
-https://www.reddit.com/r/ArtificialInteligence/comments/1r0hhgp/ai_at_work_leads_to_10x_productivity_but_also/
-so workers were more productive because the felt empowered to take on more work, but they also worked longer. Seems like less of an improvement and more a way to get people to overcommit. More on reddit.com
+How to Keep Up with AI Through Reskilling - Professional & Executive Development | Harvard DCE
+https://professional.dce.harvard.edu/blog/how-to-keep-up-with-ai-through-reskilling/
+As AI becomes more integrated into workplaces and workflows, professionals can stay ahead of new technology and ensure they have the skills to advance their careers by seeking out opportunities for reskilling or upskilling. As new technologies are integrated into organizations, with greater frequency, transforming how we work, the need for professionals to adapt and continue to learn and grow becomes more imperative.
 
-AI promises to free workers from grunt work, but psychologists say ...
-https://www.aol.com/articles/ai-promises-free-workers-grunt-080100847.html
-“Use the time it saves you for rest, not more work,” said Siddhant. “AI collapses the 'doing' part, which used to be a natural cognitive break ...
+Reskilling and upskilling: Lifelong learning opportunities | World Economic Forum
+https://www.weforum.org/stories/2025/01/ai-and-beyond-how-every-career-can-navigate-the-new-tech-landscape/
+Artificial intelligence (AI) is ... during their careers. Reskilling and upskilling programmes focused on digital skills training can help employees develop tech literacy and embrace new technologies....
 
-AI Acceleration, Cognitive Load, Burnout, and Work-Time Design in Tech
-https://cognist.substack.com/p/ai-acceleration-cognitive-load-burnout
-Problem Space Being Explored Rising burnout and stress signals in tech (2023-2026) AI-enabled workflow acceleration Cognitive load and supervisory burden in probabilistic systems Ethical and organizational implications of sustained high-intensity cycles Reduced-hour models (e.g., 4-day week) as structural interventions
+AI Upskilling in 2026 | Zero To Mastery
+https://zerotomastery.io/career-paths/ai-upskilling/
+This AI Upskilling Career Path is your step-by-step roadmap to go from a total AI beginner (at any age!) to mastering the most important AI skills so that you can work faster and smarter in the Age of AI.
 
-AI Intensifies Workload, Increases Burnout: Harvard Study - LinkedIn
-https://www.linkedin.com/posts/turrin_bombshell-ai-doesnt-reduce-work-but-fosters-activity-7430602630818582528-pVcn
-Feb 20, 2026 ... The mental fatigue that can result from excessive use of AI tools has been dubbed 'AI brain fry', with workers reporting an inability to think ...
+How AI skills and experience are transforming the workplace | World Economic Forum
+https://www.weforum.org/stories/2026/02/ai-improving-wages-job-quality/
+or businesses, access to AI-capable talent is rapidly becoming a source of competitive advantage. Firms that invest in training, certification and internal upskilling are better positioned to adopt AI effectively and sustainably.
 
-This research explores the paradox of "workload creep ... - Instagram
-https://www.instagram.com/reel/DVZoUF_jsnX/
-Mar 2, 2026 ... However, the reality is intensification. Unmanaged AI adoption increases work intensity. Leaving employees rather than empowered. Data shows the ...
+Navigating the New Tech Landscape: AI Acceleration, Workforce Shifts, and the Rising Need for Digital Skills
+https://www.calmu.edu/navigating-the-new-tech-landscape-ai-acceleration-workforce-shifts-and-the-rising-need-for-digital-skills
+The next decade will be defined by companies that embrace digital transformation through skilled talent and continuous learning. As AI and automation accelerate, the most resilient organizations will be those that empower their employees to ...
 
-More AI tools, more burnout! New research explains why - Help Net Security
-https://www.helpnetsecurity.com/2026/03/09/harvard-business-review-ai-workplace-fatigue-report/
-Roles requiring sustained monitoring of AI systems demanded greater mental effort and produced higher levels of fatigue and information overload. Employees who said AI tools increased their workload also reported heavier cognitive strain.
+AI vs Gen Z: How AI has changed the career pathway for junior developers - Stack Overflow
+https://stackoverflow.blog/2025/12/26/ai-vs-gen-z/
+AI has changed how every job is done, from finance to law to engineering to medicine, and to miss even a few months means missing at least a few very important skills to include on your resume.

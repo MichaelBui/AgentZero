@@ -1,39 +1,39 @@
-How to Build Multi-Agent Systems: Complete 2026 Guide - DEV Community
-https://dev.to/eira-wexford/how-to-build-multi-agent-systems-complete-2026-guide-1io6
-This guide walks you through building production-ready multi-agent systems using frameworks like CrewAI, LangGraph, and Google's Agent Development Kit. You'll discover proven architectures, avoid common pitfalls, and learn from real implementations transforming supply chains and customer service today.
+vLLM inference - ROCm Documentation - AMD
+https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/benchmark-docker/vllm.html
+Learn how to validate LLM inference performance on MI300X GPUs using AMD MAD and the ROCm vLLM Docker image.
 
-Multi-Agent Systems (MAS) - Medium
-https://medium.com/@linz07m/multi-agent-systems-mas-05c8dbbb574e
-Feb 16, 2026 ... Multi-Agent Systems (MAS) This is the continuation of going over the research paper: A Comprehensive Survey of Self-Evolving AI Agents A ...
+r/LocalLLaMA on Reddit: Benchmarked the main GPU options for local LLM inference in 2026
+https://www.reddit.com/r/LocalLLaMA/comments/1rk5ftz/benchmarked_the_main_gpu_options_for_local_llm/
+Mar 3, 2026 ... In many real LLM inference benchmarks, a 4090 is noticeably more than 10% faster than a 3090, even for single‑user inference, despite similar ...
 
-2026 will be the Year of Multi-agent Systems
-https://aiagentsdirectory.com/blog/2026-will-be-the-year-of-multi-agent-systems
-ulti-agent systems are moving from demos to production. Here’s the evidence—from Anthropic’s multi-agent research system to Salesforce Agentforce orchestration, Google’s A2A interoperability protocol, and enterprise forecasts—plus practical architecture patterns for 2026.
+Best GPUs for Local LLM Inference (2026): 32GB VRAM & Benchmarks
+https://corelab.tech/llmgpu/
+If you are allergic to fan noise and Linux terminal troubleshooting, the Mac Studio (M4 Ultra) is the answer. 192GB Unified Memory: You can run Llama-4-405B (quantized) on a desktop.
 
-Multi-Agent AI in Production: 4-Week Pilot Guide [2026]
-https://www.kunalganglani.com/blog/multi-agent-ai-systems-production
-Ready to move multi-agent AI beyond demos? Learn how to ship a document-processing pipeline in under 4 weeks — architecture, orchestration, and real lessons included.
+Local LLM Inference on AMD RX 9070 XT — Vulkan vs ROCm Benchmarks on ...
+https://digtvbg.com/blog/llama-server-vulkan-rdna4-vllm-rocm-benchmark/
+I got an RX 9070 XT with 16GB VRAM and the obvious first thing to do was run local LLM inference on it. RDNA4 is brand new silicon — released early 2026 — and the software ecosystem hasn't fully caught up yet.
 
-What's new in Copilot Studio: Updates to multi-agent systems
-https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/new-and-improved-multi-agent-orchestration-connected-experiences-and-faster-prompt-iteration/
-Apr 1, 2026 ... These features will be fully available to all eligible customers as of April 2026. Three capabilities, one outcome: agents that can operate ...
+What to Buy for Local LLMs (April 2026) | by Julien Simon - Medium
+https://julsimon.medium.com/what-to-buy-for-local-llms-april-2026-a4946a381a6a
+Apr 3, 2026 ... [19] Apple removed the 512GB memory option from Mac Studio in March 2026 and raised the 256GB upgrade price. ... [33] AMD ROCm training: Unsloth ...
 
-What kind of agents are we building in March 2026? 🛠️
-https://www.reddit.com/r/AI_Agents/comments/1rxxab9/what_kind_of_agents_are_we_building_in_march_2026/
-Thank you for your submission, for any questions regarding AI, please check out our wiki at https://www.reddit.com/r/ai_agents/wiki (this is currently in test and we are actively adding to the wiki) I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns. More on reddit.com
+r/LocalLLaMA on Reddit: 7900 XTX + ROCm: A Year Later. Llama.cpp vs vLLM Benchmarks (TB3 eGPU)
+https://www.reddit.com/r/LocalLLaMA/comments/1q189os/7900_xtx_rocm_a_year_later_llamacpp_vs_vllm/
+Any reason for not running the native MXFP4 GPT-OSS on vLLM? Not supported on ROCm? More on reddit.com
 
-Building Production-Ready Multi-Agent AI Systems in 2026
-https://devstarsj.github.io/2026/02/21/ai-agents-multi-agent-systems-production/
-The real frontier is multi-agent systems — networks of specialized AI agents that collaborate, delegate, and self-correct to accomplish complex tasks that no single prompt could handle. The teams shipping real value in 2026 are the ones who've figured out how to run these systems reliably in production.
+AMD Ryzen AI Halo: Local LLM Inference Platform Analysis - Reading List
+https://reading.torqsoftware.com/notes/hardware/ai/2026-01-21-amd-ryzen-ai-halo-local-llm-inference-platform/
+AMD Ryzen AI Halo Product Page AMD CES 2026 Press Release ROCm 7.1.1 Compatibility Documentation AMD MLPerf Client Benchmark Article Independent Strix Halo LLM Benchmark AMD Ryzen AI Max LM Studio Blog Apple M2 Ultra Announcement llama.cpp Apple Silicon Benchmarks M2 Ultra LLM Benchmark Data Summary ... Hardware Specifications Ryzen AI Max+ 395 ...
 
-The Rise of Multi-Agent Teams. AI Agents at Work in 2026 - LinkedIn
-https://www.linkedin.com/pulse/rise-multi-agent-teams-ai-agents-work-2026-elizaveta-zabrodskaya-9denf
-Mar 10, 2026 ... check each other's outputs; run workflows end-to-end. Think less AI tool, more AI productivity system.
+I optimized my Strix Halo for local LLMs: Here are the benchmarks and ...
+https://www.hardware-corner.net/strix-halo-llm-optimization/
+Trying to optimize Strix Halo for local LLMs? Learn the critical command to boost ROCm speed and discover the best backend for every task with my definitive benchmarks and cheat sheet.
 
-Multi-Agent AI Systems Guide 2026 | AI Workflow Lab
-https://aiworkflowlab.dev/article/building-multi-agent-ai-systems-2026-architecture-patterns-mcp-production-orchestration
-How to Build Multi-Agent AI Systems in 2026: Architecture Patterns, MCP, and Production Orchestration A hands-on guide to building production-ready multi-agent AI systems in 2026 — covering architecture patterns, MCP, A2A protocols, framework comparisons, and best practices with Python code examples.
+Strix Halo Mini PCs for Local LLM Inference: A Practical Guide to ...
+https://www.starryhope.com/minipcs/strix-halo-local-llm-inference-2026/
+The fundamental appeal of Strix Halo for local LLM work comes down to one thing: memory bandwidth determines inference speed, and these chips can access a massive pool of unified memory without the bottlenecks that plague discrete GPU setups.
 
-What kind of infrastructure does a production-level multi-agent system need?
-https://www.truefoundry.com/blog/multi-agent-architecture
-Product Engineering and DevOps: Agent systems monitor pull requests, run code review, perform web searches for dependency issues, generate tests, and trigger CI/CD pipelines without human initiation. Customer Support: A triage AI agent routes tickets, a resolution agent drafts responses drawing on a knowledge base, and an escalation agent surfaces unresolved cases with full context for customer service teams. In practice, many multi-agent systems that work well in demos begin to fail once they reach production scale.
+Best GPU for Local LLMs in 2026 — Tested by Budget
+https://www.decodesfuture.com/articles/best-gpu-for-local-llms-2026-guide
+While AMD has made massive strides with ROCm 6.0+ and the Strix Halo APUs, NVIDIA still holds the lead in software ecosystem support. Most libraries (vLLM, AutoGPTQ) are optimized for CUDA first. AMD is excellent for budget-conscious users who are comfortable with slightly more setup (using GGUF/llama.cpp), while NVIDIA offers the most "plug-and-play" experience. Yes, and it is often the most cost-effective way to get massive VRAM. Because Apple uses Unified Memory, a Mac Studio with 192GB of RAM can treat all of it as VRAM for an LLM.

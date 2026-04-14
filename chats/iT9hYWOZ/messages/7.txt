@@ -1,39 +1,39 @@
-How agentic AI will reshape engineering workflows in 2026 | CIO
-https://www.cio.com/article/4134741/how-agentic-ai-will-reshape-engineering-workflows-in-2026.html
-In 2026, agentic AI won't just help engineers code — it'll run first drafts of the SDLC, leaving humans to steer, review and think bigger.
+AI Will Reshape More Jobs Than It Replaces | BCG
+https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces
+This includes amplified and rebalanced roles, where AI augments work; remaining roles in substituted and divergent categories, where workers will need significant upskilling; and enabled roles with more than 25% automation potential, where task exposure is high enough to alter day-to-day responsibilities.
 
-Is AI Productivity a Mirage? Engineering Leaders Face the 2026 Reality Check | by Standupify Team | Medium
-https://medium.com/@standupify/is-ai-productivity-a-mirage-engineering-leaders-face-the-2026-reality-check-0cea0b117df2
-As explored in The AI-Powered Standup: Revolutionizing Team Productivity in 2026, integrating AI into daily workflows is increasingly crucial. Ultimately, AI’s success in engineering depends on leaders embracing data-driven decision-making and continuous improvement.
+9 Trends Shaping Work in 2026 and Beyond - Harvard Business Review
+https://hbr.org/2026/02/9-trends-shaping-work-in-2026-and-beyond
+CEO expectations for AI-driven growth remain high heading into 2026, even as evidence shows most AI investments are failing to deliver meaningful returns. The result is a set of emerging risks ...
 
-Engineering in the Age of AI: 2026 Benchmark Report - Key Findings | Cortex
-https://www.cortex.io/post/ai-is-making-engineering-faster-but-not-better-state-of-ai-benchmark-2026
-The full Engineering in the Age of AI: 2026 Benchmark Report provides the detailed data, peer insights, and actionable frameworks to help you navigate this shift.
+Agentic & Autonomous AI Workflows in 2026: How AI Agents Are Transforming Creator Automation Pipelines
+https://www.myaiassistant.blog/2026/02/agentic-autonomous-ai-workflows-in-2026.html
+While creators and online businesses ... system design and monitoring reduce these risks. Agentic AI is designed to enhance productivity, not replace human creativity....
 
-A 2026 Guide on How to Use AI for Developer Productivity
-https://axify.io/blog/use-ai-for-developer-productivity
-The question for engineering leaders is no longer whether AI exists, but whether it is improving delivery outcomes. Increased activity does not automatically translate into higher productivity. Faster code generation can introduce rework. Automated reviews can shift bottlenecks downstream. Without clear measurement, it is difficult to determine whether AI is improving flow, quality, or predictability. This guide provides a practical framework for using AI in developer workflows.
+AI: Work partnerships between people, agents, and robots | McKinsey
+https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai
+In our midpoint scenario of automation adoption by 2030, AI-powered agents and robots could generate about $2.9 trillion in US economic value per year. 3 Capturing this may depend less on new technological breakthroughs than on how organizations redesign workflows—especially complex, high-value ones that rely on unstructured data—and how quickly human skills adapt. Integrating AI will not ...
 
-In 2026, AI Is Merging With Platform Engineering. Are You Ready? - The New Stack
-https://thenewstack.io/in-2026-ai-is-merging-with-platform-engineering-are-you-ready/
-“Existing software engineering ... traditional project management tools, but 2026 will likely welcome a new era of fully integrated, end-to-end software delivery life cycle tools, “providing all-in-one environments for AI-powered ...
+Agentic AI and the reinvention of work for ROI | EY - US
+https://www.ey.com/en_us/insights/ai/agentic-ai-and-the-reinvention-of-work-for-roi
+AI ROI will not come from automation alone. Explore how agentic AI helps organizations reinvent work, processes and roles to unlock new ...
 
-The State of Engineering AI 2026 | SimScale
-https://www.simscale.com/the-state-of-engineering-ai-2026/
-This is no longer just an internal ... outcome · The 2026 report shows where Engineering AI is already creating value and what separates teams that are scaling from those that are still stuck in pilot mode....
+Labor market impacts of AI: A new measure and early evidence
+https://www.anthropic.com/research/labor-market-impacts
+Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.
 
-AI-Driven Developer Productivity in 2026: Key Lessons from 2025
-https://enreap.com/ai-driven-developer-productivity-in-2026-key-lessons-from-2025-for-engineering-leaders/
-Whether your focus is improving cycle times, enhancing quality, or scaling AI adoption responsibly across engineering teams, Enreap provides the consulting, integration, and training support to help you realise the full productivity potential of these platforms. Developer productivity in 2025 was defined by the practical application of AI within toolchains and workflows. GitLab’s AI features improved coding velocity, JFrog strengthened secure governance of software supply chains and SonarSource provided automated quality enforcement. In 2026, success will not be about individual tools, but about how organisations integrate, govern, and measure AI-driven work across the entire development lifecycle.
+To Scale AI Agents Successfully, Think of Them Like Team Members
+https://hbr.org/2026/03/to-scale-ai-agents-successfully-think-of-them-like-team-members
+Mar 23, 2026 ... Generative AI agents can reason, plan, and take actions across enterprise systems, which means deploying them is not just a software ...
 
-How AI will shape software engineering in 2026 - LeadDev
-https://leaddev.com/ai/how-ai-will-shape-engineering-in-2026
-“The work moves faster at the start of the lifecycle, but the pressure has simply relocated to QA, validation, and oversight,” he continued. “We’re also seeing higher cognitive load when developers rely on AI-generated code they didn’t fully write, which can slow debugging and long-term maintenance.” · Plus, as a security company, he said the necessary extra governance around tool usage and data handling adds to operational overhead. Enterprises are feeling these bumps in the road to production too.
+International AI Safety Report 2026
+https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
+The second International AI Safety Report, published in February 2026, is the next iteration of the comprehensive review of latest scientific research on the capabilities and risks of general-purpose AI systems. Led by Turing Award winner Yoshua Bengio and authored by over 100 AI experts, the report is backed by over 30 countries and international organisations. It represents the largest ...
 
-The Future of AI Engineering in 2026 | BEON.tech
-https://beon.tech/blog/future-ai-engineering/
-The AI Engineering Stack is the new framework for building intelligent systems. It spans: Infrastructure: compute, orchestration, data pipelines, MLOps. Models: training, fine-tuning, evaluation of AI models.
+Zoom AI Companion 3.0 Empowers Workers to Reclaim Time ...
+https://investors.zoom.us/node/14206/pdf
+Mar 25, 2026 ... 70% believe AI tools can help restore their work-life balance. ... between February 17 – March 3, 2026, among a national sample of 1,047.
 
-2026 Engineering Productivity Benchmarks Report - plandek.com
-https://plandek.com/resources/2026-software-delivery-benchmark-report/
-The 2026 Engineering Productivity Benchmarks analyze real delivery data across four core pillars: Focus, Speed, Predictability, and Quality. The report quantifies performance gaps between top and bottom quartile teams and examines the measurable impact of AI-augmented engineering.
+How are AI agents expected to impact enterprise workflows by 2026?
+https://www.salesmate.io/blog/future-of-ai-agents/
+By 2026, AI agents are projected to gain significant autonomy in enterprise workflows, evolving from reactive tools to proactive decision-makers. They will be embedded in 80% of enterprise workplace applications, handling complex tasks and making up to 15% of work decisions autonomously.
