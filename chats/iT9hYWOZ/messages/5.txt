@@ -1,39 +1,39 @@
-The Orchestration of Multi-Agent Systems: Architectures, Protocols, and Enterprise Adoption
-https://arxiv.org/html/2601.13671v1
-By synthesizing these elements into a cohesive technical blueprint, this paper provides comprehensive treatments of orchestrated multi-agent systems—bridging conceptual architectures with implementation-ready design principles for enterprise-scale AI ecosystems.
+LLM Inference: Prefill, Decode, KV Cache & Cost Guide (2026) | Morph
+https://www.morphllm.com/llm-inference
+Home / LLM Inference: The Complete Engineering Guide (2026) LLM Inference: The Complete Engineering Guide (2026) How LLM inference actually works, from prefill and decode phases to KV cache optimization, speculative decoding, quantization, and inference engine selection. With cost benchmarks.
 
-AI Agent Orchestration in 2026: What Enterprises Need to Know
-https://kanerika.com/blogs/ai-agent-orchestration/
-Learn how AI agent orchestration works, the key coordination patterns, and what enterprise teams evaluate when scaling multi agent systems and workflows.
+Local LLM Inference in 2026: The Complete Guide to Tools, Hardware & Open-Weight Models
+https://blog.starmorph.com/blog/local-llm-inference-tools-guide
+Benchmarks with Marlin kernels: AWQ achieves 741 tok/s, GPTQ achieves 712 tok/s. vLLM v0.16.0 (February 2026) expanded multi-GPU and multi-platform support to NVIDIA, AMD ROCm, Intel XPU, and TPU.
 
-The Rise of the Agentic AI Enterprise: Orchestrating Multi-Agent ...
-https://beamdata.ai/the-rise-of-the-agentic-ai-enterprise-multi-agent-orchestration/
-Apr 1, 2026 ... Discover why multi-agent orchestration is new competitive moat in 2026. Learn to solve data quality issues & scale agentic AI with Beam ...
+r/LocalLLaMA on Reddit: LLM's cost is decreasing by 10x each year for constant quality (details in comment)
+https://www.reddit.com/r/LocalLLaMA/comments/1gpr2p4/llms_cost_is_decreasing_by_10x_each_year_for/
+We looked at LLM pricing data from the Internet Archive and it turns out that for an LLM of a specific quality (measured by MMLU) the cost declines by 10x year-over-year. When GPT-3 came out in November 2021, it was the only model that was able to achieve an MMLU of 42 at a cost of $60 per million tokens. As of the time of writing, the cheapest model to achieve the same score was Llama 3.2 3B, from model-as-a-service provider Together.ai , at $0.06 per million tokens. The cost of LLM inference has dropped by a factor of 1,000 in 3 years. Full blog post is here . Happy to answer questions or hear comments/criticism. More on reddit.com
 
-Enterprise AI Agents: Agentic Design Patterns Explained
-https://www.tungstenautomation.com/learn/blog/build-enterprise-grade-ai-agents-agentic-design-patterns
-Feb 9, 2026 ... These Agentic AI Design Pattern for Enterprises includes the following: Multi-Agent Pattern; Reflection Pattern; Planning Pattern ("Plan-Act" ...
+The Complete Guide to LLM Quantization | LocalLLM.in
+https://localllm.in/blog/quantization-explained
+LLM quantization is a compression technique that reduces the numerical precision of model weights from high-precision formats (like 32-bit floats) to lower-precision representations (like 8-bit or 4-bit integers). It's important because it can reduce model size by up to 75-90% while maintaining most of the performance, making powerful AI models accessible on consumer hardware and reducing deployment costs.
 
-Multi-agent orchestration is the future of AI coding. Here are some OSS tools to check out.
-https://www.reddit.com/r/ClaudeAI/comments/1pgmiox/multiagent_orchestration_is_the_future_of_ai/
-I gave each of those tools a spin and at least in my humble experience, non of them improved the output of the llm compared to normal well written prompt. All you need is a good Claude.md and then a plan and status file for each feature. Anybody has benchmarks? None of the tools provides anything. More on reddit.com
+LLM Inference Optimization: Cut Cost & Latency at Every Layer (2026) | Morph
+https://www.morphllm.com/llm-inference-optimization
+Quantizing from FP16 to INT8 or INT4 reduces memory by 2-4x and cuts inference cost by roughly 50% while maintaining 95-99% of original accuracy. Google's TurboQuant (2026) compresses the KV cache to 3 bits with zero measured accuracy loss, ...
 
-The 2026 Enterprise Multi-Agent Orchestration Blueprint: From Pilot ...
-https://linesncircles.com/Blog/Enterprise/AI_Agent_Orchestration_2026
-Why 60% of enterprise agentic AI pilots fail in 2026 — and the exact architecture, stack, and governance model to deploy multi-agent systems that actually stick in production.
+LLM Inference: Techniques for Optimized Deployment in 2026 | Label Your Data
+https://labelyourdata.com/articles/llm-fine-tuning/llm-inference
+Quantization has been a game-changer for us. By reducing the precision of our model weights, we were able to cut our inference costs almost in half while maintaining 95% of the original performance.
 
-Why Multi-Agent Orchestration Is the Future of Enterprise AI - LinkedIn
-https://www.linkedin.com/pulse/why-multi-agent-orchestration-future-enterprise-uh5pc
-Enterprises need it because single-agent systems cannot coordinate across domains, maintain context across workflows, or recover from failure ...
+Reduce AI Model Operational Costs With Quantization Techniques
+https://newsletter.theaiedge.io/p/reduce-ai-model-operational-costs
+By quantizing these weights (reducing precision), you decrease the GPU compute and memory requirements. However, overly aggressive quantization can sometimes reduce inference accuracy. Many open-source LLMs accessed through cloud APIs or downloaded locally are already quantized.
 
-Agentic AI Orchestration in 2026: Automating Workflows at Scale
-https://onereach.ai/blog/agentic-ai-orchestration-enterprise-workflow-automation/
-Discover how agentic AI orchestration automates complex, end-to-end workflows in 2026—architecture, HitL, integration layers, and real outcomes for enterprises.
+Sustainable LLM Inference for Edge AI: Evaluating Quantized LLMs for Energy Efficiency, Output Accuracy, and Inference Latency | ACM Transactions on Internet of Things
+https://dl.acm.org/doi/10.1145/3767742
+Models are benchmarked on five standardized datasets (CommonsenseQA, BIG-Bench Hard, TruthfulQA, GSM8K, and HumanEval), and we employ a high-resolution, hardware-based energy measurement tool to capture real-world power consumption. Our findings reveal the trade-offs between energy efficiency, inference speed, and accuracy in different quantization settings, highlighting configurations that optimize LLM deployment for resource-constrained environments.
 
-What Is Agentic AI Orchestration? Enterprise Guide - Elementum
-https://www.elementum.ai/blog/agentic-ai-orchestration
-Mar 25, 2026 ... Agentic AI orchestration coordinates AI agents, business rules, and human decisions inside governed enterprise workflows.
+On-Device LLMs: State of the Union, 2026
+https://v-chandra.github.io/on-device-llms/
+Intel and Weizmann Institute (ICML 2025) showed that any small draft model can accelerate any LLM regardless of vocabulary differences, delivering up to 2.8x faster inference. Online Speculative Decoding (UC Berkeley, 2025) adapts draft models continuously during serving.
 
-Enterprise Agentic AI Landscape 2026: Trust, Flexibility, and Vendor Lock-in - Kai Waehner
-https://www.kai-waehner.de/blog/2026/04/06/enterprise-agentic-ai-landscape-2026-trust-flexibility-and-vendor-lock-in/
-The Enterprise Agentic AI Landscape 2026 maps every major AI vendor across two dimensions that matter most: how much you trust their AI, and how much lock-in you accept. An independent, vendor-neutral analysis covering Anthropic, OpenAI, Google, Microsoft, AWS, Mistral, SAP, Salesforce, and more.
+Local AI in 2026: Ollama Benchmarks, $0 Inference, and the End of ...
+https://dev.to/pooyagolchian/local-ai-in-2026-ollama-benchmarks-0-inference-and-the-end-of-per-token-pricing-32e7
+Apr 7, 2026 ... ... local model against cloud APIs with real cost data. Tagged with ai, ollama, llm, localai.

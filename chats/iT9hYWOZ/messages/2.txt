@@ -1,39 +1,39 @@
-Council Post: The Neuroscience Of Authority: Engineering Trust In Modern Leadership
-https://www.forbes.com/councils/forbescoachescouncil/2026/04/07/the-neuroscience-of-authority-engineering-trust-in-modern-leadership/
-Authority is built through repetition. Research on how people learn demonstrates that practice solidifies neural connections, and leadership communications are no different. Repeatedly and calmly emphasizing your contributions helps others solidify ...
+Best practices for distributed engineering teams: 2026 guide - N-iX
+https://www.n-ix.com/best-practices-for-distributed-engineering-teams/
+According to the 2025 Stack Overflow Developer Survey, over 32.4% developers globally work in remote environments, with the USA leading by country at 45% [1]. For businesses, distributed development teams can be a solution to talent shortages or budget constraints. However, without best practices for distributed engineering teams, these companies risk not obtaining the full advantage of having ...
 
-Building a High-Trust Engineering Culture: Lessons From ... - LinkedIn
-https://www.linkedin.com/pulse/building-high-trust-engineering-culture-lessons-from-leading-naikar-aiy8e
-📌 Introduction: Trust Is the Multiplier of Engineering Excellence Every engineering leader talks about speed, quality, innovation, and delivery. But over the years leading Dev, QA, CloudOps ...
+Remote Team Management 2026: What Actually Works for Distributed Teams (Especially Across Latin America) - HR Oasis
+https://hroasis.com/remote-team-management/
+Remote Work in 2026: How IT Teams Are Adapting to the New Normal · How to Structure Engineering Teams for Remote Work ... At HR Oasis, we’ve spent years helping US companies build and manage high-performing remote teams across Latin America.
 
-RCA-Driven Leadership: The Leadership Discipline of Looking ...
-https://medium.com/operational-sympathy/rca-driven-leadership-the-leadership-discipline-of-looking-beyond-symptoms-3987b3700f1c
-Mar 22, 2026 ... Mar 22, 2026. 290. 6 ... Blameless Culture Is a Leadership Discipline. Many leaders champion blameless postmortems during incident reviews but ...
+Building Global Distributed Teams: 4 Key Lessons for 2026
+https://www.hirewithnear.com/blog/remote-team-key-lessons
+... The managers who will succeed at leading distributed teams in 2026 will be those who actively address well-being by creating boundaries, facilitating social connection, and preventing the isolation that drives talented people away.
 
-27 casserole dinners that hold up for tomorrow without falling apart - MSN
-https://www.msn.com/en-us/lifestyle/career/mj-engineerings-michael-panichelli-swears-by-communication-connected-culture-teamwork/ar-AA20HJdJ
-The 2026 Top Workplaces leadership award winner says face-to-face conversations, trust and team culture help keep 175 employees engaged and growing.
+Remote Engineering Team Management: A Practical Guide | Engineering Manager Tools
+https://www.em-tools.io/managing-teams/remote-team-management
+Manage a remote engineering team with practical systems for async communication, distributed culture, and trust across time zones. Last updated: 30 March 2026 · Your team is spread across four time zones.
 
-Trust Is the New Tech | Psychology Today
-https://www.psychologytoday.com/us/blog/decisions-decisions/202512/trust-is-the-new-tech
-Jan 5, 2026 ... AI fails when trust fails—culture determines whether technology gets used or quietly abandoned. Trust is triangular: leadership, employees, and ...
+Building World-Class Remote Engineering Teams with Extreme Ownership | Leadership & Accountability
+https://www.revelo.com/blog/building-world-class-remote-engineering-teams-with-extreme-ownership
+Learn how engineering leaders can apply the principles of Extreme Ownership to remote teams—fostering accountability, trust, and high performance in distributed environments.
 
-Incident Postmortem Framework: A Complete Guide for Engineering ...
-https://www.em-tools.io/frameworks/incident-postmortem
-Learn how to run effective incident postmortems for engineering teams. Covers blameless culture, structured formats, action tracking, and continuous improvement.
+Building a Strong Remote Culture in 2026 With Distributed Teams - Interloop
+https://www.inlps.com/building-a-strong-remote-culture-in-2026-with-distributed-teams/
+Remote work is no longer just about flexibility — it has become a core part of how modern companies operate. In 2026, many organizations are fully distributed, with teams spread across multiple countries, time zones, and cultures.
 
-by Gergely Orosz - The Pragmatic Engineer in 2025
-https://newsletter.pragmaticengineer.com/p/the-pragmatic-engineer-in-2025
-Dec 23, 2025 ... As of today, the newsletter has 1,073,929 readers, of whom more than 200,000 have joined in the past year alone. Special thanks to paying ...
+How to Lead a Remote Engineering Team — JustSteveKing
+https://www.juststeveking.com/articles/how-to-lead-remote-engineering-teams/
+This article is about building that model. We will cover async communication rhythms, documentation as infrastructure, how to build genuine trust without physical proximity, and how to protect your team’s well-being when the office and home become the same place.
 
-Engineering a "Resilience-First" Culture: Beyond the Blameless Post-Mortem
-https://datacust.blogspot.com/2026/02/engineering-resilience-first-culture.html
-The Takeaway A truly resilient organization understands that culture is your ultimate firewall. You can have the best tech, the smartest people, and the most robust systems, but if your culture incentivizes fragility over foresight, you're building on quicksand. Engineering a resilience-first culture means celebrating prevention, rewarding robustness, and transforming the fear of failure into ...
+How to Structure Remote Engineering Teams for Work in 2026 - HR Oasis
+https://hroasis.com/how-to-structure-remote-engineering-teams/
+In distributed teams, those patches don’t exist. Bad structure becomes a bottleneck that slows everything down. This guide breaks down how to build and structure remote engineering teams in 2026, covering team types, decision-making frameworks, communication architecture, and when to reorganize as you scale.
 
-The Week I Disappeared and Nothing Moved | Checkr Engineering
-https://medium.com/checkr/the-week-i-disappeared-and-nothing-moved-330be935cca8
-Mar 19, 2026 ... Mar 19, 2026. 2. 1. Listen ... I've spent the years since then, across multiple leadership roles ...
+Remote Engineering Team Best Practices in 2026
+https://ozrit.com/remote-engineering-team-best-practices-2026/
+Building and managing a high-performing remote engineering team in 2026 is entirely achievable, but it requires deliberate structure, clear communication standards, and leadership that understands the difference between managing presence and ...
 
-Trust is the ultimate driver of engineering excellence - LeadDev
-https://leaddev.com/culture/trust-ultimate-driver-engineering-excellence
-According to the most recent State of DevOps Report (SODR), organizations with high-trust cultures deploy code 208 times more frequently and recover from incidents 2,604 times faster compared to low-trust organizations.
+Engineering Culture: How to Build It in Distributed Latin American Teams - HR Oasis
+https://hroasis.com/engineering-culture-distributed-teams-latam-2026/
+How to build real engineering culture in distributed Latam teams. Async-first, trust building, rituals that work, and key cultural differences.

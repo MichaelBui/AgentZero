@@ -1,39 +1,39 @@
-AI Will Reshape More Jobs Than It Replaces | BCG
-https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces
-This includes amplified and rebalanced roles, where AI augments work; remaining roles in substituted and divergent categories, where workers will need significant upskilling; and enabled roles with more than 25% automation potential, where task exposure is high enough to alter day-to-day responsibilities.
+DORA Metrics for Engineering Teams: Guide & Benchmarks | Engineering Manager Tools
+https://www.em-tools.io/frameworks/dora-metrics
+Yes, though the specific definitions may need adaptation. For embedded systems, mobile applications, or on-premises software, 'deployment to production' might mean a release to an app store, a firmware update, or a customer-facing release. The underlying principles - measuring how quickly and reliably you deliver value - apply regardless of the delivery mechanism. Adjust the metric definitions to fit your context while preserving their intent.
 
-9 Trends Shaping Work in 2026 and Beyond - Harvard Business Review
-https://hbr.org/2026/02/9-trends-shaping-work-in-2026-and-beyond
-CEO expectations for AI-driven growth remain high heading into 2026, even as evidence shows most AI investments are failing to deliver meaningful returns. The result is a set of emerging risks ...
+Engineering Productivity Benchmarks 2026 — DORA Metrics, Cycle Time by Team Size | knowledgelib.io
+https://knowledgelib.io/business/industry-benchmarks/engineering-productivity-benchmarks-2026/2026
+Engineering productivity benchmarks 2026: DORA metrics (deployment frequency, lead time, CFR, recovery time), cycle time, PR metrics by team size and AI adoption. H2 2025 data from 6.1M+ PRs. 6 sources, all cited. Verified 2026-03-11.
 
-Agentic & Autonomous AI Workflows in 2026: How AI Agents Are Transforming Creator Automation Pipelines
-https://www.myaiassistant.blog/2026/02/agentic-autonomous-ai-workflows-in-2026.html
-While creators and online businesses ... system design and monitoring reduce these risks. Agentic AI is designed to enhance productivity, not replace human creativity....
+DORA | DORA's software delivery performance metrics
+https://dora.dev/guides/dora-metrics/
+DORA has identified five software delivery performance metrics that provide an effective way of measuring the outcomes of the software delivery process. DORA's research shows that these performance metrics predict better organizational performance and well-being for team members.
 
-AI: Work partnerships between people, agents, and robots | McKinsey
-https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai
-In our midpoint scenario of automation adoption by 2030, AI-powered agents and robots could generate about $2.9 trillion in US economic value per year. 3 Capturing this may depend less on new technological breakthroughs than on how organizations redesign workflows—especially complex, high-value ones that rely on unstructured data—and how quickly human skills adapt. Integrating AI will not ...
+DevOps Metrics: DORA Metrics and Measuring Success · Technical news about AI, coding and all
+https://dasroot.net/posts/2026/04/devops-metrics-dora-measuring-success/
+High deployment frequency is a hallmark of a mature DevOps culture, enabling rapid innovation and continuous delivery. According to a 2026 DORA report, elite DevOps teams deploy multiple times per hour, often leveraging canary releases and feature ...
 
-Agentic AI and the reinvention of work for ROI | EY - US
-https://www.ey.com/en_us/insights/ai/agentic-ai-and-the-reinvention-of-work-for-roi
-AI ROI will not come from automation alone. Explore how agentic AI helps organizations reinvent work, processes and roles to unlock new ...
+Engineering Metrics: What Actually Matters in 2026 | Sourcegraph Blog
+https://webflow.sourcegraph.com/blog/engineering-metrics-what-actually-matters-in-2026
+This guide covers the metrics that matter most: DORA metrics, productivity indicators, and quality signals. You'll learn how to implement them without creating a toxic culture, how to avoid common traps, and how to turn measurement into meaningful ...
 
-Labor market impacts of AI: A new measure and early evidence
-https://www.anthropic.com/research/labor-market-impacts
-Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.
+What are DORA metrics? Complete guide to measuring DevOps performance
+https://getdx.com/blog/dora-metrics/
+Learn how DORA metrics help engineering teams boost delivery speed, quality, and reliability—plus how AI is reshaping software performance measurement.
 
-To Scale AI Agents Successfully, Think of Them Like Team Members
-https://hbr.org/2026/03/to-scale-ai-agents-successfully-think-of-them-like-team-members
-Mar 23, 2026 ... Generative AI agents can reason, plan, and take actions across enterprise systems, which means deploying them is not just a software ...
+DORA Metrics Are Not Enough in 2026: What Elite Engineering Teams Track Instead
+https://www.oobeya.io/blog/dora-metrics-not-enough-2026
+This is where DORA becomes difficult to interpret without segmentation. If deployment frequency goes up but change failure rate also increases, you still do not know whether AI is helping or hurting unless you can separate AI-assisted work from human-authored work. That is why engineering intelligence in 2026 increasingly requires attribution layers, not just aggregate delivery dashboards.
 
-International AI Safety Report 2026
-https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
-The second International AI Safety Report, published in February 2026, is the next iteration of the comprehensive review of latest scientific research on the capabilities and risks of general-purpose AI systems. Led by Turing Award winner Yoshua Bengio and authored by over 100 AI experts, the report is backed by over 30 countries and international organisations. It represents the largest ...
+DORA Metrics 2026: How Elite Software Delivery Teams Measure Performance | Programming Helper Tech
+https://www.programming-helper.com/tech/dora-metrics-2026-software-delivery-performance
+The DORA research program enters its eleventh year with new insights into software delivery performance. As platform engineering transforms how organizations build software, the four key metrics remain the gold standard for measuring engineering excellence. This analysis explores the latest ...
 
-Zoom AI Companion 3.0 Empowers Workers to Reclaim Time ...
-https://investors.zoom.us/node/14206/pdf
-Mar 25, 2026 ... 70% believe AI tools can help restore their work-life balance. ... between February 17 – March 3, 2026, among a national sample of 1,047.
+What Are DORA Metrics and Do They Actually Improve Engineering Performance?
+https://www.allstacks.com/blog/dora-metrics/
+What are DORA metrics? In this article, we explain the four main DORA metrics and determine if they’re actually effective for engineering performance.
 
-How are AI agents expected to impact enterprise workflows by 2026?
-https://www.salesmate.io/blog/future-of-ai-agents/
-By 2026, AI agents are projected to gain significant autonomy in enterprise workflows, evolving from reactive tools to proactive decision-makers. They will be embedded in 80% of enterprise workplace applications, handling complex tasks and making up to 15% of work decisions autonomously.
+Your practical guide to DORA metrics | Swarmia
+https://www.swarmia.com/blog/dora-metrics/
+oin us on April 16: How to build a metrics culture that engineers actually trust → ... DORA metrics have evolved since they were first introduced in 2014, but they remain the gold standard for measuring software delivery performance. This guide, first published in 2022 and updated in 2026, covers both the current five-metric model and the context you need to use it effectively.

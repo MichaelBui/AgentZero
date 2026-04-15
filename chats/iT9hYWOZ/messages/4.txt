@@ -1,39 +1,39 @@
-vLLM inference - ROCm Documentation - AMD
-https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/benchmark-docker/vllm.html
-Learn how to validate LLM inference performance on MI300X GPUs using AMD MAD and the ROCm vLLM Docker image.
+Top Programmatic Advertising Trends 2026: 5 Trends You Might Miss
+https://adtelligent.com/blog/ad-tech-insights/programmatic-advertising-trends/
+The main trend among programmatic advertising trends in 2026 is the widespread use of artificial intelligence. It automates ad buying, optimization, and placement based on demographics, behavior, and context.
 
-r/LocalLLaMA on Reddit: Benchmarked the main GPU options for local LLM inference in 2026
-https://www.reddit.com/r/LocalLLaMA/comments/1rk5ftz/benchmarked_the_main_gpu_options_for_local_llm/
-Mar 3, 2026 ... In many real LLM inference benchmarks, a 4090 is noticeably more than 10% faster than a 3090, even for single‑user inference, despite similar ...
+NEW 2026 Marketing Trends for AI-First Marketing Strategies That Work
+https://blog.brandsatplayllc.com/blog/new-2026-marketing-trends-for-ai-first-marketing-strategies-that-work
+The eight leading AI marketing trends for 2026 include customer data platforms as foundational infrastructure, privacy-first marketing with consent-driven growth, AI-powered predictive analytics for real-time decisions, hyper-personalization through machine learning, hybrid intelligence workflows combining human expertise with AI capabilities, conversational AI for autonomous customer engagement, immersive phygital experiences using AR/VR, and autonomous AI managing programmatic advertising campaigns end-to-end.
 
-Best GPUs for Local LLM Inference (2026): 32GB VRAM & Benchmarks
-https://corelab.tech/llmgpu/
-If you are allergic to fan noise and Linux terminal troubleshooting, the Mac Studio (M4 Ultra) is the answer. 192GB Unified Memory: You can run Llama-4-405B (quantized) on a desktop.
+Retail Media Networks: How They Work in 2026 — AI Digital
+https://www.aidigital.com/blog/retail-media-networks
+By 2026, expect more retailers to integrate their data with open ad exchanges or preferred DSPs, enabling brands to plan retail media alongside other channels. This could mean more real-time bidding on retailer ad space and unified dashboards ...
 
-Local LLM Inference on AMD RX 9070 XT — Vulkan vs ROCm Benchmarks on ...
-https://digtvbg.com/blog/llama-server-vulkan-rdna4-vllm-rocm-benchmark/
-I got an RX 9070 XT with 16GB VRAM and the obvious first thing to do was run local LLM inference on it. RDNA4 is brand new silicon — released early 2026 — and the software ecosystem hasn't fully caught up yet.
+Top Retail Media Trends for 2026: AI & Agentic Commerce
+https://www.mirakl.com/blog/top-retail-media-trends-2026
+Discover how AI and agentic commerce are transforming retail media in 2026. Learn how retailers can optimize product data and leverage AI-powered platforms to drive monetization and visibility.
 
-What to Buy for Local LLMs (April 2026) | by Julien Simon - Medium
-https://julsimon.medium.com/what-to-buy-for-local-llms-april-2026-a4946a381a6a
-Apr 3, 2026 ... [19] Apple removed the 512GB memory option from Mac Studio in March 2026 and raised the 256GB upgrade price. ... [33] AMD ROCm training: Unsloth ...
+9 marketing predictions for 2026 as AI fuels polarity | Marketing Dive
+https://www.marketingdive.com/news/marketing-predictions-for-2026/809124/
+In the DSP space, Amazon and Walmart continue to develop their offerings, while Microsoft’s sunsetting of Xandr provided a boost to Amazon via a transition partnership. Some brands have looked to test different sell-side workflows, including marketplace deals and guaranteed programmatic buys, especially as more connected TV inventory comes on board, said LiveRamp’s Travis Clinger.
 
-r/LocalLLaMA on Reddit: 7900 XTX + ROCm: A Year Later. Llama.cpp vs vLLM Benchmarks (TB3 eGPU)
-https://www.reddit.com/r/LocalLLaMA/comments/1q189os/7900_xtx_rocm_a_year_later_llamacpp_vs_vllm/
-Any reason for not running the native MXFP4 GPT-OSS on vLLM? Not supported on ROCm? More on reddit.com
+AI in Online Advertising: 5 Key Trends from March 2026 | JumpFly Digital Marketing Blog
+https://www.jumpfly.com/blog/ai-in-online-advertising-5-key-trends-from-march-2026/
+Meanwhile, NVIDIA announced NemoClaw at GTC 2026, an enterprise-grade runtime that adds security and privacy guardrails to open-source AI agents like OpenClaw. The platform, which has racked up over 135,000 GitHub stars, lets users automate tasks through messaging apps like Telegram, WhatsApp, and Slack. At the retail level, Target is collaborating with OpenAI, and Walmart has partnered with Google’s Gemini on agentic commerce initiatives.
 
-AMD Ryzen AI Halo: Local LLM Inference Platform Analysis - Reading List
-https://reading.torqsoftware.com/notes/hardware/ai/2026-01-21-amd-ryzen-ai-halo-local-llm-inference-platform/
-AMD Ryzen AI Halo Product Page AMD CES 2026 Press Release ROCm 7.1.1 Compatibility Documentation AMD MLPerf Client Benchmark Article Independent Strix Halo LLM Benchmark AMD Ryzen AI Max LM Studio Blog Apple M2 Ultra Announcement llama.cpp Apple Silicon Benchmarks M2 Ultra LLM Benchmark Data Summary ... Hardware Specifications Ryzen AI Max+ 395 ...
+AdTech Trends 2026: The Great Reset of Digital Advertising
+https://epom.com/blog/digital-advertising/ad-tech-trends
+AI is taking over routine media work, cookies are replaced by first-party data and clean rooms, retail media and CTV are becoming must-buy channels, mobile is shaped by privacy rules, and attribution is finally improving.
 
-I optimized my Strix Halo for local LLMs: Here are the benchmarks and ...
-https://www.hardware-corner.net/strix-halo-llm-optimization/
-Trying to optimize Strix Halo for local LLMs? Learn the critical command to boost ROCm speed and discover the best backend for every task with my definitive benchmarks and cheat sheet.
+Retail Media 2.0: From Sponsored Listings to AI-Driven Commerce Ecosystems
+https://martechseries.com/mts-insights/staff-writers/retail-media-2-0-from-sponsored-listings-to-ai-driven-commerce-ecosystems/
+At the inventory layer, it is dynamically managing ad placements across on-site search, off-site programmatic, connected TV, and in-store digital surfaces, adjusting in real time based on bid competition, product availability, margin targets, ...
 
-Strix Halo Mini PCs for Local LLM Inference: A Practical Guide to ...
-https://www.starryhope.com/minipcs/strix-halo-local-llm-inference-2026/
-The fundamental appeal of Strix Halo for local LLM work comes down to one thing: memory bandwidth determines inference speed, and these chips can access a massive pool of unified memory without the bottlenecks that plague discrete GPU setups.
+2025’s Media Trends Reshaping Advertising
+https://www.aidigital.com/blog/media-trends-2025
+AI-driven personalization, retail media networks, and CTV are reshaping advertising in 2025. Discover key insights and download AI Digital’s latest Media Trends Report.
 
-Best GPU for Local LLMs in 2026 — Tested by Budget
-https://www.decodesfuture.com/articles/best-gpu-for-local-llms-2026-guide
-While AMD has made massive strides with ROCm 6.0+ and the Strix Halo APUs, NVIDIA still holds the lead in software ecosystem support. Most libraries (vLLM, AutoGPTQ) are optimized for CUDA first. AMD is excellent for budget-conscious users who are comfortable with slightly more setup (using GGUF/llama.cpp), while NVIDIA offers the most "plug-and-play" experience. Yes, and it is often the most cost-effective way to get massive VRAM. Because Apple uses Unified Memory, a Mac Studio with 192GB of RAM can treat all of it as VRAM for an LLM.
+7 Programmatic Advertising Trends Shaping 2026 | Basis
+https://basis.com/blog/7-programmatic-advertising-trends-shaping-2026
+While AI is also powering many of the tools to combat these challenges, the race between synthetic content creation and detection will be a defining feature of programmatic quality in 2026.
