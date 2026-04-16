@@ -1,39 +1,39 @@
-Engineering Manager in 2026: The $400K Leadership Track (Complete Transition Guide)
-https://jsgurujobs.com/blog/engineering-manager-in-2026-the-400k-leadership-track-complete-transition-guide
-Progression often requires moving between companies because internal promotion paths stall. Many successful VPs built their careers by changing companies every three to four years, taking progressively larger roles at each step. The timeline for advancement varies significantly. Some managers progress from first-level manager to director in three years. Others spend six or eight years at each level. Progression speed depends on company growth, available opportunities, your performance, and honestly some luck around timing.
+8 Successful Enterprise AI Adoption Case Studies - NineTwoThree
+https://www.ninetwothree.co/blog/ai-adoption-case-studies
+Their operations team faced a significant bottleneck: manually reviewing thousands of repair orders to catch billing errors and data inconsistencies. NineTwoThree engineered a custom AI model that doesn't just digitize the process but "reads" ...
 
-Engineering Career Ladders: The Complete Framework
-https://www.smithspektrum.com/blog/career-ladders-engineers-2026
-Complete guide to engineering career ladders with level definitions from Junior to Distinguished, compensation bands, promotion criteria, and implementation frameworks from 50+ companies.
+What constitutes a good AI adoption rate for engineering teams?
+https://blog.exceeds.ai/tailscale/
+Tailscale’s 91.4% AI adoption rate far exceeds the 45.1% community median and reflects strong organizational alignment. Most engineering teams reach adoption rates between 45% and 65%, and top-quartile organizations climb higher through structured enablement programs. The real goal extends beyond adoption percentage and includes sustained productivity and quality outcomes from AI usage.
 
-The 2026 Skills on the Rise Report: Why Leadership + Prompt ...
-https://www.linkedin.com/pulse/2026-skills-rise-report-why-leadership-prompt-engineering-das-hg6pc
-Mar 14, 2026 ... The Team Leadership and Development category highlights cross-functional team management, mentorship, and talent development. The Communication ...
+AI adoption by companies in 2026: Workflows and AI agents - Easy8
+https://www.easy8.com/blog/ai-adoption
+Unlocking AI's true potential From experimentation to enterprise-wide transformation Identify opportunities for growth in the first place The AI adoption curve Stage 1: Early experimentation and limited use Stage 2: Integrating into some processes and blending Stage 3: Transformative and strategic adoption of AI Navigating the obstacles and leveraging what works in AI adoption 1. Lack of understanding and knowledge gaps 2. Data privacy and security concerns 3. High cost of implementation and training 4. Integration with existing systems 5. Lack of qualified professionals The strategic imperative for AI adoption in 2026 and beyond Long-term bets stay on agentic AI Survey on the adoption of AI by Easy8 AI ROI strategies for high-performing companies
 
-Engineering Career Ladder Framework (With Examples)
-https://www.em-tools.io/frameworks/career-ladder-framework
-Build an engineering career ladder your team trusts. Define levels clearly, support IC and management tracks, and make promotion criteria transparent.
+The State of AI in the Enterprise - 2026 AI report | Deloitte US
+https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html
+Methodology: To obtain a global view of how AI is being adopted by organizations on the leading edge of AI, Deloitte surveyed 3,235 leaders between August and September 2025. Respondents were senior leaders in their organizations and included ...
 
-Engineering Career Development | The GitLab Handbook
-https://handbook.gitlab.com/handbook/engineering/careers/
-Mar 4, 2026 ... Most important is the fork between purely technical work and managing teams. It's important that Engineering Managers self-select into that ...
+Scaling AI Adoption in Engineering [Book]
+https://www.oreilly.com/library/view/scaling-ai-adoption/0642572246563/
+Author Peter Bell draws on years ... navigating the real challenges of AI adoption: aligning teams, evolving org structures, revisiting hiring strategies, and managing risk....
 
-Developer Career Ladders: Complete Guide to Engineering Career Paths in ...
-https://calmops.com/career/developer-career-ladders-complete-guide-2026/
-Introduction The traditional image of developer career progression—a linear path from junior to senior to lead to manager—no longer matches reality. Modern engineering organizations offer multiple career tracks, each with distinct expectations and opportunities. Understanding these paths early enables strategic career decisions that align with your goals and strengths. In 2026, the ...
+5 strategies to accelerate the adoption of responsible AI | World Economic Forum
+https://www.weforum.org/stories/2026/02/5-strategies-accelerate-responsible-ai-adoption/
+The reality is often very different when organizations apply a responsible AI by design approach, building in appropriate governance checkpoints and controls throughout the AI development and deployment process. By engineering the AI system or deployment from an early stage with responsible AI guardrails, organizations feel confident at later stages and can proceed more quickly during final deployment and scaling efforts.
 
-Engineering Leadership - eCornell
-https://ecornell.cornell.edu/certificates/leadership-and-strategic-management/engineering-leadership/
-Yet many lack formal management training in the soft skills necessary to help teams and organizations reach their highest potential. In this certificate program ...
+2026 Agentic Coding Trends Report
+https://resources.anthropic.com/2026-agentic-coding-trends-report
+The 2026 Agentic Coding Trends ... scaling agentic coding beyond engineering teams. Includes case studies from Rakuten, CRED, TELUS, and Zapier....
 
-Navigating career growth in engineering and manufacturing just got ...
-https://www.instagram.com/reel/DWRlrJnAKYd/
-Mar 24, 2026 ... 0 likes, 0 comments - mcglynnpersonnel on March 24, 2026: "Navigating career growth in engineering and manufacturing just got clearer.
+Challenges in Adoption and Scaling of AI: A Case Study at a High-Tech Firm and Research Roadmap - University of Twente Research Information
+https://research.utwente.nl/en/publications/challenges-in-adoption-and-scaling-of-ai-a-case-study-at-a-high-t/
+Tamburri, D., Tonnarelli, M., & van Hillegersberg, J. (2026). Challenges in Adoption and Scaling of AI: A Case Study at a High-Tech Firm and Research Roadmap. In M. Schreieck, I. Oshri, J. Kotlarsky, & O. Krancher (Eds.), Bridging Digital Sourcing, ...
 
-Infosys Promotion Timeline: Five-Year vs Twelve-Year Climb
-https://insightcrunch.com/2024/05/23/infosys-career-growth-promotion-guide/
-Technical Lead and Technology Lead: The Leadership Gate Delivery Manager: Entering Senior Leadership Senior Delivery Manager, AVP, and VP: The Executive Tier The Technical vs Managerial Track Decision How Certifications Affect Promotion Timelines Internal Job Postings (IJP): How the System Works Onsite Opportunities and Career Acceleration
+Enterprise AI Adoption Challenges: Why AI Fails & How Leaders Can Scale It
+https://rtslabs.com/enterprise-ai-adoption-challenges/
+McKinsey’s research shows that only 1/3rd of AI pilots make it into production, largely because organizations underestimate the engineering, infrastructure, and governance required to operationalize AI at scale.
 
-2026 Senior Engineering Manager Careers: Skills, Education, Salary & Job Outlook | Research.com
-https://research.com/advice/senior-engineering-manager-careers-skills-education-salary-job-outlook
-Effective senior engineering managers rely on enhanced software development life cycle visibility frameworks. Instead of focusing only on high-level metrics like cycle time, they aggregate detailed data across planning, execution, and delivery. This broad visibility helps identify hidden blockers, adjust workloads, and prevent issues before they affect delivery or team health, driving sustainable high performance.
+Challenges in Adoption and Scaling of AI: A Case Study at a High-Tech Firm and Research Roadmap | Springer Nature Link
+https://link.springer.com/chapter/10.1007/978-3-032-04512-6_4
+The rapid evolution of AI has created a wealth of possibilities for businesses, e.g. to enhance their operations, improve their innovativeness and advance customer interaction. Technology departments are under pressure to adopt AI in their enterprise architecture....

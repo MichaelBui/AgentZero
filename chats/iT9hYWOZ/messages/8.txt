@@ -1,39 +1,39 @@
-SPACE Framework Metrics for Developer Productivity - Jellyfish
-https://jellyfish.co/library/space-framework/
-Communicate impact: Clearly demonstrate the value of engineering work to stakeholders by providing data-driven reports and insights. Make better decisions: Use data to make informed decisions about resource allocation, prioritization, and investment. Identify burnout risks: Track metrics like work-life balance and workload distribution to identify potential burnout risks. Support a healthy work environment: Use data to create a more supportive and sustainable work environment for developers.
+More Code, Fewer Releases: The Engineering Leadership Blind Spot of 2026
+https://waydev.co/engineering-leadership-blind-spot-of-2026/
+The Visibility Stack Every Engineering Leader Needs Now The strategic question for CTOs and VPs of Engineering in 2026 isn't whether to adopt AI. That decision has been made, industry-wide. The question is how to build the organizational visibility required to extract AI's full value across the entire delivery cycle.
 
-Sustainability | Special Issue : Work–Life Balance and Wellbeing for Sustainable Workforces
-https://www.mdpi.com/journal/sustainability/special_issues/Work_Life_Balance_Wellbeing
-The focus of this Special Issue is to explore how to create sustainable workforces from the perspective of a different work–life balance, theoretical frameworks of wellbeing and methodological approaches. ... The contributions to this Special Issue may include, but are not limited to, the following research topics: Sustainable careers—reducing burnout and fatigue; How flexible work allows for greater work–life integration—more flexibility and allocation of time for individuals; Four day working week and other initiatives to increase productivity and decrease procrastination (these improvements contribute to a better future and a more sustainable engagement with work);
+Technical Leadership Skills: Engineering Manager Needs In 2026
+https://monday.com/blog/rnd/technical-leadership/
+Technical leadership vs people leadership Technical leadership and people leadership serve different purposes in engineering organizations. Understanding when to use each approach helps you lead more effectively. Technical leaders influence through expertise and focus on system design, technical decisions, and innovation.
 
-From Work Life Balance to Work Life Integration in 2026 | HGS
-https://oss.hgs.com/blog/work-redefined-from-work-life-balance-to-work-life-integration-in-2026/
-The rigid 9-to-5 "work-life balance" model has been replaced by Work-Life Integration, a fluid approach where professional and personal priorities synergize seamlessly rather than competing for time. Successful integration demands that leaders shift from a mindset of surveillance to one of support, relying heavily on communication and clear KPIs. Removing the friction, anxiety, and guilt ...
+Why is learning and development more critical in 2026 than before?
+https://www.intellezy.com/blog/learning-and-development-trends
+Learning and development is critical in 2026 because skills are changing faster than traditional training cycles. With nearly half of workforce skills expected to evolve within a few years, organizations must continuously reskill employees to remain competitive, productive, and resilient amid ongoing technological and market change.
 
-Sustainable High Performance vs Work-Life Balance - LinkedIn
-https://www.linkedin.com/pulse/sustainable-high-performance-vs-work-life-balance-nataly-kelly-awyce
-Jul 19, 2025 ... The goal isn't to limit energy expenditure, but to optimize recovery and renewal. Systems beat willpower. Consistent performance comes from ...
+The Year Everything Converges: How 2026 Will Redefine Work, Learning, and Leadership
+https://datasociety.com/the-year-everything-converges-how-2026-will-redefine-work-learning-and-leadership/
+Across a series of internal ... single theme emerged. 2026 will divide organizations that treat AI as a quick efficiency play from those that build real capability, real judgment, and real readiness....
 
-PDF The State of Organizations - McKinsey & Company
-https://www.mckinsey.com/~/media/mckinsey/business%20functions/people%20and%20organizational%20performance/our%20insights/the%20state%20of%20organizations/2026/the-state-of-organizations-2026.pdf
-Collectively, these technologies amount to a paradigm shift that promises significant benefits, including productivity gains, faster speed to market, and cost reductions. They are leading organizations to reimagine how work gets done, redefine domains and end-to-end processes, and rethink traditional structures.
+The Engineering Executive Talent Gap: 2026 Trends and Data - JRG Partners LLC
+https://www.jrgpartners.com/engineering-executive-talent-gap-2026-trends-data/
+Fostering a corporate culture that inherently rewards continuous learning, bold innovation, and strategic risk-taking within engineering teams. The turnover rate for engineering executives in high-growth US sectors averages 15% annually, notably ...
 
-Happiness efficiency rises with better working conditions, social ...
-https://www.nature.com/articles/s44458-026-00059-1
-Mar 30, 2026 ... ... life without increasing resource use, aligning well-being policies with sustainability. Work-life balance, natural surroundings, social ties ...
+10 learning trends to watch in 2026 (and how to stay ahead)
+https://www.electives.io/resources/ldplanning-learning-trends-2026
+We’re well past prompt engineering 101. The next wave of AI training focuses on fluency, judgment and collaboration. Think simulations where employees make strategic decisions using AI as a copilot. The goal? Confident, ethical use of AI that adds value to the business. More organizations are overhauling annual review cycles in favor of continuous development.
 
-Work-Life Balance for Field Service Engineers: Sustainable ... - LinkedIn
-https://www.linkedin.com/pulse/work-life-balance-field-service-engineers-sustainable-ali-noun-apfpf/
-Work-life balance for Field Service Engineers isn't about working less. It's about sustaining excellence over decades, not burning out after a few intense years.
+Learning and Development in 2026: 8 Key Trends & Strategies
+https://www.maplelms.com/blog/learning-and-development-trends-2026
+One of the defining Learning and Development trends in 2026 is embedding learning directly into daily tasks. Known as Learning in the Flow of Work, this approach ensures capability develops alongside changing responsibilities.
 
-How employers can create a thriving workplace - McKinsey
-https://www.mckinsey.com/mhi/our-insights/thriving-workplaces-how-employers-can-improve-productivity-and-change-lives
-Jan 16, 2025 ... Thriving workplaces: How employers can improve productivity and change lives ... Investing in holistic employee health can create almost $12 ...
+Top 7 Learning and Development Trends for 2026 - Degreed
+https://degreed.com/experience/blog/learning-and-development-trends-for-2026/
+All of that changes with AI, which has enabled regular, productive, and conversational check-ins that can help summarize and cement new growth or information. Individuals can summarize what they’ve learned, practice scenarios, or prepare for upcoming conversations. Teams can debrief together more regularly. The result: more readiness, more clarity, and more confidence. AI is speeding everything up—but capability will determine who keeps up. Organizations that thrive in 2026 won’t be the ones with the most tools.
 
-2026 Work Trends: 10 Experts Predict the Future of Work - Forbes
-https://www.forbes.com/sites/bryanrobinson/2025/12/29/2026-work-trends-10-experts--predict-the-future-of-work/
-From AI and skills-first hiring to remote work and HR transformation, 10 experts reveal the biggest workplace trends shaping how we'll work in 2026.
+Outcomes-Led Learning Will Define L&D Strategies in 2026
+https://trainingindustry.com/articles/strategy-alignment-and-planning/outcomes-led-learning-will-define-ld-strategies-in-2026/
+Training has slowly been incorporated into workflows. In 2026, this will be standard practice, with learning embedded directly into tools like Slack, Teams, CRMs and so on. This means employees can learn while they work, reducing context-switching ...
 
-Full article: Shaping work-life balance in an emerging economy: a signalling theory perspective
-https://doi.org/10.1080/09585192.2025.2606220
-In addition, the integration of work-life culture and managerial support can foster employees’ self-efficacy, enabling them to manage their workload sustainably, and cope with work-life tensions proactively (Ishaq et al., Citation2021; Kwan et al., Citation2022).
+Top Engineering Leaders in 2026: What They All Have in Common | South
+https://www.hireinsouth.com/post/engineering-leaders-what-they-have-in-common
+They invest in continuous learning, whether it’s mastering new frameworks, understanding AI ethics, or building global management skills for remote and nearshore teams. Their curiosity fuels innovation and keeps their organizations ahead of ...

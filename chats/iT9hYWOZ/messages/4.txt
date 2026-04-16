@@ -1,39 +1,39 @@
-Top Programmatic Advertising Trends 2026: 5 Trends You Might Miss
-https://adtelligent.com/blog/ad-tech-insights/programmatic-advertising-trends/
-The main trend among programmatic advertising trends in 2026 is the widespread use of artificial intelligence. It automates ad buying, optimization, and placement based on demographics, behavior, and context.
+2026 Agentic Coding Trends Report How coding agents are reshaping
+https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf
+Engineering teams discovered that AI can now handle entire implementation workflows: writing tests, debugging failures, generating documentation, and navigating increasingly complex codebases. In 2026, we predict these gains will extend far beyond incremental improvements to existing tools or models.
 
-NEW 2026 Marketing Trends for AI-First Marketing Strategies That Work
-https://blog.brandsatplayllc.com/blog/new-2026-marketing-trends-for-ai-first-marketing-strategies-that-work
-The eight leading AI marketing trends for 2026 include customer data platforms as foundational infrastructure, privacy-first marketing with consent-driven growth, AI-powered predictive analytics for real-time decisions, hyper-personalization through machine learning, hybrid intelligence workflows combining human expertise with AI capabilities, conversational AI for autonomous customer engagement, immersive phygital experiences using AR/VR, and autonomous AI managing programmatic advertising campaigns end-to-end.
+Agentic AI trends 2026: Future of agentic AI innovations - Kellton
+https://www.kellton.com/kellton-tech-blog/agentic-ai-trends-2026
+They recognize when prediction ... By 2026, agents will learn faster than the real world allows by combining shared meaning standards with simulation 'gyms' where they can practice, fail, and improve on repeat....
 
-Retail Media Networks: How They Work in 2026 — AI Digital
-https://www.aidigital.com/blog/retail-media-networks
-By 2026, expect more retailers to integrate their data with open ad exchanges or preferred DSPs, enabling brands to plan retail media alongside other channels. This could mean more real-time bidding on retailer ad space and unified dashboards ...
+Top 50 Agentic AI Implementations Use Cases to Learn in 2026
+https://8allocate.com/blog/top-50-agentic-ai-implementations-use-cases-to-learn-from/
+Agentic AI implementations examples across industries. Explore real use cases and discover how companies deploy AI agents today to find ideas for your business.
 
-Top Retail Media Trends for 2026: AI & Agentic Commerce
-https://www.mirakl.com/blog/top-retail-media-trends-2026
-Discover how AI and agentic commerce are transforming retail media in 2026. Learn how retailers can optimize product data and leverage AI-powered platforms to drive monetization and visibility.
+How agentic AI will reshape engineering workflows in 2026 | CIO
+https://www.cio.com/article/4134741/how-agentic-ai-will-reshape-engineering-workflows-in-2026.html
+Agentic AI will increasingly act as a first-pass executor across the SDLC, analyzing feasibility during planning, implementing features during build, expanding test coverage during validation and surfacing risks during review; compressing weeks ...
 
-9 marketing predictions for 2026 as AI fuels polarity | Marketing Dive
-https://www.marketingdive.com/news/marketing-predictions-for-2026/809124/
-In the DSP space, Amazon and Walmart continue to develop their offerings, while Microsoft’s sunsetting of Xandr provided a boost to Amazon via a transition partnership. Some brands have looked to test different sell-side workflows, including marketplace deals and guaranteed programmatic buys, especially as more connected TV inventory comes on board, said LiveRamp’s Travis Clinger.
+PDF Agentic AI in Engineering and Manufacturing: Industry Perspectives on ...
+https://decode.mit.edu/assets/papers/2026_Edwards_Agentic_AI_in_Engineering_and_Manufacturing.pdf
+Abstract This work examines how AI, especially agentic systems, is being adopted in engineering and manufacturing workflows, what value it provides today, and what is needed for broader deployment. This is an exploratory and qualitative state-of-practice study grounded in over 30 interviews across four stakeholder groups (large enterprises, small/medium firms, AI developers, and CAD/CAM/CAE ...
 
-AI in Online Advertising: 5 Key Trends from March 2026 | JumpFly Digital Marketing Blog
-https://www.jumpfly.com/blog/ai-in-online-advertising-5-key-trends-from-march-2026/
-Meanwhile, NVIDIA announced NemoClaw at GTC 2026, an enterprise-grade runtime that adds security and privacy guardrails to open-source AI agents like OpenClaw. The platform, which has racked up over 135,000 GitHub stars, lets users automate tasks through messaging apps like Telegram, WhatsApp, and Slack. At the retail level, Target is collaborating with OpenAI, and Walmart has partnered with Google’s Gemini on agentic commerce initiatives.
+Is agentic AI overhyped?
+https://www.reddit.com/r/learnmachinelearning/comments/1mlmnpl/is_agentic_ai_overhyped/
+Is it a really awesome tool? Yes. Is its current form insanely overhyped and all the hopes of these tech companys are that maybe one day they fix all the isssues. Yes More on reddit.com
 
-AdTech Trends 2026: The Great Reset of Digital Advertising
-https://epom.com/blog/digital-advertising/ad-tech-trends
-AI is taking over routine media work, cookies are replaced by first-party data and clean rooms, retail media and CTV are becoming must-buy channels, mobile is shaped by privacy rules, and attribution is finally improving.
+Agentic AI and customized government services | Deloitte Insights
+https://www.deloitte.com/us/en/insights/industry/government-public-sector-services/government-trends/2026/agentic-ai-government-customized-service-delivery.html
+10-min read • 30 March 2026. Customized for constituents: Agentic AI accelerates personalized public services banner image. Government Trends 2026.
 
-Retail Media 2.0: From Sponsored Listings to AI-Driven Commerce Ecosystems
-https://martechseries.com/mts-insights/staff-writers/retail-media-2-0-from-sponsored-listings-to-ai-driven-commerce-ecosystems/
-At the inventory layer, it is dynamically managing ad placements across on-site search, off-site programmatic, connected TV, and in-store digital surfaces, adjusting in real time based on bid competition, product availability, margin targets, ...
+Agentic AI in Engineering and Manufacturing: Industry Perspectives on ...
+https://arxiv.org/html/2604.09633v1
+This highlights key breakthroughs needed, including integration with traditional engineering tools and data types, robust verification frameworks, and improved spatial and physical reasoning. Figure 1: Overall findings for agentic AI adoption in engineering and manufacturing.
 
-2025’s Media Trends Reshaping Advertising
-https://www.aidigital.com/blog/media-trends-2025
-AI-driven personalization, retail media networks, and CTV are reshaping advertising in 2025. Discover key insights and download AI Digital’s latest Media Trends Report.
+Agentic AI Explained | The 2026 Shift from Chat to Do - LinkedIn
+https://www.linkedin.com/pulse/agentic-ai-explained-2026-shift-from-chat-do-impronics-technologies-rxrle
+Here's how a single Agentic AI system works in practice: Implementing ReAct Agentic Pattern From Scratch ... Do I need to become an AI engineer ...
 
-7 Programmatic Advertising Trends Shaping 2026 | Basis
-https://basis.com/blog/7-programmatic-advertising-trends-shaping-2026
-While AI is also powering many of the tools to combat these challenges, the race between synthetic content creation and detection will be a defining feature of programmatic quality in 2026.
+7 Agentic AI Trends to Watch in 2026 - MachineLearningMastery.com
+https://machinelearningmastery.com/7-agentic-ai-trends-to-watch-in-2026/
+DeepSeek’s R1 model is a good ... at a fraction of typical costs. The 2026 trend is treating agent cost optimization as a first-class architectural concern, similar to how cloud cost optimization became essential in ...

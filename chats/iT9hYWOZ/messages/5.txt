@@ -1,39 +1,39 @@
-LLM Inference: Prefill, Decode, KV Cache & Cost Guide (2026) | Morph
-https://www.morphllm.com/llm-inference
-Home / LLM Inference: The Complete Engineering Guide (2026) LLM Inference: The Complete Engineering Guide (2026) How LLM inference actually works, from prefill and decode phases to KV cache optimization, speculative decoding, quantization, and inference engine selection. With cost benchmarks.
+LLM inference frameworks - ROCm Documentation - AMD
+https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/llm-inference-frameworks.html
+How to implement the LLM inference frameworks with ROCm acceleration.
 
-Local LLM Inference in 2026: The Complete Guide to Tools, Hardware & Open-Weight Models
-https://blog.starmorph.com/blog/local-llm-inference-tools-guide
-Benchmarks with Marlin kernels: AWQ achieves 741 tok/s, GPTQ achieves 712 tok/s. vLLM v0.16.0 (February 2026) expanded multi-GPU and multi-platform support to NVIDIA, AMD ROCm, Intel XPU, and TPU.
+Use ROCm for AI inference — ROCm Documentation
+https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/index.html
+Understanding the ROCm™ software platform's architecture and capabilities is vital for running AI inference. By leveraging the ROCm platform's capabilities, you can harness the power of high-performance computing and efficient resource management to run inference workloads, leading to faster predictions and classifications on real-time data.
 
-r/LocalLLaMA on Reddit: LLM's cost is decreasing by 10x each year for constant quality (details in comment)
-https://www.reddit.com/r/LocalLLaMA/comments/1gpr2p4/llms_cost_is_decreasing_by_10x_each_year_for/
-We looked at LLM pricing data from the Internet Archive and it turns out that for an LLM of a specific quality (measured by MMLU) the cost declines by 10x year-over-year. When GPT-3 came out in November 2021, it was the only model that was able to achieve an MMLU of 42 at a cost of $60 per million tokens. As of the time of writing, the cheapest model to achieve the same score was Llama 3.2 3B, from model-as-a-service provider Together.ai , at $0.06 per million tokens. The cost of LLM inference has dropped by a factor of 1,000 in 3 years. Full blog post is here . Happy to answer questions or hear comments/criticism. More on reddit.com
+What to Buy for Local LLMs (April 2026) | by Julien Simon - Medium
+https://julsimon.medium.com/what-to-buy-for-local-llms-april-2026-a4946a381a6a
+Apr 3, 2026 ... Apple and AMD mini PCs are complete systems; NVIDIA GPUs are not. I'll state total system costs throughout. Software. For inference: Ollama or ...
 
-The Complete Guide to LLM Quantization | LocalLLM.in
-https://localllm.in/blog/quantization-explained
-LLM quantization is a compression technique that reduces the numerical precision of model weights from high-precision formats (like 32-bit floats) to lower-precision representations (like 8-bit or 4-bit integers). It's important because it can reduce model size by up to 75-90% while maintaining most of the performance, making powerful AI models accessible on consumer hardware and reducing deployment costs.
+Ollama + AMD GPU in 2026: Local LLMs Without the NVIDIA Tax
+https://williamsmale.com/blog/tech/setup-ai-homelab-with-amd-gpu/
+AMD GPU not detected by Ollama? Here's how to get local LLMs running on an AMD APU or GPU on Linux using ROCm — including the bits the official docs skip.
 
-LLM Inference Optimization: Cut Cost & Latency at Every Layer (2026) | Morph
-https://www.morphllm.com/llm-inference-optimization
-Quantizing from FP16 to INT8 or INT4 reduces memory by 2-4x and cuts inference cost by roughly 50% while maintaining 95-99% of original accuracy. Google's TurboQuant (2026) compresses the KV cache to 3 bits with zero measured accuracy loss, ...
+The New AMD AI Developer Portal
+https://www.amd.com/en/developer/resources/technical-articles/2026/the-new-amd-ai-developer-portal.html
+Mar 16, 2026 ... How Dayhoff Health used AMD ROCm™ and a Radeon AI PRO 9700 to move genomic analysis from CPUs to GPUs, boosting microbiome, WGS, and single-cell ...
 
-LLM Inference: Techniques for Optimized Deployment in 2026 | Label Your Data
-https://labelyourdata.com/articles/llm-fine-tuning/llm-inference
-Quantization has been a game-changer for us. By reducing the precision of our model weights, we were able to cut our inference costs almost in half while maintaining 95% of the original performance.
+ROCm+Linux on AMD Strix Halo: January 2026 Stable Configurations
+https://www.reddit.com/r/ROCm/comments/1qhm21v/rocmlinux_on_amd_strix_halo_january_2026_stable/
+Sharing to spread awareness to Strix Halo users who may find this helpful. TLDR Use linux-firmware-2026010 or newer (avoid linux-firmware-20251125) Use linux-kernel 6.18.4 or newer Use toolboxes with rocm-7-nightly (or rocm-7.2+ when released) | OP maintains https://github.com/kyuz0/amd-strix-halo-gfx1151-toolboxes Pretty much two huge unrelated issues that was the cause of instability for gfx1151 according to OP. Linux firmware bug: Back in Nov, AMD pushed a fw update in linux-firmware-20251125 that broke support, failing to initialize ROCm. AMD reverted the fw, but some distros didn't follow up, so now latest fw has the fix. VGPR mismatch: Underlying stability issues. You'll notice in your workflows, comfyui being one of them, that would cause system hangs and gpu kernel crashes/resets. The issues was a VGPR mismatch (explained in video), between the gpu driver in the linux kernel and ROCm (versions). The mismatch was fixed in kernel 6.18.4, BUT, what's important is the ROCm version, older builds don't match the proper kernel changes, ROCm nightlies from theRock and future ROCm 7.2 work. OP has made a table so you can check compatibility. More on reddit.com
 
-Reduce AI Model Operational Costs With Quantization Techniques
-https://newsletter.theaiedge.io/p/reduce-ai-model-operational-costs
-By quantizing these weights (reducing precision), you decrease the GPU compute and memory requirements. However, overly aggressive quantization can sometimes reduce inference accuracy. Many open-source LLMs accessed through cloud APIs or downloaded locally are already quantized.
+Local AI Mastery: Optimizing LLM Inference on Linux (2026)
+https://www.fosslinux.com/155039/local-ai-performance-optimizing-llm-inference-on-linux-2026-admin-guide.htm
+Local AI Performance: Optimizing LLM Inference on Linux (2026 Admin Guide) Transform your standard server into a state-of-the-art AI foundry by optimizing GPU passthrough and low-latency kernel networking.
 
-Sustainable LLM Inference for Edge AI: Evaluating Quantized LLMs for Energy Efficiency, Output Accuracy, and Inference Latency | ACM Transactions on Internet of Things
-https://dl.acm.org/doi/10.1145/3767742
-Models are benchmarked on five standardized datasets (CommonsenseQA, BIG-Bench Hard, TruthfulQA, GSM8K, and HumanEval), and we employ a high-resolution, hardware-based energy measurement tool to capture real-world power consumption. Our findings reveal the trade-offs between energy efficiency, inference speed, and accuracy in different quantization settings, highlighting configurations that optimize LLM deployment for resource-constrained environments.
+As 2025 wraps up, which local LLMs really mattered this year and ...
+https://www.reddit.com/r/LocalLLaMA/comments/1psd918/as_2025_wraps_up_which_local_llms_really_mattered/
+Dec 21, 2025 ... 75 votes, 53 comments. Now that we're at the end of 2025, I'm curious how people here would summarize the local LLM landscape this year.
 
-On-Device LLMs: State of the Union, 2026
-https://v-chandra.github.io/on-device-llms/
-Intel and Weizmann Institute (ICML 2025) showed that any small draft model can accelerate any LLM regardless of vocabulary differences, delivering up to 2.8x faster inference. Online Speculative Decoding (UC Berkeley, 2025) adapts draft models continuously during serving.
+GitHub - zolotukhin/zinc: Zig INferenCe Engine — Local LLM inference on ...
+https://github.com/zolotukhin/zinc
+Local LLM inference on AMD GPUs and Apple Silicon — no ROCm, no MLX, one binary. 35B parameter model running locally — Zig + Vulkan/Metal, no ROCm, no MLX
 
-Local AI in 2026: Ollama Benchmarks, $0 Inference, and the End of ...
-https://dev.to/pooyagolchian/local-ai-in-2026-ollama-benchmarks-0-inference-and-the-end-of-per-token-pricing-32e7
-Apr 7, 2026 ... ... local model against cloud APIs with real cost data. Tagged with ai, ollama, llm, localai.
+NVIDIA vs AMD vs Intel for Local AI 2026: Who's Actually Winning | CraftRigs
+https://craftrigs.com/news/nvidia-amd-intel-2026-local-ai/
+Significantly better than it was, but still behind NVIDIA CUDA. ROCm runs llama.cpp, Ollama, and PyTorch on Linux reliably. Windows ROCm support remains spotty. Expect 10–20% lower inference performance than NVIDIA on equivalent hardware due to less optimized inference kernels.
