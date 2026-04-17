@@ -1,7 +1,7 @@
 - name: Efficiency
   chat:
     provider: other
-    name: local/qwen3.5-35b-a3b:instruct-reasoning
+    name: local/qwen3.6-35b-a3b:thinking-general
     api_base: https://llm.gigary.com/v1
     ctx_length: 262144
     ctx_history: 0.7
@@ -14,7 +14,7 @@
     max_embeds: 10
   utility:
     provider: other
-    name: local/qwopus3.5-9B-v3:instruct-reasoning
+    name: local/qwen3.6-35b-a3b:thinking-general
     api_base: https://llm.gigary.com/v1
     ctx_length: 262146
     ctx_input: 0.7
@@ -62,7 +62,7 @@
     max_embeds: 10
   utility:
     provider: other
-    name: local/qwen3.5-35b-a3b:instruct-reasoning
+    name: local/qwen3.6-35b-a3b:thinking-general
     api_base: https://llm.gigary.com/v1
     ctx_length: 262141
     ctx_input: 0.7

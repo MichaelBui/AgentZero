@@ -1,39 +1,46 @@
-Go Microservices Architecture: Patterns and Best Practices 2026 | Reintech media
-https://reintech.io/blog/go-microservices-architecture-patterns-best-practices-2026
-A practical guide to building resilient Go microservices in 2026. Learn proven patterns for service communication, data management, observability, and deployment that work in production environments.
-
-Best Go Microservices Frameworks in 2026 - Encore Cloud
-https://encore.cloud/resources/go-frameworks
-In this roundup we compare the best Go microservices frameworks available today and determine when each is appropriate.
-
-Top 8 Microservices Trends for 2026 - Ecosmob
-https://www.ecosmob.com/blog/key-microservices-trends/
-These microservices trends are becoming more common as businesses strive to move away from monolithic architecture and become more nimble. This blog will introduce you to the top microservices trends, characteristics, and advantages. Let us first look briefly at them. Each set meets a specific priority or solves a particular problem. Since small teams make different services, they can also focus on maintaining and running that service for its lifetime.
-
-Is Microservice Architecture Still a Trend in 2026? - KITRUM
-https://kitrum.com/blog/is-microservice-architecture-still-a-trend/
-In 2026, the evolution continues: the focus has shifted from simply breaking systems into small services to strategically designing architectures that balance scalability, simplicity, and operational efficiency.
-
-Go Microservice with Clean Architecture | by Jin Feng | Medium
-https://medium.com/@jfeng45/go-microservice-with-clean-architecture-a08fa916a5db
-This update fixes all the major problems in the old framework, although its main project structure and interfaces have not changed. For specific changes, please refer to “Go Microservice with Clean Architecture-A Major Upgrade”. Now it has ...
-
-Integration trends 2026: API, Microservices & EDA
-https://www.novasarc.com/integration-trends-2026-api-microservices-eda
-Integration technology trends for 2026 are transforming how organizations operate, innovate, and scale. The modern enterprise ecosystem relies heavily on API management, microservices, and event-driven architecture (EDA), creating flexible, ...
-
-Why Clean Architecture Struggles in Golang and What Works Better - DEV Community
-https://dev.to/lucasdeataides/why-clean-architecture-struggles-in-golang-and-what-works-better-m4g
-Golang has carved out a solid reputation as a fast, efficient language that prioritizes simplicity, which is one of the reasons why it’s so commonly used for backend services, microservices, and infrastructure tooling. However, as more developers from languages like Java and C# transition to Go, questions about implementing Clean Architecture arise.
-
-Clean Architecture in Go
-https://depshub.com/blog/clean-architecture-in-go/
-This article descibes how to build a clean architecture in Go (Golang). We will explore how to use dependency injection, dependency inversion, interfaces, and SOLID principles to build a clean architecture in Go.
-
-Microservices: The Biggest Lesson from 2026 - Medium
-https://medium.com/expocomputing/microservices-the-biggest-lesson-from-2026-945c758ceba7
-Mar 26, 2026 ... Microservices often get introduced not because they are needed — but because they look good on paper. “We use Kubernetes”; “We use 40 ...
-
-Go Project Structure 2026: Clean Architecture and Best Practices
-https://reintech.io/blog/go-project-structure-2026-clean-architecture-best-practices
-Let's explore modern Go project structure patterns that actually work in production environments, focusing on clean architecture principles adapted for Go's idioms and the realities of 2026's development landscape.
+/a0/usr/workdir/Blog Ideas/Topics_2026-04-17.md written 43 lines
+>>>
+ 1 # Blog Topic Ideas - 2026-04-17
+ 2 
+ 3 ## 1. The AI Adoption Illusion: Why 79% of Teams Aren't in Production
+ 4 - **Pillar:** Leadership
+ 5 - **Score:** 9/10
+ 6 - **Angle:** Contrast the hype (79% adoption) with reality (11% production). Use Michael's experience driving adoption from 28% to 100%. Discuss the "5x workload" trap leaders fall into when they assume AI automatically equals infinite capacity.
+ 7 - **Trending Signal:** HBR articles on senior leader struggles, ShiftMag "Getting AI Adoption Wrong", Landbase stats on 79% vs 11% adoption/production gap. Earezki report on 5x workload increases after AI adoption.
+ 8 - **Related Expertise:** AI adoption at organizational scale (drove 28% to 100%), Team leadership (up to 14 cross-functional members)
+ 9 
+10 ## 2. The $100K Lesson: FinOps for AI Workloads in 2026
+11 - **Pillar:** Technology
+12 - **Score:** 9/10
+13 - **Angle:** AI workloads are now 18% of cloud spend. Discuss the FOCUS specification and practical strategies Michael used to save $70k on Datadog alone, applied to AI inference costs. Show how to balance performance with cost in a retail environment.
+14 - **Trending Signal:** Tech-Insider "FinOps in 2026", CloudZero strategies, Arjankc "Strategic Architecture for 2026". FOCUS specification for AI billing normalization.
+15 - **Related Expertise:** Cost optimization ($100K+ annual cloud savings: Datadog $70K + GCP + SOLR), Retail media networks / ad-tech
+16 
+17 ## 3. Beyond the API Wrapper: The MCP Server Trap and Clean Architecture
+18 - **Pillar:** Technology
+19 - **Score:** 8/10
+20 - **Angle:** Michael has written "MCP Explained from Inside Out" (avoid pure explanation). New angle: The *failure modes* and the "trap" of just wrapping APIs. Connect to clean data architecture principles and Go microservices SOLID practices.
+21 - **Trending Signal:** MindStudio "MCP Server Trap", LinkedIn "MCP 2026 Failure Modes", Kai Waehner "MCP vs REST/Kafka". 2,300+ MCP servers in public directories by April 2026.
+22 - **Related Expertise:** Clean architecture in Go microservices (SOLID), MCP experience (built custom theme plugin), RAG evaluation
+23 
+24 ## 4. Unified Memory is the New GPU: Building a Local LLM Server on AMD Strix Halo
+25 - **Pillar:** Technology / Homelab
+26 - **Score:** 8/10
+27 - **Angle:** Michael already has the hardware. Trend is shifting to unified memory for self-hosted enterprise AI. Discuss practical inference with ROCm/llama.cpp for local use, comparing it to cloud costs.
+28 - **Trending Signal:** Reddit r/LocalLLaMA "Unified memory is the wave of the future", Onyx AI benchmarks for single-GPU performance (DS-R1-Distill-Qwen-32B), Mguhlin hardware recommendations March 2026.
+29 - **Related Expertise:** AMD Strix Halo 128GB unified memory AI server, Local LLM inference with ROCm/llama.cpp
+30 
+31 ## 5. DORA Metrics in the Age of Agentic AI: What Actually Changes?
+32 - **Pillar:** Technology / Leadership
+33 - **Score:** 8/10
+34 - **Angle:** AI agents are changing code generation. Does DORA still apply? Discuss the 2025 DORA report findings on AI amplifying performance. How to measure agent output vs human output while maintaining SLO >98%.
+35 - **Trending Signal:** InfoQ "AI Amplifying Software Engineering Performance", GitRecap benchmarks 2026, Knowledgelib "Engineering Productivity Benchmarks 2026". CircleCI 2026 report on autonomous coding agents.
+36 - **Related Expertise:** DORA metrics, SLO management (Cycle Time <10d, CFR <2%, SLO >98%), AI adoption at organizational scale
+37 
+38 ## 6. From Burnout to Flow: Preventing the "5x Workload" Trap for Engineering Teams
+39 - **Pillar:** Life / Leadership
+40 - **Score:** 7/10
+41 - **Angle:** Leaders think AI = infinite capacity. Reality is developers face new complexities. Use Michael's experience leading teams through transformation to propose proactive burnout prevention, not just reactive fixes.
+42 - **Trending Signal:** Earezki "Engineering AI Adoption Leads to Developer Burnout", Brainhub "10 Steps CTOs Can Take in 2026", Wellness Workdays stats on 68% stress among engineers.
+43 - **Related Expertise:** Team leadership (up to 14 cross-functional members), AI adoption at organizational scale
+<<<

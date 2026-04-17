@@ -1,39 +1,39 @@
-2026: The Year for Enterprise-Ready MCP Adoption - CData Software
-https://www.cdata.com/blog/2026-year-enterprise-ready-mcp-adoption
-Movement from pilots to production: 2026 marks the transition from experimentation to enterprise-wide adoption. Key enablers include: Early adopters reported several obstacles during the Model Context Protocol enterprise deployment journey:
+DORA Metrics: A Practical Guide for Engineering Leaders
+https://typoapp.io/blog/dora-metrics-for-engineering-leaders
+Understanding DORA metrics is critical for modern software delivery because they provide a proven, data-driven framework for measuring both the speed and stability of your engineering processes. By leveraging these metrics, organizations can drive better business outcomes, improve team performance, and build more resilient systems.
 
-MCP Adoption Statistics 2026: The Full Picture | Ooty
-https://ooty.io/blog/state-of-mcp-ecosystem-2026
-Model Context Protocol MCP current status 2026: 12,000+ servers, 80% of the Fortune 500, 97M monthly SDK downloads. One page, every stat sourced.
+Engineering Metrics That Matter (And Ones to Avoid) - EM Tools
+https://www.em-tools.io/engineering-metrics
+Mar 30, 2026 ... It is organised into four categories: DORA metrics for delivery performance, delivery metrics for workflow efficiency, quality metrics for ...
 
-MCP Ecosystem in 2026: From Experiment to 97 Million Installs
-https://effloow.com/articles/mcp-ecosystem-growth-100-million-installs-2026
-MCP Ecosystem in 2026: From Experiment to 97 Million Installs Seventeen months ago, Model Context Protocol was an internal Anthropic project. Today it is the infrastructure backbone of the agentic AI era — with 97 million monthly SDK downloads, 10,000+ public servers, and adoption from every major AI provider on the planet.
+DORA Metrics for Engineering Teams: Guide & Benchmarks
+https://www.em-tools.io/frameworks/dora-metrics
+Implement DORA metrics in your engineering team. Covers deployment frequency, lead time, change failure rate, benchmarks, and how to improve each metric.
 
-Anthropic's Model Context Protocol Hits 97 Million Installs on March 25 ...
-https://www.arturmarkus.com/anthropics-model-context-protocol-hits-97-million-installs-on-march-25-mcp-transitions-from-experimental-to-foundation-layer-for-agentic-ai/
-Six months ago, MCP was a footnote in Anthropic's documentation. Today it's the plumbing underneath 97 million AI agent deployments, and most engineers still don't know how it works. The Numbers That Matter On March 25, 2026, Anthropic's Model Context Protocol crossed 97 million installs —a figure that represents the fastest adoption curve for any AI infrastructure standard in ...
+AI Is Amplifying Software Engineering Performance, Says the 2025 ...
+https://www.infoq.com/news/2026/03/ai-dora-report/
+AI Is Amplifying Software Engineering Performance, Says the 2025 DORA Report. Mar 17, 2026 6 min read. by. Author photo Craig Risi.
 
-Model Context Protocol: MCP Implementation Guide Enterprise
-https://www.synvestable.com/model-context-protocol.html
-Mar 13, 2026 ... Model Context Protocol enterprise adoption among Fortune 500 companies has accelerated dramatically: as of early 2026, 80% of Fortune 500 ...
+DORA Metrics Benchmarks 2026: Where Does Your Team Stand?
+https://www.gitrecap.com/blog/dora-metrics-benchmarks
+Compare your engineering team against DORA metrics benchmarks from 39,000+ teams. See what Elite, High, Medium, and Low performance looks like for deployment frequency, lead time, CFR, and MTTR.
 
-MCP's 2026 roadmap makes enterprise readiness a top priority
-https://workos.com/blog/2026-mcp-roadmap-enterprise-readiness
-The Model Context Protocol has reached the point where its biggest challenges aren't technical curiosities; they're enterprise deployment blockers. MCP adoption has grown steadily since Anthropic open-sourced it in late 2024, but production deployments at scale keep running into the same set of walls: no standardized audit trails, authentication tied to static secrets, undefined gateway ...
+Deployment Frequency: The Metric That Reveals How Fast Your ...
+https://www.flagsmith.com/blog/deployment-frequency
+Rather than grouping teams into abstract performance tiers, the 2025 DORA report presents a full distribution of where organisations actually sit. It's more ...
 
-Model Context Protocol Hits 97M Installs as Linux Foundation Takes Over
-https://ai2.work/blog/model-context-protocol-hits-97m-installs-as-linux-foundation-takes-over
-Model Context Protocol Hits 97M Installs as Linux Foundation Takes Over MCP crosses 97 million monthly SDK downloads and moves to Linux Foundation governance. Here's what it means for enterprise AI agent strategy in 2026.
+Engineering Productivity Benchmarks 2026 — DORA Metrics, Cycle Time ...
+https://knowledgelib.io/business/industry-benchmarks/engineering-productivity-benchmarks-2026/2026
+Engineering productivity benchmarks 2026: DORA metrics (deployment frequency, lead time, CFR, recovery time), cycle time, PR metrics by team size and AI adoption. H2 2025 data from 6.1M+ PRs. 6 sources, all cited. Verified 2026-03-11.
 
-Model Context Protocol (MCP): Evolution, Capabilities, and the Rise ...
-https://bytebridge.medium.com/model-context-protocol-mcp-evolution-capabilities-and-the-rise-of-peta-ff2967b45d48
-Jan 3, 2026 ... The Model Context Protocol has come a long way in a short time — from a novel idea in late 2024 to a cornerstone of AI application development ...
+The essential software engineering checklist for scaling in 2026
+https://meduzzen.com/blog/software-engineering-checklist-scaling-2026/
+Apr 2, 2026 ... Checklist item 3: Use platform engineering and value stream management for scale · Audit your current developer experience: Where do engineers ...
 
-2026 Enterprise MCP Adoption Roadmap - CData Software
-https://www.cdata.com/blog/2026-enterprise-mcp-adoption-roadmap
-Model Context Protocol is quickly becoming the standard way AI agents connect and talk to enterprise systems. But even as AI adoption grows fast, putting agentic AI to work in regulated business environments is still tricky. This roadmap breaks down what it takes to move beyond AI experiments and build something that is governed, scalable, and ready for real enterprise use in 2026. MCP ...
+Engineering metrics: What actually matters in 2026
+https://sourcegraph.com/blog/engineering-metrics-what-actually-matters-in-2026
+Every engineering leader eventually hits the same wall of unknown bottlenecks; this essential guide provides the data to break through, covering DORA metrics, productivity, and quality signals. Learn how to implement the right metrics to illuminate your delivery process, avoid toxic 'surveillance culture,' and turn measurement into meaningful, systemic improvement.
 
-MCP Adoption Statistics 2026 - MCP Manager
-https://mcpmanager.ai/blog/mcp-adoption-statistics/
-It’s clear that builders have flocked to the new protocol. However, the question remains: who else is? While there aren’t clear-cut MCP adoption statistics that clearly show us how many end users the protocol has, there are a few data points that we can look at to infer what MCP adoption looks like today.
+Platform Engineering Becomes Mandatory: The New DevOps ...
+https://platformengineering.com/features/platform-engineering-becomes-mandatory-the-new-devops-standard/
+Mar 4, 2026 ... In 2026, a definite change is being observed in the world of DevOps, with the traditional approach of using multiple CI/CD tools being ...

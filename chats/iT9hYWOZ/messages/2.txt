@@ -1,39 +1,39 @@
-Singapore Business Forecast 2026: 15 Industries Rising
-https://kelmer.com/singapore-business-forecast-2026/
-The Electronics cluster leads sentiment with a net weighted balance of +30%, propelled by semiconductor demand tied to AI infrastructure build-out – though US tariff risks remain a significant concern.
+Where Senior Leaders Are Struggling with AI Adoption, According to Research
+https://hbr.org/2026/02/where-senior-leaders-are-struggling-with-ai-adoption-according-to-research
+As AI becomes embedded across organizations, senior leaders are facing pressures that rarely surface in public forums. Drawing on in-depth interviews and focus groups with 35 executives across ...
 
-The Singapore Engineer March 2026 - Issuu
-https://issuu.com/desmond6/docs/the_singapore_engineer_march_2026
-Held on 10 March 2026, at the Ngee Ann Polytechnic (NP) Convention Centre, WED 2026: CRDGL carried the theme 'Engineers and the Future of Engineering: Opportunities of Emerging Technologies'.
+Managing the Gap: Why Engineering AI Adoption Leads to Developer ...
+https://www.earezki.com/ai-news/2026-03-10-your-team-got-copilot-now-leadership-thinks-they-have-infinite-capacity/
+Engineering managers report 5x workload increases after AI adoption as leadership inflates sprint expectations despite typical Copilot utilization stalling at 22%.
 
-Top Talent and Hiring Trends in Singapore's Semiconductor and ...
-https://www.reeracoen.sg/en/articles/top-talent-and-hiring-trends-in-singapores-semiconductor-and-precision-engineering-sector-20252026
-Dec 1, 2025 ... Top Talent and Hiring Trends in Singapore's Semiconductor and Precision Engineering Sector (2025–2026) · Engineering fundamentals plus data ...
+Many Engineering Leaders Are Getting AI Adoption Wrong - ShiftMag
+https://shiftmag.dev/ai-is-changing-development-8791/
+Apr 1, 2026 ... AI tools can't be treated like any other software. Generative AI has sparked huge expectations across engineering teams. · People (not frameworks) ...
 
-Seven enterprise tech trends in S'pore to look out for in 2026
-https://www.straitstimes.com/business/economy/seven-enterprise-tech-trends-in-spore-to-look-out-for-in-2026
-Here are seven enterprise tech trends expected to take hold in Singapore in 2026: 1. CFOs cut spending on generative AI
+The Engineering Leadership Blind Spot of 2026 - waydev.co
+https://waydev.co/engineering-leadership-blind-spot-of-2026/
+AI-assisted development drove a 59% increase in average engineering throughput last year, according to CircleCI's 2026 State of Software Delivery report, the largest analysis of CI/CD performance ever published, drawn from more than 28 million workflows. Autonomous coding agents are enabling teams to explore ideas, generate features, and iterate at a speed that simply wasn't possible two ...
 
-Salary growth update: APAC & EMEA - Robert Walters Singapore
-https://www.robertwalters.com.sg/insights/hiring-advice/blog/global-salary-growth-update.html
-Mar 12, 2026 ... Nominal salary increase budgets across APAC are projected at around 5.2% for 2026, up slightly from 5.1% in 2025. This reflects strategic focus ...
+Volume 4 - Issue 1 - March 2026: Leadership When It Matters Most: From ...
+https://www.ieee-tems.org/volume-4-issue-1-march-2026/
+Leadership evolves every time our tools, our teams, and our expectations shift. As AI becomes more present in creative work, strategic decision making, and organizational design, leaders are challenged not only to adopt new technologies but to rethink how value is created and how people and intelligent systems can work together. The contributions in this issue offer thoughtful perspectives ...
 
-Job Hugging Era: Talent Trends in APAC Engineering - LinkedIn
-https://www.linkedin.com/posts/talentreqpartners_marketinsights2026-apacengineering-lifesciencessingapore-activity-7438143828810776576-yeHd
-👉️Friday Wrap-up: The "Job Hugging" Era & The New Value Exchange As we close out the week across Singapore and the broader APAC region, the Q1 2026 data is telling a very specific story. We ...
+Four Trends in AI Experimentation, Adoption, and Transformation
+https://hbr.org/sponsored/2026/03/four-trends-in-ai-experimentation-adoption-and-transformation
+Mar 27, 2026 ... As the foundation for all emerging technology, AI is now fundamentally reshaping innovation, with new capabilities emerging month after month.
 
-What APAC Leadership Should Look Like in 2026 - LinkedIn
-https://www.linkedin.com/pulse/what-apac-leadership-should-look-like-2026-marc-a-r%C3%A9mond-ydlre
-Feb 13, 2026 ... In 2026, AI, SaaS, and digital acceleration are compressing competitive cycles across the region. Leadership gaps that once took years to ...
+The Actual State of AI Engineering In 2026
+https://www.reddit.com/r/aiengineering/comments/1rf7myh/the_actual_state_of_ai_engineering_in_2026/
+Welcome to r/AIEngineering ! Make sure that you've read our overview , before you've posted. If you haven't already read it, then read it immediately and make adjustments in your post if you've violated any of the rules. If you have questions related to career, recruiting, pay or anything else about hiring or the industry from a work perspective, use AIEngineeringCaree to ask your question. We lock questions that do not relate to AIEngineering here. A quick reminder of the rules: Behave as you would in person Do not self-promote unless you're a top contributor, and if you are a top contributor, limit self-promotion. Avoid false assumptions No bots or LLM use for posts/answers No negative news, information or news/media posts that are not pertinent to engineering No deceitful or disguised marketing Because we frequently get questions about work, the future of work and careers along AI, some helpful links to read: While collars turn blue AI's impact on recruiting AI is the new electricity Tips for hiring AI engineers Is there a future in AI engineering? LLM erases a company's need for an SaaS tool A plumber's thoughts on AI and technology What's involved in AI engineering? Mario Nawfal quotes Dr. Roman Yampolskiy, Dario Amodei and other AI researchers' predictions about future unemployment due to AI This action was performed automatically as a reminder to all posters. Please contact the moderators if you have any questions. I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns. More on reddit.com
 
-5 Southeast Asian tech events that will shape 2026
-https://techcollectivesea.com/2025/12/17/southeast-asian-tech-events-2026/
-Here are some of the Southeast Asian tech events that will shape 2026 and why you should consider attending them.
+Stop throwing AI at developers and hoping for magic - LeadDev
+https://leaddev.com/ai/stop-throwing-ai-at-developers-and-hoping-for-magic
+Mar 16, 2026 ... Engineering leaders reveal a stark gap in AI adoption as fragmentation, missing frameworks, and tool-first thinking hold organizations back.
 
-Strong hiring demand for engineers, tech specialists in S'pore
-https://www.straitstimes.com/business/economy/strong-hiring-demand-for-engineers-tech-specialists-in-spore-as-newly-created-roles-climb-in-2025
-Mar 20, 2026 ... Singapore sees strong hiring demand for engineers and tech specialists, with newly created roles climbing in 2025.
+Strong Leadership for AI Success in Engineering Teams
+https://blog.exceeds.ai/strong-leadership-ai-best-practices/
+How strong leadership commitment drives AI adoption in engineering teams. Scale AI best practices and measure business impact effectively.
 
-Singapore Hiring Trends 2026: What Employers Should Prepare for in Q1｜Reeracoen Singapore
-https://www.reeracoen.sg/articles/singapore-hiring-trends-2026-what-employers-should-prepare-for-in-q1
-According to official manpower data, unemployment levels have stayed low by historical standards, while job vacancy ratios continue to signal persistent demand for skilled professionals, especially in technology, engineering, finance, compliance, and advanced manufacturing. However, hiring behaviour has shifted. Rather than expanding headcount aggressively, many companies are: ... This means longer hiring cycles, more interview stages, and stronger scrutiny on cultural and performance fit. ... Salary remains a major driver of job movement in Singapore, but 2026 is not a year of blanket pay increases.
+Technical Leadership Driving Platform Engineering Success
+https://www.ai-infra-link.com/how-technical-leadership-drives-platform-engineering-success-in-2026/
+Without executive support, platform initiatives risk becoming underfunded or deprioritized. A 2026 survey reveals that 25.9% of platform teams struggle to justify ROI to leadership, often due to a focus on technical outcomes rather than business ...

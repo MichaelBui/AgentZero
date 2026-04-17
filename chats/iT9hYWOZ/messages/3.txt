@@ -1,39 +1,39 @@
-Global AI Adoption Rate by Country 2026: Statistics, Rankings & Forecasts
-https://www.allaboutai.com/resources/ai-statistics/global-ai-adoption/
-Here are the most important 2026 ... Growth: Enterprise AI adoption has grown from 20% in 2017 to 88% in 2025, while official firm-level adoption across OECD countries reached 20.2% in 2025, more than doubling from 8.7% in 2023. Generative AI usage more than doubled from 33% to 71% in a single year...
+Best Self-Hosted LLMs in 2026: Hardware Requirements and Benchmarks | Onyx AI
+https://onyx.app/insights/best-self-hosted-llms-2026
+On an RTX 4090, DS-R1-Distill-Qwen-32B delivers 72% AIME and 62.1% GPQA Diamond, capabilities that would have required a multi-GPU cluster two years ago. The DeepSeek R1 distilled models represent the most significant advance in single-GPU performance. The most common inference runtimes are Ollama (easiest setup for consumer hardware), vLLM (best throughput for production deployments), LM Studio (GUI-based for Mac/Windows), and llama.cpp (CPU and low-VRAM support).
 
-Singapore Retail Tech Trends to Watch in 2026
-https://digitalperpetual.com/blog/singapore-retail-tech-trends-2026
-Key retail technology trends for Singapore SMEs in 2026. AI forecasting, unified commerce, and practical tech your business can adopt now.
+Run DeepSeek & Qwen 2.5 Locally: The 2026 Self-Hosted Guide
+https://createaiagent.net/self-hosted-llm/
+You no longer just “run a model”; you deploy a private, uncensored intelligence that rivals the cloud, all for the cost of electricity. In March 2026, local LLMs are no longer an exotic toy — they’re a practical answer to three burning ...
 
-Only 18% of Singapore firms use advanced AI despite widespread ...
-https://marketech-apac.com/only-18-of-singapore-firms-use-advanced-ai-despite-widespread-adoption-report/
-April 15, 2026. Our What's NEXT in Marketing 2026 Conference Series returns · – A sharp gap in Singapore's artificial intelligence journey, with widespread ...
+Updated Hardware Recommendations for Running AI Locally ...
+https://mguhlin.org/2026/03/11/updated-hardware-recommendations-for-running-ai-locally-march-2026/
+Mar 11, 2026 ... A lot has changed since my July 2025 TCEA AI for Educators Conference session on running local AI. The models are better, the hardware options ...
 
-Annual Report & Singapore Digital Economy Report 2025 | IMDA
-https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2025/ar-sgde-2025
-The Infocomm Media Development Authority (IMDA) has launched its Annual Report 2024/2025 and the third edition of the Singapore Digital Economy (SGDE) Report 2025. Together, these reports highlight how digitalisation and AI adoption are powering Singapore's Digital Economy, as well as IMDA's role in ensuring that enterprises and workers are ready to capitalise on tomorrow's opportunities ...
+Self-Hosting Your First LLM | Towards Data Science
+https://towardsdatascience.com/self-hosting-your-first-llm/
+Mar 17, 2026 ... You want custom behavior from your AI and the prompts aren't cutting it. ... 3 All pricing data is current as of March 2026. Note: this guide is ...
 
-AI Adoption Trends in Asia 2026: Market Size & Insights - Chatboq
-https://chatboq.com/blogs/ai-adoption-trends-in-asia-2026
-Total AI investment in Asia is projected to surpass USD 70 billion in 2026, driven by China, India, Singapore, and Japan. AI startups in Asia have grown by 45% ...
+What's the realistic "entry point" for a good local LLM experience going into 2026?
+https://www.reddit.com/r/LocalLLaMA/comments/1prjldr/whats_the_realistic_entry_point_for_a_good_local/
+I'm a believer in getting a unified memory machine and running them that way. I think it will become the wave of the future over time. More on reddit.com
 
-AI Trends in 2026: How Singapore SMEs Are Investing - upGrad
-https://www.upgrad.com/sg/blog/ai-adoption-trends-by-singapore-smes/
-Explore latest AI trends in Singapore SMEs in 2026. Learn where businesses are investing and key AI market trends shaping growth and innovation.
+Enterprise Local LLM Deployment: vLLM, GPUs, Containers ...
+https://www.sitepoint.com/the-2026-definitive-guide-to-running-local-llms-in-production/
+Mar 20, 2026 ... The convergence of Blackwell-class GPUs, production-hardened inference engines like vLLM with disaggregated prefill and decode, and maturing ...
 
-Singapore: National Programme to Accelerate AI Adoption
-https://opengovasia.com/singapore-national-programme-to-accelerate-ai-adoption/
-Mar 3, 2026 ... Recent data from the Infocomm Media Development Authority shows that AI adoption has risen significantly. Among small and medium-sized ...
+What is the best local LLMs as of March 2026? : r/LocalLLaMA - Reddit
+https://www.reddit.com/r/LocalLLaMA/comments/1rkppnl/what_is_the_best_local_llms_as_of_march_2026/
+Mar 4, 2026 ... cpp is only a backend, used for running AI inference (in fact ollama is built on top of it but is comparatively more limited in capabilities ...
 
-📊 The State of AI in Retail and CPG: 2026 Trends report is ...
-https://www.facebook.com/NVIDIAAI/posts/-the-state-of-ai-in-retail-and-cpg-2026-trends-report-is-here-89-say-ai-is-incre/1311325801031698/
-We cannot provide a description for this page right now
+Local LLM Hardware Guide 2026: GPU & VRAM Requirements
+https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026
+Local LLM hardware guide 2026: GPU, CPU, RAM requirements for 7B-70B models. VRAM calculator with benchmarks and optimization tips.
 
-Revolutionizing Grocery Shopping In Singapore: How AI Predictive ...
-https://www.growthhq.io/our-thinking/revolutionizing-grocery-shopping-in-singapore-how-ai-predictive-ordering-transforms-households-and-retailers-in-2026
-Revolutionizing Grocery Shopping: How AI Predictive Ordering Is Transforming Singapore's Households Singapore, renowned for its innovation and agility in adopting new technologies, stands at the forefront of a revolution that promises to reshape one of its most routine domestic tasks: grocery shopping. With a bustling online grocery market projected to surge from USD 1.6 billion in 2025 to a ...
+Most Widely Used LLMs in 2026 - Carlos Eduardo Olivieri - Medium
+https://higher-order-programmer.medium.com/the-10-most-widely-used-llms-currently-in-2026-d83c15e1a2db
+Mar 1, 2026 ... Most Widely Used LLMs in 2026 Intro Large Language Models (LLMs) continue to reshape how software, research, and business workflows operate ...
 
-How do regulations influence the adoption of AI technologies across industries?
-https://www.mezzi.com/blog/ai-adoption-rates-by-industry-trends-2025
-Regulations play a key role in shaping how industries adopt AI by establishing clear standards for safety, ethics, and governance. As of 2025, many sectors are adjusting to new laws aimed at addressing pressing issues like data privacy, algorithmic bias, and maintaining public trust. The goal of these regulations is to find the right balance - encouraging progress in AI development while managing potential risks. By promoting accountability and transparency, they not only help build confidence in AI systems but also ensure these technologies are used responsibly. This approach supports both innovation and the broader competitiveness of the U.S. economy.
+LLM Inference Hardware: An Enterprise Guide to Key Players | IntuitionLabs
+https://intuitionlabs.ai/articles/llm-inference-hardware-enterprise-guide
+OEMs like Dell (projecting $20B in AI server shipments) and HPE bridge these chips to enterprise use, while hyperscalers are investing hundreds of billions in AI infrastructure (Amazon $200B, Google $175–185B, Meta $115–135B in 2026 alone). Our citations have shown concrete figures: GPUs delivering petaflops at tens of kW ([19]), new chips claiming triple efficiency ([34]), and massive deals worth tens of billions ([10]). In summary, any enterprise looking to “bring LLMs in-house” must evaluate both classical GPU solutions and the new breed of AI accelerators.
