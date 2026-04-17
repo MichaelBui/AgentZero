@@ -1,39 +1,39 @@
-LLM inference frameworks - ROCm Documentation - AMD
-https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/llm-inference-frameworks.html
-How to implement the LLM inference frameworks with ROCm acceleration.
+Strix Halo Mini PCs for Local LLM Inference: A Practical Guide to Running Large Models at Home | Starry Hope
+https://www.starryhope.com/minipcs/strix-halo-local-llm-inference-2026/
+The fundamental appeal of Strix Halo for local LLM work comes down to one thing: memory bandwidth determines inference speed, and these chips can access a massive pool of unified memory without the bottlenecks that plague discrete GPU setups.
 
-Use ROCm for AI inference — ROCm Documentation
-https://rocm.docs.amd.com/en/latest/how-to/rocm-for-ai/inference/index.html
-Understanding the ROCm™ software platform's architecture and capabilities is vital for running AI inference. By leveraging the ROCm platform's capabilities, you can harness the power of high-performance computing and efficient resource management to run inference workloads, leading to faster predictions and classifications on real-time data.
+Strix Halo Mini PCs for AI — 128GB, 40 TOPS NPU 2026
+https://www.compute-market.com/blog/strix-halo-mini-pc-local-ai-2026
+In March 2026, a new class of hardware is reshaping local AI: AMD Strix Halo mini PCs. These sub-3-liter machines pack up to 128 GB of unified LPDDR5X memory — with up to 96 GB directly addressable by the integrated GPU. That means you can run 70B+ parameter LLMs that no 16 GB or even 32 GB discrete GPU can touch, in a box that sits quietly on your desk and draws under 120W.
 
-What to Buy for Local LLMs (April 2026) | by Julien Simon - Medium
-https://julsimon.medium.com/what-to-buy-for-local-llms-april-2026-a4946a381a6a
-Apr 3, 2026 ... Apple and AMD mini PCs are complete systems; NVIDIA GPUs are not. I'll state total system costs throughout. Software. For inference: Ollama or ...
+r/LocalLLaMA on Reddit: What's the realistic "entry point" for a good local LLM experience going into 2026?
+https://www.reddit.com/r/LocalLLaMA/comments/1prjldr/whats_the_realistic_entry_point_for_a_good_local/
+I'm a believer in getting a unified memory machine and running them that way. I think it will become the wave of the future over time. More on reddit.com
 
-Ollama + AMD GPU in 2026: Local LLMs Without the NVIDIA Tax
-https://williamsmale.com/blog/tech/setup-ai-homelab-with-amd-gpu/
-AMD GPU not detected by Ollama? Here's how to get local LLMs running on an AMD APU or GPU on Linux using ROCm — including the bits the official docs skip.
+Running 122B-Parameter LLMs Locally on AMD Strix Halo for ... - LinkedIn
+https://www.linkedin.com/pulse/running-122b-parameter-llms-locally-amd-strix-halo-deep-pellegrini-33cjc
+Over the past few months, I've been building a local LLM inference stack on an AMD Ryzen AI Max+ 395 (Strix Halo) — a chip with 128GB of unified LPDDR5X memory shared between CPU and GPU. My ...
 
-The New AMD AI Developer Portal
-https://www.amd.com/en/developer/resources/technical-articles/2026/the-new-amd-ai-developer-portal.html
-Mar 16, 2026 ... How Dayhoff Health used AMD ROCm™ and a Radeon AI PRO 9700 to move genomic analysis from CPUs to GPUs, boosting microbiome, WGS, and single-cell ...
+What would a good local LLM setup cost in 2026? - Reddit
+https://www.reddit.com/r/LocalLLM/comments/1r0x3kn/what_would_a_good_local_llm_setup_cost_in_2026/
+Feb 10, 2026 ... No discrete GPU. Token gen is bandwidth-bound so it scales roughly linear. A Strix Halo box at 212 GB/s would be around 40 tok/s. The M4 Max at ...
 
-ROCm+Linux on AMD Strix Halo: January 2026 Stable Configurations
-https://www.reddit.com/r/ROCm/comments/1qhm21v/rocmlinux_on_amd_strix_halo_january_2026_stable/
-Sharing to spread awareness to Strix Halo users who may find this helpful. TLDR Use linux-firmware-2026010 or newer (avoid linux-firmware-20251125) Use linux-kernel 6.18.4 or newer Use toolboxes with rocm-7-nightly (or rocm-7.2+ when released) | OP maintains https://github.com/kyuz0/amd-strix-halo-gfx1151-toolboxes Pretty much two huge unrelated issues that was the cause of instability for gfx1151 according to OP. Linux firmware bug: Back in Nov, AMD pushed a fw update in linux-firmware-20251125 that broke support, failing to initialize ROCm. AMD reverted the fw, but some distros didn't follow up, so now latest fw has the fix. VGPR mismatch: Underlying stability issues. You'll notice in your workflows, comfyui being one of them, that would cause system hangs and gpu kernel crashes/resets. The issues was a VGPR mismatch (explained in video), between the gpu driver in the linux kernel and ROCm (versions). The mismatch was fixed in kernel 6.18.4, BUT, what's important is the ROCm version, older builds don't match the proper kernel changes, ROCm nightlies from theRock and future ROCm 7.2 work. OP has made a table so you can check compatibility. More on reddit.com
+AMD Ryzen AI Halo: Local LLM Inference Platform Analysis - Reading List
+https://reading.torqsoftware.com/notes/hardware/ai/2026-01-21-amd-ryzen-ai-halo-local-llm-inference-platform/
+AMD Ryzen AI Halo Product Page AMD CES 2026 Press Release ROCm 7.1.1 Compatibility Documentation AMD MLPerf Client Benchmark Article Independent Strix Halo LLM Benchmark AMD Ryzen AI Max LM Studio Blog Apple M2 Ultra Announcement llama.cpp Apple Silicon Benchmarks M2 Ultra LLM Benchmark Data Summary ... Hardware Specifications Ryzen AI Max+ 395 ...
 
-Local AI Mastery: Optimizing LLM Inference on Linux (2026)
-https://www.fosslinux.com/155039/local-ai-performance-optimizing-llm-inference-on-linux-2026-admin-guide.htm
-Local AI Performance: Optimizing LLM Inference on Linux (2026 Admin Guide) Transform your standard server into a state-of-the-art AI foundry by optimizing GPU passthrough and low-latency kernel networking.
+Trillion-Parameter LLM on an AMD Ryzen™ AI Max+ Cluster
+https://www.amd.com/ja/developer/resources/technical-articles/2026/how-to-run-a-one-trillion-parameter-llm-locally-an-amd.html
+Feb 25, 2026 ... By leveraging the unified memory architecture of AMD's Ryzen AI Max+ platform and the flexibility of llama.cpp RPC, we are able to inference a ...
 
-As 2025 wraps up, which local LLMs really mattered this year and ...
-https://www.reddit.com/r/LocalLLaMA/comments/1psd918/as_2025_wraps_up_which_local_llms_really_mattered/
-Dec 21, 2025 ... 75 votes, 53 comments. Now that we're at the end of 2025, I'm curious how people here would summarize the local LLM landscape this year.
+I optimized my Strix Halo for local LLMs: Here are the benchmarks and ...
+https://www.hardware-corner.net/strix-halo-llm-optimization/
+Trying to optimize Strix Halo for local LLMs? Learn the critical command to boost ROCm speed and discover the best backend for every task with my definitive benchmarks and cheat sheet.
 
-GitHub - zolotukhin/zinc: Zig INferenCe Engine — Local LLM inference on ...
-https://github.com/zolotukhin/zinc
-Local LLM inference on AMD GPUs and Apple Silicon — no ROCm, no MLX, one binary. 35B parameter model running locally — Zig + Vulkan/Metal, no ROCm, no MLX
+The next benchmark for AI is here. Dr. Lisa Su introduces @AMD ...
+https://www.instagram.com/reel/DTQnie8kw6T/
+Jan 8, 2026 ... CES 2026 and expected to launch in Q2 2026. Powered by AMD's flagship Ryzen Al Max+ 395 “Strix Halo” processor, it features up to 16 Zen 5 ...
 
-NVIDIA vs AMD vs Intel for Local AI 2026: Who's Actually Winning | CraftRigs
-https://craftrigs.com/news/nvidia-amd-intel-2026-local-ai/
-Significantly better than it was, but still behind NVIDIA CUDA. ROCm runs llama.cpp, Ollama, and PyTorch on Linux reliably. Windows ROCm support remains spotty. Expect 10–20% lower inference performance than NVIDIA on equivalent hardware due to less optimized inference kernels.
+Best GPU for Local LLMs in 2026 — Tested by Budget
+https://www.decodesfuture.com/articles/best-gpu-for-local-llms-2026-guide
+Benchmarks indicate that a Strix Halo system with 128GB of RAM can run large 80B MoE models at 40-60 tokens per second via the GPU. Intels Arc B580 (Battlemage) has emerged in 2026 as the primary competitor in the budget sector.
