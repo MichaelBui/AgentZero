@@ -1,39 +1,39 @@
-Why AI Is Increasing Workplace Burnout | Built In
-https://builtin.com/articles/ai-burnout-at-work
-AI tools promised to make work easier, but research suggests they may be increasing multitasking, longer hours and workplace burnout.
+2026 Prediction: Engineers Ramp Up Learning in the AI Era
+https://www.electronicdesign.com/technologies/eda/article/55363756/electronic-design-ai-for-engineers-why-continuous-learning-degrees-and-certifications-matter-in-2026
+As AI reshapes engineering work, continuous education is becoming the clearest path to staying relevant and indispensable.
 
-Why Gen AI Feels So Threatening to Workers
-https://hbr.org/2026/03/why-gen-ai-feels-so-threatening-to-workers
-AI introduced in this way threatens employees' professional identities and the sense of ownership they feel over their work. Unfortunately, that's exactly how ...
+How AI is reshaping engineering systems, skills and competitiveness
+https://www.linkedin.com/pulse/how-ai-reshaping-engineering-systems-skills-competitiveness-astek-lvnee
+Feb 20, 2026 ... build continuous learning as operational infrastructure (not a one-off program). ... Next edition - March 2026. Next month we will explore ...
 
-When Using AI Leads to "Brain Fry" - Harvard Business Review
-https://hbr.org/2026/03/when-using-ai-leads-to-brain-fry
-As firms increasingly incentivize employees to build and oversee complex teams of agents—for example, by measuring and rewarding token consumption as a proxy for performance—people are finding ...
+The Critical Shift From Courses to Continuous Learning in 2026
+https://blog.eduonix.com/2026/01/shift-from-courses-to-continuous-learning-2026/
+Explore why continuous learning systems are replacing traditional courses in 2026 and how AI-driven models are reshaping modern education.
 
-AI transforms workplace, workers divided on benefits and fears
-https://www.linkedin.com/posts/benzinga_artificial-intelligence-is-transforming-the-activity-7437150287192068097-ARnH
-Mar 10, 2026 ... Forty-two percent considered quitting last year, citing poor pay, burnout, and lack of respect. Flexibility also matters more than ever, with ...
+Most in-demand skills by 2026 are expected to focus on digital ...
+https://www.instagram.com/p/DWeMYrsldO0/
+Mar 29, 2026 ... Learning Industry 4.0 with a full-time job is possible by studying in small daily time slots, focusing on practical tools like automation, ...
 
-What Is AI Burnout, And How Can It Be Avoided? - Forbes
-https://www.forbes.com/sites/bernardmarr/2026/03/02/what-is-ai-burnout-and-how-can-it-be-avoided/
-AI burnout is rising as generative AI tools make it easy to take on more work, start more projects, and keep prompting long after the day should be done.
+Engineering Productivity Systems: A Practical Framework for Software ...
+https://www.productiveengineer.io/2026/03/engineering-productivity-systems.html
+Learn how to build an engineering productivity system with proven workflows, metrics, and focus strategies for sustainable performance.
 
-workers say they're drowning in 'workslop,' The Guardian reports.
-https://www.facebook.com/yahoonews/posts/bosses-say-ai-boosts-productivity-workers-say-theyre-drowning-in-workslop-the-gu/1336976411621374/
-Bosses say AI boosts productivity – workers say they're drowning in 'workslop,' The Guardian reports.
+AI Will Reshape More Jobs Than It Replaces | BCG
+https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces
+Apr 3, 2026 ... ... between system and engineer. Instead, software development becomes ... productivity of individual engineers rises, because humans continue to play ...
 
-'AI brain fry' is real and making workers more exhausted, not more ...
-https://fortune.com/2026/03/10/ai-brain-fry-workplace-productivity-bcg-study/
-Too much AI oversight at work was associated with not just brain fog, but more errors, decision fatigue, and greater intention to quit, Boston Consulting Group researchers said.
+2026 Engineering Productivity Benchmarks Report - plandek.com
+https://plandek.com/resources/2026-software-delivery-benchmark-report/
+The 2026 Engineering Productivity Benchmarks analyze real delivery data across four core pillars: Focus, Speed, Predictability, and Quality. The report quantifies performance gaps between top and bottom quartile teams and examines the measurable impact of AI-augmented engineering.
 
-AI can double output. Human biology can't | Fortune
-https://fortune.com/2026/03/10/ai-can-double-output-human-biology-cant/
-Mar 10, 2026 ... There's an AI burnout trap, and your productivity gains are fragile ... work-life balance. Now the government wants to cut their pay for ...
+DeveloperWeek 2026: Making AI tools that are actually good
+https://stackoverflow.blog/2026/03/05/developerweek-2026/
+Mar 5, 2026 ... From interoperability to knowledge architecture to creating AI tools people can actually use, here's a recap of what we learned from ...
 
-AI Is Boosting Productivity—but Data Shows Employee Workloads Are ...
-https://www.inc.com/bruce-crumley/ai-is-boosting-productivity-but-data-shows-employee-workloads-are-getting-heavier/91316283
-A new study analyzing 443 million work hours found AI tools on the job yield mixed results for companies and their workforces.
+Continual learning: A systematic literature review
+https://www.sciencedirect.com/science/article/pii/S0893608025011074
+In today's data-driven landscape, intelligent systems must continuously learn from evolving data streams while preserving previously acquired knowledge. Continual learning (CL) has emerged as a key paradigm to meet this need, offering the potential to build adaptable and resilient AI systems.
 
-How Artificial Intelligence is Redefining the Future of Work | by Arooma
-https://medium.com/@arooma3264/how-artificial-intelligence-is-redefining-the-future-of-work-1276beae3f0c
-Mar 27, 2026 ... Prompt engineers and automation consultants. Rather than eliminating ... Wellness apps monitor work-life balance. This leads to: Happier ...
+Stanford AI Experts Predict What Will Happen in 2026
+https://hai.stanford.edu/news/stanford-ai-experts-predict-what-will-happen-in-2026
+Dec 15, 2025 ... After years of fast expansion and billion-dollar bets, 2026 may mark the moment artificial intelligence confronts its actual utility.

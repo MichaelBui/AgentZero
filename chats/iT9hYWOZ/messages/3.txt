@@ -1,39 +1,39 @@
-How to Foster Psychological Safety When AI Erodes Trust on Your Team
-https://hbr.org/2026/02/how-to-foster-psychological-safety-when-ai-erodes-trust-on-your-team
-As organizations rapidly integrate AI into their workflows, leaders are uncovering the impact on team dynamics. The same AI tools that promise to enhance productivity can create predictable patterns of team dysfunction that mirror classic ...
+Four Trends in AI Experimentation, Adoption, and Transformation - SPONSOR CONTENT FROM CAPTECH
+https://hbr.org/sponsored/2026/03/four-trends-in-ai-experimentation-adoption-and-transformation
+Across our work with Fortune 100, mid-market, and public sector leaders, we find the real challenge is whether leaders are ready to rethink how work gets done, how decisions are made, and how value is delivered.
+
+PDF Agentic AI in Engineering and Manufacturing: Industry Perspectives on ...
+https://decode.mit.edu/assets/papers/2026_Edwards_Agentic_AI_in_Engineering_and_Manufacturing.pdf
+Agentic AI in Engineering and Manufacturing: Industry Perspectives on Utility, Adoption, Challenges, and Opportunities Kristen M. Edwards, Maxwell Bauer, Claire Jacquillat, A. John Hart, Faez Ahmed March 2026
+
+IT Workforce Transformation in the Age of AI - BTS
+https://bts.com/insights/it-workforce-transformation-ai
+This trend reflects a growing disconnect between organizational expectations of productivity — often driven by rapid AI adoption and return-to- ...
+
+The AI coding productivity data is in and it's not what anyone expected
+https://www.reddit.com/r/ExperiencedDevs/comments/1rnkv2t/the_ai_coding_productivity_data_is_in_and_its_not/
+The junior nonhiring is creating a lost cohort. This pattern has happened in other industries throughout history and creates a lack of more senior employees later. It likely won't start becoming noticeable for 2-3 more years, but an understanding of this explains why some companies like IBM, github have turned around and started hiring more juniors. If you have the ability to operate on longer timelines it makes sense to plan ahead. More on reddit.com
+
+Enterprise AI adoption in 2026: Why 79% face challenges ... - Writer
+https://writer.com/blog/enterprise-ai-adoption-2026/
+WRITER's 2026 survey reveals 79% of executives face AI adoption challenges. Get data-driven insights from 2,400 global leaders on ROI gaps, security risks, and what successful organizations do differently.
+
+AI Will Reshape More Jobs Than It Replaces | BCG
+https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces
+Apr 3, 2026 ... Rather than equating automatable tasks with job loss, we evaluated three distinct forces: task-level automation potential, substitution versus ...
+
+Agentic AI in Engineering and Manufacturing: Industry Perspectives on Utility, Adoption, Challenges, and Opportunities
+https://arxiv.org/html/2604.09633
+Xometry and Thomas’s 2026 Manufacturing Trends Report identifies “AI as a Competitive Necessity” as its leading insight, with 82% of manufacturers citing AI as a primary driver of growth and 44% reporting significant returns on investment from AI adoption (Xometry and ...
 
 State of AI trust in 2026: Shifting to the agentic era
 https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era
-At a glance: Key insights from the 2026 AI Trust Maturity Survey The survey uncovers ten key insights about AI trust, which fall across three themes: the current state of AI trust, emerging risks and challenges, and how organizations are responding to close gaps and enable scale. State of AI trust today Despite improved maturity on the whole, significant variance still exists, but companies ...
+March 25, 2026 AI adoption is accelerating rapidly, with organizations moving beyond experimentation toward scaled deployment of gen AI and, increasingly, agentic AI across core business functions. But as AI systems take on greater autonomy—making recommendations, triggering actions, and interacting with other systems—the consequences of failure grow materially. In this environment, AI ...
 
-86% of U.S. Engineers Use AI but Only 6% Fully Trust It, 2026 Survey Finds
-https://allwork.space/2026/02/86-of-u-s-engineers-use-ai-but-only-6-fully-trust-it-2026-survey-finds/
-Rather than resisting AI, most engineers envision a collaborative model. AI is expected to handle repetitive, data-intensive, and exploratory tasks, while humans retain authority over safety, compliance, and final design decisions.
+AI in AEC 2026: Doing AI Right and Rethinking Your Business Model
+https://www.linkedin.com/pulse/ai-aec-2026-doing-right-rethinking-your-business-model-heiskanen-pcalf
+Mar 22, 2026 ... Two themes appeared in nearly every session I attended. First, many companies struggle with AI adoption, not because they lack tools, but ...
 
-Generation Z Employees’ Acceptance and AI Use Intensity: A Moderated Mediation Model of Psychological Safety, Technostress, and Trust
-https://www.mdpi.com/2673-8104/6/1/7
-This study investigates the factors influencing employee acceptance and actual AI use intensity (frequency and routinization) by integrating the Technology Acceptance Model with organizational and psychosocial variables. Data were collected via an online survey of Romanian Generation Z participants ...
-
-How to Handle Trusts and Psychological Safety When Scaling Organizations - InfoQ
-https://www.infoq.com/news/2026/04/trust-psychological-safety-scale/
-As organizations scale, communication overload, loss of shared context, and trust gaps emerge, Charlotte de Jong Schouwenburg mentioned. Trust must be built team by team; it can’t be replicated. Trust is interpersonal, while psychological safety is among people and fuels learning.
-
-Psychological Safety Enables Opportunity Ecosystems Amid AI Transformation
-https://www.forrester.com/blogs/psychological-safety-enables-opportunity-ecosystems-amid-ai-transformation/
-Psychological safety fuels curiosity and innovation. Leaders can foster trust during transformation by embracing humility, engagement, and empathetic responses.
-
-International AI Safety Report 2026 Examines AI Capabilities, Risks, and Safeguards | Inside Privacy
-https://www.insideprivacy.com/artificial-intelligence/international-ai-safety-report-2026-examines-ai-capabilities-risks-and-safeguards/
-According to the Report, early evidence suggests reduced demand for work that is easily substitutable—such as writing and translation—and increased demand for complementary skills, including machine learning programming and chatbot development.
-
-(PDF) Psychological Safety and Trust in AI-Supported Leadership Cultures
-https://www.researchgate.net/publication/399095135_Psychological_Safety_and_Trust_in_AI-Supported_Leadership_Cultures
-awing from fifteen historical laboratories - Roman legions to Wall Street trading floors, Persian poetry to Silicon Valley, mountain geographies shaping threat-detection to maritime cultures programming navigation - the investigation reveals strategic consciousness functioning through invariant patterns transcending era, culture, or technology.
-
-International AI Safety Report 2026 Examines AI Capabilities, Risks, and Safeguards
-https://www.globalpolicywatch.com/2026/02/international-ai-safety-report-2026-examines-ai-capabilities-risks-and-safeguards/
-According to the Report, early evidence suggests reduced demand for work that is easily substitutable—such as writing and translation—and increased demand for complementary skills, including machine learning programming and chatbot development.
-
-Creating psychological safety in the AI era | MIT Technology Review
-https://www.technologyreview.com/2025/12/16/1125899/creating-psychological-safety-in-the-ai-era/
-"Psychological safety is mandatory in this new era of AI," says Rafee Tarafdar, executive vice president and chief technology officer at Infosys. "The tech itself is evolving so fast ...
+The “Last Mile” Problem Slowing AI Transformation
+https://hbr.org/2026/03/the-last-mile-problem-slowing-ai-transformation
+The primary obstacle to progress is rarely model quality or data availability, but rather the “last mile” of transformation where technical capability must meet organizational design.

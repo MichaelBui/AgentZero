@@ -1,39 +1,39 @@
-6 Change Management Strategies to Scale AI Adoption in Engineering Teams | Augment Code
-https://www.augmentcode.com/guides/6-change-management-strategies-to-scale-ai-adoption-in-engineering-teams
-85% of AI adoption initiatives fail due to change management and cultural challenges, not technical limitations—including legacy technical debt, fragmented data infrastructure, and developer resistance patterns triggered by job security fears. Organizations experience an initial productivity decline during transition before realizing performance gains. Successful adoption requires structured frameworks that address team dynamics, cultural resistance, and development pipeline integration while respecting developer autonomy.
+Building stronger engineering teams with aligned autonomy - Stack Overflow
+https://stackoverflow.blog/2025/07/14/building-stronger-engineering-teams-with-aligned-autonomy/
+July 14, 2025 Building stronger engineering teams with aligned autonomy Striking the balance between speed and strategy is a major challenge for business and tech leaders. That's where aligned autonomy comes in.
 
-Four Trends in AI Experimentation, Adoption, and Transformation - SPONSOR CONTENT FROM CAPTECH
-https://hbr.org/sponsored/2026/03/four-trends-in-ai-experimentation-adoption-and-transformation
-Accelerated design and iteration AI enables organizations to rapidly design, test, and refine potential solutions. This isn’t limited to creative and engineering roles. Across the enterprise, teams can experiment, learn, and improve at a pace ...
+Council Post: The Neuroscience Of Authority: Engineering Trust In Modern Leadership
+https://www.forbes.com/councils/forbescoachescouncil/2026/04/07/the-neuroscience-of-authority-engineering-trust-in-modern-leadership/
+Authority is built through repetition. Research on how people learn demonstrates that practice solidifies neural connections, and leadership communications are no different. Repeatedly and calmly emphasizing your contributions helps others solidify ...
 
-5 steps for change management in the gen AI age | McKinsey
-https://www.mckinsey.com/capabilities/quantumblack/our-insights/reconfiguring-work-change-management-in-the-age-of-gen-ai
-CEOs can thus encourage these millennial change champions to mentor their peers in gen AI adoption and lead practice groups to share tips and tricks. Most critically, CEOs should lead by example, visibly using gen AI tools in their own work.
+The secret sauce to high-performing teams: leadership, trust, and autonomy
+https://madewithlove.com/blog/the-secret-sauce-to-high-performing-teams-leadership-trust-and-autonomy/
+Empowering teams in modern workspaces means shifting from traditional management to a trust-based, autonomous culture. This approach enhances performance, especially remotely, by emphasizing purpose before results and fostering open communication ...
 
-5 strategies to accelerate the adoption of responsible AI | World Economic Forum
-https://www.weforum.org/stories/2026/02/5-strategies-accelerate-responsible-ai-adoption/
-Skill sets that can be viewed as proactive are those that are just emerging and where demand may not yet have reached its peak. Examples may include prompt engineering, AI red teaming and multi-agent system design.
+No Trust = No Autonomy: Team autonomy only works when leadership shows trust | by Ro Fernandez | Medium
+https://medium.com/@rociofernn/no-trust-no-autonomy-team-autonomy-only-works-when-leadership-shows-trust-7f2a7c180d2b
+No Trust = No Autonomy: Team autonomy only works when leadership shows trust The secret ingredient to team autonomy isn’t just clarity — it’s trust. When trust is present, teams feel a deeper …
 
-The patterns shaping AI adoption in 2026 | Insight Partners
-https://www.insightpartners.com/ideas/ai-adoption-2026/
-And instead of broad integration, many companies are forming small, isolated innovation teams that can break cleanly from legacy constraints. “There’s very little that cannot and should not be questioned right now, and it’s all about what we identify and move past.” · As engineering velocity increases, weaknesses in product strategy become harder to ignore.
+Trusteeship: March/April 2026 - AGB
+https://agb.org/trusteeship-issue/trusteeship-march-april-2026/
+Boards of trustees, institutionally related foundation board members, university presidents, and foundation leaders can navigate these murky waters through a commitment to exceptional governance. The Compact, Institutional Autonomy, Fiduciary Duties, and Academic Freedom By Richard J.
 
-Enterprise AI adoption in 2026: Why 79% face challenges despite high investment - WRITER
-https://writer.com/blog/enterprise-ai-adoption-2026/
-When 97% of executives report ... right technology. It’s also made up of strategic foundation, supportive technology partners, governance design, and systematic change management....
+Building the case for AV safety: A framework for scalable autonomy
+https://news.gm.com/home.detail.html/Pages/news/us/en/engineering/2026/mar/0323-av-safety.html
+GM considers public trust an essential stewardship. As such, GM will continue to share safety information, and testing updates in an effort to build continued trust.
 
-To Drive AI Adoption, Build Your Team’s Product Management Skills
-https://hbr.org/2026/02/to-drive-ai-adoption-build-your-teams-product-management-skills
-To unlock the real value of generative ... a product manager. Defining high-value problems, finding the right digital tools to solve them, experimenting with those tools, and integrating solutions into workflows are key activities ...
+Engineering leadership in 2025: Thriving when budgets shrink - LeadDev
+https://leaddev.com/leadership/engineering-leadership-in-2025-thriving-when-budgets-shrink
+How constraints can sharpen focus and increase team autonomy: Limits don’t have to reduce creativity, they can accelerate it.
 
-AI Adoption Roadmap for Businesses 2026 - Engenia Technologies
-https://www.engeniatech.com/blog/ai-adoption-roadmap-for-businesses-2026/
-A structured AI adoption roadmap ... at every step · In 2026, the landscape is more complex with generative AI, agent based intelligence, and hybrid cloud models shaping adoption strategies....
+Building Team Trust: A Blueprint for Engineering Managers | by David Anaya | Medium
+https://danaya.medium.com/building-team-trust-a-blueprint-for-engineering-managers-052a2753d895
+As you embark on this path, keep in mind that trust is built through consistent actions and transparent communication. By prioritizing your team’s autonomy, leading by example, and embracing a culture of openness, you lay the groundwork for a collaborative and high-performing environment.
 
-AI Adoption: The Complete Enterprise Guide 2026
-https://larridin.com/solutions/ai-adoption-the-complete-enterprise-guide-2026
-In February 2026, Meta became the first major technology company to formally tie employee performance reviews to AI usage, according to Bloomberg. Under the new policy, “AI-driven impact” is now a core expectation for every employee — ...
+What I’ve Learned from Talking to Top Engineering Leaders in 2025 | Tech Teams Today
+https://www.revelo.com/blog/engineering-leadership-trends-in-2025
+Whether it’s fixing infrastructure or launching a new product, the standout engineers are the ones who treat problems like they own them. Autonomy with clarity builds momentum faster than any sprint velocity metric. ... Takeaway: Make expectations clear. Then trust your team to deliver.
 
-AI Adoption Roadmap for Engineering Teams 2026 - chiefviews.com
-https://chiefviews.com/ai-adoption-roadmap-for-engineering-teams-2026/
-Explore the ultimate AI adoption roadmap for engineering teams 2026: phased steps, agentic AI trends, tools, and metrics to scale from pilots to production impact fast.
+Engineering Team Structure Best Practices In 2026 - gainhq.com
+https://gainhq.com/blog/engineering-team-structure/
+Trust builds the glue between autonomy and alignment. One wrong senior hire slows down 10 good engineers. The goal isn’t growing teams but growing leaders. Systems thinkers who understand how pieces connect are the ones to hire. Leadership must evolve as organizations grow.

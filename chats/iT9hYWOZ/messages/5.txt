@@ -1,39 +1,39 @@
-Strix Halo Mini PCs for Local LLM Inference: A Practical Guide to Running Large Models at Home | Starry Hope
+Running 122B-Parameter LLMs Locally on AMD Strix Halo for ... - LinkedIn
+https://www.linkedin.com/pulse/running-122b-parameter-llms-locally-amd-strix-halo-deep-pellegrini-33cjc
+Over the past few months, I've been building a local LLM inference stack on an AMD Ryzen AI Max+ 395 (Strix Halo) — a chip with 128GB of unified LPDDR5X memory shared between CPU and GPU. My ...
+
+GitHub - Light-Heart-Labs/DreamServer: Local AI anywhere, for ...
+https://github.com/Light-Heart-Labs/DreamServer
+AMD Strix Halo (Unified Memory). Unified RAM, Model, Hardware. 64–89 GB, Qwen3 30B-A3B (30B MoE), Ryzen AI MAX+ 395 (64GB). 90+ GB, Qwen3 Coder Next (80B MoE) ...
+
+Strix Halo Mini PCs for Local LLM Inference: A Practical Guide to ...
 https://www.starryhope.com/minipcs/strix-halo-local-llm-inference-2026/
-or general-purpose LLM chat, the Vulkan backend with the RADV driver delivers the best experience. It’s stable, well-tested, and provides consistent performance across different model types. The ROCm/HIP backend offers higher theoretical performance in some scenarios, but requires more setup and can be finicky with certain configurations.
+The fundamental appeal of Strix Halo for local LLM work comes down to one thing: memory bandwidth determines inference speed, and these chips can access a massive pool of unified memory without the bottlenecks that plague discrete GPU setups.
 
-AMD Strix Halo (Ryzen AI Max+ 395) GPU LLM Performance Tests - Framework Desktop - Framework Community
-https://community.frame.work/t/amd-strix-halo-ryzen-ai-max-395-gpu-llm-performance-tests/72521
-On and off over the past couple months I’ve been doing ML/AI/LLM testing on Strix Halo (Ryzen AI Max+ 395), specifically with the gfx1151 GPU, in my spare time. I was given the go ahead a while back to mention that this has been on pre-production Framework Desktop hardware, but since I only just recently finished this latest set of sweeps, and with release I assume getting pretty close (nope, I don’t know anything, don’t ask, lol), I figure I’d share the most detailed/definitive LLM inference...
+What would a good local LLM setup cost in 2026? - Reddit
+https://www.reddit.com/r/LocalLLM/comments/1r0x3kn/what_would_a_good_local_llm_setup_cost_in_2026/
+Feb 10, 2026 ... You can get AMD AI MAX+ 395 with 128GB of unified RAM for half that... ... And why do you bought from Nvidia and not from AMD like "Halo Strix"?
 
-How does the architecture and performance of the AMD Ryzen AI Max+ Strix Halo compare with Apple's M5 series and NVIDIA's Blackwell RTX 50 series?
-https://www.scribd.com/document/977873659/Master-LLM
-The AMD Ryzen AI Max+ Strix Halo's architecture, with its emphasis on unified 128GB memory and flexibility across Windows and Linux platforms, stands out for its excellent price/performance ratio in handling large models. It is more upgradeable compared to Apple's ecosystem-locked M5 series, although it typically operates at 50-70% the speed of NVIDIA's RTX 50 series, which boasts the highest raw speed in LLM inference. Apple's M5 is power-efficient and excels in seamless macOS integration but has lower peak TPS due to its unified architecture constraints. In contrast, NVIDIA's RTX 50 series,
+Strix Halo Mini PCs for AI — 128GB, 40 TOPS NPU 2026
+https://www.compute-market.com/blog/strix-halo-mini-pc-local-ai-2026
+In March 2026, a new class of hardware is reshaping local AI: AMD Strix Halo mini PCs. These sub-3-liter machines pack up to 128 GB of unified LPDDR5X memory — with up to 96 GB directly addressable by the integrated GPU. That means you can run 70B+ parameter LLMs that no 16 GB or even 32 GB discrete GPU can touch, in a box that sits quietly on your desk and draws under 120W.
 
-Best GPU for Local LLMs in 2026 — Tested by Budget
-https://www.decodesfuture.com/articles/best-gpu-for-local-llms-2026-guide
-With an MSRP of $249 and 12GB of GDDR6 memory, the B580 utilizes Intels XMX engines to deliver hardware-accelerated tensor operations. In tests using llama.cpp and the IPEX-LLM library, the B580 achieves 62 tokens per second on 8B parameter models, ...
+Llama.cpp/vLLM Toolboxes for LLM inference on Strix Halo
+https://community.frame.work/t/llama-cpp-vllm-toolboxes-for-llm-inference-on-strix-halo/74916
+Sep 4, 2025 ... I just wanted to share the toolboxes I've been working on together with folks at https://strixhalo-homelab.d7.wtf/.
 
-I optimized my Strix Halo for local LLMs: Here are the benchmarks and findings.
-https://www.hardware-corner.net/strix-halo-llm-optimization/
-From my experience, nearly all performance tuning on Strix Halo comes down to selecting the right backend for the job. You have two main choices: Vulkan and ROCm/HIP. Vulkan is the stable, cross-platform option, and you can run it with either the open-source Mesa RADV driver or AMD’s official AMDVLK driver.
+AMD Strix Halo AI Workstations Bring LLMs to the Desktop
+https://insighttechdaily.com/amd-strix-halo-ai-workstations-local-llm-desktops/
+New AMD Ryzen AI Max+ 395 workstations bring up to 128GB unified memory and massive bandwidth for running Llama and DeepSeek models locally.
 
-Best Hardware for Local LLMs in 2026: 5 Platforms Compared (From $500) | ToolHalla
-https://toolhalla.ai/blog/best-hardware-for-local-llms-2026
-Apple Mac Mini M2 Ultra — Ideal for those seeking silence and efficiency, with the ability to run huge models on a unified memory system. AMD Strix Halo mini PC — The cheapest path to 128GB unified memory, making it a great choice for ...
+Distilled Reasoning on Strix Halo: Running a Claude-Trained ...
+https://tinycomputers.io/posts/distilled-reasoning-on-strix-halo-qwen35-claude-thinking.html
+Mar 29, 2026 ... Second, whether the AMD Strix Halo APU, with its unified memory ... 2026-03-17AI, inference · The Real Cost of Running Qwen TTS Locally ...
 
-GitHub - Gygeek/Framework-strix-halo-llm-setup: Complete guide to running large language models locally on AMD Ryzen AI Max+ 395 (Strix Halo) with 128GB unified memory. Covers BIOS config, kernel setup, ROCm installation, and llama.cpp deployment. Run 70B+ parameter models on a single APU. · GitHub
+Framework-strix-halo-llm-setup - GitHub
 https://github.com/Gygeek/Framework-strix-halo-llm-setup
-Complete guide to running large language models locally on AMD Ryzen AI Max+ 395 (Strix Halo) with 128GB unified memory. Covers BIOS config, kernel setup, ROCm installation, and llama.cpp deployment. Run 70B+ parameter models on a single APU. - Gygeek/Framework-strix-halo-llm-setup
+Complete guide to running large language models locally on AMD Ryzen AI Max+ 395 (Strix Halo) with 128GB unified memory. Covers BIOS config, kernel setup, ROCm installation, and llama.cpp deploymen...
 
-How Far Has AMD ROCm Come in Catching Up to CUDA? | lilting channel
-https://lilting.ch/en/articles/amd-rocm-cuda-ecosystem-practical-assessment
-In LLM-jp-4 ROCm benchmarks it hit 62.9 t/s, so the raw performance is there. AMD’s own tools like Lemonade are improving too. But there’s a real chance that the money saved on GPU costs gets eaten by engineering hours.
-
-Linked Strix Halo Mini PCs: Sapphire's Dual-Unit Cluster Targets 235B Parameter LLMs | Starry Hope
-https://www.starryhope.com/minipcs/sapphire-linked-strix-halo-mini-pc-cluster-llm-inference/
-You’ll need Fedora 42 or a recent Ubuntu distribution, working ROCm drivers, and familiarity with running containers. The llama.cpp RPC setup itself is straightforward, essentially starting a server process on one machine and pointing the other machine at it. Community guides walk through the process step by step, and the toolbox containers available for Strix Halo dramatically simplify the initial configuration. If you’ve followed our guide on BitNet and 1-bit LLMs on budget hardware, you have more than enough technical background to set up a cluster.
-
-Trillion-Parameter LLM on an AMD Ryzen™ AI Max+ Cluster
-https://www.amd.com/en/developer/resources/technical-articles/2026/how-to-run-a-one-trillion-parameter-llm-locally-an-amd.html
-The Lemonade SDK project provides nightly builds of llama.cpp with AMD ROCm™ 7 acceleration baked in, targeting GPUs such as gfx1151 (Strix Halo / Ryzen AI Max+ 395) and other recent Radeon architectures.
+Home ai stack with local infrastructure and automation - Facebook
+https://www.facebook.com/groups/vibecodinglife/posts/2006045549983972/
+The brain: AMD Ryzen AI MAX+ with 128GB unified RAM. One machine ... Setting up local LLM for homelab management? Beh Xhen ▻ Home ...
