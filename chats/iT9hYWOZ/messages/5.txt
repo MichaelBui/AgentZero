@@ -1,39 +1,39 @@
-The 2026 MCP Roadmap | Model Context Protocol Blog
-https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/
-The 2026 MCP Roadmap The updated Model Context Protocol roadmap for 2026: transport scalability, agent communication, governance maturation, and enterprise readiness, plus guidance on SEP prioritization and how to get involved.
+Strix Halo Mini PCs for Local LLM Inference: A Practical Guide to Running Large Models at Home | Starry Hope
+https://www.starryhope.com/minipcs/strix-halo-local-llm-inference-2026/
+or general-purpose LLM chat, the Vulkan backend with the RADV driver delivers the best experience. It’s stable, well-tested, and provides consistent performance across different model types. The ROCm/HIP backend offers higher theoretical performance in some scenarios, but requires more setup and can be finicky with certain configurations.
 
-Model Context Protocol (MCP): Why It Matters, Where It Helps, and ...
-https://medium.com/@iamabhinav30/model-context-protocol-mcp-why-it-matters-where-it-helps-and-what-engineers-keep-getting-wrong-f7036f4a552c
-Mar 21, 2026 ... Mar 22, 2026. 31. Listen ... That architecture is explicitly part of how Anthropic and the MCP docs describe the protocol ...
+AMD Strix Halo (Ryzen AI Max+ 395) GPU LLM Performance Tests - Framework Desktop - Framework Community
+https://community.frame.work/t/amd-strix-halo-ryzen-ai-max-395-gpu-llm-performance-tests/72521
+On and off over the past couple months I’ve been doing ML/AI/LLM testing on Strix Halo (Ryzen AI Max+ 395), specifically with the gfx1151 GPU, in my spare time. I was given the go ahead a while back to mention that this has been on pre-production Framework Desktop hardware, but since I only just recently finished this latest set of sweeps, and with release I assume getting pretty close (nope, I don’t know anything, don’t ask, lol), I figure I’d share the most detailed/definitive LLM inference...
 
-The Complete Guide to Model Context Protocol (MCP): Building AI-Native ...
-https://dev.to/universe7creator/the-complete-guide-to-model-context-protocol-mcp-building-ai-native-applications-in-2026-234n
-As of March 2026, MCP represents more than just a protocol—it's a fundamental shift in how we architect AI applications. This guide explores MCP's architecture, implementation patterns, and real-world applications for developers building the next generation of AI-powered software.
+How does the architecture and performance of the AMD Ryzen AI Max+ Strix Halo compare with Apple's M5 series and NVIDIA's Blackwell RTX 50 series?
+https://www.scribd.com/document/977873659/Master-LLM
+The AMD Ryzen AI Max+ Strix Halo's architecture, with its emphasis on unified 128GB memory and flexibility across Windows and Linux platforms, stands out for its excellent price/performance ratio in handling large models. It is more upgradeable compared to Apple's ecosystem-locked M5 series, although it typically operates at 50-70% the speed of NVIDIA's RTX 50 series, which boasts the highest raw speed in LLM inference. Apple's M5 is power-efficient and excels in seamless macOS integration but has lower peak TPS due to its unified architecture constraints. In contrast, NVIDIA's RTX 50 series,
 
-MCP in 2026: Architecture, Failure Modes, and What Comes Next
-https://www.linkedin.com/pulse/mcp-2026-architecture-failure-modes-what-comes-next-dindukurthi-yli4c
-Mar 1, 2026 ... For over a year, the Model Context Protocol (MCP)—open-sourced by Anthropic in late 2024 and donated to the Linux Foundation's Agentic AI ...
+Best GPU for Local LLMs in 2026 — Tested by Budget
+https://www.decodesfuture.com/articles/best-gpu-for-local-llms-2026-guide
+With an MSRP of $249 and 12GB of GDDR6 memory, the B580 utilizes Intels XMX engines to deliver hardware-accelerated tensor operations. In tests using llama.cpp and the IPEX-LLM library, the B580 achieves 62 tokens per second on 8B parameter models, ...
 
-What Is MCP (Model Context Protocol)? Complete 2026 Guide
-https://www.buildfastwithai.com/blogs/what-is-model-context-protocol-mcp
-Then MCP happened. In November 2024, Anthropic quietly open-sourced the Model Context Protocol (MCP) — a universal standard for connecting AI models to external tools, data sources, and services. By April 2026, there are over 2,300+ MCP servers in public directories. Claude, Cursor, Windsurf, VS Code, and 200+ other tools support it natively.
+I optimized my Strix Halo for local LLMs: Here are the benchmarks and findings.
+https://www.hardware-corner.net/strix-halo-llm-optimization/
+From my experience, nearly all performance tuning on Strix Halo comes down to selecting the right backend for the job. You have two main choices: Vulkan and ROCm/HIP. Vulkan is the stable, cross-platform option, and you can run it with either the open-source Mesa RADV driver or AMD’s official AMDVLK driver.
 
-What Is the MCP Server Trap? Why Wrapping an API Is Not Enough ...
-https://www.mindstudio.ai/blog/mcp-server-trap-agent-readable-data-architecture/
-Here's why clean data architecture matters more than the interface layer on top of it. MindStudio Team · March 23, 2026 · RSS. What Is the MCP Server Trap?
+Best Hardware for Local LLMs in 2026: 5 Platforms Compared (From $500) | ToolHalla
+https://toolhalla.ai/blog/best-hardware-for-local-llms-2026
+Apple Mac Mini M2 Ultra — Ideal for those seeking silence and efficiency, with the ability to run huge models on a unified memory system. AMD Strix Halo mini PC — The cheapest path to 128GB unified memory, making it a great choice for ...
 
-MCP 2026 | Model Context Protocol Complete Guide — What It Is, How It Works
-https://sainam.tech/blog/mcp-complete-guide-2026/
-Master Model Context Protocol (MCP) in 2026—the open standard that lets AI agents talk to tools, databases, and APIs. Learn architecture, real use cases, implementation patterns, and why every AI developer needs it.
+GitHub - Gygeek/Framework-strix-halo-llm-setup: Complete guide to running large language models locally on AMD Ryzen AI Max+ 395 (Strix Halo) with 128GB unified memory. Covers BIOS config, kernel setup, ROCm installation, and llama.cpp deployment. Run 70B+ parameter models on a single APU. · GitHub
+https://github.com/Gygeek/Framework-strix-halo-llm-setup
+Complete guide to running large language models locally on AMD Ryzen AI Max+ 395 (Strix Halo) with 128GB unified memory. Covers BIOS config, kernel setup, ROCm installation, and llama.cpp deployment. Run 70B+ parameter models on a single APU. - Gygeek/Framework-strix-halo-llm-setup
 
-How MCP Turns Your Messy Agents Into Governed Systems
-https://dev.to/wassimchegham/how-mcp-turns-your-messy-agents-into-governed-systems-2ofo
-Apr 8, 2026 ... MCP (the Model Context Protocol) is a protocol layer that enables ... MCP architecture: agent, protocol, and tools. The agent lives on ...
+How Far Has AMD ROCm Come in Catching Up to CUDA? | lilting channel
+https://lilting.ch/en/articles/amd-rocm-cuda-ecosystem-practical-assessment
+In LLM-jp-4 ROCm benchmarks it hit 62.9 t/s, so the raw performance is there. AMD’s own tools like Lemonade are improving too. But there’s a real chance that the money saved on GPU costs gets eaten by engineering hours.
 
-MCP (Model Context Protocol) Explained - effloow.com
-https://effloow.com/articles/mcp-model-context-protocol-explained-2026
-Learn what Model Context Protocol (MCP) is, how it works, and why it matters. Practical guide to building MCP servers, real use cases, and security best practices.
+Linked Strix Halo Mini PCs: Sapphire's Dual-Unit Cluster Targets 235B Parameter LLMs | Starry Hope
+https://www.starryhope.com/minipcs/sapphire-linked-strix-halo-mini-pc-cluster-llm-inference/
+You’ll need Fedora 42 or a recent Ubuntu distribution, working ROCm drivers, and familiarity with running containers. The llama.cpp RPC setup itself is straightforward, essentially starting a server process on one machine and pointing the other machine at it. Community guides walk through the process step by step, and the toolbox containers available for Strix Halo dramatically simplify the initial configuration. If you’ve followed our guide on BitNet and 1-bit LLMs on budget hardware, you have more than enough technical background to set up a cluster.
 
-MCP vs. REST/HTTP API vs. Kafka: The Architect's Guide to Agentic ...
-https://www.kai-waehner.de/blog/2026/04/10/mcp-vs-rest-http-api-vs-kafka-the-architects-guide-to-agentic-ai-integration/
-Anthropic introduced the Model Context Protocol in November 2024 as ... The choice between MCP, REST/HTTP APIs, and Kafka is rarely clean.
+Trillion-Parameter LLM on an AMD Ryzen™ AI Max+ Cluster
+https://www.amd.com/en/developer/resources/technical-articles/2026/how-to-run-a-one-trillion-parameter-llm-locally-an-amd.html
+The Lemonade SDK project provides nightly builds of llama.cpp with AMD ROCm™ 7 acceleration baked in, targeting GPUs such as gfx1151 (Strix Halo / Ryzen AI Max+ 395) and other recent Radeon architectures.

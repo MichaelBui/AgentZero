@@ -1,39 +1,39 @@
-Best Self-Hosted LLMs in 2026: Hardware Requirements and Benchmarks | Onyx AI
-https://onyx.app/insights/best-self-hosted-llms-2026
-On an RTX 4090, DS-R1-Distill-Qwen-32B delivers 72% AIME and 62.1% GPQA Diamond, capabilities that would have required a multi-GPU cluster two years ago. The DeepSeek R1 distilled models represent the most significant advance in single-GPU performance. The most common inference runtimes are Ollama (easiest setup for consumer hardware), vLLM (best throughput for production deployments), LM Studio (GUI-based for Mac/Windows), and llama.cpp (CPU and low-VRAM support).
+How to Foster Psychological Safety When AI Erodes Trust on Your Team
+https://hbr.org/2026/02/how-to-foster-psychological-safety-when-ai-erodes-trust-on-your-team
+As organizations rapidly integrate AI into their workflows, leaders are uncovering the impact on team dynamics. The same AI tools that promise to enhance productivity can create predictable patterns of team dysfunction that mirror classic ...
 
-Run DeepSeek & Qwen 2.5 Locally: The 2026 Self-Hosted Guide
-https://createaiagent.net/self-hosted-llm/
-You no longer just “run a model”; you deploy a private, uncensored intelligence that rivals the cloud, all for the cost of electricity. In March 2026, local LLMs are no longer an exotic toy — they’re a practical answer to three burning ...
+State of AI trust in 2026: Shifting to the agentic era
+https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era
+At a glance: Key insights from the 2026 AI Trust Maturity Survey The survey uncovers ten key insights about AI trust, which fall across three themes: the current state of AI trust, emerging risks and challenges, and how organizations are responding to close gaps and enable scale. State of AI trust today Despite improved maturity on the whole, significant variance still exists, but companies ...
 
-Updated Hardware Recommendations for Running AI Locally ...
-https://mguhlin.org/2026/03/11/updated-hardware-recommendations-for-running-ai-locally-march-2026/
-Mar 11, 2026 ... A lot has changed since my July 2025 TCEA AI for Educators Conference session on running local AI. The models are better, the hardware options ...
+86% of U.S. Engineers Use AI but Only 6% Fully Trust It, 2026 Survey Finds
+https://allwork.space/2026/02/86-of-u-s-engineers-use-ai-but-only-6-fully-trust-it-2026-survey-finds/
+Rather than resisting AI, most engineers envision a collaborative model. AI is expected to handle repetitive, data-intensive, and exploratory tasks, while humans retain authority over safety, compliance, and final design decisions.
 
-Self-Hosting Your First LLM | Towards Data Science
-https://towardsdatascience.com/self-hosting-your-first-llm/
-Mar 17, 2026 ... You want custom behavior from your AI and the prompts aren't cutting it. ... 3 All pricing data is current as of March 2026. Note: this guide is ...
+Generation Z Employees’ Acceptance and AI Use Intensity: A Moderated Mediation Model of Psychological Safety, Technostress, and Trust
+https://www.mdpi.com/2673-8104/6/1/7
+This study investigates the factors influencing employee acceptance and actual AI use intensity (frequency and routinization) by integrating the Technology Acceptance Model with organizational and psychosocial variables. Data were collected via an online survey of Romanian Generation Z participants ...
 
-What's the realistic "entry point" for a good local LLM experience going into 2026?
-https://www.reddit.com/r/LocalLLaMA/comments/1prjldr/whats_the_realistic_entry_point_for_a_good_local/
-I'm a believer in getting a unified memory machine and running them that way. I think it will become the wave of the future over time. More on reddit.com
+How to Handle Trusts and Psychological Safety When Scaling Organizations - InfoQ
+https://www.infoq.com/news/2026/04/trust-psychological-safety-scale/
+As organizations scale, communication overload, loss of shared context, and trust gaps emerge, Charlotte de Jong Schouwenburg mentioned. Trust must be built team by team; it can’t be replicated. Trust is interpersonal, while psychological safety is among people and fuels learning.
 
-Enterprise Local LLM Deployment: vLLM, GPUs, Containers ...
-https://www.sitepoint.com/the-2026-definitive-guide-to-running-local-llms-in-production/
-Mar 20, 2026 ... The convergence of Blackwell-class GPUs, production-hardened inference engines like vLLM with disaggregated prefill and decode, and maturing ...
+Psychological Safety Enables Opportunity Ecosystems Amid AI Transformation
+https://www.forrester.com/blogs/psychological-safety-enables-opportunity-ecosystems-amid-ai-transformation/
+Psychological safety fuels curiosity and innovation. Leaders can foster trust during transformation by embracing humility, engagement, and empathetic responses.
 
-What is the best local LLMs as of March 2026? : r/LocalLLaMA - Reddit
-https://www.reddit.com/r/LocalLLaMA/comments/1rkppnl/what_is_the_best_local_llms_as_of_march_2026/
-Mar 4, 2026 ... cpp is only a backend, used for running AI inference (in fact ollama is built on top of it but is comparatively more limited in capabilities ...
+International AI Safety Report 2026 Examines AI Capabilities, Risks, and Safeguards | Inside Privacy
+https://www.insideprivacy.com/artificial-intelligence/international-ai-safety-report-2026-examines-ai-capabilities-risks-and-safeguards/
+According to the Report, early evidence suggests reduced demand for work that is easily substitutable—such as writing and translation—and increased demand for complementary skills, including machine learning programming and chatbot development.
 
-Local LLM Hardware Guide 2026: GPU & VRAM Requirements
-https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026
-Local LLM hardware guide 2026: GPU, CPU, RAM requirements for 7B-70B models. VRAM calculator with benchmarks and optimization tips.
+(PDF) Psychological Safety and Trust in AI-Supported Leadership Cultures
+https://www.researchgate.net/publication/399095135_Psychological_Safety_and_Trust_in_AI-Supported_Leadership_Cultures
+awing from fifteen historical laboratories - Roman legions to Wall Street trading floors, Persian poetry to Silicon Valley, mountain geographies shaping threat-detection to maritime cultures programming navigation - the investigation reveals strategic consciousness functioning through invariant patterns transcending era, culture, or technology.
 
-Most Widely Used LLMs in 2026 - Carlos Eduardo Olivieri - Medium
-https://higher-order-programmer.medium.com/the-10-most-widely-used-llms-currently-in-2026-d83c15e1a2db
-Mar 1, 2026 ... Most Widely Used LLMs in 2026 Intro Large Language Models (LLMs) continue to reshape how software, research, and business workflows operate ...
+International AI Safety Report 2026 Examines AI Capabilities, Risks, and Safeguards
+https://www.globalpolicywatch.com/2026/02/international-ai-safety-report-2026-examines-ai-capabilities-risks-and-safeguards/
+According to the Report, early evidence suggests reduced demand for work that is easily substitutable—such as writing and translation—and increased demand for complementary skills, including machine learning programming and chatbot development.
 
-LLM Inference Hardware: An Enterprise Guide to Key Players | IntuitionLabs
-https://intuitionlabs.ai/articles/llm-inference-hardware-enterprise-guide
-OEMs like Dell (projecting $20B in AI server shipments) and HPE bridge these chips to enterprise use, while hyperscalers are investing hundreds of billions in AI infrastructure (Amazon $200B, Google $175–185B, Meta $115–135B in 2026 alone). Our citations have shown concrete figures: GPUs delivering petaflops at tens of kW ([19]), new chips claiming triple efficiency ([34]), and massive deals worth tens of billions ([10]). In summary, any enterprise looking to “bring LLMs in-house” must evaluate both classical GPU solutions and the new breed of AI accelerators.
+Creating psychological safety in the AI era | MIT Technology Review
+https://www.technologyreview.com/2025/12/16/1125899/creating-psychological-safety-in-the-ai-era/
+"Psychological safety is mandatory in this new era of AI," says Rafee Tarafdar, executive vice president and chief technology officer at Infosys. "The tech itself is evolving so fast ...

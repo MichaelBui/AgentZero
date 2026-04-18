@@ -1,39 +1,39 @@
-DORA Metrics: A Practical Guide for Engineering Leaders
-https://typoapp.io/blog/dora-metrics-for-engineering-leaders
-Understanding DORA metrics is critical for modern software delivery because they provide a proven, data-driven framework for measuring both the speed and stability of your engineering processes. By leveraging these metrics, organizations can drive better business outcomes, improve team performance, and build more resilient systems.
-
-Engineering Metrics That Matter (And Ones to Avoid) - EM Tools
-https://www.em-tools.io/engineering-metrics
-Mar 30, 2026 ... It is organised into four categories: DORA metrics for delivery performance, delivery metrics for workflow efficiency, quality metrics for ...
-
-DORA Metrics for Engineering Teams: Guide & Benchmarks
+DORA Metrics for Engineering Teams: Guide & Benchmarks | Engineering Manager Tools
 https://www.em-tools.io/frameworks/dora-metrics
-Implement DORA metrics in your engineering team. Covers deployment frequency, lead time, change failure rate, benchmarks, and how to improve each metric.
+Yes, though the specific definitions may need adaptation. For embedded systems, mobile applications, or on-premises software, 'deployment to production' might mean a release to an app store, a firmware update, or a customer-facing release. The underlying principles - measuring how quickly and reliably you deliver value - apply regardless of the delivery mechanism. Adjust the metric definitions to fit your context while preserving their intent.
 
-AI Is Amplifying Software Engineering Performance, Says the 2025 ...
-https://www.infoq.com/news/2026/03/ai-dora-report/
-AI Is Amplifying Software Engineering Performance, Says the 2025 DORA Report. Mar 17, 2026 6 min read. by. Author photo Craig Risi.
+DORA | DORA’s software delivery performance metrics
+https://dora.dev/guides/dora-metrics/
+DORA has identified five software delivery performance metrics that provide an effective way of measuring the outcomes of the software delivery process. DORA's research shows that these performance metrics predict better organizational performance and well-being for team members.
 
-DORA Metrics Benchmarks 2026: Where Does Your Team Stand?
+DORA Metrics Benchmarks 2026: Where Does Your Team Stand? | Gitrecap Blog
 https://www.gitrecap.com/blog/dora-metrics-benchmarks
-Compare your engineering team against DORA metrics benchmarks from 39,000+ teams. See what Elite, High, Medium, and Low performance looks like for deployment frequency, lead time, CFR, and MTTR.
+From Medium to High: Focus on eliminating friction. Move to trunk-based development or short-lived feature branches. Invest in test coverage so engineers trust the pipeline. Establish review SLAs and notification systems for waiting PRs.
+
+What are DORA metrics? Complete guide to measuring DevOps performance
+https://getdx.com/blog/dora-metrics/
+DORA metrics are four key performance indicators that measure software delivery performance: deployment frequency, lead time for changes, change failure rate, and mean time to recover (MTTR).
+
+What are DORA Metrics and How to Unlock Elite Engineering Performance | LinearB Blog
+https://linearb.io/blog/dora-metrics
+... Release early and often by shipping smaller, more manageable chunks of code. Set team goals to limit PR size, and use automation to flag large PRs that might slow down your pipeline.
+
+DORA Metrics: A Full Guide to Elite Performance Engineering - Multitudes
+https://www.multitudes.com/blog/dora-metrics
+Discover the four DORA metrics that drive software delivery performance. Learn how they improve deployment speed, stability, and team efficiency.
+
+Your practical guide to DORA metrics | Swarmia
+https://www.swarmia.com/blog/dora-metrics/
+Anything in the ballpark of 24 hours is a great result. For a team that’s interested in improving their change lead time, these are some common discussion topics: Is something in our process inherently slowing you down?
+
+DevOps Best Practices for 2026: AI, Tools & Teams
+https://www.arielsoftwares.com/devops-best-practices/
+The four core DORA metrics are: Deployment Frequency, Lead Time for Changes, Change Failure Rate, and Mean Time to Recovery (MTTR). Teams with ...
 
 Deployment Frequency: The Metric That Reveals How Fast Your ...
 https://www.flagsmith.com/blog/deployment-frequency
 Rather than grouping teams into abstract performance tiers, the 2025 DORA report presents a full distribution of where organisations actually sit. It's more ...
 
-Engineering Productivity Benchmarks 2026 — DORA Metrics, Cycle Time ...
-https://knowledgelib.io/business/industry-benchmarks/engineering-productivity-benchmarks-2026/2026
-Engineering productivity benchmarks 2026: DORA metrics (deployment frequency, lead time, CFR, recovery time), cycle time, PR metrics by team size and AI adoption. H2 2025 data from 6.1M+ PRs. 6 sources, all cited. Verified 2026-03-11.
-
-The essential software engineering checklist for scaling in 2026
-https://meduzzen.com/blog/software-engineering-checklist-scaling-2026/
-Apr 2, 2026 ... Checklist item 3: Use platform engineering and value stream management for scale · Audit your current developer experience: Where do engineers ...
-
-Engineering metrics: What actually matters in 2026
-https://sourcegraph.com/blog/engineering-metrics-what-actually-matters-in-2026
-Every engineering leader eventually hits the same wall of unknown bottlenecks; this essential guide provides the data to break through, covering DORA metrics, productivity, and quality signals. Learn how to implement the right metrics to illuminate your delivery process, avoid toxic 'surveillance culture,' and turn measurement into meaningful, systemic improvement.
-
-Platform Engineering Becomes Mandatory: The New DevOps ...
-https://platformengineering.com/features/platform-engineering-becomes-mandatory-the-new-devops-standard/
-Mar 4, 2026 ... In 2026, a definite change is being observed in the world of DevOps, with the traditional approach of using multiple CI/CD tools being ...
+DORA Metrics: the Right Answer to measuring engineering team performance
+https://www.reddit.com/r/programming/comments/196mevj/dora_metrics_the_right_answer_to_measuring/
+Only way to measure a development team is by having competent managers that understand the problem space and technology. All other approaches can and will be manipulated. More on reddit.com

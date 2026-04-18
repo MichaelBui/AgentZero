@@ -1,39 +1,39 @@
-Wellness for Engineers: Strategies to Combat Burnout and Boost ...
-https://www.wellnessworkdays.com/post/wellness-for-engineers-strategies-to-combat-burnout-and-boost-productivity
-According to a 2022 study published in the Journal of Occupational Health Psychology, over 68% of engineers reported experiencing moderate to severe levels of job-related stress. Burnout isn't just a personal health issue; it impacts team morale, project outcomes, and organizational productivity.
+Why AI Is Increasing Workplace Burnout | Built In
+https://builtin.com/articles/ai-burnout-at-work
+AI tools promised to make work easier, but research suggests they may be increasing multitasking, longer hours and workplace burnout.
 
-Tech worker burnout: causes, impact & solutions for HR & leadership
-https://www.circles.com/resources/tech-worker-burnout-causes-impact-solutions-for-hr-leadership
-Dec 9, 2025 ... Free your engineers from life friction. Use work-life balance services — concierge to handle tasks outside work: coordinating home repairs, ...
+Why Gen AI Feels So Threatening to Workers
+https://hbr.org/2026/03/why-gen-ai-feels-so-threatening-to-workers
+AI introduced in this way threatens employees' professional identities and the sense of ownership they feel over their work. Unfortunately, that's exactly how ...
 
-Help Your Team Prevent Burnout: 9 Proven Steps for Architecture ...
-https://monograph.com/blog/prevent-burnout-architecture-engineering-leaders
-Discover 9 research-backed strategies to prevent burnout in A&E firms. Learn early warning signs, workload management, and proven methods that protect your team while improving project delivery.
+When Using AI Leads to "Brain Fry" - Harvard Business Review
+https://hbr.org/2026/03/when-using-ai-leads-to-brain-fry
+As firms increasingly incentivize employees to build and oversee complex teams of agents—for example, by measuring and rewarding token consumption as a proxy for performance—people are finding ...
 
-Strategies to Improve Workplace Wellbeing and Reduce Employee ...
-https://www.labmanager.com/new-workplace-wellbeing-report-identifies-strategies-to-combat-languishing-35230
-The 2026 Workplace Wellbeing Report, conducted by the Center for Professional Responsibility in Business and Society in partnership with YouGov, ...
+AI transforms workplace, workers divided on benefits and fears
+https://www.linkedin.com/posts/benzinga_artificial-intelligence-is-transforming-the-activity-7437150287192068097-ARnH
+Mar 10, 2026 ... Forty-two percent considered quitting last year, citing poor pay, burnout, and lack of respect. Flexibility also matters more than ever, with ...
 
-Burnout Prevention and Recovery Strategies for Employees and Leaders
-https://www.hrpa.ca/hr-insights/burnout-prevention/
-There has never been a better time to learn more about strategies for burnout prevention. Research from Forbes shows workplace burnout at a record high: 66% of US employees are reporting burnout, with return to work mandates exacerbating existing pressures from long hours and poor work life balance.
+What Is AI Burnout, And How Can It Be Avoided? - Forbes
+https://www.forbes.com/sites/bernardmarr/2026/03/02/what-is-ai-burnout-and-how-can-it-be-avoided/
+AI burnout is rising as generative AI tools make it easy to take on more work, start more projects, and keep prompting long after the day should be done.
 
-Preventing Developer Burnout: From Reactive Fixes to a Proactive ...
-https://blogs.embarcadero.com/preventing-developer-burnout-from-reactive-fixes-to-a-proactive-approach-to-well-being/
-Oct 6, 2025 ... Preventing developer burnout with proactive strategies: AI-driven workload management, psychological safety, and outcome-based metrics for ...
+workers say they're drowning in 'workslop,' The Guardian reports.
+https://www.facebook.com/yahoonews/posts/bosses-say-ai-boosts-productivity-workers-say-theyre-drowning-in-workslop-the-gu/1336976411621374/
+Bosses say AI boosts productivity – workers say they're drowning in 'workslop,' The Guardian reports.
 
-Combating Software Engineer Burnout - 10 Steps CTOs Can Take in 2026
-https://brainhub.eu/library/combating-software-engineer-burnout
-Every CTO's guide to identifying, preventing, and combating software engineer burnout. Learn how to help your team stay creative, in control, and fulfilled.
+'AI brain fry' is real and making workers more exhausted, not more ...
+https://fortune.com/2026/03/10/ai-brain-fry-workplace-productivity-bcg-study/
+Too much AI oversight at work was associated with not just brain fog, but more errors, decision fatigue, and greater intention to quit, Boston Consulting Group researchers said.
 
-Workload Balancing Tools That Stop Burnout Before It Starts - Mosaic
-https://www.mosaicapp.com/post/workload-balancing-tools-that-stop-burnout-before-it-starts
-The Critical Importance of Workload Management in Employee Wellbeing · Core Strategies for Effective Workload Balancing · The Power of Workload Management Tools ...
+AI can double output. Human biology can't | Fortune
+https://fortune.com/2026/03/10/ai-can-double-output-human-biology-cant/
+Mar 10, 2026 ... There's an AI burnout trap, and your productivity gains are fragile ... work-life balance. Now the government wants to cut their pay for ...
 
-Burnout Prevention Programs: Building a Sustainable Work-Life Balance
-https://www.linkedin.com/pulse/burnout-prevention-programs-building-sustainable-work-life-3olhf
-Introduction The increasing prevalence of burnout among employees has emerged as a critical issue for organisations striving to maintain productivity and employee well-being. Burnout, a state of ...
+AI Is Boosting Productivity—but Data Shows Employee Workloads Are ...
+https://www.inc.com/bruce-crumley/ai-is-boosting-productivity-but-data-shows-employee-workloads-are-getting-heavier/91316283
+A new study analyzing 443 million work hours found AI tools on the job yield mixed results for companies and their workforces.
 
-How to avoid employee burnout and boost productivity | UNC ...
-https://www.unc.edu/discover/how-to-avoid-employee-burnout-and-boost-productivity/
-Mar 17, 2026 ... What managers can do: · Try not to rush into judgment. Establish a baseline for your employees' behavior and work ethic. · Encourage mindfulness.
+How Artificial Intelligence is Redefining the Future of Work | by Arooma
+https://medium.com/@arooma3264/how-artificial-intelligence-is-redefining-the-future-of-work-1276beae3f0c
+Mar 27, 2026 ... Prompt engineers and automation consultants. Rather than eliminating ... Wellness apps monitor work-life balance. This leads to: Happier ...
