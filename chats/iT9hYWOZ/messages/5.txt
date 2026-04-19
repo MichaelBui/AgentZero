@@ -1,39 +1,39 @@
-Running 122B-Parameter LLMs Locally on AMD Strix Halo for ... - LinkedIn
-https://www.linkedin.com/pulse/running-122b-parameter-llms-locally-amd-strix-halo-deep-pellegrini-33cjc
-Over the past few months, I've been building a local LLM inference stack on an AMD Ryzen AI Max+ 395 (Strix Halo) — a chip with 128GB of unified LPDDR5X memory shared between CPU and GPU. My ...
+Engineering Productivity Benchmarks 2026 — DORA Metrics, Cycle Time by Team Size | knowledgelib.io
+https://knowledgelib.io/business/industry-benchmarks/engineering-productivity-benchmarks-2026/2026
+Using PR count to evaluate individuals incentivizes gaming and damages culture. Fetch when a user asks about engineering team performance benchmarks, needs to set DORA metric targets, is evaluating developer productivity tools, or needs to benchmark cycle time and deployment practices by team size. Startup Salary Benchmarks 2026 Professional Services Benchmarks 2026 SaaS Industry Benchmarks 2026
 
-GitHub - Light-Heart-Labs/DreamServer: Local AI anywhere, for ...
-https://github.com/Light-Heart-Labs/DreamServer
-AMD Strix Halo (Unified Memory). Unified RAM, Model, Hardware. 64–89 GB, Qwen3 30B-A3B (30B MoE), Ryzen AI MAX+ 395 (64GB). 90+ GB, Qwen3 Coder Next (80B MoE) ...
+DORA Metrics for Engineering Teams: Guide & Benchmarks | Engineering Manager Tools
+https://www.em-tools.io/frameworks/dora-metrics
+Yes, though the specific definitions may need adaptation. For embedded systems, mobile applications, or on-premises software, 'deployment to production' might mean a release to an app store, a firmware update, or a customer-facing release. The underlying principles - measuring how quickly and reliably you deliver value - apply regardless of the delivery mechanism. Adjust the metric definitions to fit your context while preserving their intent.
 
-Strix Halo Mini PCs for Local LLM Inference: A Practical Guide to ...
-https://www.starryhope.com/minipcs/strix-halo-local-llm-inference-2026/
-The fundamental appeal of Strix Halo for local LLM work comes down to one thing: memory bandwidth determines inference speed, and these chips can access a massive pool of unified memory without the bottlenecks that plague discrete GPU setups.
+DORA Metrics Engineering Effectiveness: AI Impact in 2026
+https://blog.exceeds.ai/dora-metrics-engineering-effectiveness/
+Exceeds AI Repo Leaderboard shows top contributing engineers with trends for AI lift and quality ... This validation comes from tracking AI-touched code over 30 or more days to spot technical debt accumulation before it becomes a production crisis. This early warning system keeps AI speed gains from turning into stability problems. The 2026 vision for elite engineering teams centers on AI-aware DORA performance.
 
-What would a good local LLM setup cost in 2026? - Reddit
-https://www.reddit.com/r/LocalLLM/comments/1r0x3kn/what_would_a_good_local_llm_setup_cost_in_2026/
-Feb 10, 2026 ... You can get AMD AI MAX+ 395 with 128GB of unified RAM for half that... ... And why do you bought from Nvidia and not from AMD like "Halo Strix"?
+DORA Metrics Benchmarks 2026: Where Does Your Team Stand? | Gitrecap Blog
+https://www.gitrecap.com/blog/dora-metrics-benchmarks
+Blameless incident retrospectives: A culture where engineers report incidents honestly and participate openly in retrospectives, because the goal is systemic improvement rather than individual accountability.
 
-Strix Halo Mini PCs for AI — 128GB, 40 TOPS NPU 2026
-https://www.compute-market.com/blog/strix-halo-mini-pc-local-ai-2026
-In March 2026, a new class of hardware is reshaping local AI: AMD Strix Halo mini PCs. These sub-3-liter machines pack up to 128 GB of unified LPDDR5X memory — with up to 96 GB directly addressable by the integrated GPU. That means you can run 70B+ parameter LLMs that no 16 GB or even 32 GB discrete GPU can touch, in a box that sits quietly on your desk and draws under 120W.
+DORA Metrics Are Not Enough in 2026: What Elite Engineering Teams Track Instead
+https://oobeya.io/blog/dora-metrics-not-enough-2026
+If you want this in a more operational ... stack in 2026 is layered. Start with consistent DORA definitions across teams and collect enough historical data to establish a reliable baseline....
 
-Llama.cpp/vLLM Toolboxes for LLM inference on Strix Halo
-https://community.frame.work/t/llama-cpp-vllm-toolboxes-for-llm-inference-on-strix-halo/74916
-Sep 4, 2025 ... I just wanted to share the toolboxes I've been working on together with folks at https://strixhalo-homelab.d7.wtf/.
+Engineering metrics leaders should track in 2026 (and what to do with them) | Swarmia
+https://www.swarmia.com/blog/engineering-metrics-for-leaders/
+Where DORA metrics become valuable is in spotting systemic issues across your organization, and keeping an eye on whether your engineering effectiveness efforts are actually working.
 
-AMD Strix Halo AI Workstations Bring LLMs to the Desktop
-https://insighttechdaily.com/amd-strix-halo-ai-workstations-local-llm-desktops/
-New AMD Ryzen AI Max+ 395 workstations bring up to 128GB unified memory and massive bandwidth for running Llama and DeepSeek models locally.
+Engineering Metrics: What Actually Matters in 2026 | Sourcegraph Blog
+https://webflow.sourcegraph.com/blog/engineering-metrics-what-actually-matters-in-2026
+This guide covers the metrics that matter most: DORA metrics, productivity indicators, and quality signals. You'll learn how to implement them without creating a toxic culture, how to avoid common traps, and how to turn measurement into meaningful improvement.
 
-Distilled Reasoning on Strix Halo: Running a Claude-Trained ...
-https://tinycomputers.io/posts/distilled-reasoning-on-strix-halo-qwen35-claude-thinking.html
-Mar 29, 2026 ... Second, whether the AMD Strix Halo APU, with its unified memory ... 2026-03-17AI, inference · The Real Cost of Running Qwen TTS Locally ...
+Best Software Engineering Metrics for Teams in 2026 - The missing link in Engineering management | Pensero
+https://pensero.ai/blog/software-engineering-metrics
+Why it matters: Dissatisfied developers leave, perform poorly, and create negative culture. Satisfaction predicts retention, productivity, and quality. How to measure: Regular surveys asking developers to rate satisfaction with various dimensions on numeric scales. Track trends over time and compare across teams.
 
-Framework-strix-halo-llm-setup - GitHub
-https://github.com/Gygeek/Framework-strix-halo-llm-setup
-Complete guide to running large language models locally on AMD Ryzen AI Max+ 395 (Strix Halo) with 128GB unified memory. Covers BIOS config, kernel setup, ROCm installation, and llama.cpp deploymen...
+DORA | DORA’s software delivery performance metrics
+https://dora.dev/guides/dora-metrics/
+DORA is a long running research program that seeks to understand the capabilities that drive software delivery and operations performance. DORA helps teams apply those capabilities, leading to better organizational performance.
 
-Home ai stack with local infrastructure and automation - Facebook
-https://www.facebook.com/groups/vibecodinglife/posts/2006045549983972/
-The brain: AMD Ryzen AI MAX+ with 128GB unified RAM. One machine ... Setting up local LLM for homelab management? Beh Xhen ▻ Home ...
+What Are DORA Metrics? The Complete Guide for Engineering Leaders (2026) | Gitrecap Blog
+https://www.gitrecap.com/blog/what-are-dora-metrics
+Learn what DORA metrics are, how to measure them, and why elite engineering teams track deployment frequency, lead time, change failure rate, and MTTR. Includes benchmarks from 39,000+ teams.

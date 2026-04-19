@@ -1,39 +1,39 @@
-Engineering Productivity Benchmarks 2026 — DORA Metrics, Cycle Time ...
-https://knowledgelib.io/business/industry-benchmarks/engineering-productivity-benchmarks-2026/2026
-Engineering productivity benchmarks 2026: DORA metrics (deployment frequency, lead time, CFR, recovery time), cycle time, PR metrics by team size and AI adoption. H2 2025 data from 6.1M+ PRs. 6 sources, all cited. Verified 2026-03-11.
+How to Foster Psychological Safety When AI Erodes Trust on Your Team
+https://hbr.org/2026/02/how-to-foster-psychological-safety-when-ai-erodes-trust-on-your-team
+As organizations rapidly integrate AI into their workflows, leaders are uncovering the impact on team dynamics. The same AI tools that promise to enhance productivity can create predictable patterns of team dysfunction that mirror classic ...
 
-Engineering Productivity Handbook | An Expert Guide by Faros AI
-https://www.faros.ai/engineering-productivity/handbook
-Collect the results of developer surveys onto the platform, such that sentiment data from employee responses can be intersected with telemetry-based data from ...
+IT Workforce Transformation in the Age of AI - BTS
+https://bts.com/insights/it-workforce-transformation-ai
+This trend reflects a growing disconnect between organizational expectations of productivity — often driven by rapid AI adoption and return-to- ...
 
-DORA Metrics Benchmarks 2026: Where Does Your Team Stand?
-https://www.gitrecap.com/blog/dora-metrics-benchmarks
-Compare your engineering team against DORA metrics benchmarks from 39,000+ teams. See what Elite, High, Medium, and Low performance looks like for deployment frequency, lead time, CFR, and MTTR.
+AI in HR: What's Real | OneDigital
+https://www.onedigital.com/en-US/articles/ai-in-hr-whats-real/
+Mar 31, 2026 ... Create Psychological Safety for the Transition: Fear is a rational response to uncertainty. ... HR in 2026: From AI hype to human-centred ...
 
-Your Questions About AI Agents and Production Feedback Answered
-https://www.honeycomb.io/blog/your-questions-about-ai-agents-production-feedback-answered
-Apr 10, 2026 ... We covered a lot of ground—the DORA report's findings on AI driving both throughput and instability, why observability is shifting left into the ...
+Motivation is the missing link in AI at work - PwC
+https://www.pwc.com/us/en/services/consulting/business-transformation/workforce-transformation/motivation-missing-link-ai-work.html
+Mar 31, 2026 ... By reinforcing that psychological safety is about constructive candor and learning from failure—not just comfort—you can balance accountability ...
 
-DORA Metrics Engineering Effectiveness: AI Impact in 2026
-https://blog.exceeds.ai/dora-metrics-engineering-effectiveness/
-The 5 Key DORA Metrics Explained for 2026 Teams DORA's software delivery performance framework centers on five core metrics that measure engineering effectiveness across throughput and stability. These benchmarks give engineering leaders a shared language for evaluating team performance in 2026.
+Leading Psychologically Safe Digitally Enabled Project Teams
+https://journals.sagepub.com/doi/10.1177/87569728251362760
+We contribute to psychological safety during the transition to Industry 5.0 by studying how leaders in digitally enabled teams—that is, teams that incorporate advanced digital technologies such as artificial intelligence (AI), mixed realities, and digital twins—facilitate this transition.
 
-DevOps Workflow Strategy for Startups: 7-Step Guide (2026)
-https://hyperping.com/blog/devops-workflow-strategy
-Mar 30, 2026 ... This guide covers a 7-step implementation approach, from version control and CI/CD to monitoring and incident response. Following these steps ...
+Unveiling Team Emergent States in the Age of Human-AI Teaming
+https://www.tandfonline.com/doi/full/10.1080/10447318.2026.2635683
+There was no difference in perceived team psychological safety. Participants in HATs identified less with the AI than with the human teammate. These findings ...
 
-DORA Metrics: A Practical Guide for Engineering Leaders
-https://typoapp.io/blog/dora-metrics-for-engineering-leaders
-As of 2026, DORA metrics have expanded to a five-metric model to account for modern development practices and the impact of AI tools, with Reliability emerging as a fifth signal, particularly for organizations with mature SRE practices.
+Rebuilding trust and psychological safety in AI-enabled teams
+https://www.linkedin.com/pulse/rebuilding-trust-psychological-safety-ai-enabled-teams-david-bergey-5wfze
+In this edition, I decided to focus on a fundamental subject: trust. With the widespread global adoption of AI tools and incessant headlines on its impact within the job market (ultimately people ...
 
-Engineering Blog | Harness Blog Primary Category
-https://www.harness.io/blog-category/engineering-blog
-Discover this essential guide to modern load testing best practices and tools. Pritesh Kiri. March 27, 2026. 7 minutes to read.
+Is Your Industrial AI Safe? Building Trust & Resilience - LinkedIn
+https://www.linkedin.com/pulse/your-industrial-ai-safe-building-trust-resilience-nemko-digital-svxyc
+AI is no longer a lab experiment; trust must be designed in from day one to make AI viable at scale in industry. Across the technical and ...
 
-DORA Metrics for Engineering Teams: Guide & Benchmarks
-https://www.em-tools.io/frameworks/dora-metrics
-Implement DORA metrics in your engineering team. Covers deployment frequency, lead time, change failure rate, benchmarks, and how to improve each metric.
+Infosys and MIT Technology Review Insights Report Reveals the Critical ...
+https://www.infosys.com/newsroom/press-releases/2025/psychological-safety-driving-ai-initiatives.html
+Laurel Ruma, Global Editorial Director, MIT Technology Review Insights said, "Our research, in collaboration with Infosys, shows that psychological safety is not a soft metric, it is a measurable driver of AI outcomes. Leaders who communicate clearly about AI's impact and model openness to questions and dissent create the conditions for innovation. Without that foundation of trust, even ...
 
-Why AI Makes Engineering Foundations More Important Than Ever
-https://www.cortex.io/podcasts/why-ai-makes-engineering-foundations-more-important-than-ever
-Dec 4, 2025 ... In the latest episode of the Cortex podcast, Cortex co-founder and CTO Ganesh Datta sits down with Nathen Harvey, who leads the DORA ...
+Council Post: A New Playbook For Trust In Enterprise AI Rollouts
+https://www.forbes.com/councils/forbestechcouncil/2026/04/10/a-new-playbook-for-trust-in-enterprise-ai-rollouts/
+Ahead of any major project, change managers should assess the perceived psychological safety of impacted stakeholder groups. Do people feel comfortable asking questions or speaking up when something doesn’t make sense to them? This may require introducing a new KPI for the implementation: user confidence.

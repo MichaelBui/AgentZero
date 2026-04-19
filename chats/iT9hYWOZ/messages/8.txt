@@ -1,39 +1,39 @@
-Calm Work in 2026: Preventing Burnout Without Quitting Your Job in ...
-https://www.reeracoen.sg/articles/calm-work-in-2026-preventing-burnout-without-quitting-your-job-in-singapore
-Calm Work in 2026: Preventing Burnout Without Quitting Your Job in Singapore. In blogs, many information about finding a new job and the latest tips are found. Reeracoen Singapore is professional recruitment firm in Singapore.
+AI Burnout: When Productivity Hits 10× | CodeElevation - Medium
+https://medium.com/codeelevation/the-ai-era-ledger-of-silicon-valley-engineers-my-efficiency-increased-10-yet-im-more-6aab89e3a7f9
+AI tools like Claude Code boost developer output 10×, but rising cognitive load and workload creep are driving burnout across Silicon Valley.
 
-Singapore - Careers at Quadient
-https://careers.quadient.com/en/locations/singapore
-At Quadient, we recognize work-life balance as an important aspect of a healthy work environment. ... Kogilavani. Customer Care Manager APAC, Singapore. "As ...
+In the workforce, AI is having the opposite effect it was supposed to, UC Berkeley researchers warn | Fortune
+https://fortune.com/2026/02/10/ai-future-of-work-white-collar-employees-technology-productivity-burnout-research-uc-berkeley/
+You just work the same amount or ... seem ideal, nonstop work has the potential to lead to problems down the line, including blurring the boundary between work and nonwork, as well as burnout and cognitive fatigue....
 
-Beyond Burnout: Fix Work, Not Ourselves in 2026
-https://www.content.mycareersfuture.gov.sg/beyond-burnout-resolutions-fixing-work
-Beyond Burnout: Why Singapore's 2026 Resolutions Should Focus on Fixing Work, not Ourselves Every January, Singaporeans resolve to be more productive and more disciplined. But if burnout rates remain stubbornly high year after year, perhaps the problem isn't us.
+When Using AI Leads to "Brain Fry" - Harvard Business Review
+https://hbr.org/2026/03/when-using-ai-leads-to-brain-fry
+As firms increasingly incentivize employees to build and oversee complex teams of agents—for example, by measuring and rewarding token consumption as a proxy for performance—people are finding ...
 
-Full article: Development of the Singapore workplace wellbeing scale
-https://www.tandfonline.com/doi/full/10.1080/23311908.2025.2571296
-These factors were support from boss, fairness, autonomy, meaningful work, co-worker relationship, role clarity, work-life balance, learning and professional ...
+The AI Productivity Paradox: Faster Code, More Engineer Burnout
+https://ballastlane.com/news/ai-productivity-paradox-burned-out-engineers
+AI coding tools are making your engineers faster, but validating output and integrating it responsibly is now the hard part—and for many teams, the workload has multiplied.
 
-Singapore faces crisis as worker burnout soars
-https://theindependent.sg/singapore-faces-crisis-as-worker-burnout-soars/
-SINGAPORE: The International Institute for Management Development ranks Singapore first in global competitiveness, yet as the country's economy thrives, more Singaporeans are experiencing work ...
+After watching engineers burn out from fixing late-night outages ...
+https://www.facebook.com/forbes/posts/after-watching-engineers-burn-out-from-fixing-late-night-outages-resolve-ai-ceo-/1332660205390633/
+After watching engineers burn out from fixing late-night outages, Resolve AI CEO Spiros Xanthos is developing AI systems to ease the burden ...
 
-Hi, I worked remotely for a Singapore-based company ... - Facebook
-https://www.facebook.com/groups/remoteworkmalaysia/posts/1227082245957271/
-Dec 15, 2025 ... What are the differences in work-life balance between working remotely in Malaysia and onsite in Singapore? 󲃣. People who have experience with ...
+[N] AI engineers report burnout and rushed rollouts as ‘rat race’ to stay competitive hits tech industry
+https://www.reddit.com/r/MachineLearning/comments/1cjdmr5/n_ai_engineers_report_burnout_and_rushed_rollouts/
+IMO, once the c-suite heard "AI is magic," this seemed inevitable. Everyone wants to jump on the new thing, not spend any money, and doesn't know what doing it will actually involve. More on reddit.com
 
-'I was simply too tired': Singaporeans burnt out from long hours ...
-https://www.channelnewsasia.com/today/ground-up/i-was-simply-too-tired-singaporeans-burnt-out-long-hours-working-days-and-unreasonable-bosses-4983986
-Multiple surveys in recent years have pointed to the prevalence of workplace burnout in Singapore. From headaches, insomnias and crying in the office, some workers tell CNA TODAY of the exhaustion ...
+Google Engineer Shares Winning Formula to Beat AI Burnout by 2026!
+https://opentools.ai/news/google-engineer-shares-winning-formula-to-beat-ai-burnout-by-2026
+Discover how a forward-thinking Google engineer keeps AI burnout at bay by smartly prioritizing learning amid rapid tech advancements at the tech giant. This article delves into strategic techniques like time-blocking and resource curation to maintain well-being while upskilling, essential for surviving in Google's high-pressure environment in 2026.
 
-Livability in the Age of AI As Budget 2026 leans heavily into AI ...
-https://www.instagram.com/reel/DVIy5n9kaWT/
-Feb 24, 2026 ... ... 2026 leans heavily into AI adoption and global competitiveness, we must ask: How does this translate into a better life for the average ...
+The AI Productivity Paradox: Why Efficiency is Skyrocketing While ...
+https://levelup.gitconnected.com/the-ai-productivity-paradox-why-efficiency-is-skyrocketing-while-employees-are-burning-out-3747c44910d3
+Mar 17, 2026 ... As of March 2026, the data is in. And it's uncomfortable. We are ... “Workforce Trends 2026: Leaders Confront Burnout, Disengagement, and AI- ...
 
-Supporting Mental Wellbeing in Employees: A Guide for Singapore ...
-https://www.waf.org.sg/insights-and-updates/37-supporting-mental-wellbeing-in-employees-a-guide-for-singapore-employers
-2. Promote Work-Life Balance Support balance by: Offering Flexi-Work Arrangements (FWAs) Setting boundaries for after-hours communication Encouraging rest days and wellness leave Respecting personal time and family responsibilities This reduces burnout and helps employees recharge, leading to improved focus and performance. 3. Create a ...
+How workers will adapt in the AI era | McKinsey
+https://www.mckinsey.com/mgi/media-center/how-workers-will-adapt-in-the-ai-era
+Job postings signal what is ahead for the labor market. They show a sevenfold increase in demand for the ability to use and manage AI tools, faster growth than for any other skill in the past two years, including the ability to design AI systems themselves. You might think the most successful workers in the age of AI would be engineers.
 
-Prevalence and associated factors of burnout among working adults ...
-https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2024.1326227/full
-Mar 13, 2024 ... 63. IrawantoDWNoviantiKRRozK. Work from home: measuring satisfaction between work–life balance and work stress during the COVID-19 pandemic in ...
+AI fatigue is real and nobody talks about it · Siddhant Khare
+https://siddhantkhare.com/writing/ai-fatigue-is-real
+You're using AI to be more productive. So why are you more exhausted than ever? The paradox every engineer needs to confront.

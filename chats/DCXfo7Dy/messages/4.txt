@@ -1,45 +1,10 @@
-[2026-04-19T06:35:17+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-19T06:35:17+0000]   -> 6 message(s)
-[2026-04-19T06:35:17+0000]   -> 1 new cached
-[2026-04-19T06:35:22+0000]   WARN: could not restore unread status
-[2026-04-19T06:35:22+0000] [Fetching 7/8] 📅 Daily summary
-[2026-04-19T06:35:22+0000] Summarizing [5/73] Google Drive (1 msgs, direct)
-[2026-04-19T06:35:31+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
-Call log:
-  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAP-kMoqY\"]").first
-    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="space/AAQAP-kMoqY/SCcFR" data-group-id="space/AAQAP-kMoqY" data-display-timestamp="1776557006117" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
-  - attempting click action
-    - waiting for element to be visible, enabled and stable
-    - element is visible, enabled and stable
-    - scrolling into view if needed
-    - done scrolling
-    - performing click action
-    - click action done
-    - waiting for scheduled navigations to finish
+Skills matching 'notify user' (7):
+- a0-contribute-plugin: Guide for publishing an Agent Zero plugin to the community Plugin Index (a0-plugins repo). Covers GitHub repo setup, index.yaml creation, CI validation rules, and PR submission. Use when the user want…
+- a0-plugin-router: Main entry point for all Agent Zero plugin tasks. Routes to specialist skills for creating, reviewing, contributing, managing, or debugging plugins. Use when the user mentions plugins, asks how the pl…
+- a0-setup-cli: Guide the user through installing and connecting the A0 CLI on the host machine so Dockerized Agent Zero can work on real local files. Use when asked to install A0, set up the CLI connector, connect A…
+- create-skill: Wizard for creating new Agent Zero skills. Guides users through creating well-structured SKILL.md files. Use when users want to create custom skills.
+- gchat: Read Google Chat conversations using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check chat messages, read…
+- gmail: Read Gmail email threads using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check emails, read recent threa…
+- jira: Fetch Jira tickets with SQLite caching, AI-driven relevance scoring, and structured summarization. Supports raw JQL query, saved filter by ID, or Polaris view. Outputs relevance-scored markdown summar…
 
-[2026-04-19T06:35:42+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
-Call log:
-  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAP-kMoqY\"]").first
-    - locator resolved to <span tabindex="0" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd KKjvXb" id="space/AAQAP-kMoqY/SCcFR" data-group-id="space/AAQAP-kMoqY" data-display-timestamp="1776557006117" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
-  - attempting click action
-    - waiting for element to be visible, enabled and stable
-    - element is visible, enabled and stable
-    - scrolling into view if needed
-    - done scrolling
-    - performing click action
-
-[2026-04-19T06:35:42+0000]   SKIP: item not found in DOM
-[2026-04-19T06:35:42+0000] [Fetching 8/8] fairnex-datadog-notification
-[2026-04-19T06:35:54+0000] Done [5/73] dm/7d1XKcAAAAE rel=8
-[2026-04-19T06:35:55+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
-Call log:
-  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAAA8dv5lp0\"]").first
-    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="space/AAAA8dv5lp0/SCcFR" data-group-id="space/AAAA8dv5lp0" data-display-timestamp="1776555884597" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
-  - attempting click action
-    - waiting for element to be visible, enabled and stable
-    - element is visible, enabled and stable
-    - scrolling into view if needed
-
-
-
-[SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+Tip: use skills_tool method=load skill_name=<name> to load full instructions.

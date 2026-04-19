@@ -1,39 +1,39 @@
-Building stronger engineering teams with aligned autonomy - Stack Overflow
-https://stackoverflow.blog/2025/07/14/building-stronger-engineering-teams-with-aligned-autonomy/
-July 14, 2025 Building stronger engineering teams with aligned autonomy Striking the balance between speed and strategy is a major challenge for business and tech leaders. That's where aligned autonomy comes in.
+Latest in Singapore's AI scene that businesses should know - a round-up ...
+https://www.edb.gov.sg/en/business-insights/insights/latest-in-singapores-ai-scene-that-businesses-should-know-a-round-up-from-january-to-march-2026.html
+Latest in Singapore's AI scene that businesses should know - a round-up from January to March 2026 A S$1 billion investment in research and talent development, opportunities in Southeast Asia, latest moves from companies such as UBS and Thales - read to find out about these AI developments and more.
 
-Council Post: The Neuroscience Of Authority: Engineering Trust In Modern Leadership
-https://www.forbes.com/councils/forbescoachescouncil/2026/04/07/the-neuroscience-of-authority-engineering-trust-in-modern-leadership/
-Authority is built through repetition. Research on how people learn demonstrates that practice solidifies neural connections, and leadership communications are no different. Repeatedly and calmly emphasizing your contributions helps others solidify ...
+Agentic AI Goes Mainstream in the Enterprise, but 94% Raise Concern About Sprawl, OutSystems Research Finds
+https://www.prnewswire.com/apac/news-releases/agentic-ai-goes-mainstream-in-the-enterprise-but-94-raise-concern-about-sprawl-outsystems-research-finds-302739251.html
+Nearly every organization surveyed, 96%, is already using AI agents in some capacity, and 97% are exploring system-wide agentic AI strategies. The findings signal a clear shift from pilots to production as businesses embed AI into mission-critical ...
 
-The secret sauce to high-performing teams: leadership, trust, and autonomy
-https://madewithlove.com/blog/the-secret-sauce-to-high-performing-teams-leadership-trust-and-autonomy/
-Empowering teams in modern workspaces means shifting from traditional management to a trust-based, autonomous culture. This approach enhances performance, especially remotely, by emphasizing purpose before results and fostering open communication ...
+Deloitte report: Agentic and physical AI set for rapid growth in ...
+https://www.deloitte.com/southeast-asia/en/about/press-room/agentic-and-physical-ai-set-for-rapid-growth-in-singapore-in-the-next-two-years.html
+The Deloitte AI Institute has unveiled the 2026 edition of its "State of AI in the Enterprise" report, revealing how organisations are currently engaging with artificial intelligence (AI) and the impacts, changes and considerations this technology is introducing.
 
-No Trust = No Autonomy: Team autonomy only works when leadership shows trust | by Ro Fernandez | Medium
-https://medium.com/@rociofernn/no-trust-no-autonomy-team-autonomy-only-works-when-leadership-shows-trust-7f2a7c180d2b
-No Trust = No Autonomy: Team autonomy only works when leadership shows trust The secret ingredient to team autonomy isn’t just clarity — it’s trust. When trust is present, teams feel a deeper …
+IDC - Charting the agentic future: IDC 2026 predictions for Asia ...
+https://www.idc.com/resource-center/blog/charting-the-agentic-future-idc-2026-predictions-for-asia-pacific-japan/
+Artificial Intelligence is entering its most transformative phase yet: The agentic future. In this new era, humans and intelligent systems don't just interact; they act together with intention, autonomy, and scale. According to IDC's FutureScape 2026 predictions, organizations in Asia/Pacific are rapidly shifting from AI experimentation to enterprise-wide orchestration—where adoption ...
 
-Trusteeship: March/April 2026 - AGB
-https://agb.org/trusteeship-issue/trusteeship-march-april-2026/
-Boards of trustees, institutionally related foundation board members, university presidents, and foundation leaders can navigate these murky waters through a commitment to exceptional governance. The Compact, Institutional Autonomy, Fiduciary Duties, and Academic Freedom By Richard J.
+Agentic AI Goes Mainstream in the Enterprise, but 94% Raise ...
+https://finance.yahoo.com/sectors/technology/articles/agentic-ai-goes-mainstream-enterprise-000000271.html
+Adoption maturity varies by region. In APAC, India stands out with some of the highest levels of advanced and expert agentic AI capability, ...
 
-Building the case for AV safety: A framework for scalable autonomy
-https://news.gm.com/home.detail.html/Pages/news/us/en/engineering/2026/mar/0323-av-safety.html
-GM considers public trust an essential stewardship. As such, GM will continue to share safety information, and testing updates in an effort to build continued trust.
+I read Google Cloud’s “AI Agent Trends 2026” report, here are 10 takeaways that actually matter
+https://www.reddit.com/r/AI_Agents/comments/1q3ka8o/i_read_google_clouds_ai_agent_trends_2026_report/
+This is an AI sunmary More on reddit.com
 
-Engineering leadership in 2025: Thriving when budgets shrink - LeadDev
-https://leaddev.com/leadership/engineering-leadership-in-2025-thriving-when-budgets-shrink
-How constraints can sharpen focus and increase team autonomy: Limits don’t have to reduce creativity, they can accelerate it.
+How AI Is Driving Revenue, Cutting Costs and Boosting Productivity ...
+https://blogs.nvidia.com/blog/state-of-ai-report-2026/
+Mar 9, 2026 ... Telecommunications had the highest rate of adoption of agentic AI at 48%, followed by retail and CPG at 47%. AI agents are coming into action in ...
 
-Building Team Trust: A Blueprint for Engineering Managers | by David Anaya | Medium
-https://danaya.medium.com/building-team-trust-a-blueprint-for-engineering-managers-052a2753d895
-As you embark on this path, keep in mind that trust is built through consistent actions and transparent communication. By prioritizing your team’s autonomy, leading by example, and embracing a culture of openness, you lay the groundwork for a collaborative and high-performing environment.
+Agentic and physical AI set for rapid growth in Singapore
+https://www.frontier-enterprise.com/agentic-and-physical-ai-set-for-rapid-growth-in-singapore/
+Despite their enthusiasm for agentic AI, only 14% of leaders in Singapore report having a mature model for agentic AI governance, below the global average of 21%. Half (50%) of respondents in Singapore use a mix of public and internal proprietary frameworks to assess the risk and performance of autonomous agents.
 
-What I’ve Learned from Talking to Top Engineering Leaders in 2025 | Tech Teams Today
-https://www.revelo.com/blog/engineering-leadership-trends-in-2025
-Whether it’s fixing infrastructure or launching a new product, the standout engineers are the ones who treat problems like they own them. Autonomy with clarity builds momentum faster than any sprint velocity metric. ... Takeaway: Make expectations clear. Then trust your team to deliver.
+Forrester: Asia Pacific Tech Spending Expected To Grow 9.3% In ...
+https://www.prnewswire.com/apac/news-releases/forrester-asia-pacific-tech-spending-expected-to-grow-9-3-in-2026--but-rising-costs-and-regulations-will-impact-real-growth-302725534.html
+Mar 26, 2026 ... SINGAPORE, March 26, 2026 /PRNewswire/ -- According to Forrester's ... Software spending will grow 10.7%, with adoption of agentic AI accelerating ...
 
-Engineering Team Structure Best Practices In 2026 - gainhq.com
-https://gainhq.com/blog/engineering-team-structure/
-Trust builds the glue between autonomy and alignment. One wrong senior hire slows down 10 good engineers. The goal isn’t growing teams but growing leaders. Systems thinkers who understand how pieces connect are the ones to hire. Leadership must evolve as organizations grow.
+Which industries are adopting AI agents fastest?
+https://www.salesmate.io/blog/ai-agents-adoption-statistics/
+India, Singapore, and Japan are driving rapid experimentation in eCommerce and customer support, fueled by cost efficiency and scalable AI systems. As AI agent adoption scales, organizations are shifting toward task-specific, production-ready ...

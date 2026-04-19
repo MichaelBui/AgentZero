@@ -1,39 +1,39 @@
-2026 Prediction: Engineers Ramp Up Learning in the AI Era
-https://www.electronicdesign.com/technologies/eda/article/55363756/electronic-design-ai-for-engineers-why-continuous-learning-degrees-and-certifications-matter-in-2026
-As AI reshapes engineering work, continuous education is becoming the clearest path to staying relevant and indispensable.
+Leadership for Highly Technical People — Workshop · April 15, 2026
+https://www.makeleaders.com/
+A one-day mastermind for engineers, tech leads, and technical founders who want to lead in the AI era. Learn to multiply your impact through people — not just code. Prague, April 15, 2026.
 
-How AI is reshaping engineering systems, skills and competitiveness
-https://www.linkedin.com/pulse/how-ai-reshaping-engineering-systems-skills-competitiveness-astek-lvnee
-Feb 20, 2026 ... build continuous learning as operational infrastructure (not a one-off program). ... Next edition - March 2026. Next month we will explore ...
+Leading the AI Shift: 6 Practical Tips for Engineering Leaders
+https://agilityfeat.com/blog/2026/04/leading-through-the-ai-shift-practical-advice-for-engineering-leaders/
+1. Ambiguity Tolerance Is Now a Core Leadership Competency Traditional engineering leadership rewards precision: clear requirements, predictable timelines, measurable outcomes. AI-driven development disrupts every one of those assumptions. Models behave non-deterministically. Accuracy rates fluctuate.
 
-The Critical Shift From Courses to Continuous Learning in 2026
-https://blog.eduonix.com/2026/01/shift-from-courses-to-continuous-learning-2026/
-Explore why continuous learning systems are replacing traditional courses in 2026 and how AI-driven models are reshaping modern education.
+How Leadership Changes When Software Writes Software - Forbes
+https://www.forbes.com/councils/forbestechcouncil/2026/03/11/leading-through-the-ai-inflection-how-leadership-changes-when-software-writes-software/
+Mar 11, 2026 ... Engineering leadership has traditionally emphasized productivity. Progress was measured through velocity, delivery timelines and output. AI- ...
 
-Most in-demand skills by 2026 are expected to focus on digital ...
-https://www.instagram.com/p/DWeMYrsldO0/
-Mar 29, 2026 ... Learning Industry 4.0 with a full-time job is possible by studying in small daily time slots, focusing on practical tools like automation, ...
+Leadership Development in 2026-Mastering Human Skills, AI Tools, and Social Media Strategies for Tech Success
+https://siliconvalleytime.com/article/leadership-development/
+Leadership development in 2026 blends timeless human skills with AI tools and social media strategies. This guide reveals why leadership now tops WEF and LinkedIn reports, with comparison tables, proven frameworks, 2026 data, real examples, ...
 
-Engineering Productivity Systems: A Practical Framework for Software ...
-https://www.productiveengineer.io/2026/03/engineering-productivity-systems.html
-Learn how to build an engineering productivity system with proven workflows, metrics, and focus strategies for sustainable performance.
+AI Strategy and Leadership Program | MIT xPRO
+https://executive-ed.xpro.mit.edu/ai-strategy-and-leadership
+The AI Strategy and Leadership Program: Thriving in the New World of AI from MIT xPRO equips senior technology leaders and aspiring executives to harness artificial intelligence (AI) for strategic advantage in their organizations. The program combines leadership development with AI implementation strategies to help you manage disruption and lead responsibly in the digital age. With AI ...
 
-AI Will Reshape More Jobs Than It Replaces | BCG
-https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces
-Apr 3, 2026 ... ... between system and engineer. Instead, software development becomes ... productivity of individual engineers rises, because humans continue to play ...
+The Engineering Leadership Podcast - ELC
+https://sfelc.com/podcasts
+Plus we discuss how AI is moving managers from implementation to architecture, why the next bottleneck is managing the overhead of high-velocity experimentation ...
 
-2026 Engineering Productivity Benchmarks Report - plandek.com
-https://plandek.com/resources/2026-software-delivery-benchmark-report/
-The 2026 Engineering Productivity Benchmarks analyze real delivery data across four core pillars: Focus, Speed, Predictability, and Quality. The report quantifies performance gaps between top and bottom quartile teams and examines the measurable impact of AI-augmented engineering.
+Engineering Managers & AI: what’s actually helping your teams move faster, without burning them out?
+https://www.reddit.com/r/EngineeringManagers/comments/1ohbciz/engineering_managers_ai_whats_actually_helping/
+Meeting summarizers and long chat thread summarizers. People feel less need to attend every meeting if they can get the gist of it in a 30 second time to read paragraph and can spend their time on more productive work. More on reddit.com
 
-DeveloperWeek 2026: Making AI tools that are actually good
-https://stackoverflow.blog/2026/03/05/developerweek-2026/
-Mar 5, 2026 ... From interoperability to knowledge architecture to creating AI tools people can actually use, here's a recap of what we learned from ...
+10 Leadership Strategies to Scale Engineering Teams in 2026
+https://www.secondtalent.com/resources/leadership-strategies-scale-engineering-teams-2026/
+TL;DR: Scaling engineering teams requires leadership shifts, not just more hires. Focus on structure, async work, DevEx, and AI-augmented workflows. 83% of developers report burnout. Annual turnover in software engineering runs at 23 to 25%. And communication paths in a 15-person team number 105. Scaling an engineering team is one of the hardest things a startup leader can do. We see this ...
 
-Continual learning: A systematic literature review
-https://www.sciencedirect.com/science/article/pii/S0893608025011074
-In today's data-driven landscape, intelligent systems must continuously learn from evolving data streams while preserving previously acquired knowledge. Continual learning (CL) has emerged as a key paradigm to meet this need, offering the potential to build adaptable and resilient AI systems.
+The 3 Mindset Shifts That Fix It - Anemari Fiser - Tech Lead Journal
+https://techleadjournal.dev/episodes/252/
+Mar 30, 2026 ... Anemari also addresses how AI is reshaping the tech lead role and why the fundamentals of leadership still apply regardless of the tools your ...
 
-Stanford AI Experts Predict What Will Happen in 2026
-https://hai.stanford.edu/news/stanford-ai-experts-predict-what-will-happen-in-2026
-Dec 15, 2025 ... After years of fast expansion and billion-dollar bets, 2026 may mark the moment artificial intelligence confronts its actual utility.
+Mentoring in Tech: Strategies and Benefits · Technical news about AI, coding and all
+https://dasroot.net/posts/2026/04/mentoring-in-tech-strategies-benefits/
+As the tech industry continues ... data from 2026, it is clear that mentorship is not just beneficial—it is essential for long-term success and innovation in the technical landscape....

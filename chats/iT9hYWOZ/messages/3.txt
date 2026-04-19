@@ -1,39 +1,39 @@
-Four Trends in AI Experimentation, Adoption, and Transformation - SPONSOR CONTENT FROM CAPTECH
-https://hbr.org/sponsored/2026/03/four-trends-in-ai-experimentation-adoption-and-transformation
-Across our work with Fortune 100, mid-market, and public sector leaders, we find the real challenge is whether leaders are ready to rethink how work gets done, how decisions are made, and how value is delivered.
+Local LLM Inference in 2026: The Complete Guide to Tools, Hardware & Open-Weight Models
+https://blog.starmorph.com/blog/local-llm-inference-tools-guide
+Stars reflect community adoption as of March 2026. Every tool above except LM Studio is open-source. Most build on top of llama.cpp — the foundational C/C++ inference engine that pioneered running LLMs on consumer hardware. Ollama is the fastest path from zero to running local models. One command to install, one to run, and you get an OpenAI-compatible API on localhost:11434. It's open-source (MIT), written in Go, and has 166k GitHub stars — the largest open-source AI project on GitHub by a wide margin.
 
-PDF Agentic AI in Engineering and Manufacturing: Industry Perspectives on ...
-https://decode.mit.edu/assets/papers/2026_Edwards_Agentic_AI_in_Engineering_and_Manufacturing.pdf
-Agentic AI in Engineering and Manufacturing: Industry Perspectives on Utility, Adoption, Challenges, and Opportunities Kristen M. Edwards, Maxwell Bauer, Claire Jacquillat, A. John Hart, Faez Ahmed March 2026
+Self-Hosted LLM Guide: Setup, Tools & Cost Comparison (2026)
+https://blog.premai.io/self-hosted-llm-guide-setup-tools-cost-comparison-2026/
+What Is a Self-Hosted LLM? A self-hosted LLM is a large language model that runs on infrastructure you control, whether that's a local server, an on-premise data center, or a private cloud environment. Instead of sending requests to OpenAI's API or Anthropic's servers, you run inference locally.
 
-IT Workforce Transformation in the Age of AI - BTS
-https://bts.com/insights/it-workforce-transformation-ai
-This trend reflects a growing disconnect between organizational expectations of productivity — often driven by rapid AI adoption and return-to- ...
+Guide to Local LLMs in 2026: Privacy, Tools & Hardware
+https://www.sitepoint.com/definitive-guide-local-llms-2026-privacy-tools-hardware/
+ROCm support has improved significantly, and major frameworks including llama.cpp and vLLM now offer functional AMD GPU acceleration, though the ecosystem remains less polished than CUDA.
 
-The AI coding productivity data is in and it's not what anyone expected
-https://www.reddit.com/r/ExperiencedDevs/comments/1rnkv2t/the_ai_coding_productivity_data_is_in_and_its_not/
-The junior nonhiring is creating a lost cohort. This pattern has happened in other industries throughout history and creates a lack of more senior employees later. It likely won't start becoming noticeable for 2-3 more years, but an understanding of this explains why some companies like IBM, github have turned around and started hiring more juniors. If you have the ability to operate on longer timelines it makes sense to plan ahead. More on reddit.com
+Running Open Source LLMs Locally: Hardware Guide 2026 | Apatero Blog - Open Source AI & Programming Tutorials
+https://apatero.com/blog/running-open-source-llms-locally-hardware-guide-2026
+Running Open Source LLMs Locally: Complete Hardware and Setup Guide 2026 Everything you need to run LLMs on your own machine. GPU requirements, RAM needs, quantization explained, Ollama and llama.cpp setup, plus budget and high-end build recommendations.
 
-Enterprise AI adoption in 2026: Why 79% face challenges ... - Writer
-https://writer.com/blog/enterprise-ai-adoption-2026/
-WRITER's 2026 survey reveals 79% of executives face AI adoption challenges. Get data-driven insights from 2,400 global leaders on ROI gaps, security risks, and what successful organizations do differently.
+Run DeepSeek & Qwen 2.5 Locally: The 2026 Self-Hosted Guide
+https://createaiagent.net/self-hosted-llm/
+You no longer just “run a model”; you deploy a private, uncensored intelligence that rivals the cloud, all for the cost of electricity. In March 2026, local LLMs are no longer an exotic toy — they’re a practical answer to three burning ...
 
-AI Will Reshape More Jobs Than It Replaces | BCG
-https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces
-Apr 3, 2026 ... Rather than equating automatable tasks with job loss, we evaluated three distinct forces: task-level automation potential, substitution versus ...
+Serverless vs. self-hosted LLM inference | LLM Inference Handbook
+https://bentoml.com/llm/llm-inference-basics/serverless-vs-self-hosted-llm-inference
+Hardware abstraction: Self-hosting LLMs at scale usually requires high-end GPUs (such as NVIDIA A100 or H100).
 
-Agentic AI in Engineering and Manufacturing: Industry Perspectives on Utility, Adoption, Challenges, and Opportunities
-https://arxiv.org/html/2604.09633
-Xometry and Thomas’s 2026 Manufacturing Trends Report identifies “AI as a Competitive Necessity” as its leading insight, with 82% of manufacturers citing AI as a primary driver of growth and 44% reporting significant returns on investment from AI adoption (Xometry and ...
+7 Best GPU for LLM in 2026 (Including Local LLM Setups) - Fluence
+https://www.fluence.network/blog/best-gpu-for-llm/
+In 2026, options span from consumer GPUs that now rival enterprise hardware at 25% of the price to decentralized clouds like Fluence, which undercut hyperscalers by up to 80%. Cost-conscious teams can use the Fluence H200 ($2.56/hr) with zero ...
 
-State of AI trust in 2026: Shifting to the agentic era
-https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era
-March 25, 2026 AI adoption is accelerating rapidly, with organizations moving beyond experimentation toward scaled deployment of gen AI and, increasingly, agentic AI across core business functions. But as AI systems take on greater autonomy—making recommendations, triggering actions, and interacting with other systems—the consequences of failure grow materially. In this environment, AI ...
+Home AI Server Build Guide 2026 | Always-On Local LLM Setup | Compute Market
+https://www.compute-market.com/blog/home-ai-server-build-guide-2026
+A deep-dive comparison of AMD and NVIDIA GPUs for AI workloads in 2026 — ROCm vs CUDA software ecosystems, datacenter and consumer hardware head-to-head, price/performance analysis, and clear recommendations for every budget. ... A practical guide to GPU memory requirements for every AI workload — LLM inference, training, image generation, and video.
 
-AI in AEC 2026: Doing AI Right and Rethinking Your Business Model
-https://www.linkedin.com/pulse/ai-aec-2026-doing-right-rethinking-your-business-model-heiskanen-pcalf
-Mar 22, 2026 ... Two themes appeared in nearly every session I attended. First, many companies struggle with AI adoption, not because they lack tools, but ...
+Self-Hosted AI Models: A Practical Guide to Running LLMs Locally (2026)
+https://blog.premai.io/self-hosted-ai-models-a-practical-guide-to-running-llms-locally-2026/
+The GPU handles inference, but the CPU manages everything else: tokenization, data loading, orchestration. Intel Core i5 or AMD Ryzen 5 handles smaller models smoothly.
 
-The “Last Mile” Problem Slowing AI Transformation
-https://hbr.org/2026/03/the-last-mile-problem-slowing-ai-transformation
-The primary obstacle to progress is rarely model quality or data availability, but rather the “last mile” of transformation where technical capability must meet organizational design.
+LLM Inference Hardware: An Enterprise Guide to Key Players | IntuitionLabs
+https://intuitionlabs.ai/articles/llm-inference-hardware-enterprise-guide
+AMD’s MI400 series (CDNA “Next”) is on the 2026 roadmap, promising up to 40 PFLOPS FP4, 432 GB HBM4, and 19.6 TB/s bandwidth per GPU, paired with the “Helios” AI rack integrating EPYC Venice CPUs.
