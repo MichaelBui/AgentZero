@@ -1,39 +1,35 @@
-Latest in Singapore's AI scene that businesses should know - a round-up ...
-https://www.edb.gov.sg/en/business-insights/insights/latest-in-singapores-ai-scene-that-businesses-should-know-a-round-up-from-january-to-march-2026.html
-Latest in Singapore's AI scene that businesses should know - a round-up from January to March 2026 A S$1 billion investment in research and talent development, opportunities in Southeast Asia, latest moves from companies such as UBS and Thales - read to find out about these AI developments and more.
+Multi-Agent Frameworks Explained for Enterprise AI Systems [2026]
+https://www.adopt.ai/blog/multi-agent-frameworks
+Key challenges include coordination complexity among autonomous agents, difficulty in monitoring and debugging distributed interactions, lifecycle management of interconnected agents, security and compliance concerns in agent communication, ...
 
-Agentic AI Goes Mainstream in the Enterprise, but 94% Raise Concern About Sprawl, OutSystems Research Finds
-https://www.prnewswire.com/apac/news-releases/agentic-ai-goes-mainstream-in-the-enterprise-but-94-raise-concern-about-sprawl-outsystems-research-finds-302739251.html
-Nearly every organization surveyed, 96%, is already using AI agents in some capacity, and 97% are exploring system-wide agentic AI strategies. The findings signal a clear shift from pilots to production as businesses embed AI into mission-critical ...
+Multi-Agent AI Systems Enterprise Guide 2026 - AgileSoftLabs Blog
+https://www.agilesoftlabs.com/blog/2026/03/multi-agent-ai-systems-enterprise-guide
+Key Takeaways Multi-agent AI systems deliver 3x faster task completion and 60% better accuracy compared to single-agent implementations. Five proven architecture patterns — Supervisor/Worker, Peer-to-Peer, Hierarchical, Pipeline/Sequential, and Marketplace/Auction — each solve distinct enterprise challenges.
 
-Deloitte report: Agentic and physical AI set for rapid growth in ...
-https://www.deloitte.com/southeast-asia/en/about/press-room/agentic-and-physical-ai-set-for-rapid-growth-in-singapore-in-the-next-two-years.html
-The Deloitte AI Institute has unveiled the 2026 edition of its "State of AI in the Enterprise" report, revealing how organisations are currently engaging with artificial intelligence (AI) and the impacts, changes and considerations this technology is introducing.
+Multi-Agent Systems: How AI Agents Work Together (2026 Guide)
+https://whatisagentic.ai/learn/multi-agent-systems/
+Learn how multi-agent AI systems work: architecture patterns, communication protocols, and real-world examples of AI agent teams collaborating on complex tasks in 2026.
 
-IDC - Charting the agentic future: IDC 2026 predictions for Asia ...
-https://www.idc.com/resource-center/blog/charting-the-agentic-future-idc-2026-predictions-for-asia-pacific-japan/
-Artificial Intelligence is entering its most transformative phase yet: The agentic future. In this new era, humans and intelligent systems don't just interact; they act together with intention, autonomy, and scale. According to IDC's FutureScape 2026 predictions, organizations in Asia/Pacific are rapidly shifting from AI experimentation to enterprise-wide orchestration—where adoption ...
+Slashdot Poll | By the end of 2026, how ...
+https://slashdot.org/poll/3282/by-the-end-of-2026-how-useful-do-you-think-agenticmulti-agent-ai-systems-will-actually-be-in-your-daily-work-or-personal-projects
+That being said, there are plenty of edge case uses where AI agents completely fail. I'm still in the middle of testing the usefulness of Claude, ChatGPT and Gemini in a specific situation. I'm trying to see if it can help me decide which characters in a mobile g ... The people who refuse to use it or can't align with agents will not be producing software in 10 years from now. by Baron_Yam ( 643147 ) writes: on Thursday March 12, 2026 ...
 
-Agentic AI Goes Mainstream in the Enterprise, but 94% Raise ...
-https://finance.yahoo.com/sectors/technology/articles/agentic-ai-goes-mainstream-enterprise-000000271.html
-Adoption maturity varies by region. In APAC, India stands out with some of the highest levels of advanced and expert agentic AI capability, ...
+Multi-Agent AI Systems in 2025: Key Insights, Use Cases & Future Trends
+https://terralogic.com/multi-agent-ai-systems-why-they-matter-2025/
+The benefits of multi-agent AI systems are numerous, and they might skyrocket as AI advances further in the future. But we have to understand and be aware of the different challenges associated with implementing artificial intelligence for IT operations through multi-agent systems:
 
-I read Google Cloud’s “AI Agent Trends 2026” report, here are 10 takeaways that actually matter
-https://www.reddit.com/r/AI_Agents/comments/1q3ka8o/i_read_google_clouds_ai_agent_trends_2026_report/
-This is an AI sunmary More on reddit.com
+Agentic AI Takes Over — 11 Shocking 2026 Predictions
+https://www.forbes.com/sites/markminevich/2025/12/31/agentic-ai-takes-over-11-shocking-2026-predictions/
+Agentic and multi-agent AI systems will manage entire workflows once controlled by humans, while humanoid and physical robotics advance from demonstrations to targeted pilots in factories, warehouses and labs marking the dawn of physical AI.
 
-How AI Is Driving Revenue, Cutting Costs and Boosting Productivity ...
-https://blogs.nvidia.com/blog/state-of-ai-report-2026/
-Mar 9, 2026 ... Telecommunications had the highest rate of adoption of agentic AI at 48%, followed by retail and CPG at 47%. AI agents are coming into action in ...
+Top AI Trends in 2026: How Ready Are You? | FPT Software
+https://fptsoftware.com/resource-center/blogs/top-ai-trends-in-2026
+IDC forecasts that by 2030, 45% of organizations will orchestrate AI agents at scale by embedding them across business functions. What sets 2026 apart is the rise of multi-agent systems.
 
-Agentic and physical AI set for rapid growth in Singapore
-https://www.frontier-enterprise.com/agentic-and-physical-ai-set-for-rapid-growth-in-singapore/
-Despite their enthusiasm for agentic AI, only 14% of leaders in Singapore report having a mature model for agentic AI governance, below the global average of 21%. Half (50%) of respondents in Singapore use a mix of public and internal proprietary frameworks to assess the risk and performance of autonomous agents.
+Multi-Agent Systems: The Top AI Trend to Watch in 2026 | by Kepler's Team | Medium
+https://medium.com/@keplers-team/multi-agent-systems-the-top-ai-trend-to-watch-in-2026-d459b31050de
+They handle complexity that single agents can’t touch. They cut errors through cross-checks and deliver better performance. In 2026, MASs are expected to appear more often in areas that need coordination at scale.
 
-Forrester: Asia Pacific Tech Spending Expected To Grow 9.3% In ...
-https://www.prnewswire.com/apac/news-releases/forrester-asia-pacific-tech-spending-expected-to-grow-9-3-in-2026--but-rising-costs-and-regulations-will-impact-real-growth-302725534.html
-Mar 26, 2026 ... SINGAPORE, March 26, 2026 /PRNewswire/ -- According to Forrester's ... Software spending will grow 10.7%, with adoption of agentic AI accelerating ...
-
-Which industries are adopting AI agents fastest?
-https://www.salesmate.io/blog/ai-agents-adoption-statistics/
-India, Singapore, and Japan are driving rapid experimentation in eCommerce and customer support, fueled by cost efficiency and scalable AI systems. As AI agent adoption scales, organizations are shifting toward task-specific, production-ready ...
+Multi-AI Agents Systems in 2025: Key Insights, Examples, and Challenges | Feb 19, 2025
+https://ioni.ai/post/multi-ai-agents-in-2025-key-insights-examples-and-challenges
+In this article, we'll explore how Multi AI agents work, the benefits and challenges of using multiple agents in a system, and how you can leverage multi-agent AI platforms to build smarter solutions for a wide array of industries.

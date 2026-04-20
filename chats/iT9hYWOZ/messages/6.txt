@@ -1,39 +1,39 @@
-How to Foster Psychological Safety When AI Erodes Trust on Your Team
-https://hbr.org/2026/02/how-to-foster-psychological-safety-when-ai-erodes-trust-on-your-team
-As organizations rapidly integrate AI into their workflows, leaders are uncovering the impact on team dynamics. The same AI tools that promise to enhance productivity can create predictable patterns of team dysfunction that mirror classic ...
+RAG Evaluation: 2026 Metrics and Benchmarks for Enterprise AI Systems | Label Your Data
+https://labelyourdata.com/articles/llm-fine-tuning/rag-evaluation
+An LLM generates answers based only on patterns learned during training. A RAG system pairs an LLM with a retriever that fetches relevant documents at query time. This reduces hallucinations, keeps outputs current, and makes it possible to adapt models to enterprise data without retraining.
 
-IT Workforce Transformation in the Age of AI - BTS
-https://bts.com/insights/it-workforce-transformation-ai
-This trend reflects a growing disconnect between organizational expectations of productivity — often driven by rapid AI adoption and return-to- ...
+[2309.01431] Benchmarking Large Language Models in Retrieval-Augmented Generation
+https://arxiv.org/abs/2309.01431
+To this end, we establish Retrieval-Augmented Generation Benchmark (RGB), a new corpus for RAG evaluation in both English and Chinese. RGB divides the instances within the benchmark into 4 separate testbeds based on the aforementioned fundamental abilities required to resolve the case. Then we evaluate 6 representative LLMs on RGB to diagnose the challenges of current LLMs when applying RAG.
 
-AI in HR: What's Real | OneDigital
-https://www.onedigital.com/en-US/articles/ai-in-hr-whats-real/
-Mar 31, 2026 ... Create Psychological Safety for the Transition: Fear is a rational response to uncertainty. ... HR in 2026: From AI hype to human-centred ...
+Top 5 RAG Evaluation Platforms in 2025 | by Kuldeep Paul | Medium
+https://medium.com/@kuldeep.paul08/top-5-rag-evaluation-platforms-in-2025-4fbe58ef618f
+The library’s extensibility allows teams to create custom metrics tailored to domain-specific requirements while leveraging the framework’s LLM-based scoring infrastructure. The open-source model provides flexibility for teams requiring complete control over evaluation logic and cost structures.
 
-Motivation is the missing link in AI at work - PwC
-https://www.pwc.com/us/en/services/consulting/business-transformation/workforce-transformation/motivation-missing-link-ai-work.html
-Mar 31, 2026 ... By reinforcing that psychological safety is about constructive candor and learning from failure—not just comfort—you can balance accountability ...
+RAG Monitoring Tools Benchmark in 2026
+https://research.aimultiple.com/rag-monitoring/
+The Retrieval-Augmented Generation (RAG) pipeline was constructed using the following components: ... Vector database: Qdrant (running locally via Docker) for storing and retrieving high-dimensional vector embeddings · LLM inference: Ollama running Llama 3.2 (1B parameter model) for local generation, ensuring network latency to external LLM providers did not introduce variance
 
-Leading Psychologically Safe Digitally Enabled Project Teams
-https://journals.sagepub.com/doi/10.1177/87569728251362760
-We contribute to psychological safety during the transition to Industry 5.0 by studying how leaders in digitally enabled teams—that is, teams that incorporate advanced digital technologies such as artificial intelligence (AI), mixed realities, and digital twins—facilitate this transition.
+RAG Benchmarks Leaderboard: Retrieval Rankings 2026 | Awesome Agents
+https://awesomeagents.ai/leaderboards/rag-benchmarks-leaderboard/
+Rankings of the top embedding and RAG systems across BEIR, MTEB retrieval, MIRACL, MS MARCO, KILT, HotpotQA, and RAGTruth hallucination benchmarks as of April 2026.
 
-Unveiling Team Emergent States in the Age of Human-AI Teaming
-https://www.tandfonline.com/doi/full/10.1080/10447318.2026.2635683
-There was no difference in perceived team psychological safety. Participants in HATs identified less with the AI than with the human teammate. These findings ...
+RAG Evaluation: A Complete Guide for 2025
+https://www.getmaxim.ai/articles/rag-evaluation-a-complete-guide-for-2025/
+According to LangChain's 2026 State of AI Agents report, 57% of organizations have agents in production, with quality cited as the top barrier to deployment by 32% of respondents.
 
-Rebuilding trust and psychological safety in AI-enabled teams
-https://www.linkedin.com/pulse/rebuilding-trust-psychological-safety-ai-enabled-teams-david-bergey-5wfze
-In this edition, I decided to focus on a fundamental subject: trust. With the widespread global adoption of AI tools and incessant headlines on its impact within the job market (ultimately people ...
+Navigating the Maze of LLM Evaluation: A Guide to Benchmarks, RAG, and Agent Assessment | by Yuji Isobe | Medium
+https://medium.com/@yujiisobe/navigating-the-maze-of-llm-evaluation-a-guide-to-benchmarks-rag-and-agent-assessment-fb7aef299e66
+DeepEval: This is another tool that provides implementations for many common RAG evaluation metrics, facilitating their application. ... AI agents represent a further step in LLM application complexity, involving multi-step reasoning, interaction with external tools via API calls, and operation within dynamic environments to achieve goals.18
 
-Is Your Industrial AI Safe? Building Trust & Resilience - LinkedIn
-https://www.linkedin.com/pulse/your-industrial-ai-safe-building-trust-resilience-nemko-digital-svxyc
-AI is no longer a lab experiment; trust must be designed in from day one to make AI viable at scale in industry. Across the technical and ...
+Top 5 Tools to Evaluate RAG Performance in 2026 - Future AGI
+https://futureagi.substack.com/p/top-5-tools-to-evaluate-rag-performance
+Compare the best RAG evaluation tools in 2026, including RAGAS, DeepEval, Arize Phoenix, LangSmith, and FutureAGI, with metrics breakdowns, tradeoffs, and practical guidance for testing your pipeline
 
-Infosys and MIT Technology Review Insights Report Reveals the Critical ...
-https://www.infosys.com/newsroom/press-releases/2025/psychological-safety-driving-ai-initiatives.html
-Laurel Ruma, Global Editorial Director, MIT Technology Review Insights said, "Our research, in collaboration with Infosys, shows that psychological safety is not a soft metric, it is a measurable driver of AI outcomes. Leaders who communicate clearly about AI's impact and model openness to questions and dissent create the conditions for innovation. Without that foundation of trust, even ...
+A complete guide to RAG evaluation: metrics, testing and best practices
+https://www.evidentlyai.com/llm-guide/rag-evaluation
+This guide breaks down how to evaluate and test RAG systems. You'll learn how to evaluate retrieval and generation quality, build test sets with synthetic data, run experiments, and monitor in production.
 
-Council Post: A New Playbook For Trust In Enterprise AI Rollouts
-https://www.forbes.com/councils/forbestechcouncil/2026/04/10/a-new-playbook-for-trust-in-enterprise-ai-rollouts/
-Ahead of any major project, change managers should assess the perceived psychological safety of impacted stakeholder groups. Do people feel comfortable asking questions or speaking up when something doesn’t make sense to them? This may require introducing a new KPI for the implementation: user confidence.
+RAG Evaluation Metrics: Best Practices for Evaluating RAG Systems
+https://www.patronus.ai/llm-testing/rag-evaluation-metrics
+Learn how to effectively implement and evaluate retrieval-augmented generation systems using popular RAG evaluation metrics and best practices for production.

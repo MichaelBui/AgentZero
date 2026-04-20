@@ -1,39 +1,23 @@
-Leadership for Highly Technical People — Workshop · April 15, 2026
-https://www.makeleaders.com/
-A one-day mastermind for engineers, tech leads, and technical founders who want to lead in the AI era. Learn to multiply your impact through people — not just code. Prague, April 15, 2026.
+Best Practices For a Better Engineering Culture
+https://onesignal.com/blog/nurturing-a-collaborative-engineering-culture-active-strategies-and-best-practices/
+To cultivate trust within our team, we prioritize transparency and honesty in our interactions. Team members are encouraged to voice their opinions, share their thoughts, and take risks without fear of judgment or reprisal.
 
-Leading the AI Shift: 6 Practical Tips for Engineering Leaders
-https://agilityfeat.com/blog/2026/04/leading-through-the-ai-shift-practical-advice-for-engineering-leaders/
-1. Ambiguity Tolerance Is Now a Core Leadership Competency Traditional engineering leadership rewards precision: clear requirements, predictable timelines, measurable outcomes. AI-driven development disrupts every one of those assumptions. Models behave non-deterministically. Accuracy rates fluctuate.
+Building a High-Trust Engineering Culture: Lessons From ... - LinkedIn
+https://www.linkedin.com/pulse/building-high-trust-engineering-culture-lessons-from-leading-naikar-aiy8e
+📌 Introduction: Trust Is the Multiplier of Engineering Excellence Every engineering leader talks about speed, quality, innovation, and delivery. But over the years leading Dev, QA, CloudOps ...
 
-How Leadership Changes When Software Writes Software - Forbes
-https://www.forbes.com/councils/forbestechcouncil/2026/03/11/leading-through-the-ai-inflection-how-leadership-changes-when-software-writes-software/
-Mar 11, 2026 ... Engineering leadership has traditionally emphasized productivity. Progress was measured through velocity, delivery timelines and output. AI- ...
+Engineering Culture 3.0 - Key Principles for 2026 Teams
+https://www.techtalent.ro/engineering-culture-3-0-key-principles-for-2026-teams/
+1. What exactly is Engineering Culture 3.0? Engineering Culture 3.0 is a modern framework that places people, purpose, and collaboration at the center of engineering work. It emphasizes psychological safety, sustainable delivery, strong cross-functional partnerships, continuous learning, and outcome-centered decision-making. 2.
 
-Leadership Development in 2026-Mastering Human Skills, AI Tools, and Social Media Strategies for Tech Success
-https://siliconvalleytime.com/article/leadership-development/
-Leadership development in 2026 blends timeless human skills with AI tools and social media strategies. This guide reveals why leadership now tops WEF and LinkedIn reports, with comparison tables, proven frameworks, 2026 data, real examples, ...
+Study Links Psychological Safety and Autonomy to Engineering Excellence
+https://ecweb.ecer.com/topic/en/detail-336798-study_links_psychological_safety_and_autonomy_to_engineering_excellence.html
+This article delves into building an exceptional engineering culture by fostering psychological safety and empowering engineers with autonomy. It emphasizes the crucial balance between autonomy and alignment, proposing a shift in perspective: viewing engineers as athletes rather than factory workers. Furthermore, the article offers practical guidance for new leaders, assisting them in ...
 
-AI Strategy and Leadership Program | MIT xPRO
-https://executive-ed.xpro.mit.edu/ai-strategy-and-leadership
-The AI Strategy and Leadership Program: Thriving in the New World of AI from MIT xPRO equips senior technology leaders and aspiring executives to harness artificial intelligence (AI) for strategic advantage in their organizations. The program combines leadership development with AI implementation strategies to help you manage disruption and lead responsibly in the digital age. With AI ...
+Why Psychological Safety is Key to Building Effective Engineering Teams
+https://alignandrefine.substack.com/p/why-psychological-safety-is-key-to
+If you want to build an engineering culture that thrives, start by fostering psychological safety. Encourage open discussions, embrace feedback, and create an environment where people can take risks without fear.
 
-The Engineering Leadership Podcast - ELC
-https://sfelc.com/podcasts
-Plus we discuss how AI is moving managers from implementation to architecture, why the next bottleneck is managing the overhead of high-velocity experimentation ...
-
-Engineering Managers & AI: what’s actually helping your teams move faster, without burning them out?
-https://www.reddit.com/r/EngineeringManagers/comments/1ohbciz/engineering_managers_ai_whats_actually_helping/
-Meeting summarizers and long chat thread summarizers. People feel less need to attend every meeting if they can get the gist of it in a 30 second time to read paragraph and can spend their time on more productive work. More on reddit.com
-
-10 Leadership Strategies to Scale Engineering Teams in 2026
-https://www.secondtalent.com/resources/leadership-strategies-scale-engineering-teams-2026/
-TL;DR: Scaling engineering teams requires leadership shifts, not just more hires. Focus on structure, async work, DevEx, and AI-augmented workflows. 83% of developers report burnout. Annual turnover in software engineering runs at 23 to 25%. And communication paths in a 15-person team number 105. Scaling an engineering team is one of the hardest things a startup leader can do. We see this ...
-
-The 3 Mindset Shifts That Fix It - Anemari Fiser - Tech Lead Journal
-https://techleadjournal.dev/episodes/252/
-Mar 30, 2026 ... Anemari also addresses how AI is reshaping the tech lead role and why the fundamentals of leadership still apply regardless of the tools your ...
-
-Mentoring in Tech: Strategies and Benefits · Technical news about AI, coding and all
-https://dasroot.net/posts/2026/04/mentoring-in-tech-strategies-benefits/
-As the tech industry continues ... data from 2026, it is clear that mentorship is not just beneficial—it is essential for long-term success and innovation in the technical landscape....
+Engineering Culture at Successful Companies: 9 Common Traits - CTO Fraction
+https://ctofraction.com/blog/engineering-culture-at-successful-software-companies/
+Figma, Stripe, OpenAI: Implicitly support a blameless culture through psychological safety and continuous improvement initiatives. A blameless culture encourages transparency and honesty, which enable teams to address issues more effectively. It also reduces fear of punishment therefore, it encourages engineers to experiment and innovate without hesitation. Clear communication and transparency ensure that information is openly shared across all levels of the organization. This builds trust, alignment, and a shared understanding of goals and expectations within the engineering teams.
