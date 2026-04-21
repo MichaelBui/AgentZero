@@ -1,0 +1,47 @@
+/a0/usr/workdir/solution.go 44 lines
+>>>
+ 1 package solution
+ 2 
+ 3 // Solution calculates the count of non-divisors for each element in the input array.
+ 4 // For each element A[i], it counts how many elements in the array do not divide A[i].
+ 5 func Solution(numbers []int) []int {
+ 6 	numberOfElements := len(numbers)
+ 7 
+ 8 	if numberOfElements == 0 {
+ 9 		return []int{}
+10 	}
+11 
+12 	// Find the maximum value to size our frequency arrays
+13 	maximumValue := 0
+14 	for _, number := range numbers {
+15 		if number > maximumValue {
+16 			maximumValue = number
+17 		}
+18 	}
+19 
+20 	// Count how many times each value appears in the input array
+21 	elementFrequency := make([]int, maximumValue+1)
+22 	for _, number := range numbers {
+23 		elementFrequency[number]++
+24 	}
+25 
+26 	// For each possible divisor d (from 1 to maxVal), add its frequency
+27 	// to every multiple of d. This tells us how many array elements divide each value.
+28 	numberOfDivisors := make([]int, maximumValue+1)
+29 	for divisor := 1; divisor <= maximumValue; divisor++ {
+30 		if elementFrequency[divisor] > 0 {
+31 			for multiple := divisor; multiple <= maximumValue; multiple += divisor {
+32 				numberOfDivisors[multiple] += elementFrequency[divisor]
+33 			}
+34 		}
+35 	}
+36 
+37 	// Build the result: for each element, non-divisor count = total elements - divisor count
+38 	nonDivisorCounts := make([]int, numberOfElements)
+39 	for index, number := range numbers {
+40 		nonDivisorCounts[index] = numberOfElements - numberOfDivisors[number]
+41 	}
+42 
+43 	return nonDivisorCounts
+44 }
+<<<

@@ -1,0 +1,74 @@
+/a0/usr/workdir/main.go written 71 lines
+>>>
+ 1 package main
+ 2 
+ 3 import "fmt"
+ 4 
+ 5 func Solution(numbers []int) []int {
+ 6 	numberOfElements := len(numbers)
+ 7 
+ 8 	if numberOfElements == 0 {
+ 9 		return []int{}
+10 	}
+11 
+12 	maximumValue := 0
+13 	for _, number := range numbers {
+14 		if number > maximumValue {
+15 			maximumValue = number
+16 		}
+17 	}
+18 
+19 	elementFrequency := make([]int, maximumValue+1)
+20 	for _, number := range numbers {
+21 		elementFrequency[number]++
+22 	}
+23 
+24 	numberOfDivisors := make([]int, maximumValue+1)
+25 	for divisor := 1; divisor <= maximumValue; divisor++ {
+26 		if elementFrequency[divisor] > 0 {
+27 			for multiple := divisor; multiple <= maximumValue; multiple += divisor {
+28 				numberOfDivisors[multiple] += elementFrequency[divisor]
+29 			}
+30 		}
+31 	}
+32 
+33 	nonDivisorCounts := make([]int, numberOfElements)
+34 	for index, number := range numbers {
+35 		nonDivisorCounts[index] = numberOfElements - numberOfDivisors[number]
+36 	}
+37 
+38 	return nonDivisorCounts
+39 }
+40 
+41 func main() {
+42 	testArray := []int{3, 1, 2, 3, 6}
+43 	expectedOutput := []int{2, 4, 3, 2, 0}
+44 
+45 	result := Solution(testArray)
+46 
+47 	fmt.Printf("Input:    %v\n", testArray)
+48 	fmt.Printf("Expected: %v\n", expectedOutput)
+49 	fmt.Printf("Got:      %v\n", result)
+50 
+51 	pass := true
+52 	for i := range result {
+53 		if result[i] != expectedOutput[i] {
+54 			pass = false
+55 		}
+56 	}
+57 
+58 	if pass {
+59 		fmt.Println("✅ Test PASSED")
+60 	} else {
+61 		fmt.Println("❌ Test FAILED")
+62 	}
+63 
+64 	// Additional edge case: single element
+65 	singleResult := Solution([]int{5})
+66 	fmt.Printf("\nSingle element [5]: %v (expected [])\n", singleResult)
+67 
+68 	// Edge case: all same elements
+69 	sameResult := Solution([]int{2, 2, 2})
+70 	fmt.Printf("All same [2,2,2]: %v (expected [0,0,0])\n", sameResult)
+71 }
+<<<
