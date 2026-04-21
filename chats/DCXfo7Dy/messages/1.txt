@@ -1,12 +1,1417 @@
-[2026-04-21T06:31:12+0000] STARTED (days=5, since=2026-04-16, user=Michael Bui)
-[2026-04-21T06:31:12+0000] Connecting to browser at http://192.168.1.11:9223...
-(node:30375) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+[2026-04-21T14:30:37+0000] STARTED (days=5, since=2026-04-16, user=Michael Bui)
+[2026-04-21T14:30:37+0000] Connecting to browser at http://192.168.1.11:9223...
+(node:32568) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[2026-04-21T06:31:15+0000] Reusing tab: https://chat.google.com/app/home
-[2026-04-21T06:31:39+0000] Feed: 90 item(s) within 5 day(s)
-[2026-04-21T06:31:39+0000]   Early stop: 3 consecutive cached
-[2026-04-21T06:31:39+0000] Phase 1: 90 conversations (focus-skip=0, unchanged=66, to-fetch=24, unread=12)
-[2026-04-21T06:31:39+0000] [Fetching 1/24] #dd-dpd-engage-alert
+[2026-04-21T14:30:38+0000] Reusing tab: https://chat.google.com/app/home
+[2026-04-21T14:30:52+0000] Feed: 36 item(s) within 5 day(s)
+[2026-04-21T14:30:52+0000]   Early stop: 3 consecutive cached
+[2026-04-21T14:30:52+0000] Phase 1: 36 conversations (focus-skip=0, unchanged=23, to-fetch=13, unread=9)
+[2026-04-21T14:30:52+0000] [Fetching 1/13] #dd-dpd-engage-alert
+[2026-04-21T14:30:57+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAAAxwwNw2U\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="space/AAAAxwwNw2U/SCcFR" data-group-id="space/AAAAxwwNw2U" data-display-timestamp="1776761056967" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    9 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
 
+[2026-04-21T14:31:06+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAAAxwwNw2U\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="space/AAAAxwwNw2U/SCcFR" data-group-id="space/AAAAxwwNw2U" data-display-timestamp="1776761056967" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    9 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+
+[2026-04-21T14:31:06+0000]   SKIP: item not found in DOM
+[2026-04-21T14:31:06+0000] [Fetching 2/13] Digital Product Development {DPD}
+[2026-04-21T14:31:11+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAAAx50IkHw\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " data-topic-id="1ULHrF6e6R8" id="space/AAAAx50IkHw/SCcFR" data-group-id="space/AAAAx50IkHw" data-display-timestamp="1776760251960" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    9 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+
+[2026-04-21T14:31:20+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAAAx50IkHw\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " data-topic-id="1ULHrF6e6R8" id="space/AAAAx50IkHw/SCcFR" data-group-id="space/AAAAx50IkHw" data-display-timestamp="1776760251960" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    9 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+
+[2026-04-21T14:31:20+0000]   SKIP: item not found in DOM
+[2026-04-21T14:31:20+0000] [Fetching 3/13] DPD x Platform Engineering
+[2026-04-21T14:31:26+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAcjNXKpA\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="false" class="IL9EXe o7n3Nd  " data-topic-id="6XSKrbG2aIM" id="space/AAQAcjNXKpA/SCcFR" data-group-id="space/AAQAcjNXKpA" data-display-timestamp="1776759929701" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    9 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+
+[2026-04-21T14:31:34+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAcjNXKpA\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="false" class="IL9EXe o7n3Nd  " data-topic-id="6XSKrbG2aIM" id="space/AAQAcjNXKpA/SCcFR" data-group-id="space/AAQAcjNXKpA" data-display-timestamp="1776759929701" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    9 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+
+[2026-04-21T14:31:34+0000]   SKIP: item not found in DOM
+[2026-04-21T14:31:34+0000] [Fetching 4/13] RMN Integration
+[2026-04-21T14:31:40+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAKHz7DQM\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="false" class="IL9EXe o7n3Nd  " data-topic-id="MeKqRqJLM5U" id="space/AAQAKHz7DQM/SCcFR" data-group-id="space/AAQAKHz7DQM" data-display-timestamp="1776759539273" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <h2 id="c1029" jsname="r4nke" class="uW2Fw-k2Wrsb">…</h2> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <h2 id="c1029" jsname="r4nke" class="uW2Fw-k2Wrsb">…</h2> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <h2 id="c1029" jsname="r4nke" class="uW2Fw-k2Wrsb">…</h2> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <h2 id="c1029" jsname="r4nke" class="uW2Fw-k2Wrsb">…</h2> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:31:48+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAKHz7DQM\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="false" class="IL9EXe o7n3Nd  " data-topic-id="MeKqRqJLM5U" id="space/AAQAKHz7DQM/SCcFR" data-group-id="space/AAQAKHz7DQM" data-display-timestamp="1776759539273" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <h2 id="c1029" jsname="r4nke" class="uW2Fw-k2Wrsb">…</h2> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <h2 id="c1029" jsname="r4nke" class="uW2Fw-k2Wrsb">…</h2> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <h2 id="c1029" jsname="r4nke" class="uW2Fw-k2Wrsb">…</h2> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <h2 id="c1029" jsname="r4nke" class="uW2Fw-k2Wrsb">…</h2> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:31:48+0000]   SKIP: item not found in DOM
+[2026-04-21T14:31:48+0000] [Fetching 5/13] RMN Integration
+[2026-04-21T14:31:54+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAKHz7DQM\"]").nth(1)
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="false" class="IL9EXe o7n3Nd  " id="space/AAQAKHz7DQM/SCcFR" data-group-id="space/AAQAKHz7DQM" data-display-timestamp="1776759478337" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:32:02+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAKHz7DQM\"]").nth(1)
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="false" class="IL9EXe o7n3Nd  " id="space/AAQAKHz7DQM/SCcFR" data-group-id="space/AAQAKHz7DQM" data-display-timestamp="1776759478337" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:32:02+0000]   SKIP: item not found in DOM
+[2026-04-21T14:32:02+0000] [Fetching 6/13] Google Drive
+[2026-04-21T14:32:08+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"dm/7d1XKcAAAAE\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="dm/7d1XKcAAAAE/SCcFR" data-group-id="dm/7d1XKcAAAAE" data-display-timestamp="1776759361400" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:32:17+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"dm/7d1XKcAAAAE\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="dm/7d1XKcAAAAE/SCcFR" data-group-id="dm/7d1XKcAAAAE" data-display-timestamp="1776759361400" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:32:17+0000]   SKIP: item not found in DOM
+[2026-04-21T14:32:17+0000] [Fetching 7/13] Team Starship
+[2026-04-21T14:32:22+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAX9iKYf0\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="space/AAQAX9iKYf0/SCcFR" data-group-id="space/AAQAX9iKYf0" data-display-timestamp="1776758911359" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:32:31+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAX9iKYf0\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="space/AAQAX9iKYf0/SCcFR" data-group-id="space/AAQAX9iKYf0" data-display-timestamp="1776758911359" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:32:31+0000]   SKIP: item not found in DOM
+[2026-04-21T14:32:31+0000] [Fetching 8/13] Allen, Yi Hao, Fiona
+[2026-04-21T14:32:36+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAZ--llew\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="false" class="IL9EXe o7n3Nd  " id="space/AAQAZ--llew/SCcFR" data-group-id="space/AAQAZ--llew" data-display-timestamp="1776758658963" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:32:45+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAZ--llew\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="false" class="IL9EXe o7n3Nd  " id="space/AAQAZ--llew/SCcFR" data-group-id="space/AAQAZ--llew" data-display-timestamp="1776758658963" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:32:45+0000]   SKIP: item not found in DOM
+[2026-04-21T14:32:45+0000] [Fetching 9/13] RMN Leadership
+[2026-04-21T14:32:50+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAAAQQGZSZU\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="space/AAAAQQGZSZU/SCcFR" data-group-id="space/AAAAQQGZSZU" data-display-timestamp="1776758141292" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:32:59+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAAAQQGZSZU\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="space/AAAAQQGZSZU/SCcFR" data-group-id="space/AAAAQQGZSZU" data-display-timestamp="1776758141292" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:32:59+0000]   SKIP: item not found in DOM
+[2026-04-21T14:32:59+0000] [Fetching 10/13] fairnex-datadog-notification
+[2026-04-21T14:33:05+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAAA8dv5lp0\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="space/AAAA8dv5lp0/SCcFR" data-group-id="space/AAAA8dv5lp0" data-display-timestamp="1776757429657" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:33:13+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAAA8dv5lp0\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="space/AAAA8dv5lp0/SCcFR" data-group-id="space/AAAA8dv5lp0" data-display-timestamp="1776757429657" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:33:13+0000]   SKIP: item not found in DOM
+[2026-04-21T14:33:13+0000] [Fetching 11/13] #dd-dpd-grocery-alert
+[2026-04-21T14:33:19+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAAAtxQjB7c\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="space/AAAAtxQjB7c/SCcFR" data-group-id="space/AAAAtxQjB7c" data-display-timestamp="1776755991760" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:33:27+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAAAtxQjB7c\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="space/AAAAtxQjB7c/SCcFR" data-group-id="space/AAAAtxQjB7c" data-display-timestamp="1776755991760" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:33:27+0000]   SKIP: item not found in DOM
+[2026-04-21T14:33:27+0000] [Fetching 12/13] [Light] Project Light Attack and Defence Leads
+[2026-04-21T14:33:33+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAsFyLso4\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " data-topic-id="whhcplolHo8" id="space/AAQAsFyLso4/SCcFR" data-group-id="space/AAQAsFyLso4" data-display-timestamp="1776754281667" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:33:41+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAsFyLso4\"]").first
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " data-topic-id="whhcplolHo8" id="space/AAQAsFyLso4/SCcFR" data-group-id="space/AAQAsFyLso4" data-display-timestamp="1776754281667" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:33:41+0000]   SKIP: item not found in DOM
+[2026-04-21T14:33:41+0000] [Fetching 13/13] [Light] Project Light Attack and Defence Leads
+[2026-04-21T14:33:47+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAsFyLso4\"]").nth(1)
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="space/AAQAsFyLso4/SCcFR" data-group-id="space/AAQAsFyLso4" data-display-timestamp="1776754247749" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:33:55+0000]   WARN: click failed: Locator.click: Timeout 5000ms exceeded.
+Call log:
+  - waiting for locator("span[role=\"listitem\"][data-group-id][data-is-unread][data-group-id=\"space/AAQAsFyLso4\"]").nth(1)
+    - locator resolved to <span tabindex="-1" role="listitem" jsname="CmABtb" data-is-unread="true" class="IL9EXe o7n3Nd  " id="space/AAQAsFyLso4/SCcFR" data-group-id="space/AAQAsFyLso4" data-display-timestamp="1776754247749" jsaction="click:o6ZaF; auxclick:BCKT9c; clickmod:EDDuye; mousedown:teoBgf; mouseup:NZPHBc; focus:XcBkke; blur:J9oOtd; mouseover:eIc1J; mouseout:l9rpsc; touchstart:jJiBRc; touchmove:kZeBdd; touchend:VfAz8">…</span>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div class="uW2Fw-T0kwCb">…</div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div jsname="GGAcbc" class="uW2Fw-IE5DDf" jsaction="click:KY1IRb"></div> from <div tabindex="-1" class="SDFSsb oMuP2d">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+[2026-04-21T14:33:55+0000]   SKIP: item not found in DOM
+[2026-04-21T14:33:55+0000] Phase 2: fetched 0/13 conversations
+[2026-04-21T14:33:55+0000] [1/36] space/AAAAxwwNw2U: cached (rel=5)
+[2026-04-21T14:33:55+0000] [2/36] space/AAAAx50IkHw/1ULHrF6e6R8: cached (rel=9)
+[2026-04-21T14:33:55+0000] [3/36] space/AAQAcjNXKpA/6XSKrbG2aIM: cached (rel=9)
+[2026-04-21T14:33:55+0000] [5/36] space/AAQAKHz7DQM: cached (rel=9)
+[2026-04-21T14:33:55+0000] [6/36] dm/7d1XKcAAAAE: cached (rel=9)
+[2026-04-21T14:33:55+0000] [7/36] space/AAQAX9iKYf0: cached (rel=3)
+[2026-04-21T14:33:55+0000] [8/36] space/AAQAZ--llew: cached (rel=9)
+[2026-04-21T14:33:55+0000] [9/36] space/AAAAQQGZSZU: cached (rel=6)
+[2026-04-21T14:33:55+0000] [10/36] space/AAAA8dv5lp0: cached (rel=2)
+[2026-04-21T14:33:55+0000] [11/36] space/AAAAtxQjB7c: cached (rel=2)
+[2026-04-21T14:33:55+0000] [13/36] space/AAQAsFyLso4: cached (rel=6)
+[2026-04-21T14:33:55+0000] [14/36] space/AAAAoJgpZBM: cached (rel=2)
+[2026-04-21T14:33:55+0000] [15/36] space/AAAAsbHANyc: cached (rel=5)
+[2026-04-21T14:33:55+0000] [16/36] dm/700U4cAAAAE: cached (rel=9)
+[2026-04-21T14:33:55+0000] [17/36] space/AAQA85dw4So: cached (rel=2)
+[2026-04-21T14:33:55+0000] [18/36] space/AAQAUbi9szY: cached (rel=9)
+[2026-04-21T14:33:55+0000] [19/36] space/AAAAS7vPcKs: cached (rel=3)
+[2026-04-21T14:33:55+0000] [20/36] space/AAQAKHz7DQM/FJT6Am_cKek: cached (rel=9)
+[2026-04-21T14:33:55+0000] [21/36] dm/t3wf6EAAAAE: cached (rel=9)
+[2026-04-21T14:33:55+0000] [22/36] space/AAQAUbi9szY/ZibVM5uVsN8: cached (rel=8)
+[2026-04-21T14:33:55+0000] [23/36] space/AAAAx50IkHw/_NcP7L7Xja8: cached (rel=9)
+[2026-04-21T14:33:55+0000] [25/36] space/AAQAmlJPshk: cached (rel=2)
+[2026-04-21T14:33:55+0000] [27/36] space/AAQAcjNXKpA: cached (rel=6)
+[2026-04-21T14:33:55+0000] [28/36] space/AAAAu4WIubc: cached (rel=2)
+[2026-04-21T14:33:55+0000] [30/36] space/AAQAN8mDauE/YH1CLPyXEng: cached (rel=7)
+[2026-04-21T14:33:55+0000] [31/36] space/AAAAMBd7J0A: cached (rel=2)
+[2026-04-21T14:33:55+0000] [32/36] dm/_gwJCgAAAAE: cached (rel=9)
+[2026-04-21T14:33:55+0000] [33/36] space/AAQAEk0BBZ8: cached (rel=2)
+[2026-04-21T14:33:55+0000] [34/36] dm/zmMZpgAAAAE: cached (rel=7)
+[2026-04-21T14:33:55+0000] [35/36] space/AAQAsFyLso4/n_KST6-8OyM: cached (rel=9)
+[2026-04-21T14:33:55+0000] [36/36] space/AAAAx50IkHw: cached (rel=6)
+[2026-04-21T14:33:55+0000] Output: /a0/usr/workdir/gchat-output.md (49 summaries, min_relevance=7)
+[2026-04-21T14:33:55+0000] COMPLETED (36 conversations, fetched=0)
+(venv) root@65a984945e89:/a0/usr/skills/gchat#
 
 [SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

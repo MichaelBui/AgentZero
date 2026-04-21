@@ -1,39 +1,39 @@
-The 2026 MCP Roadmap | Model Context Protocol Blog
-https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/
-Enterprises are deploying MCP and running into a predictable set of problems: audit trails, SSO-integrated auth, gateway behavior, and configuration portability. This is also the least defined of the four priorities, and that’s intentional.
+Running 122B-Parameter LLMs Locally on AMD Strix Halo for ... - LinkedIn
+https://www.linkedin.com/pulse/running-122b-parameter-llms-locally-amd-strix-halo-deep-pellegrini-33cjc
+Over the past few months, I've been building a local LLM inference stack on an AMD Ryzen AI Max+ 395 (Strix Halo) — a chip with 128GB of unified LPDDR5X memory shared between CPU and GPU. My ...
 
-MCP Roadmap 2026 | Official Priorities for Model Context Protocol ...
-https://a2a-mcp.org/blog/mcp-2026-roadmap
-Explore the official MCP 2026 roadmap: transport scalability, agent communication, governance maturation, and enterprise readiness. Key updates for AI agents, production scaling, and how to contribute.
+AMD Strix Halo — Backend Benchmarks (Grid View)
+https://kyuz0.github.io/amd-strix-halo-toolboxes/
+This setup allows distributed inference, splitting large GGUF models across both machines.
 
-Complete Guide to MCP (Model Context Protocol) in 2026 - DEV Community
-https://dev.to/x4nent/complete-guide-to-mcp-model-context-protocol-in-2026-architecture-implementation-and-4a11
-Complete Guide to MCP (Model Context Protocol) in 2026 — Architecture, Implementation, and Enterprise Roadmap for AI Agent Integration In November 2024, Anthropic open-sourced the Model Context Protocol (MCP), and in just 18 months it has become the de facto standard for AI agent integration. As of March 2026, MCP has surpassed 97 million monthly SDK downloads, earned over 81,000 GitHub ...
+Ryzen AI Max 395+ 128GB - Qwen 3.5 35B/122B Benchmarks (100k ...
+https://www.reddit.com/r/LocalLLaMA/comments/1rpw17y/ryzen_ai_max_395_128gb_qwen_35_35b122b_benchmarks/
+Mar 10, 2026 ... with llama-rocm-7.2 from amd-strix-halo-toolboxes (updated daily) ... unified VRAM) — local LLM, image/video gen, coding agents. 51. 20 ...
 
-MCP Ecosystem in 2026: From Experiment to 97 Million Installs
-https://effloow.hashnode.dev/mcp-ecosystem-growth-100-million-installs-2026
-MCP Ecosystem in 2026: From Experiment to 97 Million Installs Seventeen months ago, Model Context Protocol was an internal Anthropic project. Today it is the infrastructure backbone of the agentic AI era — with 97 million monthly SDK downloads, 10,00...
+r/LocalLLaMA on Reddit: Updated Strix Halo (Ryzen AI Max+ 395) LLM Benchmark Results
+https://www.reddit.com/r/LocalLLaMA/comments/1m6b151/updated_strix_halo_ryzen_ai_max_395_llm_benchmark/
+There's a lot of performance still on the table when it comes to pp especially. I've been telling my wife this for years. More on reddit.com
 
-Model Context Protocol (MCP): A Guide for Enterprise Leaders | Imagine ...
-https://imagine-works.com/insights/model-context-protocol-for-enterprise-leaders
-Search demand reflects the shift. "Model context protocol" averages 22,200 monthly US searches and 14,800 in India; "MCP protocol" adds another 8,100 US and 5,400 IN (Google Ads data, April 2026) — a technical topic moving firmly into mainstream leadership awareness. The governance surface has expanded alongside adoption.
+Strix Halo Mini PCs for AI — 128GB, 40 TOPS NPU 2026
+https://www.compute-market.com/blog/strix-halo-mini-pc-local-ai-2026
+Strix Halo packs 128GB unified memory and a 40 TOPS NPU into a 3L chassis. GMKtec, Zotac, ASRock compared with LLM benchmarks and Mac Studio head-to-head.
 
-Model Context Protocol (MCP): How AI Agents Communicate at Scale (2026)
-https://appscale.blog/en/blog/model-context-protocol-mcp-how-ai-agents-communicate-securely-at-enterprise-scale-2026
-A practical enterprise guide to Anthropic's Model Context Protocol (MCP). Covers agent-to-agent communication architecture, security, gateway design, federation, and scaling from pilot to Agent Internet.
+What to Buy for Local LLMs (April 2026) | by Julien Simon - Medium
+https://julsimon.medium.com/what-to-buy-for-local-llms-april-2026-a4946a381a6a
+Apr 3, 2026 ... [19] Apple removed the 512GB memory option from Mac Studio in March 2026 and raised the 256GB upgrade price. ... [20] AMD Ryzen AI Max+ 395 (Strix ...
 
-The Model Context Protocol (MCP) - by Micheal Lanham
-https://micheallanham.substack.com/p/the-model-context-protocol-mcp
-April 2026: Scheduled MCP Dev Summit North America in New York, supported by major cloud and tooling vendors. Adoption Metrics (March 2026) The protocol reports unusually high adoption for its age: 97 million+ monthly SDK downloads (Python and TypeScript). 10,000+ published MCP servers.
+Run OpenClaw Locally On AMD Ryzen™ AI Max+ Processors and ...
+https://www.amd.com/en/resources/articles/run-openclaw-locally-on-amd-ryzen-ai-max-and-radeon-gpus.html
+Mar 13, 2026 ... ... 128GB unified memory is available from various AMD partners. Browse ... Start a chat and send a message "test" to ensure the LLM is working.
 
-Model Context Protocol - Wikipedia
-https://en.wikipedia.org/wiki/Model_Context_Protocol
-MCP provides a universal interface for reading files, executing functions, and handling contextual prompts. Following its announcement, the protocol was adopted by major AI providers, including OpenAI and Google DeepMind.
+Strix Halo LLM Benchmarks — Qwen3.5 Research
+https://qwen-research-2026-04-17-1736.vercel.app/
+With q4_0/q4_0 KV on 128GB UMA we can push the 122B MoE past 131K — targeting 262K, 524K, and 1M contexts — and identify whether FLASH_ATTN_EXT scaling or plain memory is the hard wall.
 
-Model Context Protocol (MCP): Landscape, Security Threats, and Future Research Directions | ACM Transactions on Software Engineering and Methodology
-https://dl.acm.org/doi/10.1145/3796519
-Di Maggio L(2026)Predictive Maintenance MCP: An Open-Source Framework for Bridging Large Language Models and Industrial Condition Monitoring via the Model Context ProtocolApplied Sciences10.3390/app1606281216:6(2812)Online publication date: 15-Mar-2026
+Buying advice local llm - Beginners - Hugging Face Forums
+https://discuss.huggingface.co/t/buying-advice-local-llm/174730
+Mar 28, 2026 ... MacBook Pro 16 with M5 Max and 128GB unified memory if your main ... “I specifically want AMD's high-memory Strix Halo design.” “I can ...
 
-What is MCP (Model Context Protocol)? The 2026 Guide for SaaS PMs | Truto Blog
-https://truto.one/blog/what-is-mcp-model-context-protocol-the-2026-guide-for-saas-pms
-An MCP server exposes tools and data to AI models (e.g., a Salesforce MCP server that lets agents read contacts). An MCP client lives inside the AI host application (e.g., Claude Desktop or ChatGPT) and handles discovering servers, validating inputs, and routing tool calls.
+Strix Halo Mini PCs for Local LLM Inference: A Practical Guide to Running Large Models at Home | Starry Hope
+https://www.starryhope.com/minipcs/strix-halo-local-llm-inference-2026/
+The fundamental appeal of Strix Halo for local LLM work comes down to one thing: memory bandwidth determines inference speed, and these chips can access a massive pool of unified memory without the bottlenecks that plague discrete GPU setups.

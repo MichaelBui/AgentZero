@@ -1,39 +1,39 @@
-RAG Evaluation: 2026 Metrics and Benchmarks for Enterprise AI Systems | Label Your Data
-https://labelyourdata.com/articles/llm-fine-tuning/rag-evaluation
-An LLM generates answers based only on patterns learned during training. A RAG system pairs an LLM with a retriever that fetches relevant documents at query time. This reduces hallucinations, keeps outputs current, and makes it possible to adapt models to enterprise data without retraining.
+How to Foster Psychological Safety When AI Erodes Trust on Your Team
+https://hbr.org/2026/02/how-to-foster-psychological-safety-when-ai-erodes-trust-on-your-team
+As organizations rapidly integrate AI into their workflows, leaders are uncovering the impact on team dynamics. The same AI tools that promise to enhance productivity can create predictable patterns of team dysfunction that mirror classic ...
 
-[2309.01431] Benchmarking Large Language Models in Retrieval-Augmented Generation
-https://arxiv.org/abs/2309.01431
-To this end, we establish Retrieval-Augmented Generation Benchmark (RGB), a new corpus for RAG evaluation in both English and Chinese. RGB divides the instances within the benchmark into 4 separate testbeds based on the aforementioned fundamental abilities required to resolve the case. Then we evaluate 6 representative LLMs on RGB to diagnose the challenges of current LLMs when applying RAG.
+86% of U.S. Engineers Use AI but Only 6% Fully Trust It, 2026 Survey Finds
+https://allwork.space/2026/02/86-of-u-s-engineers-use-ai-but-only-6-fully-trust-it-2026-survey-finds/
+Rather than resisting AI, most engineers envision a collaborative model. AI is expected to handle repetitive, data-intensive, and exploratory tasks, while humans retain authority over safety, compliance, and final design decisions.
 
-Top 5 RAG Evaluation Platforms in 2025 | by Kuldeep Paul | Medium
-https://medium.com/@kuldeep.paul08/top-5-rag-evaluation-platforms-in-2025-4fbe58ef618f
-The library’s extensibility allows teams to create custom metrics tailored to domain-specific requirements while leveraging the framework’s LLM-based scoring infrastructure. The open-source model provides flexibility for teams requiring complete control over evaluation logic and cost structures.
+Engineering Culture 3.0 - Key Principles for 2026 Teams - TechTalent
+https://www.techtalent.ro/engineering-culture-3-0-key-principles-for-2026-teams/
+In practice, psychological safety is built through small, consistent behaviors. Leaders who listen actively, respond constructively, and give visibility to different perspectives set the tone for the rest of the organization.
 
-RAG Monitoring Tools Benchmark in 2026
-https://research.aimultiple.com/rag-monitoring/
-The Retrieval-Augmented Generation (RAG) pipeline was constructed using the following components: ... Vector database: Qdrant (running locally via Docker) for storing and retrieving high-dimensional vector embeddings · LLM inference: Ollama running Llama 3.2 (1B parameter model) for local generation, ensuring network latency to external LLM providers did not introduce variance
+How to Handle Trusts and Psychological Safety When Scaling Organizations - InfoQ
+https://www.infoq.com/news/2026/04/trust-psychological-safety-scale/
+As organizations scale, communication overload, loss of shared context, and trust gaps emerge, Charlotte de Jong Schouwenburg mentioned. Trust must be built team by team; it can’t be replicated.
 
-RAG Benchmarks Leaderboard: Retrieval Rankings 2026 | Awesome Agents
-https://awesomeagents.ai/leaderboards/rag-benchmarks-leaderboard/
-Rankings of the top embedding and RAG systems across BEIR, MTEB retrieval, MIRACL, MS MARCO, KILT, HotpotQA, and RAGTruth hallucination benchmarks as of April 2026.
+How to Build a High-Trust Culture in a Technical Team
+https://teamgps.com/blog/employee-engagement/how-to-build-a-high-trust-culture-in-a-technical-team/
+Leaders often turn to employee management software to track performance, productivity, and progress. But tools alone do not create trust. Without psychological safety, teams hide problems, delay conversations, and quietly miss expectations.
 
-RAG Evaluation: A Complete Guide for 2025
-https://www.getmaxim.ai/articles/rag-evaluation-a-complete-guide-for-2025/
-According to LangChain's 2026 State of AI Agents report, 57% of organizations have agents in production, with quality cited as the top barrier to deployment by 32% of respondents.
+Top Engineering Leaders in 2026: What They All Have in Common | South
+https://www.hireinsouth.com/post/engineering-leaders-what-they-have-in-common
+Technical expertise matters, but in 2026, empathy, mentorship, and coaching are what set leaders apart. They know how to inspire engineers, create psychologically safe environments, and support career growth; all key drivers of retention in ...
 
-Navigating the Maze of LLM Evaluation: A Guide to Benchmarks, RAG, and Agent Assessment | by Yuji Isobe | Medium
-https://medium.com/@yujiisobe/navigating-the-maze-of-llm-evaluation-a-guide-to-benchmarks-rag-and-agent-assessment-fb7aef299e66
-DeepEval: This is another tool that provides implementations for many common RAG evaluation metrics, facilitating their application. ... AI agents represent a further step in LLM application complexity, involving multi-step reasoning, interaction with external tools via API calls, and operation within dynamic environments to achieve goals.18
+How AI is Reshaping Engineering Teams and Priorities | Galileo
+https://galileo.ai/blog/ai-engineering-team-dynamics
+Majors advocates for blameless post-mortems that extract maximum insights from production issues, transforming failures into organizational wisdom. This requires psychological safety where engineers can admit mistakes without fear of repercussions.
 
-Top 5 Tools to Evaluate RAG Performance in 2026 - Future AGI
-https://futureagi.substack.com/p/top-5-tools-to-evaluate-rag-performance
-Compare the best RAG evaluation tools in 2026, including RAGAS, DeepEval, Arize Phoenix, LangSmith, and FutureAGI, with metrics breakdowns, tradeoffs, and practical guidance for testing your pipeline
+Generation Z Employees’ Acceptance and AI Use Intensity: A Moderated Mediation Model of Psychological Safety, Technostress, and Trust
+https://www.mdpi.com/2673-8104/6/1/7
+Organizational AI readiness increased ... psychological safety. Trust influenced both intention and AI use intensity and partially mediated the relationship between perceived usefulness and intention....
 
-A complete guide to RAG evaluation: metrics, testing and best practices
-https://www.evidentlyai.com/llm-guide/rag-evaluation
-This guide breaks down how to evaluate and test RAG systems. You'll learn how to evaluate retrieval and generation quality, build test sets with synthetic data, run experiments, and monitor in production.
+The (Not So) Hidden Social Drivers behind the Highest Performing Engineering Teams - InfoQ
+https://www.infoq.com/presentations/trust-psychological-safety/
+Lizzie Matusov delves into how trust and psychological safety serve as powerful signals of team success with practical methods to evaluate and measure these key social dimensions.
 
-RAG Evaluation Metrics: Best Practices for Evaluating RAG Systems
-https://www.patronus.ai/llm-testing/rag-evaluation-metrics
-Learn how to effectively implement and evaluate retrieval-augmented generation systems using popular RAG evaluation metrics and best practices for production.
+Creating psychological safety in the AI era | MIT Technology Review
+https://www.technologyreview.com/2025/12/16/1125899/creating-psychological-safety-in-the-ai-era/
+"Psychological safety is mandatory in this new era of AI," says Rafee Tarafdar, executive vice president and chief technology officer at Infosys. "The tech itself is evolving so fast ...

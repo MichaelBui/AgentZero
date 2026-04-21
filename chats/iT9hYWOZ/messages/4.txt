@@ -1,39 +1,39 @@
-Local LLM Inference in 2026: The Complete Guide to Tools, Hardware & Open-Weight Models
-https://blog.starmorph.com/blog/local-llm-inference-tools-guide
-The Mac Mini M4 Pro with 48GB (~$1,999) is the best value — it runs 70B parameter models and costs less than a good GPU. For NVIDIA, a used RTX 3090 (24GB, ~$900) offers the best price-to-VRAM ratio. Memory bandwidth is the bottleneck for inference, not compute FLOPS.
+ColPali: Redefining Multimodal RAG with Gemini - Learn OpenCV
+https://learnopencv.com/multimodal-rag-with-colpali/
+Unlike traditional retrieval systems, which may struggle with these elements, ColPali is an excellent contender for a production ready retrieval solution. We will explore and test this through a much demanding industrial use case by building a Multimodal RAG application with Colpali and Gemini on finance reports.
 
-Home AI Server Build Guide 2026 — Always-On Local LLM | Compute Market
-https://www.compute-market.com/blog/home-ai-server-build-guide-2026
-Build a 24/7 home AI server for local LLM inference. Hardware picks, networking, Ollama setup, remote access, and multi-device serving — from $1K to $3K.
+Beyond OCR: Why ColPali Is Changing How We Build RAG for Documents
+https://medium.com/@mudassar.hakim/beyond-ocr-why-colpali-is-changing-how-we-build-rag-for-documents-2ebeb853e400
+Beyond OCR: Why ColPali Is Changing How We Build RAG for Documents Most RAG systems do not fail because the language model is weak. They fail because the retrieval layer does not truly understand ...
 
-Local AI in 2026: Ollama Benchmarks, $0 Inference, and the End of Per-Token Pricing - DEV Community
-https://dev.to/pooyagolchian/local-ai-in-2026-running-production-llms-on-your-own-hardware-with-ollama-54d0
-52 million monthly Ollama downloads. 135K GGUF models on HuggingFace. Qwen 2.5 32B hits 83.2% MMLU running entirely on a Mac Studio. Benchmark every local model against cloud APIs with real cost data.
+10 RAG Shifts Redefining Production AI in 2026 - Medium
+https://medium.com/microsoftazure/10-rag-shifts-redefining-production-ai-in-2026-7acbdd66076c
+Mar 19, 2026 ... Composable RAG: From monolithic to multi-agent RAG systems… Most ... Multi-vector retrieval used to be too expensive in storage and ...
 
-Best GPUs for Local LLM Inference (April 2026): The VRAM ...
-https://corelab.tech/llmgpu/
-In April 2026, with the release of more "Multi-modal" models (vision + audio + text), 16GB is the new "Minimum Viable Product" for a decent experience. Sadly, but more capably overall.
+[2407.01449] ColPali: Efficient Document Retrieval with Vision Language Models
+https://arxiv.org/abs/2407.01449
+The inherent complexity and performance shortcomings of modern systems motivate a new concept; doing document retrieval by directly embedding the images of the document pages. We release ColPali, a Vision Language Model trained to produce high-quality multi-vector embeddings from images of document pages.
 
-Local LLM Inference in 2026: The Complete Guide to Tools, Hardware & Open-Weight Models - DEV Community
-https://dev.to/starmorph/local-llm-inference-in-2026-the-complete-guide-to-tools-hardware-open-weight-models-2iho
-The homelab hardware teacher. End-to-end AI server builds at every budget — from $150 entry-level to $5,000 quad-3090 builds. His Proxmox guides for Ollama + Open WebUI and vLLM are the best I've found.
+Visual RAG Toolkit: Scaling Multi-Vector Visual Retrieval
+https://arxiv.org/html/2602.12510v1
+Abstract. Multi-vector visual retrievers (e.g., ColPali-style late interaction models) deliver strong accuracy, but scale poorly because each page yields thousands of vectors, making indexing and search increasingly expensive. We present Visual RAG Toolkit, a practical system for scaling visual multi-vector retrieval with training-free, model-aware pooling and multi-stage retrieval. Motivated ...
 
-Ollama Pricing 2026: Benchmarks, Cloud Costs, and Hardware Requirements - Pooya Golchian
-https://pooya.blog/blog/local-ai-ollama-benchmarks-cost-2026/
-Compare Ollama hardware costs against GPT-4o and Claude API pricing for 2026. Qwen 2.5 32B hits 83.2% MMLU on a Mac Studio at $0 per token. Full benchmark data
+[AINews] The high-return activity of raising your aspirations for LLMs
+https://www.latent.space/p/ainews-the-high-return-activity-of
+Mar 12, 2026 ... AI News for 3/11/2026-3/12/2026. We checked 12 subreddits, 544 ... multi-vector: The most technically opinionated commentary came from ...
 
-7 Best GPU for LLM in 2026 (Including Local LLM Setups) - Fluence
-https://www.fluence.network/blog/best-gpu-for-llm/
-In 2026, options span from consumer GPUs that now rival enterprise hardware at 25% of the price to decentralized clouds like Fluence, which undercut hyperscalers by up to 80%. Cost-conscious teams can use the Fluence H200 ($2.56/hr) with zero ...
+ColPali: Efficient Document Retrieval with Vision Language Models
+https://arxiv.org/html/2407.01449v4
+ture Work. Beyond performance improvements that could be obtained through better data, backbone models or training strategies, our vision at term is to combine visual retrieval systems and visually grounded query answering to create end-to-end RAG systems that purely function from image features.
 
-Local LLM Hardware Requirements in 2026 | AI Hub
-https://overchat.ai/ai-hub/llm-hardware-requirements
-What hardware do you need to run a local LLM in 2026? GPU, VRAM, RAM and CPU requirements for every model size, from 3B to 400B.
+The 2026 Roadmap: Production AI/ML Systems - Jam with AI
+https://jamwithai.substack.com/p/the-2026-roadmap-production-aiml
+Jan 20, 2026 ... Evaluation pipelines with RAGAS and LLM-as-judge. Graph RAG with Neo4j for multi-hop queries. ColPali/VLM for visual document retrieval. Format ...
 
-The 2026 Local LLM Hardware Guide: Surviving the RAM Crisis | by James Rien | Medium
-https://medium.com/@jameshugo598/the-2026-local-llm-hardware-guide-surviving-the-ram-crisis-fa67e8c95804
-The goal was simple: Can I run a coding assistant that doesn’t hallucinate imports, without spending a fortune? I benchmarking the new wave of “Small” LLMs (Qwen 2.5, Mistral Small, and Gemma 3).
+ColPali, MUVERA, and PyLate: How Multi-Vector Retrieval Went Multimodal ...
+https://www.bestaiweb.ai/colpali-muvera-and-pylate-how-multi-vector-retrieval-went-multimodal-in-2026/
+ColPali, MUVERA, and PyLate converged to make multi-vector retrieval multimodal and production-ready. Here's what the shift means for search architecture.
 
-What to Buy for Local LLMs (April 2026) | by Julien Simon | Apr, 2026 | Medium
-https://julsimon.medium.com/what-to-buy-for-local-llms-april-2026-a4946a381a6a
-[2] Prebuilt single-GPU RTX 5090 workstation pricing, April 2026: MSI Aegis $3,599 (sold out — cheaper than standalone GPUs); Skytech $5,300; CyberPower/Maingear $4,400–$5,300; Alienware Area-51 $5,300 (discounted).
+GitHub - illuin-tech/colpali: The code used to train and run inference with the ColVision models, e.g. ColPali, ColQwen2, and ColSmol. · GitHub
+https://github.com/illuin-tech/colpali
+Tutorial about using multi-vector embeddings with the Weaviate vector database. ... Candle enables ColPali inference with an efficient ML framework for Rust. ... EmbedAnything Allows end-to-end ColPali inference with both Candle and ONNX backend. ... DocAI uses ColPali with GPT-4o and Langchain to extract structured information from documents. ... VARAG uses ColPali in a vision-only and a hybrid RAG pipeline.

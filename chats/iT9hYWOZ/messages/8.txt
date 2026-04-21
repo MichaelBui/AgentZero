@@ -1,39 +1,39 @@
-LDX3 London 2026 Agenda - Explore the full schedule
-https://leaddev.com/leaddev-london/agenda/
-A practical framework to help engineering leaders recognize burnout early, rebalance demands, and recover while staying effective and healthy.
+Mentoring Trends 2026: The Future of Employee Development and Learning
+https://www.qooper.io/blog/mentoring-trends
+AI and data analytics will shape the next era of personalized mentoring experiences. Hybrid and virtual mentoring models will define global and flexible mentoring structures. DEIB and reverse mentorship programs will strengthen inclusion and ...
 
-7 Engineering Burnout Warning Signs - jellyfish.co
-https://jellyfish.co/blog/engineering-burnout/
-Here are seven signs that your engineering team suffers from burnout. Learn what to watch for and how to avoid engineering burnout here.
+Refonte Learning : AI Engineering in 2026: Trends, Skills, and Career Opportunities
+https://www.refontelearning.com/blog/ai-engineering-in-2026-trends-skills-and-career-opportunities
+These programs encapsulate the latest industry knowledge and provide the mentorship and practical experience that can be hard to get on your own. In a rapidly changing domain, having such structured support can accelerate your journey. Ultimately, the demand for AI engineers in 2026 far exceeds ...
 
-The home of engineering leadership - LeadDev
-https://leaddev.com/
-LeadDev is for leaders who want to run more effective engineering orgs. Latest Conference talks Reports Upcoming panel discussions Must read On our LeadDev playlist view all videos Content for you Everything tech leads and engineering leaders needs to know The latest content for staff, principal ...
+Demand for AI Engineers in 2026 and Beyond: Market Trends, Skills ...
+https://www.interviewquery.com/p/ai-engineers-demand
+Mar 30, 2026 ... Demand for AI engineers is surging in 2026. Explore market trends, key skills, salaries, and career opportunities shaping the future of AI ...
 
-Burnout is on the rise as layoffs reshape the tech industry - LeadDev
-https://leaddev.com/culture/engineering-burnout-rising-2025-layoffs-reshape-tech-industry
-LeadDev’s Engineering Leadership Report 2025 reveals a growing burnout crisis as layoffs, shifting scopes, and dwindling morale reshape the tech industry.
+Coaching & Mentoring in the AI Era: Revolutionary Templates ...
+https://www.linkedin.com/pulse/coaching-mentoring-ai-era-revolutionary-templates-micha%C5%82-stankiewicz-61fcf
+The result? Career paths are no longer linear ladders but living, adaptive webs — constantly rewoven around real-time growth, skill amplification, and bold future possibilities. Below, I break ...
 
-The unseen costs of burnout in tech leadership - LeadDev
-https://leaddev.com/culture/unseen-costs-burnout-tech-leadership
-Burnout isn't just a buzzword. It has real repercussions on both an individual and the company they work for. How do you manage it?
+Deeptech Mentorship Program 2026 — Meet the Mentors The ...
+https://www.instagram.com/p/DXJdntlinWM/
+Explore the vast career opportunities in AI and emerging tech ... Gain expert insights on AI best practices from a seasoned full-stack engineer!
 
-What Tech Companies Must Do as Hiring Changes in 2026 | Republic World
-https://www.republicworld.com/initiatives/what-tech-companies-must-do-as-hiring-changes-in-2026
-Burnout has become far too common in our industry. Many experienced engineers have seen what constant pressure does to individuals and teams.
+Is this a good roadmap to become an AI engineer in 2026?
+https://www.reddit.com/r/learnmachinelearning/comments/1rpc5gc/is_this_a_good_roadmap_to_become_an_ai_engineer/
+We’re answering questions composed of bulleted buzzwords written by an AI about how to learn to use LLMs professionally and that counts as “AI engineering” i feel old. More on reddit.com
 
-The Big Shift: 2026 Learning Trends in APAC - Udemy Business
-https://business.udemy.com/resources/learning-trends-apac-2026/
-Work is evolving at lightning speed across the region, and the skill expectations of tomorrow look very different from what teams rely on today. With AI accelerating faster than ever, learning leaders are being pushed to rethink how they develop ...
+LinkedIn: AI Engineering, Prompting & Model Tuning Are the Fastest ...
+https://www.interviewquery.com/p/linkedin-ai-engineering-fastest-growing-skills-2026
+The New Reality of AI Skills in 2026 As AI continues to reshape jobs across tech and beyond, it's increasingly proving to no longer be optional. According to LinkedIn's Skills on the Rise 2026 report, AI-related capabilities, especially AI engineering, prompting, and model optimization, are seeing dramatic growth across industries.
 
-LDX3 New York by LeadDev | The Festival for Modern Engineering Leadership
-https://leaddev.com/leaddev-new-york/
-Join over 2,000 engineering leaders on September 15 & 16, 2026 for talks, activities, and strategies to lead through constant change.
+AI Will Reshape More Jobs Than It Replaces | BCG
+https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces
+Apr 3, 2026 ... ... between system and engineer. Instead, software development becomes an ongoing interaction in which engineers define objectives, refine ...
 
-The Unmissable APAC Tech Events of 2026 (Volume 1)
-https://www.kaliba.com.au/the-unmissable-apac-tech-events-of-2026
-April 2026 (TBC) Tokyo, JAPAN Big for: Cloud engineers, DevOps, partners, ISVs. May 2026 (Dates TBC) Gold Coast, AUSTRALIA Big for: Cyber practitioners, MSP security teams, CISOs.
+AI Career Roadmap 2026: Skills, Tools & Real-World Pathways
+https://nerdleveltech.com/ai-career-roadmap-2026-skills-tools-real-world-pathways
+A complete 2026 roadmap for building a successful AI career — from foundational skills to real-world applications, tools, and growth strategies.
 
-The Engineering Leadership Report 2024: The Data on Shifts in the Tech Industry & What It Means for Leaders - LCPS01E03 — Lena Reinhard
-https://www.lenareinhard.com/articles/the-engineering-leadership-report-2024-the-data-on-shifts-in-the-tech-industry-what-it-means-for-leaders-lcps01e03
-Watch out for signs of overwhelm and burnout in yourself and others, because managers and leaders have always done a lot of glue work, a lot of.
+AI for Engineers: Why Continuous Learning, Degrees, and Certifications Matter in 2026 | Electronic Design
+https://www.electronicdesign.com/technologies/eda/article/55363756/electronic-design-ai-for-engineers-why-continuous-learning-degrees-and-certifications-matter-in-2026
+We need the right resources and practices to effectively work with AI, especially in the workforce. Online platforms offer courses, workshops, AI documentation, and tutorials tailored for engineers. Some of the best choices in 2026 include:
