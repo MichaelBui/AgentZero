@@ -1,9 +1,245 @@
-[2026-04-21T14:00:30+0000] STARTED (days=5, since=2026-04-16, user=michael.bui@fairpricegroup.sg)
-[2026-04-21T14:00:30+0000] Connecting to browser at http://192.168.1.11:9223...
-(node:32419) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+[2026-04-22T06:55:29+0000] STARTED (days=3, since=2026-04-19, user=michael.bui@fairpricegroup.sg)
+[2026-04-22T06:55:29+0000] Connecting to browser at http://192.168.1.11:9223...
+(node:36099) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[2026-04-21T14:00:30+0000] Browser connected. Browser timezone: UTC
-[2026-04-21T14:00:57+0000] FATAL: 0 threads found
+[2026-04-22T06:55:29+0000] Browser connected. Browser timezone: UTC
+[2026-04-22T06:55:35+0000]   Page 1: 100 thread(s)
+[2026-04-22T06:55:35+0000]   Early stop: 5 consecutive cached
+[2026-04-22T06:55:40+0000]   Page 2: 60 thread(s)
+[2026-04-22T06:56:05+0000] Phase 1: 116 threads (excluded=44, unchanged=86, to-fetch=30, unread=23)
+[2026-04-22T06:56:05+0000] [Fetching 1/30] FairPrice in-office Trial of Broadsign + Advertima
+[2026-04-22T06:56:07+0000]   -> 1 new message(s) cached
+[2026-04-22T06:56:08+0000]   -> restored unread status
+[2026-04-22T06:56:08+0000] [Fetching 2/30] Invitation: rOOH Ad Platform Requirements Review & Sign
+[2026-04-22T06:56:08+0000] Summarizing [1/116] FairPrice in-office Trial of Broadsign + Advertima (1 msgs, indirect)
+[2026-04-22T06:56:11+0000]   -> 1 new message(s) cached
+[2026-04-22T06:56:11+0000]   -> restored unread status
+[2026-04-22T06:56:11+0000] [Fetching 3/30] Advertima PoV has been extended to May 31st
+[2026-04-22T06:56:14+0000] Done [1/116] 19db36d2fe5f2c29 rel=6
+[2026-04-22T06:56:14+0000] Summarizing [2/116] Invitation: rOOH Ad Platform Requirements Review & (1 msgs, direct)
+[2026-04-22T06:56:21+0000]   Retry: resetting SPA state via inbox...
+[2026-04-22T06:56:22+0000] Done [2/116] 19db3d491033cce1 rel=8
+[2026-04-22T06:56:33+0000]   Retry 2: full page reload...
+[2026-04-22T06:56:45+0000]   -> 1 new message(s) cached
+[2026-04-22T06:56:45+0000] [Fetching 4/30] [JIRA] (DPD-838) Transition to Impression-Based Invento
+[2026-04-22T06:56:45+0000] Summarizing [3/116] Advertima PoV has been extended to May 31st (1 msgs, direct)
+[2026-04-22T06:56:51+0000] Done [3/116] 19db3c53d79f7bf4 rel=9
+[2026-04-22T06:56:52+0000]   -> 2 new message(s) cached
+[2026-04-22T06:56:52+0000] [Fetching 5/30] [JIRA] (AI Governance Registry) (AIGR) Project moved to
+[2026-04-22T06:56:52+0000] Summarizing [4/116] [JIRA] (DPD-838) Transition to Impression-Based In (2 msgs, direct)
+[2026-04-22T06:56:54+0000]   -> 1 new message(s) cached
+[2026-04-22T06:56:54+0000] [Fetching 6/30] Michael Bui, here is your weekly update for 22 Apr
+[2026-04-22T06:56:58+0000]   -> 1 new message(s) cached
+[2026-04-22T06:56:59+0000]   -> restored unread status
+[2026-04-22T06:56:59+0000] [Fetching 7/30] New sign-on notification
+[2026-04-22T06:57:00+0000] Done [4/116] 19d2e82fa82f66fe rel=7
+[2026-04-22T06:57:00+0000] Summarizing [5/116] [JIRA] (AI Governance Registry) (AIGR) Project mov (1 msgs, direct)
+[2026-04-22T06:57:02+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:03+0000]   -> restored unread status
+[2026-04-22T06:57:03+0000] [Fetching 8/30] Learning Assignment Changes Email Notification
+[2026-04-22T06:57:06+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:06+0000] Done [5/116] 19db3b79c79ec33f rel=6
+[2026-04-22T06:57:06+0000] [Fetching 9/30] Canceled event: [Tentative] rOOH Ad Server Tender Requi
+[2026-04-22T06:57:06+0000] Summarizing [6/116] Michael Bui, here is your weekly update for 22 Apr (1 msgs, direct)
+[2026-04-22T06:57:08+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:09+0000]   -> restored unread status
+[2026-04-22T06:57:09+0000] [Fetching 10/30] [Dashboard Report] Retail Media - DD Dashboard | Wed 22
+[2026-04-22T06:57:11+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:11+0000]   -> restored unread status
+[2026-04-22T06:57:11+0000] [Fetching 11/30] Tender Doc [DRAFT] - New Ad Platform for in-store rOOH
+[2026-04-22T06:57:14+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:14+0000]   -> restored unread status
+[2026-04-22T06:57:14+0000] [Fetching 12/30] Updated invitation: RMN Grooming - Sprint 2 (Part 2) @
+[2026-04-22T06:57:16+0000] Done [6/116] 19db3b1652722328 rel=6
+[2026-04-22T06:57:16+0000] Summarizing [7/116] New sign-on notification (1 msgs, direct)
+[2026-04-22T06:57:17+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:18+0000]   -> restored unread status
+[2026-04-22T06:57:18+0000] [Fetching 13/30] Message from GCEO: FPG’s 2025 Performance Review Cycle
+[2026-04-22T06:57:20+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:20+0000] [Fetching 14/30] Re: [Bitbucket] Pull request #949: [PRE-1214] Alert rou
+[2026-04-22T06:57:21+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:22+0000] Done [7/116] 19db35b505b48aac rel=6
+[2026-04-22T06:57:22+0000] Summarizing [8/116] Learning Assignment Changes Email Notification (1 msgs, direct)
+[2026-04-22T06:57:22+0000]   -> restored unread status
+[2026-04-22T06:57:22+0000] [Fetching 15/30] Tender Doc [DRAFT... - I don't know where should I put
+[2026-04-22T06:57:24+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:24+0000]   -> restored unread status
+[2026-04-22T06:57:24+0000] [Fetching 16/30] [RAW Overdue] Expired Risk Acceptance & Waiver Form
+[2026-04-22T06:57:26+0000] Done [8/116] 19db355a8ffbbce1 rel=5
+[2026-04-22T06:57:27+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:27+0000] Summarizing [9/116] Canceled event: [Tentative] rOOH Ad Server Tender  (1 msgs, direct)
+[2026-04-22T06:57:27+0000]   -> restored unread status
+[2026-04-22T06:57:27+0000] [Fetching 17/30] Daily digest: updates from Benji Thian Chan One
+[2026-04-22T06:57:29+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:29+0000]   -> restored unread status
+[2026-04-22T06:57:29+0000] [Fetching 18/30] You have no events scheduled today.
+[2026-04-22T06:57:31+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:31+0000]   -> restored unread status
+[2026-04-22T06:57:31+0000] [Fetching 19/30] Tell us about your Atlassian experience!
+[2026-04-22T06:57:33+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:34+0000] Done [9/116] 19db32dce3312cfd rel=5
+[2026-04-22T06:57:34+0000] Summarizing [10/116] [Dashboard Report] Retail Media - DD Dashboard | W (1 msgs, direct)
+[2026-04-22T06:57:34+0000]   -> restored unread status
+[2026-04-22T06:57:34+0000] [Fetching 20/30] NED-266212 [General Service request] Increase SMTP rate
+[2026-04-22T06:57:40+0000] Done [10/116] 19db324781363a3a rel=5
+[2026-04-22T06:57:40+0000] Summarizing [11/116] Tender Doc [DRAFT] - New Ad Platform for in-store  (1 msgs, direct)
+[2026-04-22T06:57:43+0000]   -> 22 new message(s) cached
+[2026-04-22T06:57:44+0000]   -> restored unread status
+[2026-04-22T06:57:44+0000] [Fetching 21/30] [JIRA] Chee Keong Ng mentioned you on NED-266212
+[2026-04-22T06:57:45+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:46+0000]   -> restored unread status
+[2026-04-22T06:57:46+0000] [Fetching 22/30] Accepted: rOOH Ad Server Tender requirements review + s
+[2026-04-22T06:57:48+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:48+0000] [Fetching 23/30] Updated invitation with note: rOOH Ad Server Tender req
+[2026-04-22T06:57:49+0000] Done [11/116] 19da914e1413bff0 rel=9
+[2026-04-22T06:57:49+0000] Summarizing [12/116] Updated invitation: RMN Grooming - Sprint 2 (Part  (1 msgs, direct)
+[2026-04-22T06:57:49+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:49+0000]   -> restored unread status
+[2026-04-22T06:57:49+0000] [Fetching 24/30] Tender Doc [DRAFT... - We may want to add this: Platfor
+[2026-04-22T06:57:51+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:52+0000]   -> restored unread status
+[2026-04-22T06:57:52+0000] [Fetching 25/30] C/03/2026 - UPDATE TO IDENTITY AND ACCESS MANAGEMENT (I
+[2026-04-22T06:57:54+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:54+0000]   -> restored unread status
+[2026-04-22T06:57:54+0000] [Fetching 26/30] Tender Doc [DRAFT... - We should define our expected SL
+[2026-04-22T06:57:56+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:57+0000]   -> restored unread status
+[2026-04-22T06:57:57+0000] [Fetching 27/30] Tender Doc [DRAFT... - To emphasize to be compliant wit
+[2026-04-22T06:57:59+0000]   -> 1 new message(s) cached
+[2026-04-22T06:57:59+0000]   -> restored unread status
+[2026-04-22T06:57:59+0000] [Fetching 28/30] Your Weekly Digest from Datadog
+[2026-04-22T06:57:59+0000] Done [12/116] 19db2f23db7288c9 rel=6
+[2026-04-22T06:57:59+0000] Summarizing [13/116] Message from GCEO: FPG’s 2025 Performance Review C (1 msgs, direct)
+[2026-04-22T06:58:01+0000]   -> 1 new message(s) cached
+[2026-04-22T06:58:01+0000]   -> restored unread status
+[2026-04-22T06:58:01+0000] [Fetching 29/30] C/04/2026 - Update of IT Outsourcing Policy
+[2026-04-22T06:58:03+0000]   -> 1 new message(s) cached
+[2026-04-22T06:58:03+0000] [Fetching 30/30] Retail Out-of-Hom... - @michael.bui@fairprice.com.sg pl
+[2026-04-22T06:58:06+0000] Done [13/116] 19db2ea5a4a26382 rel=7
+[2026-04-22T06:58:06+0000] Summarizing [14/116] Re: [Bitbucket] Pull request #949: [PRE-1214] Aler (1 msgs, direct)
+[2026-04-22T06:58:07+0000]   -> 2 new message(s) cached
+[2026-04-22T06:58:08+0000]   -> restored unread status
+[2026-04-22T06:58:12+0000] Done [14/116] 19dae6d4ffad9c7a rel=5
+[2026-04-22T06:58:12+0000] Summarizing [15/116] Tender Doc [DRAFT... - I don't know where should I (1 msgs, direct)
+[2026-04-22T06:58:19+0000] Done [15/116] 19db2bd99ea216c9 rel=8
+[2026-04-22T06:58:19+0000] Summarizing [16/116] [RAW Overdue] Expired Risk Acceptance & Waiver For (1 msgs, direct)
+[2026-04-22T06:58:25+0000] Done [16/116] 19db2b5ecb942bcb rel=7
+[2026-04-22T06:58:25+0000] Summarizing [17/116] Daily digest: updates from Benji Thian Chan One (1 msgs, direct)
+[2026-04-22T06:58:31+0000] Done [17/116] 19db22e7ae7da529 rel=6
+[2026-04-22T06:58:31+0000] Summarizing [18/116] You have no events scheduled today. (1 msgs, direct)
+[2026-04-22T06:58:35+0000] Done [18/116] 19db201388ee3303 rel=5
+[2026-04-22T06:58:35+0000] Summarizing [19/116] Tell us about your Atlassian experience! (1 msgs, direct)
+[2026-04-22T06:58:39+0000] Done [19/116] 19db1c850dc6f3c5 rel=5
+[2026-04-22T06:58:39+0000] Summarizing [20/116] NED-266212 [General Service request] Increase SMTP (22 msgs, direct)
+[2026-04-22T06:58:50+0000] Done [20/116] 19b3501ba1b6c636 rel=8
+[2026-04-22T06:58:50+0000] Summarizing [21/116] [JIRA] Chee Keong Ng mentioned you on NED-266212 (1 msgs, direct)
+[2026-04-22T06:58:57+0000] Done [21/116] 19db093968a70b9c rel=8
+[2026-04-22T06:58:57+0000] Summarizing [22/116] Accepted: rOOH Ad Server Tender requirements revie (1 msgs, direct)
+[2026-04-22T06:59:06+0000] Done [22/116] 19db060d95b4d5af rel=6
+[2026-04-22T06:59:06+0000] Summarizing [23/116] Updated invitation with note: rOOH Ad Server Tende (1 msgs, direct)
+[2026-04-22T06:59:14+0000] Done [23/116] 19daf7f643309fa4 rel=7
+[2026-04-22T06:59:14+0000] Summarizing [24/116] Tender Doc [DRAFT... - We may want to add this: Pl (1 msgs, direct)
+[2026-04-22T06:59:21+0000] Done [24/116] 19daf46b129a4aad rel=9
+[2026-04-22T06:59:21+0000] Summarizing [25/116] C/03/2026 - UPDATE TO IDENTITY AND ACCESS MANAGEME (1 msgs, none)
+[2026-04-22T06:59:27+0000] Done [25/116] 19daf45bfc8721c1 rel=8
+[2026-04-22T06:59:27+0000] Summarizing [26/116] Tender Doc [DRAFT... - We should define our expect (1 msgs, direct)
+[2026-04-22T06:59:34+0000] Done [26/116] 19daf2576630ae82 rel=8
+[2026-04-22T06:59:34+0000] Summarizing [27/116] Tender Doc [DRAFT... - To emphasize to be complian (1 msgs, direct)
+[2026-04-22T06:59:41+0000] Done [27/116] 19daf1eceaed2447 rel=9
+[2026-04-22T06:59:41+0000] Summarizing [28/116] Your Weekly Digest from Datadog (1 msgs, direct)
+[2026-04-22T06:59:50+0000] Done [28/116] 19daf199741bc6c5 rel=6
+[2026-04-22T06:59:50+0000] Summarizing [29/116] C/04/2026 - Update of IT Outsourcing Policy (1 msgs, none)
+[2026-04-22T06:59:55+0000] Done [29/116] 19daeea5c08f9cff rel=2
+[2026-04-22T06:59:55+0000] Summarizing [30/116] Retail Out-of-Hom... - @michael.bui@fairprice.com. (2 msgs, direct)
+[2026-04-22T07:00:02+0000] Done [30/116] 199c15c9e666e19b rel=9
+[2026-04-22T07:00:02+0000] [31/116] 19d25769187b9103: cached (rel=6)
+[2026-04-22T07:00:02+0000] [32/116] 19dae74d73ad8385: cached (rel=8)
+[2026-04-22T07:00:02+0000] [33/116] 19dae7273c09f4ee: cached (rel=8)
+[2026-04-22T07:00:02+0000] [34/116] 19dae626c679d9d2: cached (rel=7)
+[2026-04-22T07:00:02+0000] [35/116] 19dae51854a4700b: cached (rel=8)
+[2026-04-22T07:00:02+0000] [36/116] 19dae5036c86c6ea: cached (rel=8)
+[2026-04-22T07:00:02+0000] [37/116] 19dae48a8b03832c: cached (rel=7)
+[2026-04-22T07:00:02+0000] [38/116] 19dae1f23cd04624: cached (rel=6)
+[2026-04-22T07:00:02+0000] [39/116] 19d966990fd5899b: cached (rel=6)
+[2026-04-22T07:00:02+0000] [40/116] 19dadfdd182b02c3: cached (rel=5)
+[2026-04-22T07:00:02+0000] [41/116] 19dadf6c134611c6: cached (rel=5)
+[2026-04-22T07:00:02+0000] [42/116] 19dade83cd3cfde0: cached (rel=4)
+[2026-04-22T07:00:02+0000] [43/116] 19dadcd6c8d8ae83: cached (rel=5)
+[2026-04-22T07:00:02+0000] [44/116] 19dadc4a4c23a8e7: cached (rel=2)
+[2026-04-22T07:00:02+0000] [45/116] 19dad28eb63af0c6: cached (rel=5)
+[2026-04-22T07:00:02+0000] [46/116] 19dacd42d96e2330: cached (rel=5)
+[2026-04-22T07:00:02+0000] [47/116] 19dac09f62013e17: cached (rel=6)
+[2026-04-22T07:00:02+0000] [48/116] 19dab73be3d60e25: cached (rel=9)
+[2026-04-22T07:00:02+0000] [49/116] 19dab6551a9b190a: cached (rel=9)
+[2026-04-22T07:00:02+0000] [50/116] 19dab5f44142a62f: cached (rel=8)
+[2026-04-22T07:00:02+0000] [51/116] 19dab5149b8f4b12: cached (rel=7)
+[2026-04-22T07:00:02+0000] [52/116] 19daaf7782fdbe5c: cached (rel=8)
+[2026-04-22T07:00:02+0000] [53/116] 19daae13f06b8223: cached (rel=2)
+[2026-04-22T07:00:02+0000] [54/116] 19daae1387d42674: cached (rel=3)
+[2026-04-22T07:00:02+0000] [55/116] 19daae137d316b8a: cached (rel=2)
+[2026-04-22T07:00:02+0000] [56/116] 19daae13746cf579: cached (rel=2)
+[2026-04-22T07:00:02+0000] [57/116] 19daae1365bce2ec: cached (rel=2)
+[2026-04-22T07:00:02+0000] [58/116] 19daae135fa50bed: cached (rel=3)
+[2026-04-22T07:00:02+0000] [59/116] 19daae135ec25682: cached (rel=2)
+[2026-04-22T07:00:02+0000] [60/116] 19daae1352d12c0a: cached (rel=2)
+[2026-04-22T07:00:02+0000] [61/116] 19daae135218389a: cached (rel=2)
+[2026-04-22T07:00:02+0000] [62/116] 19daae13512192fc: cached (rel=2)
+[2026-04-22T07:00:02+0000] [63/116] 19daae134dc53e80: cached (rel=2)
+[2026-04-22T07:00:02+0000] [64/116] 19daae1342f1c665: cached (rel=9)
+[2026-04-22T07:00:02+0000] [65/116] 19daadca10bfd380: cached (rel=2)
+[2026-04-22T07:00:02+0000] [66/116] 19daa221e302dedd: cached (rel=8)
+[2026-04-22T07:00:02+0000] [67/116] 19daac51cd0a7baf: cached (rel=8)
+[2026-04-22T07:00:02+0000] [68/116] 19daa8c7bd636159: cached (rel=8)
+[2026-04-22T07:00:02+0000] [69/116] 19daa58262a07f96: cached (rel=6)
+[2026-04-22T07:00:02+0000] [70/116] 19daa568a8605b44: cached (rel=7)
+[2026-04-22T07:00:02+0000] [71/116] 19daa486fc7d8c09: cached (rel=8)
+[2026-04-22T07:00:02+0000] [72/116] 19daa2b01c9f42e3: cached (rel=7)
+[2026-04-22T07:00:02+0000] [73/116] 19daa2a68a64f839: cached (rel=6)
+[2026-04-22T07:00:02+0000] [74/116] 19daa1e0364fde24: cached (rel=5)
+[2026-04-22T07:00:02+0000] [75/116] 19daa0fd139c3191: cached (rel=7)
+[2026-04-22T07:00:02+0000] [76/116] 19da9e7181a119d9: cached (rel=7)
+[2026-04-22T07:00:02+0000] [77/116] 19da9d18a9f3aeb4: cached (rel=7)
+[2026-04-22T07:00:02+0000] [78/116] 19da9ba21ff9db03: cached (rel=7)
+[2026-04-22T07:00:02+0000] [79/116] 19da9b6e6cbc1952: cached (rel=6)
+[2026-04-22T07:00:02+0000] [80/116] 19da9b57462db762: cached (rel=6)
+[2026-04-22T07:00:02+0000] [81/116] 19da9b22d977c5e1: cached (rel=6)
+[2026-04-22T07:00:02+0000] [82/116] 19da9b22016b760b: cached (rel=6)
+[2026-04-22T07:00:02+0000] [83/116] 19da9b21d6a1b204: cached (rel=6)
+[2026-04-22T07:00:02+0000] [84/116] 19ce6ebdc3530d4d: cached (rel=9)
+[2026-04-22T07:00:02+0000] [85/116] 19da99d3e5ecaae9: cached (rel=5)
+[2026-04-22T07:00:02+0000] [86/116] 19da999cfdb4ef56: cached (rel=9)
+[2026-04-22T07:00:02+0000] [87/116] 19da999c1388419f: cached (rel=5)
+[2026-04-22T07:00:02+0000] [88/116] 19da999785642d0e: cached (rel=6)
+[2026-04-22T07:00:02+0000] [89/116] 19d9b2b3ecdbf46d: cached (rel=9)
+[2026-04-22T07:00:02+0000] [90/116] 19da984d1d0d33ca: cached (rel=2)
+[2026-04-22T07:00:02+0000] [91/116] 19da97f190942447: cached (rel=5)
+[2026-04-22T07:00:02+0000] [92/116] 19da974adf17d82d: cached (rel=7)
+[2026-04-22T07:00:02+0000] [93/116] 19da9740533bd07e: cached (rel=5)
+[2026-04-22T07:00:02+0000] [94/116] 19da97404c9abf71: cached (rel=5)
+[2026-04-22T07:00:02+0000] [95/116] 19da974045f0a273: cached (rel=5)
+[2026-04-22T07:00:02+0000] [96/116] 19da973ffeb45252: cached (rel=6)
+[2026-04-22T07:00:02+0000] [97/116] 19da973ffb109966: cached (rel=6)
+[2026-04-22T07:00:02+0000] [98/116] 19da973ffa9acaa8: cached (rel=6)
+[2026-04-22T07:00:02+0000] [99/116] 19da973ff5b6d0f0: cached (rel=6)
+[2026-04-22T07:00:02+0000] [100/116] 19da973fe6c8d24b: cached (rel=7)
+[2026-04-22T07:00:02+0000] [101/116] 19d952f5f9f4a4da: cached (rel=7)
+[2026-04-22T07:00:02+0000] [102/116] 19da9655018081f1: cached (rel=6)
+[2026-04-22T07:00:02+0000] [103/116] 19da8f733cd521f3: cached (rel=3)
+[2026-04-22T07:00:02+0000] [104/116] 19da8d73da6bbe0d: cached (rel=6)
+[2026-04-22T07:00:02+0000] [105/116] 19da8d45d654a204: cached (rel=2)
+[2026-04-22T07:00:02+0000] [106/116] 19da8c7939d6fd74: cached (rel=6)
+[2026-04-22T07:00:02+0000] [107/116] 19da8b44dbbb9a8c: cached (rel=7)
+[2026-04-22T07:00:02+0000] [108/116] 19da89d8443c5f71: cached (rel=5)
+[2026-04-22T07:00:02+0000] [109/116] 19d9ae8e7ead3d70: cached (rel=6)
+[2026-04-22T07:00:02+0000] [110/116] 19da80232417b202: cached (rel=5)
+[2026-04-22T07:00:02+0000] [111/116] 19da7a45e3fd4257: cached (rel=5)
+[2026-04-22T07:00:02+0000] [112/116] 19da62d7d62e4ebe: cached (rel=9)
+[2026-04-22T07:00:02+0000] [113/116] 19da61245e2068b6: cached (rel=8)
+[2026-04-22T07:00:02+0000] [114/116] 19da5b5adbdda7c8: cached (rel=8)
+[2026-04-22T07:00:02+0000] [115/116] 19da4d9d6d9c0499: cached (rel=6)
+[2026-04-22T07:00:02+0000] [116/116] 19da4c2049806131: cached (rel=6)
+[2026-04-22T07:00:02+0000] Output: /a0/usr/workdir/gmail-output.md (47 summaries, min_relevance=7)
+[2026-04-22T07:00:02+0000] COMPLETED (116 threads, fetched=30)
 (venv) root@65a984945e89:/a0/usr/workdir#
 
-[SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+[SYSTEM: Returning control to agent after 300 seconds of execution. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

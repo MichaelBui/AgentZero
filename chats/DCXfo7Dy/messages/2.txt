@@ -1,0 +1,23 @@
+/a0/usr/workdir/gchat-output.md 127 lines
+>>>
+ 1 
+ 2 
+ 3 ## [1/31] [Leads] (Ecom/Omni) Digital Product Development
+ 4 Source: gchat | Group: space/AAQAN8mDauE/YH1CLPyXEng | Relevance: 7/10 | Mention: direct | Updated: 2026-04-20T02:21:56.518000+00:00 | People: Andin Eswarlal Rajesh, Daryl Ng, Gopalakrishna Dhulipati, Michael Bui | Labels: team-wellness, medical-leave, peer-support, staff-absence, chat-response
+ 5 In the 'Leads (Ecom/Omni) Digital Product Development' Google Chat space, Andin Eswarlal Rajesh announced a medical leave due to an eye infection starting April 20, 2026. The thread included well-wishes from Daryl Ng and Gopalakrishna Dhulipati. Michael Bui participated by responding with 'Rest well & recover soon!'. This is a direct human interaction involving the user in a group setting, expressing professional courtesy regarding a team member's absence.
+ 6 
+ 7 ## [2/31] Chee Hoe Leong
+ 8 Source: gchat | Group: dm/42xfA4AAAAE | Relevance: 9/10 | Mention: direct | Updated: 2026-04-20T03:08:32.590000+00:00 | Work Items: DPD-838, rmn-ad-service | People: Michael Bui, Chee Hoe Leong | Labels: architecture-review, code-quality, split-io-integration, engineering-governance, service-consistency
+ 9 Michael Bui provided direct architectural feedback in a DM with Chee Hoe Leong regarding ticket DPD-838 for the rmn-ad-service repository. Michael advised that Split.io integration should be placed in the 'repo' package rather than 'dependency', treating it as an external resource like a database to maintain codebase hygiene. Furthermore, he recommended aligning the implementation with existing cluster patterns by connecting via Redis instead of direct connections to ensure service consistency. While Chee previously requested secret configuration for Split.io (preprod and prod) which Michael acknowledged, this specific interaction highlights Michael's role in enforcing engineering governance and architecture standards during the active development phase.
+10 
+11 ## [3/31] Nikhil Grover
+12 Source: gchat | Group: dm/t3wf6EAAAAE/QPLzxs22-bM | Relevance: 9/10 | Mention: direct | Updated: 2026-04-20T03:55:28.489000+00:00 | People: Nikhil Grover | Labels: ad-tech-configuration, schema-modification, design-decision, parameter-cleanup, direct-collaboration
+13 In a direct Google Chat conversation on April 20, 2026, Michael Bui and Nikhil Grover discussed specific modifications to an ad configuration schema. Michael clarified that the team should remove only the 'input params' and 'max slots per request' columns, explicitly excluding the removal of the 'page_type' and 'ad unit' fields. Nikhil confirmed the execution of this decision immediately after receiving Michael's directive. This interaction represents a direct technical design decision regarding Retail Media/Ad Technology parameters, requiring no further action but confirming architectural alignment.
+14 
+15 ## [4/31] Google Drive
+16 Source: gchat | Group: dm/7d1XKcAAAAE | Relevance: 9/10 | Mention: direct | Updated: 2026-04-20T04:00:10.931000+00:00 | Work Items: Project Light, Tender Doc [DRAFT] - New Ad Platform for in-store rOOH screens.docx | People: Michael Bui, Yi Hao Tan, Tiong Siong Tee | Labels: ad-technology, vendor-selection, architecture-review, security-compliance, sla-definition
+17 In a direct Google Chat thread regarding the 'New Ad Platform for in-store rOOH screens' tender document, Michael Bui provided critical technical governance input. He specified requirements for well-defined roles with audit trails and FPG SSO support, compliance with Security Risk Assessment (SRA), and a multi-brand/multi-tenant architecture to ensure isolated inventory and user access across FPG banners. Additionally, he advocated for defining specific enterprise SLAs regarding performance, uptime, and incident recovery. Yi Hao Tan acknowledged these inputs, requesting Michael's detailed requirements to structure them as checklist items in the tender specs (Section 1.3.x) and scheduled a sync-up to discuss the multi-tenant architecture in depth. The interaction represents a high-value technical design review directly impacting vendor selection criteria.
+18 
+19 ## [5/31] Nikhil Grover
+20 Source: gchat | Group: dm/t3wf6EAAAAE/Gb4FqU38MWg | Relevance: 9/10 | Mention: direct | Updated: 2026-04-20T04:27:50.943000+00:00 | Work Items: AClick Integration, AClick | People: Nikhil Grover, Michael Bui, Rajesh, Daryl | Labels: ad-technology, attribution-tracking, architecture-review, vendor-integration, effort-assessment
+<<<
