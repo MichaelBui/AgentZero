@@ -1,39 +1,39 @@
-ColPali: Redefining Multimodal RAG with Gemini - Learn OpenCV
-https://learnopencv.com/multimodal-rag-with-colpali/
-Unlike traditional retrieval systems, which may struggle with these elements, ColPali is an excellent contender for a production ready retrieval solution. We will explore and test this through a much demanding industrial use case by building a Multimodal RAG application with Colpali and Gemini on finance reports.
+2026 Agentic Coding Trends Report How coding agents are reshaping
+https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf
+Engineers describe using AI for tasks that are easily verifiable, ... One manifestation we envision is dynamic "surge" staffing. Businesses will be · able to surge engineers on-demand onto tasks requiring deep codebase knowl­ · edge. Organizations can start staffing projects dynamically, bringing in special­ · ists for specific challenges and shifting resources without the traditional produc­ ... Augment Code, powered by Claude. ... Single-agent workflows process tasks sequentially through one context window.
 
-Beyond OCR: Why ColPali Is Changing How We Build RAG for Documents
-https://medium.com/@mudassar.hakim/beyond-ocr-why-colpali-is-changing-how-we-build-rag-for-documents-2ebeb853e400
-Beyond OCR: Why ColPali Is Changing How We Build RAG for Documents Most RAG systems do not fail because the language model is weak. They fail because the retrieval layer does not truly understand ...
+7 Agentic AI Trends to Watch in 2026 - MachineLearningMastery.com
+https://machinelearningmastery.com/7-agentic-ai-trends-to-watch-in-2026/
+The agentic AI inflection point of 2026 will be remembered not for which models topped the benchmarks, but for which organizations successfully bridged the gap from experimentation to scaled production.
 
-10 RAG Shifts Redefining Production AI in 2026 - Medium
-https://medium.com/microsoftazure/10-rag-shifts-redefining-production-ai-in-2026-7acbdd66076c
-Mar 19, 2026 ... Composable RAG: From monolithic to multi-agent RAG systems… Most ... Multi-vector retrieval used to be too expensive in storage and ...
+PDF The 2026 State of AI Agents Report - resources.anthropic.com
+https://resources.anthropic.com/hubfs/The%202026%20State%20of%20AI%20Agents%20Report.pdf
+Building Effective AI Agents: Architecture Patterns and Implementation Frameworks: Learn how technical teams at Anthropic and other organizations are building agentic workflows, single-agent systems, and multi-agent solutions to power enterprise use cases.
 
-[2407.01449] ColPali: Efficient Document Retrieval with Vision Language Models
-https://arxiv.org/abs/2407.01449
-The inherent complexity and performance shortcomings of modern systems motivate a new concept; doing document retrieval by directly embedding the images of the document pages. We release ColPali, a Vision Language Model trained to produce high-quality multi-vector embeddings from images of document pages.
+Latest Agentic AI Trends to Watch in 2026: Market Shifts, Adoption ...
+https://huggingface.co/blog/daya-shankar/agentic-ai-trends-2026
+For the past two years, most AI discussions have focused on what models can say. In 2026, that conversation is shifting toward a more practical question: what can AI actually do inside real business environments? Google Cloud's 2026 AI Agent Trends framing is explicitly about tangible business value, while UiPath and Adobe are both positioning agentic AI around measurable execution rather ...
 
-Visual RAG Toolkit: Scaling Multi-Vector Visual Retrieval
-https://arxiv.org/html/2602.12510v1
-Abstract. Multi-vector visual retrievers (e.g., ColPali-style late interaction models) deliver strong accuracy, but scale poorly because each page yields thousands of vectors, making indexing and search increasingly expensive. We present Visual RAG Toolkit, a practical system for scaling visual multi-vector retrieval with training-free, model-aware pooling and multi-stage retrieval. Motivated ...
+Top AI Trends Shaping Business and Innovation in 2026
+https://london.theaisummit.com/ai-trends-in-2026/
+The landscape is shifting fast. Agentic AI systems are making autonomous decisions across your operations. Multimodal models are breaking down ...
 
-[AINews] The high-return activity of raising your aspirations for LLMs
-https://www.latent.space/p/ainews-the-high-return-activity-of
-Mar 12, 2026 ... AI News for 3/11/2026-3/12/2026. We checked 12 subreddits, 544 ... multi-vector: The most technically opinionated commentary came from ...
+State of AI Jan 2026: The Start of the "Agentic Era" (Claude 4.5, Mistral Large 3, & What's Next)
+https://www.reddit.com/r/ArtificialInteligence/comments/1q2xi2g/state_of_ai_jan_2026_the_start_of_the_agentic_era/
+Welcome to the r/ArtificialIntelligence gateway Question Discussion Guidelines Please use the following guidelines in current and future posts: Post must be greater than 100 characters - the more detail, the better. Your question might already have been answered. Use the search feature if no one is engaging in your post. AI is going to take our jobs - its been asked a lot! Discussion regarding positives and negatives about AI are allowed and encouraged. Just be respectful. Please provide links to back up your arguments. No stupid questions, unless its about AI being the beast who brings the end-times. It's not. Thanks - please let mods know if you have any questions / comments / etc I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns. More on reddit.com
 
-ColPali: Efficient Document Retrieval with Vision Language Models
-https://arxiv.org/html/2407.01449v4
-ture Work. Beyond performance improvements that could be obtained through better data, backbone models or training strategies, our vision at term is to combine visual retrieval systems and visually grounded query answering to create end-to-end RAG systems that purely function from image features.
+PDF AI agent trends 2026
+https://services.google.com/fh/files/misc/google_cloud_ai_agent_trends_2026_report.pdf
+In this report, we explore five key AI agent trends shaping business in 2026. Unlocking the value of these trends requires more than simply adopting new tools. It also demands that leaders question old assumptions and drive the cultural change necessary to thrive in this new, agentic AI era.
 
-The 2026 Roadmap: Production AI/ML Systems - Jam with AI
-https://jamwithai.substack.com/p/the-2026-roadmap-production-aiml
-Jan 20, 2026 ... Evaluation pipelines with RAGAS and LLM-as-judge. Graph RAG with Neo4j for multi-hop queries. ColPali/VLM for visual document retrieval. Format ...
+Top 50 Agentic AI Implementations Use Cases to Learn in 2026
+https://8allocate.com/blog/top-50-agentic-ai-implementations-use-cases-to-learn-from/
+Early agentic AI deployments deliver 3–5% annual productivity gains, while scaled multi-agent systems can drive 10%+ enterprise growth (McKinsey) ...
 
-ColPali, MUVERA, and PyLate: How Multi-Vector Retrieval Went Multimodal ...
-https://www.bestaiweb.ai/colpali-muvera-and-pylate-how-multi-vector-retrieval-went-multimodal-in-2026/
-ColPali, MUVERA, and PyLate converged to make multi-vector retrieval multimodal and production-ready. Here's what the shift means for search architecture.
+Top 10 Agentic AI Trends for 2026: What Most Enterprises Will Get Wrong
+https://futuria.ai/agentic-ai-trends-2026-enterprise/
+Agentic AI operations in 2026. Explore the top 10 agentic AI trends, challenges, and what most organisations will get wrong.
 
-GitHub - illuin-tech/colpali: The code used to train and run inference with the ColVision models, e.g. ColPali, ColQwen2, and ColSmol. · GitHub
-https://github.com/illuin-tech/colpali
-Tutorial about using multi-vector embeddings with the Weaviate vector database. ... Candle enables ColPali inference with an efficient ML framework for Rust. ... EmbedAnything Allows end-to-end ColPali inference with both Candle and ONNX backend. ... DocAI uses ColPali with GPT-4o and Langchain to extract structured information from documents. ... VARAG uses ColPali in a vision-only and a hybrid RAG pipeline.
+From Generative to Agentic AI: A Roadmap in 2026 | by Arash Nicoomanesh | Medium
+https://medium.com/@anicomanesh/from-generative-to-agentic-ai-a-roadmap-in-2026-8e553b43aeda
+A Note on Context: While Section 1 outlined distinct architectures for extreme constraints (like Rust/Ray for high-frequency trading or Temporal for pure serverless swarms), the vast majority of industrial Agentic Systems in 2026 converge on a “Golden Path.” · The stack below represents the General Purpose Enterprise Standard — optimized for the balance of safety, developer velocity, and auditability required by Tribe 1 (Microservices) and Hybrid deployments. The modern Agentic Stack is divided by Time Allocation. A practical heuristic is to prioritise deterministic infrastructure (safe

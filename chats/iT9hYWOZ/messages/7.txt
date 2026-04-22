@@ -1,39 +1,39 @@
-AI Offers A Great Productivity Boost. Or Maybe Not
-https://www.forbes.com/sites/joemckendrick/2026/02/10/ai-offers-a-great-productivity-boost-or-maybe-not/
-“Product managers and designers began writing code; researchers took on engineering tasks; and individuals across the organization attempted work they would have outsourced, deferred, or avoided entirely in the past.” · They also observed a blurring of boundaries between work and personal time. As proponents of work-life balance warn, this is a sure path to stress.
+Go Microservices Architecture: Patterns and Best Practices 2026 | Reintech media
+https://reintech.io/blog/go-microservices-architecture-patterns-best-practices-2026
+A practical guide to building resilient Go microservices in 2026. Learn proven patterns for service communication, data management, observability, and deployment that work in production environments.
 
-AI: Work partnerships between people, agents, and robots | McKinsey
-https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-skill-partnerships-in-the-age-of-ai
-AI is redefining the boundaries of work and unlocking new potential for productivity. 4 Work will be reconfigured as a partnership between people, agents, and robots. 5
+How to implement Clean Architecture in Go (Golang) | Three Dots Labs blog
+https://threedots.tech/post/introducing-clean-architecture/
+In this guide, we share our pragmatic approach to Clean Architecture in Go, refined through years of real-world experimentation. We demonstrate refactoring techniques on a live project, showing how to extract application logic, define interfaces, and improve testability. You'll learn how to apply Clean Architecture principles in an idiomatic Go way, balancing theory with practical ...
 
-AI Has Made Work Reinvention a CEO Mandate | BCG
-https://www.bcg.com/publications/2026/ai-has-made-work-reinvention-a-ceo-mandate
-How must we redesign the work to unlock enterprise value, not just individual productivity? Weekly Insights Subscription. Stay ahead with BCG ...
+GitHub - DoWithLogic/golang-clean-architecture: implementation clean architecture with SOLID Principles · GitHub
+https://github.com/DoWithLogic/golang-clean-architecture
+This is an example of implementation of Clean Architecture with S.O.L.I.D Principles in Go (Golang) projects.
 
-Engineering Productivity in the AI Era: From Intuition to ... - LinkedIn
-https://www.linkedin.com/pulse/engineering-productivity-ai-era-from-intuition-measurable-ronen-lago-o7utf
-AI-assisted engineering is already boosting productivity, but innovative management makes the difference. By measuring what matters (utilization, impact, cost) and nurturing an AI-ready culture ...
+Go Microservice with Clean Architecture: Design Principle | by Jin Feng | Medium
+https://medium.com/@jfeng45/go-micro-service-with-clean-architecture-design-principle-118d2eeef1e6
+I wrote a Go Microservice application recently and the design of this application coming from three inspirations: Clean Architecture¹ and SOLID² design principle³
 
-As AI Coding Boosts Productivity, Is Cutting Software Budgets Smart?
-https://www.forbes.com/councils/forbesbusinesscouncil/2026/03/18/as-ai-coding-boosts-productivity-is-cutting-software-budgets-smart-or-risky/
-Mar 18, 2026, 10:30am EDT. Dr. Brian Scott Glassman is a Thought Leader in Generative AI and VP ... Strategically, executives need reporting from the CTO on ...
+Clean Architecture in Go
+https://depshub.com/blog/clean-architecture-in-go/
+This article descibes how to build a clean architecture in Go (Golang). We will explore how to use dependency injection, dependency inversion, interfaces, and SOLID principles to build a clean architecture in Go.
 
-Best AI Productivity Tools For 2026 That People Aren’t Talking About Enough
-https://www.reddit.com/r/ProductivityApps/comments/1re5i0g/best_ai_productivity_tools_for_2026_that_people/
-You can check out this whatsapp api, my clients have been using it for over a year now and send over 500 messages daily. It has support for groups and channels. https://rapidapi.com/jevil257/api/whatsapp-messaging-bot More on reddit.com
+SOLID Software Design Principles and How Fit in a Microservices Architecture Design | Online Courses, Learning Paths, and Certifications - Pluralsight
+https://www.pluralsight.com/resources/blog/guides/solid-design-microservices
+Build your foundation of SOLID software design principles with this useful SOLID guide. Here you'll find SOLID tutorials that help you learn and better execute its design principles.
 
-PDF Artificial Intelligence, Productivity, and the Workforce: Evidence from ...
-https://www.atlantafed.org/-/media/Project/Atlanta/FRBA/Documents/research/publication/working-paper/2026/03/25/04-artificial-intelligence-productivity-and-the-workforce-evidence-from-corporate-executives.pdf
-Working Paper 2026-4 March 2026 Abstract: We use novel data from a survey of nearly 750 corporate executives to study the effects of artificial intelligence (AI) on productivity and the workforce. We document substantial heterogeneity in AI adoption across firms, with more than half having already invested, though many smaller firms are only beginning to do so. Labor productivity gains are ...
+clean-architecture · GitHub Topics · GitHub
+https://github.com/topics/clean-architecture
+awesome csharp solid dotnet aspnet azure best-practices clean-code composition inheritance clean-architecture principles · Updated · Feb 27, 2026 · C# Star 7.5k · Clean Architecture template for Golang services · go golang template microservices example dependency-injection clean-architecture ·
 
-Organizational Transformation in the Age of AI
-https://reports.weforum.org/docs/WEF_Organizational_Transformation_in_the_Age_of_AI_How_Organizations_Maximize_AI's_Potential_2026.pdf
-Mar 18, 2026 ... It depends on strategic leadership, clear accountability, trust in AI- supported decisions and operating models that balance human agency with ...
+Go Project Structure 2026: Clean Architecture and Best Practices
+https://reintech.io/blog/go-project-structure-2026-clean-architecture-best-practices
+A practical guide to organizing Go projects in 2026 using clean architecture principles. Learn the standard project layout, dependency management, and patterns that work in production environments.
 
-Future of Work Trends 2026: Strategic Insights for CHROs - Gartner
-https://www.gartner.com/en/articles/future-of-work-trends
-Explore key future of work trends for 2026. Download the Future of Work eBook for actionable strategies to navigate the human-machine era.
+Clean Architecture Courses and Certifications - Class Central
+https://www.classcentral.com/subject/clean-architecture
+Master software design patterns, SOLID principles, and dependency management to build maintainable, testable applications. Learn through practical tutorials ...
 
-Hoping AI will give you more work-life balance in 2026? Fortune 500 CEOs warn otherwise | Fortune
-https://fortune.com/2025/12/23/work-life-balance-recap-2025-fortune-500-ceos-productivity-grind-secrets-for-success/
-But as AI has reshaped corporate structures and enhanced productivity levels, many executive leaders are working harder than ever—and expecting everyone else to follow.
+r/golang on Reddit: Microservices with clean architecture
+https://www.reddit.com/r/golang/comments/zbap13/microservices_with_clean_architecture/
+You can achieve CLEAN with almost any folder structure. The most important thing about CLEAN is the conceptual layering and how those layers interact with each other, but your folder structure does not have to map nicely to each layer. Get that out of your head and just follow the principles. For microservices, I like to keep it very simple. Don't overstructure preemptively. Create a folder for the API layer, a folder for config and a folder for each entity. Keep the rest of the code on the top level, like the app, etc. This is what I call the "entity-based" structure. You achieve CLEAN here by saying that entities can't import any other package except for other entities, API can import entities but not app, and app can import everything. In other services where I know I will only have one entity but many different "adapters", I will make the structure "adapter-based", so each folder represents one adapter and the entity code lives under the root level or under "internal". root level can't import from adapters or app. Adapters are not allowed to import each other but they can import from the root level. App can import everything. But please, for the love of god, don't call your folders something like "infrastructure", "entities", "usecase". More on reddit.com

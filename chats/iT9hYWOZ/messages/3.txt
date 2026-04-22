@@ -1,39 +1,39 @@
-Running 122B-Parameter LLMs Locally on AMD Strix Halo for ... - LinkedIn
-https://www.linkedin.com/pulse/running-122b-parameter-llms-locally-amd-strix-halo-deep-pellegrini-33cjc
-Over the past few months, I've been building a local LLM inference stack on an AMD Ryzen AI Max+ 395 (Strix Halo) — a chip with 128GB of unified LPDDR5X memory shared between CPU and GPU. My ...
+Thomson Reuters Convenes Global AI Leaders to Advance Trust in the Age of Intelligent Systems | Thomson Reuters
+https://www.thomsonreuters.com/en/press-releases/2026/january/thomson-reuters-convenes-global-ai-leaders-to-advance-trust-in-the-age-of-intelligent-systems
+Founding participants include senior engineering and product leaders from Anthropic, AWS, Google Cloud and OpenAI, alongside experts from Thomson Reuters. Together, the companies will explore approaches to reliability, interpretability, and verification—key factors in ensuring that advanced AI systems earn and maintain human confidence.
 
-AMD Strix Halo — Backend Benchmarks (Grid View)
-https://kyuz0.github.io/amd-strix-halo-toolboxes/
-This setup allows distributed inference, splitting large GGUF models across both machines.
+The State of Engineering AI 2026 | SimScale
+https://www.simscale.com/the-state-of-engineering-ai-2026/
+From Months to Minutes The State of Engineering AI 2026 A new global survey of 350 engineering leaders reveals how AI is reshaping product design, why some teams are pulling ahead, and what it really takes to move from pilots to scaled operational value.
 
-Ryzen AI Max 395+ 128GB - Qwen 3.5 35B/122B Benchmarks (100k ...
-https://www.reddit.com/r/LocalLLaMA/comments/1rpw17y/ryzen_ai_max_395_128gb_qwen_35_35b122b_benchmarks/
-Mar 10, 2026 ... with llama-rocm-7.2 from amd-strix-halo-toolboxes (updated daily) ... unified VRAM) — local LLM, image/video gen, coding agents. 51. 20 ...
+PDF End-to-End Trustworthy AI Engineering Lifecycle - Thales
+https://www.thalesgroup.com/sites/default/files/2026-01/White%20Paper%20-%20TrustworthyAIEngineering.pdf
+Summary The End-to-End Trustworthy AI Engineering Lifecycle presented in this white paper underscores the necessity of a holistic and rigorous approach to the development, deployment, and maintenance of AI-powered systems in critical domains like aeronautics and space, defence, and security and identity. From the foundational principles of system engineering----encompassing safety, security ...
 
-r/LocalLLaMA on Reddit: Updated Strix Halo (Ryzen AI Max+ 395) LLM Benchmark Results
-https://www.reddit.com/r/LocalLLaMA/comments/1m6b151/updated_strix_halo_ryzen_ai_max_395_llm_benchmark/
-There's a lot of performance still on the table when it comes to pp especially. I've been telling my wife this for years. More on reddit.com
+How Senior Engineers Actually Build AI Systems in 2026 - Medium
+https://medium.com/aimonks/how-senior-engineers-actually-build-ai-systems-in-2026-the-unvarnished-blueprint-410b298b6f9e
+Jan 30, 2026 ... 2026 is the era of context engineering — designing the entire operational environment in which your AI thinks, reasons, and acts. This isn't ...
 
-Strix Halo Mini PCs for AI — 128GB, 40 TOPS NPU 2026
-https://www.compute-market.com/blog/strix-halo-mini-pc-local-ai-2026
-Strix Halo packs 128GB unified memory and a 40 TOPS NPU into a 3L chassis. GMKtec, Zotac, ASRock compared with LLM benchmarks and Mac Studio head-to-head.
+2026 State of Analytics Engineering Report - dbt Labs
+https://www.getdbt.com/resources/state-of-analytics-engineering-2026
+AI is expanding what analytics teams can build and deliver. But the reliability of those outputs depends on the systems that govern them: ...
 
-What to Buy for Local LLMs (April 2026) | by Julien Simon - Medium
-https://julsimon.medium.com/what-to-buy-for-local-llms-april-2026-a4946a381a6a
-Apr 3, 2026 ... [19] Apple removed the 512GB memory option from Mac Studio in March 2026 and raised the 256GB upgrade price. ... [20] AMD Ryzen AI Max+ 395 (Strix ...
+3 C's of AI Governance for Engineering Leaders in 2026
+https://blog.exceeds.ai/3cs-ai-governance-engineering-leaders/
+Strategy 1: Compliance for 2026 AI Regulations and Audits The 2026 regulatory landscape forces engineering leaders to treat AI compliance as a core delivery requirement. The EU AI Act classifies high-risk AI systems and requires pre-deployment assessments, documentation, post-market monitoring, and incident reporting.
 
-Run OpenClaw Locally On AMD Ryzen™ AI Max+ Processors and ...
-https://www.amd.com/en/resources/articles/run-openclaw-locally-on-amd-ryzen-ai-max-and-radeon-gpus.html
-Mar 13, 2026 ... ... 128GB unified memory is available from various AMD partners. Browse ... Start a chat and send a message "test" to ensure the LLM is working.
+How engineering leaders are navigating the AI revolution - Cortex
+https://go.cortex.io/rs/563-WJM-722/images/2026-Benchmark-Report.pdf
+Engineering leaders need to be intentional about AI adoption, not just enthusiastic. Organizations that thrive in 2026 will invest in engineering foundations ...
 
-Strix Halo LLM Benchmarks — Qwen3.5 Research
-https://qwen-research-2026-04-17-1736.vercel.app/
-With q4_0/q4_0 KV on 128GB UMA we can push the 122B MoE past 131K — targeting 262K, 524K, and 1M contexts — and identify whether FLASH_ATTN_EXT scaling or plain memory is the hard wall.
+2026 Tech Trends: A Guide For Engineering Leaders
+https://waydev.co/2026-tech-trends-a-guide-for-engineering-leaders/
+Embed Resilience: Annual simulations, zero-trust by Q2. Conclusion: Engineering as Strategic Core 2026 tests discipline over dazzle. As Forrester and Gartner converge on value and resilience, leaders blending AI acceleration with fundamentals - governed, measured, secure - will drive outsized gains.
 
-Buying advice local llm - Beginners - Hugging Face Forums
-https://discuss.huggingface.co/t/buying-advice-local-llm/174730
-Mar 28, 2026 ... MacBook Pro 16 with M5 Max and 128GB unified memory if your main ... “I specifically want AMD's high-memory Strix Halo design.” “I can ...
+Platform Engineers Critical To AI Adoption In 2026 - Futurum
+https://futurumgroup.com/press-release/platform-engineers-critical-to-ai-adoption-in-2026/
+Dec 8, 2025 ... As enterprises enter 2026 with aggressive AI goals, platform engineering becomes an AI ... Building Trust In AI” on the Futurum Intelligence ...
 
-Strix Halo Mini PCs for Local LLM Inference: A Practical Guide to Running Large Models at Home | Starry Hope
-https://www.starryhope.com/minipcs/strix-halo-local-llm-inference-2026/
-The fundamental appeal of Strix Halo for local LLM work comes down to one thing: memory bandwidth determines inference speed, and these chips can access a massive pool of unified memory without the bottlenecks that plague discrete GPU setups.
+State of AI trust in 2026: Shifting to the agentic era
+https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era
+At a glance: Key insights from the 2026 AI Trust Maturity Survey The survey uncovers ten key insights about AI trust, which fall across three themes: the current state of AI trust, emerging risks and challenges, and how organizations are responding to close gaps and enable scale. State of AI trust today Despite improved maturity on the whole, significant variance still exists, but companies ...
