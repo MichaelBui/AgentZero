@@ -1,39 +1,39 @@
-Building An Elite AI Engineering Culture In 2026 | Chris Roth
-https://cjroth.com/blog/2026-02-18-building-an-elite-engineering-culture
-High-performing teams are shifting from velocity metrics to cycle time (task start to completion) and lead time (idea to value in production). Thoughtworks reports clients adopting AI-first engineering have reduced cycle times by up to 50%.
+More Code, Fewer Releases: The Engineering Leadership Blind Spot of 2026
+https://waydev.co/engineering-leadership-blind-spot-of-2026/
+AI-assisted development drove a 59% increase in average engineering throughput last year, according to CircleCI's 2026 State of Software Delivery report, the largest analysis of CI/CD performance ever published, drawn from more than 28 million workflows. Autonomous coding agents are enabling teams to explore ideas, generate features, and iterate at a speed that simply wasn't possible two ...
 
-PDF the-state-of-engineering-ai-2026
-https://explore.simscale.com/hubfs/resources/reports/state-of-engineering-ai-2026.pdf
-The results of our 2026 survey show that meaningful progress is now underway, but adoption remains uneven. More engineering organizations are experimenting with AI-driven workflows, and measurable gains are beginning to appear, from faster engineering response times to dramatically expanded design exploration. At the same time, scaling these capabilities across complex engineering environments ...
+The State of AI in the Enterprise - 2026 AI report | Deloitte US
+https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html
+Organizational structures are beginning to flatten as AI absorbs routine execution tasks. Some companies are merging technology and people-leadership functions to ensure that systems and workforce design evolve together.
 
-Is AI breaking your engineering talent pipeline? - Randstad USA
-https://www.randstadusa.com/business/business-insights/corporate-culture/ai-breaking-your-engineering-talent-pipeline/
-AI isn't replacing the junior engineer; it's raising the floor of what “junior” means. This demands a shift from execution to judgment. Training ...
+Top leadership experts sound the alarm on the AI doomsday: bosses are choosing tech over people | Fortune
+https://fortune.com/2026/03/29/ai-workforce-human-design-gap-doomsday-deloitte-wharton-harvard/
+The same imbalance shows up in Wharton’s AI adoption research. Bradlow said Wharton and GBK Collective found in a prior research report what he calls a “donut hole” at the center of most large organizations: the C-suite is investing heavily in AI, younger workers have grown up using it natively, but the middle managers who actually have to orchestrate workflow change are the ones resisting — or being left behind.
 
-Building an Elite AI Engineering Culture in 2026 | Hacker News
-https://news.ycombinator.com/item?id=47070173
-We've definitely faced the review bottleneck on the open-source project that I maintain. ( github.com/robotmcp/ros-mcp-server ) · I found the architecture section of his article (which is pretty far down) to be the most interesting More on news.ycombinator.com
+AI Adoption in 2026: How Leaders Must Redesign Their Org Now - Barry O'Reilly
+https://barryoreilly.com/explore/blog/ai-adoption-2026-leadership-organizational-redesign/
+Here are the five strategic risks executives must anticipate: You fall behind AI-mature competitors who move faster, learn faster, and out-iterate your entire operating model. ... Top talent will not tolerate legacy operating systems much longer.
 
-PDF Agentic AI in Engineering and Manufacturing: Industry Perspectives on ...
-https://decode.mit.edu/assets/papers/2026_Edwards_Agentic_AI_in_Engineering_and_Manufacturing.pdf
-Agentic AI in Engineering and Manufacturing: Industry Perspectives on Utility, Adoption, Challenges, and Opportunities Kristen M. Edwards, Maxwell Bauer, Claire Jacquillat, A. John Hart, Faez Ahmed March 2026
+Engineering in the Age of AI: What the 2025 State of Engineering Management Report Reveals - Jellyfish
+https://jellyfish.co/blog/2025-software-engineering-management-trends/
+Among their top concerns: The hype gap: Leaders worry that over-promising could lead to underwhelming results. 67% of respondents predict a velocity and productivity increase from AI of at least 25% in 2026.
 
-AI in AEC 2026: Doing AI Right and Rethinking Your Business Model
-https://www.linkedin.com/pulse/ai-aec-2026-doing-right-rethinking-your-business-model-heiskanen-pcalf
-Mar 22, 2026 ... 70 to 80 percent of AI initiatives fail due to adoption challenges, not technology. The tools and data are increasingly available. The missing ...
+Why AI Demands a New Breed of Leaders | MIT Sloan Management Review
+https://sloanreview.mit.edu/article/why-ai-demands-a-new-breed-of-leaders/
+But most organizations still focus ... does too. Companies need a new role, the chief innovation and transformation officer, to manage the profound cultural and organizational changes AI adoption brings....
 
-State of AI trust in 2026: Shifting to the agentic era
-https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era
-March 25, 2026 AI adoption is accelerating rapidly, with organizations moving beyond experimentation toward scaled deployment of gen AI and, increasingly, agentic AI across core business functions. But as AI systems take on greater autonomy—making recommendations, triggering actions, and interacting with other systems—the consequences of failure grow materially. In this environment, AI ...
+Influence of Artificial Intelligence on Engineering Management Decision-Making with Mediating Role of Transformational Leadership
+https://www.mdpi.com/2079-8954/12/12/570
+By synthesizing the Technology Acceptance Model (TAM), Transformational Leadership Theory, and Adaptive Structuration Theory (AST), we create a comprehensive framework that captures the multilayered interactions between technological innovation, leadership processes, and organizational adaptation. The theoretical integration offers three critical analytical perspectives: Micro-level: TAM explains individual cognitive and behavioral mechanisms of technological adoption.
 
-Architecture, engineering, construction sector slow to adopt AI ...
-https://www.asce.org/publications-and-news/civil-engineering-source/article/2025/12/18/architecture-engineering-construction-sector-slow-to-adapt-ai-survey-shows
-Dec 18, 2025 ... “The biggest barriers to AEC technology adoption in 2026 aren't cost – they're complexity, culture, and connection. Success requires not ...
+AI Leadership Trends 2026: What Executives Need to Know
+https://www.usaii.org/ai-insights/ai-leadership-trends-2026-what-executives-need-to-know
+Michael Woodall shares his insights on how organizations can learn from enterprise-level failures and lead successful AI adoption in this comprehensive article: Rethinking AI Adoption: Strategic Lessons from Five Enterprise-Level Failures · Why is AI Leadership Fundamentally Different in 2026?
 
-Stanford's AI Index for 2026 Shows the State of the Industry
-https://spectrum.ieee.org/state-of-ai-index-2026
-The 2026 Stanford AI Index reveals how global AI trends 2026 are reshaping compute, emissions, and public trust in powerful models.
+How has AI impacted engineering leadership in 2025?
+https://www.getquotient.com/insights/how-has-ai-impacted-engineering-leadership-in-2025
+The data suggests that while AI adoption is widespread, its transformative impact on productivity hasn’t materialized… yet. Most teams report only modest gains, and many leaders are still working through the operational and cultural implications.
 
-AI adoption isn't the hard part, it's building employee agency | Fortune
-https://fortune.com/2026/04/03/ai-adoption-employee-agency-linkedin-hanson-shroff/
-Every manager—regardless of function—is navigating the same fundamental challenge of building agency in their teams. A marketing manager and an engineering manager may have vastly different day-to-day work, but they need the same leadership capabilities: recognizing quality, encouraging upskilling, and developing judgment in others. The hardest part of building agency isn’t the technology or training; it’s the culture shift.
+The "Last Mile" Problem Slowing AI Transformation
+https://hbr.org/2026/03/the-last-mile-problem-slowing-ai-transformation
+The primary obstacle to progress is rarely model quality or data availability, but rather the "last mile" of transformation where technical capability must meet organizational design.

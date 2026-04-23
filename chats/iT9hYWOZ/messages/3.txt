@@ -1,39 +1,39 @@
-Thomson Reuters Convenes Global AI Leaders to Advance Trust in the Age of Intelligent Systems | Thomson Reuters
-https://www.thomsonreuters.com/en/press-releases/2026/january/thomson-reuters-convenes-global-ai-leaders-to-advance-trust-in-the-age-of-intelligent-systems
-Founding participants include senior engineering and product leaders from Anthropic, AWS, Google Cloud and OpenAI, alongside experts from Thomson Reuters. Together, the companies will explore approaches to reliability, interpretability, and verification—key factors in ensuring that advanced AI systems earn and maintain human confidence.
-
-The State of Engineering AI 2026 | SimScale
-https://www.simscale.com/the-state-of-engineering-ai-2026/
-From Months to Minutes The State of Engineering AI 2026 A new global survey of 350 engineering leaders reveals how AI is reshaping product design, why some teams are pulling ahead, and what it really takes to move from pilots to scaled operational value.
-
-PDF End-to-End Trustworthy AI Engineering Lifecycle - Thales
-https://www.thalesgroup.com/sites/default/files/2026-01/White%20Paper%20-%20TrustworthyAIEngineering.pdf
-Summary The End-to-End Trustworthy AI Engineering Lifecycle presented in this white paper underscores the necessity of a holistic and rigorous approach to the development, deployment, and maintenance of AI-powered systems in critical domains like aeronautics and space, defence, and security and identity. From the foundational principles of system engineering----encompassing safety, security ...
-
-How Senior Engineers Actually Build AI Systems in 2026 - Medium
-https://medium.com/aimonks/how-senior-engineers-actually-build-ai-systems-in-2026-the-unvarnished-blueprint-410b298b6f9e
-Jan 30, 2026 ... 2026 is the era of context engineering — designing the entire operational environment in which your AI thinks, reasons, and acts. This isn't ...
-
-2026 State of Analytics Engineering Report - dbt Labs
-https://www.getdbt.com/resources/state-of-analytics-engineering-2026
-AI is expanding what analytics teams can build and deliver. But the reliability of those outputs depends on the systems that govern them: ...
-
-3 C's of AI Governance for Engineering Leaders in 2026
-https://blog.exceeds.ai/3cs-ai-governance-engineering-leaders/
-Strategy 1: Compliance for 2026 AI Regulations and Audits The 2026 regulatory landscape forces engineering leaders to treat AI compliance as a core delivery requirement. The EU AI Act classifies high-risk AI systems and requires pre-deployment assessments, documentation, post-market monitoring, and incident reporting.
-
-How engineering leaders are navigating the AI revolution - Cortex
-https://go.cortex.io/rs/563-WJM-722/images/2026-Benchmark-Report.pdf
-Engineering leaders need to be intentional about AI adoption, not just enthusiastic. Organizations that thrive in 2026 will invest in engineering foundations ...
-
-2026 Tech Trends: A Guide For Engineering Leaders
-https://waydev.co/2026-tech-trends-a-guide-for-engineering-leaders/
-Embed Resilience: Annual simulations, zero-trust by Q2. Conclusion: Engineering as Strategic Core 2026 tests discipline over dazzle. As Forrester and Gartner converge on value and resilience, leaders blending AI acceleration with fundamentals - governed, measured, secure - will drive outsized gains.
-
-Platform Engineers Critical To AI Adoption In 2026 - Futurum
-https://futurumgroup.com/press-release/platform-engineers-critical-to-ai-adoption-in-2026/
-Dec 8, 2025 ... As enterprises enter 2026 with aggressive AI goals, platform engineering becomes an AI ... Building Trust In AI” on the Futurum Intelligence ...
+How to Foster Psychological Safety When AI Erodes Trust on Your Team
+https://hbr.org/2026/02/how-to-foster-psychological-safety-when-ai-erodes-trust-on-your-team
+As organizations rapidly integrate AI into their workflows, leaders are uncovering the impact on team dynamics. The same AI tools that promise to enhance productivity can create predictable patterns of team dysfunction that mirror classic ...
 
 State of AI trust in 2026: Shifting to the agentic era
 https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era
-At a glance: Key insights from the 2026 AI Trust Maturity Survey The survey uncovers ten key insights about AI trust, which fall across three themes: the current state of AI trust, emerging risks and challenges, and how organizations are responding to close gaps and enable scale. State of AI trust today Despite improved maturity on the whole, significant variance still exists, but companies ...
+March 25, 2026 AI adoption is accelerating rapidly, with organizations moving beyond experimentation toward scaled deployment of gen AI and, increasingly, agentic AI across core business functions. But as AI systems take on greater autonomy—making recommendations, triggering actions, and interacting with other systems—the consequences of failure grow materially. In this environment, AI ...
+
+Psychological Safety Enables Opportunity Ecosystems Amid AI Transformation
+https://www.forrester.com/blogs/psychological-safety-enables-opportunity-ecosystems-amid-ai-transformation/
+Psychological safety is a make-or-break factor in your AI transformation journey. By framing the work with honesty, engaging people in two-way dialogue, and responding with empathy and support, leaders can transform a potentially traumatic reorganization into an opportunity for growth.
+
+Staying Ahead in 2026: Udemy’s 6 Predictions for AI in the Workplace
+https://business.udemy.com/blog/6-predictions-ai-in-the-workplace/
+AI adoption proves to be exceptionally challenging, and, counter to usual trends between the positive links between transparency and trust, research has found that trust levels on average tend to lower as AI transparency raises in workplaces.
+
+International AI Safety Report 2026 Examines AI Capabilities, Risks, and Safeguards | Inside Privacy
+https://www.insideprivacy.com/artificial-intelligence/international-ai-safety-report-2026-examines-ai-capabilities-risks-and-safeguards/
+According to the Report, early evidence suggests reduced demand for work that is easily substitutable—such as writing and translation—and increased demand for complementary skills, including machine learning programming and chatbot development.
+
+Generation Z Employees’ Acceptance and AI Use Intensity: A Moderated Mediation Model of Psychological Safety, Technostress, and Trust
+https://www.mdpi.com/2673-8104/6/1/7
+This study investigates the factors influencing employee acceptance and actual AI use intensity (frequency and routinization) by integrating the Technology Acceptance Model with organizational and psychosocial variables. Data were collected via an online survey of Romanian Generation Z participants ...
+
+86% of U.S. Engineers Use AI but Only 6% Fully Trust It, 2026 Survey Finds
+https://allwork.space/2026/02/86-of-u-s-engineers-use-ai-but-only-6-fully-trust-it-2026-survey-finds/
+Rather than resisting AI, most engineers envision a collaborative model. AI is expected to handle repetitive, data-intensive, and exploratory tasks, while humans retain authority over safety, compliance, and final design decisions.
+
+International AI Safety Report 2026 Examines AI Capabilities, Risks, and Safeguards
+https://www.globalpolicywatch.com/2026/02/international-ai-safety-report-2026-examines-ai-capabilities-risks-and-safeguards/
+Critically, performance also declines with respect to unfamiliar languages and cultural contexts. It will come as no surprise that AI agents—systems that can plan, reason, and use tools to accomplish real-world tasks—are identified in the Report as a major focus of development. However, the Report notes that although agents have demonstrated the ability to complete a variety of software engineering tasks with limited human oversight, they cannot yet complete the range of complex tasks and long-term planning required to fully automate many jobs.
+
+How to Handle Trusts and Psychological Safety When Scaling Organizations - InfoQ
+https://www.infoq.com/news/2026/04/trust-psychological-safety-scale/
+As organizations scale, communication overload, loss of shared context, and trust gaps emerge, Charlotte de Jong Schouwenburg mentioned. Trust must be built team by team; it can’t be replicated. Trust is interpersonal, while psychological safety is among people and fuels learning.
+
+Creating psychological safety in the AI era | MIT Technology Review
+https://www.technologyreview.com/2025/12/16/1125899/creating-psychological-safety-in-the-ai-era/
+"Psychological safety is mandatory in this new era of AI," says Rafee Tarafdar, executive vice president and chief technology officer at Infosys. "The tech itself is evolving so fast ...

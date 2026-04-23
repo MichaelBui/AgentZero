@@ -1,39 +1,39 @@
-How do DORA metrics change when teams adopt AI coding tools?
-https://blog.exceeds.ai/dora-metrics-engineering-effectiveness/
-AI adoption typically improves throughput metrics like deployment frequency and lead time for changes by 2-18%, often with added stability risk. Teams may ship code faster while experiencing higher change failure rates and more rework. Traditional DORA tracking cannot show whether improvements come from AI tools, process changes, or temporary quality trade-offs. Without code-level visibility, leaders cannot prove AI ROI or see which AI adoption patterns work versus those that create hidden technical debt.
+DORA Metrics for Engineering Teams: Guide & Benchmarks | Engineering Manager Tools
+https://www.em-tools.io/frameworks/dora-metrics
+According to the most recent State of DevOps report, elite performers deploy on demand (multiple times per day), have a lead time for changes of less than one hour, a change failure rate of zero to fifteen percent, and recover from failures in less than one hour. High performers deploy between once per day and once per week, with lead time of one day to one week, change failure rate of sixteen to thirty percent, and recovery time of less than one day. These benchmarks provide useful targets but should be adapted to your specific context.
 
-DORA Metrics Are Not Enough in 2026: What Elite Engineering Teams Track Instead
-https://oobeya.io/blog/dora-metrics-not-enough-2026
-A team can improve deployment frequency because AI generates more code faster, while change failure rate worsens because the code is harder to review or maintain. DORA captures the output but not the source.
+Engineering Productivity Benchmarks 2026 — DORA Metrics, Cycle Time by Team Size | knowledgelib.io
+https://knowledgelib.io/business/industry-benchmarks/engineering-productivity-benchmarks-2026/2026
+Engineering productivity benchmarks 2026: DORA metrics (deployment frequency, lead time, CFR, recovery time), cycle time, PR metrics by team size and AI adoption. H2 2025 data from 6.1M+ PRs. 6 sources, all cited. Verified 2026-03-11.
+
+Your practical guide to DORA metrics | Swarmia
+https://www.swarmia.com/blog/dora-metrics/
+DORA metrics have evolved since they were first introduced in 2014, but they remain the gold standard for measuring software delivery performance. This guide, first published in 2022 and updated in 2026, covers both the current five-metric model and the context you need to use it effectively.
 
 DORA metrics tools in 2026: What to measure, and what's missing
 https://getdx.com/blog/dora-metrics-tools/
-They gave teams a shared language for delivery performance — deployment frequency, lead time for changes, change failure rate, and time to restore service. That clarity was valuable.
+A guide to the best DORA metrics tools in 2026, how each fits into a complete engineering productivity stack, and why AI-assisted teams need more than DORA to measure what's actually happening.
 
-AI Is Amplifying Software Engineering Performance, Says the 2025 DORA Report - InfoQ
-https://www.infoq.com/news/2026/03/ai-dora-report/
-Artificial intelligence is rapidly ... report, titled State of AI-Assisted Software Development, finds that AI does not automatically improve software ......
+DORA Metrics Benchmarks 2026: Where Does Your Team Stand? | Gitrecap Blog
+https://www.gitrecap.com/blog/dora-metrics-benchmarks
+From Medium to High: Focus on eliminating friction. Move to trunk-based development or short-lived feature branches. Invest in test coverage so engineers trust the pipeline. Establish review SLAs and notification systems for waiting PRs.
 
-DORA Metrics 2026: How Elite Software Delivery Teams Measure Performance | Programming Helper Tech
-https://www.programming-helper.com/tech/dora-metrics-2026-software-delivery-performance
-The DORA research program enters its eleventh year with new insights into software delivery performance. As platform engineering transforms how organizations build software, the four key metrics remain the gold standard for measuring engineering excellence. This analysis explores the latest DORA findings, how AI amplifies delivery capabilities, and why Python has become essential for measuring and visualizing performance data.
+DORA | DORA’s software delivery performance metrics
+https://dora.dev/guides/dora-metrics/
+DORA is a long running research program that seeks to understand the capabilities that drive software delivery and operations performance. DORA helps teams apply those capabilities, leading to better organizational performance.
 
-DORA Metrics 2026: AI Expansion Meets Visibility Crisis | byteiota
-https://byteiota.com/dora-metrics-2026-ai-expansion-meets-visibility-crisis/
-Engineering teams in 2026 face a measurement paradox. DORA metrics expanded from 4 to 20+ including AI-specific KPIs, yet most organizations can’t answer basic productivity questions.
+What are DORA Metrics and How to Unlock Elite Engineering Performance | LinearB Blog
+https://linearb.io/blog/dora-metrics
+... Release early and often by shipping smaller, more manageable chunks of code. Set team goals to limit PR size, and use automation to flag large PRs that might slow down your pipeline.
 
-DORA | DORA Insights
-https://dora.dev/insights/
-Mar 10, 2026 While AI accelerates initial code generation and reduces start-up friction, it introduces hidden taxes like heavy verification overhead, skill degradation, and integration challenges.
-
-#010: Your DORA Metrics Are Lying to You: The AI ROI Crisis Tearing Through Engineering Teams (And What to Measure Instead)
-https://fullstackaiengineer.substack.com/p/010-your-dora-metrics-are-lying-to
-They worked well for a world where humans wrote all the code. That world no longer exists. GetDX’s March 2026 analysis makes the case plainly: DORA metrics alone are insufficient for AI-assisted teams.
+What are DORA metrics? Complete guide to measuring DevOps performance
+https://getdx.com/blog/dora-metrics/
+DORA metrics are four key performance indicators that measure software delivery performance: deployment frequency, lead time for changes, change failure rate, and mean time to recover (MTTR).
 
 DevOps Metrics: DORA Metrics and Measuring Success · Technical news about AI, coding and all
 https://dasroot.net/posts/2026/04/devops-metrics-dora-measuring-success/
-The 2026 DORA research found that AI adoption, while improving throughput, also increases delivery instability, highlighting the need for careful monitoring of metrics such as change failure rate and time to restore service.
+In 2026, top-performing organizations ... reduce MTTR, teams should adopt practices such as incident management automation, chaos engineering, and observability-driven operations....
 
-DORA Report 2025 Key Takeaways: AI Impact on Dev Metrics
-https://www.faros.ai/blog/key-takeaways-from-the-dora-report-2025
-What two years of telemetry data from 22,000 developers reveals about AI's real impact on developer productivity, code quality, and business risk in 2026. ... A practical software engineering glossary for the AI era: pull requests, PR size, merge rate, code churn, incident rate, and the DORA metrics engineering teams use to measure AI's impact on productivity and quality.
+How to Implement DORA Metrics: A Step-by-Step Guide
+https://axify.io/blog/how-to-implement-dora-metrics
+Learn how to implement DORA metrics to improve DevOps efficiency, reduce bottlenecks, and deliver faster, more reliable software releases in this comprehensive guide.
