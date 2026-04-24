@@ -1,87 +1,11 @@
-[2026-04-23T16:45:41+0000] Done [28/87] space/AAQAEVz4U_8 rel=6
-[2026-04-23T16:45:59+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-23T16:45:59+0000]   -> 5 message(s)
-[2026-04-23T16:45:59+0000]   -> 4 new cached
-[2026-04-23T16:46:04+0000]   -> restored unread status
-[2026-04-23T16:46:04+0000] [Fetching 30/76] [Internal] (Ecom/Omni) Digital Product Development
-[2026-04-23T16:46:04+0000] Summarizing [29/87] #dd-fpg-watchdog-alert (4 msgs, none)
-[2026-04-23T16:46:21+0000] Done [29/87] space/AAAAnlKPglA rel=2
-[2026-04-23T16:46:28+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-23T16:46:28+0000]   -> 9 message(s)
-[2026-04-23T16:46:29+0000]   -> 7 new cached
-[2026-04-23T16:46:33+0000]   -> restored unread status
-[2026-04-23T16:46:33+0000] [Fetching 31/76] [Prod Support] Marketplace
-[2026-04-23T16:46:33+0000] Summarizing [30/87] [Internal] (Ecom/Omni) Digital Product Development (7 msgs, direct)
-[2026-04-23T16:46:42+0000] Done [30/87] space/AAQAUbi9szY rel=7
-[2026-04-23T16:46:57+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-23T16:46:57+0000]   -> 1 message(s)
-[2026-04-23T16:46:57+0000]   -> 1 new cached
-[2026-04-23T16:47:02+0000]   -> restored unread status
-[2026-04-23T16:47:02+0000] [Fetching 32/76] Attack items - Apr 23
-[2026-04-23T16:47:02+0000] Summarizing [31/87] [Prod Support] Marketplace (1 msgs, none)
-[2026-04-23T16:47:05+0000] Done [31/87] space/AAAAs0DTvmA rel=2
-[2026-04-23T16:47:27+0000]   Reached top after 1 scroll(s)
-[2026-04-23T16:47:27+0000]   -> 2 message(s)
-[2026-04-23T16:47:27+0000]   -> 2 new cached
-[2026-04-23T16:47:32+0000]   -> restored unread status
-[2026-04-23T16:47:32+0000] [Fetching 33/76] FP x Mirakl
-[2026-04-23T16:47:32+0000] Summarizing [32/87] Attack items - Apr 23 (2 msgs, none)
-[2026-04-23T16:47:36+0000] Done [32/87] space/AAQAS8FM85I rel=2
-[2026-04-23T16:47:56+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-23T16:47:56+0000]   -> 1 message(s)
-[2026-04-23T16:47:56+0000]   -> 1 new cached
-[2026-04-23T16:48:01+0000]   -> restored unread status
-[2026-04-23T16:48:01+0000] [Fetching 34/76] Alvin Choo
-[2026-04-23T16:48:01+0000] Summarizing [33/87] FP x Mirakl (1 msgs, none)
-[2026-04-23T16:48:06+0000] Done [33/87] space/AAAAhWLveDE rel=2
-[2026-04-23T16:48:25+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-23T16:48:25+0000]   -> 13 message(s)
-[2026-04-23T16:48:25+0000]   -> 8 new cached
-[2026-04-23T16:48:30+0000]   -> restored unread status
-[2026-04-23T16:48:30+0000] [Fetching 35/76] RMN Integration
-[2026-04-23T16:48:30+0000] Summarizing [34/87] Alvin Choo (8 msgs, direct)
-[2026-04-23T16:48:36+0000] Done [34/87] dm/zmMZpgAAAAE rel=8
-[2026-04-23T16:48:41+0000]   Reached top after 1 scroll(s)
-[2026-04-23T16:48:41+0000]   Expanded 1 bar(s)
-[2026-04-23T16:48:41+0000]   -> 14 message(s)
-[2026-04-23T16:48:42+0000]   -> 14 new cached
-[2026-04-23T16:48:45+0000]   WARN: could not restore unread status
-[2026-04-23T16:48:45+0000] [Fetching 36/76] Release - FPG Back Office (Mon-Thurs)
-[2026-04-23T16:48:45+0000] Summarizing [35/87] RMN Integration (14 msgs, direct)
-[2026-04-23T16:48:54+0000] Done [35/87] space/AAQAKHz7DQM/F1a3rEqRHZ0 rel=9
-[2026-04-23T16:49:08+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-23T16:49:08+0000]   -> 2 message(s)
-[2026-04-23T16:49:08+0000]   -> 1 new cached
-[2026-04-23T16:49:13+0000]   -> restored unread status
-[2026-04-23T16:49:13+0000] [Fetching 37/76] Algolia Again - Apr 9
-[2026-04-23T16:49:13+0000] Summarizing [36/87] Release - FPG Back Office (Mon-Thurs) (1 msgs, none)
-[2026-04-23T16:49:17+0000] Done [36/87] space/AAAAoJgpZBM rel=2
-[2026-04-23T16:49:37+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-23T16:49:37+0000]   -> 5 message(s)
-[2026-04-23T16:49:37+0000]   -> 5 new cached
-[2026-04-23T16:49:42+0000]   -> restored unread status
-[2026-04-23T16:49:42+0000] [Fetching 38/76] FPG Everyone - General
-[2026-04-23T16:49:42+0000] Summarizing [37/87] Algolia Again - Apr 9 (5 msgs, direct)
-[2026-04-23T16:49:49+0000] Done [37/87] space/AAQA4rDgC4Q rel=7
-[2026-04-23T16:50:07+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-23T16:50:07+0000]   -> 8 message(s)
-[2026-04-23T16:50:08+0000]   -> 8 new cached
-[2026-04-23T16:50:13+0000]   -> restored unread status
-[2026-04-23T16:50:13+0000] [Fetching 39/76] [Light] Project Light Attack and Defence Leads
-[2026-04-23T16:50:13+0000] Summarizing [38/87] FPG Everyone - General (8 msgs, none)
-[2026-04-23T16:50:19+0000] Done [38/87] space/AAAAjDYVcBU rel=2
-[2026-04-23T16:50:21+0000]   Reached top after 0 scroll(s)
-[2026-04-23T16:50:21+0000]   -> 6 message(s)
-[2026-04-23T16:50:22+0000]   -> 6 new cached
-[2026-04-23T16:50:22+0000] [Fetching 40/76] Power Breakfast (April) - Games/Activity - Apr 21
-[2026-04-23T16:50:22+0000] Summarizing [39/87] [Light] Project Light Attack and Defence Leads (6 msgs, direct)
-[2026-04-23T16:50:28+0000] Done [39/87] space/AAQAsFyLso4/pSty94BQuvY rel=9
-[2026-04-23T16:50:46+0000]   Reached top after 1 scroll(s)
-[2026-04-23T16:50:46+0000]   -> 7 message(s)
-[2026-04-23T16:50:47+0000]   -> 7 new cached
-[2026-04-23T16:50:47+0000] [Fetching 41/76] RMN Grooming - Sprint 2 (Part 2) - Apr 23
-[2026-04-23T16:50:47+0000] Summarizing [40/87] Power Breakfast (April) - Games/Activity - Apr 21 (7 msgs, direct)
-[2026-04-23T16:50:53+0000] Done [40/87] space/AAQAomPeN1M rel=9
+Skills matching 'notify user notification message' (8):
+- gchat: Read Google Chat conversations using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check chat messages, read…
+- gmail: Read Gmail email threads using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check emails, read recent threa…
+- a0-contribute-plugin: Guide for publishing an Agent Zero plugin to the community Plugin Index (a0-plugins repo). Covers GitHub repo setup, index.yaml creation, CI validation rules, and PR submission. Use when the user want…
+- a0-plugin-router: Main entry point for all Agent Zero plugin tasks. Routes to specialist skills for creating, reviewing, contributing, managing, or debugging plugins. Use when the user mentions plugins, asks how the pl…
+- a0-review-plugin: Full audit of Agent Zero plugins in usr/plugins/. Reviews manifest validity, directory structure, code patterns (Store Gating, notifications, imports), security, and duplicate detection against the co…
+- a0-setup-cli: Guide the user through installing and connecting the A0 CLI on the host machine so Dockerized Agent Zero can work on real local files. Use when asked to install A0, set up the CLI connector, connect A…
+- create-skill: Wizard for creating new Agent Zero skills. Guides users through creating well-structured SKILL.md files. Use when users want to create custom skills.
+- jira: Fetch Jira tickets with SQLite caching, AI-driven relevance scoring, and structured summarization. Supports raw JQL query, saved filter by ID, or Polaris view. Outputs relevance-scored markdown summar…
 
-
-[SYSTEM: Returning control to agent after 288 seconds of execution. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+Tip: use skills_tool method=load skill_name=<name> to load full instructions.

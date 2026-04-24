@@ -1,230 +1,31 @@
-[2026-04-23T10:00:50+0000] STARTED (days=3, since=2026-04-20, user=michael.bui@fairpricegroup.sg)
-[2026-04-23T10:00:50+0000] Connecting to browser at http://192.168.1.11:9223...
-(node:39746) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+[2026-04-24T02:01:04+0000] STARTED (days=3, since=2026-04-21, user=michael.bui@fairpricegroup.sg)
+[2026-04-24T02:01:04+0000] Connecting to browser at http://192.168.1.11:9223...
+(node:2593) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[2026-04-23T10:00:52+0000] Browser connected. Browser timezone: UTC
-[2026-04-23T10:00:57+0000]   Page 1: 100 thread(s)
-[2026-04-23T10:00:57+0000]   Early stop: 5 consecutive cached
-[2026-04-23T10:01:02+0000]   Page 2: 74 thread(s)
-[2026-04-23T10:01:27+0000] Phase 1: 125 threads (excluded=49, unchanged=106, to-fetch=19, unread=15)
-[2026-04-23T10:01:27+0000] [Fetching 1/19] Updated invitation: rOOH New Ad Platform Requirements A
-[2026-04-23T10:01:30+0000] DEBUG:   Show details: open=0, clicked=1, skipped=0, failed=0, tables_after=1
-[2026-04-23T10:01:30+0000]   -> 1 new message(s) cached
-[2026-04-23T10:01:31+0000]   -> restored unread status
-[2026-04-23T10:01:31+0000] [Fetching 2/19] Updated invitation: RMN Data Loader - Basic Fields @ Th
-[2026-04-23T10:01:31+0000] Summarizing [1/125] Updated invitation: rOOH New Ad Platform Requireme (1 msgs, direct)
-[2026-04-23T10:01:33+0000] DEBUG:   Show details: open=0, clicked=1, skipped=1, failed=0, tables_after=1
-[2026-04-23T10:01:33+0000]   -> 2 new message(s) cached
-[2026-04-23T10:01:33+0000]   -> restored unread status
-[2026-04-23T10:01:33+0000] [Fetching 3/19] Accepted: KDD for RMN In-Store @ Fri Apr 24, 2026 2pm -
-[2026-04-23T10:01:34+0000] DEBUG:   Show details: open=0, clicked=0, skipped=1, failed=0, tables_after=0
-[2026-04-23T10:01:34+0000]   -> 1 new message(s) cached
-[2026-04-23T10:01:34+0000]   -> restored unread status
-[2026-04-23T10:01:34+0000] [Fetching 4/19] Invitation: KDD for RMN In-Store @ Fri Apr 24, 2026 2pm
-[2026-04-23T10:01:35+0000] DEBUG:   Show details: open=0, clicked=0, skipped=1, failed=0, tables_after=0
-[2026-04-23T10:01:35+0000]   -> 1 new message(s) cached
-[2026-04-23T10:01:35+0000] [Fetching 5/19] Canceled event: KDD for RMN In-Store @ Fri Apr 24, 2026
-[2026-04-23T10:01:37+0000] DEBUG:   Show details: open=0, clicked=0, skipped=2, failed=0, tables_after=0
-[2026-04-23T10:01:37+0000]   -> 2 new message(s) cached
-[2026-04-23T10:01:37+0000]   -> restored unread status
-[2026-04-23T10:01:37+0000] [Fetching 6/19] Invitation: KDD for RMN In-Store @ Fri Apr 24, 2026 2pm
-[2026-04-23T10:01:39+0000] DEBUG:   Show details: open=0, clicked=0, skipped=2, failed=0, tables_after=0
-[2026-04-23T10:01:39+0000] Done [1/125] 19db9c3d2b34ca09 rel=6
-[2026-04-23T10:01:39+0000]   -> 2 new message(s) cached
-[2026-04-23T10:01:39+0000] Summarizing [2/125] Updated invitation: RMN Data Loader - Basic Fields (2 msgs, direct)
-[2026-04-23T10:01:39+0000]   -> restored unread status
-[2026-04-23T10:01:39+0000] [Fetching 7/19] [JIRA] (Tiong Siong Tee) invited you to (Core Product)
-[2026-04-23T10:01:40+0000] DEBUG:   Show details: open=0, clicked=0, skipped=1, failed=0, tables_after=0
-[2026-04-23T10:01:41+0000]   -> 1 new message(s) cached
-[2026-04-23T10:01:41+0000]   -> restored unread status
-[2026-04-23T10:01:41+0000] [Fetching 8/19] Updated invitation: RMN Grooming - Data loader tickets
-[2026-04-23T10:01:42+0000] DEBUG:   Show details: open=0, clicked=1, skipped=0, failed=0, tables_after=1
-[2026-04-23T10:01:42+0000]   -> 1 new message(s) cached
-[2026-04-23T10:01:43+0000]   -> restored unread status
-[2026-04-23T10:01:43+0000] [Fetching 9/19] [Bitbucket]  Pipeline for LIGHT-32 failed on c11172f (n
-[2026-04-23T10:01:43+0000] DEBUG:   Show details: open=0, clicked=0, skipped=1, failed=0, tables_after=0
-[2026-04-23T10:01:44+0000]   -> 1 new message(s) cached
-[2026-04-23T10:01:44+0000]   -> restored unread status
-[2026-04-23T10:01:44+0000] [Fetching 10/19] Accepted: RMN Data Loader - Basic Fields @ Thu Apr 23,
-[2026-04-23T10:01:45+0000] DEBUG:   Show details: open=0, clicked=0, skipped=1, failed=0, tables_after=0
-[2026-04-23T10:01:45+0000]   -> 1 new message(s) cached
-[2026-04-23T10:01:45+0000]   -> restored unread status
-[2026-04-23T10:01:45+0000] [Fetching 11/19] Notes: “ACNxOsmos: Daily Cadence” Apr 23, 2026
-[2026-04-23T10:01:46+0000] DEBUG:   Show details: open=0, clicked=0, skipped=1, failed=0, tables_after=0
-[2026-04-23T10:01:46+0000]   -> 1 new message(s) cached
-[2026-04-23T10:01:47+0000]   -> restored unread status
-[2026-04-23T10:01:47+0000] [Fetching 12/19] Updated invitation: ACNxOsmos: Daily Cadence @ Thu Apr
-[2026-04-23T10:01:47+0000] Done [2/125] 19db9adbd9ad09d2 rel=5
-[2026-04-23T10:01:47+0000] Summarizing [3/125] Accepted: KDD for RMN In-Store @ Fri Apr 24, 2026  (1 msgs, direct)
-[2026-04-23T10:01:49+0000] DEBUG:   Show details: open=0, clicked=1, skipped=1, failed=0, tables_after=1
-[2026-04-23T10:01:49+0000]   -> 2 new message(s) cached
-[2026-04-23T10:01:49+0000]   -> restored unread status
-[2026-04-23T10:01:49+0000] [Fetching 13/19] Delivery Status Notification (Failure)
-[2026-04-23T10:01:50+0000] DEBUG:   Show details: open=0, clicked=0, skipped=1, failed=0, tables_after=0
-[2026-04-23T10:01:50+0000]   -> 1 new message(s) cached
-[2026-04-23T10:01:50+0000]   -> restored unread status
-[2026-04-23T10:01:50+0000] [Fetching 14/19] Updated invitation: ACNxOsmos: Daily Cadence @ Thu Apr
-[2026-04-23T10:01:53+0000] DEBUG:   Show details: open=0, clicked=1, skipped=1, failed=0, tables_after=1
-[2026-04-23T10:01:53+0000]   -> 2 new message(s) cached
-[2026-04-23T10:01:53+0000]   -> restored unread status
-[2026-04-23T10:01:53+0000] [Fetching 15/19] Updated invitation: ACNxOsmos: Daily Cadence @ Thu Apr
-[2026-04-23T10:01:54+0000] Done [3/125] 19db980e1c7f013c rel=6
-[2026-04-23T10:01:54+0000] Summarizing [4/125] Invitation: KDD for RMN In-Store @ Fri Apr 24, 202 (1 msgs, direct)
-[2026-04-23T10:01:55+0000] DEBUG:   Show details: open=0, clicked=1, skipped=0, failed=0, tables_after=1
-[2026-04-23T10:01:55+0000]   -> 1 new message(s) cached
-[2026-04-23T10:01:55+0000] [Fetching 16/19] Updated invitation: ACNxOsmos: Daily Cadence @ Thu Apr
-[2026-04-23T10:01:56+0000] DEBUG:   Show details: open=0, clicked=1, skipped=0, failed=0, tables_after=1
-[2026-04-23T10:01:56+0000]   -> 1 new message(s) cached
-[2026-04-23T10:01:56+0000] [Fetching 17/19] Updated invitation: ACNxOsmos: Daily Cadence @ Thu Apr
-[2026-04-23T10:01:57+0000] DEBUG:   Show details: open=0, clicked=1, skipped=0, failed=0, tables_after=1
-[2026-04-23T10:01:57+0000]   -> 1 new message(s) cached
-[2026-04-23T10:01:57+0000] [Fetching 18/19] Google Calendar: Invitation for Team Building Time
-[2026-04-23T10:01:58+0000] DEBUG:   Show details: open=0, clicked=0, skipped=1, failed=0, tables_after=0
-[2026-04-23T10:01:58+0000]   -> 1 new message(s) cached
-[2026-04-23T10:01:59+0000]   -> restored unread status
-[2026-04-23T10:01:59+0000] [Fetching 19/19] [FP ST MP] Fwd: URGENT FPON / SCAN & GO MANUAL SUSPENSI
-[2026-04-23T10:02:00+0000] DEBUG:   Show details: open=0, clicked=2, skipped=0, failed=0, tables_after=2
-[2026-04-23T10:02:00+0000]   -> 1 new message(s) cached
-[2026-04-23T10:02:00+0000]   -> restored unread status
-[2026-04-23T10:02:00+0000] Done [4/125] 19db980101ece833 rel=7
-[2026-04-23T10:02:00+0000] Summarizing [5/125] Canceled event: KDD for RMN In-Store @ Fri Apr 24, (2 msgs, direct)
-[2026-04-23T10:02:07+0000] Done [5/125] 19db97f3f84e8932 rel=6
-[2026-04-23T10:02:07+0000] Summarizing [6/125] Invitation: KDD for RMN In-Store @ Fri Apr 24, 202 (2 msgs, direct)
-[2026-04-23T10:02:14+0000] Done [6/125] 19db978136df8458 rel=6
-[2026-04-23T10:02:14+0000] Summarizing [7/125] [JIRA] (Tiong Siong Tee) invited you to (Core Prod (1 msgs, direct)
-[2026-04-23T10:02:19+0000] Done [7/125] 19db94c8b224a607 rel=5
-[2026-04-23T10:02:19+0000] Summarizing [8/125] Updated invitation: RMN Grooming - Data loader tic (1 msgs, direct)
-[2026-04-23T10:02:28+0000] Done [8/125] 19db93b2a96d8733 rel=6
-[2026-04-23T10:02:28+0000] Summarizing [9/125] [Bitbucket]  Pipeline for LIGHT-32 failed on c1117 (1 msgs, direct)
-[2026-04-23T10:02:34+0000] Done [9/125] 19db92fceb0d4b5d rel=8
-[2026-04-23T10:02:34+0000] Summarizing [10/125] Accepted: RMN Data Loader - Basic Fields @ Thu Apr (1 msgs, direct)
-[2026-04-23T10:02:41+0000] Done [10/125] 19db926905a85f15 rel=6
-[2026-04-23T10:02:41+0000] Summarizing [11/125] Notes: “ACNxOsmos: Daily Cadence” Apr 23, 2026 (1 msgs, direct)
-[2026-04-23T10:02:50+0000] Done [11/125] 19db91eaf438956e rel=7
-[2026-04-23T10:02:50+0000] Summarizing [12/125] Updated invitation: ACNxOsmos: Daily Cadence @ Thu (2 msgs, direct)
-[2026-04-23T10:03:02+0000] Done [12/125] 19db91dee031e3dd rel=6
-[2026-04-23T10:03:02+0000] Summarizing [13/125] Delivery Status Notification (Failure) (1 msgs, direct)
-[2026-04-23T10:03:06+0000] Done [13/125] 19db91df4db65b89 rel=5
-[2026-04-23T10:03:06+0000] Summarizing [14/125] Updated invitation: ACNxOsmos: Daily Cadence @ Thu (2 msgs, direct)
-[2026-04-23T10:03:17+0000] Done [14/125] 19db91deedebbae7 rel=6
-[2026-04-23T10:03:17+0000] Summarizing [15/125] Updated invitation: ACNxOsmos: Daily Cadence @ Thu (1 msgs, direct)
-[2026-04-23T10:03:29+0000] Done [15/125] 19db91df14baa7a4 rel=7
-[2026-04-23T10:03:29+0000] Summarizing [16/125] Updated invitation: ACNxOsmos: Daily Cadence @ Thu (1 msgs, direct)
-[2026-04-23T10:03:37+0000] Done [16/125] 19db91def980a283 rel=6
-[2026-04-23T10:03:37+0000] Summarizing [17/125] Updated invitation: ACNxOsmos: Daily Cadence @ Thu (1 msgs, direct)
-[2026-04-23T10:03:49+0000] Done [17/125] 19db91dedafc144f rel=6
-[2026-04-23T10:03:49+0000] Summarizing [18/125] Google Calendar: Invitation for Team Building Time (1 msgs, direct)
-[2026-04-23T10:03:55+0000] Done [18/125] 19db9121c28a7240 rel=6
-[2026-04-23T10:03:55+0000] Summarizing [19/125] [FP ST MP] Fwd: URGENT FPON / SCAN & GO MANUAL SUS (1 msgs, none)
-[2026-04-23T10:04:03+0000] Done [19/125] 19db8c2c1a2869ed rel=9
-[2026-04-23T10:04:03+0000] [20/125] 19db8e766bcf630f: cached (rel=2)
-[2026-04-23T10:04:03+0000] [21/125] 19db88f223d88087: cached (rel=9)
-[2026-04-23T10:04:03+0000] [22/125] 19db36d2fe5f2c29: cached (rel=7)
-[2026-04-23T10:04:03+0000] [23/125] 19db8cc01afe9402: cached (rel=6)
-[2026-04-23T10:04:03+0000] [24/125] 19db8bfdbc863329: cached (rel=6)
-[2026-04-23T10:04:03+0000] [25/125] 19db8bd263685e8a: cached (rel=6)
-[2026-04-23T10:04:03+0000] [26/125] 19db8ab64cc2d21d: cached (rel=6)
-[2026-04-23T10:04:03+0000] [27/125] 19db8ab602a90a96: cached (rel=6)
-[2026-04-23T10:04:03+0000] [28/125] 19db8ab5e6e4f579: cached (rel=7)
-[2026-04-23T10:04:03+0000] [29/125] 19db8ab5e4aa7e62: cached (rel=7)
-[2026-04-23T10:04:03+0000] [30/125] 19db8ab59cbfe7c3: cached (rel=7)
-[2026-04-23T10:04:03+0000] [31/125] 19db8ab543ca143f: cached (rel=6)
-[2026-04-23T10:04:03+0000] [32/125] 19db8a0e4f9bf2d0: cached (rel=5)
-[2026-04-23T10:04:03+0000] [33/125] 19db8781fda0756a: cached (rel=5)
-[2026-04-23T10:04:03+0000] [34/125] 19db85e7341976b9: cached (rel=6)
-[2026-04-23T10:04:03+0000] [35/125] 19db84a7aced3888: cached (rel=6)
-[2026-04-23T10:04:03+0000] [36/125] 19d966990fd5899b: cached (rel=6)
-[2026-04-23T10:04:03+0000] [37/125] 19db83ee5ed5f6d5: cached (rel=5)
-[2026-04-23T10:04:03+0000] [38/125] 19db83bb1d75a711: cached (rel=3)
-[2026-04-23T10:04:03+0000] [39/125] 19db8397f517822a: cached (rel=7)
-[2026-04-23T10:04:03+0000] [40/125] 19db8383972c469f: cached (rel=7)
-[2026-04-23T10:04:03+0000] [41/125] 19da914e1413bff0: cached (rel=9)
-[2026-04-23T10:04:03+0000] [42/125] 19db8160d157a7f4: cached (rel=5)
-[2026-04-23T10:04:03+0000] [43/125] 19db814ab874b6c2: cached (rel=8)
-[2026-04-23T10:04:03+0000] [44/125] 19db790a6068f625: cached (rel=6)
-[2026-04-23T10:04:03+0000] [45/125] 19db73ae8195da9a: cached (rel=2)
-[2026-04-23T10:04:03+0000] [46/125] 19db70d46a9a2826: cached (rel=5)
-[2026-04-23T10:04:03+0000] [47/125] 19db647fc47659da: cached (rel=5)
-[2026-04-23T10:04:03+0000] [48/125] 19db643ec4691cf1: cached (rel=7)
-[2026-04-23T10:04:03+0000] [49/125] 19db5916ec7a8392: cached (rel=7)
-[2026-04-23T10:04:03+0000] [50/125] 19db577234fea950: cached (rel=2)
-[2026-04-23T10:04:03+0000] [51/125] 19db523ca92d1cb2: cached (rel=6)
-[2026-04-23T10:04:03+0000] [52/125] 19db5221a6bfd97a: cached (rel=6)
-[2026-04-23T10:04:03+0000] [53/125] 19db4fa59f3944f6: cached (rel=2)
-[2026-04-23T10:04:03+0000] [54/125] 19d9b2b3ecdbf46d: cached (rel=9)
-[2026-04-23T10:04:03+0000] [55/125] 19ce6ebdc3530d4d: cached (rel=9)
-[2026-04-23T10:04:03+0000] [56/125] 19daf1eceaed2447: cached (rel=8)
-[2026-04-23T10:04:03+0000] [57/125] 19d2e82fa82f66fe: cached (rel=7)
-[2026-04-23T10:04:03+0000] [58/125] 19db411f5b6c2949: cached (rel=6)
-[2026-04-23T10:04:03+0000] [59/125] 19db40bec871e217: cached (rel=2)
-[2026-04-23T10:04:03+0000] [60/125] 19db3fcccf913bc8: cached (rel=5)
-[2026-04-23T10:04:03+0000] [61/125] 19db3d491033cce1: cached (rel=8)
-[2026-04-23T10:04:03+0000] [62/125] 19db3c53d79f7bf4: cached (rel=9)
-[2026-04-23T10:04:03+0000] [63/125] 19db3b79c79ec33f: cached (rel=6)
-[2026-04-23T10:04:03+0000] [64/125] 19db3b1652722328: cached (rel=6)
-[2026-04-23T10:04:03+0000] [65/125] 19db35b505b48aac: cached (rel=6)
-[2026-04-23T10:04:03+0000] [66/125] 19db355a8ffbbce1: cached (rel=5)
-[2026-04-23T10:04:03+0000] [67/125] 19db32dce3312cfd: cached (rel=5)
-[2026-04-23T10:04:03+0000] [68/125] 19db324781363a3a: cached (rel=5)
-[2026-04-23T10:04:03+0000] [69/125] 19db2f23db7288c9: cached (rel=6)
-[2026-04-23T10:04:03+0000] [70/125] 19db2ea5a4a26382: cached (rel=7)
-[2026-04-23T10:04:03+0000] [71/125] 19dae6d4ffad9c7a: cached (rel=5)
-[2026-04-23T10:04:03+0000] [72/125] 19db2bd99ea216c9: cached (rel=8)
-[2026-04-23T10:04:03+0000] [73/125] 19db2b5ecb942bcb: cached (rel=7)
-[2026-04-23T10:04:03+0000] [74/125] 19db22e7ae7da529: cached (rel=6)
-[2026-04-23T10:04:03+0000] [75/125] 19db201388ee3303: cached (rel=5)
-[2026-04-23T10:04:03+0000] [76/125] 19db1c850dc6f3c5: cached (rel=5)
-[2026-04-23T10:04:03+0000] [77/125] 19b3501ba1b6c636: cached (rel=8)
-[2026-04-23T10:04:03+0000] [78/125] 19db093968a70b9c: cached (rel=8)
-[2026-04-23T10:04:03+0000] [79/125] 19db060d95b4d5af: cached (rel=6)
-[2026-04-23T10:04:03+0000] [80/125] 19daf7f643309fa4: cached (rel=7)
-[2026-04-23T10:04:03+0000] [81/125] 19daf46b129a4aad: cached (rel=9)
-[2026-04-23T10:04:03+0000] [82/125] 19daf45bfc8721c1: cached (rel=8)
-[2026-04-23T10:04:03+0000] [83/125] 19daf2576630ae82: cached (rel=8)
-[2026-04-23T10:04:03+0000] [84/125] 19daf199741bc6c5: cached (rel=6)
-[2026-04-23T10:04:03+0000] [85/125] 19daeea5c08f9cff: cached (rel=2)
-[2026-04-23T10:04:03+0000] [86/125] 199c15c9e666e19b: cached (rel=9)
-[2026-04-23T10:04:03+0000] [87/125] 19d25769187b9103: cached (rel=6)
-[2026-04-23T10:04:03+0000] [88/125] 19dae74d73ad8385: cached (rel=8)
-[2026-04-23T10:04:03+0000] [89/125] 19dae7273c09f4ee: cached (rel=8)
-[2026-04-23T10:04:03+0000] [90/125] 19dae626c679d9d2: cached (rel=7)
-[2026-04-23T10:04:03+0000] [91/125] 19dae51854a4700b: cached (rel=8)
-[2026-04-23T10:04:03+0000] [92/125] 19dae5036c86c6ea: cached (rel=8)
-[2026-04-23T10:04:03+0000] [93/125] 19dae48a8b03832c: cached (rel=7)
-[2026-04-23T10:04:03+0000] [94/125] 19dae1f23cd04624: cached (rel=6)
-[2026-04-23T10:04:03+0000] [95/125] 19dadfdd182b02c3: cached (rel=5)
-[2026-04-23T10:04:03+0000] [96/125] 19dadf6c134611c6: cached (rel=5)
-[2026-04-23T10:04:03+0000] [97/125] 19dade83cd3cfde0: cached (rel=4)
-[2026-04-23T10:04:03+0000] [98/125] 19dadcd6c8d8ae83: cached (rel=5)
-[2026-04-23T10:04:03+0000] [99/125] 19dadc4a4c23a8e7: cached (rel=2)
-[2026-04-23T10:04:03+0000] [100/125] 19dad28eb63af0c6: cached (rel=5)
-[2026-04-23T10:04:03+0000] [101/125] 19dacd42d96e2330: cached (rel=5)
-[2026-04-23T10:04:03+0000] [102/125] 19dac09f62013e17: cached (rel=6)
-[2026-04-23T10:04:03+0000] [103/125] 19dab73be3d60e25: cached (rel=9)
-[2026-04-23T10:04:03+0000] [104/125] 19dab6551a9b190a: cached (rel=9)
-[2026-04-23T10:04:03+0000] [105/125] 19dab5f44142a62f: cached (rel=8)
-[2026-04-23T10:04:03+0000] [106/125] 19dab5149b8f4b12: cached (rel=7)
-[2026-04-23T10:04:03+0000] [107/125] 19daaf7782fdbe5c: cached (rel=8)
-[2026-04-23T10:04:03+0000] [108/125] 19daae13f06b8223: cached (rel=2)
-[2026-04-23T10:04:03+0000] [109/125] 19daae1387d42674: cached (rel=3)
-[2026-04-23T10:04:03+0000] [110/125] 19daae137d316b8a: cached (rel=2)
-[2026-04-23T10:04:03+0000] [111/125] 19daae13746cf579: cached (rel=2)
-[2026-04-23T10:04:03+0000] [112/125] 19daae1365bce2ec: cached (rel=2)
-[2026-04-23T10:04:03+0000] [113/125] 19daae135fa50bed: cached (rel=3)
-[2026-04-23T10:04:03+0000] [114/125] 19daae135ec25682: cached (rel=2)
-[2026-04-23T10:04:03+0000] [115/125] 19daae1352d12c0a: cached (rel=2)
-[2026-04-23T10:04:03+0000] [116/125] 19daae135218389a: cached (rel=2)
-[2026-04-23T10:04:03+0000] [117/125] 19daae13512192fc: cached (rel=2)
-[2026-04-23T10:04:03+0000] [118/125] 19daae134dc53e80: cached (rel=2)
-[2026-04-23T10:04:03+0000] [119/125] 19daae1342f1c665: cached (rel=9)
-[2026-04-23T10:04:03+0000] [120/125] 19daadca10bfd380: cached (rel=2)
-[2026-04-23T10:04:03+0000] [121/125] 19daa221e302dedd: cached (rel=8)
-[2026-04-23T10:04:03+0000] [122/125] 19daac51cd0a7baf: cached (rel=8)
-[2026-04-23T10:04:03+0000] [123/125] 19daa8c7bd636159: cached (rel=8)
-[2026-04-23T10:04:03+0000] [124/125] 19daa58262a07f96: cached (rel=6)
-[2026-04-23T10:04:03+0000] [125/125] 19daa568a8605b44: cached (rel=7)
-[2026-04-23T10:04:03+0000] Output: /a0/usr/workdir/gmail-output.md (59 summaries, min_relevance=7)
-[2026-04-23T10:04:03+0000] COMPLETED (125 threads, fetched=19)
-(venv) root@65a984945e89:/a0/usr/workdir#
+[2026-04-24T02:01:06+0000] Browser connected. Browser timezone: UTC
+[2026-04-24T02:01:11+0000]   Page 1: 100 thread(s)
+[2026-04-24T02:01:11+0000]   Early stop: 5 consecutive cached
+[2026-04-24T02:01:16+0000]   Page 2: 62 thread(s)
+[2026-04-24T02:01:41+0000] Phase 1: 111 threads (excluded=51, unchanged=105, to-fetch=6, unread=6)
+[2026-04-24T02:01:41+0000] [Fetching 1/6] [JIRA] (LIGHT-34) Tracking for all display content
+[2026-04-24T02:01:44+0000]   -> 1 new message(s) cached
+[2026-04-24T02:01:44+0000]   -> restored unread status
+[2026-04-24T02:01:44+0000] [Fetching 2/6] Quick question on your team’s workflows
+[2026-04-24T02:01:44+0000] Summarizing [1/111] [JIRA] (LIGHT-34) Tracking for all display content (1 msgs, direct)
+[2026-04-24T02:01:46+0000]   -> 1 new message(s) cached
+[2026-04-24T02:01:46+0000]   -> restored unread status
+[2026-04-24T02:01:46+0000] [Fetching 3/6] Declined: BE Champion Sync-up @ Tue May 5, 2026 11:30am
+[2026-04-24T02:01:47+0000]   -> 1 new message(s) cached
+[2026-04-24T02:01:48+0000]   -> restored unread status
+[2026-04-24T02:01:48+0000] [Fetching 4/6] [JIRA] (DPD-590) Clean up archived proposals after PRD
+[2026-04-24T02:01:50+0000]   -> 3 new message(s) cached
+[2026-04-24T02:01:50+0000]   -> restored unread status
+[2026-04-24T02:01:50+0000] [Fetching 5/6] Michael Bui, you have work due in Jira
+[2026-04-24T02:01:51+0000]   -> 1 new message(s) cached
+[2026-04-24T02:01:52+0000]   -> restored unread status
+[2026-04-24T02:01:52+0000] [Fetching 6/6] Daily digest: updates from Nikhil Grover
+[2026-04-24T02:01:53+0000]   -> 1 new message(s) cached
+[2026-04-24T02:01:53+0000]   -> restored unread status
+
 
 [SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
