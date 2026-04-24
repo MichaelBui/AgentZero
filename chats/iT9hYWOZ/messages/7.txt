@@ -1,39 +1,39 @@
-In the workforce, AI is having the opposite effect it was supposed to, UC Berkeley researchers warn | Fortune
-https://fortune.com/2026/02/10/ai-future-of-work-white-collar-employees-technology-productivity-burnout-research-uc-berkeley/
-Over the course of eight months ... operations, the researchers found employees using AI tools increased both the work they could complete as well as the variety of tasks they could tackle—even when they weren’t forced to ...
+AI for Engineers: Why Continuous Learning, Degrees, and Certifications Matter in 2026 | Electronic Design
+https://www.electronicdesign.com/technologies/eda/article/55363756/electronic-design-ai-for-engineers-why-continuous-learning-degrees-and-certifications-matter-in-2026
+We focus our education from general to hyper-specific. We go from grade school to college. Bachelor’s degree to master’s, to PhD. I think for 2026, 2027, 2028 — maybe even for the next decade — we need to keep sharpening our skills and knowledge.
 
-AI Burnout at Work 2026: Prevention Guide [Research]
-https://aitoolranked.com/blog/ai-workplace-burnout-prevention-guide-2026
-AI productivity tools are causing unprecedented cognitive overload and 'brain fry' among professionals. This comprehensive guide reveals research-backed strategies and compares 30+ AI tools with built-in burnout prevention features to help you maintain peak performance without mental exhaustion.
+In 2026, AI Is Redefining How Engineers Work | Educational Technology and Change Journal
+https://etcjournal.com/2026/02/11/in-2026-ai-is-redefining-how-engineers-work/
+By Jim Shimabukuro (assisted by ChatGPT)Editor In the United States in 2026, artificial intelligence is no longer a far-off force looming on the horizon of engineering — it is redefi…
 
-Why Gen AI Feels So Threatening to Workers
-https://hbr.org/2026/03/why-gen-ai-feels-so-threatening-to-workers
-However, because gen AI can automate many routine tasks and support complex ones, its integration in the workplace can be experienced as a threat to workers' ...
+2026 AI Trends: What Enterprises Need to Know | Stellium Consulting
+https://stellium.consulting/articles/news/2026-ai-trends/
+Automated testing, validation datasets, and performance thresholds ensure continuous learning improves rather than degrades AI system quality. Organizations establish rollback procedures and approval gates for significant model changes even ...
 
-What Is AI Burnout, And How Can It Be Avoided? - Forbes
-https://www.forbes.com/sites/bernardmarr/2026/03/02/what-is-ai-burnout-and-how-can-it-be-avoided/
-AI burnout is rising as generative AI tools make it easy to take on more work, start more projects, and keep prompting long after the day should be done.
+The Future of AI Engineering in 2026 | BEON.tech
+https://beon.tech/blog/future-ai-engineering/
+Engineers of 2026 will need to navigate all three layers effectively. Engineering teams will adopt augmented workflows where AI handles repetitive coding and testing, while humans focus on architecture, innovation, and user experience.
 
-Tech worker burnout: causes, impact & solutions for HR & leadership
-https://www.circles.com/resources/tech-worker-burnout-causes-impact-solutions-for-hr-leadership
-Dec 9, 2025 ... Burnout is rampant among tech professionals. Explore its root causes, how it stresses teams, and how Circles helps across roles to reduce ...
+Top Generative AI Conferences In 2026 for Engineers
+https://arize.com/blog/top-generative-ai-conferences-in-2026-for-engineers/
+“Likely dates” are used when the organizer has not posted the 2026 schedule on the event page. Want more? Check out Arize’s weekly workshops and events. Dates: March 16–19, 2026.
 
-AI at work leads to 10x productivity, but also burnout (HBR study)
-https://www.reddit.com/r/ArtificialInteligence/comments/1r0hhgp/ai_at_work_leads_to_10x_productivity_but_also/
-so workers were more productive because the felt empowered to take on more work, but they also worked longer. Seems like less of an improvement and more a way to get people to overcommit. More on reddit.com
+What’s Next in AI: Five Trends to Watch in 2026
+https://blog.bytebytego.com/p/whats-next-in-ai-five-trends-to-watch
+Qwen3-Coder-Next, an 80B-parameter model released in early 2026, reached performance close to top closed models while running locally on consumer hardware. Coding agents are one of the most visible places where AI has already changed day-to-day work. Engineers can ask for repo-level fixes and improvements and get working patches much faster.
 
-Combining AI and Automation to Improve Employee Productivity in 2026
-https://www.mygreatlearning.com/blog/ai-and-automation-to-improve-employee-productivity/
-Discover how AI and automation boost employee productivity in 2026 by optimizing tasks, workflows, collaboration, and content generation.
+What AI Trends This Month: Top 5 Developments (March 2026) | BuildEZ Blog
+https://www.buildez.ai/blog/what-ai-trends-this-month-march-2026
+Evaluate Specific AI Tools: The era of a single "AI-for-everything" tool is ending. As expert Mark Dredze notes, the shift is toward more focused, smaller models for specific applications. Research and pilot tools designed to solve your specific problems, whether in marketing, finance, or operations. Build Your "Change Fitness" Muscle: Make continuous learning a priority.
 
-4-Day Workweek Guide 2026: Benefits, AI Tools & Implementation
-https://www.taskade.com/blog/4-day-workweek
-Apr 7, 2026 ... The 4-day workweek is accelerating in 2026 with AI productivity tools. Research from 200+ companies, implementation steps, and how AI agents ...
+10 Key AI Workforce Trends In 2026
+https://gloat.com/blog/ai-workforce-trends/
+The economic message is clear: ... didn’t exist five years ago. Gartner predicts that generative AI will spawn entirely new roles in software engineering and operations....
 
-Engineering Productivity Without Burnout | Logiciel
-https://logiciel.io/blog/engineering-productivity-without-burnout
-Learn how CTOs improve engineering productivity, throughput, and delivery velocity without burnout using metrics, systems, and AI-first workflows.
+The 2026 AI Index Report - Stanford HAI
+https://hai.stanford.edu/ai-index/2026-ai-index-report
+The AI Index report tracks, collates, distills, and visualizes data related to artificial intelligence (AI). Our mission is to provide unbiased, rigorously vetted, broadly sourced data in order for policymakers, researchers, executives, journalists, and the general public to develop a more thorough and nuanced understanding of the complex field ...
 
-26 burnout-proof ways to work smarter, not harder in 2026 | Goodbye Burnout, Hello Balance | The Guardian
-https://www.theguardian.com/goodbye-burnout-hello-balance/2026/mar/23/twenty-six-ways-to-work-smarter-and-avoid-burnout-in-2026
-When it comes to reducing workload and enhancing productivity in 2026, we can now enlist the latest tech and cutting-edge research to get more done without the overwhelm. Where once success may have required you to clock off late, now it’s about saying goodbye to burnout and hello to balance.
+15 years of evolving skills—and the new era of AI training for all
+https://generalassemb.ly/blog/15-years-of-evolving-skills-and-the-new-era-of-ai-training-for-all/
+Jan 27, 2026 ... AI Systems Engineering & Reliability: Learn to deploy, monitor ... Explore our new AI courses. Article. April 8, 2026. Tech hiring in 2026 ...

@@ -1,39 +1,39 @@
-More Code, Fewer Releases: The Engineering Leadership Blind Spot of 2026
-https://waydev.co/engineering-leadership-blind-spot-of-2026/
-AI-assisted development drove a 59% increase in average engineering throughput last year, according to CircleCI's 2026 State of Software Delivery report, the largest analysis of CI/CD performance ever published, drawn from more than 28 million workflows. Autonomous coding agents are enabling teams to explore ideas, generate features, and iterate at a speed that simply wasn't possible two ...
+How AI Is Driving Revenue, Cutting Costs and Boosting Productivity for Every Industry in 2026 | NVIDIA Blog
+https://blogs.nvidia.com/blog/state-of-ai-report-2026/
+Nearly a third of respondents in the surveys are still in the pilot and assessment stage. Challenges persist in workflows and operations, as well as getting the right expertise to scale impactful solutions.
 
-The State of AI in the Enterprise - 2026 AI report | Deloitte US
-https://www.deloitte.com/us/en/what-we-do/capabilities/applied-artificial-intelligence/content/state-of-ai-in-the-enterprise.html
-Organizational structures are beginning to flatten as AI absorbs routine execution tasks. Some companies are merging technology and people-leadership functions to ensure that systems and workforce design evolve together.
+Retail Rewired: How AI Is Reshaping the Retail Business Model
+https://www.bcg.com/publications/2026/how-ai-is-reshaping-the-retail-business-model
+AI is fundamentally changing retail: the way customers shop, how retailers work and where profit flows. To respond takes more than applying AI tools to legacy retail models; the real winners are redesigning their CVPs, economics, capabilities and operating models end to end. We see five imperatives for retailers to accelerate their responses to the changing retail business model in 2026.
 
-Top leadership experts sound the alarm on the AI doomsday: bosses are choosing tech over people | Fortune
-https://fortune.com/2026/03/29/ai-workforce-human-design-gap-doomsday-deloitte-wharton-harvard/
-The same imbalance shows up in Wharton’s AI adoption research. Bradlow said Wharton and GBK Collective found in a prior research report what he calls a “donut hole” at the center of most large organizations: the C-suite is investing heavily in AI, younger workers have grown up using it natively, but the middle managers who actually have to orchestrate workflow change are the ones resisting — or being left behind.
+Enterprise AI Adoption Impact Index Finds More than Half of ... - Infor
+https://www.infor.com/en/news/2026/04/20/enterprise-ai-adoption-impact-index-finds-more-than-half-of-businesses-struggle-to-scale-ai
+AI Adoption to Execute Challenge. Survey Methodology. The research from March 24th, 2026 through April 9th, 2026, polled 1,000 business ...
 
-AI Adoption in 2026: How Leaders Must Redesign Their Org Now - Barry O'Reilly
-https://barryoreilly.com/explore/blog/ai-adoption-2026-leadership-organizational-redesign/
-Here are the five strategic risks executives must anticipate: You fall behind AI-mature competitors who move faster, learn faster, and out-iterate your entire operating model. ... Top talent will not tolerate legacy operating systems much longer.
+TCS Global Study Identifies Critical Gaps in AI Adoption among Retailers
+https://www.tcs.com/who-we-are/newsroom/press-release/tcs-global-study-identifies-critical-gaps-ai-adoption-retailers
+The TCS Global Retail Outlook 2026—based on responses from more than 800 senior retail executives across 18 countries—highlights fresh insights and emerging trends shaping digital transformation and AI adoption in the retail industry.
 
-Engineering in the Age of AI: What the 2025 State of Engineering Management Report Reveals - Jellyfish
-https://jellyfish.co/blog/2025-software-engineering-management-trends/
-Among their top concerns: The hype gap: Leaders worry that over-promising could lead to underwhelming results. 67% of respondents predict a velocity and productivity increase from AI of at least 25% in 2026.
+Enterprise AI Adoption Impact Index Finds More than Half of ...
+https://www.prnewswire.com/news-releases/enterprise-ai-adoption-impact-index-finds-more-than-half-of-businesses-struggle-to-scale-ai-new-infor-solutions-aim-to-close-the-gap-302749762.html
+AI Adoption to Execute Challenge. Survey Methodology. The research from March 24th, 2026 through April 9th, 2026, polled 1,000 business ...
 
-Why AI Demands a New Breed of Leaders | MIT Sloan Management Review
-https://sloanreview.mit.edu/article/why-ai-demands-a-new-breed-of-leaders/
-But most organizations still focus ... does too. Companies need a new role, the chief innovation and transformation officer, to manage the profound cultural and organizational changes AI adoption brings....
+From Ambition to Activation: Organizations Stand at the ... - Deloitte
+https://www.deloitte.com/us/en/about/press-room/state-of-ai-report-2026.html
+The Deloitte AI Institute today unveiled the 2026 edition of its "State of AI in the Enterprise" report, revealing how organizations are currently engaging with AI and the impacts, changes and considerations this technology is introducing.
 
-Influence of Artificial Intelligence on Engineering Management Decision-Making with Mediating Role of Transformational Leadership
-https://www.mdpi.com/2079-8954/12/12/570
-By synthesizing the Technology Acceptance Model (TAM), Transformational Leadership Theory, and Adaptive Structuration Theory (AST), we create a comprehensive framework that captures the multilayered interactions between technological innovation, leadership processes, and organizational adaptation. The theoretical integration offers three critical analytical perspectives: Micro-level: TAM explains individual cognitive and behavioral mechanisms of technological adoption.
+Deloitte's State of AI 2026 - AIwire - Covering Scientific & Technical AI
+https://www.hpcwire.com/aiwire/2026/03/04/deloittes-state-of-ai-2026-why-enterprise-execution-is-falling-behind-adoption/
+Mar 4, 2026 ... Deloitte's State of AI 2026 report shows AI adoption surging across enterprises, but execution gaps in data, infrastructure, and governance ...
 
-AI Leadership Trends 2026: What Executives Need to Know
-https://www.usaii.org/ai-insights/ai-leadership-trends-2026-what-executives-need-to-know
-Michael Woodall shares his insights on how organizations can learn from enterprise-level failures and lead successful AI adoption in this comprehensive article: Rethinking AI Adoption: Strategic Lessons from Five Enterprise-Level Failures · Why is AI Leadership Fundamentally Different in 2026?
+AIMG: Enterprise AI 2026: The Shift from Adoption to Value Realization
+https://agilebrandguide.com/aimg-enterprise-ai-2026-the-shift-from-adoption-to-value-realization/
+This AIMG Benchmark Study, conducted in March 2026, synthesizes insights from 2,048 enterprise decision-makers and 150 AIMG experts to assess this evolution, highlighting that the central challenge for leaders is no longer if to adopt AI, but how to scale it for transformative impact.
 
-How has AI impacted engineering leadership in 2025?
-https://www.getquotient.com/insights/how-has-ai-impacted-engineering-leadership-in-2025
-The data suggests that while AI adoption is widespread, its transformative impact on productivity hasn’t materialized… yet. Most teams report only modest gains, and many leaders are still working through the operational and cultural implications.
+Why adopting AI will still be a challenge for organizations in 2026
+https://www.linkedin.com/pulse/why-adopting-ai-still-challenge-organizations-jtauc
+Jan 27, 2026 ... The biggest AI adoption blocker in 2026 will be the lack of operational readiness and not the “lack of innovation.”
 
-The "Last Mile" Problem Slowing AI Transformation
-https://hbr.org/2026/03/the-last-mile-problem-slowing-ai-transformation
-The primary obstacle to progress is rarely model quality or data availability, but rather the "last mile" of transformation where technical capability must meet organizational design.
+State of AI trust in 2026: Shifting to the agentic era - McKinsey
+https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era
+March 25, 2026 AI adoption is accelerating rapidly, with organizations moving beyond experimentation toward scaled deployment of gen AI and, increasingly, agentic AI across core business functions. But as AI systems take on greater autonomy—making recommendations, triggering actions, and interacting with other systems—the consequences of failure grow materially. In this environment, AI ...

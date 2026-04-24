@@ -1,39 +1,39 @@
-Self-Hosted LLM Guide: Setup, Tools & Cost Comparison (2026)
-https://blog.premai.io/self-hosted-llm-guide-setup-tools-cost-comparison-2026/
-Llama, Qwen, DeepSeek, and Gemma all permit commercial deployment, just review each model's acceptable use policy before production. All these models are available through Hugging Face and work with tools like Ollama and vLLM. Start with a smaller model that fits your hardware comfortably, benchmark it against your actual workload, then scale up only if you need more capability. Choosing the right inference framework determines whether your self-hosted LLM runs smoothly or becomes an operational headache. Each tool optimizes for different priorities, simplicity, throughput, flexibility, or managed infrastructure.
+AMD ROCm in 2026 — Is It Finally Ready for Local LLMs? | CraftRigs
+https://craftrigs.com/articles/amd-rocm-local-llm-2026/
+The RX 7900 XTX (24 GB, RDNA3) benchmarks at ~107 tok/s on Llama 2 7B Q4_0 with llama.cpp and ROCm — verified via community benchmark submissions at cprimozic.net. Consumer 12 GB RDNA3 cards hit 40+ tok/s on the same models in Ollama based on community data from llm-tracker.info (verified March 2026).
 
-Self-Hosted LLM Costs 2026 | Pricing Comparison - SitePoint
-https://www.sitepoint.com/self-hosted-llm-costs-2026/
-API pricing as of mid-2026 spans a wide range. OpenAI GPT-4.1 charges approximately $2.00 per 1M input tokens and $8.00 per 1M output tokens. Anthropic Claude 4 Sonnet sits at ~$3.00/$15.00 (input/output per 1M tokens).
+New Project Megathread - Week of 16 Apr 2026 : r/selfhosted - Reddit
+https://www.reddit.com/r/selfhosted/comments/1snhwhx/new_project_megathread_week_of_16_apr_2026/
+Apr 16, 2026 ... ... and local LLM integration (Ollama/LM Studio). AI Involvement: Full transparency: This project is a human-AI collaboration. The core neuro ...
 
-Building a Production-Ready Self-Hosted LLM Stack in 2026 · Technical news about AI, coding and all
-https://dasroot.net/posts/2026/03/building-production-ready-self-hosted-llm-stack-2026/
-naging costs is a critical aspect of deploying LLM applications, especially with the rising prices of inference and API calls. Tools like Helicone and Portkey provide efficient ways to monitor and manage API usage, ensuring that organizations can optimize spending without sacrificing performance. Helicone, version 1.8.0 (2026), is known for its fast setup and caching capabilities, making it an excellent choice for chatbot applications.
+Local LLM Inference on AMD RX 9070 XT — Vulkan vs ROCm Benchmarks on ...
+https://digtvbg.com/blog/llama-server-vulkan-rdna4-vllm-rocm-benchmark/
+Local LLM Inference on AMD RX 9070 XT — Vulkan vs ROCm Benchmarks on RDNA4 By digtvbg Posted on March 22, 2026 Posted in blog Tagged ai, amd, gpu, homelab, inference, linux, llama, llm, rdna4, rocm, vllm, vulkan
 
-The Best Open-Source LLMs in 2026 - BentoML
-https://www.bentoml.com/blog/navigating-the-world-of-open-source-large-language-models
-That’s why open-source LLMs have become so important. They let developers self-host models privately, fine-tune them with domain-specific data, and optimize inference performance for their unique workloads.
+r/LocalLLaMA on Reddit: What's the realistic "entry point" for a good local LLM experience going into 2026?
+https://www.reddit.com/r/LocalLLaMA/comments/1prjldr/whats_the_realistic_entry_point_for_a_good_local/
+I'm a believer in getting a unified memory machine and running them that way. I think it will become the wave of the future over time. More on reddit.com
 
-Local AI Performance & Optimization (2026 Admin Guide) - FOSS Linux
-https://www.fosslinux.com/155039/local-ai-performance-optimizing-llm-inference-on-linux-2026-admin-guide.htm
-I prioritize latency logic over simple installation. Below is the production-level guide for orchestrating Local AI workloads in your 2026 infrastructure. AI inference is almost entirely dependent on VRAM (Video RAM). While you can run models on a CPU (using llama.cpp), the performance difference is massive-often 1 tok/s on CPU versus 60+ tok/s on a modern GPU.
+Large language models (LLM) Local Running GPU, CPU
+https://linustechtips.com/topic/1528521-large-language-models-llm-local-running-gpu-cpu-benchmarks-and-next-gen-prospects/
+Aug 27, 2023 ... AI and tech community: running large language models (LLMs) on different hardware. One of the remarkable aspects of this trend is how ...
 
-Cost of Running Local LLM: Real Numbers & Break-Even Guide 2026
-https://aisuperior.com/cost-of-running-local-llm/
-Local LLM costs $1,500-$4,000 upfront plus $50-$300/month. Discover hardware needs, energy expenses, and when self-hosting beats cloud APIs in 2026.
+The Best Local Machine PCs for AI in 2026 - lukaszadam.com
+https://lukaszadam.com/best-local-ai-pc
+The AMD Ryzen AI Max+ 395 chip has garnered significant attention in 2026 for being able to run a 120-billion-parameter model in a portable form factor — at roughly half the price of the DGX Spark. For pure local LLM text workflows, the AMD AI Max+ 395 is the performance-per-dollar leader at this tier.
 
-LLM Inference Cost 2026: Complete Pricing Guide
-https://aisuperior.com/llm-token-cost/
-As of March 2026, achieving GPT-4 level performance costs approximately $0.40-0.80 per million tokens using competitive alternatives like DeepSeek V3 or mid-tier models from major providers.
+ZGX Onboard: Hitting 30 Tokens/Second on a 20B Model, Locally
+https://www.linkedin.com/pulse/zgx-onboard-hitting-30-tokenssecond-20b-model-locally-caldeira-weyxc
+Nov 25, 2025 ... As an AI Developer enthusiast, I've spent the past months battling GPU memory constraints and slow iteration cycles. Local development has ...
 
-LLM Inference Optimization: Cut Cost & Latency at Every Layer (2026) | Morph
-https://www.morphllm.com/llm-inference-optimization
-Morph Compact runs verbatim context compaction at 33,000 tok/s on a custom inference engine. It shrinks context 50-70% while keeping every surviving sentence word-for-word. Fast enough to run inline before every LLM call, not just at the 95% ...
+AMD ROCm vs CUDA for Local AI [2026 Guide] - kunalganglani.com
+https://www.kunalganglani.com/blog/amd-rocm-vs-cuda-local-ai-open-source-guide
+Is AMD's ROCm finally ready for local AI? I tested it on 7900 XTX for LLM inference. Here's what works, what doesn't, and the real gaps.
 
-LLM API Pricing Comparison 2026: The Complete Guide to Inference Costs - Featherless
-https://featherless.ai/blog/llm-api-pricing-comparison-2026-complete-guide-inference-costs
-Your fastest path to inference cost optimization begins with understanding your actual usage patterns, and Featherless's flat-rate structure lets you explore them without cost anxiety. When you're ready to scale, the Scale tier offers 8+ concurrent slots and private infrastructure for production workloads. ... Disclaimer: Pricing information reflects publicly available rates as of March 2026.
+Gemma 4: Our most capable open models to date - Google Blog
+https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/
+Apr 2, 2026 ... Built from the same world-class research and technology as Gemini 3, Gemma 4 is the most capable model family you can run on your hardware. They ...
 
-Self-Hosting Your First LLM - Towards Data Science
-https://towardsdatascience.com/self-hosting-your-first-llm/
-Which models to use 2 How to use a self-hosted LLM without having to rewrite an existing API based codebase How to make self-hosting cost-effective 3? 1 Instance types were evaluated across the "big three": AWS, Azure and GCP 2 all models are current as of March 2026 3 All pricing data is current as of March 2026
+Local LLM Inference in 2026: The Complete Guide to Tools, Hardware & Open-Weight Models
+https://blog.starmorph.com/blog/local-llm-inference-tools-guide
+Benchmarks with Marlin kernels: AWQ achieves 741 tok/s, GPTQ achieves 712 tok/s. vLLM v0.16.0 (February 2026) expanded multi-GPU and multi-platform support to NVIDIA, AMD ROCm, Intel XPU, and TPU.
