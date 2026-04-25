@@ -1,0 +1,35 @@
+Notify script: 105 lines total
+First 30 lines:
+  1: #!/usr/bin/env python3
+  2: """
+  3: Notify User Script
+  4: Sends notifications via ntfy.sh service
+  5: """
+  6:
+  7: import argparse
+  8: import json
+  9: import sys
+ 10: try:
+ 11:     import requests
+ 12: except ImportError:
+ 13:     print("Error: requests library not found. Install with: pip install requests", file=sys.stderr)
+ 14:     sys.exit(1)
+ 15:
+ 16: # ntfy.sh endpoint
+ 17: NTFY_URL = "https://ntfy.sh/AgentZero-eHqWuKJQWSuKmXBE"
+ 18:
+ 19: def eprint(*args, **kwargs):
+ 20:     print(*args, file=sys.stderr, **kwargs)
+ 21:
+ 22:
+ 23: def send_notification(message: str, title: str = "Agent Zero Notification", priority: int = 3) -> dict:
+ 24:     """Send a notification via ntfy.sh. Returns result dict."""
+ 25:     result = {"success": False, "title": title, "priority": priority, "message": message}
+ 26:     try:
+ 27:         headers = {
+ 28:             "Title": title,
+ 29:             "Priority": str(priority)
+ 30:         }
+(venv) root@65a984945e89:/a0/usr/workdir#
+
+[SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
