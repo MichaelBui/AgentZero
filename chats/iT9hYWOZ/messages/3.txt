@@ -1,39 +1,39 @@
-State of AI trust in 2026: Shifting to the agentic era
-https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era
-Their responses were assessed using the McKinsey AI Trust Maturity Model, a framework based on five dimensions of RAI: strategy, risk management, data and technology, governance, and, new this year, agentic AI governance and controls, reflecting the growing importance of governing increasingly autonomous AI systems (Exhibit 1).
+Breaking the Burnout Cycle: Strategies for Tech Leaders to Model Healthier Work Habits
+https://www.bairesdev.com/blog/burnout-in-tech/
+Let’s explore the leadership strategies that prevent burnout. We’ll also offer tips that support healthier work habits, improve team morale, and innovation and drive long-term success without sacrificing well-being. Burnout in tech happens when workers feel physically, emotionally, and mentally tired.
 
-Engineering trust: A security blueprint for autonomous AI agents - Help Net Security
-https://www.helpnetsecurity.com/2026/03/05/securing-autonomous-ai-agents/
-Securing autonomous AI agents requires layered defenses to prevent prompt injection, limit tool access, and protect sensitive data.
+The One Habit Leaders Need To Prevent Burnout In 2026
+https://www.forbes.com/sites/dilangomih/2025/12/17/the-one-habit-leaders-need-to-prevent-burnout-in-2026/
+In short, the reset for 2026 isn’t about working less or lowering standard. It’s about designing for endurance over decades, not just quarterly results. Gibson identifies three strategies to implement this approach. ... Organizations plan for Q1 complexity. They staff for peak hiring seasons, budget for major initiatives or prepare for product launches. However, it’s just as important for leaders to plan for the physical, mental and emotional energy to mange it all.
 
-Future of AI Agents: Top Trends in 2026
-https://www.blueprism.com/resources/blog/future-ai-agents-trends/
-Intelligence, trust, strategic planning, training and measurable outcomes will all be crucial in your next steps with agentic automation. To discover more about the 7 agentic trends for 2026, download our e-book.
+Wellness for Engineers: Strategies to Combat Burnout and Boost Productivitywellnessworkdays
+https://www.wellnessworkdays.com/post/wellness-for-engineers-strategies-to-combat-burnout-and-boost-productivity
+Wellness in engineering is not a luxury — it’s a foundational requirement for long-term performance. By proactively recognizing burnout, embracing flexible structures, and fostering social and mental well-being, both engineers and their ...
 
-Tricentis Introduces the First End-to-End Enterprise Agentic Quality Engineering Platform, Accelerating AI Trust and Time-to-Value
-https://finance.yahoo.com/news/tricentis-introduces-first-end-end-120000734.html
-The Tricentis Agentic Quality Engineering Platform combines powerful AI agents with decades of Tricentis expertise and proprietary technology across nearly 200 ERPs and packaged applications, while also extending to web and custom apps to accelerate ...
+Tech Worker Burnout: Causes, Costs & How to Prevent It
+https://www.circles.com/resources/tech-worker-burnout-causes-impact-solutions-for-hr-leadership
+Your culture, resource decisions, and tone set the ceiling for burnout risk. Here’s how to act: Build psychological safety. Let people speak when burned out — tell them you expect it sometimes.
 
-Building agentic AI you can trust | HumanX 2026 Agenda | San Francisco | April 6-9, 2026
-https://www.humanx.co/us/agenda/building-agentic-ai-you-can-trust
-As AI agents become more autonomous, executives face a critical trust gap when deploying them for higher-stakes applications where incorrect outputs and actions carry significant consequences.
+Workforce Well‑Being Strategy for HR Leaders: Wellness, Burnout Prevention, and Sustainable People Systems
+https://www.atspartners.org/post/workforce-wellbeing-strategy-for-hr-leaders
+In 2026, employee well‑being has become a strategic imperative, shaping how organizations design roles, deploy technology, and measure performance. Mental health, nutrition support, digital disconnection policies, and sustainable workloads ...
 
-The AI engineering stack we built internally — on the platform we ship
-https://blog.cloudflare.com/internal-ai-engineering-stack/
-Agents Week 2026 is a wrap. Let’s take a look at everything we announced, from compute and security to the agent toolbox, platform tools, and the emerging agentic web. Everything we shipped for the agentic cloud.
+Tech Burnout: A Mental Health Crisis in the Industry — Talkspace
+https://business.talkspace.com/articles/tech-burnout-an-ongoing-mental-health-crisis-in-the-industry
+Leadership can prevent — or at least reduce — burnout through a proactive strategy.
 
-What are the AI Agent Events in 2026: The must-attend conferences for Agentic AI Builders
-https://langwatch.ai/blog/what-are-the-ai-agent-events-in-2026-the-must-attend-conferences-for-agentic-ai-builders
-If you’re choosing where to invest time and travel in 2026, prioritize events that help you build, debug, and trust agentic systems in production.
+Is your team facing burnout? Quick fixes as an engineering manager
+https://devdynamics.ai/blog/is-your-team-facing-burnout-quick-fixes-as-an-engineering-manager/
+It's crucial to offer individuals the flexibility they need to address their unique concerns. Whether it's working from home due to illness or taking a sabbatical for mental health reasons, these requests should be considered by engineering leaders with an open mind to support employees in a manner that suits them best.
 
-AI Council 2026 · May 12–14 · San Francisco
-https://aicouncil.com/sf-2026
-This panel unpacks the key technical, organizational, and trust barriers, and explains why success requires buy-in beyond security, spanning CIOs, developers, and product teams. We’ll close with what it takes to run agents safely at scale: ...
+How to Prevent Burnout: 12 Proven Strategies for 2025 - IT Tool Kit
+https://www.ittoolkit.com/how-to-prevent-burnout-12-proven-strategies-for-2025/
+Effective workplace prevention combines boundary setting, workload management, and supportive leadership practices. Research from Harvard Business School demonstrates that employees with access to flexible work arrangements experience 43% less ...
 
-How agentic AI will reshape engineering workflows in 2026 | CIO
-https://www.cio.com/article/4134741/how-agentic-ai-will-reshape-engineering-workflows-in-2026.html
-We must build trust not through black boxes, but through transparency, explainability and human-in-the-loop control points for critical decisions. Agentic AI will evolve through distinct phases.
+How HR managers can prevent burnout in 2026? - Inuka Coaching
+https://inukacoaching.com/change-management/how-hr-managers-can-prevent-burnout-in-2026/
+Mental-health training: Managers trained to notice red flags and refer appropriately. Tech can provide early signals before burnout escalates.
 
-Enterprise Agentic AI Landscape 2026: Trust, Flexibility, and Vendor ...
-https://www.kai-waehner.de/blog/2026/04/06/enterprise-agentic-ai-landscape-2026-trust-flexibility-and-vendor-lock-in/
-Apr 6, 2026 ... API dependency means your architecture bends around a single vendor's design choices. Agent framework capture means that if your agentic ...
+Why the Emotional Load for Engineers in Leadership Leads to Burnout
+https://engineeringmanagementinstitute.org/hidden-overtime-why-the-emotional-load-for-engineers-in-leadership-leads-to-burnout/
+EMI helps AEC firms upskill leaders and project managers with cohort-based training and an industry-recognized project management credential for engineers—improving delivery, utilization, and retention.

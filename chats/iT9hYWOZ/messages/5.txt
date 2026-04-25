@@ -1,39 +1,39 @@
-AMD ROCm in 2026 — Is It Finally Ready for Local LLMs? | CraftRigs
-https://craftrigs.com/articles/amd-rocm-local-llm-2026/
-The RX 7900 XTX (24 GB, RDNA3) benchmarks at ~107 tok/s on Llama 2 7B Q4_0 with llama.cpp and ROCm — verified via community benchmark submissions at cprimozic.net. Consumer 12 GB RDNA3 cards hit 40+ tok/s on the same models in Ollama based on community data from llm-tracker.info (verified March 2026).
+How agentic AI will reshape engineering workflows in 2026 | CIO
+https://www.cio.com/article/4134741/how-agentic-ai-will-reshape-engineering-workflows-in-2026.html
+By the end of this year, the defining challenge will not be whether AI can participate across engineering workflows, but how deliberately organizations design for it. The most immediate and tangible impact will be on development velocity.
 
-New Project Megathread - Week of 16 Apr 2026 : r/selfhosted - Reddit
-https://www.reddit.com/r/selfhosted/comments/1snhwhx/new_project_megathread_week_of_16_apr_2026/
-Apr 16, 2026 ... ... and local LLM integration (Ollama/LM Studio). AI Involvement: Full transparency: This project is a human-AI collaboration. The core neuro ...
+Effective context engineering for AI agents
+https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+System prompts should be extremely clear and use simple, direct language that presents ideas at the right altitude for the agent. The right altitude is the Goldilocks zone between two common failure modes. At one extreme, we see engineers hardcoding complex, brittle logic in their prompts to ...
 
-Local LLM Inference on AMD RX 9070 XT — Vulkan vs ROCm Benchmarks on ...
-https://digtvbg.com/blog/llama-server-vulkan-rdna4-vllm-rocm-benchmark/
-Local LLM Inference on AMD RX 9070 XT — Vulkan vs ROCm Benchmarks on RDNA4 By digtvbg Posted on March 22, 2026 Posted in blog Tagged ai, amd, gpu, homelab, inference, linux, llama, llm, rdna4, rocm, vllm, vulkan
+Agentic AI in Engineering and Manufacturing: Industry Perspectives on Utility, Adoption, Challenges, and Opportunities
+https://arxiv.org/html/2604.09633
+Instead, current implementations range from predefined automation to forms of bounded autonomy, where agents operate within tightly scoped workflows, remain subject to human validation, and do not independently assume engineering accountability. In fact, a 2026 report by Anthropic, a leading AI research company, indicates that the observed AI coverage is much lower than the theoretical AI coverage possible in engineering (Massenkoff and McCrory, 2026).
 
-r/LocalLLaMA on Reddit: What's the realistic "entry point" for a good local LLM experience going into 2026?
-https://www.reddit.com/r/LocalLLaMA/comments/1prjldr/whats_the_realistic_entry_point_for_a_good_local/
-I'm a believer in getting a unified memory machine and running them that way. I think it will become the wave of the future over time. More on reddit.com
+Context Engineering: From Prompts to Corporate Multi-Agent Architecture
+https://arxiv.org/pdf/2603.09619
+V.V. Vishnyakova · 2026 ... LLM is running under the hood. When a task ... Level 1: LLM as a Service. GPT-5, Claude, ... Level 2: Vendor Agentic Products.
 
-Large language models (LLM) Local Running GPU, CPU
-https://linustechtips.com/topic/1528521-large-language-models-llm-local-running-gpu-cpu-benchmarks-and-next-gen-prospects/
-Aug 27, 2023 ... AI and tech community: running large language models (LLMs) on different hardware. One of the remarkable aspects of this trend is how ...
+Context Engineering for AI Agents in Open-Source Software
+https://arxiv.org/html/2510.21413v3
+The next generation of these tools ... oversight. Like human developers, AI agents require contextual information to develop solutions that are in line with the standards, policies, and workflows of the software projects they operate in....
 
-The Best Local Machine PCs for AI in 2026 - lukaszadam.com
-https://lukaszadam.com/best-local-ai-pc
-The AMD Ryzen AI Max+ 395 chip has garnered significant attention in 2026 for being able to run a 120-billion-parameter model in a portable form factor — at roughly half the price of the DGX Spark. For pure local LLM text workflows, the AMD AI Max+ 395 is the performance-per-dollar leader at this tier.
+[2510.04618] Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models
+https://arxiv.org/abs/2510.04618
+On the AppWorld leaderboard, ACE matches the top-ranked production-level agent on the overall average and surpasses it on the harder test-challenge split, despite using a smaller open-source model. These results show that comprehensive, evolving contexts enable scalable, efficient, and self-improving LLM systems with low overhead. From: Qizheng Zhang [view email] [v1] Mon, 6 Oct 2025 09:30:18 UTC (2,400 KB) [v2] Thu, 29 Jan 2026 19:22:36 UTC (2,396 KB) [v3] Sun, 29 Mar 2026 09:18:02 UTC (2,419 KB)
 
-ZGX Onboard: Hitting 30 Tokens/Second on a 20B Model, Locally
-https://www.linkedin.com/pulse/zgx-onboard-hitting-30-tokenssecond-20b-model-locally-caldeira-weyxc
-Nov 25, 2025 ... As an AI Developer enthusiast, I've spent the past months battling GPU memory constraints and slow iteration cycles. Local development has ...
+State of AI Engineering | Datadog
+https://www.datadoghq.com/state-of-ai-engineering/
+Organizations that invest in context engineering (retrieval quality, summarization, deduplication, and clear information hierarchy) will close the gap between what long‑context models allow and what production agents can reliably work with. This means maintaining systems to reliably select, compress, and structure the most decision-relevant information so that the model can make the best possible use of it. ... Our research examined LLM call failures in Datadog LLM Observability customer traces. In February 2026, our analysis showed that 5% of all LLM call spans reported an error and 60% of those errors were caused by exceeded rate limits.
 
-AMD ROCm vs CUDA for Local AI [2026 Guide] - kunalganglani.com
-https://www.kunalganglani.com/blog/amd-rocm-vs-cuda-local-ai-open-source-guide
-Is AMD's ROCm finally ready for local AI? I tested it on 7900 XTX for LLM inference. Here's what works, what doesn't, and the real gaps.
+5 Production Scaling Challenges for Agentic AI in 2026 - MachineLearningMastery.com
+https://machinelearningmastery.com/5-production-scaling-challenges-for-agentic-ai-in-2026/
+You’ve got agents waiting on other agents, race conditions popping up in async pipelines, and cascading failures that are genuinely hard to reproduce in staging environments. Traditional workflow engines weren’t designed for this level of ...
 
-Gemma 4: Our most capable open models to date - Google Blog
-https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/
-Apr 2, 2026 ... Built from the same world-class research and technology as Gemini 3, Gemma 4 is the most capable model family you can run on your hardware. They ...
+GitHub - Meirtz/Awesome-Context-Engineering: 🔥 Comprehensive survey on Context Engineering: from prompt engineering to production-grade AI systems. hundreds of papers, frameworks, and implementation guides for LLMs and AI agents.
+https://github.com/Meirtz/Awesome-Context-Engineering
+As of March 2026, context engineering ... story. The center of gravity has shifted from "how to pack the best prompt" to how agent systems manage runtime state, memory, tools, protocols, approvals, and long-horizon execution...
 
-Local LLM Inference in 2026: The Complete Guide to Tools, Hardware & Open-Weight Models
-https://blog.starmorph.com/blog/local-llm-inference-tools-guide
-Benchmarks with Marlin kernels: AWQ achieves 741 tok/s, GPTQ achieves 712 tok/s. vLLM v0.16.0 (February 2026) expanded multi-GPU and multi-platform support to NVIDIA, AMD ROCm, Intel XPU, and TPU.
+QCon London 2026 | Context Engineering: Building the Knowledge Engine AI Agents Need
+https://qconlondon.com/presentation/mar2026/context-engineering-building-knowledge-engine-ai-agents-need
+I'll walk through the problems you actually have to solve — reasoning across systems that don't agree with each other, searching globally before you can reason, maintaining identity-scoped permissions so every user and agent only sees what they should, and personalizing results based on who's asking and what they're working on. These are the engineering challenges that make naive RAG fall short, drawn from real lessons building this at scale.

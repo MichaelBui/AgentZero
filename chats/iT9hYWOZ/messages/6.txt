@@ -1,39 +1,39 @@
-MCP Adoption Statistics 2026 - MCP Manager
-https://mcpmanager.ai/blog/mcp-adoption-statistics/
-It’s clear that builders have flocked to the new protocol. However, the question remains: who else is? While there aren’t clear-cut MCP adoption statistics that clearly show us how many end users the protocol has, there are a few data points that we can look at to infer what MCP adoption looks like today.
+DORA Metrics: How to measure Open DevOps Success | Atlassian
+https://www.atlassian.com/devops/frameworks/dora-metrics
+DORA originated as a team at Google Cloud specifically focused on assessing DevOps performance using a standard set of metrics. Their goal is to improve performance and collaboration while driving velocity.
 
-The 2026 MCP Roadmap | Model Context Protocol Blog
-https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/
-The 2026 MCP Roadmap The updated Model Context Protocol roadmap for 2026: transport scalability, agent communication, governance maturation, and enterprise readiness, plus guidance on SEP prioritization and how to get involved.
+DORA Metrics: Key to High-Performing Development Teams | Oobeya.io
+https://www.oobeya.io/blog/dora-metrics-delivery-performance
+This isn't just a dream for software development teams—it's achievable with the right metrics. DORA metrics are designed to help teams measure their performance and make data-driven improvements. If you're an engineering leader aiming to boost your team's efficiency and quality, this guide to DORA metrics will provide the insights you need.
 
-Is MCP the Future of AI Integration? Roadmap, What Shipped, and What's Next (2026)
-https://www.getknit.dev/blog/the-future-of-mcp-roadmap-enhancements-and-whats-next
-Before exploring what lies ahead, it's essential to understand where MCP stands today. The protocol has experienced explosive growth, with thousands of MCP servers developed by the community and increasing enterprise adoption.
+DevOps Research and Assessment (DORA) metrics | GitLab Docs
+https://docs.gitlab.com/user/analytics/dora_metrics/
+The dual focus on velocity and stability metrics helps leaders find the optimal balance between speed and quality in their delivery workflows.
 
-Model Context Protocol (MCP) Guide: Enterprise Adoption 2025
-https://guptadeepak.com/the-complete-guide-to-model-context-protocol-mcp-enterprise-adoption-market-trends-and-implementation-strategies/
-One year after launch, MCP has become the universal standard for connecting AI agents to enterprise tools—with 97M+ monthly SDK downloads and backing from Anthropic, OpenAI, Google, and Microsoft.
+DORA | Get Better at Getting Better
+https://dora.dev/
+DORA is a long running research program that seeks to understand the capabilities that drive software delivery and operations performance. DORA helps teams apply those capabilities, leading to better organizational performance.
 
-MCP's biggest growing pains for production use will soon be solved - The New Stack
-https://thenewstack.io/model-context-protocol-roadmap-2026/
-th 2026 9:00am, by Darryl K. Taft · Mastra empowers web devs to build AI agents in TypeScript ... MCP roadmap highlights the priorities maintainers want to solve as the protocol behind AI agents moves into real-world deployments.
+What Timeframes Are Realistic for Expecting Measurable Improvements on DORA metrics Like Lead Time or Deployment Frequency?
+https://waydev.co/dora-metrics/
+Lead Time – Aim to reduce by 25% in 6 months, 50% in 12 months; Deployment Frequency – Increase to multiple deploys per day in 6-12 months; Be Realistic – Timeframes depend on organization size and complexity; Track Trends – Steady, measurable improvement indicates on the right track
 
-MCP Adoption in 2026: What Marketers Need to Know | Knak
-https://knak.com/blog/mcp-adoption-in-2026-what-marketers-need-to-know/
-The SDK was downloaded roughly 100,000 times that first month. By March 2026, that number had reached 97 million monthly downloads, a 970x increase in 18 months. Enterprise tech is rapidly adopting this standard.
+DORA | DORA’s software delivery performance metrics
+https://dora.dev/guides/dora-metrics/
+DORA is a long running research program that seeks to understand the capabilities that drive software delivery and operations performance. DORA helps teams apply those capabilities, leading to better organizational performance.
 
-A Year of MCP: From Internal Experiment to Industry Standard | Pento
-https://www.pento.ai/blog/a-year-of-mcp-2025-review
-March 2025: OpenAI adopts MCP across the Agents SDK, Responses API, and ChatGPT desktop. Sam Altman posts simply: "People love MCP and we are excited to add support across our products."5 · April 2025: Google DeepMind's Demis Hassabis confirms MCP support in upcoming Gemini models.
+DORA Metrics: A Full Guide to Elite Performance Engineering - Multitudes
+https://www.multitudes.com/blog/dora-metrics
+Discover the four DORA metrics that drive software delivery performance. Learn how they improve deployment speed, stability, and team efficiency.
 
-MCP: The Protocol That Is Quietly Becoming the Infrastructure Layer of Enterprise AI
-https://www.braiviq.com/blog/mcp-model-context-protocol-2026-business-strategy-guide
-April 17, 2026 · 10 min read · By BraivIQ Editorial · 97M — Monthly SDK downloads as of March 2026 — up from 2M at launch in November 2024 · 10,000+ — Active MCP servers — covering most major SaaS and enterprise systems ·
+What are DORA metrics? Complete guide to measuring DevOps performance
+https://getdx.com/blog/dora-metrics/
+Learn how DORA metrics help engineering teams boost delivery speed, quality, and reliability—plus how AI is reshaping software performance measurement.
 
-The State of MCP — Adoption, Security & Production Readiness | Zuplo
-https://zuplo.com/mcp-report
-How teams are really adopting MCP. Practical findings on security tradeoffs and production readiness, plus the patterns shaping what comes next.
+What are DORA Metrics and How to Unlock Elite Engineering Performance | LinearB Blog
+https://linearb.io/blog/dora-metrics
+The four DORA Metrics–deployment frequency, change lead time, change failure percentage, and failed deployment recovery time—help DevOps teams boost delivery, stability, and team performance.
 
-2026: The Year for Enterprise-Ready MCP Adoption
-https://www.cdata.com/blog/2026-year-enterprise-ready-mcp-adoption
-Market growth and enterprise readiness: The MCP market is expected to reach $1.8B in 2025, driven by strong demand from highly regulated fields like healthcare, finance, and manufacturing. Movement from pilots to production: 2026 marks the transition from experimentation to enterprise-wide adoption. Key enablers include: Early adopters reported several obstacles during the Model Context Protocol enterprise deployment journey:
+What Are DORA Metrics? | Datadog
+https://www.datadoghq.com/knowledge-center/dora-metrics/
+DORA metrics help DevOps teams, engineering leadership, platform engineering teams, and developer experience (DevEx) teams identify areas for improvement, set goals for service-level agreements (SLAs), and establish objective baselines across teams for the velocity and stability of their organizations’ software development lifecycle (SDLC).
