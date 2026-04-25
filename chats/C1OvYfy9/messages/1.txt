@@ -1,11 +1,91 @@
-total 47
-drwxrwxr-x+ 4 3000 950    5 Apr 25 03:06 .
-drwxrwxr-x+ 8 3000 950   12 Apr  9 06:39 ..
-drwxrwx---+ 2 3000 950    2 Apr 25 03:06 logs
-drwxrwxr-x+ 2 3000 950    3 Feb 26 06:51 scripts
--rw-rw-r--+ 1 3000 950 2839 Mar  9 17:48 SKILL.md
-/a0/usr/skills/git-backup/scripts/backup.py
-/a0/usr/skills/git-backup/SKILL.md
-(venv) root@65a984945e89:/a0/usr/workdir#
-
-[SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+/a0/usr/skills/git-backup/SKILL.md 88 lines
+>>>
+ 1 # Git Backup Skill
+ 2 
+ 3 ## Description
+ 4 Automated git backup skill that commits and pushes local paths to a remote git repository. Prioritizes local changes over remote changes while preserving remote content in git history for easy recovery.
+ 5 
+ 6 ## Features
+ 7 - **Configurable backup paths**: Define multiple directories/files to backup
+ 8 - **Conflict resolution**: Prioritizes local changes using `-X ours` merge strategy
+ 9 - **History preservation**: Remote content is preserved in git history for recovery
+10 - **Automatic staging**: Handles new files, modifications, and deletions
+11 - **Error handling**: Comprehensive error messages and status reporting
+12 
+13 ## Configuration
+14 
+15 ### Backup Paths
+16 Edit the `BACKUP_PATHS` list at the top of the script:
+17 
+18 ```python
+19 BACKUP_PATHS = [
+20     "/a0/usr",
+21     # Add more paths as needed
+22 ]
+23 ```
+24 
+25 ### Remote Repository
+26 The script expects each backup path to be a git repository with a configured remote.
+27 
+28 ```bash
+29 cd /your/backup/path
+30 git remote add origin <your-repo-url>
+31 ```
+32 
+33 ## Usage
+34 
+35 ### Basic Usage
+36 ```bash
+37 python /a0/usr/skills/git-backup/scripts/backup.py
+38 ```
+39 
+40 ### With Custom Commit Message
+41 ```bash
+42 python /a0/usr/skills/git-backup/scripts/backup.py --message "Manual backup before changes"
+43 ```
+44 
+45 ### Dry Run (Preview Changes)
+46 ```bash
+47 python /a0/usr/skills/git-backup/scripts/backup.py --dry-run
+48 ```
+49 
+50 ### YAML output
+51 ```bash
+52 python /a0/usr/skills/git-backup/scripts/backup.py --format yaml
+53 ```
+54 
+55 ## Arguments
+56 | Argument | Required | Default | Description |
+57 |----------|----------|---------|-------------|
+58 | `--message` / `-m` | No | — | Custom commit message prefix |
+59 | `--format` | No | `json` | Output format: `json` or `yaml` |
+60 | `--dry-run` | No | false | Preview changes without executing |
+61 | `--paths` | No | BACKUP_PATHS | Override configured backup paths |
+62 
+63 ## Git Strategy
+64 
+65 The script uses a strategy that **prioritizes local changes** while **preserving remote history**:
+66 
+67 1. **Stage all changes**: `git add -A` (includes new, modified, and deleted files)
+68 2. **Commit locally**: Creates a timestamped commit with all local changes
+69 3. **Fetch remote**: Gets the latest remote state without merging
+70 4. **Merge with local priority**: `git merge origin/<branch> -X ours`
+71    - The `-X ours` flag resolves conflicts by preferring local changes
+72    - Remote content is preserved in the merge commit history
+73 5. **Push to remote**: Uploads the merged result
+74 
+75 ### Recovery
+76 If the script overwrites something important from remote:
+77 1. Check `git log` to find the commit before the merge
+78 2. Use `git show <commit>:<file>` to view the old content
+79 3. Restore with `git checkout <commit> -- <file>` or cherry-pick
+80 
+81 ## Requirements
+82 - Git installed and configured
+83 - Python 3.x
+84 - Git repositories initialized in backup paths
+85 - Remote origin configured for each repository
+86 
+87 ## Files
+88 - `scripts/backup.py` - Main backup script
+<<<
