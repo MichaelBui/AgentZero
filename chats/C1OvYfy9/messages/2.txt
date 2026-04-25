@@ -1,0 +1,103 @@
+/a0/usr/skills/git-backup/scripts/backup.py 397 lines
+>>>
+ 51 
+ 52 def get_current_branch(path, dry_run=False):
+ 53     """Get the current branch name."""
+ 54     result = run_command(
+ 55         ["git", "branch", "--show-current"],
+ 56         cwd=path,
+ 57         dry_run=dry_run,
+ 58         check=False
+ 59     )
+ 60     branch = result.stdout.strip()
+ 61     if not branch:
+ 62         # Detached HEAD or other issue, try to get from ref
+ 63         result = run_command(
+ 64             ["git", "rev-parse", "--abbrev-ref", "HEAD"],
+ 65             cwd=path,
+ 66             dry_run=dry_run,
+ 67             check=False
+ 68         )
+ 69         branch = result.stdout.strip()
+ 70     return branch or "main"
+ 71 
+ 72 
+ 73 def has_remote(path, dry_run=False):
+ 74     """Check if the repository has a remote origin configured."""
+ 75     result = run_command(
+ 76         ["git", "remote", "get-url", "origin"],
+ 77         cwd=path,
+ 78         dry_run=dry_run,
+ 79         check=False
+ 80     )
+ 81     return result.returncode == 0
+ 82 
+ 83 
+ 84 def has_staged_changes(path, dry_run=False):
+ 85     """Check if there are staged changes ready to commit."""
+ 86     result = run_command(
+ 87         ["git", "diff", "--cached", "--quiet"],
+ 88         cwd=path,
+ 89         dry_run=dry_run,
+ 90         check=False
+ 91     )
+ 92     # Returns 0 if no changes, 1 if there are changes
+ 93     return result.returncode != 0
+ 94 
+ 95 
+ 96 def has_any_changes(path, dry_run=False):
+ 97     """Check if there are any changes (staged or unstaged)."""
+ 98     result = run_command(
+ 99         ["git", "status", "--porcelain"],
+100         cwd=path,
+101         dry_run=dry_run,
+102         check=False
+103     )
+104     return bool(result.stdout.strip())
+105 
+106 
+107 def is_ahead_of_remote(path, branch, dry_run=False):
+108     """Check if local is ahead of remote."""
+109     result = run_command(
+110         ["git", "rev-list", "--count", f"origin/{branch}..HEAD"],
+111         cwd=path,
+112         dry_run=dry_run,
+113         check=False
+114     )
+115     try:
+116         count = int(result.stdout.strip())
+117         return count > 0
+118     except (ValueError, AttributeError):
+119         return False
+120 
+121 
+122 def backup_path(path, custom_message=None, dry_run=False):
+123     """
+124     Backup a single path to its git remote.
+125     
+126     Git Strategy:
+127     1. Stage all changes (git add -A)
+128     2. Commit locally with timestamp (if there are changes)
+129     3. Fetch remote
+130     4. Merge with -X ours (local changes priority, remote preserved in history)
+131     5. Push to remote (if there's something to push)
+132     """
+133     print(f"\n{'='*60}")
+134     print(f"Backing up: {path}")
+135     print(f"{'='*60}")
+136     
+137     path_obj = Path(path)
+138     
+139     # Validate path exists
+140     if not path_obj.exists():
+141         print(f"  ❌ Error: Path does not exist: {path}")
+142         return False
+143     
+144     # Validate git repository
+145     if not is_git_repo(path):
+146         print(f"  ❌ Error: Not a git repository: {path}")
+147         print(f"     Run: git init && git remote add origin <url>")
+148         return False
+149     
+150     # Validate remote exists
+<<<

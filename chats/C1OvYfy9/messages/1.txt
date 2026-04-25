@@ -1,0 +1,53 @@
+/a0/usr/skills/git-backup/scripts/backup.py 397 lines
+>>>
+ 1 #!/usr/bin/env python3
+ 2 """
+ 3 Git Backup Script
+ 4 
+ 5 Backs up specified paths to their configured git remotes.
+ 6 Prioritizes local changes over remote while preserving remote history.
+ 7 """
+ 8 
+ 9 import subprocess
+10 import argparse
+11 import json
+12 import sys
+13 from datetime import datetime
+14 from pathlib import Path
+15 
+16 # ============================================================================
+17 # CONFIGURATION - Edit this list to change backup paths
+18 # ============================================================================
+19 BACKUP_PATHS = [
+20     "/a0/usr",
+21 ]
+22 # ============================================================================
+23 
+24 
+25 def run_command(cmd, cwd, dry_run=False, check=True):
+26     """Run a shell command and return the result."""
+27     if dry_run:
+28         print(f"  [DRY-RUN] Would run: {' '.join(cmd)}")
+29         return subprocess.CompletedProcess(cmd, 0, b"", b"")
+30     
+31     result = subprocess.run(
+32         cmd,
+33         cwd=cwd,
+34         capture_output=True,
+35         text=True
+36     )
+37     
+38     if check and result.returncode != 0:
+39         raise subprocess.CalledProcessError(
+40             result.returncode, cmd, result.stdout, result.stderr
+41         )
+42     
+43     return result
+44 
+45 
+46 def is_git_repo(path):
+47     """Check if a directory is a git repository."""
+48     git_dir = Path(path) / ".git"
+49     return git_dir.exists()
+50 
+<<<
