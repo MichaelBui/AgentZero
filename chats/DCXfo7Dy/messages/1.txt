@@ -1,61 +1,12 @@
-[1] 10554
-(venv) root@65a984945e89:/a0/usr/workdir# (venv) root@65a984945e89:/a0/usr/workdir# Started gchat.py with PID: 10554
-(venv) root@65a984945e89:/a0/usr/workdir# (venv) root@65a984945e89:/a0/usr/workdir# > > > [2026-04-26T02:31:22+0000] STARTED (days=4, since=2026-04-22, user=Michael Bui)
-[2026-04-26T02:31:22+0000] Connecting to browser at http://192.168.1.11:9223...
-(node:10558) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+[2026-04-26T06:31:02+0000] STARTED (days=4, since=2026-04-22, user=Michael Bui)
+[2026-04-26T06:31:02+0000] Connecting to browser at http://192.168.1.11:9223...
+(node:11231) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[2026-04-26T02:31:25+0000] Reusing tab: https://chat.google.com/app/home
-[02:31:52] Waiting... PID alive
-[2026-04-26T02:32:03+0000] Feed: 99 item(s) within 4 day(s)
-[2026-04-26T02:32:03+0000]   Early stop: 3 consecutive cached
-[2026-04-26T02:32:03+0000] Phase 1: 97 conversations (focus-skip=0, unchanged=90, to-fetch=7, unread=7)
-[2026-04-26T02:32:03+0000] [Fetching 1/7] RMN Notification
-[02:32:22] Waiting... PID alive
-[2026-04-26T02:32:36+0000]   Scroll early-stop: 30 consecutive cached messages
-[2026-04-26T02:32:36+0000]   -> 50 message(s)
-[2026-04-26T02:32:37+0000]   -> 6 new cached
-[02:32:52] Waiting... PID alive
-[2026-04-26T02:33:02+0000]   -> restored unread status
-[2026-04-26T02:33:02+0000] [Fetching 2/7] #dd-dpd-engage-alert
-[2026-04-26T02:33:02+0000] Summarizing [1/97] RMN Notification (6 msgs, none)
-[2026-04-26T02:33:02+0000] ERROR summarizing space/AAQA85dw4So: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
-[2026-04-26T02:33:06+0000]   SKIP: item not found in DOM
-[2026-04-26T02:33:06+0000] [Fetching 3/7] #dd-dpd-grocery-alert
-[02:33:22] Waiting... PID alive
-[2026-04-26T02:33:44+0000]   Hit scroll limit (5)
-[2026-04-26T02:33:44+0000]   -> 16 message(s)
-[2026-04-26T02:33:44+0000]   -> 1 new cached
-[02:33:52] Waiting... PID alive
-[2026-04-26T02:33:53+0000]   -> restored unread status
-[2026-04-26T02:33:53+0000] [Fetching 4/7] Shopping Cart Notification
-[2026-04-26T02:33:53+0000] Summarizing [2/97] #dd-dpd-grocery-alert (3 msgs, none)
-[2026-04-26T02:33:53+0000] ERROR summarizing space/AAAAtxQjB7c: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
-[02:34:22] Waiting... PID alive
-[2026-04-26T02:34:28+0000]   Hit scroll limit (5)
-[2026-04-26T02:34:28+0000]   -> 17 message(s)
-[2026-04-26T02:34:28+0000]   -> 2 new cached
-[2026-04-26T02:34:37+0000]   -> restored unread status
-[2026-04-26T02:34:37+0000] [Fetching 5/7] 📅 Daily summary
-[2026-04-26T02:34:37+0000] Summarizing [3/97] Shopping Cart Notification (30 msgs, direct)
-[2026-04-26T02:34:38+0000] ERROR summarizing space/AAAAsbHANyc: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
-[02:34:52] Waiting... PID alive
-[2026-04-26T02:35:05+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-26T02:35:05+0000]   -> 4 message(s)
-[2026-04-26T02:35:05+0000]   -> 1 new cached
-[2026-04-26T02:35:18+0000]   -> restored unread status
-[2026-04-26T02:35:18+0000] [Fetching 6/7] #dd-fpg-watchdog-alert
-[2026-04-26T02:35:18+0000] Summarizing [4/97] 📅 Daily summary (1 msgs, none)
-[2026-04-26T02:35:18+0000] ERROR summarizing space/AAQAP-kMoqY: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
-[02:35:22] Waiting... PID alive
-[2026-04-26T02:35:44+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-26T02:35:44+0000]   -> 6 message(s)
-[2026-04-26T02:35:45+0000]   -> 1 new cached
-[02:35:52] Waiting... PID alive
-[2026-04-26T02:35:53+0000]   -> restored unread status
-[2026-04-26T02:35:53+0000] [Fetching 7/7] fairnex-datadog-notification
-[2026-04-26T02:35:53+0000] Summarizing [5/97] #dd-fpg-watchdog-alert (2 msgs, none)
-[2026-04-26T02:35:53+0000] ERROR summarizing space/AAAAnlKPglA: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
-[02:36:22] Waiting... PID alive
+[2026-04-26T06:31:05+0000] Reusing tab: https://chat.google.com/app/home
+[2026-04-26T06:31:25+0000] Feed: 93 item(s) within 4 day(s)
+[2026-04-26T06:31:25+0000]   Early stop: 3 consecutive cached
+[2026-04-26T06:31:25+0000] Phase 1: 93 conversations (focus-skip=0, unchanged=87, to-fetch=6, unread=4)
+[2026-04-26T06:31:25+0000] [Fetching 1/6] #dd-dpd-engage-alert
 
 
-[SYSTEM: Returning control to agent after 300 seconds of execution. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+[SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
