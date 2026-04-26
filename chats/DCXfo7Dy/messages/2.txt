@@ -1,10 +1,149 @@
-[2026-04-25T14:32:04+0000]   Hit scroll limit (5)
-[2026-04-25T14:32:04+0000]   -> 16 message(s)
-[2026-04-25T14:32:05+0000]   -> 16 new cached
-[2026-04-25T14:32:15+0000]   -> restored unread status
-[2026-04-25T14:32:15+0000] [Fetching 2/4] #dd-dpd-engage-alert
-[2026-04-25T14:32:15+0000] Summarizing [1/88] Shopping Cart Notification (16 msgs, direct)
-[2026-04-25T14:32:15+0000] ERROR summarizing space/AAAAsbHANyc: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:27+0000]   Hit scroll limit (5)
+[2026-04-26T02:36:27+0000]   -> 16 message(s)
+[2026-04-26T02:36:27+0000]   -> 1 new cached
+[2026-04-26T02:36:36+0000]   -> restored unread status
+[2026-04-26T02:36:36+0000] Phase 2: fetched 6/7 conversations
+[2026-04-26T02:36:36+0000] Summarizing [6/97] fairnex-datadog-notification (9 msgs, none)
+[2026-04-26T02:36:36+0000] ERROR summarizing space/AAAA8dv5lp0: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:36+0000] Summarizing [7/97] #dd-dpd-engage-alert (32 msgs, direct)
+[2026-04-26T02:36:36+0000] ERROR summarizing space/AAAAxwwNw2U: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:36+0000] Summarizing [8/97] Jazz Tong (2 msgs, direct)
+[2026-04-26T02:36:37+0000] ERROR summarizing dm/rwGu4gAAAAE: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000] Summarizing [9/97] [Internal] (Ecom/Omni) Digital Product Development (1 msgs, direct)
+[2026-04-26T02:36:37+0000] ERROR summarizing space/AAQAUbi9szY/AhfyxD9jdFo: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000] Summarizing [10/97] [Prod Support] Ecom FFS Ops (2 msgs, none)
+[2026-04-26T02:36:37+0000] ERROR summarizing space/AAAAde_cYKA: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000] [11/97] space/AAQAUJW8HMo: cached (rel=9)
+[2026-04-26T02:36:37+0000] [12/97] space/AAQAKHz7DQM/FTYObj5L49o: cached (rel=9)
+[2026-04-26T02:36:37+0000] [13/97] dm/kgs0IyAAAAE: cached (rel=9)
+[2026-04-26T02:36:37+0000] [14/97] space/AAQAKHz7DQM: cached (rel=9)
+[2026-04-26T02:36:37+0000] [15/97] space/AAAAQQGZSZU: cached (rel=5)
+[2026-04-26T02:36:37+0000] [16/97] space/AAAAQQGZSZU/J8mVmUSya0E: cached (rel=7)
+[2026-04-26T02:36:37+0000] [17/97] space/AAQAKHz7DQM/OEvyxxG8wKg: cached (rel=9)
+[2026-04-26T02:36:37+0000] [18/97] space/AAAAS7vPcKs: cached (rel=2)
+[2026-04-26T02:36:37+0000] [19/97] space/AAAADYH5KAQ: cached (rel=9)
+[2026-04-26T02:36:37+0000] [20/97] dm/t3wf6EAAAAE: cached (rel=8)
+[2026-04-26T02:36:37+0000] [21/97] space/AAQAsFyLso4/6FVuyN1ckX8: cached (rel=9)
+[2026-04-26T02:36:37+0000] [22/97] space/AAAAhWLveDE: cached (rel=2)
+[2026-04-26T02:36:37+0000] [23/97] space/AAAAP63CaPo: cached (rel=5)
+[2026-04-26T02:36:37+0000] [24/97] space/AAQASkvSlwo: cached (rel=2)
+[2026-04-26T02:36:37+0000] [25/97] space/AAAAs0DTvmA: cached (rel=2)
+[2026-04-26T02:36:37+0000] [26/97] dm/xCO548AAAAE: cached (rel=9)
+[2026-04-26T02:36:37+0000] [27/97] space/AAQAzOZUb-k: cached (rel=7)
+[2026-04-26T02:36:37+0000] [28/97] space/AAQAsFyLso4/3JEtAVC80Uo: cached (rel=2)
+[2026-04-26T02:36:37+0000] [29/97] space/AAQAUbi9szY: cached (rel=7)
+[2026-04-26T02:36:37+0000] [30/97] space/AAQAiCoa2Do: cached (rel=2)
+[2026-04-26T02:36:37+0000] [31/97] dm/yHhI1sAAAAE: cached (rel=7)
+[2026-04-26T02:36:37+0000] [32/97] space/AAQAZ--llew: cached (rel=9)
+[2026-04-26T02:36:37+0000] [33/97] space/AAQAeP3ki3k/7onPBh452ug: cached (rel=9)
+[2026-04-26T02:36:37+0000] [34/97] space/AAAAjDYVcBU: cached (rel=2)
+[2026-04-26T02:36:37+0000] [35/97] space/AAQAeP3ki3k: cached (rel=9)
+[2026-04-26T02:36:37+0000] [36/97] space/AAQAOuIZXNk: cached (rel=8)
+[2026-04-26T02:36:37+0000] [37/97] space/AAQAeP3ki3k/qYezmBLyC2g: cached (rel=8)
+[2026-04-26T02:36:37+0000] [38/97] dm/7d1XKcAAAAE: cached (rel=5)
+[2026-04-26T02:36:37+0000] [39/97] space/AAQANrfwab4: cached (rel=9)
+[2026-04-26T02:36:37+0000] [40/97] space/AAQAXn1ocmE/IdAESjXhcS4: cached (rel=9)
+[2026-04-26T02:36:37+0000] [41/97] space/AAAAQezbuRE/RdsWCRE8avc: cached (rel=2)
+[2026-04-26T02:36:37+0000] [42/97] space/AAQAXn1ocmE/2nFFPHUiRYM: cached (rel=8)
+[2026-04-26T02:36:37+0000] [43/97] space/AAAAQezbuRE: cached (rel=2)
+[2026-04-26T02:36:37+0000] [44/97] space/AAQAcjNXKpA: cached (rel=5)
+[2026-04-26T02:36:37+0000] [45/97] space/AAQAxUYxclM/hAJRxdySUjA: cached (rel=8)
+[2026-04-26T02:36:37+0000] [46/97] space/AAQAXn1ocmE: cached (rel=9)
+[2026-04-26T02:36:37+0000] [47/97] space/AAQAfPz5dxM: cached (rel=9)
+[2026-04-26T02:36:37+0000] [48/97] space/AAAAzZ3qkNU: cached (rel=2)
+[2026-04-26T02:36:37+0000] [49/97] space/AAQAkS6fV24: cached (rel=2)
+[2026-04-26T02:36:37+0000] [50/97] space/AAQAKHz7DQM/cWmMsNe7zkE: cached (rel=8)
+[2026-04-26T02:36:37+0000] [51/97] space/AAQAxUYxclM/atbUVncHUNQ: cached (rel=9)
+[2026-04-26T02:36:37+0000] [52/97] space/AAQAKHz7DQM/2Zyz5fQobmQ: cached (rel=7)
+[2026-04-26T02:36:37+0000] [53/97] space/AAQAo-QLuW4: cached (rel=2)
+[2026-04-26T02:36:37+0000] [54/97] space/AAQAsFyLso4: cached (rel=8)
+[2026-04-26T02:36:37+0000] [55/97] space/AAQAHH3dAYc/KS4tWmm7fVo: cached (rel=2)
+[2026-04-26T02:36:37+0000] [56/97] space/AAQAHH3dAYc: cached (rel=6)
+[2026-04-26T02:36:37+0000] [57/97] space/AAAAx50IkHw/_NcP7L7Xja8: cached (rel=5)
+[2026-04-26T02:36:37+0000] [58/97] space/AAAAx50IkHw/1ULHrF6e6R8: cached (rel=7)
+[2026-04-26T02:36:37+0000] [59/97] space/AAAAx50IkHw: cached (rel=8)
+[2026-04-26T02:36:37+0000] [60/97] space/AAQAfoSjZhk: cached (rel=9)
+[2026-04-26T02:36:37+0000] [61/97] space/AAQAYFrzaHE: cached (rel=8)
+[2026-04-26T02:36:37+0000] [62/97] space/AAQAKHz7DQM/HRonaYEzk_0: cached (rel=9)
+[2026-04-26T02:36:37+0000] [63/97] space/AAQAKHz7DQM/mc23ZpCLqM0: cached (rel=9)
+[2026-04-26T02:36:37+0000] [64/97] space/AAQAKHz7DQM/bnvhv6FAdho: cached (rel=9)
+[2026-04-26T02:36:37+0000] [65/97] space/AAQAKHz7DQM/1MefN8bhyFg: cached (rel=9)
+[2026-04-26T02:36:37+0000] [66/97] dm/700U4cAAAAE: cached (rel=9)
+[2026-04-26T02:36:37+0000] [67/97] space/AAQAxUYxclM: cached (rel=9)
+[2026-04-26T02:36:37+0000] [68/97] space/AAQAmlJPshk: cached (rel=8)
+[2026-04-26T02:36:37+0000] [69/97] space/AAQAX9iKYf0: cached (rel=3)
+[2026-04-26T02:36:37+0000] [70/97] space/AAQAKHz7DQM/8AZrALS0XzQ: cached (rel=9)
+[2026-04-26T02:36:37+0000] [71/97] space/AAQAEVz4U_8: cached (rel=6)
+[2026-04-26T02:36:37+0000] [72/97] space/AAQAS8FM85I: cached (rel=2)
+[2026-04-26T02:36:37+0000] [73/97] dm/zmMZpgAAAAE: cached (rel=8)
+[2026-04-26T02:36:37+0000] [74/97] space/AAQAKHz7DQM/F1a3rEqRHZ0: cached (rel=9)
+[2026-04-26T02:36:37+0000] [75/97] space/AAAAoJgpZBM: cached (rel=2)
+[2026-04-26T02:36:37+0000] [76/97] space/AAQA4rDgC4Q: cached (rel=7)
+[2026-04-26T02:36:37+0000] [77/97] space/AAQAsFyLso4/pSty94BQuvY: cached (rel=9)
+[2026-04-26T02:36:37+0000] [78/97] space/AAQAomPeN1M: cached (rel=9)
+[2026-04-26T02:36:37+0000] [79/97] space/AAQAcFoWHWk: cached (rel=9)
+[2026-04-26T02:36:37+0000] [80/97] space/AAQARGCS1Wk: cached (rel=2)
+[2026-04-26T02:36:37+0000] [81/97] space/AAQAsFyLso4/phg6sVCw8JA: cached (rel=9)
+[2026-04-26T02:36:37+0000] [82/97] dm/szHVCgAAAAE: cached (rel=7)
+[2026-04-26T02:36:37+0000] [83/97] space/AAQAsFyLso4/T7uHJaYYLc8: cached (rel=2)
+[2026-04-26T02:36:37+0000] [84/97] space/AAQAUbi9szY/tVzo2ijSyaI: cached (rel=9)
+[2026-04-26T02:36:37+0000] [85/97] dm/1jxi4yAAAAE: cached (rel=8)
+[2026-04-26T02:36:37+0000] [86/97] space/AAQASb31MK0: cached (rel=9)
+[2026-04-26T02:36:37+0000] [87/97] space/AAQAsJhgUrA: cached (rel=3)
+[2026-04-26T02:36:37+0000] [88/97] space/AAQAO2Qaz1o: cached (rel=9)
+[2026-04-26T02:36:37+0000] [89/97] space/AAAAeRY8rc8: cached (rel=3)
+[2026-04-26T02:36:37+0000] [90/97] dm/t3wf6EAAAAE/wmlVl62_xvg: cached (rel=8)
+[2026-04-26T02:36:37+0000] [91/97] space/AAAAQuMQ3Bs: cached (rel=3)
+[2026-04-26T02:36:37+0000] [92/97] space/AAQAN8mDauE: cached (rel=7)
+[2026-04-26T02:36:37+0000] [93/97] space/AAQAXn1ocmE/ONbwIkWgBwM: cached (rel=9)
+[2026-04-26T02:36:37+0000] [94/97] space/AAAAW-K2YeI: cached (rel=2)
+[2026-04-26T02:36:37+0000] [95/97] space/AAQAsFyLso4/whhcplolHo8: cached (rel=3)
+[2026-04-26T02:36:37+0000] [96/97] space/AAQAN8mDauE/1kQbOysqC3c: cached (rel=2)
+[2026-04-26T02:36:37+0000] [97/97] dm/4VcjY0AAAAE: cached (rel=9)
+[2026-04-26T02:36:37+0000] COMPLETED WITH ERRORS (97 conversations, 10 error(s))
+[2026-04-26T02:36:37+0000]   ERROR: space/AAQA85dw4So: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAAAtxQjB7c: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAAAsbHANyc: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAQAP-kMoqY: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAAAnlKPglA: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAAA8dv5lp0: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAAAxwwNw2U: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: dm/rwGu4gAAAAE: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAQAUbi9szY/AhfyxD9jdFo: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAAAde_cYKA: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[02:36:52] Waiting... PID alive
+(venv) root@65a984945e89:/a0/usr/workdir# > > > > > > > FAILURE: No output file found. Script may have failed or is still running.
+[2026-04-26T02:36:37+0000] [79/97] space/AAQAcFoWHWk: cached (rel=9)
+[2026-04-26T02:36:37+0000] [80/97] space/AAQARGCS1Wk: cached (rel=2)
+[2026-04-26T02:36:37+0000] [81/97] space/AAQAsFyLso4/phg6sVCw8JA: cached (rel=9)
+[2026-04-26T02:36:37+0000] [82/97] dm/szHVCgAAAAE: cached (rel=7)
+[2026-04-26T02:36:37+0000] [83/97] space/AAQAsFyLso4/T7uHJaYYLc8: cached (rel=2)
+[2026-04-26T02:36:37+0000] [84/97] space/AAQAUbi9szY/tVzo2ijSyaI: cached (rel=9)
+[2026-04-26T02:36:37+0000] [85/97] dm/1jxi4yAAAAE: cached (rel=8)
+[2026-04-26T02:36:37+0000] [86/97] space/AAQASb31MK0: cached (rel=9)
+[2026-04-26T02:36:37+0000] [87/97] space/AAQAsJhgUrA: cached (rel=3)
+[2026-04-26T02:36:37+0000] [88/97] space/AAQAO2Qaz1o: cached (rel=9)
+[2026-04-26T02:36:37+0000] [89/97] space/AAAAeRY8rc8: cached (rel=3)
+[2026-04-26T02:36:37+0000] [90/97] dm/t3wf6EAAAAE/wmlVl62_xvg: cached (rel=8)
+[2026-04-26T02:36:37+0000] [91/97] space/AAAAQuMQ3Bs: cached (rel=3)
+[2026-04-26T02:36:37+0000] [92/97] space/AAQAN8mDauE: cached (rel=7)
+[2026-04-26T02:36:37+0000] [93/97] space/AAQAXn1ocmE/ONbwIkWgBwM: cached (rel=9)
+[2026-04-26T02:36:37+0000] [94/97] space/AAAAW-K2YeI: cached (rel=2)
+[2026-04-26T02:36:37+0000] [95/97] space/AAQAsFyLso4/whhcplolHo8: cached (rel=3)
+[2026-04-26T02:36:37+0000] [96/97] space/AAQAN8mDauE/1kQbOysqC3c: cached (rel=2)
+[2026-04-26T02:36:37+0000] [97/97] dm/4VcjY0AAAAE: cached (rel=9)
+[2026-04-26T02:36:37+0000] COMPLETED WITH ERRORS (97 conversations, 10 error(s))
+[2026-04-26T02:36:37+0000]   ERROR: space/AAQA85dw4So: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAAAtxQjB7c: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAAAsbHANyc: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAQAP-kMoqY: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAAAnlKPglA: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAAA8dv5lp0: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAAAxwwNw2U: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: dm/rwGu4gAAAAE: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAQAUbi9szY/AhfyxD9jdFo: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T02:36:37+0000]   ERROR: space/AAAAde_cYKA: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+exit
 
 
 [SYSTEM: Terminal session 0 might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

@@ -1,17 +1,11 @@
-[2026-04-25T14:32:48+0000]   Hit scroll limit (5)
-[2026-04-25T14:32:48+0000]   -> 16 message(s)
-[2026-04-25T14:32:49+0000]   -> 16 new cached
-[2026-04-25T14:32:59+0000]   -> restored unread status
-[2026-04-25T14:32:59+0000] [Fetching 3/4] [Prod Support] Ecom FFS Ops
-[2026-04-25T14:32:59+0000] Summarizing [2/88] #dd-dpd-engage-alert (16 msgs, direct)
-[2026-04-25T14:32:59+0000] ERROR summarizing space/AAAAxwwNw2U: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
-[2026-04-25T14:33:25+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-25T14:33:25+0000]   -> 10 message(s)
-[2026-04-25T14:33:25+0000]   -> 2 new cached
-[2026-04-25T14:33:46+0000]   -> restored unread status
-[2026-04-25T14:33:46+0000] [Fetching 4/4] #dd-dpd-grocery-alert
-[2026-04-25T14:33:46+0000] Summarizing [3/88] [Prod Support] Ecom FFS Ops (2 msgs, none)
-[2026-04-25T14:33:46+0000] ERROR summarizing space/AAAAde_cYKA: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+Skills matching 'notify user notification alert' (8):
+- a0-contribute-plugin: Guide for publishing an Agent Zero plugin to the community Plugin Index (a0-plugins repo). Covers GitHub repo setup, index.yaml creation, CI validation rules, and PR submission. Use when the user want…
+- a0-plugin-router: Main entry point for all Agent Zero plugin tasks. Routes to specialist skills for creating, reviewing, contributing, managing, or debugging plugins. Use when the user mentions plugins, asks how the pl…
+- a0-review-plugin: Full audit of Agent Zero plugins in usr/plugins/. Reviews manifest validity, directory structure, code patterns (Store Gating, notifications, imports), security, and duplicate detection against the co…
+- a0-setup-cli: Guide the user through installing and connecting the A0 CLI on the host machine so Dockerized Agent Zero can work on real local files. Use when asked to install A0, set up the CLI connector, connect A…
+- create-skill: Wizard for creating new Agent Zero skills. Guides users through creating well-structured SKILL.md files. Use when users want to create custom skills.
+- gchat: Read Google Chat conversations using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check chat messages, read…
+- gmail: Read Gmail email threads using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check emails, read recent threa…
+- jira: Fetch Jira tickets with SQLite caching, AI-driven relevance scoring, and structured summarization. Supports raw JQL query, saved filter by ID, or Polaris view. Outputs relevance-scored markdown summar…
 
-
-[SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+Tip: use skills_tool method=load skill_name=<name> to load full instructions.
