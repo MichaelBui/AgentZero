@@ -1,37 +1,14 @@
-[2026-04-26T06:32:24+0000]   Hit scroll limit (5)
-[2026-04-26T06:32:24+0000]   -> 76 message(s)
-[2026-04-26T06:32:29+0000]   -> 67 new cached
-[2026-04-26T06:32:58+0000]   -> restored unread status
-[2026-04-26T06:32:58+0000] [Fetching 2/6] RMN Integration
-[2026-04-26T06:32:58+0000] Summarizing [1/93] #dd-dpd-engage-alert (99 msgs, direct)
-[2026-04-26T06:32:58+0000] ERROR summarizing space/AAAAxwwNw2U: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
-[2026-04-26T06:33:13+0000]   Scroll early-stop: 11 consecutive cached messages
-[2026-04-26T06:33:13+0000]   Expanded 1 bar(s)
-[2026-04-26T06:33:13+0000]   -> 22 message(s)
-[2026-04-26T06:33:14+0000]   -> 3 new cached
-[2026-04-26T06:33:14+0000] [Fetching 3/6] Shopping Cart Notification
-[2026-04-26T06:33:14+0000] Summarizing [2/93] RMN Integration (3 msgs, direct)
-[2026-04-26T06:33:14+0000] ERROR summarizing space/AAQAKHz7DQM/FTYObj5L49o: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
-[2026-04-26T06:33:39+0000]   Hit scroll limit (5)
-[2026-04-26T06:33:39+0000]   -> 21 message(s)
-[2026-04-26T06:33:40+0000]   -> 12 new cached
-[2026-04-26T06:34:02+0000]   -> restored unread status
-[2026-04-26T06:34:02+0000] [Fetching 4/6] Data science x Project Light
-[2026-04-26T06:34:02+0000] Summarizing [3/93] Shopping Cart Notification (42 msgs, direct)
-[2026-04-26T06:34:02+0000] ERROR summarizing space/AAAAsbHANyc: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
-[2026-04-26T06:34:31+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-26T06:34:31+0000]   -> 9 message(s)
-[2026-04-26T06:34:32+0000]   -> 3 new cached
-[2026-04-26T06:34:32+0000] [Fetching 5/6] [Prod Support] Ecom FFS Ops
-[2026-04-26T06:34:32+0000] Summarizing [4/93] Data science x Project Light (3 msgs, direct)
-[2026-04-26T06:34:32+0000] ERROR summarizing space/AAQAzOZUb-k: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
-[2026-04-26T06:34:57+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-26T06:34:57+0000]   -> 11 message(s)
-[2026-04-26T06:34:57+0000]   -> 1 new cached
-[2026-04-26T06:35:21+0000]   -> restored unread status
-[2026-04-26T06:35:21+0000] [Fetching 6/6] RMN Notification
-[2026-04-26T06:35:21+0000] Summarizing [5/93] [Prod Support] Ecom FFS Ops (3 msgs, none)
-[2026-04-26T06:35:21+0000] ERROR summarizing space/AAAAde_cYKA: LLM API 400: {"error":{"message":"litellm.BadRequestError: Hosted_vllmException - Error code: 400 - {'error': 'could not find suitable inference handler for local/qwen3.5-35b-a3b:instruct-reasoning'}. Received Model Group=local/qwen3.5-35b-a3b:instruct-reasoning\nAvailable Model Group Fallbacks=None","type":null
+[2026-04-26T10:33:27+0000]   Reached top after 3 scroll(s)
+[2026-04-26T10:33:27+0000]   -> 92 message(s)
+[2026-04-26T10:33:33+0000]   -> 53 new cached
+[2026-04-26T10:33:33+0000]   WARN: could not restore unread status
+[2026-04-26T10:33:33+0000] [Fetching 3/3] Tiong Siong Tee
+[2026-04-26T10:33:33+0000] Summarizing [1/89] #dd-dpd-engage-alert (152 msgs, direct)
+[2026-04-26T10:34:01+0000]   Reached cutoff after 0 scroll(s)
+[2026-04-26T10:34:01+0000]   -> 15 message(s)
+[2026-04-26T10:34:02+0000]   -> 10 new cached
+[2026-04-26T10:34:17+0000]   -> restored unread status
+[2026-04-26T10:34:17+0000] Phase 2: fetched 2/3 conversations
 
 
 [SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

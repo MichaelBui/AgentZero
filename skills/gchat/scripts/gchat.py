@@ -71,7 +71,7 @@ GCHAT_USER_NAME = os.environ.get("GCHAT_USER_NAME", "Michael Bui")
 GCHAT_USER_EMAIL = os.environ.get("GCHAT_USER_EMAIL", "michael.bui@fairpricegroup.sg")
 
 LITELLM_BASE = os.environ.get("LITELLM_BASE_URL", "https://llm.gigary.com/v1")
-SUMMARIZE_MODEL = os.environ.get("SUMMARIZE_MODEL", "local/qwen3.5-35b-a3b:instruct-reasoning")
+SUMMARIZE_MODEL = os.environ.get("SUMMARIZE_MODEL", "local/qwen3.6-35b-a3b:thinking-general")
 LITELLM_API_KEY = os.environ.get("API_KEY_OTHER", os.environ.get("LLAMA_TOKEN", ""))
 SUMMARIZE_RETRIES = int(os.environ.get("SUMMARIZE_RETRIES", "3"))
 SUMMARIZE_RETRY_INITIAL_SEC = float(os.environ.get("SUMMARIZE_RETRY_INITIAL_SEC", "30"))
