@@ -69,6 +69,7 @@ python /a0/usr/skills/gchat/scripts/gchat.py --min-relevance 8
 | `--output` | No | `workdir/gchat-output.md` | Write results to file |
 | `--min-relevance` | No | 7 | Minimum relevance score for output (1-10) |
 | `--debug-dom` | No | false | Dump Home feed DOM to stderr and exit |
+| `--llm-context-limit` | No | 100000 | Max characters for LLM context (picks newest items that fit) |
 
 ## Output
 

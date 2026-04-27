@@ -1,9 +1,0 @@
-[2026-04-26T17:27:03+0000]   Hit scroll limit (5)
-[2026-04-26T17:27:03+0000]   -> 16 message(s)
-[2026-04-26T17:27:03+0000]   -> 1 new cached
-[2026-04-26T17:27:08+0000]   WARN: could not restore unread status
-[2026-04-26T17:27:08+0000] Phase 2: fetched 1/1 conversations
-[2026-04-26T17:27:08+0000] Summarizing [1/89] #dd-dpd-engage-alert (342 msgs, direct)
-
-
-[SYSTEM: Returning control to agent after 30 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

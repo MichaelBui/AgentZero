@@ -76,6 +76,7 @@ LITELLM_API_KEY = os.environ.get("API_KEY_OTHER", os.environ.get("LLAMA_TOKEN", 
 SUMMARIZE_RETRIES = int(os.environ.get("SUMMARIZE_RETRIES", "3"))
 SUMMARIZE_RETRY_INITIAL_SEC = float(os.environ.get("SUMMARIZE_RETRY_INITIAL_SEC", "30"))
 
+_DEFAULT_CTX_LIMIT = int(os.environ.get("LLM_CONTEXT_LIMIT", "50000"))
 _WORKDIR = Path(__file__).resolve().parents[3] / "workdir"
 _DEFAULT_DB_PATH = Path(__file__).resolve().parent.parent / "data" / "gchat_cache.db"
 DB_PATH = Path(os.environ.get("GCHAT_DB_PATH", str(_DEFAULT_DB_PATH)))
@@ -711,6 +712,57 @@ def summarize_resource(title: str, source_type: str, atomic_items: list[dict],
     return parse_llm_response(raw, mention_type)
 
 
+def _filter_items_by_context(items: list[dict], ctx_limit: int,
+                              title: str, mention_type: str,
+                              metadata: Optional[dict]) -> list[dict]:
+    """Pick items from newest to oldest that fit within the context budget.
+
+    The budget accounts for the full LLM prompt: system prompt, user prompt
+    headers, metadata, and the content block.
+    """
+    if not items or ctx_limit <= 0:
+        return []
+
+    system_prompt = _build_system_prompt()
+
+    meta_json = json.dumps(metadata or {}, indent=2, ensure_ascii=False)
+
+    word_hint = _WORD_HINTS.get(mention_type, 30)
+    header = (
+        f"Analyze this resource and return a JSON response.\n"
+        f"Resource: {title}\n"
+        f"Mention Type: {mention_type}\n"
+        "  - direct: DM with user, user authored a message, or @mentioned by name\n"
+        "  - indirect: group chat where user is a participant but not directly addressed\n"
+        "  - none: no personal involvement detected\n"
+        f"Metadata: {meta_json}\n\n"
+        f"Content (chronological):\n"
+    )
+
+    fixed_overhead = len(system_prompt) + len(header)
+    available = ctx_limit - fixed_overhead
+
+    filtered = []
+    for item in reversed(items):
+        author = item.get("author", "Unknown")
+        ts = item.get("created_at", "")
+        text = item.get("content", "")
+        if text:
+            item_text = f"[{ts}] {author}: {text}"
+        else:
+            item_text = f"[{ts}] {author}: (empty)"
+        item_size = len(item_text)
+        if filtered:
+            item_size += 4  # "\n---\n" separator before item
+        if available < item_size:
+            break
+        filtered.append(item)
+        available -= item_size
+
+    filtered.reverse()
+    return filtered
+
+
 # ═════════════════════════════════════════════════════════════════════
 # Browser & Navigation (CDP)
 # ═════════════════════════════════════════════════════════════════════
@@ -1256,7 +1308,8 @@ def cache_conversation(db: SkillDB, resource_id: str, name: str,
 
 
 def _summarize_one(db: SkillDB, resource_id: str, convo_info: dict,
-                   force: bool = False, current: int = 0, total: int = 0) -> None:
+                   force: bool = False, current: int = 0, total: int = 0,
+                   ctx_limit: int = _DEFAULT_CTX_LIMIT) -> None:
     name = convo_info.get("name", resource_id)
 
     if not force and not db.needs_resummarize(resource_id):
@@ -1283,7 +1336,12 @@ def _summarize_one(db: SkillDB, resource_id: str, convo_info: dict,
     all_items = db.get_atomic_for_resource(resource_id)
     meta = {"message_count": len(all_items), "url": convo_info.get("url", "")}
 
-    log(f"Summarizing [{current}/{total}] {name[:50]} ({len(items)} msgs, {mention_type})")
+    items = _filter_items_by_context(items, ctx_limit, name, mention_type, meta)
+    if not items:
+        log(f"SKIP [{current}/{total}] {resource_id}: no items fit within context limit")
+        return
+
+    log(f"Summarizing [{current}/{total}] {name[:50]} ({len(items)} msgs, {mention_type}, ctx={ctx_limit})")
 
     result = summarize_resource(
         title=name, source_type="Google Chat conversation", atomic_items=items,
@@ -1307,7 +1365,8 @@ def _summarize_one(db: SkillDB, resource_id: str, convo_info: dict,
     log(f"Done [{current}/{total}] {resource_id} rel={result.relevance}")
 
 
-def _summarize_worker(q: "_queue.Queue", db: SkillDB, force: bool, errors: list) -> None:
+def _summarize_worker(q: "_queue.Queue", db: SkillDB, force: bool, errors: list,
+                      ctx_limit: int = _DEFAULT_CTX_LIMIT) -> None:
     while True:
         item = q.get()
         if item is None:
@@ -1315,7 +1374,7 @@ def _summarize_worker(q: "_queue.Queue", db: SkillDB, force: bool, errors: list)
             break
         resource_id, convo_info, current, total = item
         try:
-            _summarize_one(db, resource_id, convo_info, force, current, total)
+            _summarize_one(db, resource_id, convo_info, force, current, total, ctx_limit=ctx_limit)
         except Exception as exc:
             log(f"ERROR summarizing {resource_id}: {exc}")
             errors.append(f"{resource_id}: {exc}")
@@ -1324,13 +1383,14 @@ def _summarize_worker(q: "_queue.Queue", db: SkillDB, force: bool, errors: list)
 
 
 class _Pipeline:
-    def __init__(self, db: SkillDB, force: bool):
+    def __init__(self, db: SkillDB, force: bool, ctx_limit: int = _DEFAULT_CTX_LIMIT):
         self._q: _queue.Queue = _queue.Queue()
         self._errors: list = []
         self._counter = 0
         self._total = 0
+        self._ctx_limit = ctx_limit
         self._thread = threading.Thread(
-            target=_summarize_worker, args=(self._q, db, force, self._errors), daemon=True
+            target=_summarize_worker, args=(self._q, db, force, self._errors, ctx_limit), daemon=True
         )
         self._thread.start()
 
@@ -1430,6 +1490,8 @@ def main():
                     help="Dump Home feed DOM to stderr and exit")
     ap.add_argument("--log-level", default="INFO", choices=["DEBUG", "INFO"],
                     help="Log level (default: INFO)")
+    ap.add_argument("--llm-context-limit", type=int, default=_DEFAULT_CTX_LIMIT,
+                    help=f"Max characters for LLM context budget (default: {_DEFAULT_CTX_LIMIT})")
     args = ap.parse_args()
 
     global _LOG_LEVEL
@@ -1476,7 +1538,7 @@ def main():
         if args.force:
             resource_ids = db.get_all_resource_ids(source="gchat")
             log(f"--force: re-summarizing {len(resource_ids)} cached conversations (no browser)")
-            pipeline = _Pipeline(db, force=True)
+            pipeline = _Pipeline(db, force=True, ctx_limit=args.llm_context_limit)
             pipeline.set_total(len(resource_ids))
             for rid in resource_ids:
                 existing = db.get_resource_summary(rid)
@@ -1577,7 +1639,7 @@ def main():
             f"unread={unread_count})")
 
         # ── Phase 2+3: Fetch and summarize in pipeline ──
-        pipeline = _Pipeline(db, force=False)
+        pipeline = _Pipeline(db, force=False, ctx_limit=args.llm_context_limit)
         pipeline.set_total(len(convo_infos))
         fetched_ids: set[str] = set()
 

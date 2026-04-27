@@ -769,7 +769,8 @@ def test_summarize_one(subtests, db):
         mock_resp.json.return_value = {"choices": [{"message": {"content": '{"relevance": 7, "summary": "AI summary", "work_items": [], "people": [], "labels": ["test-chat"]}'}}]}
         with patch("requests.post", return_value=mock_resp):
             with patch.object(gchat, "_USER_CONTEXT", "test"):
-                gchat._summarize_one(db, "space1", {"name": "Test Space"}, current=1, total=1)
+                gchat._summarize_one(db, "space1", {"name": "Test Space"}, current=1, total=1,
+                                     ctx_limit=50000)
         s = db.get_resource_summary("space1")
         assert s["summary"] == "AI summary"
         assert s["final_relevance"] == 7
@@ -787,7 +788,8 @@ def test_summarize_one_cached_skip(subtests, db):
         import time as _t
         _t.sleep(0.01)
         with patch("requests.post") as mock_post:
-            gchat._summarize_one(db, "space_cached", {"name": "Cached"}, current=1, total=1)
+            gchat._summarize_one(db, "space_cached", {"name": "Cached"}, current=1, total=1,
+                                 ctx_limit=50000)
             mock_post.assert_not_called()
 
 
@@ -802,7 +804,8 @@ def test_summarize_one_force(subtests, db):
         mock_resp.json.return_value = {"choices": [{"message": {"content": '{"relevance": 9, "summary": "New summary"}'}}]}
         with patch("requests.post", return_value=mock_resp):
             with patch.object(gchat, "_USER_CONTEXT", "test"):
-                gchat._summarize_one(db, "space_force", {"name": "Test"}, force=True, current=1, total=1)
+                gchat._summarize_one(db, "space_force", {"name": "Test"}, force=True, current=1, total=1,
+                                     ctx_limit=50000)
         s = db.get_resource_summary("space_force")
         assert s["summary"] == "New summary"
         assert s["final_relevance"] == 9
@@ -816,8 +819,9 @@ def test_summarize_one_empty_summary_raises(subtests, db):
         mock_resp.json.return_value = {"choices": [{"message": {"content": '{"relevance": 5, "summary": ""}'}}]}
         with patch("requests.post", return_value=mock_resp):
             with patch.object(gchat, "_USER_CONTEXT", "test"):
-                with pytest.raises(RuntimeError, match="Empty summary"):
-                    gchat._summarize_one(db, "space_empty_llm", {"name": "Test"}, current=1, total=1)
+                 with pytest.raises(RuntimeError, match="Empty summary"):
+                    gchat._summarize_one(db, "space_empty_llm", {"name": "Test"}, current=1, total=1,
+                                         ctx_limit=50000)
 
 
 # ═════════════════════════════════════════════════════════════════════
@@ -832,7 +836,7 @@ def test_pipeline(subtests, db):
         mock_resp.json.return_value = {"choices": [{"message": {"content": '{"relevance": 7, "summary": "Pipeline test"}'}}]}
         with patch("requests.post", return_value=mock_resp):
             with patch.object(gchat, "_USER_CONTEXT", "test"):
-                pipeline = gchat._Pipeline(db, force=False)
+                pipeline = gchat._Pipeline(db, force=False, ctx_limit=50000)
                 pipeline.set_total(1)
                 pipeline.put("space_pipe", {"name": "Pipeline Test"})
                 errors = pipeline.finish()
@@ -846,7 +850,7 @@ def test_pipeline_error_handling(subtests, db):
         _seed_conversation(db, "space_err", n_msgs=1)
         with patch("requests.post", side_effect=RuntimeError("API down")):
             with patch.object(gchat, "_USER_CONTEXT", "test"):
-                pipeline = gchat._Pipeline(db, force=False)
+                pipeline = gchat._Pipeline(db, force=False, ctx_limit=50000)
                 pipeline.set_total(1)
                 pipeline.put("space_err", {"name": "Error Test"})
                 errors = pipeline.finish()
@@ -2038,5 +2042,270 @@ def test_main_early_stop(subtests, db, tmp_path):
                                 gchat.main()
             text = output.read_text()
             assert "Summary" in text
+        finally:
+            db.close = restore
+
+
+# ═════════════════════════════════════════════════════════════════════
+# Tests: _filter_items_by_context
+# ═════════════════════════════════════════════════════════════════════
+
+def test_filter_items_by_context(subtests):
+    orig_ctx = gchat._USER_CONTEXT
+
+    with subtests.test(msg="When items fit within limit then all returned"):
+        gchat._USER_CONTEXT = "test"
+        items = [
+            {"author": "A", "created_at": "2026-01-01", "content": "Short"},
+            {"author": "B", "created_at": "2026-01-02", "content": "Brief"},
+        ]
+        result = gchat._filter_items_by_context(items, ctx_limit=50000, title="Test",
+                                                 mention_type="direct", metadata={})
+        assert len(result) == 2
+
+    with subtests.test(msg="When items exceed limit then picks newest first"):
+        gchat._USER_CONTEXT = "test"
+        items = [
+            {"author": "A", "created_at": "2026-01-01", "content": "A" * 3000},
+            {"author": "B", "created_at": "2026-01-02", "content": "B" * 3000},
+            {"author": "C", "created_at": "2026-01-03", "content": "C" * 3000},
+            {"author": "D", "created_at": "2026-01-04", "content": "D" * 3000},
+        ]
+        result = gchat._filter_items_by_context(items, ctx_limit=8000, title="Test",
+                                                 mention_type="direct", metadata={})
+        assert len(result) == 2
+        assert result[0]["author"] == "C"
+        assert result[1]["author"] == "D"
+
+    with subtests.test(msg="When limit is 0 then returns empty"):
+        gchat._USER_CONTEXT = "test"
+        items = [
+            {"author": "A", "created_at": "2026-01-01", "content": "Hello"},
+        ]
+        result = gchat._filter_items_by_context(items, ctx_limit=0, title="Test",
+                                                 mention_type="direct", metadata={})
+        assert result == []
+
+    with subtests.test(msg="When empty items then returns empty"):
+        gchat._USER_CONTEXT = "test"
+        result = gchat._filter_items_by_context([], ctx_limit=1000, title="Test",
+                                                 mention_type="direct", metadata={})
+        assert result == []
+
+    with subtests.test(msg="When all items exceed limit then returns empty"):
+        gchat._USER_CONTEXT = "test"
+        items = [
+            {"author": "A", "created_at": "2026-01-01", "content": "A" * 10000},
+        ]
+        result = gchat._filter_items_by_context(items, ctx_limit=100, title="Test",
+                                                 mention_type="direct", metadata={})
+        assert result == []
+
+    with subtests.test(msg="When items have empty content then still included"):
+        gchat._USER_CONTEXT = "test"
+        items = [
+            {"author": "A", "created_at": "2026-01-01", "content": "Hello"},
+            {"author": "B", "created_at": "2026-01-02", "content": ""},
+        ]
+        result = gchat._filter_items_by_context(items, ctx_limit=50000, title="Test",
+                                                 mention_type="direct", metadata={})
+        assert len(result) == 2
+
+    with subtests.test(msg="When context limit is tight then only newest fit"):
+        gchat._USER_CONTEXT = "test"
+        items = [
+            {"author": "A", "created_at": "2026-01-01", "content": "A" * 100},
+            {"author": "B", "created_at": "2026-01-02", "content": "B" * 100},
+            {"author": "C", "created_at": "2026-01-03", "content": "C" * 100},
+        ]
+        result = gchat._filter_items_by_context(items, ctx_limit=600, title="Test",
+                                                 mention_type="direct", metadata={})
+        assert len(result) == 1
+        assert result[0]["author"] == "C"
+
+    with subtests.test(msg="When mention_type indirect then overhead is larger"):
+        gchat._USER_CONTEXT = "test"
+        items = [
+            {"author": "A", "created_at": "2026-01-01", "content": "Hello"},
+        ]
+        result_direct = gchat._filter_items_by_context(items, ctx_limit=50000, title="Test",
+                                                        mention_type="direct", metadata={})
+        result_indirect = gchat._filter_items_by_context(items, ctx_limit=50000, title="Test",
+                                                          mention_type="indirect", metadata={})
+        assert len(result_direct) == len(result_indirect)
+
+    with subtests.test(msg="When metadata is large then accounted for"):
+        gchat._USER_CONTEXT = "test"
+        large_meta = {"key": "x" * 5000}
+        items = [
+            {"author": "A", "created_at": "2026-01-01", "content": "Hello"},
+        ]
+        result = gchat._filter_items_by_context(items, ctx_limit=50000, title="Test",
+                                                 mention_type="direct", metadata=large_meta)
+        assert len(result) == 1
+
+    with subtests.test(msg="When result is in chronological order then preserved"):
+        gchat._USER_CONTEXT = "test"
+        items = [
+            {"author": "A", "created_at": "2026-01-01", "content": "First"},
+            {"author": "B", "created_at": "2026-01-02", "content": "Second"},
+            {"author": "C", "created_at": "2026-01-03", "content": "Third"},
+        ]
+        result = gchat._filter_items_by_context(items, ctx_limit=50000, title="Test",
+                                                 mention_type="direct", metadata={})
+        assert result[0]["created_at"] == "2026-01-01"
+        assert result[1]["created_at"] == "2026-01-02"
+        assert result[2]["created_at"] == "2026-01-03"
+
+    gchat._USER_CONTEXT = orig_ctx
+
+
+# ═════════════════════════════════════════════════════════════════════
+# Tests: _summarize_one with ctx_limit
+# ═════════════════════════════════════════════════════════════════════
+
+def test_summarize_one_ctx_limit(subtests, db):
+    with subtests.test(msg="When ctx_limit too small then skips summarization"):
+        _seed_conversation(db, "ctx_small", n_msgs=2)
+        gchat._summarize_one(db, "ctx_small", {"name": "Small"}, current=1, total=1,
+                             ctx_limit=10)
+        assert db.get_resource_summary("ctx_small") is None
+
+    with subtests.test(msg="When ctx_limit sufficient then summarizes"):
+        _seed_conversation(db, "ctx_ok", n_msgs=2)
+        mock_resp = MagicMock()
+        mock_resp.status_code = 200
+        mock_resp.json.return_value = {"choices": [{"message": {"content": '{"relevance": 7, "summary": "OK", "work_items": [], "people": [], "labels": ["test"]}'}}]}
+        with patch("requests.post", return_value=mock_resp):
+            with patch.object(gchat, "_USER_CONTEXT", "test"):
+                gchat._summarize_one(db, "ctx_ok", {"name": "OK"}, current=1, total=1,
+                                     ctx_limit=50000)
+        s = db.get_resource_summary("ctx_ok")
+        assert s["summary"] == "OK"
+
+
+def test_summarize_one_ctx_limit_with_existing_summary(subtests, db):
+    with subtests.test(msg="When new items exceed ctx_limit then skips"):
+        _seed_conversation(db, "ctx_existing", n_msgs=1)
+        db.upsert_summary("ctx_existing", "gchat", "Test", "Old summary", final_relevance=7)
+        import time as _t
+        _t.sleep(0.01)
+        _seed_conversation(db, "ctx_existing", n_msgs=3)
+        gchat._summarize_one(db, "ctx_existing", {"name": "Test"}, current=1, total=1,
+                             ctx_limit=10)
+        s = db.get_resource_summary("ctx_existing")
+        assert s["summary"] == "Old summary"
+
+
+# ═════════════════════════════════════════════════════════════════════
+# Tests: Pipeline with ctx_limit
+# ═════════════════════════════════════════════════════════════════════
+
+def test_pipeline_ctx_limit(subtests, db):
+    with subtests.test(msg="When pipeline created with ctx_limit then passes to worker"):
+        _seed_conversation(db, "ctx_pipe", n_msgs=1)
+        mock_resp = MagicMock()
+        mock_resp.status_code = 200
+        mock_resp.json.return_value = {"choices": [{"message": {"content": '{"relevance": 7, "summary": "Pipeline ctx", "work_items": [], "people": [], "labels": ["test"]}'}}]}
+        with patch("requests.post", return_value=mock_resp):
+            with patch.object(gchat, "_USER_CONTEXT", "test"):
+                pipeline = gchat._Pipeline(db, force=False, ctx_limit=50000)
+                pipeline.set_total(1)
+                pipeline.put("ctx_pipe", {"name": "Pipeline Context"})
+                errors = pipeline.finish()
+                assert errors == []
+        s = db.get_resource_summary("ctx_pipe")
+        assert s["summary"] == "Pipeline ctx"
+
+
+def test_pipeline_ctx_limit_too_small(subtests, db):
+    with subtests.test(msg="When ctx_limit too small then no summary created"):
+        _seed_conversation(db, "ctx_pipe_small", n_msgs=1)
+        pipeline = gchat._Pipeline(db, force=False, ctx_limit=10)
+        pipeline.set_total(1)
+        pipeline.put("ctx_pipe_small", {"name": "Small Context"})
+        errors = pipeline.finish()
+        assert errors == []
+        assert db.get_resource_summary("ctx_pipe_small") is None
+
+
+# ═════════════════════════════════════════════════════════════════════
+# Tests: Main --llm-context-limit argument
+# ═════════════════════════════════════════════════════════════════════
+
+def test_main_llm_context_limit(subtests, db, tmp_path):
+    with subtests.test(msg="When --llm-context-limit then passes to pipeline"):
+        output = tmp_path / "output.md"
+        feed = [{"group_id": "g1", "topic_id": "", "display_ts": 9999999999999, "name": "Test Chat"}]
+        wrapped, restore = _make_nonclosing_db(db)
+        try:
+            with patch.object(gchat, "open_db", return_value=wrapped):
+                with patch.object(gchat, "connect_browser", return_value=(MagicMock(), MagicMock(), MagicMock())):
+                    with patch.object(gchat, "go_home"):
+                        with patch.object(gchat, "snapshot_feed", return_value=feed):
+                            with patch.object(gchat, "click_feed_item", return_value=True):
+                                with patch.object(gchat, "left_panel_visible", return_value=True):
+                                    with patch.object(gchat, "wait_for_messages", return_value=3):
+                                        with patch.object(gchat, "scroll_to_bottom"):
+                                            with patch.object(gchat, "scroll_and_expand", return_value=[
+                                                {"data_id": "m1", "sender": "Alice", "epoch_ms": 1712000000000,
+                                                 "body": "Hello", "timestamp": "10:00 AM"},
+                                            ]):
+                                                mock_resp = MagicMock()
+                                                mock_resp.status_code = 200
+                                                mock_resp.json.return_value = {"choices": [{"message": {"content": '{"relevance": 8, "summary": "Context limited"}'}}]}
+                                                with patch("requests.post", return_value=mock_resp):
+                                                    with patch.object(gchat, "_USER_CONTEXT", "test"):
+                                                        with patch("sys.argv", ["gchat.py", "--llm-context-limit", "50000", "--output", str(output)]):
+                                                            gchat.main()
+            s = db.get_resource_summary("g1")
+            assert s["summary"] == "Context limited"
+        finally:
+            db.close = restore
+
+
+def test_main_llm_context_limit_tiny(subtests, db, tmp_path):
+    with subtests.test(msg="When --llm-context-limit tiny then no summary created"):
+        output = tmp_path / "output.md"
+        feed = [{"group_id": "g1", "topic_id": "", "display_ts": 9999999999999, "name": "Test Chat"}]
+        wrapped, restore = _make_nonclosing_db(db)
+        try:
+            with patch.object(gchat, "open_db", return_value=wrapped):
+                with patch.object(gchat, "connect_browser", return_value=(MagicMock(), MagicMock(), MagicMock())):
+                    with patch.object(gchat, "go_home"):
+                        with patch.object(gchat, "snapshot_feed", return_value=feed):
+                            with patch.object(gchat, "click_feed_item", return_value=True):
+                                with patch.object(gchat, "left_panel_visible", return_value=True):
+                                    with patch.object(gchat, "wait_for_messages", return_value=3):
+                                        with patch.object(gchat, "scroll_to_bottom"):
+                                            with patch.object(gchat, "scroll_and_expand", return_value=[
+                                                {"data_id": "m1", "sender": "Alice", "epoch_ms": 1712000000000,
+                                                 "body": "Hello", "timestamp": "10:00 AM"},
+                                            ]):
+                                                with patch("requests.post") as mock_post:
+                                                    with patch.object(gchat, "_USER_CONTEXT", "test"):
+                                                        with patch("sys.argv", ["gchat.py", "--llm-context-limit", "10", "--output", str(output)]):
+                                                            gchat.main()
+                                                    mock_post.assert_not_called()
+        finally:
+            db.close = restore
+
+
+def test_main_force_ctx_limit(subtests, db, tmp_path):
+    with subtests.test(msg="When --force with --llm-context-limit too small then no new summary"):
+        output = tmp_path / "output.md"
+        _seed_conversation(db, "g1", n_msgs=1)
+        db.upsert_summary("g1", "gchat", "Test", "Old", final_relevance=5)
+        wrapped, restore = _make_nonclosing_db(db)
+        try:
+            with patch.object(gchat, "open_db", return_value=wrapped):
+                with patch("requests.post") as mock_post:
+                    with patch.object(gchat, "_USER_CONTEXT", "test"):
+                        with patch("sys.argv", ["gchat.py", "--force", "--llm-context-limit", "10",
+                                                "--output", str(output)]):
+                            gchat.main()
+                        mock_post.assert_not_called()
+            s = db.get_resource_summary("g1")
+            assert s["summary"] is None
         finally:
             db.close = restore
