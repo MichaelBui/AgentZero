@@ -1,23 +1,11 @@
-[2026-04-28T06:26:54+0000] ERROR summarizing 19dd25b8287c008c: LLM connection failed after 3 retries: HTTPSConnectionPool(host='llm.gigary.com', port=443): Read timed out. (read timeout=120)
-[2026-04-28T06:26:54+0000] Summarizing [11/168] Invitation: [LIGHT] Attack & Defend Sync-Up @ Week (1 msgs, direct)
-[2026-04-28T06:28:29+0000] Done [11/168] 19dd25b81435b0e6 rel=7
-[2026-04-28T06:28:29+0000] Summarizing [12/168] Invitation: [LIGHT] Attack & Defend Sync-Up @ Week (1 msgs, direct)
-[2026-04-28T06:29:47+0000] Done [12/168] 19dd25b7ee8e6e3c rel=7
-[2026-04-28T06:29:47+0000] Summarizing [13/168] Invitation: [LIGHT] Attack & Defend Sync-Up @ Week (1 msgs, direct)
-[2026-04-28T06:31:31+0000] Done [13/168] 19dd25b7e6064dd0 rel=6
-[2026-04-28T06:31:31+0000] Summarizing [14/168] Invitation: [LIGHT] Attack & Defend Sync-Up @ Week (1 msgs, direct)
-[2026-04-28T06:32:58+0000] Done [14/168] 19dd25b78cd4a36d rel=6
-[2026-04-28T06:32:58+0000] Summarizing [15/168] DOOH Vendor Evalu... - @michael.bui@fairpricegroup (1 msgs, direct)
-[2026-04-28T06:34:29+0000] Done [15/168] 19dd248c5a54a78f rel=8
-[2026-04-28T06:34:29+0000] Summarizing [16/168] [JIRA] (DPD-1052) SLO improvements on marketing-se (1 msgs, direct)
-[2026-04-28T06:36:03+0000] Done [16/168] 19dcf4cbfe32c6f8 rel=6
-[2026-04-28T06:36:03+0000] Summarizing [17/168] Hidden Lucid workflows worth stealing (1 msgs, none)
-[2026-04-28T06:37:25+0000] Done [17/168] 19dd21c50bc7faac rel=2
-[2026-04-28T06:37:25+0000] Summarizing [18/168] [Dashboard Report] Retail Media - DD Dashboard | T (1 msgs, direct)
-[2026-04-28T06:38:41+0000] Done [18/168] 19dd20a04dd132d4 rel=5
-[2026-04-28T06:38:41+0000] Summarizing [19/168] Updated invitation with note: Discussion: Advertim (1 msgs, direct)
-[2026-04-28T06:40:30+0000] Done [19/168] 19dd1e397def4eee rel=6
-[2026-04-28T06:40:30+0000] Summarizing [20/168] [VidiCenter] Weekly Performance Report (1 msgs, direct)
+Skills matching 'notify user send notification alert' (8):
+- a0-contribute-plugin: Guide for publishing an Agent Zero plugin to the community Plugin Index (a0-plugins repo). Covers GitHub repo setup, index.yaml creation, CI validation rules, and PR submission. Use when the user want…
+- a0-plugin-router: Main entry point for all Agent Zero plugin tasks. Routes to specialist skills for creating, reviewing, contributing, managing, or debugging plugins. Use when the user mentions plugins, asks how the pl…
+- a0-review-plugin: Full audit of Agent Zero plugins in usr/plugins/. Reviews manifest validity, directory structure, code patterns (Store Gating, notifications, imports), security, and duplicate detection against the co…
+- a0-setup-cli: Guide the user through installing and connecting the A0 CLI on the host machine so Dockerized Agent Zero can work on real local files. Use when asked to install A0, set up the CLI connector, connect A…
+- create-skill: Wizard for creating new Agent Zero skills. Guides users through creating well-structured SKILL.md files. Use when users want to create custom skills.
+- gchat: Read Google Chat conversations using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check chat messages, read…
+- gmail: Read Gmail email threads using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check emails, read recent threa…
+- jira: Fetch Jira tickets with SQLite caching, AI-driven relevance scoring, and structured summarization. Supports raw JQL query, saved filter by ID, or Polaris view. Outputs relevance-scored markdown summar…
 
-
-[SYSTEM: Returning control to agent after 900 seconds of execution. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+Tip: use skills_tool method=load skill_name=<name> to load full instructions.
