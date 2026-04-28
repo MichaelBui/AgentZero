@@ -1,0 +1,39 @@
+Engineering Productivity Benchmarks 2026 — DORA Metrics, Cycle Time by Team Size | knowledgelib.io
+https://knowledgelib.io/business/industry-benchmarks/engineering-productivity-benchmarks-2026/2026
+Engineering productivity benchmarks 2026: DORA metrics (deployment frequency, lead time, CFR, recovery time), cycle time, PR metrics by team size and AI adoption. H2 2025 data from 6.1M+ PRs. 6 sources, all cited. Verified 2026-03-11.
+
+Accelerate State of DevOps Report 2024 - Dora.dev
+https://dora.dev/research/2024/dora-report/
+Embracing transformational leadership ... brings clear benefits but unexpected tradeoffs: AI adoption significantly increases individual productivity, flow, and job satisfaction....
+
+What additional metrics should engineering teams track beyond DORA in the AI era?
+https://blog.exceeds.ai/dora-metrics-engineering-effectiveness/
+AI-era teams need AI-specific observability in addition to traditional DORA metrics. Useful measures include AI adoption rates across teams and tools, code-level AI versus human contribution analysis, and longitudinal outcome tracking for AI-touched code such as 30-day incident rates. Teams should also track rework patterns for AI-assisted PRs, tool-by-tool effectiveness comparisons, AI technical debt accumulation, review burden shifts, and trust scores for AI-generated contributions. These metrics help leaders prove AI ROI while keeping long-term stability intact.
+
+DORA Metrics 2026: AI Expansion Meets Visibility Crisis | byteiota
+https://byteiota.com/dora-metrics-2026-ai-expansion-meets-visibility-crisis/
+Most teams don't track cycle time or defect rates before adopting AI. When leadership asks "is this worth $20/month per developer?" the answer is a shrug. The measurement framework exists: track DORA throughput metrics before and after AI adoption, monitor code quality, identify power users, connect usage to production outcomes.
+
+DORA Metrics Are Not Enough in 2026: What Elite Engineering Teams Track Instead
+https://oobeya.io/blog/dora-metrics-not-enough-2026
+engineering-metricsai-assisted-developmentdora-metricsEngineering Metrics in the AI Era: A Complete Guide for 2026 · A practical guide to engineering metrics in the AI era, from DORA and SPACE to AI-specific indicators, DevEx, and sustainable delivery. ... measure-ai-impactai-coding-assistantsdeveloper-productivityHow to Measure AI-Assisted Software Development: A Complete Guide for Engineering Leaders · A practical guide to measuring AI-assisted development with DORA, SPACE, quality guardrails, adoption signals, and realistic ROI expectations.
+
+DORA metrics in the age of AI-driven delivery | Future Processing
+https://www.future-processing.com/blog/dora-devops-metrics/
+From four classic indicators to a more complete view For years, teams relied on four key DORA metrics to measure DevOps performance - Deployment Frequency, Lead Time for Changes, Change Failure Rate, and Mean Time to Recovery. Together, they offered a practical way to evaluate delivery speed and system stability.
+
+Announcing the 2024 DORA report | Google Cloud Blog
+https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report
+Each year, we seek to gain a comprehensive understanding of standard DORA performance metrics, and how they intersect with individual, workflow, team, and product performance. We now include how AI adoption affects software development across multiple levels, too.
+
+DORA metrics tools in 2026: What to measure, and what's missing
+https://getdx.com/blog/dora-metrics-tools/
+When the goal is to give leadership a complete view of engineering performance — from delivery speed to developer-reported friction to business impact — the DORA metrics tools above provide inputs, but not answers. That requires a framework and platform built for the purpose. DX and the Core 4 are where that work happens. This is the emerging measurement challenge in 2026.
+
+DevOps Metrics: DORA Metrics and Measuring Success · Technical news about AI, coding and all
+https://dasroot.net/posts/2026/04/devops-metrics-dora-measuring-success/
+A 2026 report from DORA metrics tools highlighted that teams with strong DORA scores still face high friction because their data sources are fragmented, making it difficult to obtain an accurate, unified view of delivery performance.
+
+DORA Report 2025 Key Takeaways: AI Impact on Dev Metrics
+https://www.faros.ai/blog/key-takeaways-from-the-dora-report-2025
+New DORA data shows AI amplifies team dysfunction as often as capability. Key action: measure productivity by actual collaboration units, not tool groupings. Seven team types need different AI strategies.

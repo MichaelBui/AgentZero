@@ -1,211 +1,85 @@
-[2026-04-28T02:01:23+0000] STARTED (days=5, since=2026-04-23, user=michael.bui@fairpricegroup.sg)
-[2026-04-28T02:01:23+0000] Connecting to browser at http://192.168.1.11:9223...
-(node:24382) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+[2026-04-28T06:01:01+0000] STARTED (days=5, since=2026-04-23, user=michael.bui@fairpricegroup.sg)
+[2026-04-28T06:01:01+0000] Connecting to browser at http://192.168.1.11:9223...
+(node:26540) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[2026-04-28T02:01:25+0000] Browser connected. Browser timezone: UTC
-[2026-04-28T02:01:30+0000]   Page 1: 100 thread(s)
-[2026-04-28T02:01:30+0000]   Early stop: 5 consecutive cached
-[2026-04-28T02:01:35+0000]   Page 2: 100 thread(s)
-[2026-04-28T02:01:40+0000]   Page 3: 41 thread(s)
-[2026-04-28T02:02:05+0000] Phase 1: 175 threads (excluded=66, unchanged=169, to-fetch=6, unread=3)
-[2026-04-28T02:02:05+0000] [Fetching 1/6] [Bitbucket]  Pipeline for master failed on d06a88e (ntu
-[2026-04-28T02:02:06+0000]   -> 1 new message(s) cached
-[2026-04-28T02:02:07+0000]   -> restored unread status
-[2026-04-28T02:02:07+0000] [Fetching 2/6] [RAW Overdue] Expired Risk Acceptance & Waiver Form
-[2026-04-28T02:02:07+0000] Summarizing [1/175] [Bitbucket]  Pipeline for master failed on d06a88e (1 msgs, direct)
-[2026-04-28T02:02:08+0000]   -> 1 new message(s) cached
-[2026-04-28T02:02:08+0000]   -> restored unread status
-[2026-04-28T02:02:08+0000] [Fetching 3/6] Accepted: SIT discussion @ Tue Apr 28, 2026 2pm - 3pm (
-[2026-04-28T02:02:09+0000]   -> 1 new message(s) cached
-[2026-04-28T02:02:10+0000] [Fetching 4/6] Accepted: rOOH Ad Platform Requirements Review & Sign O
-[2026-04-28T02:02:10+0000]   -> 1 new message(s) cached
-[2026-04-28T02:02:11+0000] [Fetching 5/6] Accepted: Discussion: Advertima @ Tue Apr 28, 2026 10:3
-[2026-04-28T02:02:11+0000]   -> 1 new message(s) cached
-[2026-04-28T02:02:11+0000] [Fetching 6/6] Daily digest: updates from Oktavianer Diharja
-[2026-04-28T02:02:12+0000]   -> 1 new message(s) cached
-[2026-04-28T02:02:12+0000]   -> restored unread status
-[2026-04-28T02:03:49+0000] Done [1/175] 19dcffa86d2f481e rel=7
-[2026-04-28T02:03:49+0000] Summarizing [2/175] [RAW Overdue] Expired Risk Acceptance & Waiver For (1 msgs, direct)
-[2026-04-28T02:05:02+0000] Done [2/175] 19dd19c146b10d87 rel=6
-[2026-04-28T02:05:02+0000] Summarizing [3/175] Accepted: SIT discussion @ Tue Apr 28, 2026 2pm -  (1 msgs, direct)
-[2026-04-28T02:06:19+0000] Done [3/175] 19dd1916312646f8 rel=5
-[2026-04-28T02:06:19+0000] Summarizing [4/175] Accepted: rOOH Ad Platform Requirements Review & S (1 msgs, direct)
-[2026-04-28T02:07:40+0000] Done [4/175] 19dd19141e742b64 rel=9
-[2026-04-28T02:07:40+0000] Summarizing [5/175] Accepted: Discussion: Advertima @ Tue Apr 28, 2026 (1 msgs, direct)
-[2026-04-28T02:09:26+0000] Done [5/175] 19dd191114f27c96 rel=7
-[2026-04-28T02:09:26+0000] Summarizing [6/175] Daily digest: updates from Oktavianer Diharja (1 msgs, direct)
-[2026-04-28T02:10:34+0000] Done [6/175] 19dd147363f8cfd5 rel=5
-[2026-04-28T02:10:34+0000] [7/175] 19dd0f1fbd6a5295: cached (rel=5)
-[2026-04-28T02:10:34+0000] [8/175] 19dd00868a702bc0: cached (rel=5)
-[2026-04-28T02:10:34+0000] [9/175] 19dcd7946d7bed7e: cached (rel=2)
-[2026-04-28T02:10:34+0000] [10/175] 19dcf4cbfe32c6f8: cached (rel=7)
-[2026-04-28T02:10:34+0000] [11/175] 19dcfa5ded2a3811: cached (rel=6)
-[2026-04-28T02:10:34+0000] [12/175] 19dbdd18841aed18: cached (rel=6)
-[2026-04-28T02:10:34+0000] [13/175] 19dcf9b8fcbb6c95: cached (rel=5)
-[2026-04-28T02:10:34+0000] [14/175] 19dbdc47337c9bd3: cached (rel=5)
-[2026-04-28T02:10:34+0000] [15/175] 19dbeb08434b0916: cached (rel=6)
-[2026-04-28T02:10:34+0000] [16/175] 19dcf90585a89b56: cached (rel=5)
-[2026-04-28T02:10:34+0000] [17/175] 19dcf94f9949b9d2: cached (rel=5)
-[2026-04-28T02:10:34+0000] [18/175] 19dcf92bc786b2a5: cached (rel=6)
-[2026-04-28T02:10:34+0000] [19/175] 19dbdcae59ccaacc: cached (rel=6)
-[2026-04-28T02:10:34+0000] [20/175] 19dbdce9b5f264f3: cached (rel=6)
-[2026-04-28T02:10:34+0000] [21/175] 19dbdc9e762da1df: cached (rel=5)
-[2026-04-28T02:10:34+0000] [22/175] 19dbdcc8c0c44520: cached (rel=6)
-[2026-04-28T02:10:34+0000] [23/175] 19dbdcd30a475324: cached (rel=5)
-[2026-04-28T02:10:34+0000] [24/175] 19dbdd0b0d279d29: cached (rel=5)
-[2026-04-28T02:10:34+0000] [25/175] 19dcf8b4022fa152: cached (rel=6)
-[2026-04-28T02:10:34+0000] [26/175] 19dcf8aac273d9ac: cached (rel=6)
-[2026-04-28T02:10:34+0000] [27/175] 19dcf88e283735a4: cached (rel=8)
-[2026-04-28T02:10:34+0000] [28/175] 19dcf7d1fd0a428d: cached (rel=5)
-[2026-04-28T02:10:34+0000] [29/175] 19dbdc320adbb3ed: cached (rel=6)
-[2026-04-28T02:10:34+0000] [30/175] 19dbdc4aa0be3e65: cached (rel=5)
-[2026-04-28T02:10:34+0000] [31/175] 19dcf6eaefe2b642: cached (rel=6)
-[2026-04-28T02:10:34+0000] [32/175] 19dcf66e59b2f15a: cached (rel=7)
-[2026-04-28T02:10:34+0000] [33/175] 19dcf300ac8a043b: cached (rel=6)
-[2026-04-28T02:10:34+0000] [34/175] 19d25769187b9103: cached (rel=6)
-[2026-04-28T02:10:34+0000] [35/175] 19c017ba98aae5e1: cached (rel=8)
-[2026-04-28T02:10:34+0000] [36/175] 19dbeae2ad1acf29: cached (rel=8)
-[2026-04-28T02:10:34+0000] [37/175] 19d9b2b3ecdbf46d: cached (rel=9)
-[2026-04-28T02:10:34+0000] [38/175] 19dce924d2fc0895: cached (rel=8)
-[2026-04-28T02:10:34+0000] [39/175] 19dce8c324e3fd1d: cached (rel=9)
-[2026-04-28T02:10:34+0000] [40/175] 19dcd8e333b70912: cached (rel=9)
-[2026-04-28T02:10:34+0000] [41/175] 19dce67efed65556: cached (rel=6)
-[2026-04-28T02:10:34+0000] [42/175] 19dce2d18ab9c8c2: cached (rel=5)
-[2026-04-28T02:10:34+0000] [43/175] 19dce2ce80f6b319: cached (rel=6)
-[2026-04-28T02:10:34+0000] [44/175] 19dce2ce7cb71347: cached (rel=5)
-[2026-04-28T02:10:34+0000] [45/175] 19dce2ce71ac11d9: cached (rel=6)
-[2026-04-28T02:10:34+0000] [46/175] 19dce2ce66b958c9: cached (rel=6)
-[2026-04-28T02:10:34+0000] [47/175] 19dce2cda84c5166: cached (rel=5)
-[2026-04-28T02:10:34+0000] [48/175] 19dce2cdaffcf5fe: cached (rel=5)
-[2026-04-28T02:10:34+0000] [49/175] 19dce2ae11ad2703: cached (rel=5)
-[2026-04-28T02:10:34+0000] [50/175] 19dcdf673cf59a9a: cached (rel=5)
-[2026-04-28T02:10:34+0000] [51/175] 19dce1e3436fdd6b: cached (rel=5)
-[2026-04-28T02:10:34+0000] [52/175] 19dce19b3228d477: cached (rel=8)
-[2026-04-28T02:10:34+0000] [53/175] 19ce6ebdc3530d4d: cached (rel=9)
-[2026-04-28T02:10:34+0000] [54/175] 19dce0dec4a191e1: cached (rel=8)
-[2026-04-28T02:10:34+0000] [55/175] 19dce0de6071025f: cached (rel=9)
-[2026-04-28T02:10:34+0000] [56/175] 19dce0de126171c2: cached (rel=8)
-[2026-04-28T02:10:34+0000] [57/175] 19dce07705db50ba: cached (rel=8)
-[2026-04-28T02:10:34+0000] [58/175] 19dce062a79c7048: cached (rel=6)
-[2026-04-28T02:10:34+0000] [59/175] 19d952f5f9f4a4da: cached (rel=5)
-[2026-04-28T02:10:34+0000] [60/175] 19dcde7db1f81673: cached (rel=6)
-[2026-04-28T02:10:34+0000] [61/175] 19dcdcec8e69211b: cached (rel=5)
-[2026-04-28T02:10:34+0000] [62/175] 19dc3f5323e30abf: cached (rel=8)
-[2026-04-28T02:10:34+0000] [63/175] 19dcd7edb595ae1f: cached (rel=7)
-[2026-04-28T02:10:34+0000] [64/175] 19dcd7e484665fc5: cached (rel=5)
-[2026-04-28T02:10:34+0000] [65/175] 19dcd7e1569fd667: cached (rel=6)
-[2026-04-28T02:10:34+0000] [66/175] 19dcd7e1b79977e6: cached (rel=5)
-[2026-04-28T02:10:34+0000] [67/175] 19dcd7e18e3ba91c: cached (rel=6)
-[2026-04-28T02:10:34+0000] [68/175] 19dcd7e1890fab64: cached (rel=5)
-[2026-04-28T02:10:34+0000] [69/175] 19dcd7e15f691a08: cached (rel=6)
-[2026-04-28T02:10:34+0000] [70/175] 19dcd7e15e9d9ec7: cached (rel=6)
-[2026-04-28T02:10:34+0000] [71/175] 19dcd7e154a847ee: cached (rel=6)
-[2026-04-28T02:10:34+0000] [72/175] 19dcd72612307eb0: cached (rel=7)
-[2026-04-28T02:10:34+0000] [73/175] 19dcd700b10e51a1: cached (rel=6)
-[2026-04-28T02:10:34+0000] [74/175] 19dcc3d987faaa13: cached (rel=6)
-[2026-04-28T02:10:34+0000] [75/175] 19dc4e2483ce0af1: cached (rel=2)
-[2026-04-28T02:10:34+0000] [76/175] 19dcd23b88698719: cached (rel=2)
-[2026-04-28T02:10:34+0000] [77/175] 19dcce46841e9b71: cached (rel=5)
-[2026-04-28T02:10:34+0000] [78/175] 19d966990fd5899b: cached (rel=5)
-[2026-04-28T02:10:34+0000] [79/175] 19dcc9f107e7647c: cached (rel=5)
-[2026-04-28T02:10:34+0000] [80/175] 19dcc458253d4c43: cached (rel=5)
-[2026-04-28T02:10:34+0000] [81/175] 19dcbcd7d302bc3c: cached (rel=5)
-[2026-04-28T02:10:34+0000] [82/175] 19dca3727cfa4a93: cached (rel=7)
-[2026-04-28T02:10:34+0000] [83/175] 19dca3584eeb847f: cached (rel=6)
-[2026-04-28T02:10:34+0000] [84/175] 19dca32574684ef1: cached (rel=6)
-[2026-04-28T02:10:34+0000] [85/175] 19dc7bcfcaaef571: cached (rel=5)
-[2026-04-28T02:10:34+0000] [86/175] 19dc735d39790696: cached (rel=2)
-[2026-04-28T02:10:34+0000] [87/175] 19dc69ec8169db85: cached (rel=5)
-[2026-04-28T02:10:34+0000] [88/175] 19dc3736a7b68aa8: cached (rel=3)
-[2026-04-28T02:10:34+0000] [89/175] 19dc3733b2fde8e4: cached (rel=2)
-[2026-04-28T02:10:34+0000] [90/175] 19dc297396758138: cached (rel=6)
-[2026-04-28T02:10:34+0000] [91/175] 19dc22912cbcc0d4: cached (rel=6)
-[2026-04-28T02:10:34+0000] [92/175] 19dc1b124a747f71: cached (rel=5)
-[2026-04-28T02:10:34+0000] [93/175] 19dc1845676c1b27: cached (rel=5)
-[2026-04-28T02:10:34+0000] [94/175] 19dc159d4c8b7c7d: cached (rel=5)
-[2026-04-28T02:10:34+0000] [95/175] 19db36d2fe5f2c29: cached (rel=7)
-[2026-04-28T02:10:34+0000] [96/175] 19dc03a8af312520: cached (rel=9)
-[2026-04-28T02:10:34+0000] [97/175] 19d90163f5b0962b: cached (rel=8)
-[2026-04-28T02:10:34+0000] [98/175] 19d9023018a0fe06: cached (rel=8)
-[2026-04-28T02:10:34+0000] [99/175] 19dbf0272b539242: cached (rel=8)
-[2026-04-28T02:10:34+0000] [100/175] 19dbefd5c0e74f9b: cached (rel=6)
-[2026-04-28T02:10:34+0000] [101/175] 19dbef2637620015: cached (rel=9)
-[2026-04-28T02:10:34+0000] [102/175] 19dbeb893fe8d565: cached (rel=5)
-[2026-04-28T02:10:34+0000] [103/175] 19dbeb0878d7c497: cached (rel=9)
-[2026-04-28T02:10:34+0000] [104/175] 19dbdc4a696779c8: cached (rel=9)
-[2026-04-28T02:10:34+0000] [105/175] 19dbea855a1f1b7f: cached (rel=6)
-[2026-04-28T02:10:34+0000] [106/175] 19dbe99bd528fa11: cached (rel=2)
-[2026-04-28T02:10:34+0000] [107/175] 19dbe421fb9d5baf: cached (rel=9)
-[2026-04-28T02:10:34+0000] [108/175] 19dbe3ac0062cc53: cached (rel=8)
-[2026-04-28T02:10:34+0000] [109/175] 19dbe33f8c84fada: cached (rel=8)
-[2026-04-28T02:10:34+0000] [110/175] 19dbde2bf792d838: cached (rel=7)
-[2026-04-28T02:10:34+0000] [111/175] 19dbe14b78643438: cached (rel=5)
-[2026-04-28T02:10:34+0000] [112/175] 19dbdc926814ac21: cached (rel=8)
-[2026-04-28T02:10:34+0000] [113/175] 19dbdd49d7d1f1bf: cached (rel=6)
-[2026-04-28T02:10:34+0000] [114/175] 19dbdc79a2870929: cached (rel=9)
-[2026-04-28T02:10:34+0000] [115/175] 19dbdc731bf62850: cached (rel=9)
-[2026-04-28T02:10:34+0000] [116/175] 19dbdc27d61bb62a: cached (rel=9)
-[2026-04-28T02:10:34+0000] [117/175] 19d950a7762c027b: cached (rel=6)
-[2026-04-28T02:10:34+0000] [118/175] 19dbdba50cb32df9: cached (rel=7)
-[2026-04-28T02:10:34+0000] [119/175] 19dbdafa71a50974: cached (rel=5)
-[2026-04-28T02:10:34+0000] [120/175] 19dbd72a3d7e4e90: cached (rel=9)
-[2026-04-28T02:10:34+0000] [121/175] 19dbd701e6769452: cached (rel=5)
-[2026-04-28T02:10:34+0000] [122/175] 19dbd0fac359f81d: cached (rel=3)
-[2026-04-28T02:10:34+0000] [123/175] 19dbd00e558f433e: cached (rel=5)
-[2026-04-28T02:10:34+0000] [124/175] 19c89b9dca74478f: cached (rel=9)
-[2026-04-28T02:10:34+0000] [125/175] 19dbce0cdf8ba453: cached (rel=6)
-[2026-04-28T02:10:34+0000] [126/175] 19dbc80286fa3f00: cached (rel=5)
-[2026-04-28T02:10:34+0000] [127/175] 19dbc3f500eeb396: cached (rel=5)
-[2026-04-28T02:10:34+0000] [128/175] 19dbb285a24144f0: cached (rel=2)
-[2026-04-28T02:10:34+0000] [129/175] 19da999cfdb4ef56: cached (rel=9)
-[2026-04-28T02:10:34+0000] [130/175] 19dba26d02474fcc: cached (rel=8)
-[2026-04-28T02:10:34+0000] [131/175] 19dba07acff74b00: cached (rel=7)
-[2026-04-28T02:10:34+0000] [132/175] 19dba06e0c076b7d: cached (rel=6)
-[2026-04-28T02:10:34+0000] [133/175] 19dba020987821e6: cached (rel=8)
-[2026-04-28T02:10:34+0000] [134/175] 19db9fc24574b2c1: cached (rel=9)
-[2026-04-28T02:10:34+0000] [135/175] 19db9c3d2b34ca09: cached (rel=6)
-[2026-04-28T02:10:34+0000] [136/175] 19db9adbd9ad09d2: cached (rel=5)
-[2026-04-28T02:10:34+0000] [137/175] 19db980e1c7f013c: cached (rel=6)
-[2026-04-28T02:10:34+0000] [138/175] 19db980101ece833: cached (rel=7)
-[2026-04-28T02:10:34+0000] [139/175] 19db97f3f84e8932: cached (rel=6)
-[2026-04-28T02:10:34+0000] [140/175] 19db978136df8458: cached (rel=6)
-[2026-04-28T02:10:34+0000] [141/175] 19db94c8b224a607: cached (rel=5)
-[2026-04-28T02:10:34+0000] [142/175] 19db93b2a96d8733: cached (rel=6)
-[2026-04-28T02:10:34+0000] [143/175] 19db92fceb0d4b5d: cached (rel=8)
-[2026-04-28T02:10:34+0000] [144/175] 19db926905a85f15: cached (rel=6)
-[2026-04-28T02:10:34+0000] [145/175] 19db91eaf438956e: cached (rel=7)
-[2026-04-28T02:10:34+0000] [146/175] 19db91dee031e3dd: cached (rel=6)
-[2026-04-28T02:10:34+0000] [147/175] 19db91df4db65b89: cached (rel=5)
-[2026-04-28T02:10:34+0000] [148/175] 19db91deedebbae7: cached (rel=6)
-[2026-04-28T02:10:34+0000] [149/175] 19db91df14baa7a4: cached (rel=7)
-[2026-04-28T02:10:34+0000] [150/175] 19db91def980a283: cached (rel=6)
-[2026-04-28T02:10:34+0000] [151/175] 19db91dedafc144f: cached (rel=6)
-[2026-04-28T02:10:34+0000] [152/175] 19db9121c28a7240: cached (rel=6)
-[2026-04-28T02:10:34+0000] [153/175] 19db8c2c1a2869ed: cached (rel=9)
-[2026-04-28T02:10:34+0000] [154/175] 19db8e766bcf630f: cached (rel=2)
-[2026-04-28T02:10:34+0000] [155/175] 19db88f223d88087: cached (rel=9)
-[2026-04-28T02:10:34+0000] [156/175] 19db8cc01afe9402: cached (rel=6)
-[2026-04-28T02:10:34+0000] [157/175] 19db8bfdbc863329: cached (rel=6)
-[2026-04-28T02:10:34+0000] [158/175] 19db8bd263685e8a: cached (rel=6)
-[2026-04-28T02:10:34+0000] [159/175] 19db8ab64cc2d21d: cached (rel=6)
-[2026-04-28T02:10:34+0000] [160/175] 19db8ab602a90a96: cached (rel=6)
-[2026-04-28T02:10:34+0000] [161/175] 19db8ab5e6e4f579: cached (rel=7)
-[2026-04-28T02:10:34+0000] [162/175] 19db8ab5e4aa7e62: cached (rel=7)
-[2026-04-28T02:10:34+0000] [163/175] 19db8ab59cbfe7c3: cached (rel=7)
-[2026-04-28T02:10:34+0000] [164/175] 19db8ab543ca143f: cached (rel=6)
-[2026-04-28T02:10:34+0000] [165/175] 19db8a0e4f9bf2d0: cached (rel=5)
-[2026-04-28T02:10:34+0000] [166/175] 19db8781fda0756a: cached (rel=5)
-[2026-04-28T02:10:34+0000] [167/175] 19db85e7341976b9: cached (rel=6)
-[2026-04-28T02:10:34+0000] [168/175] 19db84a7aced3888: cached (rel=6)
-[2026-04-28T02:10:34+0000] [169/175] 19db83ee5ed5f6d5: cached (rel=5)
-[2026-04-28T02:10:34+0000] [170/175] 19db83bb1d75a711: cached (rel=3)
-[2026-04-28T02:10:34+0000] [171/175] 19db8397f517822a: cached (rel=7)
-[2026-04-28T02:10:34+0000] [172/175] 19db8383972c469f: cached (rel=7)
-[2026-04-28T02:10:34+0000] [173/175] 19da914e1413bff0: cached (rel=9)
-[2026-04-28T02:10:34+0000] [174/175] 19db8160d157a7f4: cached (rel=5)
-[2026-04-28T02:10:34+0000] [175/175] 19db814ab874b6c2: cached (rel=8)
-[2026-04-28T02:10:34+0000] Output: workdir/gmail-output.md (59 summaries, min_relevance=7)
-[2026-04-28T02:10:34+0000] COMPLETED (175 threads, fetched=6)
-(venv) root@65a984945e89:/a0/usr/workdir#
+[2026-04-28T06:01:02+0000] Browser connected. Browser timezone: UTC
+[2026-04-28T06:01:07+0000]   Page 1: 100 thread(s)
+[2026-04-28T06:01:07+0000]   Early stop: 5 consecutive cached
+[2026-04-28T06:01:13+0000]   Page 2: 100 thread(s)
+[2026-04-28T06:01:18+0000]   Page 3: 35 thread(s)
+[2026-04-28T06:01:43+0000] Phase 1: 168 threads (excluded=67, unchanged=147, to-fetch=21, unread=9)
+[2026-04-28T06:01:43+0000] [Fetching 1/21] Does OSMOS support special characters and emojis?
+[2026-04-28T06:01:53+0000]   Retry: resetting SPA state via inbox...
+[2026-04-28T06:02:04+0000]   Retry 2: full page reload...
+[2026-04-28T06:02:12+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:12+0000] [Fetching 2/21] [JIRA] (CORE-449) [LIGHT] Vendor/supplier data enrichme
+[2026-04-28T06:02:12+0000] Summarizing [1/168] Does OSMOS support special characters and emojis? (1 msgs, direct)
+[2026-04-28T06:02:19+0000]   -> 2 new message(s) cached
+[2026-04-28T06:02:20+0000]   -> restored unread status
+[2026-04-28T06:02:20+0000] [Fetching 3/21] [JIRA] (CORE-453) [LIGHT] Environment Setup - SIT and U
+[2026-04-28T06:02:21+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:21+0000]   -> restored unread status
+[2026-04-28T06:02:21+0000] [Fetching 4/21] [JIRA] (CORE-459) [LIGHT] Check special characters and
+[2026-04-28T06:02:24+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:24+0000]   -> restored unread status
+[2026-04-28T06:02:24+0000] [Fetching 5/21] Declined: [LIGHT] Attack & Defend Sync-Up (Michael Bui)
+[2026-04-28T06:02:27+0000]   -> 2 new message(s) cached
+[2026-04-28T06:02:27+0000] [Fetching 6/21] Invitation: [LIGHT] Attack & Defend Sync-Up @ Weekly fr
+[2026-04-28T06:02:30+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:30+0000] [Fetching 7/21] Declined: [LIGHT] Attack & Defend Sync-Up @ Wed Apr 29,
+[2026-04-28T06:02:32+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:32+0000] [Fetching 8/21] Invitation: [LIGHT] Attack & Defend Sync-Up @ Weekly fr
+[2026-04-28T06:02:34+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:34+0000] [Fetching 9/21] Invitation: [LIGHT] Attack & Defend Sync-Up @ Weekly fr
+[2026-04-28T06:02:35+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:35+0000] [Fetching 10/21] Invitation: [LIGHT] Attack & Defend Sync-Up @ Weekly fr
+[2026-04-28T06:02:36+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:36+0000] [Fetching 11/21] Invitation: [LIGHT] Attack & Defend Sync-Up @ Weekly fr
+[2026-04-28T06:02:37+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:37+0000] [Fetching 12/21] Invitation: [LIGHT] Attack & Defend Sync-Up @ Weekly fr
+[2026-04-28T06:02:38+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:38+0000] [Fetching 13/21] Invitation: [LIGHT] Attack & Defend Sync-Up @ Weekly fr
+[2026-04-28T06:02:39+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:39+0000] [Fetching 14/21] Invitation: [LIGHT] Attack & Defend Sync-Up @ Weekly fr
+[2026-04-28T06:02:40+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:40+0000] [Fetching 15/21] DOOH Vendor Evalu... - @michael.bui@fairpricegroup.sg n
+[2026-04-28T06:02:42+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:42+0000]   -> restored unread status
+[2026-04-28T06:02:42+0000] [Fetching 16/21] [JIRA] (DPD-1052) SLO improvements on marketing-service
+[2026-04-28T06:02:44+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:45+0000]   -> restored unread status
+[2026-04-28T06:02:45+0000] [Fetching 17/21] Hidden Lucid workflows worth stealing
+[2026-04-28T06:02:46+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:47+0000]   -> restored unread status
+[2026-04-28T06:02:47+0000] [Fetching 18/21] [Dashboard Report] Retail Media - DD Dashboard | Tue 28
+[2026-04-28T06:02:48+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:48+0000]   -> restored unread status
+[2026-04-28T06:02:48+0000] [Fetching 19/21] Updated invitation with note: Discussion: Advertima @ T
+[2026-04-28T06:02:50+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:50+0000]   -> restored unread status
+[2026-04-28T06:02:50+0000] [Fetching 20/21] [VidiCenter] Weekly Performance Report
+[2026-04-28T06:02:51+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:51+0000] [Fetching 21/21] NED-284992 [General Service request] New Bitbucket proj
+[2026-04-28T06:02:53+0000]   -> 1 new message(s) cached
+[2026-04-28T06:02:54+0000]   -> restored unread status
+[2026-04-28T06:03:22+0000] Done [1/168] 19dbeae2ad1acf29 rel=9
+[2026-04-28T06:03:22+0000] Summarizing [2/168] [JIRA] (CORE-449) [LIGHT] Vendor/supplier data enr (2 msgs, direct)
+[2026-04-28T06:04:55+0000] Done [2/168] 19dbdc4a696779c8 rel=6
+[2026-04-28T06:04:55+0000] Summarizing [3/168] [JIRA] (CORE-453) [LIGHT] Environment Setup - SIT  (1 msgs, direct)
+[2026-04-28T06:06:18+0000] Done [3/168] 19dbdc9e762da1df rel=6
+[2026-04-28T06:06:18+0000] Summarizing [4/168] [JIRA] (CORE-459) [LIGHT] Check special characters (1 msgs, direct)
+[2026-04-28T06:07:21+0000] Done [4/168] 19dbdd18841aed18 rel=5
+[2026-04-28T06:07:21+0000] Summarizing [5/168] Declined: [LIGHT] Attack & Defend Sync-Up (Michael (2 msgs, direct)
+[2026-04-28T06:08:47+0000] Done [5/168] 19dd25bf6dd0e5bb rel=5
+[2026-04-28T06:08:47+0000] Summarizing [6/168] Invitation: [LIGHT] Attack & Defend Sync-Up @ Week (1 msgs, direct)
+[2026-04-28T06:10:20+0000] Done [6/168] 19dd25bde3ed6c94 rel=6
+[2026-04-28T06:10:20+0000] Summarizing [7/168] Declined: [LIGHT] Attack & Defend Sync-Up @ Wed Ap (1 msgs, direct)
+[2026-04-28T06:11:40+0000] Done [7/168] 19dd25b8cf2cb024 rel=6
+[2026-04-28T06:11:40+0000] Summarizing [8/168] Invitation: [LIGHT] Attack & Defend Sync-Up @ Week (1 msgs, direct)
+[2026-04-28T06:13:35+0000] Done [8/168] 19dd25b89bee93b7 rel=8
+[2026-04-28T06:13:35+0000] Summarizing [9/168] Invitation: [LIGHT] Attack & Defend Sync-Up @ Week (1 msgs, direct)
+[2026-04-28T06:15:23+0000] Done [9/168] 19dd25b864526ab5 rel=7
+[2026-04-28T06:15:23+0000] Summarizing [10/168] Invitation: [LIGHT] Attack & Defend Sync-Up @ Week (1 msgs, direct)
 
-[SYSTEM: Returning control to agent after 120 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+
+[SYSTEM: Returning control to agent after 900 seconds of execution. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
