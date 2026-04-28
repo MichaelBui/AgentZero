@@ -1,164 +1,100 @@
-[2026-04-27T17:55:11+0000] STARTED (days=5, since=2026-04-22, user=Michael Bui)
-[2026-04-27T17:55:11+0000] Connecting to browser at http://192.168.1.11:9223...
-(node:23094) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+[2026-04-28T02:31:32+0000] STARTED (days=5, since=2026-04-23, user=Michael Bui)
+[2026-04-28T02:31:32+0000] Connecting to browser at http://192.168.1.11:9223...
+(node:24588) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[2026-04-27T17:55:14+0000] Reusing tab: https://chat.google.com/app/home
-[2026-04-27T17:55:33+0000] Feed: 105 item(s) within 5 day(s)
-[2026-04-27T17:55:33+0000]   Early stop: 3 consecutive cached
-[2026-04-27T17:55:33+0000] Phase 1: 105 conversations (focus-skip=0, unchanged=97, to-fetch=8, unread=5)
-[2026-04-27T17:55:33+0000] [Fetching 1/8] #dd-dpd-engage-alert
-[2026-04-27T17:56:05+0000]   Hit scroll limit (5)
-[2026-04-27T17:56:05+0000]   -> 17 message(s)
-[2026-04-27T17:56:06+0000]   -> 17 new cached
-[2026-04-27T17:56:13+0000]   -> restored unread status
-[2026-04-27T17:56:13+0000] [Fetching 2/8] RMN Notification
-[2026-04-27T17:56:13+0000] Summarizing [1/105] #dd-dpd-engage-alert (17 msgs, direct, ctx=50000)
-[2026-04-27T17:56:43+0000]   Scroll early-stop: 30 consecutive cached messages
-[2026-04-27T17:56:43+0000]   -> 59 message(s)
-[2026-04-27T17:56:44+0000]   -> 12 new cached
-[2026-04-27T17:56:48+0000]   WARN: could not restore unread status
-[2026-04-27T17:56:48+0000] [Fetching 3/8] Power Breakfast (April) - Games/Activity - Apr 21
-[2026-04-27T17:57:16+0000]   Reached top after 2 scroll(s)
-[2026-04-27T17:57:16+0000]   -> 12 message(s)
-[2026-04-27T17:57:16+0000]   -> 1 new cached
-[2026-04-27T17:57:22+0000]   -> restored unread status
-[2026-04-27T17:57:22+0000] [Fetching 4/8] Shopping Cart Notification
-[2026-04-27T17:57:34+0000] Done [1/105] space/AAAAxwwNw2U rel=5
-[2026-04-27T17:57:34+0000] Summarizing [2/105] RMN Notification (12 msgs, none, ctx=50000)
-[2026-04-27T17:57:53+0000]   Hit scroll limit (5)
-[2026-04-27T17:57:53+0000]   -> 17 message(s)
-[2026-04-27T17:57:53+0000]   -> 4 new cached
-[2026-04-27T17:58:00+0000]   -> restored unread status
-[2026-04-27T17:58:00+0000] [Fetching 5/8] #dd-dpd-grocery-alert
-[2026-04-27T17:58:29+0000] Done [2/105] space/AAQA85dw4So rel=2
-[2026-04-27T17:58:29+0000] Summarizing [3/105] Power Breakfast (April) - Games/Activity - Apr 21 (1 msgs, direct, ctx=50000)
-[2026-04-27T17:58:31+0000]   Hit scroll limit (5)
-[2026-04-27T17:58:31+0000]   -> 17 message(s)
-[2026-04-27T17:58:31+0000]   -> 2 new cached
-[2026-04-27T17:58:38+0000]   -> restored unread status
-[2026-04-27T17:58:38+0000] [Fetching 6/8] RMN Integration
-[2026-04-27T17:59:02+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-27T17:59:02+0000]   -> 15 message(s)
-[2026-04-27T17:59:02+0000]   -> 1 new cached
-[2026-04-27T17:59:02+0000] [Fetching 7/8] Tiong Siong Tee
-[2026-04-27T17:59:26+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-27T17:59:26+0000]   -> 17 message(s)
-[2026-04-27T17:59:26+0000]   -> 2 new cached
-[2026-04-27T17:59:26+0000] [Fetching 8/8] DPD x Platform Engineering
-[2026-04-27T17:59:36+0000]   Reached top after 2 scroll(s)
-[2026-04-27T17:59:36+0000]   -> 7 message(s)
-[2026-04-27T17:59:37+0000]   -> 1 new cached
-[2026-04-27T17:59:37+0000] Phase 2: fetched 8/8 conversations
-[2026-04-27T17:59:39+0000] Done [3/105] space/AAQAomPeN1M rel=7
-[2026-04-27T17:59:39+0000] Summarizing [4/105] Shopping Cart Notification (4 msgs, direct, ctx=50000)
-[2026-04-27T18:01:06+0000] Done [4/105] space/AAAAsbHANyc rel=5
-[2026-04-27T18:01:06+0000] Summarizing [5/105] #dd-dpd-grocery-alert (2 msgs, none, ctx=50000)
-[2026-04-27T18:02:22+0000] Done [5/105] space/AAAAtxQjB7c rel=2
-[2026-04-27T18:02:22+0000] Summarizing [6/105] RMN Integration (1 msgs, direct, ctx=50000)
-[2026-04-27T18:03:34+0000] Done [6/105] space/AAQAKHz7DQM rel=9
-[2026-04-27T18:03:34+0000] Summarizing [7/105] Tiong Siong Tee (2 msgs, direct, ctx=50000)
-[2026-04-27T18:04:41+0000] Done [7/105] dm/700U4cAAAAE rel=8
-[2026-04-27T18:04:41+0000] Summarizing [8/105] DPD x Platform Engineering (1 msgs, direct, ctx=50000)
-[2026-04-27T18:05:45+0000] Done [8/105] space/AAQAcjNXKpA/XPFii8QhKFQ rel=9
-[2026-04-27T18:05:45+0000] [9/105] space/AAQAU1-kEPU: cached (rel=9)
-[2026-04-27T18:05:45+0000] [10/105] dm/kgs0IyAAAAE: cached (rel=9)
-[2026-04-27T18:05:45+0000] [11/105] dm/7d1XKcAAAAE: cached (rel=9)
-[2026-04-27T18:05:45+0000] [12/105] space/AAQAcjNXKpA/MShbuBdVcyo: cached (rel=9)
-[2026-04-27T18:05:45+0000] [13/105] space/AAQAzOZUb-k/-PVeu24psWs: cached (rel=8)
-[2026-04-27T18:05:45+0000] [14/105] space/AAQAEadXDr4: cached (rel=2)
-[2026-04-27T18:05:45+0000] [15/105] space/AAAAQQGZSZU: cached (rel=8)
-[2026-04-27T18:05:45+0000] [16/105] space/AAQAcjNXKpA: cached (rel=9)
-[2026-04-27T18:05:45+0000] [17/105] dm/kgs0IyAAAAE/or3ZKvoF_Uc: cached (rel=9)
-[2026-04-27T18:05:45+0000] [18/105] space/AAQAsFyLso4/pZqwfblDCPQ: cached (rel=9)
-[2026-04-27T18:05:45+0000] [19/105] space/AAQAxUYxclM/hAJRxdySUjA: cached (rel=9)
-[2026-04-27T18:05:45+0000] [20/105] space/AAQAsFyLso4: cached (rel=8)
-[2026-04-27T18:05:45+0000] [21/105] space/AAQAeP3ki3k/OZoDL5pNvIo: cached (rel=8)
-[2026-04-27T18:05:45+0000] [22/105] space/AAQAYFrzaHE: cached (rel=9)
-[2026-04-27T18:05:45+0000] [23/105] space/AAAAS7vPcKs: cached (rel=2)
-[2026-04-27T18:05:45+0000] [24/105] space/AAQA60JiGqg: cached (rel=9)
-[2026-04-27T18:05:45+0000] [25/105] space/AAQAZ--llew: cached (rel=8)
-[2026-04-27T18:05:45+0000] [26/105] space/AAQANrfwab4: cached (rel=9)
-[2026-04-27T18:05:45+0000] [27/105] space/AAAAhWLveDE: cached (rel=2)
-[2026-04-27T18:05:45+0000] [28/105] space/AAQAUbi9szY/AhfyxD9jdFo: cached (rel=8)
-[2026-04-27T18:05:45+0000] [29/105] space/AAQAsFRbqGw: cached (rel=2)
-[2026-04-27T18:05:45+0000] [30/105] space/AAQAUJW8HMo: cached (rel=7)
-[2026-04-27T18:05:45+0000] [31/105] space/AAAAP63CaPo: cached (rel=7)
-[2026-04-27T18:05:45+0000] [32/105] space/AAQAsJhgUrA: cached (rel=3)
-[2026-04-27T18:05:45+0000] [33/105] dm/_6MV8IAAAAE: cached (rel=8)
-[2026-04-27T18:05:45+0000] [34/105] space/AAQAeP3ki3k: cached (rel=8)
-[2026-04-27T18:05:45+0000] [35/105] space/AAAAde_cYKA: cached (rel=8)
-[2026-04-27T18:05:45+0000] [36/105] space/AAAAs0DTvmA: cached (rel=2)
-[2026-04-27T18:05:45+0000] [37/105] space/AAAAnlKPglA: cached (rel=2)
-[2026-04-27T18:05:45+0000] [38/105] space/AAQAs3WiMks: cached (rel=8)
-[2026-04-27T18:05:45+0000] [39/105] dm/t3wf6EAAAAE: cached (rel=9)
-[2026-04-27T18:05:45+0000] [40/105] space/AAQAUbi9szY: cached (rel=7)
-[2026-04-27T18:05:45+0000] [41/105] space/AAQAgdyVn9Y: cached (rel=5)
-[2026-04-27T18:05:45+0000] [42/105] space/AAAAjDYVcBU: cached (rel=2)
-[2026-04-27T18:05:45+0000] [43/105] space/AAAA8dv5lp0: cached (rel=2)
-[2026-04-27T18:05:45+0000] [44/105] dm/zmMZpgAAAAE: cached (rel=9)
-[2026-04-27T18:05:45+0000] [45/105] space/AAQAeP3ki3k/gkg2z9QHIDE: cached (rel=9)
-[2026-04-27T18:05:45+0000] [46/105] space/AAQAsFyLso4/3JEtAVC80Uo: cached (rel=2)
-[2026-04-27T18:05:45+0000] [47/105] space/AAQAeP3ki3k/7onPBh452ug: cached (rel=8)
-[2026-04-27T18:05:45+0000] [48/105] dm/xCO548AAAAE: cached (rel=8)
-[2026-04-27T18:05:45+0000] [49/105] space/AAAA8Ot7GRg: cached (rel=2)
-[2026-04-27T18:05:45+0000] [50/105] space/AAQAfPz5dxM: cached (rel=9)
-[2026-04-27T18:05:45+0000] [51/105] space/AAAAYX-ew1s: cached (rel=2)
-[2026-04-27T18:05:45+0000] [52/105] space/AAQAP-kMoqY: cached (rel=3)
-[2026-04-27T18:05:45+0000] [53/105] space/AAQAKHz7DQM/FTYObj5L49o: cached (rel=9)
-[2026-04-27T18:05:45+0000] [54/105] space/AAQAzOZUb-k: cached (rel=8)
-[2026-04-27T18:05:45+0000] [55/105] dm/rwGu4gAAAAE: cached (rel=8)
-[2026-04-27T18:05:45+0000] [56/105] space/AAAAQQGZSZU/J8mVmUSya0E: cached (rel=7)
-[2026-04-27T18:05:45+0000] [57/105] space/AAQAKHz7DQM/OEvyxxG8wKg: cached (rel=9)
-[2026-04-27T18:05:45+0000] [58/105] space/AAAADYH5KAQ: cached (rel=9)
-[2026-04-27T18:05:45+0000] [59/105] space/AAQAsFyLso4/6FVuyN1ckX8: cached (rel=9)
-[2026-04-27T18:05:45+0000] [60/105] space/AAQASkvSlwo: cached (rel=2)
-[2026-04-27T18:05:45+0000] [61/105] space/AAQAiCoa2Do: cached (rel=2)
-[2026-04-27T18:05:45+0000] [62/105] dm/yHhI1sAAAAE: cached (rel=7)
-[2026-04-27T18:05:45+0000] [63/105] space/AAQAOuIZXNk: cached (rel=8)
-[2026-04-27T18:05:46+0000] [64/105] space/AAQAeP3ki3k/qYezmBLyC2g: cached (rel=8)
-[2026-04-27T18:05:46+0000] [65/105] space/AAQAXn1ocmE/IdAESjXhcS4: cached (rel=9)
-[2026-04-27T18:05:46+0000] [66/105] space/AAAAQezbuRE/RdsWCRE8avc: cached (rel=2)
-[2026-04-27T18:05:46+0000] [67/105] space/AAQAXn1ocmE/2nFFPHUiRYM: cached (rel=8)
-[2026-04-27T18:05:46+0000] [68/105] space/AAAAQezbuRE: cached (rel=2)
-[2026-04-27T18:05:46+0000] [69/105] space/AAQAXn1ocmE: cached (rel=9)
-[2026-04-27T18:05:46+0000] [70/105] space/AAAAzZ3qkNU: cached (rel=2)
-[2026-04-27T18:05:46+0000] [71/105] space/AAQAkS6fV24: cached (rel=2)
-[2026-04-27T18:05:46+0000] [72/105] space/AAQAKHz7DQM/cWmMsNe7zkE: cached (rel=8)
-[2026-04-27T18:05:46+0000] [73/105] space/AAQAxUYxclM/atbUVncHUNQ: cached (rel=9)
-[2026-04-27T18:05:46+0000] [74/105] space/AAQAKHz7DQM/2Zyz5fQobmQ: cached (rel=7)
-[2026-04-27T18:05:46+0000] [75/105] space/AAQAo-QLuW4: cached (rel=2)
-[2026-04-27T18:05:46+0000] [76/105] space/AAQAHH3dAYc/KS4tWmm7fVo: cached (rel=2)
-[2026-04-27T18:05:46+0000] [77/105] space/AAQAHH3dAYc: cached (rel=6)
-[2026-04-27T18:05:46+0000] [78/105] space/AAAAx50IkHw/_NcP7L7Xja8: cached (rel=5)
-[2026-04-27T18:05:46+0000] [79/105] space/AAAAx50IkHw/1ULHrF6e6R8: cached (rel=7)
-[2026-04-27T18:05:46+0000] [80/105] space/AAAAx50IkHw: cached (rel=8)
-[2026-04-27T18:05:46+0000] [81/105] space/AAQAfoSjZhk: cached (rel=9)
-[2026-04-27T18:05:46+0000] [82/105] space/AAQAKHz7DQM/HRonaYEzk_0: cached (rel=9)
-[2026-04-27T18:05:46+0000] [83/105] space/AAQAKHz7DQM/mc23ZpCLqM0: cached (rel=9)
-[2026-04-27T18:05:46+0000] [84/105] space/AAQAKHz7DQM/bnvhv6FAdho: cached (rel=9)
-[2026-04-27T18:05:46+0000] [85/105] space/AAQAKHz7DQM/1MefN8bhyFg: cached (rel=9)
-[2026-04-27T18:05:46+0000] [86/105] space/AAQAxUYxclM: cached (rel=9)
-[2026-04-27T18:05:46+0000] [87/105] space/AAQAmlJPshk: cached (rel=8)
-[2026-04-27T18:05:46+0000] [88/105] space/AAQAX9iKYf0: cached (rel=3)
-[2026-04-27T18:05:46+0000] [89/105] space/AAQAKHz7DQM/8AZrALS0XzQ: cached (rel=9)
-[2026-04-27T18:05:46+0000] [90/105] space/AAQAEVz4U_8: cached (rel=6)
-[2026-04-27T18:05:46+0000] [91/105] space/AAQAS8FM85I: cached (rel=2)
-[2026-04-27T18:05:46+0000] [92/105] space/AAQAKHz7DQM/F1a3rEqRHZ0: cached (rel=9)
-[2026-04-27T18:05:46+0000] [93/105] space/AAAAoJgpZBM: cached (rel=2)
-[2026-04-27T18:05:46+0000] [94/105] space/AAQA4rDgC4Q: cached (rel=7)
-[2026-04-27T18:05:46+0000] [95/105] space/AAQAsFyLso4/pSty94BQuvY: cached (rel=9)
-[2026-04-27T18:05:46+0000] [96/105] space/AAQAcFoWHWk: cached (rel=9)
-[2026-04-27T18:05:46+0000] [97/105] space/AAQARGCS1Wk: cached (rel=2)
-[2026-04-27T18:05:46+0000] [98/105] space/AAQAsFyLso4/phg6sVCw8JA: cached (rel=9)
-[2026-04-27T18:05:46+0000] [99/105] dm/szHVCgAAAAE: cached (rel=7)
-[2026-04-27T18:05:46+0000] [100/105] space/AAQAsFyLso4/T7uHJaYYLc8: cached (rel=2)
-[2026-04-27T18:05:46+0000] [101/105] space/AAQAUbi9szY/tVzo2ijSyaI: cached (rel=9)
-[2026-04-27T18:05:46+0000] [102/105] dm/1jxi4yAAAAE: cached (rel=8)
-[2026-04-27T18:05:46+0000] [103/105] space/AAQASb31MK0: cached (rel=9)
-[2026-04-27T18:05:46+0000] [104/105] space/AAQAO2Qaz1o: cached (rel=9)
-[2026-04-27T18:05:46+0000] [105/105] space/AAAAeRY8rc8: cached (rel=3)
-[2026-04-27T18:05:47+0000] Output: /a0/usr/workdir/gchat-output.md (78 summaries, min_relevance=7)
-[2026-04-27T18:05:47+0000] COMPLETED (105 conversations, fetched=8)
-(venv) root@65a984945e89:/a0/usr/workdir#
+[2026-04-28T02:31:33+0000] Reusing tab: https://chat.google.com/app/home
+[2026-04-28T02:32:02+0000] Feed: 103 item(s) within 5 day(s)
+[2026-04-28T02:32:02+0000]   Early stop: 3 consecutive cached
+[2026-04-28T02:32:02+0000] Phase 1: 103 conversations (focus-skip=0, unchanged=87, to-fetch=16, unread=11)
+[2026-04-28T02:32:02+0000] [Fetching 1/16] RMN Notification
+[2026-04-28T02:32:31+0000]   Scroll early-stop: 30 consecutive cached messages
+[2026-04-28T02:32:31+0000]   -> 48 message(s)
+[2026-04-28T02:32:31+0000]   -> 6 new cached
+[2026-04-28T02:32:39+0000]   -> restored unread status
+[2026-04-28T02:32:39+0000] [Fetching 2/16] Attack Team
+[2026-04-28T02:32:39+0000] Summarizing [1/103] RMN Notification (6 msgs, none, ctx=50000)
+[2026-04-28T02:32:50+0000]   Reached top after 1 scroll(s)
+[2026-04-28T02:32:50+0000]   -> 8 message(s)
+[2026-04-28T02:32:50+0000]   -> 8 new cached
+[2026-04-28T02:32:53+0000]   WARN: could not restore unread status
+[2026-04-28T02:32:53+0000] [Fetching 3/16] #dd-dpd-engage-alert
+[2026-04-28T02:33:23+0000]   Hit scroll limit (5)
+[2026-04-28T02:33:23+0000]   -> 16 message(s)
+[2026-04-28T02:33:25+0000]   -> 16 new cached
+[2026-04-28T02:33:30+0000]   -> restored unread status
+[2026-04-28T02:33:30+0000] [Fetching 4/16] [Tech] Light x Comall
+[2026-04-28T02:33:39+0000]   Reached top after 0 scroll(s)
+[2026-04-28T02:33:39+0000]   -> 2 message(s)
+[2026-04-28T02:33:40+0000]   -> 2 new cached
+[2026-04-28T02:33:40+0000] [Fetching 5/16] Retail out-of-home (rOOH)
+[2026-04-28T02:33:43+0000]   SKIP: item not found in DOM
+[2026-04-28T02:33:43+0000] [Fetching 6/16] fairnex-datadog-notification
+[2026-04-28T02:33:47+0000] Done [1/103] space/AAQA85dw4So rel=2
+[2026-04-28T02:33:47+0000] Summarizing [2/103] Attack Team (8 msgs, direct, ctx=50000)
+[2026-04-28T02:34:16+0000]   Hit scroll limit (5)
+[2026-04-28T02:34:16+0000]   -> 23 message(s)
+[2026-04-28T02:34:17+0000]   -> 9 new cached
+[2026-04-28T02:34:25+0000]   -> restored unread status
+[2026-04-28T02:34:25+0000] [Fetching 7/16] Attack Team
+[2026-04-28T02:34:56+0000]   Reached top after 4 scroll(s)
+[2026-04-28T02:34:56+0000]   -> 12 message(s)
+[2026-04-28T02:34:56+0000]   -> 1 new cached
+[2026-04-28T02:34:56+0000] [Fetching 8/16] [Squad 1] Homepage Discovery Shopping - Project Light D
+[2026-04-28T02:34:59+0000]   SKIP: item not found in DOM
+[2026-04-28T02:34:59+0000] [Fetching 9/16] [Tech] Light x Comall
+[2026-04-28T02:35:25+0000] Done [2/103] space/AAQAeP3ki3k/211HdX2T1A0 rel=9
+[2026-04-28T02:35:25+0000] Summarizing [3/103] #dd-dpd-engage-alert (16 msgs, direct, ctx=50000)
+[2026-04-28T02:35:29+0000]   Scroll early-stop: 3 consecutive cached messages
+[2026-04-28T02:35:29+0000]   -> 19 message(s)
+[2026-04-28T02:35:30+0000]   -> 16 new cached
+[2026-04-28T02:35:30+0000] [Fetching 10/16] @omni-ops #standup - Apr 28
+[2026-04-28T02:35:56+0000]   Reached top after 1 scroll(s)
+[2026-04-28T02:35:56+0000]   -> 2 message(s)
+[2026-04-28T02:35:56+0000]   -> 2 new cached
+[2026-04-28T02:36:03+0000]   -> restored unread status
+[2026-04-28T02:36:03+0000] [Fetching 11/16] [Tech] Light x Comall
+[2026-04-28T02:36:11+0000]   Reached cutoff after 0 scroll(s)
+[2026-04-28T02:36:11+0000]   -> 10 message(s)
+[2026-04-28T02:36:12+0000]   -> 3 new cached
+[2026-04-28T02:36:12+0000] [Fetching 12/16] Digital Product Development {DPD}
+[2026-04-28T02:36:35+0000]   Reached cutoff after 0 scroll(s)
+[2026-04-28T02:36:35+0000]   -> 2 message(s)
+[2026-04-28T02:36:36+0000]   -> 1 new cached
+[2026-04-28T02:36:36+0000] [Fetching 13/16] Digital & Tech - General
+[2026-04-28T02:36:59+0000]   Reached cutoff after 0 scroll(s)
+[2026-04-28T02:36:59+0000]   -> 4 message(s)
+[2026-04-28T02:37:00+0000]   -> 2 new cached
+[2026-04-28T02:37:06+0000]   -> restored unread status
+[2026-04-28T02:37:06+0000] [Fetching 14/16] #dd-dpd-grocery-alert
+[2026-04-28T02:37:13+0000] Done [3/103] space/AAAAxwwNw2U rel=5
+[2026-04-28T02:37:13+0000] Summarizing [4/103] [Tech] Light x Comall (2 msgs, direct, ctx=50000)
+[2026-04-28T02:37:37+0000]   Hit scroll limit (5)
+[2026-04-28T02:37:37+0000]   -> 16 message(s)
+[2026-04-28T02:37:37+0000]   -> 3 new cached
+[2026-04-28T02:37:44+0000]   -> restored unread status
+[2026-04-28T02:37:44+0000] [Fetching 15/16] 📅 Daily summary
+[2026-04-28T02:38:09+0000]   Reached cutoff after 0 scroll(s)
+[2026-04-28T02:38:09+0000]   -> 5 message(s)
+[2026-04-28T02:38:09+0000]   -> 2 new cached
+[2026-04-28T02:38:18+0000]   -> restored unread status
+[2026-04-28T02:38:18+0000] [Fetching 16/16] Shopping Cart Notification
+[2026-04-28T02:38:41+0000] Done [4/103] space/AAQAxUYxclM/GOO4AyY_5Sg rel=9
+[2026-04-28T02:38:41+0000] Summarizing [5/103] fairnex-datadog-notification (9 msgs, none, ctx=50000)
+[2026-04-28T02:38:51+0000]   Hit scroll limit (5)
+[2026-04-28T02:38:51+0000]   -> 16 message(s)
+[2026-04-28T02:38:52+0000]   -> 7 new cached
+[2026-04-28T02:38:58+0000]   -> restored unread status
+[2026-04-28T02:38:58+0000] Phase 2: fetched 14/16 conversations
+[2026-04-28T02:40:10+0000] Done [5/103] space/AAAA8dv5lp0 rel=2
+[2026-04-28T02:40:10+0000] Summarizing [6/103] Attack Team (1 msgs, direct, ctx=50000)
+[2026-04-28T02:41:25+0000] Done [6/103] space/AAQAeP3ki3k rel=9
+[2026-04-28T02:41:25+0000] Summarizing [7/103] [Tech] Light x Comall (16 msgs, direct, ctx=50000)
+[2026-04-28T02:42:58+0000] Done [7/103] space/AAQAxUYxclM rel=9
+[2026-04-28T02:42:58+0000] Summarizing [8/103] @omni-ops #standup - Apr 28 (2 msgs, none, ctx=50000)
+[2026-04-28T02:43:45+0000] Done [8/103] space/AAQApoZ71QM rel=2
+[2026-04-28T02:43:45+0000] Summarizing [9/103] [Tech] Light x Comall (3 msgs, direct, ctx=50000)
+[2026-04-28T02:44:56+0000] Done [9/103] space/AAQAxUYxclM/hAJRxdySUjA rel=9
+[2026-04-28T02:44:56+0000] Summarizing [10/103] Digital Product Development {DPD} (1 msgs, direct, ctx=50000)
 
-[SYSTEM: Returning control to agent after 120 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+
+[SYSTEM: Returning control to agent after 900 seconds of execution. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
