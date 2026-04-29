@@ -1,0 +1,25 @@
+[2026-04-29T08:46:12+0000] ERROR summarizing space/AAQAxUYxclM/hAJRxdySUjA: LLM connection failed after 3 retries: HTTPSConnectionPool(host='llm.gigary.com', port=443): Read timed out. (read timeout=120)
+[2026-04-29T08:46:12+0000] Summarizing [31/104] [Light] Project Light Attack and Defence Leads (2 msgs, direct, ctx=50000)
+[2026-04-29T08:48:00+0000] Done [31/104] space/AAQAsFyLso4/5K_HxV1Ra1g rel=8
+[2026-04-29T08:48:00+0000] Summarizing [32/104] Mohit Niranwal (2 msgs, direct, ctx=50000)
+[2026-04-29T08:49:07+0000] Done [32/104] dm/iqDHjgAAAAE rel=8
+[2026-04-29T08:49:07+0000] Summarizing [33/104] Yangyu Wang (7 msgs, direct, ctx=50000)
+[2026-04-29T08:50:27+0000] Done [33/104] dm/4Ut7xcAAAAE rel=8
+[2026-04-29T08:50:27+0000] Summarizing [34/104] ❗ Important Email (2 msgs, direct, ctx=50000)
+[2026-04-29T08:52:16+0000] Done [34/104] space/AAQAUJW8HMo rel=5
+[2026-04-29T08:52:17+0000] Summarizing [35/104] Tiong Siong Tee (7 msgs, direct, ctx=50000)
+[2026-04-29T08:53:35+0000] Done [35/104] dm/700U4cAAAAE rel=8
+[2026-04-29T08:53:35+0000] Summarizing [36/104] RMN Notification (9 msgs, none, ctx=50000)
+[2026-04-29T08:54:32+0000] Done [36/104] space/AAQA85dw4So rel=2
+[2026-04-29T08:54:32+0000] Summarizing [37/104] [Tech] Light x Comall (15 msgs, direct, ctx=50000)
+[2026-04-29T08:55:40+0000] Done [37/104] space/AAQAxUYxclM/EoPrL8fOGqw rel=9
+[2026-04-29T08:55:40+0000] Summarizing [38/104] Network & Security Team x rOOH (8 msgs, direct, ctx=50000)
+[2026-04-29T08:57:16+0000] Done [38/104] space/AAQAVciLBcU rel=8
+[2026-04-29T08:57:17+0000] Summarizing [39/104] Network & Security Team x rOOH (3 msgs, direct, ctx=50000)
+[2026-04-29T08:58:22+0000] Done [39/104] space/AAQAVciLBcU/TPzuytNYgaQ rel=8
+[2026-04-29T08:58:22+0000] Summarizing [40/104] [Light] Project Light Attack and Defence Leads (1 msgs, direct, ctx=50000)
+[2026-04-29T08:59:34+0000] Done [40/104] space/AAQAsFyLso4/ROi-D1ElXHU rel=8
+[2026-04-29T08:59:34+0000] Summarizing [41/104] QE <-> All Tribes (1 msgs, none, ctx=50000)
+
+
+[SYSTEM: Returning control to agent after 900 seconds of execution. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
