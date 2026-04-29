@@ -1,0 +1,39 @@
+Llama.cpp/vLLM Toolboxes for LLM inference on Strix Halo - Framework Desktop - Framework Community
+https://community.frame.work/t/llama-cpp-vllm-toolboxes-for-llm-inference-on-strix-halo/74916
+I just wanted to share the toolboxes I’ve been working on together with folks at https://strixhalo-homelab.d7.wtf/. The idea is to provide ready-to-use environments for LLM inference tailored at Strix Halo, together with configuration tips. These all require you to install a recent Linux distribution, I recommend Fedora 42.
+
+AMD Strix Halo Llama.cpp Installation Guide for Fedora 42 - Framework Desktop - Framework Community
+https://community.frame.work/t/amd-strix-halo-llama-cpp-installation-guide-for-fedora-42/75856
+AMD Strix Halo Llama.cpp Installation Guide for Fedora 42 This guide walks you through setting up LLM inference on AMD Ryzen AI Max “Strix Halo” integrated GPUs using Fedora 42.
+
+Strix Halo Mini PCs for Local LLM Inference: A Practical Guide to Running Large Models at Home | Starry Hope
+https://www.starryhope.com/minipcs/strix-halo-local-llm-inference-2026/
+AMD’s Strix Halo mini PCs pack 128GB of unified memory that both the CPU and GPU can access, enough to run 70-billion-parameter language models locally, all in a box that fits on your desk and draws less power than a gaming PC. After a year of real-world testing from the LocalLLaMA community and independent benchmarkers, we finally have a clear picture of what these systems can actually deliver.
+
+Strix Halo LLM inference notes - Machine Learning, LLMs, & AI - Level1Techs Forums
+https://forum.level1techs.com/t/strix-halo-llm-inference-notes/249466
+I’ve been tuning a Strix Halo box as my long-context local LLM tier and figured the setup might be useful to others running similar gear, or anyone weighing whether to pick one up. Headline: Qwen3.6-35B-A3B UD-Q8_K_XL through llama.cpp, serving around 25 tok/s with a live observed context ...
+
+I optimized my Strix Halo for local LLMs: Here are the benchmarks and findings.
+https://www.hardware-corner.net/strix-halo-llm-optimization/
+Trying to optimize Strix Halo for local LLMs? Learn the critical command to boost ROCm speed and discover the best backend for every task with my definitive benchmarks and cheat sheet.
+
+Local LLM Infrastructure on Strix Halo | Sleeping Robots
+https://sleepingrobots.com/dreams/local-llm-infrastructure-strix-halo/
+Lemonade Server is the third piece, AMD’s OpenAI-compatible inference server that runs models on the XDNA 2 NPU using the FastFlowLM runtime. I covered the full setup, driver builds, and benchmarks in Running LLMs on the AMD NPU with Lemonade Server.
+
+GitHub - kyuz0/amd-strix-halo-toolboxes · GitHub
+https://github.com/kyuz0/amd-strix-halo-toolboxes
+This project provides pre-built containers (“toolboxes”) for running LLMs on AMD Ryzen AI Max “Strix Halo” integrated GPUs.
+
+Trillion-Parameter LLM on an AMD Ryzen™ AI Max+ Cluster
+https://www.amd.com/en/developer/resources/technical-articles/2026/how-to-run-a-one-trillion-parameter-llm-locally-an-amd.html
+The Lemonade SDK project provides nightly builds of llama.cpp with AMD ROCm™ 7 acceleration baked in, targeting GPUs such as gfx1151 (Strix Halo / Ryzen AI Max+ 395) and other recent Radeon architectures.
+
+GitHub - hogeheer499-commits/strix-halo-guide: The definitive Strix Halo LLM guide — 65 t/s on a $2,999 mini PC. Live benchmarks, tested optimizations, and everything that doesn't work.
+https://github.com/hogeheer499-commits/strix-halo-guide
+Ollama is the easiest way to run LLMs on Strix Halo. With the right configuration, it works great. ... Update (April 2026): Ollama ROCm now works on gfx1151 with HSA_OVERRIDE_GFX_VERSION=11.5.1 (ollama/ollama#14855).
+
+GitHub - Gygeek/Framework-strix-halo-llm-setup: Complete guide to running large language models locally on AMD Ryzen AI Max+ 395 (Strix Halo) with 128GB unified memory. Covers BIOS config, kernel setup, ROCm installation, and llama.cpp deployment. Run 70B+ parameter models on a single APU. · GitHub
+https://github.com/Gygeek/Framework-strix-halo-llm-setup
+Complete guide to running large language models locally on AMD Ryzen AI Max+ 395 (Strix Halo) with 128GB unified memory. Covers BIOS config, kernel setup, ROCm installation, and llama.cpp deploymen...

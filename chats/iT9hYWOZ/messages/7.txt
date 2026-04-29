@@ -1,0 +1,39 @@
+Go Microservices Architecture: Patterns and Best Practices 2026 | Reintech media
+https://reintech.io/blog/go-microservices-architecture-patterns-best-practices-2026
+A practical guide to building resilient Go microservices in 2026. Learn proven patterns for service communication, data management, observability, and deployment that work in production environments.
+
+Practical Strategies for Applying 12 Factor Principles
+https://www.einfochips.com/blog/practical-strategies-for-applying-12-factor-principles-in-microservices-architecture/
+The 12 Factor Design principles offer a set of best practices for building scalable, resilient, and maintainable microservices. These principles are particularly important for organizations looking to scale their applications effectively while maintaining consistent performance across environments. To successfully implement the 12 Factor principles in a microservices architecture, thorough ...
+
+Go Project Structure 2026: Clean Architecture and Best Practices
+https://reintech.io/blog/go-project-structure-2026-clean-architecture-best-practices
+Learn modern Go project structure patterns for 2026. Practical guide to clean architecture, dependency management, and organizing Go code for production applications.
+
+Keep your Microservices Clean Using the Twelve-Factor App Principles | by Christian Belisle | SSENSE-TECH | Medium
+https://medium.com/ssense-tech/keep-your-microservices-clean-using-the-twelve-factor-app-principles-f57ee42c164
+Today, I suggest you use the twelve-factor principles as a baseline in your architecture decisions. The contributors to this methodology listed the problems they saw during their experience and they came up with a proposal of 12 best practices that:
+
+Building Scalable .NET Core Applications: The 12-Factor App with Clean Architecture | by rahul sahay | Medium
+https://rahulsahay19.medium.com/building-scalable-net-core-applications-the-12-factor-app-with-clean-architecture-42aa4ce547a6
+Interacting with backing services, such as databases or external APIs, should be done via encapsulated interfaces or repositories. In Clean Architecture, create repositories within the MyApp.Infrastructure project to handle data access and integrate ...
+
+Go Microservice with Clean Architecture | by Jin Feng | Medium
+https://medium.com/@jfeng45/go-microservice-with-clean-architecture-a08fa916a5db
+You can use this application as the starting point to base your next application. The only cost is to figure out how different pieces of the application are wired together. If you have a Spring (Java) background or coming from the object-oriented paradigm, or know Clean Architecture or SOLID, the code should be pretty familiar to you.
+
+Twelve-Factor App Methodology | DreamFactory
+https://www.dreamfactory.com/resources/whitepapers/implementing-the-twelve-factor-app-methodology
+Learn about the Twelve-Factor App Methodology, a guide for developing modern cloud-native applications. Discover patterns and practices for building applications.
+
+Twelve-Factor Methodology in a Spring Boot Microservice | Baeldung
+https://www.baeldung.com/spring-boot-12-factor
+In this tutorial, we went through the concepts of twelve-factor methodology. We discussed how to leverage a microservice architecture with Spring Boot to deliver them effectively. Further, we explored each factor in detail and how to apply them to our application.
+
+12 Factor App: The Complete Guide to Building Cloud-Native Applications | Pradeep Loganathan's Blog
+https://pradeepl.com/blog/12-factor-cloud-native-apps/
+Traditional monolithic architectures were designed for a different era: ... The twelve-factor app principles are a collection of best practices for building microservices-based cloud-native applications.
+
+Using the 12-Factor App Methodology for Microservices
+https://blog.clearscale.com/12-factor-approach-for-microservices/
+Use a log-management solution for routing or storing logs. The process for routing log data needs to be separate from processing log data. Define your logging strategy as part of the architecture standards, so that all services generate logs in a similar fashion.

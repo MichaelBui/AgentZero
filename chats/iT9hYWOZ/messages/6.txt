@@ -1,0 +1,39 @@
+Engineering Productivity Signals Teams Must Track in 2026
+https://vettedoutsource.com/blog/system-engineering-productivity/
+Review turnaround time Signals reflect system constraints. Fix the constraints, and productivity increases. Building a Culture That Supports Engineering Productivity Culture establishes how teams operate and how decisions flow. Productivity rises when teams work within clear structures and are evaluated by outcomes rather than activity.
+
+Deep Work: Ultimate Guide to Time Focus in 2026 - Reclaim.ai
+https://reclaim.ai/blog/deep-work-vs-shallow-work
+Deep work is distraction-free deep concentration on a difficult task for an extended time to maximize your cognitive capabilities and boost productivity by ...
+
+Time Blocking in 2026: Advanced Techniques for Deep Work and Peak Productivity
+https://www.bitrix24.com/articles/time-blocking-in-2025-advanced-techniques-for-deep-work-and-peak-productivity.php
+Dynamic time blocking introduces flexibility while maintaining structure, allowing professionals to respond to urgent matters without abandoning their productivity framework entirely. Dynamic models recognize that not all tasks require the same level of precision or commitment. Strategic blocks for deep work receive firm protection, while administrative tasks can be moved or compressed when necessary. This creates a tiered system where high-priority activities get premium time slots while routine tasks remain flexible.
+
+Deep Work Is a Multiplier for Engineering Organizations
+https://uplevelteam.com/blog/deep-work-why-we-measure-in-two-hour-minimum-time-blocks
+Gaining visibility into which teams are at risk for burnout, which teams are prioritizing deep work and which are struggling, and how much meetings and interruptions are impacting productivity is a good first step. Efficiency and effectiveness takes intentional effort, and those changes start with leadership.
+
+Engineering metrics leaders should track in 2026 (and what to do with them) | Swarmia
+https://www.swarmia.com/blog/engineering-metrics-for-leaders/
+Survey data captures what metrics miss: whether engineers feel productive, whether tools help or frustrate them, whether they have enough uninterrupted time for deep work, and whether they understand how their work connects to business goals. What it tells you: Developer experience directly affects retention, and replacing engineers is expensive. Survey data often uncovers issues that system metrics miss — like a cumbersome deployment process, lack of psychological safety, or meeting overload.
+
+How agentic AI will reshape engineering workflows in 2026 | CIO
+https://www.cio.com/article/4134741/how-agentic-ai-will-reshape-engineering-workflows-in-2026.html
+It represents the core of the ... of 2026 will spend less time writing foundational code and more time orchestrating a dynamic portfolio of AI agents, reusable components and external services....
+
+10 Leadership Strategies to Scale Engineering Teams in 2026 | Second Talent
+https://www.secondtalent.com/resources/leadership-strategies-scale-engineering-teams-2026/
+Elite DORA performers are 2x more likely to exceed organizational goals in profitability, productivity, and customer satisfaction. But only 40.8% of engineering teams use DORA metrics. Most teams are flying blind. ... DORA tells you about delivery speed. But it does not capture the human side. The SPACE framework from Microsoft and GitHub adds five more dimensions. Satisfaction and well-being. Performance. Activity. Communication and collaboration. Efficiency and flow. The best engineering leaders in 2026 combine both.
+
+Top Engineering Productivity Trends Shaping Software Teams in 2026
+https://www.leiga.com/post/top-engineering-productivity-trends-software-teams-2026
+Read More: AI-Powered Sprint Planning in 2026: What Developers Need to Know · Nearly half of developers consider context switching and interruptions as some of their biggest productivity blockers. To reduce context switching, productive teams design workflows that help protect their focus by: ... Your goal should not be to handle multiple tasks at once but to finish work faster by working deeply.
+
+Engineering Productivity Systems: A Practical Framework for Software Engineers
+https://www.productiveengineer.io/2026/03/engineering-productivity-systems.html?m=0
+Developers with uninterrupted focus time report up to 50% higher productivity. This makes deep work a critical component of any productivity system.
+
+Engineering Productivity Systems: A Practical Framework for Software ...
+https://www.productiveengineer.io/2026/03/engineering-productivity-systems.html
+An engineering productivity system is a structured approach to managing work, time, and cognitive load in software development. It integrates workflows, prioritization rules, and measurement into a repeatable process.

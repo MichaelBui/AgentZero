@@ -1,0 +1,39 @@
+Are your people ready for AI at scale? | McKinsey & Company
+https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/are-your-people-ready-for-ai-at-scale
+Here are five questions leaders should ask to understand whether their organization is ready to adopt, scale, and capture value from AI. This perspective is grounded in over 20 years of research and experience with leveraging organizational health and the core building blocks of change, known as the influence model.
+
+How can businesses overcome AI adoption challenges?
+https://www.cygnet.one/blog/ai-adoption-challenges-every-enterprise-faces-in-2026/
+The most effective approach to overcome AI adoption challenges includes defining measurable business objectives before selecting technology, treating data infrastructure as a prerequisite rather than a parallel workstream, starting with use cases where data is available and success is measurable, investing in role-differentiated upskilling, and building AI governance into projects from the outset rather than retrofitting it after deployment.
+
+Scaling AI Adoption in Engineering [Book] - O'Reilly Media
+https://www.oreilly.com/library/view/scaling-ai-adoption/0642572246563/
+AI is already reshaping software development—but most companies are stuck in pilot mode, unsure how to move from experiments to meaningful transformation. This book offers engineering leaders a clear, pragmatic framework for adopting and scaling AI across the entire software development lifecycle. Author Peter Bell draws on years of experience building CTO communities and insights from ...
+
+5 strategies to accelerate the adoption of responsible AI | World Economic Forum
+https://www.weforum.org/stories/2026/02/5-strategies-accelerate-responsible-ai-adoption/
+or example, identifying ways to immediately apply newly acquired prompt engineering skills to design more efficient prompts for common research tasks. Then, taking the next step and applying the time saved to create a proposal for a new product ...
+
+AI Adoption: The Complete Enterprise Guide 2026
+https://larridin.com/solutions/ai-adoption-the-complete-enterprise-guide-2026
+The definitive guide to understanding, measuring, and accelerating AI adoption across your organization — beyond Copilot dashboards and login counts. In February 2026, Meta became the first major technology company to formally tie employee performance reviews to AI usage, according to Bloomberg. Under the new policy, “AI-driven impact” is now a core expectation for every employee — from engineers to marketers.
+
+Scaling enterprise AI: lessons in governance and operating models from IBM - Stack Overflow
+https://stackoverflow.blog/2026/01/29/scaling-enterprise-ai-lessons-in-governance-and-operating-models-from-ibm/
+Perhaps the most significant organizational innovation emerging from IBM’s AI adoption is what the company calls "AI fusion teams." These hybrid groups combine people who deeply understand business functions with technologists from the CIO organization. The results are transformative. Traditional workflows looked like this: Business expert explains the need to the product manager, who translates to designer, who mocks up solution, who hands to engineer, who builds it.
+
+Google Cloud Next 2026: Expanding AI Agent Adoption Requires Culture Shift | BizTech Magazine
+https://biztechmagazine.com/article/2026/04/google-cloud-next-2026-expanding-ai-agent-adoption-requires-culture-shift
+Gartner research found that, by the end of 2025, “at least 50% of generative AI projects were abandoned after proof of concept due to poor data quality.” And IBM’s 2025 survey of global CEOs found that, over the past three years, only 25% of AI initiatives have delivered expected ROI, and only 16% of AI initiatives have scaled enterprisewide. With the recent focus on agentic AI, the landscape is quickly evolving and still full of uncertainties. However, CDW Field Solution Architect Jason Clishe was optimistic about the growing role of AI agents and shared four key areas that can help organizations find success in their deployment. Click the banner below to learn more about managed cloud and AI services. During Google Cloud Next 2026, he stressed the importance of AI adoption not only as a technical undertaking but also as a cultural one.
+
+AI Adoption: The Complete Enterprise Workbook 2026
+https://larridin.com/solutions/ai-adoption-the-complete-enterprise-workbook-2026
+Larridin’s AI Hiring Pulse—February 2026 tracked 428 companies across 43,422 job postings to measure which functions are hiring for AI. The gradient is steep: The gap between top and bottom is 4x. Same organizations, same leadership, same budgets—radically different adoption intensity. Three forces explain the ordering. Digital-native workflows—engineering and product work where AI slots in naturally.
+
+8 lessons from tech leadership on scaling teams and AI - Stack Overflow
+https://stackoverflow.blog/2026/01/14/8-lessons-from-tech-leadership-on-scaling-teams-and-ai/
+An impressive roster of guests ... senior leadership team to compare notes on how they build high-performing teams, how they’re leveraging AI and other rapidly emerging tech, and how they drive innovation in their engineering organizations. To kick off 2026, we wanted to collect some overarching lessons and common themes that many of our guests touched on last year, from the importance of high-quality training data to why so many AI initiatives fizzle to what the trust/adoption gap tells ...
+
+Organizational Readiness for AI Adoption in 2026: A ... - LinkedIn
+https://www.linkedin.com/pulse/organizational-readiness-ai-adoption-2026-leaders-guide-bretzfield-concc
+A: Organizational readiness for AI adoption refers to a business's overall capability to adopt, integrate, scale, and benefit from AI technologies responsibly across strategy, data ...

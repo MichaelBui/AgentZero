@@ -1,107 +1,112 @@
-[2026-04-29T08:09:10+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-29T08:09:10+0000]   -> 7 message(s)
-[2026-04-29T08:09:11+0000]   -> 7 new cached
-[2026-04-29T08:09:11+0000] [Fetching 34/50] ❗ Important Email
-[2026-04-29T08:09:35+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-29T08:09:35+0000]   -> 9 message(s)
-[2026-04-29T08:09:35+0000]   -> 2 new cached
-[2026-04-29T08:09:49+0000]   -> restored unread status
-[2026-04-29T08:09:49+0000] [Fetching 35/50] Tiong Siong Tee
-[2026-04-29T08:09:54+0000] Done [10/104] space/AAQASb31MK0 rel=9
-[2026-04-29T08:09:54+0000] Summarizing [11/104] Front Office Team - Leads (8 msgs, none, ctx=50000)
-[2026-04-29T08:10:15+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-29T08:10:15+0000]   -> 9 message(s)
-[2026-04-29T08:10:16+0000]   -> 7 new cached
-[2026-04-29T08:10:16+0000] [Fetching 36/50] RMN Notification
-[2026-04-29T08:10:42+0000]   Scroll early-stop: 21 consecutive cached messages
-[2026-04-29T08:10:42+0000]   -> 39 message(s)
-[2026-04-29T08:10:43+0000]   -> 9 new cached
-[2026-04-29T08:10:53+0000]   -> restored unread status
-[2026-04-29T08:10:53+0000] [Fetching 37/50] [Tech] Light x Comall
-[2026-04-29T08:11:07+0000] Done [11/104] space/AAAAxayKkRU rel=2
-[2026-04-29T08:11:07+0000] Summarizing [12/104] [Light] Project Light Attack and Defence Leads (7 msgs, direct, ctx=50000)
-[2026-04-29T08:11:08+0000]   Reached top after 1 scroll(s)
-[2026-04-29T08:11:08+0000]   Expanded 1 bar(s)
-[2026-04-29T08:11:08+0000]   -> 15 message(s)
-[2026-04-29T08:11:09+0000]   -> 15 new cached
-[2026-04-29T08:11:09+0000] [Fetching 38/50] Network & Security Team x rOOH
-[2026-04-29T08:11:33+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-29T08:11:33+0000]   -> 8 message(s)
-[2026-04-29T08:11:34+0000]   -> 8 new cached
-[2026-04-29T08:11:34+0000] [Fetching 39/50] Network & Security Team x rOOH
-[2026-04-29T08:11:41+0000]   Reached top after 0 scroll(s)
-[2026-04-29T08:11:41+0000]   -> 3 message(s)
-[2026-04-29T08:11:42+0000]   -> 3 new cached
-[2026-04-29T08:11:42+0000] [Fetching 40/50] [Light] Project Light Attack and Defence Leads
-[2026-04-29T08:11:51+0000]   Reached top after 1 scroll(s)
-[2026-04-29T08:11:51+0000]   -> 11 message(s)
-[2026-04-29T08:11:51+0000]   -> 1 new cached
-[2026-04-29T08:11:51+0000] [Fetching 41/50] QE <-> All Tribes
-[2026-04-29T08:12:15+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-29T08:12:15+0000]   -> 2 message(s)
-[2026-04-29T08:12:15+0000]   -> 1 new cached
-[2026-04-29T08:12:15+0000] Done [12/104] space/AAQAsFyLso4/7ihQf9lM1SI rel=8
-[2026-04-29T08:12:15+0000] Summarizing [13/104] Alvin, Winson (1 msgs, direct, ctx=50000)
-[2026-04-29T08:12:21+0000]   -> restored unread status
-[2026-04-29T08:12:21+0000] [Fetching 42/50] PDM Notification
-[2026-04-29T08:12:46+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-29T08:12:46+0000]   -> 3 message(s)
-[2026-04-29T08:12:46+0000]   -> 3 new cached
-[2026-04-29T08:12:51+0000]   -> restored unread status
-[2026-04-29T08:12:51+0000] [Fetching 43/50] [Light] Project Light Attack and Defence Leads
-[2026-04-29T08:13:03+0000]   Reached top after 1 scroll(s)
-[2026-04-29T08:13:03+0000]   -> 5 message(s)
-[2026-04-29T08:13:03+0000]   -> 5 new cached
-[2026-04-29T08:13:03+0000] [Fetching 44/50] Attack Team
-[2026-04-29T08:13:12+0000]   Reached top after 1 scroll(s)
-[2026-04-29T08:13:12+0000]   -> 5 message(s)
-[2026-04-29T08:13:13+0000]   -> 5 new cached
-[2026-04-29T08:13:13+0000] [Fetching 45/50] GCP project creation for project LIGHT - Apr 29
-[2026-04-29T08:13:38+0000]   Reached top after 1 scroll(s)
-[2026-04-29T08:13:38+0000]   -> 10 message(s)
-[2026-04-29T08:13:39+0000]   -> 10 new cached
-[2026-04-29T08:13:39+0000] [Fetching 46/50] @omni-ops #standup - Apr 29
-[2026-04-29T08:13:42+0000] Done [13/104] space/AAQAh7WXRkE rel=9
-[2026-04-29T08:13:42+0000] Summarizing [14/104] Jazz Tong (6 msgs, direct, ctx=50000)
-[2026-04-29T08:14:04+0000]   Reached top after 1 scroll(s)
-[2026-04-29T08:14:04+0000]   -> 1 message(s)
-[2026-04-29T08:14:04+0000]   -> 1 new cached
-[2026-04-29T08:14:08+0000]   -> restored unread status
-[2026-04-29T08:14:08+0000] [Fetching 47/50] Alvin Choo
-[2026-04-29T08:14:34+0000]   Scroll early-stop: 30 consecutive cached messages
-[2026-04-29T08:14:34+0000]   -> 50 message(s)
-[2026-04-29T08:14:34+0000]   -> 7 new cached
-[2026-04-29T08:14:34+0000] [Fetching 48/50] [Leads] (Ecom/Omni) Digital Product Development
-[2026-04-29T08:14:54+0000] Done [14/104] dm/rwGu4gAAAAE rel=8
-[2026-04-29T08:14:54+0000] Summarizing [15/104] [Light] Project Light Attack and Defence Leads (7 msgs, direct, ctx=50000)
-[2026-04-29T08:14:58+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-29T08:14:58+0000]   -> 1 message(s)
-[2026-04-29T08:14:58+0000]   -> 1 new cached
-[2026-04-29T08:14:58+0000] [Fetching 49/50] fairnex-datadog-notification
-[2026-04-29T08:15:28+0000]   Hit scroll limit (5)
-[2026-04-29T08:15:28+0000]   -> 16 message(s)
-[2026-04-29T08:15:28+0000]   -> 3 new cached
-[2026-04-29T08:15:34+0000]   -> restored unread status
-[2026-04-29T08:15:34+0000] [Fetching 50/50] 📅 Daily summary
-[2026-04-29T08:15:58+0000] Done [15/104] space/AAQAsFyLso4/i1K-FYGrbTo rel=9
-[2026-04-29T08:15:58+0000] Summarizing [16/104] [Light] Project Light Attack and Defence Leads (6 msgs, direct, ctx=50000)
-[2026-04-29T08:15:59+0000]   Reached cutoff after 0 scroll(s)
-[2026-04-29T08:15:59+0000]   -> 3 message(s)
-[2026-04-29T08:15:59+0000]   -> 1 new cached
-[2026-04-29T08:16:07+0000]   -> restored unread status
-[2026-04-29T08:16:07+0000] Phase 2: fetched 50/50 conversations
-[2026-04-29T08:17:32+0000] Done [16/104] space/AAQAsFyLso4 rel=9
-[2026-04-29T08:17:32+0000] Summarizing [17/104] Google Drive (1 msgs, direct, ctx=50000)
-[2026-04-29T08:18:50+0000] Done [17/104] dm/7d1XKcAAAAE rel=5
-[2026-04-29T08:18:50+0000] Summarizing [18/104] [LIGHT] Attack & Defend Sync-Up - Apr 29 (10 msgs, direct, ctx=50000)
-[2026-04-29T08:20:08+0000] Done [18/104] space/AAQAML66QfY rel=9
-[2026-04-29T08:20:08+0000] Summarizing [19/104] Bryan Choong (6 msgs, direct, ctx=50000)
-[2026-04-29T08:21:08+0000] Done [19/104] dm/lyhyx8AAAAE rel=8
-[2026-04-29T08:21:08+0000] Summarizing [20/104] #dd-fpg-watchdog-alert (2 msgs, none, ctx=50000)
-[2026-04-29T08:22:08+0000] Done [20/104] space/AAAAnlKPglA rel=2
-[2026-04-29T08:22:08+0000] Summarizing [21/104] [Working Team] Project Light Team (4 msgs, none, ctx=50000)
-[2026-04-29T08:23:34+0000] Done [21/104] space/AAQAsJhgUrA rel=2
-[2026-04-29T08:23:34+0000] Summarizing [22/104] Workbench Connect (10 msgs, none, ctx=50000)
+[2026-04-29T14:31:53+0000] ERROR summarizing space/AAAAQQGZSZU: LLM connection failed after 3 retries: HTTPSConnectionPool(host='llm.gigary.com', port=443): Read timed out. (read timeout=120)
+[2026-04-29T14:31:53+0000] Summarizing [6/108] [Tech] Light x Comall (2 msgs, direct, ctx=50000)
+[2026-04-29T14:33:32+0000] Done [6/108] space/AAQAxUYxclM/JOFwWabaPVs rel=9
+[2026-04-29T14:33:32+0000] Summarizing [7/108] [Tech] Light x Comall (1 msgs, direct, ctx=50000)
+[2026-04-29T14:35:01+0000] Done [7/108] space/AAQAxUYxclM rel=9
+[2026-04-29T14:35:01+0000] Summarizing [8/108] Winson Lim (1 msgs, direct, ctx=50000)
+[2026-04-29T14:36:26+0000] Done [8/108] dm/xeEI_AAAAAE rel=9
+[2026-04-29T14:36:26+0000] [9/108] dm/zmMZpgAAAAE: cached (rel=8)
+[2026-04-29T14:36:26+0000] [10/108] space/AAQAxUYxclM/hAJRxdySUjA: cached (rel=8)
+[2026-04-29T14:36:26+0000] [11/108] space/AAQAXn1ocmE: cached (rel=8)
+[2026-04-29T14:36:26+0000] [12/108] space/AAQA-ah0ts8: cached (rel=9)
+[2026-04-29T14:36:26+0000] [13/108] space/AAQAsFyLso4/6RBGM1uWEgU: cached (rel=2)
+[2026-04-29T14:36:26+0000] [14/108] space/AAAAxayKkRU/ni1Jg3CQDd0: cached (rel=2)
+[2026-04-29T14:36:26+0000] [15/108] space/AAQAZ--llew: cached (rel=9)
+[2026-04-29T14:36:26+0000] [16/108] dm/7d1XKcAAAAE: cached (rel=6)
+[2026-04-29T14:36:26+0000] [17/108] space/AAQAsFyLso4: cached (rel=8)
+[2026-04-29T14:36:26+0000] [18/108] space/AAQAYFrzaHE: cached (rel=9)
+[2026-04-29T14:36:26+0000] [19/108] space/AAAAtxQjB7c: cached (rel=2)
+[2026-04-29T14:36:26+0000] [20/108] space/AAQAsFyLso4/3JEtAVC80Uo: cached (rel=2)
+[2026-04-29T14:36:26+0000] [21/108] dm/_gwJCgAAAAE: cached (rel=8)
+[2026-04-29T14:36:26+0000] [22/108] space/AAQASb31MK0: cached (rel=9)
+[2026-04-29T14:36:26+0000] [23/108] space/AAAAxayKkRU: cached (rel=2)
+[2026-04-29T14:36:26+0000] [24/108] space/AAQAsFyLso4/7ihQf9lM1SI: cached (rel=8)
+[2026-04-29T14:36:26+0000] [25/108] space/AAQAh7WXRkE: cached (rel=9)
+[2026-04-29T14:36:26+0000] [26/108] dm/rwGu4gAAAAE: cached (rel=8)
+[2026-04-29T14:36:26+0000] [27/108] space/AAQAsFyLso4/i1K-FYGrbTo: cached (rel=9)
+[2026-04-29T14:36:26+0000] [28/108] space/AAQAML66QfY: cached (rel=9)
+[2026-04-29T14:36:26+0000] [29/108] dm/lyhyx8AAAAE: cached (rel=8)
+[2026-04-29T14:36:26+0000] [30/108] space/AAAAnlKPglA: cached (rel=2)
+[2026-04-29T14:36:26+0000] [31/108] space/AAQAsJhgUrA: cached (rel=2)
+[2026-04-29T14:36:26+0000] [32/108] space/AAQASkvSlwo/VymmCZTQtyI: cached (rel=2)
+[2026-04-29T14:36:26+0000] [33/108] dm/t3wf6EAAAAE: cached (rel=9)
+[2026-04-29T14:36:26+0000] [34/108] dm/yHhI1sAAAAE: cached (rel=8)
+[2026-04-29T14:36:26+0000] [35/108] space/AAAAS7vPcKs/YgGvvuD2Ow8: cached (rel=9)
+[2026-04-29T14:36:26+0000] [36/108] space/AAQASkvSlwo: cached (rel=2)
+[2026-04-29T14:36:26+0000] [37/108] space/AAAAs0DTvmA: cached (rel=2)
+[2026-04-29T14:36:26+0000] [38/108] space/AAQAiIDEEW4: cached (rel=9)
+[2026-04-29T14:36:26+0000] [39/108] space/AAQAsFyLso4/5K_HxV1Ra1g: cached (rel=8)
+[2026-04-29T14:36:26+0000] [40/108] dm/iqDHjgAAAAE: cached (rel=8)
+[2026-04-29T14:36:26+0000] [41/108] dm/4Ut7xcAAAAE: cached (rel=8)
+[2026-04-29T14:36:26+0000] [42/108] space/AAQAUJW8HMo: cached (rel=5)
+[2026-04-29T14:36:26+0000] [43/108] dm/700U4cAAAAE: cached (rel=8)
+[2026-04-29T14:36:26+0000] [44/108] space/AAQA85dw4So: cached (rel=2)
+[2026-04-29T14:36:26+0000] [45/108] space/AAQAxUYxclM/EoPrL8fOGqw: cached (rel=9)
+[2026-04-29T14:36:26+0000] [46/108] space/AAQAVciLBcU: cached (rel=8)
+[2026-04-29T14:36:26+0000] [47/108] space/AAQAVciLBcU/TPzuytNYgaQ: cached (rel=8)
+[2026-04-29T14:36:26+0000] [48/108] space/AAQAsFyLso4/ROi-D1ElXHU: cached (rel=8)
+[2026-04-29T14:36:26+0000] [49/108] space/AAAAS7vPcKs: cached (rel=3)
+[2026-04-29T14:36:26+0000] [50/108] space/AAAAnyFGr84: cached (rel=2)
+[2026-04-29T14:36:26+0000] [51/108] space/AAQAsFyLso4/-u_t6RpyAN0: cached (rel=9)
+[2026-04-29T14:36:26+0000] [52/108] space/AAQAeP3ki3k/RfYbdyA9dbg: cached (rel=8)
+[2026-04-29T14:36:26+0000] [53/108] space/AAQAH_T2b_Y: cached (rel=8)
+[2026-04-29T14:36:26+0000] [54/108] space/AAQAh_ME0oI: cached (rel=2)
+[2026-04-29T14:36:26+0000] [55/108] space/AAQAN8mDauE: cached (rel=9)
+[2026-04-29T14:36:26+0000] [56/108] space/AAAA8dv5lp0: cached (rel=2)
+[2026-04-29T14:36:26+0000] [57/108] space/AAQAP-kMoqY: cached (rel=3)
+[2026-04-29T14:36:26+0000] [58/108] space/AAAAx50IkHw: cached (rel=8)
+[2026-04-29T14:36:26+0000] [59/108] space/AAQAKHz7DQM/xQLJ-25cZNE: cached (rel=9)
+[2026-04-29T14:36:26+0000] [60/108] space/AAAAjDYVcBU: cached (rel=2)
+[2026-04-29T14:36:26+0000] [61/108] space/AAQAeP3ki3k/Ow8KpTm8B5w: cached (rel=8)
+[2026-04-29T14:36:26+0000] [62/108] space/AAQAeP3ki3k: cached (rel=9)
+[2026-04-29T14:36:26+0000] [63/108] space/AAQAKHz7DQM/OYSPWM927GQ: cached (rel=8)
+[2026-04-29T14:36:26+0000] [64/108] space/AAQA-bdVPoA/JdkL6ZEk0Oo: cached (rel=2)
+[2026-04-29T14:36:26+0000] [65/108] space/AAQAzOZUb-k: cached (rel=8)
+[2026-04-29T14:36:26+0000] [66/108] space/AAQAUbi9szY: cached (rel=7)
+[2026-04-29T14:36:26+0000] [67/108] space/AAQA-bdVPoA: cached (rel=7)
+[2026-04-29T14:36:26+0000] [68/108] space/AAAAYX-ew1s: cached (rel=2)
+[2026-04-29T14:36:26+0000] [69/108] space/AAQAxUYxclM/GOO4AyY_5Sg: cached (rel=8)
+[2026-04-29T14:36:26+0000] [70/108] space/AAAAu4WIubc: cached (rel=2)
+[2026-04-29T14:36:26+0000] [71/108] dm/pTMl_AAAAAE: cached (rel=7)
+[2026-04-29T14:36:26+0000] [72/108] space/AAQAuAsxHvw: cached (rel=2)
+[2026-04-29T14:36:26+0000] [73/108] space/AAQACXP516w: cached (rel=8)
+[2026-04-29T14:36:26+0000] [74/108] space/AAAAMh7T8Y0: cached (rel=2)
+[2026-04-29T14:36:26+0000] [75/108] dm/yt0sa8AAAAE: cached (rel=8)
+[2026-04-29T14:36:26+0000] [76/108] space/AAAAwg3yipA: cached (rel=3)
+[2026-04-29T14:36:26+0000] [77/108] space/AAQAN8mDauE/YmPsSwMLWuk: cached (rel=2)
+[2026-04-29T14:36:26+0000] [78/108] dm/0pYlUwAAAAE: cached (rel=9)
+[2026-04-29T14:36:26+0000] [79/108] space/AAQARPcXHMc: cached (rel=2)
+[2026-04-29T14:36:26+0000] [80/108] space/AAQAcjNXKpA/5M_Se2cruRU: cached (rel=9)
+[2026-04-29T14:36:26+0000] [81/108] space/AAQAKHz7DQM: cached (rel=9)
+[2026-04-29T14:36:26+0000] [82/108] space/AAQAO41dW0w: cached (rel=2)
+[2026-04-29T14:36:26+0000] [83/108] space/AAQAomPeN1M: cached (rel=7)
+[2026-04-29T14:36:26+0000] [84/108] space/AAAAde_cYKA: cached (rel=7)
+[2026-04-29T14:36:26+0000] [85/108] space/AAQAeP3ki3k/211HdX2T1A0: cached (rel=9)
+[2026-04-29T14:36:26+0000] [86/108] space/AAQApoZ71QM: cached (rel=2)
+[2026-04-29T14:36:26+0000] [87/108] space/AAQAcjNXKpA/XPFii8QhKFQ: cached (rel=9)
+[2026-04-29T14:36:26+0000] [88/108] dm/kgs0IyAAAAE: cached (rel=9)
+[2026-04-29T14:36:26+0000] [89/108] space/AAQAcjNXKpA/MShbuBdVcyo: cached (rel=9)
+[2026-04-29T14:36:26+0000] [90/108] space/AAQAzOZUb-k/-PVeu24psWs: cached (rel=8)
+[2026-04-29T14:36:26+0000] [91/108] space/AAQAEadXDr4: cached (rel=2)
+[2026-04-29T14:36:26+0000] [92/108] space/AAQAcjNXKpA: cached (rel=9)
+[2026-04-29T14:36:26+0000] [93/108] dm/kgs0IyAAAAE/or3ZKvoF_Uc: cached (rel=9)
+[2026-04-29T14:36:26+0000] [94/108] space/AAQAsFyLso4/pZqwfblDCPQ: cached (rel=9)
+[2026-04-29T14:36:26+0000] [95/108] space/AAQAeP3ki3k/OZoDL5pNvIo: cached (rel=8)
+[2026-04-29T14:36:26+0000] [96/108] space/AAQA60JiGqg: cached (rel=9)
+[2026-04-29T14:36:26+0000] [97/108] space/AAQANrfwab4: cached (rel=9)
+[2026-04-29T14:36:26+0000] [98/108] space/AAAAhWLveDE: cached (rel=2)
+[2026-04-29T14:36:26+0000] [99/108] space/AAQAUbi9szY/AhfyxD9jdFo: cached (rel=8)
+[2026-04-29T14:36:26+0000] [100/108] space/AAQAsFRbqGw: cached (rel=2)
+[2026-04-29T14:36:26+0000] [101/108] dm/_6MV8IAAAAE: cached (rel=8)
+[2026-04-29T14:36:26+0000] [102/108] space/AAQAs3WiMks: cached (rel=8)
+[2026-04-29T14:36:26+0000] [103/108] space/AAQAgdyVn9Y: cached (rel=5)
+[2026-04-29T14:36:26+0000] [104/108] space/AAQAeP3ki3k/gkg2z9QHIDE: cached (rel=9)
+[2026-04-29T14:36:26+0000] [105/108] space/AAQAeP3ki3k/7onPBh452ug: cached (rel=8)
+[2026-04-29T14:36:26+0000] [106/108] dm/xCO548AAAAE: cached (rel=8)
+[2026-04-29T14:36:26+0000] [107/108] space/AAAA8Ot7GRg: cached (rel=2)
+[2026-04-29T14:36:26+0000] [108/108] space/AAQAfPz5dxM: cached (rel=9)
+[2026-04-29T14:36:26+0000] COMPLETED WITH ERRORS (108 conversations, 1 error(s))
+[2026-04-29T14:36:26+0000]   ERROR: space/AAAAQQGZSZU: LLM connection failed after 3 retries: HTTPSConnectionPool(host='llm.gigary.com', port=443): Read timed out. (read timeout=120)
 
 
-[SYSTEM: Returning control to agent after 900 seconds of execution. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+[SYSTEM: Returning control to agent after 120 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

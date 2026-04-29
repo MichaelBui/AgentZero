@@ -1,0 +1,53 @@
+/a0/usr/workdir/Blog Ideas/Topics_2026-04-29.md written 50 lines
+>>>
+ 1 # Blog Topic Ideas - 2026-04-29
+ 2 
+ 3 ## 1. Running 70B Models Locally: Lessons from an AMD Strix Halo Homelab Server
+ 4 - **Pillar:** Technology
+ 5 - **Score:** 9/10
+ 6 - **Angle:** Hands-on experience running large local LLMs on a single AMD Strix Halo mini PC with 128GB unified memory. Covers ROCm optimizations, power consumption vs performance trade-offs, and practical inference benchmarks that generic AI content misses.
+ 7 - **Trending Signal:** High interest in Framework community toolboxes for llama.cpp/vLLM, Level1Techs forums discussing Qwen3.6 benchmarks, and Starry Hope's practical guide confirming Strix Halo as a viable local LLM tier.
+ 8 - **Related Expertise:** AMD Strix Halo 128GB unified memory AI server, local LLM inference with ROCm/llama.cpp, homelab migration and power reduction.
+ 9 
+10 ## 2. Beyond the Pilot: Scaling AI Adoption from 28% to 100% in a Retail Department
+11 - **Pillar:** Leadership
+12 - **Score:** 8/10
+13 - **Angle:** A personal case study on driving AI adoption at a large retail organization, focusing on overcoming data quality hurdles, building trust through measurable ROI, and cultural shifts required to move from pilot to production scale.
+14 - **Trending Signal:** McKinsey reports on organizational readiness for AI at scale, Stack Overflow's lessons on the trust/adoption gap, and Meta's policy tying performance reviews to AI usage highlight the current industry focus.
+15 - **Related Expertise:** AI adoption at organizational scale, retail media networks/ad-tech experience, team leadership and mentoring.
+16 
+17 ## 3. Multi-Agent Orchestration in Production: LangGraph vs CrewAI vs AutoGen for Engineering Teams
+18 - **Pillar:** Technology
+19 - **Score:** 8/10
+20 - **Angle:** A comparative analysis of leading multi-agent frameworks based on building two production systems (enterprise hackathon + homelab daily report). Discusses state management, tool calling, and when to choose graph-based vs role-based architectures.
+21 - **Trending Signal:** Multiple 2026 comparison articles and Reddit discussions on framework selection reflect the industry's ongoing struggle to choose between LangGraph, CrewAI, and AutoGen for production use.
+22 - **Related Expertise:** Multi-agent orchestration, Agent Zero framework customizations, prompt engineering for agentic systems.
+23 
+24 ## 4. DORA Metrics That Matter: Moving Beyond Elite Benchmarks to Real Engineering Health
+25 - **Pillar:** Leadership
+26 - **Score:** 7/10
+27 - **Angle:** Critiques the blind chasing of "elite" DORA benchmarks and advocates for using Cycle Time, CFR, and SLO as leading indicators of engineering health, backed by personal experience achieving <10d Cycle Time and <2% CFR.
+28 - **Trending Signal:** LinkedIn discussions comparing teams internally vs externally, GitRecap's 2026 benchmarks, and Swarmia's survey on developer experience underscore the need for nuanced metric interpretation.
+29 - **Related Expertise:** DORA metrics, SLO management, engineering culture, cost optimization through efficiency.
+30 
+31 ## 5. The Engineering Leader's Guide to Deep Work in an AI-Augmented World
+32 - **Pillar:** Life
+33 - **Score:** 7/10
+34 - **Angle:** Explores strategies for protecting focus time and reducing context switching in an era of AI tools, using dynamic time blocking and agent delegation to reclaim cognitive bandwidth for strategic leadership.
+35 - **Trending Signal:** Reclaim.ai's deep work guide, Bitrix24's dynamic time blocking techniques, and Swarmia's survey on uninterrupted time highlight the growing productivity challenge.
+36 - **Related Expertise:** GPS Framework for Productivity, reducing cognitive debt, continuous learning and personal growth.
+37 
+38 ## 6. Clean Architecture in Go: SOLID Principles and 12-Factor App for Microservices
+39 - **Pillar:** Technology
+40 - **Score:** 6/10
+41 - **Angle:** A practical guide to implementing SOLID principles and 12-factor app methodology in Go microservices, including SonarCloud quality gates and dependency injection patterns for maintainable codebases.
+42 - **Trending Signal:** Reintech media's 2026 guide on Go microservices patterns and Einfochips' practical strategies for 12-factor principles reflect ongoing interest in robust backend architecture.
+43 - **Related Expertise:** Clean architecture in Go microservices, SOLID principles, SonarCloud quality gates.
+44 
+45 ## 7. Mentorship at Scale: Using AI to Accelerate Engineering Growth and Retention
+46 - **Pillar:** Life
+47 - **Score:** 6/10
+48 - **Angle:** Discusses how engineering leaders can leverage AI-driven matching tools and peer-to-peer learning platforms to scale mentorship, fostering a culture of continuous development and reducing turnover.
+49 - **Trending Signal:** Thirst.io's L&D trends report, Qooper's mentoring software insights, and Forbes' education trends highlight the shift towards AI-enhanced mentorship in 2026.
+50 - **Related Expertise:** Team leadership, mentoring engineers to team lead, teaching and multiplying knowledge.
+<<<
