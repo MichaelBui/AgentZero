@@ -1,35 +1,22 @@
-[2026-04-29T22:50:52+0000] [81/108] space/AAQAKHz7DQM: cached (rel=9)
-[2026-04-29T22:50:52+0000] [82/108] space/AAQAO41dW0w: cached (rel=2)
-[2026-04-29T22:50:52+0000] [83/108] space/AAQAomPeN1M: cached (rel=7)
-[2026-04-29T22:50:52+0000] [84/108] space/AAAAde_cYKA: cached (rel=7)
-[2026-04-29T22:50:52+0000] [85/108] space/AAQAeP3ki3k/211HdX2T1A0: cached (rel=9)
-[2026-04-29T22:50:52+0000] [86/108] space/AAQApoZ71QM: cached (rel=2)
-[2026-04-29T22:50:52+0000] [87/108] space/AAQAcjNXKpA/XPFii8QhKFQ: cached (rel=9)
-[2026-04-29T22:50:52+0000] [88/108] dm/kgs0IyAAAAE: cached (rel=9)
-[2026-04-29T22:50:52+0000] [89/108] space/AAQAcjNXKpA/MShbuBdVcyo: cached (rel=9)
-[2026-04-29T22:50:52+0000] [90/108] space/AAQAzOZUb-k/-PVeu24psWs: cached (rel=8)
-[2026-04-29T22:50:52+0000] [91/108] space/AAQAEadXDr4: cached (rel=2)
-[2026-04-29T22:50:52+0000] [92/108] space/AAQAcjNXKpA: cached (rel=9)
-[2026-04-29T22:50:52+0000] [93/108] dm/kgs0IyAAAAE/or3ZKvoF_Uc: cached (rel=9)
-[2026-04-29T22:50:52+0000] [94/108] space/AAQAsFyLso4/pZqwfblDCPQ: cached (rel=9)
-[2026-04-29T22:50:52+0000] [95/108] space/AAQAeP3ki3k/OZoDL5pNvIo: cached (rel=8)
-[2026-04-29T22:50:52+0000] [96/108] space/AAQA60JiGqg: cached (rel=9)
-[2026-04-29T22:50:52+0000] [97/108] space/AAQANrfwab4: cached (rel=9)
-[2026-04-29T22:50:52+0000] [98/108] space/AAAAhWLveDE: cached (rel=2)
-[2026-04-29T22:50:52+0000] [99/108] space/AAQAUbi9szY/AhfyxD9jdFo: cached (rel=8)
-[2026-04-29T22:50:52+0000] [100/108] space/AAQAsFRbqGw: cached (rel=2)
-[2026-04-29T22:50:52+0000] [101/108] dm/_6MV8IAAAAE: cached (rel=8)
-[2026-04-29T22:50:52+0000] [102/108] space/AAQAs3WiMks: cached (rel=8)
-[2026-04-29T22:50:52+0000] [103/108] space/AAQAgdyVn9Y: cached (rel=5)
-[2026-04-29T22:50:52+0000] [104/108] space/AAQAeP3ki3k/gkg2z9QHIDE: cached (rel=9)
-[2026-04-29T22:50:52+0000] [105/108] space/AAQAeP3ki3k/7onPBh452ug: cached (rel=8)
-[2026-04-29T22:50:52+0000] [106/108] dm/xCO548AAAAE: cached (rel=8)
-[2026-04-29T22:50:52+0000] [107/108] space/AAAA8Ot7GRg: cached (rel=2)
-[2026-04-29T22:50:52+0000] [108/108] space/AAQAfPz5dxM: cached (rel=9)
-[2026-04-29T22:50:52+0000] Output: /a0/usr/workdir/gchat-output.md (74 summaries, min_relevance=7)
-[2026-04-29T22:50:52+0000] COMPLETED (108 conversations, fetched=10)
----
-No output file
-(venv) root@65a984945e89:/a0/usr/workdir#
+[2026-04-30T06:48:25+0000]   [retry 1/3] Connection error: HTTPSConnectionPool(host='llm.gigary.com', port=443): Read timed out. (read timeout=120) - retrying in 30s
+[2026-04-30T06:50:21+0000] Done [10/114] space/AAQARPcXHMc rel=2
+[2026-04-30T06:50:21+0000] Summarizing [11/114] Infra x Project LIGHT (9 msgs, direct, ctx=50000)
+[2026-04-30T06:51:38+0000] Done [11/114] space/AAQAiIDEEW4/wngKKqezEr0 rel=9
+[2026-04-30T06:51:38+0000] Summarizing [12/114] [Internal] (Ecom/Omni) Digital Product Development (3 msgs, direct, ctx=50000)
+[2026-04-30T06:53:27+0000] Done [12/114] space/AAQAUbi9szY rel=8
+[2026-04-30T06:53:27+0000] Summarizing [13/114] Jazz Tong (2 msgs, direct, ctx=50000)
+[2026-04-30T06:55:10+0000] Done [13/114] dm/rwGu4gAAAAE rel=9
+[2026-04-30T06:55:10+0000] Summarizing [14/114] [Internal] (Ecom/Omni) Digital Product Development (5 msgs, direct, ctx=50000)
+[2026-04-30T06:56:23+0000] Done [14/114] space/AAQAUbi9szY/5ceIJtP27vk rel=8
+[2026-04-30T06:56:23+0000] Summarizing [15/114] QE <-> All Tribes (1 msgs, direct, ctx=50000)
+[2026-04-30T06:58:04+0000] Done [15/114] space/AAAAS7vPcKs rel=8
+[2026-04-30T06:58:04+0000] Summarizing [16/114] [Light] Project Light Attack and Defence Leads (5 msgs, direct, ctx=50000)
+[2026-04-30T06:59:35+0000] Done [16/114] space/AAQAsFyLso4/utKf3dRzdFg rel=8
+[2026-04-30T06:59:35+0000] Summarizing [17/114] RMN Notification (3 msgs, none, ctx=50000)
+[2026-04-30T07:00:47+0000] Done [17/114] space/AAQA85dw4So rel=2
+[2026-04-30T07:00:47+0000] Summarizing [18/114] Ask Gemini (2 msgs, direct, ctx=50000)
+[2026-04-30T07:02:19+0000] Done [18/114] dm/jVg44yAAAAE rel=6
+[2026-04-30T07:02:19+0000] Summarizing [19/114] Rituraj Suman (11 msgs, direct, ctx=50000)
 
-[SYSTEM: Returning control to agent after 120 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
+
+[SYSTEM: Returning control to agent after 900 seconds of execution. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

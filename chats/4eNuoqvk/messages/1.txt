@@ -1,29 +1,32 @@
-[2026-04-30T01:31:20+0000] STARTED (days=14, since=2026-04-16)
-[2026-04-30T01:31:20+0000] Auth: michael.bui@fairpricegroup.sg
-[2026-04-30T01:31:23+0000] Fetched 50/50 from filter:13811 (⭐️ [Michael Bui] WIP 🏃‍➡️)
-[2026-04-30T01:31:24+0000] Fetched 29/29 from view:10489904
-[2026-04-30T01:31:24+0000] Summarizing [1/48] OMNI-1436 (2 items, indirect)
-[2026-04-30T01:31:25+0000] Tickets: 48 recent, 5 changed, 43 cached, 30 older than 2026-04-16
-[2026-04-30T01:33:16+0000] Done [1/48] OMNI-1436 rel=6
-[2026-04-30T01:33:16+0000] Summarizing [2/48] OMNI-1407 (2 items, indirect)
-[2026-04-30T01:34:31+0000] Done [2/48] OMNI-1407 rel=6
-[2026-04-30T01:34:31+0000] Summarizing [3/48] OMNI-1363 (2 items, indirect)
-[2026-04-30T01:36:20+0000] Done [3/48] OMNI-1363 rel=6
-[2026-04-30T01:36:20+0000] Summarizing [4/48] OMNI-1345 (2 items, indirect)
-[2026-04-30T01:37:45+0000] Done [4/48] OMNI-1345 rel=6
-[2026-04-30T01:37:45+0000] Summarizing [5/48] OMNI-1414 (1 items, indirect)
-[2026-04-30T01:39:03+0000] Done [5/48] OMNI-1414 rel=6
-[2026-04-30T01:39:03+0000] Summarizing [6/48] RM-702 (1 items, direct)
-[2026-04-30T01:40:15+0000] Done [6/48] RM-702 rel=8
-[2026-04-30T01:40:15+0000] Summarizing [7/48] RM-701 (1 items, direct)
-[2026-04-30T01:41:46+0000] Done [7/48] RM-701 rel=9
-[2026-04-30T01:41:46+0000] Summarizing [8/48] DPD-631 (1 items, direct)
-[2026-04-30T01:43:14+0000] Done [8/48] DPD-631 rel=9
-[2026-04-30T01:43:14+0000] Summarizing [9/48] RM-700 (1 items, direct)
-[2026-04-30T01:44:19+0000] Done [9/48] RM-700 rel=8
-[2026-04-30T01:44:19+0000] Summarizing [10/48] CORE-478 (2 items, direct)
-[2026-04-30T01:45:26+0000] Done [10/48] CORE-478 rel=9
-[2026-04-30T01:45:26+0000] Summarizing [11/48] RM-30 (1 items, direct)
+[2026-04-30T05:31:16+0000] STARTED (days=14, since=2026-04-16)
+[2026-04-30T05:31:16+0000] Auth: michael.bui@fairpricegroup.sg
+[2026-04-30T05:31:17+0000] View 10489904: using cached JQL
+[2026-04-30T05:31:18+0000] Fetched 50/50 from filter:13811 (⭐️ [Michael Bui] WIP 🏃‍➡️)
+[2026-04-30T05:31:19+0000] Fetched 28/28 from view:10489904
+[2026-04-30T05:31:19+0000] Summarizing [1/52] CORE-458 (1 items, direct)
+[2026-04-30T05:31:22+0000] Tickets: 52 recent, 21 changed, 31 cached, 25 older than 2026-04-16
+[2026-04-30T05:32:39+0000] Done [1/52] CORE-458 rel=8
+[2026-04-30T05:32:39+0000] Summarizing [2/52] CORE-457 (1 items, direct)
+[2026-04-30T05:33:44+0000] Done [2/52] CORE-457 rel=9
+[2026-04-30T05:33:44+0000] Summarizing [3/52] CORE-473 (1 items, direct)
+[2026-04-30T05:34:56+0000] Done [3/52] CORE-473 rel=8
+[2026-04-30T05:34:56+0000] Summarizing [4/52] CORE-446 (1 items, direct)
+[2026-04-30T05:36:17+0000] Done [4/52] CORE-446 rel=8
+[2026-04-30T05:36:17+0000] Summarizing [5/52] CORE-447 (1 items, direct)
+[2026-04-30T05:37:27+0000] Done [5/52] CORE-447 rel=8
+[2026-04-30T05:37:27+0000] Summarizing [6/52] OMNI-1191 (2 items, indirect)
+[2026-04-30T05:38:52+0000] Done [6/52] OMNI-1191 rel=6
+[2026-04-30T05:38:52+0000] Summarizing [7/52] OMNI-1439 (2 items, indirect)
+[2026-04-30T05:39:53+0000] Done [7/52] OMNI-1439 rel=6
+[2026-04-30T05:39:53+0000] Summarizing [8/52] OMNI-1249 (2 items, indirect)
+[2026-04-30T05:41:35+0000] Done [8/52] OMNI-1249 rel=6
+[2026-04-30T05:41:35+0000] Summarizing [9/52] OMNI-1437 (3 items, none)
+[2026-04-30T05:42:39+0000] Done [9/52] OMNI-1437 rel=5
+[2026-04-30T05:42:39+0000] Summarizing [10/52] OMNI-1436 (2 items, indirect)
+[2026-04-30T05:43:56+0000] Done [10/52] OMNI-1436 rel=6
+[2026-04-30T05:43:56+0000] Summarizing [11/52] OMNI-1431 (2 items, indirect)
+[2026-04-30T05:45:31+0000] Done [11/52] OMNI-1431 rel=6
+[2026-04-30T05:45:31+0000] Summarizing [12/52] OMNI-1363 (3 items, indirect)
 
 
 [SYSTEM: Returning control to agent after 900 seconds of execution. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

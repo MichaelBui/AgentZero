@@ -1,200 +1,179 @@
-[2026-04-30T02:01:12+0000] STARTED (days=3, since=2026-04-27, user=michael.bui@fairpricegroup.sg)
-[2026-04-30T02:01:12+0000] Connecting to browser at http://192.168.1.11:9223...
-(node:35083) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+[2026-04-30T06:01:27+0000] STARTED (days=3, since=2026-04-27, user=michael.bui@fairpricegroup.sg)
+[2026-04-30T06:01:27+0000] Connecting to browser at http://192.168.1.11:9223...
+(node:35830) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[2026-04-30T02:01:14+0000] Browser connected. Browser timezone: UTC
-[2026-04-30T02:01:19+0000]   Page 1: 100 thread(s)
-[2026-04-30T02:01:19+0000]   Early stop: 5 consecutive cached
-[2026-04-30T02:01:25+0000]   Page 2: 100 thread(s)
-[2026-04-30T02:01:30+0000]   Page 3: 12 thread(s)
-[2026-04-30T02:01:55+0000] Phase 1: 164 threads (excluded=48, unchanged=158, to-fetch=6, unread=3)
-[2026-04-30T02:01:55+0000] [Fetching 1/6] Accepted: Biweekly Project Light Sprint Demo Session @
-[2026-04-30T02:01:55+0000]   -> 1 new message(s) cached
-[2026-04-30T02:01:55+0000] [Fetching 2/6] Invitation: Biweekly Project Light Sprint Demo Session
-[2026-04-30T02:01:55+0000] Summarizing [1/164] Accepted: Biweekly Project Light Sprint Demo Sessi (1 msgs, direct)
-[2026-04-30T02:01:57+0000]   -> 1 new message(s) cached
-[2026-04-30T02:01:57+0000] [Fetching 3/6] DSD-11319 Apply Permissions for DATASET ne-fprt-data-cl
-[2026-04-30T02:01:58+0000]   -> 1 new message(s) cached
-[2026-04-30T02:01:58+0000]   -> restored unread status
-[2026-04-30T02:01:58+0000] [Fetching 4/6] 有人与您共享了电子表格“OSMOS Data Sync”
-[2026-04-30T02:02:00+0000]   -> 1 new message(s) cached
-[2026-04-30T02:02:00+0000] [Fetching 5/6] [Bitbucket] Pipeline for master failed on d06a88e (ntuc
-[2026-04-30T02:02:01+0000]   -> 1 new message(s) cached
-[2026-04-30T02:02:01+0000]   -> restored unread status
-[2026-04-30T02:02:01+0000] [Fetching 6/6] Daily digest: updates from Benji Thian Chan One
-[2026-04-30T02:02:02+0000]   -> 1 new message(s) cached
-[2026-04-30T02:02:02+0000]   -> restored unread status
-[2026-04-30T02:03:13+0000] Done [1/164] 19ddc159ea48f13f rel=5
-[2026-04-30T02:03:13+0000] Summarizing [2/164] Invitation: Biweekly Project Light Sprint Demo Ses (1 msgs, direct)
-[2026-04-30T02:05:07+0000] Done [2/164] 19ddc13bc5872fa4 rel=7
-[2026-04-30T02:05:07+0000] Summarizing [3/164] DSD-11319 Apply Permissions for DATASET ne-fprt-da (1 msgs, direct)
-[2026-04-30T02:06:19+0000] Done [3/164] 19dd73b4129d43a8 rel=5
-[2026-04-30T02:06:19+0000] Summarizing [4/164] 有人与您共享了电子表格“OSMOS Data Sync” (1 msgs, none)
-[2026-04-30T02:07:33+0000] Done [4/164] 19ddbfd8bb9830c1 rel=2
-[2026-04-30T02:07:33+0000] Summarizing [5/164] [Bitbucket] Pipeline for master failed on d06a88e  (1 msgs, direct)
-[2026-04-30T02:09:17+0000] Done [5/164] 19ddbeb62e2c4548 rel=6
-[2026-04-30T02:09:17+0000] Summarizing [6/164] Daily digest: updates from Benji Thian Chan One (1 msgs, direct)
-[2026-04-30T02:10:27+0000] Done [6/164] 19ddb6dfbe67aa37 rel=6
-[2026-04-30T02:10:27+0000] [7/164] 19ddb3e96fbe85b6: cached (rel=5)
-[2026-04-30T02:10:27+0000] [8/164] 19dcd8e333b70912: cached (rel=9)
-[2026-04-30T02:10:27+0000] [9/164] 19dda901b872328e: cached (rel=5)
-[2026-04-30T02:10:27+0000] [10/164] 19dda87c9215ae10: cached (rel=5)
-[2026-04-30T02:10:27+0000] [11/164] 19dda4b109645106: cached (rel=5)
-[2026-04-30T02:10:27+0000] [12/164] 19dda47d2e9b4f01: cached (rel=5)
-[2026-04-30T02:10:27+0000] [13/164] 19dda185f6e58a05: cached (rel=5)
-[2026-04-30T02:10:27+0000] [14/164] 19dd9e9d52d9ccb7: cached (rel=6)
-[2026-04-30T02:10:27+0000] [15/164] 19dd9e846a80090c: cached (rel=6)
-[2026-04-30T02:10:27+0000] [16/164] 19dd9e635a3d4cd1: cached (rel=5)
-[2026-04-30T02:10:27+0000] [17/164] 19dd9e618444575f: cached (rel=6)
-[2026-04-30T02:10:27+0000] [18/164] 19d90163f5b0962b: cached (rel=7)
-[2026-04-30T02:10:27+0000] [19/164] 19cac26c0db5c419: cached (rel=7)
-[2026-04-30T02:10:27+0000] [20/164] 19dd9cf8012129db: cached (rel=9)
-[2026-04-30T02:10:27+0000] [21/164] 19dd9cb9fdbd5679: cached (rel=2)
-[2026-04-30T02:10:27+0000] [22/164] 19dd7f421c36badc: cached (rel=5)
-[2026-04-30T02:10:27+0000] [23/164] 19dd9c9d1727591d: cached (rel=8)
-[2026-04-30T02:10:27+0000] [24/164] 19dd78d750068a73: cached (rel=5)
-[2026-04-30T02:10:27+0000] [25/164] 19d9023018a0fe06: cached (rel=7)
-[2026-04-30T02:10:27+0000] [26/164] 19517a39956736fe: cached (rel=6)
-[2026-04-30T02:10:27+0000] [27/164] 19dd76620f7c4c82: cached (rel=8)
-[2026-04-30T02:10:27+0000] [28/164] 19dd8ba014acdf04: cached (rel=6)
-[2026-04-30T02:10:27+0000] [29/164] 19dbeae2ad1acf29: cached (rel=8)
-[2026-04-30T02:10:27+0000] [30/164] 19dbde2bf792d838: cached (rel=6)
-[2026-04-30T02:10:27+0000] [31/164] 19dd8785c2f3126f: cached (rel=2)
-[2026-04-30T02:10:27+0000] [32/164] 19dd78413d32de21: cached (rel=5)
-[2026-04-30T02:10:27+0000] [33/164] 19dd84d070d38eb0: cached (rel=5)
-[2026-04-30T02:10:27+0000] [34/164] 19dd8447a4dfe83e: cached (rel=8)
-[2026-04-30T02:10:27+0000] [35/164] 19dd7edab2de5aa8: cached (rel=8)
-[2026-04-30T02:10:27+0000] [36/164] 19dd7c0fbf7f96b0: cached (rel=6)
-[2026-04-30T02:10:27+0000] [37/164] 19dd7b211ea71130: cached (rel=6)
-[2026-04-30T02:10:27+0000] [38/164] 19dd7a04184d0ccb: cached (rel=6)
-[2026-04-30T02:10:27+0000] [39/164] 19dbdcae59ccaacc: cached (rel=6)
-[2026-04-30T02:10:27+0000] [40/164] 19dd7855bf4525f9: cached (rel=6)
-[2026-04-30T02:10:27+0000] [41/164] 19dd7717a869ec9e: cached (rel=7)
-[2026-04-30T02:10:27+0000] [42/164] 19dd7704f52b9629: cached (rel=6)
-[2026-04-30T02:10:27+0000] [43/164] 19dd7684c25add80: cached (rel=6)
-[2026-04-30T02:10:27+0000] [44/164] 19dbdc9e762da1df: cached (rel=6)
-[2026-04-30T02:10:27+0000] [45/164] 19dd72feda177eb6: cached (rel=5)
-[2026-04-30T02:10:27+0000] [46/164] 19dd7227395d794c: cached (rel=8)
-[2026-04-30T02:10:27+0000] [47/164] 19dd713fbc4f4707: cached (rel=5)
-[2026-04-30T02:10:27+0000] [48/164] 19dd7125861513e7: cached (rel=5)
-[2026-04-30T02:10:27+0000] [49/164] 19dd6ff5fb6c3913: cached (rel=7)
-[2026-04-30T02:10:27+0000] [50/164] 19dd6e72b7d0336c: cached (rel=5)
-[2026-04-30T02:10:27+0000] [51/164] 19dd6da306fd75bc: cached (rel=6)
-[2026-04-30T02:10:27+0000] [52/164] 19dd462040413cd9: cached (rel=6)
-[2026-04-30T02:10:27+0000] [53/164] 19dd6c4d2cbe96fa: cached (rel=6)
-[2026-04-30T02:10:27+0000] [54/164] 19dd6c473e3e8b96: cached (rel=6)
-[2026-04-30T02:10:27+0000] [55/164] 19dd683876e7c2a4: cached (rel=5)
-[2026-04-30T02:10:27+0000] [56/164] 19dd5ff6907d4c91: cached (rel=5)
-[2026-04-30T02:10:27+0000] [57/164] 19dc3f5323e30abf: cached (rel=8)
-[2026-04-30T02:10:27+0000] [58/164] 19dd457365ed4a99: cached (rel=2)
-[2026-04-30T02:10:27+0000] [59/164] 19dd41efbfe1e375: cached (rel=8)
-[2026-04-30T02:10:27+0000] [60/164] 19dd3f4f340c2956: cached (rel=6)
-[2026-04-30T02:10:27+0000] [61/164] 19dd3bd7b31ab23e: cached (rel=2)
-[2026-04-30T02:10:27+0000] [62/164] 19dd360704a3e049: cached (rel=5)
-[2026-04-30T02:10:27+0000] [63/164] 19dd38e2681772f0: cached (rel=2)
-[2026-04-30T02:10:27+0000] [64/164] 19dd370371cb90c4: cached (rel=8)
-[2026-04-30T02:10:27+0000] [65/164] 19dce8c324e3fd1d: cached (rel=9)
-[2026-04-30T02:10:27+0000] [66/164] 19dd36c51fd5cdfd: cached (rel=7)
-[2026-04-30T02:10:27+0000] [67/164] 19dd36c40c46e1fa: cached (rel=6)
-[2026-04-30T02:10:27+0000] [68/164] 19dd36c3a1449422: cached (rel=6)
-[2026-04-30T02:10:27+0000] [69/164] 19dd3609496c35d0: cached (rel=6)
-[2026-04-30T02:10:27+0000] [70/164] 19dd34d2f4618d37: cached (rel=7)
-[2026-04-30T02:10:27+0000] [71/164] 19dd32d04d02d937: cached (rel=5)
-[2026-04-30T02:10:27+0000] [72/164] 19dd3108d379990a: cached (rel=5)
-[2026-04-30T02:10:27+0000] [73/164] 19ce6ebdc3530d4d: cached (rel=9)
-[2026-04-30T02:10:27+0000] [74/164] 19dd2ec7a9f29074: cached (rel=2)
-[2026-04-30T02:10:27+0000] [75/164] 19dd2ec17922a364: cached (rel=2)
-[2026-04-30T02:10:27+0000] [76/164] 19dd2d5fc449c765: cached (rel=6)
-[2026-04-30T02:10:27+0000] [77/164] 19dd2c730cc21ad1: cached (rel=2)
-[2026-04-30T02:10:27+0000] [78/164] 19dbdc4a696779c8: cached (rel=6)
-[2026-04-30T02:10:27+0000] [79/164] 19dbdd18841aed18: cached (rel=5)
-[2026-04-30T02:10:27+0000] [80/164] 19dd25bf6dd0e5bb: cached (rel=5)
-[2026-04-30T02:10:27+0000] [81/164] 19dd25bde3ed6c94: cached (rel=6)
-[2026-04-30T02:10:27+0000] [82/164] 19dd25b8cf2cb024: cached (rel=6)
-[2026-04-30T02:10:27+0000] [83/164] 19dd25b89bee93b7: cached (rel=8)
-[2026-04-30T02:10:27+0000] [84/164] 19dd25b864526ab5: cached (rel=7)
-[2026-04-30T02:10:27+0000] [85/164] 19dd25b8287c008c: cached (rel=6)
-[2026-04-30T02:10:27+0000] [86/164] 19dd25b81435b0e6: cached (rel=7)
-[2026-04-30T02:10:27+0000] [87/164] 19dd25b7ee8e6e3c: cached (rel=7)
-[2026-04-30T02:10:27+0000] [88/164] 19dd25b7e6064dd0: cached (rel=6)
-[2026-04-30T02:10:27+0000] [89/164] 19dd25b78cd4a36d: cached (rel=6)
-[2026-04-30T02:10:27+0000] [90/164] 19dd248c5a54a78f: cached (rel=8)
-[2026-04-30T02:10:27+0000] [91/164] 19dcf4cbfe32c6f8: cached (rel=6)
-[2026-04-30T02:10:27+0000] [92/164] 19dd21c50bc7faac: cached (rel=2)
-[2026-04-30T02:10:27+0000] [93/164] 19dd20a04dd132d4: cached (rel=5)
-[2026-04-30T02:10:27+0000] [94/164] 19dd1e397def4eee: cached (rel=6)
-[2026-04-30T02:10:27+0000] [95/164] 19dd1db21ba7f266: cached (rel=6)
-[2026-04-30T02:10:27+0000] [96/164] 19d952f5f9f4a4da: cached (rel=5)
-[2026-04-30T02:10:27+0000] [97/164] 19dcffa86d2f481e: cached (rel=7)
-[2026-04-30T02:10:27+0000] [98/164] 19dd19c146b10d87: cached (rel=6)
-[2026-04-30T02:10:27+0000] [99/164] 19dd1916312646f8: cached (rel=5)
-[2026-04-30T02:10:27+0000] [100/164] 19dd19141e742b64: cached (rel=9)
-[2026-04-30T02:10:27+0000] [101/164] 19dd191114f27c96: cached (rel=7)
-[2026-04-30T02:10:27+0000] [102/164] 19dd147363f8cfd5: cached (rel=5)
-[2026-04-30T02:10:27+0000] [103/164] 19dd0f1fbd6a5295: cached (rel=5)
-[2026-04-30T02:10:27+0000] [104/164] 19dd00868a702bc0: cached (rel=5)
-[2026-04-30T02:10:27+0000] [105/164] 19dcd7946d7bed7e: cached (rel=2)
-[2026-04-30T02:10:27+0000] [106/164] 19dcfa5ded2a3811: cached (rel=6)
-[2026-04-30T02:10:27+0000] [107/164] 19dcf9b8fcbb6c95: cached (rel=5)
-[2026-04-30T02:10:27+0000] [108/164] 19dbdc47337c9bd3: cached (rel=5)
-[2026-04-30T02:10:27+0000] [109/164] 19dbeb08434b0916: cached (rel=6)
-[2026-04-30T02:10:27+0000] [110/164] 19dcf90585a89b56: cached (rel=5)
-[2026-04-30T02:10:27+0000] [111/164] 19dcf94f9949b9d2: cached (rel=5)
-[2026-04-30T02:10:27+0000] [112/164] 19dcf92bc786b2a5: cached (rel=6)
-[2026-04-30T02:10:27+0000] [113/164] 19dbdce9b5f264f3: cached (rel=6)
-[2026-04-30T02:10:27+0000] [114/164] 19dbdcc8c0c44520: cached (rel=6)
-[2026-04-30T02:10:27+0000] [115/164] 19dbdcd30a475324: cached (rel=5)
-[2026-04-30T02:10:27+0000] [116/164] 19dbdd0b0d279d29: cached (rel=5)
-[2026-04-30T02:10:27+0000] [117/164] 19dcf8b4022fa152: cached (rel=6)
-[2026-04-30T02:10:27+0000] [118/164] 19dcf8aac273d9ac: cached (rel=6)
-[2026-04-30T02:10:27+0000] [119/164] 19dcf88e283735a4: cached (rel=8)
-[2026-04-30T02:10:27+0000] [120/164] 19dcf7d1fd0a428d: cached (rel=5)
-[2026-04-30T02:10:27+0000] [121/164] 19dbdc320adbb3ed: cached (rel=6)
-[2026-04-30T02:10:27+0000] [122/164] 19dbdc4aa0be3e65: cached (rel=5)
-[2026-04-30T02:10:27+0000] [123/164] 19dcf6eaefe2b642: cached (rel=6)
-[2026-04-30T02:10:27+0000] [124/164] 19dcf66e59b2f15a: cached (rel=7)
-[2026-04-30T02:10:27+0000] [125/164] 19dcf300ac8a043b: cached (rel=6)
-[2026-04-30T02:10:27+0000] [126/164] 19d25769187b9103: cached (rel=6)
-[2026-04-30T02:10:27+0000] [127/164] 19c017ba98aae5e1: cached (rel=8)
-[2026-04-30T02:10:27+0000] [128/164] 19d9b2b3ecdbf46d: cached (rel=9)
-[2026-04-30T02:10:27+0000] [129/164] 19dce924d2fc0895: cached (rel=8)
-[2026-04-30T02:10:27+0000] [130/164] 19dce67efed65556: cached (rel=6)
-[2026-04-30T02:10:27+0000] [131/164] 19dce2d18ab9c8c2: cached (rel=5)
-[2026-04-30T02:10:27+0000] [132/164] 19dce2ce80f6b319: cached (rel=6)
-[2026-04-30T02:10:27+0000] [133/164] 19dce2ce7cb71347: cached (rel=5)
-[2026-04-30T02:10:27+0000] [134/164] 19dce2ce71ac11d9: cached (rel=6)
-[2026-04-30T02:10:27+0000] [135/164] 19dce2ce66b958c9: cached (rel=6)
-[2026-04-30T02:10:27+0000] [136/164] 19dce2cda84c5166: cached (rel=5)
-[2026-04-30T02:10:27+0000] [137/164] 19dce2cdaffcf5fe: cached (rel=5)
-[2026-04-30T02:10:27+0000] [138/164] 19dce2ae11ad2703: cached (rel=5)
-[2026-04-30T02:10:27+0000] [139/164] 19dcdf673cf59a9a: cached (rel=5)
-[2026-04-30T02:10:27+0000] [140/164] 19dce1e3436fdd6b: cached (rel=5)
-[2026-04-30T02:10:27+0000] [141/164] 19dce19b3228d477: cached (rel=8)
-[2026-04-30T02:10:27+0000] [142/164] 19dce0dec4a191e1: cached (rel=8)
-[2026-04-30T02:10:27+0000] [143/164] 19dce0de6071025f: cached (rel=9)
-[2026-04-30T02:10:27+0000] [144/164] 19dce0de126171c2: cached (rel=8)
-[2026-04-30T02:10:27+0000] [145/164] 19dce07705db50ba: cached (rel=8)
-[2026-04-30T02:10:27+0000] [146/164] 19dce062a79c7048: cached (rel=6)
-[2026-04-30T02:10:27+0000] [147/164] 19dcde7db1f81673: cached (rel=6)
-[2026-04-30T02:10:27+0000] [148/164] 19dcdcec8e69211b: cached (rel=5)
-[2026-04-30T02:10:27+0000] [149/164] 19dcd7edb595ae1f: cached (rel=7)
-[2026-04-30T02:10:27+0000] [150/164] 19dcd7e484665fc5: cached (rel=5)
-[2026-04-30T02:10:27+0000] [151/164] 19dcd7e1569fd667: cached (rel=6)
-[2026-04-30T02:10:27+0000] [152/164] 19dcd7e1b79977e6: cached (rel=5)
-[2026-04-30T02:10:27+0000] [153/164] 19dcd7e18e3ba91c: cached (rel=6)
-[2026-04-30T02:10:27+0000] [154/164] 19dcd7e1890fab64: cached (rel=5)
-[2026-04-30T02:10:27+0000] [155/164] 19dcd7e15f691a08: cached (rel=6)
-[2026-04-30T02:10:27+0000] [156/164] 19dcd7e15e9d9ec7: cached (rel=6)
-[2026-04-30T02:10:27+0000] [157/164] 19dcd7e154a847ee: cached (rel=6)
-[2026-04-30T02:10:27+0000] [158/164] 19dcd72612307eb0: cached (rel=7)
-[2026-04-30T02:10:27+0000] [159/164] 19dcd700b10e51a1: cached (rel=6)
-[2026-04-30T02:10:27+0000] [160/164] 19dcc3d987faaa13: cached (rel=6)
-[2026-04-30T02:10:27+0000] [161/164] 19dc4e2483ce0af1: cached (rel=2)
-[2026-04-30T02:10:27+0000] [162/164] 19dcd23b88698719: cached (rel=2)
-[2026-04-30T02:10:27+0000] [163/164] 19dcce46841e9b71: cached (rel=5)
-[2026-04-30T02:10:27+0000] [164/164] 19d966990fd5899b: cached (rel=5)
-[2026-04-30T02:10:27+0000] Output: /a0/usr/workdir/gmail-output.md (41 summaries, min_relevance=7)
-[2026-04-30T02:10:27+0000] COMPLETED (164 threads, fetched=6)
-(venv) root@65a984945e89:/a0#
+[2026-04-30T06:01:31+0000] Browser connected. Browser timezone: UTC
+[2026-04-30T06:01:36+0000]   Page 1: 100 thread(s)
+[2026-04-30T06:01:36+0000]   Early stop: 5 consecutive cached
+[2026-04-30T06:01:41+0000]   Page 2: 100 thread(s)
+[2026-04-30T06:01:46+0000]   Page 3: 62 thread(s)
+[2026-04-30T06:01:46+0000] Phase 1: 200 threads (excluded=45, unchanged=126, to-fetch=74, unread=14)
+[2026-04-30T06:01:46+0000] [Fetching 1/74] Invitation: FPG Salesforce Ad Sales Proposal sync @ Mon
+[2026-04-30T06:01:47+0000]   -> 1 new message(s) cached
+[2026-04-30T06:01:48+0000]   -> restored unread status
+[2026-04-30T06:01:48+0000] [Fetching 2/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:01:48+0000] Summarizing [1/200] Invitation: FPG Salesforce Ad Sales Proposal sync  (1 msgs, direct)
+[2026-04-30T06:01:50+0000]   -> 1 new message(s) cached
+[2026-04-30T06:01:50+0000] [Fetching 3/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:01:51+0000]   -> 1 new message(s) cached
+[2026-04-30T06:01:51+0000] [Fetching 4/74] Synced invitation: ACNxOsmos: Daily Cadence @ Mon Apr 2
+[2026-04-30T06:01:52+0000]   -> 1 new message(s) cached
+[2026-04-30T06:01:52+0000] [Fetching 5/74] Synced invitation: ACNxOsmos: Daily Cadence @ Mon Apr 2
+[2026-04-30T06:01:53+0000]   -> 1 new message(s) cached
+[2026-04-30T06:01:53+0000] [Fetching 6/74] Synced invitation: ACNxOsmos: Daily Cadence @ Mon Apr 2
+[2026-04-30T06:01:53+0000]   -> 1 new message(s) cached
+[2026-04-30T06:01:54+0000] [Fetching 7/74] Synced invitation: ACNxOsmos: Daily Cadence @ Mon Apr 2
+[2026-04-30T06:01:54+0000]   -> 1 new message(s) cached
+[2026-04-30T06:01:54+0000] [Fetching 8/74] Synced invitation: ACNxOsmos: Daily Cadence @ Mon Apr 2
+[2026-04-30T06:01:55+0000]   -> 1 new message(s) cached
+[2026-04-30T06:01:55+0000] [Fetching 9/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:01:56+0000]   -> 1 new message(s) cached
+[2026-04-30T06:01:56+0000] [Fetching 10/74] Synced invitation: ACNxOsmos: Daily Cadence @ Mon Apr 2
+[2026-04-30T06:01:57+0000]   -> 1 new message(s) cached
+[2026-04-30T06:01:57+0000] [Fetching 11/74] Synced invitation: ACNxOsmos: Daily Cadence @ Mon Apr 2
+[2026-04-30T06:01:58+0000]   -> 1 new message(s) cached
+[2026-04-30T06:01:58+0000] [Fetching 12/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:01:59+0000]   -> 1 new message(s) cached
+[2026-04-30T06:01:59+0000] [Fetching 13/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:02:00+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:00+0000] [Fetching 14/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:02:01+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:01+0000] [Fetching 15/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:02:02+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:03+0000] [Fetching 16/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:02:04+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:04+0000] [Fetching 17/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:02:05+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:05+0000] [Fetching 18/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:02:06+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:06+0000] [Fetching 19/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:02:07+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:07+0000] [Fetching 20/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:02:08+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:08+0000] [Fetching 21/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:02:09+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:09+0000] [Fetching 22/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:02:10+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:11+0000] [Fetching 23/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:02:11+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:12+0000] [Fetching 24/74] Updated invitation: ACNxOsmos: Daily Cadence @ Weekly f
+[2026-04-30T06:02:13+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:13+0000] [Fetching 25/74] Accepted: Picking Discussion @ Tue May 5, 2026 1:30pm -
+[2026-04-30T06:02:13+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:13+0000] [Fetching 26/74] Synced invitation: ACNxOsmos: Daily Cadence @ Weekly fr
+[2026-04-30T06:02:14+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:14+0000] [Fetching 27/74] Synced invitation: ACNxOsmos: Daily Cadence @ Weekly fr
+[2026-04-30T06:02:15+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:15+0000] [Fetching 28/74] Canceled event: ACNxOsmos: Daily Cadence @ Weekly from
+[2026-04-30T06:02:15+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:16+0000] [Fetching 29/74] Synced invitation: ACNxOsmos: Daily Cadence @ Weekly fr
+[2026-04-30T06:02:16+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:16+0000] [Fetching 30/74] Synced invitation: ACNxOsmos: Daily Cadence @ Weekly fr
+[2026-04-30T06:02:17+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:17+0000] [Fetching 31/74] Synced invitation: ACNxOsmos: Daily Cadence @ Weekly fr
+[2026-04-30T06:02:18+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:18+0000] [Fetching 32/74] Synced invitation: ACNxOsmos: Daily Cadence @ Weekly fr
+[2026-04-30T06:02:19+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:19+0000] [Fetching 33/74] Canceled event: ACNxOsmos: Daily Cadence @ Weekly from
+[2026-04-30T06:02:19+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:19+0000] [Fetching 34/74] Canceled event: ACNxOsmos: Daily Cadence @ Weekly from
+[2026-04-30T06:02:20+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:20+0000] [Fetching 35/74] Synced invitation: ACNxOsmos: Daily Cadence @ Thu Apr 2
+[2026-04-30T06:02:21+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:21+0000] [Fetching 36/74] Synced invitation: ACNxOsmos: Daily Cadence @ Thu Apr 2
+[2026-04-30T06:02:22+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:22+0000] [Fetching 37/74] Synced invitation: ACNxOsmos: Daily Cadence @ Thu Apr 2
+[2026-04-30T06:02:22+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:22+0000] [Fetching 38/74] Synced invitation: ACNxOsmos: Daily Cadence @ Thu Apr 2
+[2026-04-30T06:02:23+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:23+0000] [Fetching 39/74] Synced invitation: ACNxOsmos: Daily Cadence @ Thu Apr 2
+[2026-04-30T06:02:24+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:24+0000] [Fetching 40/74] Synced invitation: ACNxOsmos: Daily Cadence @ Thu Apr 2
+[2026-04-30T06:02:25+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:25+0000] [Fetching 41/74] Canceled event: ACNxOsmos: Daily Cadence @ Weekly from
+[2026-04-30T06:02:26+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:26+0000] [Fetching 42/74] Canceled event: ACNxOsmos: Daily Cadence @ Weekly from
+[2026-04-30T06:02:26+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:27+0000] [Fetching 43/74] Canceled event: ACNxOsmos: Daily Cadence @ Weekly from
+[2026-04-30T06:02:27+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:27+0000] [Fetching 44/74] Canceled event: ACNxOsmos: Daily Cadence @ Weekly from
+[2026-04-30T06:02:28+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:28+0000] [Fetching 45/74] Synced invitation: ACNxOsmos: Daily Cadence @ Weekly fr
+[2026-04-30T06:02:29+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:29+0000] [Fetching 46/74] Synced invitation: ACNxOsmos: Daily Cadence @ Weekly fr
+[2026-04-30T06:02:30+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:30+0000] [Fetching 47/74] Canceled event: ACNxOsmos: Daily Cadence @ Weekly from
+[2026-04-30T06:02:30+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:30+0000] [Fetching 48/74] Canceled event: ACNxOsmos: Daily Cadence @ Weekly from
+[2026-04-30T06:02:31+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:31+0000] [Fetching 49/74] Canceled event: ACNxOsmos: Daily Cadence @ Weekly from
+[2026-04-30T06:02:32+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:32+0000] [Fetching 50/74] Synced invitation: ACNxOsmos: Daily Cadence @ Weekly fr
+[2026-04-30T06:02:32+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:33+0000] [Fetching 51/74] Notes: “ACNxOsmos: Daily Cadence” Apr 30, 2026
+[2026-04-30T06:02:33+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:34+0000]   -> restored unread status
+[2026-04-30T06:02:34+0000] [Fetching 52/74] Updated invitation: ACNxOsmos: Daily Cadence @ Thu Apr
+[2026-04-30T06:02:36+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:36+0000] [Fetching 53/74] Updated invitation: ACNxOsmos: Daily Cadence @ Thu Apr
+[2026-04-30T06:02:37+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:37+0000] [Fetching 54/74] Delivery Status Notification (Failure)
+[2026-04-30T06:02:38+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:38+0000] [Fetching 55/74] Delivery Status Notification (Failure)
+[2026-04-30T06:02:38+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:38+0000] [Fetching 56/74] Delivery Status Notification (Failure)
+[2026-04-30T06:02:39+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:39+0000] [Fetching 57/74] Updated invitation: ACNxOsmos: Daily Cadence @ Thu Apr
+[2026-04-30T06:02:41+0000]   -> 2 new message(s) cached
+[2026-04-30T06:02:41+0000] [Fetching 58/74] Updated invitation: ACNxOsmos: Daily Cadence @ Thu Apr
+[2026-04-30T06:02:42+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:42+0000] [Fetching 59/74] Updated invitation: ACNxOsmos: Daily Cadence @ Thu Apr
+[2026-04-30T06:02:43+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:43+0000] [Fetching 60/74] Updated invitation: ACNxOsmos: Daily Cadence @ Thu Apr
+[2026-04-30T06:02:44+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:44+0000] [Fetching 61/74] Re: Salesforce for FPG RMN
+[2026-04-30T06:02:46+0000]   -> 2 new message(s) cached
+[2026-04-30T06:02:46+0000]   -> restored unread status
+[2026-04-30T06:02:46+0000] [Fetching 62/74] [Action Required] Service Account Key Expiring, Renewal
+[2026-04-30T06:02:48+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:48+0000]   -> restored unread status
+[2026-04-30T06:02:48+0000] [Fetching 63/74] [Bitbucket] You have been granted admin access to ntucl
+[2026-04-30T06:02:49+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:50+0000]   -> restored unread status
+[2026-04-30T06:02:50+0000] [Fetching 64/74] Worth a deeper look—or fine as-is?
+[2026-04-30T06:02:51+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:52+0000]   -> restored unread status
+[2026-04-30T06:02:52+0000] [Fetching 65/74] [JIRA] (CORE-457) [LIGHT] Setup New Sonarcloud project
+[2026-04-30T06:02:53+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:54+0000]   -> restored unread status
+[2026-04-30T06:02:54+0000] [Fetching 66/74] [JIRA] (CORE-458) [LIGHT] Setup New Postman workspace
+[2026-04-30T06:02:55+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:55+0000]   -> restored unread status
+[2026-04-30T06:02:55+0000] [Fetching 67/74] [FP ST MP] URGENT FPON / SCAN & GO MANUAL SUSPENSION 30
+[2026-04-30T06:02:57+0000]   -> 2 new message(s) cached
+[2026-04-30T06:02:57+0000]   -> restored unread status
+[2026-04-30T06:02:57+0000] [Fetching 68/74] [Dashboard Report] Retail Media - DD Dashboard | Thu 30
+[2026-04-30T06:02:58+0000]   -> 1 new message(s) cached
+[2026-04-30T06:02:58+0000]   -> restored unread status
+[2026-04-30T06:02:58+0000] [Fetching 69/74] [Bitbucket] You have been granted read access to ntucli
+[2026-04-30T06:02:59+0000]   -> 1 new message(s) cached
+[2026-04-30T06:03:00+0000]   -> restored unread status
+[2026-04-30T06:03:00+0000] [Fetching 70/74] May Day Deals to Stretch Our Dollar Further
+[2026-04-30T06:03:01+0000]   -> 1 new message(s) cached
+[2026-04-30T06:03:02+0000] [Fetching 71/74] DSD-11319 Apply Permissions for DATASET ne-fprt-data-cl
+[2026-04-30T06:03:03+0000]   -> 1 new message(s) cached
+[2026-04-30T06:03:04+0000] [Fetching 72/74] [JIRA] (CORE-447) [LIGHT] Update data sync Confluence p
+[2026-04-30T06:03:05+0000]   -> 1 new message(s) cached
+[2026-04-30T06:03:05+0000]   -> restored unread status
+[2026-04-30T06:03:05+0000] [Fetching 73/74] [JIRA] (CORE-446) [LIGHT] Finalize OSMOS data sync JSON
+[2026-04-30T06:03:07+0000]   -> 1 new message(s) cached
+[2026-04-30T06:03:07+0000]   -> restored unread status
+[2026-04-30T06:03:07+0000] [Fetching 74/74] [JIRA] (CORE-473) [LIGHT] RMN Integration Support
+[2026-04-30T06:03:08+0000]   -> 1 new message(s) cached
+[2026-04-30T06:03:09+0000]   -> restored unread status
+[2026-04-30T06:03:42+0000] Done [1/200] 19ddcf1001a862d5 rel=7
+[2026-04-30T06:03:42+0000] Summarizing [2/200] Updated invitation: ACNxOsmos: Daily Cadence @ Wee (1 msgs, direct)
+[2026-04-30T06:05:42+0000]   [retry 1/3] Connection error: HTTPSConnectionPool(host='llm.gigary.com', port=443): Read timed out. (read timeout=120) - retrying in 30s
+
 
 [SYSTEM: Returning control to agent after 120 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 
