@@ -1,15 +1,43 @@
-Available skills (12):
-- a0-contribute-plugin v1.0.0 tags=plugins,contribute,publish,plugin-hub,community,index,PR: Guide for publishing an Agent Zero plugin to the community Plugin Index (a0-plugins repo). Covers GitHub repo setup, index.yaml creation, CI validation rules, and PR submission. Use when the user want…
-- a0-create-plugin v1.0.0 tags=plugins,create,build,develop,extend: Create, extend, or modify Agent Zero plugins. Follows strict full-stack conventions (usr/plugins, plugin.yaml, Store Gating, AgentContext, plugin settings). Use for UI hooks, API handlers, lifecycle e…
-- a0-debug-plugin v1.0.0 tags=plugins,debug,troubleshoot,fix,diagnose,error,broken: Diagnose and fix Agent Zero plugin problems. Covers plugin not appearing, won't enable, API endpoints not responding, frontend store errors, extension point injection, settings resolution, hooks.py is…
-- a0-development v1.0.0 tags=development,framework,agent-zero,extending,tools,extensions,skills,api,agents,prompts: Development guide for extending and building features for the Agent Zero AI framework. Covers architecture, tools, extensions, API endpoints, agent profiles, projects, prompts, and skills — with corre…
-- a0-manage-plugin v1.2.0 tags=["plugins","install","uninstall","update","scan","security","debug","troubleshoot","plugin-hub","manage"]: Manage Agent Zero plugins lifecycle: browse the Plugin Hub, scan for security, install from Git/ZIP/Plugin Hub, update, uninstall, enable, disable, debug, and troubleshoot. Use when asked to install,…
-- a0-plugin-router v1.0.0 tags=plugins,router,meta,create,review,contribute,manage,plugin-hub: Main entry point for all Agent Zero plugin tasks. Routes to specialist skills for creating, reviewing, contributing, managing, or debugging plugins. Use when the user mentions plugins, asks how the pl…
-- a0-review-plugin v1.0.0 tags=plugins,review,audit,validate,security,checklist: Full audit of Agent Zero plugins in usr/plugins/. Reviews manifest validity, directory structure, code patterns (Store Gating, notifications, imports), security, and duplicate detection against the co…
-- a0-setup-cli v1.1.0 tags=agent-zero,a0,cli,connector,docker,setup,local-files: Guide the user through installing and connecting the A0 CLI on the host machine so Dockerized Agent Zero can work on real local files. Use when asked to install A0, set up the CLI connector, connect A…
-- create-skill v1.0.0 tags=meta,wizard,creation,tutorial,skills: Wizard for creating new Agent Zero skills. Guides users through creating well-structured SKILL.md files. Use when users want to create custom skills.
-- gchat v4.0.0 tags=gchat,google-chat,chrome,cdp,devtools,conversations,messages,chat,summarize,cache: Read Google Chat conversations using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check chat messages, read…
-- gmail v3.2.0 tags=gmail,email,chrome,cdp,devtools,inbox,threads,conversations,summarize,cache: Read Gmail email threads using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check emails, read recent threa…
-- jira v4.0.0 tags=jira,jql,search,tickets,query,filter,view,polaris,backlog,sprint,ntuclink,summarize,cache,relevance: Fetch Jira tickets with SQLite caching, AI-driven relevance scoring, and structured summarization. Supports raw JQL query, saved filter by ID, or Polaris view. Outputs relevance-scored markdown summar…
+[2026-04-30T01:46:42+0000] Done [11/48] RM-30 rel=8
+[2026-04-30T01:46:42+0000] [12/48] CORE-454: cached summary (relevance=8)
+[2026-04-30T01:46:42+0000] [13/48] CORE-453: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [14/48] LIGHT-2: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [15/48] CORE-474: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [16/48] LIGHT-79: cached summary (relevance=2)
+[2026-04-30T01:46:42+0000] [17/48] CORE-449: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [18/48] CORE-459: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [19/48] DPD-1052: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [20/48] CORE-448: cached summary (relevance=8)
+[2026-04-30T01:46:42+0000] [21/48] CORE-473: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [22/48] CORE-445: cached summary (relevance=8)
+[2026-04-30T01:46:42+0000] [23/48] CORE-475: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [24/48] CORE-458: cached summary (relevance=8)
+[2026-04-30T01:46:42+0000] [25/48] CORE-457: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [26/48] CORE-456: cached summary (relevance=8)
+[2026-04-30T01:46:42+0000] [27/48] CORE-455: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [28/48] CORE-447: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [29/48] CORE-446: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [30/48] DPD-715: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [31/48] LIGHT-34: cached summary (relevance=8)
+[2026-04-30T01:46:42+0000] [32/48] DPD-1039: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [33/48] LIGHT-676: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [34/48] CORE-452: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [35/48] CORE-451: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [36/48] DPD-590: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [37/48] OMNI-1191: cached summary (relevance=6)
+[2026-04-30T01:46:42+0000] [38/48] DPD-838: cached summary (relevance=8)
+[2026-04-30T01:46:42+0000] [39/48] RM-697: cached summary (relevance=9)
+[2026-04-30T01:46:42+0000] [40/48] OMNI-1439: cached summary (relevance=6)
+[2026-04-30T01:46:42+0000] [41/48] OMNI-1249: cached summary (relevance=6)
+[2026-04-30T01:46:42+0000] [42/48] OMNI-1431: cached summary (relevance=6)
+[2026-04-30T01:46:42+0000] [43/48] OMNI-1432: cached summary (relevance=8)
+[2026-04-30T01:46:42+0000] [44/48] OMNI-1296: cached summary (relevance=6)
+[2026-04-30T01:46:42+0000] [45/48] OMNI-1427: cached summary (relevance=6)
+[2026-04-30T01:46:42+0000] [46/48] OMNI-1416: cached summary (relevance=7)
+[2026-04-30T01:46:42+0000] [47/48] OMNI-1400: cached summary (relevance=6)
+[2026-04-30T01:46:42+0000] [48/48] OMNI-1405: cached summary (relevance=6)
+[2026-04-30T01:46:42+0000] Output: /a0/usr/workdir/jira-output.md (48 summaries, min_relevance=6)
+[2026-04-30T01:46:42+0000] COMPLETED (78 tickets)
+(venv) root@65a984945e89:/a0/usr/workdir#
 
-Tip: use skills_tool method=search or method=load for details.
+[SYSTEM: Returning control to agent after 120 seconds since last output update. Process might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed.] 

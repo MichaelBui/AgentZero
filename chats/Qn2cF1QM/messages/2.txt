@@ -1,53 +1,15 @@
-/a0/usr/workdir/gmail-output.md 155 lines
->>>
- 1 
- 2 
- 3 ## [1/36] Updated invitation: Discussion: Advertima @ Tue Apr 28, 2026 10:30am - 11am (SGT) (Michael Bui)
- 4 Source: gmail | Thread: 19dca3727cfa4a93 | Relevance: 7/10 | Mention: direct | Updated: 2026-04-26T14:35:00+00:00 | Labels: vendor-meeting, pov-review, stakeholder-sync, risk-evaluation, calendar-update | Senders: Fiona U | People: Fiona U, Rajiv Kumar Singh, Serene Tan Si Lin, Danielle Lee, Bryan Choong, Michael Bui
- 5 System-generated calendar update for a direct meeting on Tue Apr 28, 2026, 10:30am–11:00am SGT at FairPrice Hub (Room 8) / Google Meet. Organizer Fiona U will lead a session with Michael Bui and cross-functional stakeholders to review the ongoing Advertima Proof of Value (POV), assess relationship status, address technical issues, and evaluate known risks. Attendance required for vendor governance and alignment.
- 6 
- 7 ## [2/36] [JIRA] Nikhil Grover mentioned you on LIGHT-34
- 8 Source: gmail | Thread: 19dcd72612307eb0 | Relevance: 7/10 | Mention: direct | Updated: 2026-04-27T05:38:00+00:00 | Labels: ticket-mention, api-specification, batching-limits, display-platform, vendor-sync | Senders: Nikhil Grover (Jira) | Work Items: LIGHT-34 | People: Nikhil Grover, Vera Wijaya, Michael Bui
- 9 Jira notification for LIGHT-34 (display content tracking). On 2026-04-27, Nikhil Grover confirmed batching is supported but requires API specifications and limit definitions. He tagged you (@Michael Bui) to provide these details while he confirms with Osmos. Action required: Share the requested API documentation and define batching constraints to unblock development and advance platform tracking.
-10 
-11 ## [3/36] Notes: “ACNxOsmos: Daily Cadence” Apr 27, 2026
-12 Source: gmail | Thread: 19dcd7edb595ae1f | Relevance: 7/10 | Mention: direct | Updated: 2026-04-27T05:52:00+00:00 | Labels: daily-cadence, api-errors, data-mapping, campaign-ops, slo-tracking | Senders: Gemini | Work Items: 114076, Osmos | People: Rahul Jain, Nikhil Grover, Shubhangi Agrawal, Michael Bui, Vipul
-13 Auto-generated notes from the ACNxOsmos Daily Cadence (Apr 27, 2026) covering tool adoption, campaign delivery strategy, and SLO tracking. A critical 403 API error impacting SLO budgets requires immediate investigation via ticket 114076. Michael Bui is explicitly assigned to receive the final Osmos data feed structure/mapping columns and a UDP parameter from Rahul Jain by 5:30 PM today for API implementation. Nikhil Grover will manage sales uplift discussions, programmatic file updates, Meta sync questions, and audience segment reviews, while Shubhangi Agrawal addresses campaign delivery optimization.
-14 
-15 ## [4/36] OSMOS Data Sync - @michael.bui@fairpricegroup.sg please...
-16 Source: gmail | Thread: 19dce07705db50ba | Relevance: 8/10 | Mention: direct | Updated: 2026-04-27T08:21:00+00:00 | Labels: data-sync, platform-architecture, engineering-governance, direct-request, technical-review | Senders: Rahul Jain (Google . | Work Items: OSMOS Data Sync
-17 This email thread directly tags Michael Bui with a request regarding the OSMOS Data Sync initiative. As a staff-level engineering leader responsible for platform architecture and production reliability, Michael is being asked to provide technical input or approval for this data integration effort. The direct mention signals an immediate need for his architectural judgment, likely involving backend synchronization standards, cross-service dependencies, or vendor coordination. Given his mandate to enforce engineering governance and oversee e-commerce platform capabilities, resolving this sync request aligns directly with his core responsibilities. Michael should review the thread details to determine required next steps, such as architecture sign-off, troubleshooting data pipeline issues, or allocating engineering resources to meet delivery targets.
-18 
-19 ## [5/36] Invitation: Finalize Data Sync to OSMOS @ Mon Apr 27, 2026 5:30pm - 5:55pm (SGT) (Nikhil Grover)
-20 Source: gmail | Thread: 19dce0dec4a191e1 | Relevance: 8/10 | Mention: direct | Updated: 2026-04-27T08:28:00+00:00 | Labels: data-sync, meeting-invitation, technical-review, project-closure, stakeholder-alignment | Senders: me | Work Items: OSMOS | People: Michael Bui, Rahul, Nikhil Grover, Shubhangi Agrawal
-21 Michael Bui initiated a meeting on April 27, 2026, at 5:30 PM SGT to finalize data synchronization updates with OSMOS. After reviewing Rahul’s recent changes in the shared GDoc, Michael identified remaining clarifications and requested a brief session to resolve them and close out the discussion by end-of-day. Attendees include Nikhil Grover and Shubhangi Agrawal. The thread reflects Michael’s hands-on approach to technical alignment and his preference for direct, action-oriented stakeholder communication to ensure data sync requirements are fully understood before proceeding.
-22 
-23 ## [6/36] Invitation: Finalize Data Sync to OSMOS @ Mon Apr 27, 2026 3pm - 3:25pm (IST) (rahul.jain@onlinesales.ai)
-24 Source: gmail | Thread: 19dce0de6071025f | Relevance: 9/10 | Mention: direct | Updated: 2026-04-27T08:28:00+00:00 | Labels: meeting-invitation, data-sync, osmos-integration, document-review, technical-alignment | Senders: me | Work Items: OSMOS | People: Rahul Jain, Nikhil Grover, Shubhangi Agrawal
-25 Michael Bui organized a meeting with Rahul Jain on April 27, 2026 (3–3:25 PM IST) to finalize the OSMOS data sync. After reviewing updates in the shared Google Sheet, Michael left comments requiring clarification and requested a quick call to close out open items by end of day today. Attendees include Nikhil Grover and Shubhangi Agrawal. Next Actions: Attend the scheduled Google Meet, address pending documentation clarifications, and confirm OSMOS integration next steps.
-26 
-27 ## [7/36] Invitation: Finalize Data Sync to OSMOS @ Mon Apr 27, 2026 3pm - 3:25pm (IST) (shubhangi.agrawal@onlinesales.ai)
-28 Source: gmail | Thread: 19dce0de126171c2 | Relevance: 8/10 | Mention: direct | Updated: 2026-04-27T08:28:00+00:00 | Labels: vendor-sync, data-alignment, meeting-invitation, technical-clarification, integration-review | Senders: me | Work Items: OSMOS | People: Rahul Jain, Nikhil Grover, Shubhangi Agrawal
-29 Michael organized a meeting with Rahul Jain, Nikhil Grover, and Shubhangi Agrawal from onlinesales.ai to finalize the data sync process to OSMOS. He noted that while updates were visible in the shared GDoc, several points require clarification. The objective is to resolve these open items and close off the discussion by Monday, April 27, 2026, at 3:00 PM IST via Google Meet. Attendance and active participation are required to address vendor documentation gaps and align on sync specifications.
-30 
-31 ## [8/36] Accepted: Finalize Data Sync to OSMOS @ Mon Apr 27, 2026 5:30pm - 5:55pm (SGT) (michael.bui@fairpricegroup.sg)
-32 Source: gmail | Thread: 19dce19b3228d477 | Relevance: 8/10 | Mention: direct | Updated: 2026-04-27T08:41:00+00:00 | Labels: data-sync, meeting-request, tech-alignment, project-closure, stakeholder-sync | Senders: Rahul Jain | Work Items: OSMOS | People: Rahul Jain, Nikhil Grover, Shubhangi Agrawal
-33 Rahul Jain accepted the meeting invitation and highlighted unresolved items in a shared Google Sheet regarding the data sync to OSMOS. He requested a quick call today to clarify his comments and close out pending alignment items. Michael Bui organized this session for Monday, April 27, 2026 (5:30 PM – 5:55 PM SGT), with Nikhil Grover and Shubhangi Agrawal attending. Action required: Join the sync meeting to resolve documentation clarifications, finalize data mapping assumptions, and close out the OSMOS integration discussion.
-34 
-35 ## [9/36] OSMOS Data Sync
-36 Source: gmail | Thread: 19dce924d2fc0895 | Relevance: 8/10 | Mention: direct | Updated: 2026-04-27T11:00:00+00:00 | Labels: data-sync, platform-architecture, direct-mention, engineering-updates, system-integration | Senders: Rahul Jain (Google . | Work Items: OSMOS
-37 Email thread regarding the OSMOS Data Sync initiative. Note: The full message content was not provided in the input, but the direct mention indicates active involvement or required visibility. Based on the title and Michael’s focus on platform architecture and data integration, this likely covers synchronization processes, service reliability, or cross-system data flows. Action items, specific metrics, or architectural decisions would need to be reviewed from the full thread to determine immediate next steps or SLO implications.
-38 
-39 ## [10/36] Proposed Approach for SKU Handling Across Old & New App
-40 Source: gmail | Thread: 19d9b2b3ecdbf46d | Relevance: 9/10 | Mention: direct | Updated: 2026-04-27T12:18:00+00:00 | Labels: vendor-proposal, sku-migration, retail-media, data-sync, platform-integration | Senders: Rahul, me | Work Items: FPG New App Integration, Retail Media platform | People: Rahul Jain, Nikhil, Michael Bui
-41 As of 2026-04-27, this thread addresses a critical architectural decision for the Retail Media platform during the FPG New App Integration. Vendor Osmos (Rahul Jain) recommended Approach 1 (New Client ID) over maintaining existing IDs, citing clean separation, improved scalability, and avoidance of SKU/Brand conflicts, though it requires fresh data ingestion and resets historical learning/analytics.
-42 
-43 Michael Bui has proposed an optimization to consolidate data sync into a single incremental process, eliminating current 1–2 hour hourly delays and enabling real-time synchronization. His team is preparing development next week pending vendor confirmation.
-44 
-45 **Concrete Next Actions for Michael:**
-46 - Evaluate the "Single Category ID" constraint against current ad slot configurations
-47 - Approve increasing TPA product limits from 20 to 50
-48 - Determine if a service-layer workaround is needed for SKU ownership transfer limitations
-49 - Obtain comprehensive data field list from Osmos for ad delivery & product sync
-50 
-<<<
+Available skills (12):
+- a0-contribute-plugin v1.0.0 tags=plugins,contribute,publish,plugin-hub,community,index,PR: Guide for publishing an Agent Zero plugin to the community Plugin Index (a0-plugins repo). Covers GitHub repo setup, index.yaml creation, CI validation rules, and PR submission. Use when the user want…
+- a0-create-plugin v1.0.0 tags=plugins,create,build,develop,extend: Create, extend, or modify Agent Zero plugins. Follows strict full-stack conventions (usr/plugins, plugin.yaml, Store Gating, AgentContext, plugin settings). Use for UI hooks, API handlers, lifecycle e…
+- a0-debug-plugin v1.0.0 tags=plugins,debug,troubleshoot,fix,diagnose,error,broken: Diagnose and fix Agent Zero plugin problems. Covers plugin not appearing, won't enable, API endpoints not responding, frontend store errors, extension point injection, settings resolution, hooks.py is…
+- a0-development v1.0.0 tags=development,framework,agent-zero,extending,tools,extensions,skills,api,agents,prompts: Development guide for extending and building features for the Agent Zero AI framework. Covers architecture, tools, extensions, API endpoints, agent profiles, projects, prompts, and skills — with corre…
+- a0-manage-plugin v1.2.0 tags=["plugins","install","uninstall","update","scan","security","debug","troubleshoot","plugin-hub","manage"]: Manage Agent Zero plugins lifecycle: browse the Plugin Hub, scan for security, install from Git/ZIP/Plugin Hub, update, uninstall, enable, disable, debug, and troubleshoot. Use when asked to install,…
+- a0-plugin-router v1.0.0 tags=plugins,router,meta,create,review,contribute,manage,plugin-hub: Main entry point for all Agent Zero plugin tasks. Routes to specialist skills for creating, reviewing, contributing, managing, or debugging plugins. Use when the user mentions plugins, asks how the pl…
+- a0-review-plugin v1.0.0 tags=plugins,review,audit,validate,security,checklist: Full audit of Agent Zero plugins in usr/plugins/. Reviews manifest validity, directory structure, code patterns (Store Gating, notifications, imports), security, and duplicate detection against the co…
+- a0-setup-cli v1.1.0 tags=agent-zero,a0,cli,connector,docker,setup,local-files: Guide the user through installing and connecting the A0 CLI on the host machine so Dockerized Agent Zero can work on real local files. Use when asked to install A0, set up the CLI connector, connect A…
+- create-skill v1.0.0 tags=meta,wizard,creation,tutorial,skills: Wizard for creating new Agent Zero skills. Guides users through creating well-structured SKILL.md files. Use when users want to create custom skills.
+- gchat v4.0.0 tags=gchat,google-chat,chrome,cdp,devtools,conversations,messages,chat,summarize,cache: Read Google Chat conversations using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check chat messages, read…
+- gmail v3.2.0 tags=gmail,email,chrome,cdp,devtools,inbox,threads,conversations,summarize,cache: Read Gmail email threads using a remote Chrome DevTools headless instance, cache messages in SQLite, and output AI-summarized compact results. Use when the user asks to check emails, read recent threa…
+- jira v4.0.0 tags=jira,jql,search,tickets,query,filter,view,polaris,backlog,sprint,ntuclink,summarize,cache,relevance: Fetch Jira tickets with SQLite caching, AI-driven relevance scoring, and structured summarization. Supports raw JQL query, saved filter by ID, or Polaris view. Outputs relevance-scored markdown summar…
+
+Tip: use skills_tool method=search or method=load for details.
